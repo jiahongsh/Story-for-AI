@@ -1,0 +1,4405 @@
+{
+  "book_title": "他们不是人",
+  "characters": {
+    "养母沈竹": {
+      "abilities_resources": [
+        "能看见接缝"
+      ],
+      "goal": "（背景）保护镜辞",
+      "identity": "镜辞的养母·钟表行原主人·失踪者·怀表刻名'镜辞'的授予者",
+      "knowledge": [
+        "守钟人看见了什么"
+      ],
+      "location": "（失踪）",
+      "open_threads": [
+        "守钟人看见过什么？"
+      ],
+      "relationships": [
+        "守钟人：被交代",
+        "镜辞：养母"
+      ],
+      "state": "（提及）走的那天来过钟表铺；交代守钟人'看见了当没看见'"
+    },
+    "周老头": {
+      "abilities_resources": [
+        "杂货铺（蜡烛/盐/绳子）",
+        "本地记忆"
+      ],
+      "goal": "（日常营生）",
+      "identity": "岭下镇杂货铺老板·当地老人",
+      "knowledge": [
+        "岭后以前有矿，塌了，人都走了",
+        "沈竹说看完了就去岭后"
+      ],
+      "location": "岭下镇·杂货铺（周一）",
+      "open_threads": [
+        "（无）"
+      ],
+      "relationships": [
+        "镜辞：住客（提醒他小心）",
+        "沈竹：三年前的顾客"
+      ],
+      "state": "告知岭后情报（矿塌了/没人去/水是黑的）；记得沈竹说过看完了就去岭后"
+    },
+    "它（收旧书壳）": {
+      "abilities_resources": [],
+      "goal": "无",
+      "identity": "离去者（第一单元）：找表的人·市场记忆已遗忘它",
+      "knowledge": [],
+      "location": "离开了（走进巷子）",
+      "open_threads": [
+        "它到底是谁？（不坐实）"
+      ],
+      "relationships": [
+        "镜辞：我记得它"
+      ],
+      "state": "把表还给修表的人；'我记得，有个人在这里修表，表走得响'；走了"
+    },
+    "守钟人": {
+      "abilities_resources": [
+        "青釉片"
+      ],
+      "goal": "守着他的钟",
+      "identity": "钟表铺守钟人（壳？身份未坐实）·去过河对岸·被'它'记住",
+      "knowledge": [
+        "河对岸规则",
+        "老板娘旧事",
+        "沈竹的表停在她走那天"
+      ],
+      "location": "旧城·西街钟表铺",
+      "open_threads": [
+        "他被记住的后果？",
+        "老板娘怎么好的？",
+        "他留着多少人的表？",
+        "为什么留着沈竹的表？"
+      ],
+      "relationships": [
+        "镜辞：交表（沈竹的）",
+        "沈竹：她被交代'看见了当没看见'"
+      ],
+      "state": "交出沈竹的表；'她不用刻，她记性好''表停的位置不是我拨的，是它自己停的'；不解释为什么留着"
+    },
+    "带话人（生面孔）": {
+      "abilities_resources": [
+        "（路人）"
+      ],
+      "goal": "（跑腿）",
+      "identity": "收钱带话的生面孔（旧衣裳·脸黑）",
+      "knowledge": [
+        "话的内容"
+      ],
+      "location": "旧城·市场",
+      "open_threads": [],
+      "relationships": [
+        "戴帽子人：雇佣关系"
+      ],
+      "state": "带话完成；修表两块"
+    },
+    "戴帽子的人（看表的人）": {
+      "abilities_resources": [
+        "（组织成员）",
+        "制服壳的手段"
+      ],
+      "goal": "处理暴走壳；观察镜辞",
+      "identity": "看表的人·戴帽子·脸平平·知道镜辞名字（剥壳人身份不坐实）",
+      "knowledge": [
+        "镜辞看得见接缝",
+        "处理壳的流程（'发病送医院'）"
+      ],
+      "location": "旧城·市场",
+      "open_threads": [
+        "组织怎么处置被带走的壳？"
+      ],
+      "relationships": [
+        "镜辞：目睹识破",
+        "老师傅：同组织"
+      ],
+      "state": "第一次动手（一掌切倒壳）；目睹镜辞识破（'你看得见？''指哪儿？'）；安排带走老李"
+    },
+    "收旧书的中年人": {
+      "abilities_resources": [
+        "（壳能力）"
+      ],
+      "goal": "要那块表被修好",
+      "identity": "旧货市场收旧书摊主·Lv.1侵蚀壳（伪装度34·接缝:扩张至后颈）·已退入暗处",
+      "knowledge": [],
+      "location": "（未出现·退场第六天·蓝布还在）",
+      "open_threads": [
+        "它回来吗？",
+        "蓝布什么时候收走？"
+      ],
+      "relationships": [
+        "镜辞：替他管摊"
+      ],
+      "state": "市场记忆淡出中（人先忘、壳半忘）"
+    },
+    "早餐铺老板娘": {
+      "abilities_resources": [
+        "记得味道"
+      ],
+      "goal": "（壳：维持日常？）",
+      "identity": "早餐铺老板娘·Lv.1模仿壳（伪装度20·接缝可见）·记得所有人口味记不清名字",
+      "knowledge": [
+        "镜辞的名字（持续记得）",
+        "豆豆（记得越来越具体）"
+      ],
+      "location": "旧城·市场东头早餐铺",
+      "open_threads": [
+        "她的记忆在恢复？（残余人性显形）"
+      ],
+      "relationships": [
+        "镜辞：记得名字",
+        "豆豆：夜里叫名字"
+      ],
+      "state": "持续记得镜辞的名字：'我记得。你明儿还来喝豆浆'"
+    },
+    "灰衣人（生面孔）": {
+      "abilities_resources": [],
+      "goal": "找'表的声音'",
+      "identity": "瘦高·灰衣·找表的人（壳，接缝在袖口内侧·淡光不写数值）",
+      "knowledge": [
+        "这块表以前走得响",
+        "守钟人处无他要找的表"
+      ],
+      "location": "旧城·市场/他家巷口（夜里离开）",
+      "open_threads": [
+        "他找的表在哪？",
+        "他是不是在等表再响？"
+      ],
+      "relationships": [
+        "镜辞：看他的表/夜里看他家",
+        "守钟人：每年开春看他橱窗（互相不打照面）"
+      ],
+      "state": "摊前开口讲表旧事（条街的钟/哄小孩/报时）；'你让它一直走，就有人来找你'；夜里站他家巷口墙边看巷子深处，拐角后脚步声停"
+    },
+    "灰褂卖菜人": {
+      "abilities_resources": [
+        "担子",
+        "熟悉山里"
+      ],
+      "goal": "（守约已尽：表交出去了）",
+      "identity": "挑担子的灰褂男人（身份未知）·沈竹进山同行者·三年之约的守约人",
+      "knowledge": [
+        "她下潭三天/它们认得表/她回去一趟（没说去哪）"
+      ],
+      "location": "离开岭后（回岭下方向）",
+      "open_threads": [
+        "他会再出现吗？",
+        "他到底是谁？"
+      ],
+      "relationships": [
+        "镜辞：把表/外套/布鞋交给他",
+        "沈竹：等她三年未归"
+      ],
+      "state": "交底完毕；留下遗言式交代；挑担离开"
+    },
+    "猫眼": {
+      "abilities_resources": [
+        "消息灵"
+      ],
+      "goal": "帮镜辞留意",
+      "identity": "旧货市场闲人·矮瘦·眼睛眯成缝",
+      "knowledge": [
+        "生面孔动向"
+      ],
+      "location": "旧城·市场",
+      "open_threads": [
+        "生面孔是什么人？"
+      ],
+      "relationships": [
+        "镜辞：帮手"
+      ],
+      "state": "报信：生面孔学镜辞修表动作，往河边去了"
+    },
+    "留条人": {
+      "abilities_resources": [],
+      "goal": "（在还这块表的东西？）",
+      "identity": "窗台留物人·不高·走路拖（脚抬得低蹭着地）·身份未明",
+      "knowledge": [],
+      "location": "旧城",
+      "open_threads": [
+        "他还有多少样东西要还？",
+        "他到底是谁？"
+      ],
+      "relationships": [
+        "镜辞：持续留物"
+      ],
+      "state": "第五样：旧表盘玻璃（擦得透亮·严丝合缝）"
+    },
+    "老师傅": {
+      "abilities_resources": [
+        "满墙停表",
+        "看表方法论"
+      ],
+      "goal": "教镜辞记表",
+      "identity": "'看表的人'据点长者·驼背·戴老花镜·记着满墙停表",
+      "knowledge": [
+        "高阶壳的存在（知情但不说）",
+        "记表方法"
+      ],
+      "location": "旧城·修锁铺后院",
+      "open_threads": [
+        "高阶壳为什么出现在据点？"
+      ],
+      "relationships": [
+        "镜辞：学徒",
+        "高阶壳：知情（'送表'的）"
+      ],
+      "state": "确认镜辞入伙（从今天起午时来学怎么记）；'这是来送表的''他不是你该管的事'（对高阶壳打圆场）"
+    },
+    "老王": {
+      "abilities_resources": [
+        "（日常）"
+      ],
+      "goal": "（日常）卖菜",
+      "identity": "卖菜老王·市场东头摊位·壳疑名单人物（ch20 问号）·嗓门大爱骂人",
+      "knowledge": [
+        "碗是路上捡的（记不清哪）"
+      ],
+      "location": "旧城·市场东头（回来了）",
+      "open_threads": [
+        "他变化的原因？",
+        "他哥的病？"
+      ],
+      "relationships": [
+        "镜辞：问碗",
+        "老板娘：她看见碗'心里发慌'"
+      ],
+      "state": "回来摆摊；说话慢半拍不骂人了；带回'捡的'碗（与缺口碗一套）"
+    },
+    "芽": {
+      "abilities_resources": [
+        "（日常人设）"
+      ],
+      "goal": "（日常）等他",
+      "identity": "豆浆铺长大的姑娘（壳身份未坐实，读者视角人设=他的执念之人）",
+      "knowledge": [
+        "他要去记表"
+      ],
+      "location": "旧城（厂里上班）",
+      "open_threads": [
+        "她的预感哪来的？"
+      ],
+      "relationships": [
+        "镜辞：等他回来吃饭"
+      ],
+      "state": "摊子前等他：'明儿还去吗''去''你记着回来吃饭'"
+    },
+    "郑师傅（外公）": {
+      "abilities_resources": [
+        "修表手艺（削过改锥柄）",
+        "柳树（压票处）"
+      ],
+      "goal": "守着河湾等她回来",
+      "identity": "南县河湾修表师傅·沈竹的父亲·镜辞的外公",
+      "knowledge": [
+        "表=她娘的表（他修好那晚她娘走了）",
+        "她怕水",
+        "她拿表走时说要去个地方修好它"
+      ],
+      "location": "河湾（周五晨，柳树下目送）",
+      "open_threads": [
+        "她娘去了哪儿？（不坐实）",
+        "她会不会回来？"
+      ],
+      "relationships": [
+        "沈竹：她娘的表/她怕水/她修了十几年",
+        "镜辞：交底+托付",
+        "外婆：修好表那晚出远门（未归）"
+      ],
+      "state": "听完镜辞交底；说出她怕水；认出改锥；确认表=外婆的；托付车票"
+    },
+    "镜辞": {
+      "abilities_resources": [
+        "镜返1阶·看见接缝",
+        "怀表（走稳·快慢不定）",
+        "沈竹的表（停着）",
+        "布包的女式表（裂纹）",
+        "旧物七样+干豆皮",
+        "五十年老座钟",
+        "铁钥匙（母亲遗物）",
+        "铁盒（未开）",
+        "纸印拓片",
+        "字条×2",
+        "窑碗"
+      ],
+      "goal": "白天修表，午时去修锁铺记表（第2卷组织入口）",
+      "identity": "旧货市场二手钟表摊主·养母失踪的孤儿·能看见'接缝'的观察者（镜返1阶）",
+      "knowledge": [
+        "读壳：Lv.5拟态壳·伪装度85·接缝几乎不可见",
+        "'旧城里还有多少看不见的缝'",
+        "白天修表午时记表"
+      ],
+      "location": "旧城·市场（周三夜）",
+      "open_threads": [
+        "那个五级的是谁？",
+        "为什么像认识他？",
+        "记表怎么学？",
+        "老李能救出来吗？"
+      ],
+      "relationships": [
+        "老师傅：开始学记表",
+        "高阶壳（Lv.5）：点头之交（伏笔）",
+        "芽：等他回来吃饭",
+        "守钟人：也去过河对岸",
+        "老板娘：记得他名字"
+      ],
+      "state": "接受记表；读壳Lv.5拟态壳（接缝几乎不可见）；见高阶壳点头（像等他看见）；决定一条一条看过来"
+    }
+  },
+  "context": {
+    "active_character_names": [
+      "镜辞",
+      "芽",
+      "守钟人",
+      "养母沈竹",
+      "猫眼",
+      "早餐铺老板娘"
+    ],
+    "continuity_risks": [
+      "留条人（不高·脚抬得低·蹭地）与收旧书壳（腰板直·脚步无声·磁带嘶嘶声）是两个存在，别混淆",
+      "镜返代价的具体表现要可感知（卖报纸老头认不出他），不能只写面板提示",
+      "芽的接缝细节三感描写（光影发抖/磁带嘶嘶声/樟脑味）保持一致，别前后冲突",
+      "壳巢存在与完整设定仍不能坐实；'壳'称谓与读者认知第10章前不摊开",
+      "第3章'Lv.2 侵蚀壳'数值呈现为一行式，后续镜辞读壳沿用此格式"
+    ],
+    "long_term_constraints": [
+      "核心母题：被遗忘的人不会彻底消失，以痕迹/信念/习惯活在铭记者生命里，被带着前行；爱过就是真的活过",
+      "变奏系统：十一人专属版台词，一生只说一次，每卷至多解锁1-2个，措辞必须符合身份语系",
+      "镜返代价：每用一次存在感流失（先路人后熟人最后至亲），被动遗忘与主动负重构成双重孤独",
+      "离去者机制：主角团非无敌，每1-2卷一个真离开者，死必兑付重大剧情收益，遗产反复自然出现",
+      "芽的复活希望永不坐实：只给可能的痕迹，不给确定的结果，终局留白",
+      "对标异兽迷城：只借骨架（情绪引擎/节奏循环/模块卡），皮肉全原创，不照搬桥段台词"
+    ],
+    "next_chapter_commitments": [
+      "第2卷《剥壳人》开卷：镜辞正式开始'记表'；看表的人/剥壳人据点展开；姜霁正式登场（第2卷卷纲：进入剥壳人，搭档姜霁）"
+    ],
+    "position": {
+      "scene": "旧城·修锁铺→市场",
+      "story_time": "周三（午→夜）",
+      "volume": "第一卷：谁不是我？",
+      "volume_start_chapter": 1
+    },
+    "recent_chapters": [
+      {
+        "chapter": 98,
+        "summary": "周一（暴走）：卖菜老李（常来修表）暴走（僵直/重复'我该回家了'/抓秤砣砸人）；他读壳'Lv.1模仿壳·伪装度20'喊'他身上有东西'；老李媳妇喊'豆豆'老李手抖停住；看表的人一掌切倒带走；卖报纸老头叫他'小伙子'（代价）；他记着老李，今天不修了。"
+      },
+      {
+        "chapter": 99,
+        "summary": "周二（看表的人）：修锁铺。壳定义半揭（披人皮吃人替人活）；方法论：'我们靠表''表认主人的手，壳碰过的表会停'；'老李还在壳里头喘着''有的能救出来有的不能'。招募：'你天生看得见接缝，来记表'；犹豫后决定去。回市场：记不清老李的脸；老板娘记得他。"
+      },
+      {
+        "chapter": 100,
+        "summary": "周三（第一道缝·卷末）：修锁铺角落多一人，普通到极致；他读壳'Lv.5拟态壳·伪装度85'；那人点头像等他看见；老师傅'这不是你该管的事'；他决定白天修表午时来记；芽等他'明儿还去吗''去'；表走得快，把看不见的缝一条条看过来。第一卷收束。"
+      }
+    ]
+  },
+  "foreshadow": {
+    "F001": {
+      "id": "F001",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 1,
+      "status": "已埋",
+      "summary": "芽喝豆浆不先喝汤的违和（'先喝汤'人设锚点断裂）；ch75信号：她先喝了一口汤（'汤最甜''你怎么知道？'）——信号出现，成因/意义不坐实，锚点仍保持未回收",
+      "updated_chapter": 75
+    },
+    "F002": {
+      "id": "F002",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 1,
+      "status": "已埋",
+      "summary": "怀表遗物：表盖内侧刻'镜辞'二字，怎么修都不走（养母失踪线索+身世伏笔）",
+      "updated_chapter": 2
+    },
+    "F003": {
+      "id": "F003",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 1,
+      "status": "已埋",
+      "summary": "芽周三上午的车出远门'看亲戚'（山里村子，坐大巴两个钟头）——去向未明",
+      "updated_chapter": 6
+    },
+    "F004": {
+      "id": "F004",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 2,
+      "status": "已埋",
+      "summary": "芽的记忆错位深化：刻字内容背得出，错别字细节（多一撇+画的圈）不记得——记忆是背的",
+      "updated_chapter": 5
+    },
+    "F005": {
+      "id": "F005",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 3,
+      "status": "已埋",
+      "summary": "镜辞第一次看见芽脸上的'接缝'并读到'Lv.2 侵蚀壳'（镜返1阶·看见觉醒）",
+      "updated_chapter": 3
+    },
+    "F006": {
+      "id": "F006",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 3,
+      "status": "已埋",
+      "summary": "沈竹也能看见接缝（纸条实证），并交代守钟人'看见了当没看见'；守钟人知情，等镜辞'准备好'交底",
+      "updated_chapter": 4
+    },
+    "F007": {
+      "id": "F007",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 4,
+      "status": "已埋",
+      "summary": "纸条背面洇字'……你还有……'；旧物盒夹层另有撕断纸片'芽是安全的。真正要小心的，是……'（硬生生撕掉的）",
+      "updated_chapter": 6
+    },
+    "F008": {
+      "id": "F008",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 4,
+      "status": "已埋",
+      "summary": "接缝规律：老王指尖/赵奶奶眼尾/白领领口各有淡光；第7章老王指尖光已不见+当众换脸——线头收起=伪装加深",
+      "updated_chapter": 7
+    },
+    "F009": {
+      "id": "F009",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 6,
+      "status": "已埋",
+      "summary": "芽的伪装度在下降（35→27），接缝在扩张（'Lv.2 侵蚀壳·伪装度27·接缝:扩张'）——壳在恶化",
+      "updated_chapter": 6
+    },
+    "F010": {
+      "id": "F010",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 7,
+      "status": "已埋",
+      "summary": "老王换脸实锤：壳存在的第一个确凿证据；'老王早就变了'——可能已变了很多年，无人察觉",
+      "updated_chapter": 7
+    },
+    "F011": {
+      "id": "F011",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 8,
+      "status": "已埋",
+      "summary": "壳的动机：'我只是不想消失'——壳想成为人、想被记住（主题种子，第5-6卷白壳线呼应）",
+      "updated_chapter": 8
+    },
+    "F012": {
+      "id": "F012",
+      "importance": "高",
+      "planned_resolution_chapter": 9,
+      "planted_chapter": 8,
+      "status": "已回收",
+      "summary": "'先喝汤'暗号已消费（第9章测试），暗号死亡不再使用",
+      "updated_chapter": 9
+    },
+    "F013": {
+      "id": "F013",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 9,
+      "status": "已埋",
+      "summary": "芽的记忆里有个她'想去'的地方（村子）——壳周三会去那里；芽可能在哪（希望线，绝不坐实）",
+      "updated_chapter": 9
+    },
+    "F014": {
+      "id": "F014",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 10,
+      "status": "已埋",
+      "summary": "早餐铺老板娘是壳（Lv.1 模仿壳·伪装度20·接缝可见）：记得所有人口味却记不清名字——壳+遗忘的双重存在",
+      "updated_chapter": 10
+    },
+    "F015": {
+      "id": "F015",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 10,
+      "status": "已埋",
+      "summary": "市场西头灰褂卖菜人+推婴儿车年轻女人身上有光（壳）——旧城区壳潮铺垫（单元1-3）",
+      "updated_chapter": 10
+    },
+    "F016": {
+      "id": "F016",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 11,
+      "status": "已埋",
+      "summary": "沈竹也记账（'见谁记谁，走哪儿记到哪儿'，一柜子本子）——与镜辞账本呼应；她走时带走全部本子只留怀表和'表停了不要紧，记性别停'",
+      "updated_chapter": 11
+    },
+    "F017": {
+      "id": "F017",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 11,
+      "status": "已埋",
+      "summary": "账本'沈竹'页被撕走（撕得干净沿纸线）——谁撕的？守钟人还是另有其人（悬念）",
+      "updated_chapter": 11
+    },
+    "F018": {
+      "id": "F018",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 12,
+      "status": "已埋",
+      "summary": "沈竹故意停表：把时间停在她离开那天；守钟人受托看表，'修好表就什么都明白'（怀表线核心）",
+      "updated_chapter": 12
+    },
+    "F019": {
+      "id": "F019",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 12,
+      "status": "已埋",
+      "summary": "遗忘扩散到芽：老板娘记不清芽的名字（被吃掉的人在从世界记忆中抹除）——只有镜辞在记",
+      "updated_chapter": 12
+    },
+    "F020": {
+      "id": "F020",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 13,
+      "status": "已埋",
+      "summary": "表盘底盘刻字（沈竹的字）：'别修了，孩子。有些表，修好了才是真的停了'——她预判镜辞会修表，这是留给他的话",
+      "updated_chapter": 13
+    },
+    "F021": {
+      "id": "F021",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 13,
+      "status": "已埋",
+      "summary": "壳短信：村子河干了、树还在（她明天去树下坐坐）——村子现状锚点",
+      "updated_chapter": 13
+    },
+    "F022": {
+      "id": "F022",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 14,
+      "status": "已埋",
+      "summary": "灰褂卖菜人每天收摊拐进死巷消失，夜里站在镜辞家门口（壳潮开始注意他）",
+      "updated_chapter": 14
+    },
+    "F023": {
+      "id": "F023",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 14,
+      "status": "已埋",
+      "summary": "村里周老太太说'前阵子有个穿红毛衣的姑娘在大树下坐了一下午'（时间与壳到村对不上=芽确实去过村子，希望线实体痕迹，不坐实）",
+      "updated_chapter": 14
+    },
+    "F024": {
+      "id": "F024",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 15,
+      "status": "已埋",
+      "summary": "老板娘重新记起芽的名字和细节（因为镜辞天天念叨）——铭记对抗遗忘第一次胜利，可复用机制",
+      "updated_chapter": 15
+    },
+    "F025": {
+      "id": "F025",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 15,
+      "status": "已埋",
+      "summary": "壳第二封信'想喝豆浆，我想起你说，先喝汤'——先喝汤信号第一次实体化（不坐实芽还在，只是信号）",
+      "updated_chapter": 15
+    },
+    "F026": {
+      "id": "F026",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 16,
+      "status": "已埋",
+      "summary": "树皮上的'芽'字浅刻痕（芽的字迹特征：横往右斜）——她确实来过村子的实体证据；她刻字的行为动机成谜（留给谁看？）",
+      "updated_chapter": 16
+    },
+    "F027": {
+      "id": "F027",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 16,
+      "status": "已埋",
+      "summary": "周老太太说'前阵子'红毛衣姑娘坐了一下午——芽来村子的时间点与壳到村时间的关系（第14章已埋时间差推理，此处实体化）",
+      "updated_chapter": 16
+    },
+    "F028": {
+      "id": "F028",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 17,
+      "status": "已埋",
+      "summary": "沈竹三年前问猫眼'被吃掉的人还能回来吗'——她也在找同一个问题的答案（她追查的动机）",
+      "updated_chapter": 17
+    },
+    "F029": {
+      "id": "F029",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 17,
+      "status": "已埋",
+      "summary": "旧消息：被吃掉的东西会在吃掉它的人身边留下一点痕迹（灰褂卖菜人死巷消失/芽字刻痕=痕迹机制的提示）",
+      "updated_chapter": 17
+    },
+    "F030": {
+      "id": "F030",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 17,
+      "status": "已埋",
+      "summary": "沈竹的照片：站在一条很宽的河边，背面写'去看河'（看河底不看水面）；照片远处有山；纸条放纸条的人来历未知",
+      "updated_chapter": 17
+    },
+    "F031": {
+      "id": "F031",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 17,
+      "status": "已埋",
+      "summary": "沈竹临走自言自语'如果来得及的话'——她有自己的时间表",
+      "updated_chapter": 17
+    },
+    "F032": {
+      "id": "F032",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 18,
+      "status": "已埋",
+      "summary": "沈竹残留影像：她写'芽是安全的。真正要小心的，是……'时补了一行字（画面模糊看不清）；她用刀片刮掉了'是'后面的词——她到底在小心谁",
+      "updated_chapter": 18
+    },
+    "F033": {
+      "id": "F033",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 18,
+      "status": "已埋",
+      "summary": "守钟人转述沈竹：'那些东西是来被吃的，吃掉它们的是看得见它们的人（名字写在它们背后）'——镜返者身份线第一次外露",
+      "updated_chapter": 18
+    },
+    "F034": {
+      "id": "F034",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 18,
+      "status": "已埋",
+      "summary": "沈竹走的那天晚上去看河（'河在晚上，才看得清河底'）——她去看的是照片上那条河",
+      "updated_chapter": 18
+    },
+    "F035": {
+      "id": "F035",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 19,
+      "status": "已埋",
+      "summary": "照片上的山形=南边山里带豁口的山（与去村子的路同一带）——沈竹站的可能是另一条宽河，照片≠临江",
+      "updated_chapter": 19
+    },
+    "F036": {
+      "id": "F036",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 19,
+      "status": "已埋",
+      "summary": "临江桥东柳树正前方江底：一片十几团灰光（大团居中）在江底缓慢移动——壳潮的水下形态？钓鱼老头'晚上不要看水''扔名字会沉下去'=河边规矩（组织线）",
+      "updated_chapter": 19
+    },
+    "F037": {
+      "id": "F037",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 20,
+      "status": "已埋",
+      "summary": "壳潮扩散：修鞋林师傅被替换（新师傅细节对不上：上线方式/称其有儿子而林无子）——壳会冒充有人接手的交接",
+      "updated_chapter": 20
+    },
+    "F038": {
+      "id": "F038",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 20,
+      "status": "已埋",
+      "summary": "卖水果大姐话尾带南方音、老王行为习惯改变（先屈膝）——壳潮中的人出现微小行为漂移（识别壳的观察线索）",
+      "updated_chapter": 20
+    },
+    "F039": {
+      "id": "F039",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 20,
+      "status": "已埋",
+      "summary": "镜辞把自己写进名单（'他不知道自己还记不记得自己'）——镜返代价的自省（他会慢慢忘了自己吗）",
+      "updated_chapter": 20
+    },
+    "F040": {
+      "id": "F040",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 21,
+      "status": "已埋",
+      "summary": "沈竹的事三年前被人打过招呼不让查（管三年，刚好到期）——背后有组织在掩盖沈竹的去向；递话中间人=戴帽子",
+      "updated_chapter": 21
+    },
+    "F041": {
+      "id": "F041",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 21,
+      "status": "已埋",
+      "summary": "渡口凉棚下戴帽子的男人在看镜辞（帽檐压很低/靠凉棚柱子）——疑似与三年前递话中间人是同一特征（姜霁观察线伏笔）",
+      "updated_chapter": 21
+    },
+    "F042": {
+      "id": "F042",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 21,
+      "status": "已埋",
+      "summary": "沈竹过河时间=秋天柿子熟时；她站船尾看河底说'天黑才看得见'；临走说'他应该快长大了'——她过了河去找那条河（南边山里）",
+      "updated_chapter": 21
+    },
+    "F043": {
+      "id": "F043",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 22,
+      "status": "已埋",
+      "summary": "船工证词：沈竹坐末班船时问江心最深处在哪、说'要是能看见就好了'——她想看见河底的东西（她看不见，镜辞看得见）",
+      "updated_chapter": 22
+    },
+    "F044": {
+      "id": "F044",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 22,
+      "status": "已埋",
+      "summary": "南岸河湾=照片拍摄地（柳树/斜坡/豁口山形全对，界碑'南县'）；她一个人来过，踩倒的草朝河湾来向；她往南往山那边走了",
+      "updated_chapter": 22
+    },
+    "F045": {
+      "id": "F045",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 22,
+      "status": "已埋",
+      "summary": "河湾的河还活着，村子的河干了（隔一道岭）——两条河对照；芽想看的河是干的那条",
+      "updated_chapter": 22
+    },
+    "F046": {
+      "id": "F046",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 23,
+      "status": "已埋",
+      "summary": "柳树背面'镜'字（指甲压出）=沈竹刻的；她刻的是他的名字；她到过河湾，还活着，然后往山走了",
+      "updated_chapter": 23
+    },
+    "F047": {
+      "id": "F047",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 23,
+      "status": "已埋",
+      "summary": "车票（临江→南县，三年前秋天）+灰外套布头（埋在洼地土里）=沈竹在河湾停留的证据；她压票石头/埋布头=有意留下痕迹",
+      "updated_chapter": 23
+    },
+    "F048": {
+      "id": "F048",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 23,
+      "status": "已埋",
+      "summary": "沈竹与芽笔迹同特征（横往右斜收笔轻拖）——芽认识沈竹/她们的关系线（纸条'芽是安全的'呼应）",
+      "updated_chapter": 23
+    },
+    "F049": {
+      "id": "F049",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 23,
+      "status": "已埋",
+      "summary": "河湾河底灰光：五六团围着一个大的（与临江十几团围大团同构）——灰光在围着什么东西（蚁围糖块意象）",
+      "updated_chapter": 23
+    },
+    "F050": {
+      "id": "F050",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 24,
+      "status": "已埋",
+      "summary": "早餐铺老板娘（壳）知道镜辞名字/沈竹/老沈/修表，且'梦见沈竹站在河边'——壳潮共享信息/组织性证据；她说'你记性最好了'（她对镜辞的认知超出'壳'应有）",
+      "updated_chapter": 24
+    },
+    "F051": {
+      "id": "F051",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 24,
+      "status": "已埋",
+      "summary": "灰褂卖菜人当着他的面消失（路灯底下），问'回来了'（知道他今天回城=他在被监视）",
+      "updated_chapter": 24
+    },
+    "F052": {
+      "id": "F052",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 24,
+      "status": "已埋",
+      "summary": "名单更新：早餐铺老板娘=她们互相知道（他知道她们认识彼此，但不知道她们是谁/多少/在商量什么）",
+      "updated_chapter": 24
+    },
+    "F053": {
+      "id": "F053",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 25,
+      "status": "已埋",
+      "summary": "早餐铺老板娘'记得'的沈竹往事=背的故事（细节与镜辞记忆矛盾：沈竹从不吃市场早饭）；她连'有些东西忘了就真的没了'都知道——壳潮的信息从哪来",
+      "updated_chapter": 25
+    },
+    "F054": {
+      "id": "F054",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 25,
+      "status": "已埋",
+      "summary": "沈竹临走前一个半月常去旧城区东里巷'顺记修表铺'；老板娘说老师傅是沈竹的父亲=镜辞的外公；老师傅有一块修了一辈子没修好的怀表，沈竹说'我替他修'",
+      "updated_chapter": 25
+    },
+    "F055": {
+      "id": "F055",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 25,
+      "status": "已埋",
+      "summary": "镜返代价首例：卖报纸老头认不出他（天天买报/说摊子不卖体育版）——存在感开始流失",
+      "updated_chapter": 25
+    },
+    "F056": {
+      "id": "F056",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 26,
+      "status": "已埋",
+      "summary": "顺记修表铺郑师傅：三年前秋天（柿子红时）离开，与沈竹同一时段消失；他老家在南边（与沈竹过河方向一致）；他不收女客的表只收沈竹的",
+      "updated_chapter": 26
+    },
+    "F057": {
+      "id": "F057",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 26,
+      "status": "已埋",
+      "summary": "猫眼账本：沈竹买过三条消息（第三条=东里巷郑师傅来历，'未答，去店自寻'）；她查清楚了郑师傅来历后说'查清楚了反而没意思了'",
+      "updated_chapter": 26
+    },
+    "F058": {
+      "id": "F058",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 26,
+      "status": "已埋",
+      "summary": "沈竹留给猫眼的照片：她与深色褂子男人在河湾合影；猫眼转述沈竹'他修了一辈子表'；沈竹怀里揣着'修不好的表'（怀表线）",
+      "updated_chapter": 26
+    },
+    "F059": {
+      "id": "F059",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 26,
+      "status": "已埋",
+      "summary": "夜里旧城区巷口灰外套女人背影（不坐实身份）；地上纸条'别查了'（字迹横往右斜——与沈竹/芽同特征）",
+      "updated_chapter": 26
+    },
+    "F060": {
+      "id": "F060",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 27,
+      "status": "已埋",
+      "summary": "郑师傅=沈竹父亲坐实（沈竹走前喊'爸，我走了'）；他三年前秋天说'去还一样东西'后离开（去向=南边？）",
+      "updated_chapter": 27
+    },
+    "F061": {
+      "id": "F061",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 27,
+      "status": "已埋",
+      "summary": "怀表线：郑师傅说'不敢修，修好了表就停了'；沈竹问过怎么修好一块不走的怀表；怀表与郑师傅的怀表（外公）同源疑云",
+      "updated_chapter": 27
+    },
+    "F062": {
+      "id": "F062",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 27,
+      "status": "已埋",
+      "summary": "镜返代价扩展：修鞋摊新摊主（三年没见他）/水果大姐（没见过他）——存在感流失加速；名单'我'=第二个问号",
+      "updated_chapter": 27
+    },
+    "F063": {
+      "id": "F063",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 27,
+      "status": "已埋",
+      "summary": "家门口干柿子叶（芽说过'柿子的叶子秋天落，我都收着压得干干的'）——芽的痕迹；她知道他去了村子？",
+      "updated_chapter": 27
+    },
+    "F064": {
+      "id": "F064",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 28,
+      "status": "已埋",
+      "summary": "早餐铺老板娘'梦见'郑师傅（自称顺记/南县口音/深色褂子/瘦）——她没听说过顺记，描述却与草帽老头一致（壳潮信息共享再证据）",
+      "updated_chapter": 28
+    },
+    "F065": {
+      "id": "F065",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 28,
+      "status": "已埋",
+      "summary": "郑师傅走前来过市场口，站在修鞋摊斜对面看了半天——那个位置正对钟表行（他来看镜辞？）；他说'她修的表也不知道修好没有'",
+      "updated_chapter": 28
+    },
+    "F066": {
+      "id": "F066",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 28,
+      "status": "已埋",
+      "summary": "镜辞梦见郑师傅锁门离开说了句听不清的话（梦中话=悬念，留待回收）",
+      "updated_chapter": 28
+    },
+    "F067": {
+      "id": "F067",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 29,
+      "status": "已埋",
+      "summary": "怀表来历：沈竹十六岁捡的（对守钟人这么说），为修它学修表，修了十多年没修好；她念叨'爸，我修好了，就给你送回去'",
+      "updated_chapter": 29
+    },
+    "F068": {
+      "id": "F068",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 29,
+      "status": "已埋",
+      "summary": "沈竹交代守钟人：'表是她的，话在表里。他要是修得好，就能听见'；'他外公不是坏人，他只是怕'（守钟人转述）",
+      "updated_chapter": 29
+    },
+    "F069": {
+      "id": "F069",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 29,
+      "status": "已埋",
+      "summary": "沈竹走那晚来钟表行告别：'去找一个答案'/'我要是回不来，你看着点镜辞'；她说'等找到了就回来告诉他'（她没回来）",
+      "updated_chapter": 29
+    },
+    "F070": {
+      "id": "F070",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 30,
+      "status": "已埋",
+      "summary": "怀表夹层里的信（沈竹笔迹）：'表停了，人还在'——沈竹的信念宣言（母题回响）；'你要是读到这个，说明你听见它走了'",
+      "updated_chapter": 30
+    },
+    "F071": {
+      "id": "F071",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 30,
+      "status": "已埋",
+      "summary": "怀表开始走了（他取信装回后滴答响=等到了听得见它的人）；守钟人'那她就可以走了'（话里有话）",
+      "updated_chapter": 30
+    },
+    "F072": {
+      "id": "F072",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 30,
+      "status": "已埋",
+      "summary": "守钟人转交沈竹留的第二张纸：'去南县，找你外公。他知道答案。'——沈竹把每一步都安排好了；镜辞决定去南县",
+      "updated_chapter": 30
+    },
+    "F073": {
+      "id": "F073",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 30,
+      "status": "已埋",
+      "summary": "梦里郑师傅说'你妈说，她修的表，她听见了'（梦中话=悬念）",
+      "updated_chapter": 30
+    },
+    "F074": {
+      "id": "F074",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 31,
+      "status": "已埋",
+      "summary": "外公住在南县河湾边（独门独院，三年前回来的）；他不敢看镜辞的脸（越长越像沈竹）",
+      "updated_chapter": 31
+    },
+    "F075": {
+      "id": "F075",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 31,
+      "status": "已埋",
+      "summary": "大巴同线：镜辞坐沈竹三年前坐过的车次（临江→南县单程票）；他想起芽周三坐同款大巴去山里（最后一次看见她）",
+      "updated_chapter": 31
+    },
+    "F076": {
+      "id": "F076",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 31,
+      "status": "已埋",
+      "summary": "外公回忆：沈竹十六岁拿走一块表说要自己修，'你修不好''那我慢慢修'——那块表后来没修好（怀表前史）",
+      "updated_chapter": 31
+    },
+    "F077": {
+      "id": "F077",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "沈竹每年秋天来河湾柳树底下压一张车票（临江→南县，压了十二年）；三年前那张是她最后一张；去年她没来（外公收了去年的票）",
+      "updated_chapter": 32
+    },
+    "F078": {
+      "id": "F078",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "外婆线：外婆有一块表（外公买的），修好的当晚她说要出远门再没回来；她走前把表留下了（挂家里最里头墙上几十年）",
+      "updated_chapter": 32
+    },
+    "F079": {
+      "id": "F079",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "怀表=外婆的：沈竹十六岁趁外公不在拿走外婆的表（'我自己修，修好了给你送回来'），修了十多年没修好；表盖内侧她刻了'镜辞'",
+      "updated_chapter": 32
+    },
+    "F080": {
+      "id": "F080",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "外公'修一块走一个'：他修好表，表的主人就没影了——不敢修女客的表的由来（怕应验）",
+      "updated_chapter": 32
+    },
+    "F081": {
+      "id": "F081",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "外公教镜辞'听它想不想走'：'你妈太想修好它了，一个人太想修好一样东西，就容易听不见它'",
+      "updated_chapter": 32
+    },
+    "F082": {
+      "id": "F082",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 32,
+      "status": "已埋",
+      "summary": "外公守河湾三年（沈竹过河走了，她往河那边的山走的）；外公老了走不动，让镜辞过河去看看山那边",
+      "updated_chapter": 32
+    },
+    "F083": {
+      "id": "F083",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 33,
+      "status": "已埋",
+      "summary": "灰褂卖菜人跟到南县河湾：沈竹过河那天他在对岸等着，他们一起往山那边走了；他说河那边没有村子没有集（外公：卖菜卖给谁）",
+      "updated_chapter": 33
+    },
+    "F084": {
+      "id": "F084",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 33,
+      "status": "已埋",
+      "summary": "河湾柳树：沈竹过河前摸了一圈树皮（树腰磨亮了）；她说'我要是回不来，你就当我去远门了'；外公守着河湾（她回家的路，灯亮着等她）",
+      "updated_chapter": 33
+    },
+    "F085": {
+      "id": "F085",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 33,
+      "status": "已埋",
+      "summary": "夜里灰光变化：小的几团贴着大的（比半月前靠拢）；大团灰光朝河那边（山那边）方向挪了一点",
+      "updated_chapter": 33
+    },
+    "F086": {
+      "id": "F086",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 34,
+      "status": "已埋",
+      "summary": "外公把去年的车票压回柳树根底下：'她要是回来，看见票还在，就知道我还在等她'（等待仪式延续）",
+      "updated_chapter": 34
+    },
+    "F087": {
+      "id": "F087",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 34,
+      "status": "已埋",
+      "summary": "半山旧火堆：灰是新的，手工卷烟蒂带潮气（最近有人走过这条路/烧过火抽过烟）",
+      "updated_chapter": 34
+    },
+    "F088": {
+      "id": "F088",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 34,
+      "status": "已埋",
+      "summary": "岭下镇周老头：三年前秋天一男一女来过（女的瘦=沈竹，男的穿灰褂子挑担子），买蜡烛问电站路；沈竹在电站住下了（'看东西'）；灰褂人再回来买蜡烛火柴盐绳子（'不像卖菜的'）",
+      "updated_chapter": 34
+    },
+    "F089": {
+      "id": "F089",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 35,
+      "status": "已埋",
+      "summary": "机房=沈竹住过的地方：工作台（桌面圆印子=怀表位置/改锥划痕/油渍）、干草床、剩蜡烛、搪瓷缸、修表擦布",
+      "updated_chapter": 35
+    },
+    "F090": {
+      "id": "F090",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 35,
+      "status": "已埋",
+      "summary": "墙上的字（沈竹铅笔字）：'我数过了，六团。它们在动。它们认得我。'——她在电站看见了河底的东西",
+      "updated_chapter": 35
+    },
+    "F091": {
+      "id": "F091",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 35,
+      "status": "已埋",
+      "summary": "机房后地下铁门（锁被撬过）→台阶→走廊→小房间中央一口井；水泥井沿有改锥划痕半圈；井底有水声（一下一下）",
+      "updated_chapter": 35
+    },
+    "F092": {
+      "id": "F092",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 36,
+      "status": "已埋",
+      "summary": "沈竹的记录纸（抽屉里）：'它认得我。它今天朝我这边动了。'/'我喂了它三天'/'它只是记性不好'——她在电站喂过/等过河底的东西",
+      "updated_chapter": 36
+    },
+    "F093": {
+      "id": "F093",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 36,
+      "status": "已埋",
+      "summary": "半封信（沈竹写给镜辞，没写完没寄出）：'镜辞：我找到了。河底的东西，不是……'笔迹变乱+顿点戳破纸=被打断；她找到了什么/不是什么=悬念",
+      "updated_chapter": 36
+    },
+    "F094": {
+      "id": "F094",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 36,
+      "status": "已埋",
+      "summary": "暗渠通河：铁栅栏外是河，渠底水面起涟漪+一下一下水声（'它们在动'的现场）",
+      "updated_chapter": 36
+    },
+    "F095": {
+      "id": "F095",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 36,
+      "status": "已埋",
+      "summary": "灰褂人交付沈竹的修表工具（改锥木柄刻'沈'字）：他一直在替沈竹保管东西，三年后交给了镜辞；他也在等人（她没回来）",
+      "updated_chapter": 36
+    },
+    "F096": {
+      "id": "F096",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 37,
+      "status": "已埋",
+      "summary": "井底侧壁洞里的图（沈竹画的）：虚线从井画到纸边，'它们在往岭后走。我跟着它们。'——她的路线图",
+      "updated_chapter": 37
+    },
+    "F097": {
+      "id": "F097",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 37,
+      "status": "已埋",
+      "summary": "井沿绳子磨出的凹痕（有人下过井）；井底洞里的空煤油灯（点过很多次）",
+      "updated_chapter": 37
+    },
+    "F098": {
+      "id": "F098",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 37,
+      "status": "已埋",
+      "summary": "周老头：岭后是荒的（以前有矿，矿塌了人都走了）；'那儿的水，是黑的'；沈竹说'看完了，就去岭后'",
+      "updated_chapter": 37
+    },
+    "F099": {
+      "id": "F099",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 38,
+      "status": "已埋",
+      "summary": "岭后路上的记号：七棵树上有改锥划痕指路；第一棵树下码七块石头（压着一小片纸，字迹晕开，有'天'字和数字=她在数日子）",
+      "updated_chapter": 38
+    },
+    "F100": {
+      "id": "F100",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 38,
+      "status": "已埋",
+      "summary": "水潭边石头上的深色外套+并排布鞋（叠放整齐，衣角撕掉一块=呼应旧渡口灰布头）；石壁三十一道刻痕（她待了三十一天）；火塘与码好的柴",
+      "updated_chapter": 38
+    },
+    "F101": {
+      "id": "F101",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 38,
+      "status": "已埋",
+      "summary": "岭后水潭：水是黑的，水底一团大灰光（比河湾那团大），朝镜辞的方向动了一下（它注意到他）",
+      "updated_chapter": 38
+    },
+    "F102": {
+      "id": "F102",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 38,
+      "status": "已埋",
+      "summary": "灰褂人第一次开口：'你妈，下过这个潭。'——他在洞口等着镜辞（没有走开）",
+      "updated_chapter": 38
+    },
+    "F103": {
+      "id": "F103",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 39,
+      "status": "已埋",
+      "summary": "灰褂人交底：她下潭三天（表放石头上，'表不能下水，下水它们会跟着表走'）；它们围着她看三天认不出她",
+      "updated_chapter": 39
+    },
+    "F104": {
+      "id": "F104",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 39,
+      "status": "已埋",
+      "summary": "'它们在等一个听得到的人'；'谁拿得动这块表，谁就听得见'——表=钥匙（守钟人呼应）",
+      "updated_chapter": 39
+    },
+    "F105": {
+      "id": "F105",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 39,
+      "status": "已埋",
+      "summary": "她回电站写信写到一半不写，说回去一趟想明白就回来；灰褂人等三年她没回来——她的去向仍不坐实",
+      "updated_chapter": 39
+    },
+    "F106": {
+      "id": "F106",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 39,
+      "status": "已埋",
+      "summary": "沈竹口头禅'鞋摆正了，路就走得直'=芽同款口头禅（'鞋摆正了，走路不歪'）——二人关联暗线",
+      "updated_chapter": 39
+    },
+    "F107": {
+      "id": "F107",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 39,
+      "status": "已埋",
+      "summary": "水底只剩一团灰光（墙上字说六团）；石缝渗黑水（其他五团？）——六团的去向",
+      "updated_chapter": 39
+    },
+    "F108": {
+      "id": "F108",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 40,
+      "status": "已埋",
+      "summary": "沈竹怕水（从小到大不敢下水/过河踩石头/坐船哭一路）却下潭三天——她为什么下水？周老头：她常蹲在河边看水一下午",
+      "updated_chapter": 40
+    },
+    "F109": {
+      "id": "F109",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 40,
+      "status": "已埋",
+      "summary": "怀表=外婆的表（外公修好那晚外婆走了）；沈竹说'表修好了，她娘就回来了'，修了十几年修不好，后来拿着表说要去个地方把表修好——表的完整来历",
+      "updated_chapter": 40
+    },
+    "F110": {
+      "id": "F110",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 40,
+      "status": "已埋",
+      "summary": "改锥木头柄是外公削的（她十六岁学修表时给的），她刻了'沈'字",
+      "updated_chapter": 40
+    },
+    "F111": {
+      "id": "F111",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 40,
+      "status": "已埋",
+      "summary": "外公把压了两年的车票交给镜辞：'等她回来，你替我给她'——车票转手（托付）",
+      "updated_chapter": 40
+    },
+    "F112": {
+      "id": "F112",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 40,
+      "status": "已埋",
+      "summary": "周老头：沈竹忘在他店里的灰布口袋（一小卷磨亮的钱+缝衣针）——她攒的钱，用途未明",
+      "updated_chapter": 40
+    },
+    "F113": {
+      "id": "F113",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 41,
+      "status": "已埋",
+      "summary": "卖报纸老头认不出镜辞（'新来的？'）——镜返代价在熟人身上显现；上月他还问过怀表修好没有",
+      "updated_chapter": 41
+    },
+    "F114": {
+      "id": "F114",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 41,
+      "status": "已埋",
+      "summary": "锁孔周围新划痕（有人试过开锁）；巷口戴帽子的人影盯着他（被盯梢）",
+      "updated_chapter": 41
+    },
+    "F115": {
+      "id": "F115",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 41,
+      "status": "已埋",
+      "summary": "灰布口袋里的钱=四块六（她攒钱做什么？）",
+      "updated_chapter": 41
+    },
+    "F116": {
+      "id": "F116",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 41,
+      "status": "已埋",
+      "summary": "芽不怕水（踩水花）对照沈竹怕水——二人关联暗线再添一笔",
+      "updated_chapter": 41
+    },
+    "F117": {
+      "id": "F117",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 42,
+      "status": "已埋",
+      "summary": "纸条：'表在哪儿，人就在哪儿'——铅笔横往右斜但末笔是平的（沈竹末笔上挑）=有人照她的字练过（笔迹仿写暗线）",
+      "updated_chapter": 42
+    },
+    "F118": {
+      "id": "F118",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 42,
+      "status": "已埋",
+      "summary": "买闹钟的顾客：'我有一块老怀表，走了三十二年，不走了'（对照外婆的表/修表认得表么）——打听者本人？",
+      "updated_chapter": 42
+    },
+    "F119": {
+      "id": "F119",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 42,
+      "status": "已埋",
+      "summary": "守钟人：'他'（灰衣人）来过店里看表，说'他要找的那块不在你店里'；ch73确认灰衣人=他：每年开春来看橱窗十年、站到关门、下雨也站；'他找的是它的声音''表在你手里，他拿不到。他等得起'；'等他拿到表的时候再说他是谁'仍未兑现",
+      "updated_chapter": 73
+    },
+    "F120": {
+      "id": "F120",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 42,
+      "status": "已埋",
+      "summary": "守钟人旧事：沈竹小时候跟她娘进城常来店里，蹲门口看河：'看看就不怕了'（她看水的习惯由来）；'她把它送给了能听见它的人'",
+      "updated_chapter": 42
+    },
+    "F121": {
+      "id": "F121",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 42,
+      "status": "已埋",
+      "summary": "表+信+半封信+图+灰布口袋+纸条锁进铁盒，藏进市场墙角油桶（钥匙挂脖子）——表的位置变化",
+      "updated_chapter": 42
+    },
+    "F122": {
+      "id": "F122",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 43,
+      "status": "已埋",
+      "summary": "收旧书的换人了：以前是老头老张（论斤卖/雨天守书/多给两毛），现在是腰板直头发齐的中年人；卖瓷器的说没换过，修鞋的说老张回老家了侄子接的摊——替换痕迹+记忆矛盾",
+      "updated_chapter": 43
+    },
+    "F123": {
+      "id": "F123",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 43,
+      "status": "已埋",
+      "summary": "新收旧书的翻书一页一页、不看书价，像在书里找东西",
+      "updated_chapter": 43
+    },
+    "F124": {
+      "id": "F124",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 43,
+      "status": "已埋",
+      "summary": "油桶盖边缘出现新擦痕：有人趁镜辞离开（市场办/买饭）掀开油桶看过又盖回去——藏点被发现了",
+      "updated_chapter": 43
+    },
+    "F125": {
+      "id": "F125",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 43,
+      "status": "已埋",
+      "summary": "老太太：'表走得准，人就回得来'（她娘走了三十年表一直走）——修表母题的又一变体",
+      "updated_chapter": 43
+    },
+    "F126": {
+      "id": "F126",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 44,
+      "status": "已埋",
+      "summary": "上午卖杂志的大嫂的旧杂志里，收旧书的抽出一本看封底：封底画着一只表——他翻书时只对'表'相关内容停留",
+      "updated_chapter": 44
+    },
+    "F127": {
+      "id": "F127",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 44,
+      "status": "已埋",
+      "summary": "中午卖书男人那摞书里的第三本：牛皮纸封皮无书名，收旧书的翻到它手指停了一下——他在找某类书",
+      "updated_chapter": 44
+    },
+    "F128": {
+      "id": "F128",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 44,
+      "status": "已埋",
+      "summary": "收旧书的人=壳：深夜翻油桶验假表（'不是那块表'）、去钟表店站一夜进不来、说'认得钥匙'——钥匙成它的线索",
+      "updated_chapter": 48
+    },
+    "F129": {
+      "id": "F129",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 48,
+      "status": "已埋",
+      "summary": "三年前沈竹托守钟人转交的信（'等你认得表的时候再给你'），镜辞未拆、锁进抽屉",
+      "updated_chapter": 48
+    },
+    "F130": {
+      "id": "F130",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 45,
+      "status": "已埋",
+      "summary": "早市旧报纸中一张对折的：收旧书的看了很久并单独带走（镜辞没看到内容）——他在收集某类信息",
+      "updated_chapter": 45
+    },
+    "F131": {
+      "id": "F131",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 45,
+      "status": "已埋",
+      "summary": "灰夹克男人卖的灰皮书：收旧书的收下后傍晚带走（其他书都留在巷子里）——他挑书带走",
+      "updated_chapter": 45
+    },
+    "F132": {
+      "id": "F132",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 45,
+      "status": "已埋",
+      "summary": "猫眼：前天夜里见那人站在市场后巷不动——他夜里也活动（巷子消失之谜铺垫）",
+      "updated_chapter": 45
+    },
+    "F133": {
+      "id": "F133",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 45,
+      "status": "已埋",
+      "summary": "跟踪：他扛书进后巷巷子里没人，只有一摞书，《修表入门》折角页=怀表机芯调校——他在收集修表资料",
+      "updated_chapter": 45
+    },
+    "F134": {
+      "id": "F134",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 45,
+      "status": "已埋",
+      "summary": "Lv.1 vs 芽的Lv.2：镜辞不懂数字意思（等级概念留待后续揭示）",
+      "updated_chapter": 45
+    },
+    "F135": {
+      "id": "F135",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 49,
+      "status": "已埋",
+      "summary": "壳两天挨个问人排查'谁认得表'（修鞋的/卖瓷器的/猫眼），答话'书有字'——从'表没字'到主动问表的反转",
+      "updated_chapter": 49
+    },
+    "F136": {
+      "id": "F136",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 49,
+      "status": "已埋",
+      "summary": "壳伪装度持续掉（45→39→38·扩张），站一夜也在掉——它嘴上说等，脚底下在漏，它等不了",
+      "updated_chapter": 50
+    },
+    "F137": {
+      "id": "F137",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 49,
+      "status": "已埋",
+      "summary": "壳夜里站在老太太院墙外偏头听她家的表走（灯灭才走、无声消失）——听表的原因未明",
+      "updated_chapter": 49
+    },
+    "F138": {
+      "id": "F138",
+      "importance": "高",
+      "planned_resolution_chapter": 50,
+      "planted_chapter": 49,
+      "status": "已回收",
+      "summary": "镜辞自己冒出'修好'二字——第50章被它亲口证实",
+      "updated_chapter": 50
+    },
+    "F139": {
+      "id": "F139",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 50,
+      "status": "已埋",
+      "summary": "它说'修好它'——它要的不是表，是表被修好；外婆的表/沈竹/守钟人/它，全都要那块表走起来（为什么？悬置）",
+      "updated_chapter": 50
+    },
+    "F140": {
+      "id": "F140",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 50,
+      "status": "已埋",
+      "summary": "它临走留话'你认得表了，就拿来'——与沈竹留信条件'等你认得表的时候'同词（壳与沈竹的话对上了）",
+      "updated_chapter": 50
+    },
+    "F141": {
+      "id": "F141",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 50,
+      "status": "已埋",
+      "summary": "老太太被救后忘了镜辞（'你是谁'）——他救的人把他忘得最快（镜返代价规则细化）",
+      "updated_chapter": 50
+    },
+    "F142": {
+      "id": "F142",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 51,
+      "status": "已埋",
+      "summary": "它放《修表入门》在摊上（折角页=怀表机芯调校，在教他认表）——它从'等'转入'教'，策略变了",
+      "updated_chapter": 51
+    },
+    "F143": {
+      "id": "F143",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 51,
+      "status": "已埋",
+      "summary": "阿婶取钟不认得镜辞（代价从被救者扩散到普通接触者——记住的人开始忘他了）",
+      "updated_chapter": 51
+    },
+    "F144": {
+      "id": "F144",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 51,
+      "status": "已埋",
+      "summary": "守钟人说'它掉完之前，要么等到，要么换法子'——'换法子'的警告（下一章它来问'还有多久'=换法子的开端）",
+      "updated_chapter": 51
+    },
+    "F145": {
+      "id": "F145",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 52,
+      "status": "已埋",
+      "summary": "纸条'别修'铅笔字横往右斜——与岭后村树皮'芽'字同特征（暗示留条人，但不坐实：芽/壳芽/模仿者均可）",
+      "updated_chapter": 52
+    },
+    "F146": {
+      "id": "F146",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 53,
+      "status": "已埋",
+      "summary": "它换法子实体化：搬凳坐摊斜对面三米→站摊旁'你慢慢来'→跟回家→跟到门口不进→退半步→彻底缺席守终点（不跟不逼，把选择权交还镜辞）→更淡→最后一次完整出现（答'怕被忘了'）后退入暗处不再出现",
+      "updated_chapter": 58
+    },
+    "F147": {
+      "id": "F147",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 53,
+      "status": "已埋",
+      "summary": "留条人新特征：猫眼补情报'走路有点拖'（脚抬得低蹭地·非跛），叠加'背影不高'排查中",
+      "updated_chapter": 53
+    },
+    "F148": {
+      "id": "F148",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 54,
+      "status": "已埋",
+      "summary": "留条人递物链：纸条'别修'→树皮（横往右斜·旧刻痕·背面模糊'等'字）→槐树叶七片→旧表链七节（断接头·微锈·和表有关），窗台下持续出现；'不高+走路拖'特征吻合",
+      "updated_chapter": 58
+    },
+    "F149": {
+      "id": "F149",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 56,
+      "status": "已埋",
+      "summary": "修不修摊牌落地：镜辞真正开修（拆表壳/清油/换第一根游丝/表针微动又停·修好未完成）；它答'你修好它，我就能记住自己是谁'；他夹起第二三根游丝",
+      "updated_chapter": 58
+    },
+    "F150": {
+      "id": "F150",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 58,
+      "status": "已埋",
+      "summary": "表壳内侧发现'记得'二字（刻得深·横往右斜·另一个人的字·刻给拆表的人），与外婆背面刻名相对；谁刻/何时刻/留给谁未坐实",
+      "updated_chapter": 58
+    },
+    "F151": {
+      "id": "F151",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 59,
+      "status": "已埋",
+      "summary": "表第一次走起来：上弦走三步停、再走四五步（'能走但活不实'）；它'想走'（梦中外婆：'它想走''你认得它了'）",
+      "updated_chapter": 59
+    },
+    "F152": {
+      "id": "F152",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 59,
+      "status": "已埋",
+      "summary": "收旧书摊空了一天：卖瓷器的说'回老家了''侄子？他哪儿来的侄子'；老太太嘀咕'那摊子是收书的吗'——它退场后记忆也在淡（人忘壳比壳忘人慢？）",
+      "updated_chapter": 59
+    },
+    "F153": {
+      "id": "F153",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 59,
+      "status": "已埋",
+      "summary": "旧表链细节：链环内侧磨亮（常年戴过）、第三四节间有压痕、断口旧（断了很久）；接头对不上=不是表现在用的链；猫眼：它昨晚巷口站到半夜",
+      "updated_chapter": 59
+    },
+    "F154": {
+      "id": "F154",
+      "importance": "中",
+      "planned_resolution_chapter": 61,
+      "planted_chapter": 59,
+      "status": "已埋",
+      "summary": "夜里窗台外一声响（不是风）；梦中外婆'你认得它了'；他决定去钟表店（表+表链）",
+      "updated_chapter": 59
+    },
+    "F155": {
+      "id": "F155",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 60,
+      "status": "已埋",
+      "summary": "早餐铺老板（人）记不清镜辞（'你是新来的吧'），老板娘（壳）记得他——人忘他、壳记得他的反差（存在感流失·卷纲第60章锚点）",
+      "updated_chapter": 60
+    },
+    "F156": {
+      "id": "F156",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 60,
+      "status": "已埋",
+      "summary": "表能走三分钟不停，快两分钟慢三分钟，调三次调不准——这块表不想按时间走（'它认得的时间和别人不一样'）",
+      "updated_chapter": 60
+    },
+    "F157": {
+      "id": "F157",
+      "importance": "高",
+      "planned_resolution_chapter": 61,
+      "planted_chapter": 60,
+      "status": "已埋",
+      "summary": "留条人收走七片槐树叶，留下旧绒布（擦表布·油渍发黑·樟脑味·背面压着表链印子·布包着链）=第四样；夜里窗台又响他睡沉没听见",
+      "updated_chapter": 60
+    },
+    "F158": {
+      "id": "F158",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 60,
+      "status": "已埋",
+      "summary": "芽到村子坐树下，发来树皮'芽'字刻痕照片（横往右斜）；树皮背面半个'等'字——她在等什么",
+      "updated_chapter": 60
+    },
+    "F159": {
+      "id": "F159",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 61,
+      "status": "已埋",
+      "summary": "表走了一夜没停（第一次'活'）；守钟人：'它认得你了，就停不下来了''你问它，它自己知道'——认得≠准",
+      "updated_chapter": 61
+    },
+    "F160": {
+      "id": "F160",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 61,
+      "status": "已埋",
+      "summary": "旧表链方向拿反导致接不上，转半圈咔地接上、严丝合缝=是这块表的链；'表有表的命，链有链的命。分开过，就还是它俩'；外婆：链子是表的家",
+      "updated_chapter": 61
+    },
+    "F161": {
+      "id": "F161",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 61,
+      "status": "已埋",
+      "summary": "天亮巷口背影（不高·脚抬得低蹭着地）第一次正面轮廓，追进巷子空了；他想起猫眼说的'不高，脚没跛，抬得低，鞋底蹭着砖'——留条人与收旧书的是两个存在（后者脚步无声）",
+      "updated_chapter": 61
+    },
+    "F162": {
+      "id": "F162",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 61,
+      "status": "已埋",
+      "summary": "四样旧物（纸条'别修'/树皮'等'/表链/绒布）都在说同一件事：别修它，等它；他守着窗台等留条人",
+      "updated_chapter": 61
+    },
+    "F163": {
+      "id": "F163",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 62,
+      "status": "已埋",
+      "summary": "表走第三天越走越慢，夜里停住（弦是满的）；外婆规矩'新修好的表头三天闹脾气'——它认得他，可它又停了",
+      "updated_chapter": 62
+    },
+    "F164": {
+      "id": "F164",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 62,
+      "status": "已埋",
+      "summary": "市场记忆淡出加深：卖瓷器的老头'那边？一直是空的'；卖旧杂志的年轻人不信'他走了'；早餐铺老板娘（壳）半记得（'好像是有个收书的'）——人淡出快、壳淡出慢",
+      "updated_chapter": 62
+    },
+    "F165": {
+      "id": "F165",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 62,
+      "status": "已埋",
+      "summary": "蓝布第五天还在，他掖布角压石头替它管摊；买主嫌座钟快小半钟头不买（别人家的表都调准，只有自己的调不准）",
+      "updated_chapter": 62
+    },
+    "F166": {
+      "id": "F166",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 62,
+      "status": "已回收",
+      "summary": "蓝布（它的摊布）第五天还在压着石头→已由留条人收走、周一还回一小片角（叠方·压旧铜扣）——留条人替它收布的谜底",
+      "updated_chapter": 72
+    },
+    "F167": {
+      "id": "F167",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 63,
+      "status": "已埋",
+      "summary": "芽说村里话：'这几年，年年有人回来看那棵树'，'说是个人，个子不高'（不坐实是谁）",
+      "updated_chapter": 63
+    },
+    "F168": {
+      "id": "F168",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 63,
+      "status": "已埋",
+      "summary": "芽看树皮'等'字：'这字横往右斜，跟我一个毛病'——她的字与纸条/树皮/信的字同笔势（不解释）",
+      "updated_chapter": 63
+    },
+    "F169": {
+      "id": "F169",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 63,
+      "status": "已埋",
+      "summary": "守钟人：表'没坏''歇够了会再走''停下来是在等自己信'；他夜里等留条人，印子比上次浅",
+      "updated_chapter": 63
+    },
+    "F170": {
+      "id": "F170",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 64,
+      "status": "已埋",
+      "summary": "第五样=旧表盘玻璃（弧面·磨痕·擦得透亮·和表壳严丝合缝=是它的玻璃）；装上后表走几步又停",
+      "updated_chapter": 64
+    },
+    "F171": {
+      "id": "F171",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 64,
+      "status": "已埋",
+      "summary": "玻璃内侧一道极细划痕（起笔深渐浅·刻字刻到一半停住）；他联想沈竹/芽/纸条/信的字都横往右斜——同一只手？（不坐实）",
+      "updated_chapter": 64
+    },
+    "F172": {
+      "id": "F172",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 64,
+      "status": "已埋",
+      "summary": "管市场的量了对面空地：下礼拜租出去；他收起压布七块石头放窗台（数字7复现）；它不会回来了",
+      "updated_chapter": 64
+    },
+    "F173": {
+      "id": "F173",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 64,
+      "status": "已埋",
+      "summary": "芽：'它在你手里的时候，才说话'；夜里他焐热表放枕边，听见极轻一声咔（齿轮动了？不坐实）；天亮表没走；他决定它再走就拆信",
+      "updated_chapter": 64
+    },
+    "F174": {
+      "id": "F174",
+      "importance": "中",
+      "planned_resolution_chapter": 70,
+      "planted_chapter": 70,
+      "status": "已回收",
+      "summary": "已解：",
+      "updated_chapter": 70
+    },
+    "F175": {
+      "id": "F175",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 65,
+      "status": "已埋",
+      "summary": "市场生面孔（瘦高灰衣）打听'那个修表的住哪儿'（猫眼报）——壳巢/某人盯上钩子，不坐实",
+      "updated_chapter": 65
+    },
+    "F176": {
+      "id": "F176",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 65,
+      "status": "已埋",
+      "summary": "它被市场遗忘的进度复述（卖瓷器'一直是空的'）；只有他记得它；他想起沈竹塞表那晚（'收好。别弄丢'）；它在他抽屉停了三年",
+      "updated_chapter": 65
+    },
+    "F177": {
+      "id": "F177",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 65,
+      "status": "已埋",
+      "summary": "夜里表走了一小时才停（最长记录），碰一下又走；他决定等它走得稳就拆信",
+      "updated_chapter": 65
+    },
+    "F178": {
+      "id": "F178",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 66,
+      "status": "已埋",
+      "summary": "第六样=旧发条（表的心·没樟脑味）；换后表走了一天一夜——发条=动力源（表缺的是心不是手艺）",
+      "updated_chapter": 66
+    },
+    "F179": {
+      "id": "F179",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 66,
+      "status": "已埋",
+      "summary": "'修好了'（他说：它认得他了·可没修好·只是肯走了）——表的状态红线（快慢不定仍在）",
+      "updated_chapter": 66
+    },
+    "F180": {
+      "id": "F180",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 66,
+      "status": "已埋",
+      "summary": "表盘刻着'镜辞'两个字（他第一次问为什么刻他的名字）——表与他的名字的关系",
+      "updated_chapter": 66
+    },
+    "F181": {
+      "id": "F181",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 66,
+      "status": "已埋",
+      "summary": "梦：外婆'你认得它了，那你就让它走'；它说'你修好它，我就能记住自己是谁'（复述）",
+      "updated_chapter": 66
+    },
+    "F182": {
+      "id": "F182",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 67,
+      "status": "已埋",
+      "summary": "市场后门墙根新砖（松的·底下空空的）——有人挖过什么，不坐实谁挖的/挖的什么",
+      "updated_chapter": 67
+    },
+    "F183": {
+      "id": "F183",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 67,
+      "status": "已埋",
+      "summary": "第七样=旧铜钥匙（与脖子上铁钥匙并排·'你开什么锁？'）——用途不坐实",
+      "updated_chapter": 67
+    },
+    "F184": {
+      "id": "F184",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 67,
+      "status": "已埋",
+      "summary": "猫眼念表盘'镜辞'：'谁给你刻的？'——表盘刻字与他的名字的关系（他也不知道）",
+      "updated_chapter": 67
+    },
+    "F185": {
+      "id": "F185",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 67,
+      "status": "已埋",
+      "summary": "他数留条人旧物：像在替谁把表还给谁；'你认识它，它认识你吗？'（对窗外说）",
+      "updated_chapter": 67
+    },
+    "F186": {
+      "id": "F186",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 68,
+      "status": "已埋",
+      "summary": "它走的那天夜里来过钟表店门口看橱窗（后半夜走）——它在找表，知道表在修表的人手里",
+      "updated_chapter": 68
+    },
+    "F187": {
+      "id": "F187",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 68,
+      "status": "已埋",
+      "summary": "沈竹户口十年前从县城迁出·'迁往别处'没写哪儿（芽去镇上翻）——下落不坐实",
+      "updated_chapter": 68
+    },
+    "F188": {
+      "id": "F188",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 68,
+      "status": "已埋",
+      "summary": "留条人比他还清楚表缺什么（链缺送链·玻璃缺送玻璃·发条缺送发条）——留条人认得这块表",
+      "updated_chapter": 68
+    },
+    "F189": {
+      "id": "F189",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 68,
+      "status": "已埋",
+      "summary": "巷口捡到记账本纸（叠三折·两面无字）——半封信同款纸，用途不明",
+      "updated_chapter": 68
+    },
+    "F190": {
+      "id": "F190",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 68,
+      "status": "已埋",
+      "summary": "梦里它走到巷子尽头回头开口说话（听不清），他往前跑；醒来表停（碰/上弦/焐都不走）——它停=它回来了？",
+      "updated_chapter": 68
+    },
+    "F191": {
+      "id": "F191",
+      "importance": "中",
+      "planned_resolution_chapter": 70,
+      "planted_chapter": 70,
+      "status": "已回收",
+      "summary": "已解：",
+      "updated_chapter": 70
+    },
+    "F192": {
+      "id": "F192",
+      "importance": "中",
+      "planned_resolution_chapter": 70,
+      "planted_chapter": 70,
+      "status": "已回收",
+      "summary": "已解：",
+      "updated_chapter": 70
+    },
+    "F193": {
+      "id": "F193",
+      "importance": "中",
+      "planned_resolution_chapter": 70,
+      "planted_chapter": 70,
+      "status": "已回收",
+      "summary": "已解：",
+      "updated_chapter": 70
+    },
+    "F194": {
+      "id": "F194",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 69,
+      "status": "已埋",
+      "summary": "芽：'它停着，可它在听''它记得你，你记得它，这就够了'（她懂表）",
+      "updated_chapter": 69
+    },
+    "F195": {
+      "id": "F195",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 70,
+      "status": "已埋",
+      "summary": "信纸背面小字：'窗台上的石头，七块，一块别少'——留条人/它知道石头（身份呼应，不坐实同一人）",
+      "updated_chapter": 70
+    },
+    "F196": {
+      "id": "F196",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 70,
+      "status": "已埋",
+      "summary": "表在窗台石头间走了一夜（它留下的表，以它自己的方式回来了）",
+      "updated_chapter": 70
+    },
+    "F197": {
+      "id": "F197",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 71,
+      "status": "已埋",
+      "summary": "沈竹十年前户口迁出页'迁往地址'栏涂改（划掉重写'迁往别处'）；铅笔拓片第一个字一撇一捺像'南'——她划掉名字=怕有人跟着去（南县方向不坐实）",
+      "updated_chapter": 71
+    },
+    "F198": {
+      "id": "F198",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 71,
+      "status": "已埋",
+      "summary": "芽：'你查她，我不拦你。别把自己查没了。'（她懂镜返代价/她也在意他会不会消失）",
+      "updated_chapter": 71
+    },
+    "F199": {
+      "id": "F199",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 71,
+      "status": "已埋",
+      "summary": "老板娘（壳）认得芽——铭记对抗遗忘的胜利持续；'修好了好'（壳对表的反应）",
+      "updated_chapter": 71
+    },
+    "F200": {
+      "id": "F200",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 72,
+      "status": "已埋",
+      "summary": "灰衣人蹲在收旧书壳当年蹲过的位置看表（眼神像看丢了很多年的东西）；伸手想摸表、落空——他找的是表？还是它？",
+      "updated_chapter": 72
+    },
+    "F201": {
+      "id": "F201",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 72,
+      "status": "已埋",
+      "summary": "他摆开旧物七样（纸条/树皮/绒布/玻璃/旧发条/铜钥匙/蓝布角）：'你把什么放下，我就知道你是谁了'——第八样的悬念",
+      "updated_chapter": 72
+    },
+    "F202": {
+      "id": "F202",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 73,
+      "status": "已埋",
+      "summary": "灰衣人：这块表以前'走得响，是条街的钟'（一响卖糖葫芦的收摊/哄小孩/报时）；'你让它一直走，就有人来找你'——他找的是'表的声音'，不是表本身",
+      "updated_chapter": 73
+    },
+    "F203": {
+      "id": "F203",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 73,
+      "status": "已埋",
+      "summary": "守钟人：'他要是跟你说什么，你别全信。也别全不信''他说的话，一半是真的，另一半你问不出来'；'跟你那块，一个样'（灰衣人找的表可能与镜辞这块同型）",
+      "updated_chapter": 73
+    },
+    "F204": {
+      "id": "F204",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 74,
+      "status": "已埋",
+      "summary": "河对岸（老窑场，荒了十多年）夜里亮起一排灯；生面孔在市场问烧窑的在哪儿（答'河对岸，荒了十多年'）；河里有人蹲着洗东西——壳潮逼近信号，不坐实",
+      "updated_chapter": 74
+    },
+    "F205": {
+      "id": "F205",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 74,
+      "status": "已埋",
+      "summary": "早餐铺老板娘：'夜里睡不踏实，老梦见有人站在门口'（看不清脸）——旧城区不安的信号/壳向存在感流失，不坐实",
+      "updated_chapter": 74
+    },
+    "F206": {
+      "id": "F206",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 74,
+      "status": "已埋",
+      "summary": "城南来的生人（住南街车马店）在市场问东问西（行情/房租/晚上热不热闹/豆浆铺几点开门）——来历与目的不坐实",
+      "updated_chapter": 74
+    },
+    "F207": {
+      "id": "F207",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 75,
+      "status": "已埋",
+      "summary": "干豆皮（芽喝豆浆掉的）压进窗台纸印底下：'先记住今天'——她留下的痕迹实体化（单元承诺信号）",
+      "updated_chapter": 75
+    },
+    "F208": {
+      "id": "F208",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 75,
+      "status": "已埋",
+      "summary": "城南生人在市场打听豆浆铺老板娘：家里几口人、她男人呢（她男人死得早）——豆浆铺被盯上实感",
+      "updated_chapter": 75
+    },
+    "F209": {
+      "id": "F209",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 76,
+      "status": "已埋",
+      "summary": "守钟人：'旧城外面，在往里收'；'最近夜里别出门'；'你那个表，让它走，一刻都别停——它要是停了，会有人觉得它死了'（壳潮逼近+表活着=有人觉得死了的机制）",
+      "updated_chapter": 76
+    },
+    "F210": {
+      "id": "F210",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 76,
+      "status": "已埋",
+      "summary": "厂里有人查户口（挨个问家在哪/几口人/干什么的/小时候住哪儿）——与城南生人同源？不坐实；芽周六再赴镇上查沈竹，镜辞同行",
+      "updated_chapter": 76
+    },
+    "F211": {
+      "id": "F211",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 76,
+      "status": "已埋",
+      "summary": "周五夜巷口脚步声停又走（未开窗看，不坐实是谁）——守钟人刚说完'夜里别出门'",
+      "updated_chapter": 76
+    },
+    "F212": {
+      "id": "F212",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 77,
+      "status": "已埋",
+      "summary": "纸印第一个字：'开头像南，第二笔往外撇——不像'（老头判定）；南县隔着两条河、前些年迁去的人不少——纸印方向悬念升级，南县不坐实",
+      "updated_chapter": 77
+    },
+    "F213": {
+      "id": "F213",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 77,
+      "status": "已埋",
+      "summary": "镇西旧屋窗台上压着一块灰白石头——眼熟，像沈竹旧物盒里压信纸的石头（后来不见了）；芽在旧屋前放慢脚步，问她说'不认得'——她不认得？还是不想说？",
+      "updated_chapter": 77
+    },
+    "F214": {
+      "id": "F214",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 77,
+      "status": "已埋",
+      "summary": "迁出记录划痕分析：划了两道，还有一道划到格子外——'像是一边划，一边气'（沈竹划的？她气什么？）",
+      "updated_chapter": 77
+    },
+    "F215": {
+      "id": "F215",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 78,
+      "status": "已埋",
+      "summary": "豆浆铺门口夜里出现一溜脚印（男人的新鞋·从街口来到门口站过又回去）——与城南生人关联存疑不坐实",
+      "updated_chapter": 78
+    },
+    "F216": {
+      "id": "F216",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 78,
+      "status": "已埋",
+      "summary": "芽：'旧城有几户没人应门'，东头巷子有一户——与豆浆铺关系不坐实；她叮嘱'晚上别乱跑'（她察觉到什么？）",
+      "updated_chapter": 78
+    },
+    "F217": {
+      "id": "F217",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 78,
+      "status": "已埋",
+      "summary": "'你来，我就开'——豆浆铺约定（单元1-4题眼开始兑现）；他夜里守铺+擦净门口石板（不被问破的守护）",
+      "updated_chapter": 78
+    },
+    "F218": {
+      "id": "F218",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 79,
+      "status": "已埋",
+      "summary": "周一深夜巷口人影：穿干净深色衣裳、不高不矮、站很久看豆浆铺门板、走时脚步不快不慢（普通人）——不坐实是谁（城南生人关联暗示）",
+      "updated_chapter": 79
+    },
+    "F219": {
+      "id": "F219",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 79,
+      "status": "已埋",
+      "summary": "城南生人市场口问他：'你收老座钟吗？'——第一次正面接触开场（收窑场的东西？）",
+      "updated_chapter": 79
+    },
+    "F220": {
+      "id": "F220",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 79,
+      "status": "已埋",
+      "summary": "城南生人在打听老窑场的窑在哪儿（老王媳妇说在河对岸）；老主顾：'河对岸亮灯了，就说明有人，有人就说明有东西收'——窑场/河对岸线",
+      "updated_chapter": 79
+    },
+    "F221": {
+      "id": "F221",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 80,
+      "status": "已埋",
+      "summary": "夜半豆浆铺门口出现缺口白瓷碗装凉豆浆（老板娘用了一辈子的碗，夜里在屋里——谁拿出来装豆浆放的？）不坐实，碗悬念系列（第二只）",
+      "updated_chapter": 80
+    },
+    "F222": {
+      "id": "F222",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 80,
+      "status": "已埋",
+      "summary": "城南生人以三倍价收走一只五十年老座钟（'它值''你让它走起来'）——收钟=示好/探路？他与钟的关系不坐实",
+      "updated_chapter": 80
+    },
+    "F223": {
+      "id": "F223",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 80,
+      "status": "已埋",
+      "summary": "守钟人：'他们要是让你带路去老窑场，别带''河对岸的东西，不碰'（他几乎不出铺子，专门来提醒）",
+      "updated_chapter": 80
+    },
+    "F224": {
+      "id": "F224",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 81,
+      "status": "已埋",
+      "summary": "城南生人打听出豆浆铺是'你们家姑娘的'（芽）——他们知道铺子与芽的关系，开价买铺（收旧货店=河这边收窑场东西）；'过两天再来问问'",
+      "updated_chapter": 81
+    },
+    "F225": {
+      "id": "F225",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 81,
+      "status": "已埋",
+      "summary": "生人从窑场扛回几口缸（扛了好几趟）；河对岸灯比前几天亮得多、灯下人影在动——窑场在'醒来'",
+      "updated_chapter": 81
+    },
+    "F226": {
+      "id": "F226",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 81,
+      "status": "已埋",
+      "summary": "老板娘：'我公公说，磨豆浆，得心静。心不静，豆浆发苦'——她一直心静（壳维持日常的信念？）；'这铺子不卖'",
+      "updated_chapter": 81
+    },
+    "F227": {
+      "id": "F227",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 82,
+      "status": "已埋",
+      "summary": "门槛边出现的第二只碗：白瓷无缺口、装热豆浆（第一只=缺口碗凉豆浆）；老板娘把剩的半碗倒回锅里重热——碗与豆浆同源暗示（谁在夜里磨豆浆放碗？）",
+      "updated_chapter": 82
+    },
+    "F228": {
+      "id": "F228",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 82,
+      "status": "已埋",
+      "summary": "铜灯挂回门口（老板娘公公时代的灯，挂了四十年后费油不挂；如今重挂，夜夜亮）：灯=铺子的'心'？灯亮=守铺的信号",
+      "updated_chapter": 82
+    },
+    "F229": {
+      "id": "F229",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 82,
+      "status": "已埋",
+      "summary": "镜辞：'要是灯一直亮着，她是不是就一直在？怕问出来，灯就灭了'——他把芽的'在'与灯绑定（情感锚点，不坐实）",
+      "updated_chapter": 82
+    },
+    "F230": {
+      "id": "F230",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 83,
+      "status": "已埋",
+      "summary": "老王回来说话慢半拍、不骂人了（以前连珠炮爱骂人）；捡碗'记不清'哪捡的——壳疑人物回归，变化只给体感不点破",
+      "updated_chapter": 83
+    },
+    "F231": {
+      "id": "F231",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 83,
+      "status": "已埋",
+      "summary": "碗悬念第三只：老王捡的碗+夜里放的碗+铺子缺口碗，同一套（公公八只一套·用四十年）；丢两只：一只搬家丢、一只老板娘'忘了'；第三只碗里是凉豆浆",
+      "updated_chapter": 83
+    },
+    "F232": {
+      "id": "F232",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 83,
+      "status": "已埋",
+      "summary": "老板娘'我屋里碗齐了''那我丢的那两只，是回来了？'——丢的碗'自己回来'，她数不清（记忆在松？）",
+      "updated_chapter": 83
+    },
+    "F233": {
+      "id": "F233",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 83,
+      "status": "已埋",
+      "summary": "芽第二次'别查了'；他'嗯'但没听——两人对碗谜态度分裂",
+      "updated_chapter": 83
+    },
+    "F234": {
+      "id": "F234",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 84,
+      "status": "已埋",
+      "summary": "放碗人第一次被目击：背影·个子不高·穿灰衣裳·拐进巷尾死胡同消失（三面墙无人，墙根第四只空碗·温的）——背影不坐实身份",
+      "updated_chapter": 84
+    },
+    "F235": {
+      "id": "F235",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 84,
+      "status": "已埋",
+      "summary": "老板娘'我好像出去了，又好像没有'——她记不清自己出没出门，数碗数不清（'我怎么了？'）——壳记忆在松动的体感，不解释",
+      "updated_chapter": 84
+    },
+    "F236": {
+      "id": "F236",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 84,
+      "status": "已埋",
+      "summary": "碗数目：公公买八只→剩四只→回来四只=十只（屋里七只+门槛三只）；多出来的碗哪来的？老板娘数了一夜没数清",
+      "updated_chapter": 84
+    },
+    "F237": {
+      "id": "F237",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 85,
+      "status": "已埋",
+      "summary": "戴帽子的人：'你这表，走得不太对''它记得你，所以它不走'；追出市场人没了，卖豆腐说没看见人——身份（壳巢/剥壳人/姜霁）不坐实",
+      "updated_chapter": 85
+    },
+    "F238": {
+      "id": "F238",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 85,
+      "status": "已埋",
+      "summary": "市场口姑娘（蓝布衣裳·挎布包）站一盏茶的功夫看他修表，转身走——他不认得她（姜霁暗处观察伏笔，不点名）",
+      "updated_chapter": 85
+    },
+    "F239": {
+      "id": "F239",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 85,
+      "status": "已埋",
+      "summary": "字条：'别查了。再查，查到的不是你想要的。'字工整，压第四只碗里；老板娘/芽/老王均否认；作者不坐实",
+      "updated_chapter": 85
+    },
+    "F240": {
+      "id": "F240",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 86,
+      "status": "已埋",
+      "summary": "出窑时河面起雾，把整片窑场吞没（桥这边无雾）——不解释；他'不知道它记住我没有'",
+      "updated_chapter": 86
+    },
+    "F241": {
+      "id": "F241",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 86,
+      "status": "已埋",
+      "summary": "窑洞窑台上放同套白瓷碗，碗底干净像刚放下的+字条'回去吧'——谁放的？与放碗人同源暗示",
+      "updated_chapter": 86
+    },
+    "F242": {
+      "id": "F242",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 86,
+      "status": "已埋",
+      "summary": "守钟人：'它记住了你吗？'——'它'指河对岸的东西/窑；他答不上来",
+      "updated_chapter": 86
+    },
+    "F243": {
+      "id": "F243",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 86,
+      "status": "已埋",
+      "summary": "窑场七口缸=猫眼说的生人扛的缸，缸底压青草（刚搬来）——生人在搬窑场的东西",
+      "updated_chapter": 86
+    },
+    "F244": {
+      "id": "F244",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 87,
+      "status": "已埋",
+      "summary": "放碗人=老板娘（读者视角坐实）：她夜里自己不知道地端豆浆放门槛（没抬头没说话像程序）；鞋底一圈河边黑泥，泥印到市场口消失——她夜里去过河边？不解释",
+      "updated_chapter": 87
+    },
+    "F245": {
+      "id": "F245",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 87,
+      "status": "已埋",
+      "summary": "'你夜里放的那碗豆浆，是你磨的？''我不知道'——豆浆来源成谜（她磨了自己不记得？别人磨的？）",
+      "updated_chapter": 87
+    },
+    "F246": {
+      "id": "F246",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 87,
+      "status": "已埋",
+      "summary": "他收走碗不再放（'不放碗了'），她夜里仍出来放——碗谜在'他不放'之后继续",
+      "updated_chapter": 87
+    },
+    "F247": {
+      "id": "F247",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 88,
+      "status": "已埋",
+      "summary": "守钟人交底：'碰了会记住你''窑里的东西认人'；他给看青釉片（他也去过，碰了，被记住）——'它记住了我'的后果不解释",
+      "updated_chapter": 88
+    },
+    "F248": {
+      "id": "F248",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 88,
+      "status": "已埋",
+      "summary": "守钟人：老板娘'以前也这样过，放了好几个月，后来就好了'——她以前碰过河对岸的东西？'怎么好的'他不说",
+      "updated_chapter": 88
+    },
+    "F249": {
+      "id": "F249",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 88,
+      "status": "已埋",
+      "summary": "守钟人听见老板娘放碗先问'鞋底有泥吗'——鞋底泥与河对岸/放碗有因果关系暗示",
+      "updated_chapter": 88
+    },
+    "F250": {
+      "id": "F250",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 88,
+      "status": "已埋",
+      "summary": "沈竹走的那天来过钟表铺；'看见了当没看见'——守钟人看见了什么（沈竹线钩子）",
+      "updated_chapter": 88
+    },
+    "F251": {
+      "id": "F251",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 89,
+      "status": "已埋",
+      "summary": "老板娘夜里放完碗站门口说'别哭啊''你来了'——她等的对象（儿子豆豆/壳的执念/别的）不坐实",
+      "updated_chapter": 89
+    },
+    "F252": {
+      "id": "F252",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 89,
+      "status": "已埋",
+      "summary": "老板娘儿子豆豆：三岁没的（病），爱喝豆浆每天一碗；'她记得的，都是舍不得的'——她记不清名字但记得味道",
+      "updated_chapter": 89
+    },
+    "F253": {
+      "id": "F253",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 89,
+      "status": "已埋",
+      "summary": "他怕一问，她就不放了——他选择不问（情感选择）",
+      "updated_chapter": 89
+    },
+    "F254": {
+      "id": "F254",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 90,
+      "status": "已埋",
+      "summary": "老板娘白天开口说豆豆：三岁没的·爱喝豆浆·加一勺糖·碗底剩一点给猫·记得回家的路（'到家了'）——壳的残余人性显形（不坐实）",
+      "updated_chapter": 90
+    },
+    "F255": {
+      "id": "F255",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 90,
+      "status": "已埋",
+      "summary": "她今儿叫对了三个常客名字（平时叫'哎'）——记忆短暂恢复，'我怎么记起来了？'；恢复原因不解释",
+      "updated_chapter": 90
+    },
+    "F256": {
+      "id": "F256",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 90,
+      "status": "已埋",
+      "summary": "夜话从'别哭啊/你来了'变'妈给你留的'——她夜里的台词在变（她等的对象越来越具体？）",
+      "updated_chapter": 90
+    },
+    "F257": {
+      "id": "F257",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 91,
+      "status": "已埋",
+      "summary": "生面孔带话：'河对岸的事你查得差不多了，该停了''明天午时河边桥头见'——戴帽子人雇的（给了一手数钱）",
+      "updated_chapter": 91
+    },
+    "F258": {
+      "id": "F258",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 91,
+      "status": "已埋",
+      "summary": "看表的人：'我们是看表的人，看走没走对''走得不对的表，我们都在等'；戴帽子人=市场那人；知道镜辞名字；'记住你的人，不止它'——剥壳人组织线入口（自称不点破）",
+      "updated_chapter": 91
+    },
+    "F259": {
+      "id": "F259",
+      "importance": "低",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 91,
+      "status": "已埋",
+      "summary": "芽：'你去了，就回不来了'（预感，不解释）；约定明天午时再听",
+      "updated_chapter": 91
+    },
+    "F260": {
+      "id": "F260",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 92,
+      "status": "已埋",
+      "summary": "看表的人交底：表=替他记事（'它替你记着事'）；沈竹给表那天表开始走——怀表真相层1",
+      "updated_chapter": 92
+    },
+    "F261": {
+      "id": "F261",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 92,
+      "status": "已埋",
+      "summary": "沈竹也有一块这样的表，她走的那天表停了；'表停，人走？'悬置（沈竹生死不坐实）",
+      "updated_chapter": 94
+    },
+    "F262": {
+      "id": "F262",
+      "importance": "中",
+      "planned_resolution_chapter": 93,
+      "planted_chapter": 92,
+      "status": "已埋",
+      "summary": "守钟人留着沈竹的表=沈竹走那天托付（'等我儿子来拿'）；表停在她走那天，表盖没刻字——藏表原因揭示（受托付）",
+      "updated_chapter": 93
+    },
+    "F263": {
+      "id": "F263",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 93,
+      "status": "已埋",
+      "summary": "看表的人：'她走是离开旧城''表停是她不记事了''她忘了或不用记了'——沈竹生死仍悬置（离开≠死亡）；'她信你会记着'——铭记者主题递进",
+      "updated_chapter": 94
+    },
+    "F264": {
+      "id": "F264",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 94,
+      "status": "已埋",
+      "summary": "老板娘记豆豆几十年，靠的不是表，是她自己（'她记得的，都是舍不得的'）——铭记者主题对照组",
+      "updated_chapter": 94
+    },
+    "F265": {
+      "id": "F265",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 92,
+      "status": "已埋",
+      "summary": "沈竹的表和镜辞的表是一对，一个师傅做的，一个主人用的——怀表同源（沈竹-镜辞羁绊实体化）",
+      "updated_chapter": 92
+    },
+    "F266": {
+      "id": "F266",
+      "importance": "高",
+      "planned_resolution_chapter": 96,
+      "planted_chapter": 95,
+      "status": "已埋",
+      "summary": "看表的人认可：'你记着的人，就还活着''你的表，走得对'；发出组织邀请：明天带他去见'一个也记着事的人'——剥壳人组织线实体化（身份仍不点破）",
+      "updated_chapter": 95
+    },
+    "F267": {
+      "id": "F267",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 95,
+      "status": "已埋",
+      "summary": "市场生面孔增多：不买东西光看镜辞的摊子，鞋底有河边黑泥，一人两只鞋不一样（一只布鞋一只胶鞋）——壳巢逼近旧城区的苗头",
+      "updated_chapter": 95
+    },
+    "F268": {
+      "id": "F268",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 95,
+      "status": "已埋",
+      "summary": "河对岸雾漫过桥一半，黄光又近了（像近了一丈）——卷末危机前兆逼近；他想着守钟人也去过河对岸，不能去",
+      "updated_chapter": 97
+    },
+    "F269": {
+      "id": "F269",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 96,
+      "status": "已埋",
+      "summary": "沈竹当年放表细节（下雨来/给儿子留的/等他来拿/他一定会来拿）——老师傅是沈竹放表见证者，沈竹线温情佐证",
+      "updated_chapter": 96
+    },
+    "F270": {
+      "id": "F270",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 96,
+      "status": "已埋",
+      "summary": "布包的表=女式表/表盘裂纹（十二到六点）/表盖磨亮无刻字/死寂无声——归属留白（老师傅给的），第97章已拆但未揭晓",
+      "updated_chapter": 97
+    },
+    "F271": {
+      "id": "F271",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 96,
+      "status": "已埋",
+      "summary": "市场口路灯下生面孔盯着他（鞋底有泥），对视后走了——壳巢逼近线推进（F267同源）",
+      "updated_chapter": 96
+    },
+    "F272": {
+      "id": "F272",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 97,
+      "status": "已埋",
+      "summary": "生面孔修表试探：'你这表走得对吗''走的，就好'——与看表的人同词；站摊子后学他修表动作（模仿者暗示）——壳巢线高危信号",
+      "updated_chapter": 97
+    },
+    "F273": {
+      "id": "F273",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 97,
+      "status": "已埋",
+      "summary": "老板娘白天叫出'镜辞'（'想起来，心里踏实'）；夜里叫'豆豆，妈给你留的'——记忆异动加深（F256升级），残余人性显形推进",
+      "updated_chapter": 97
+    },
+    "F274": {
+      "id": "F274",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 98,
+      "status": "已埋",
+      "summary": "老李（卖菜/常来修表）是Lv.1模仿壳（伪装度20）暴走被带走——他修了三年表没看出来；壳潜伏旧城区日常身边人（'谁不是我'恐怖落地）",
+      "updated_chapter": 98
+    },
+    "F275": {
+      "id": "F275",
+      "importance": "中",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 98,
+      "status": "已埋",
+      "summary": "老李媳妇喊'豆豆'，老李手抖了一下停住——壳听到'豆豆'有反应（残余人性？壳的程序？）；老李媳妇'早上还好好的'",
+      "updated_chapter": 98
+    },
+    "F276": {
+      "id": "F276",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 98,
+      "status": "已埋",
+      "summary": "镜返代价新形态：一天就记不清老李的脸（记忆磨损）——不只被遗忘，也在忘；'记不住脸就记习惯'应对",
+      "updated_chapter": 99
+    },
+    "F277": {
+      "id": "F277",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 99,
+      "status": "已埋",
+      "summary": "壳定义半揭（组织视角）：披人皮/吃人/替人活；接缝是壳露出来的边；表认主人的手，壳碰过的表会停——组织方法论第一次系统交代",
+      "updated_chapter": 99
+    },
+    "F278": {
+      "id": "F278",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 99,
+      "status": "已埋",
+      "summary": "'被壳吞进去的还在壳里头喘着'；'有的能救出来，有的不能，看壳吃得多深'——老李在壳里喘着；救人可能性悬置（镜返2阶照出残留留第2卷）",
+      "updated_chapter": 99
+    },
+    "F279": {
+      "id": "F279",
+      "importance": "高",
+      "planned_resolution_chapter": 101,
+      "planted_chapter": 99,
+      "status": "已埋",
+      "summary": "镜辞接受记表：'白天修表，午时来记'——第2卷组织入口正式开启（剥壳人线）",
+      "updated_chapter": 100
+    },
+    "F280": {
+      "id": "F280",
+      "importance": "高",
+      "planned_resolution_chapter": null,
+      "planted_chapter": 100,
+      "status": "已埋",
+      "summary": "修锁铺见Lv.5拟态壳（伪装度85·接缝几乎不可见）：普通到极致，像墙像树像影子；抬头对镜辞点头（像等他看见）——高阶壳伏笔（卷末钩子，第5-6卷回收）",
+      "updated_chapter": 100
+    }
+  },
+  "imported_through_chapter": 0,
+  "last_committed_chapter": 100,
+  "schema_version": 4,
+  "state_revision": 101,
+  "timeline": {
+    "E001": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 1,
+      "id": "E001",
+      "objective_fact": "芽来钟表行取修好的表，与镜辞闲谈后离开；镜辞发现她喝豆浆没先喝汤，且想不起她何时开始如此",
+      "reader_knowledge": "读者与镜辞同信息量：只感到'哪里不对'，不知道壳的存在",
+      "reveal_chapter": 1,
+      "reveal_status": "已揭示",
+      "story_time": "故事开端·六月末的午后",
+      "updated_chapter": 2
+    },
+    "E002": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "豆浆铺老板娘"
+      ],
+      "first_recorded_chapter": 2,
+      "id": "E002",
+      "objective_fact": "镜辞约芽在豆浆铺验证：芽喝豆浆犹豫后才喝、把爬墙摔跤说成五年级（实为初一）、对'先喝汤'无记忆；老板娘印证其老习惯",
+      "reader_knowledge": "读者与镜辞同信息量：违和加深，恐怖进入可信区；芽是壳的事实未揭示",
+      "reveal_chapter": 2,
+      "reveal_status": "已揭示",
+      "story_time": "六月底的周日（第1章后两天）",
+      "updated_chapter": 2
+    },
+    "E003": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 3,
+      "id": "E003",
+      "objective_fact": "镜辞翻上芽家阳台，透过镜子看见她脸上的接缝并读到'Lv.2 侵蚀壳·伪装度35·接缝:明显'，随后灯灭，他逃离",
+      "reader_knowledge": "读者与镜辞同信息量：看见接缝与数值，但不知'壳'的规则；世界观只揭一角",
+      "reveal_chapter": 3,
+      "reveal_status": "已揭示",
+      "story_time": "六月底的周日深夜（第2章当晚）",
+      "updated_chapter": 3
+    },
+    "E004": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "养母沈竹"
+      ],
+      "first_recorded_chapter": 4,
+      "id": "E004",
+      "objective_fact": "镜辞排查身边人，发现卖水果老王（指尖）、赵奶奶（眼尾）、常来修表的白领（领口）三人身上有淡光；试探守钟人得'看见了当没看见'；夜翻旧物盒，找到沈竹纸条'别让任何人知道，你能看见'",
+      "reader_knowledge": "读者与镜辞同信息量：接缝有浓淡与位置差异；守钟人知道部分真相；沈竹也能看见",
+      "reveal_chapter": 4,
+      "reveal_status": "已揭示",
+      "story_time": "周日深夜的次日清晨起·三天排查",
+      "updated_chapter": 4
+    },
+    "E005": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 5,
+      "id": "E005",
+      "objective_fact": "芽恢复'先喝汤'，行为标准得过分；刻字内容答出但错别字答不出；镜辞确认她的记忆是背的；夜里发现纸条背面洇字",
+      "reader_knowledge": "读者与镜辞同信息量；'错别字'细节让读者与镜辞同时确认芽的记忆有诈",
+      "reveal_chapter": 5,
+      "reveal_status": "已揭示",
+      "story_time": "第4章后数日·周五清晨豆浆铺",
+      "updated_chapter": 5
+    },
+    "E006": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 6,
+      "id": "E006",
+      "objective_fact": "芽送糯米饭并收拾钟表行（记得镜辞的习惯但记不得人）；镜辞发现旧物盒夹层撕断纸片'芽是安全的。真正要小心的，是……'；芽端豆浆进来时接缝扩张，伪装度35降到27",
+      "reader_knowledge": "读者与镜辞同信息量：芽的照顾是'壳的学习成果'；纸片撕断留白；伪装度下降暗示壳在恶化",
+      "reveal_chapter": 6,
+      "reveal_status": "已揭示",
+      "story_time": "第5章后数日·周一下午",
+      "updated_chapter": 6
+    },
+    "E007": {
+      "characters": [
+        "镜辞",
+        "卖水果老王"
+      ],
+      "first_recorded_chapter": 7,
+      "id": "E007",
+      "objective_fact": "镜辞夜巡旧货市场，撞见卖水果老王收摊时换脸（脸像水面倒影晃了一下拼回原样，不到一秒），无人察觉；他三天前看到的指尖淡光已消失",
+      "reader_knowledge": "读者与主角同信息量：壳存在实锤（但'壳'名称仍未出现）；恐怖从芽泛化到全城",
+      "reveal_chapter": 7,
+      "reveal_status": "已揭示",
+      "story_time": "周一晚八点收摊时分",
+      "updated_chapter": 7
+    },
+    "E008": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 8,
+      "id": "E008",
+      "objective_fact": "镜辞夜入芽家摊牌；壳承认不是芽，讲述醒来只有芽的记忆、想成为芽、不想消失；请求镜辞别让她回到'什么都不是'；镜辞未回答，离开",
+      "reader_knowledge": "读者与主角同信息量：壳不是纯恶（'我只是不想消失'）；真正的芽在哪仍悬置（双方都没提）",
+      "reveal_chapter": 8,
+      "reveal_status": "已揭示",
+      "story_time": "周一深夜·摊牌夜",
+      "updated_chapter": 8
+    },
+    "E009": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 9,
+      "id": "E009",
+      "objective_fact": "镜辞以汤面+先喝汤暗号测试披芽的壳：壳先喝汤暴露（暗号只在两人独处时用）；镜辞第一次主动照见，确认壳体内只有芽的记忆碎片、没有芽本人；壳坦白找不到芽，给出芽记忆里'想去'的地方",
+      "reader_knowledge": "读者与主角同信息量：芽确实被替换；壳不是凶手（它也是'醒来的孤儿'）；芽可能在哪成为希望线（不坐实）",
+      "reveal_chapter": 9,
+      "reveal_status": "已揭示",
+      "story_time": "周二中午·豆浆铺",
+      "updated_chapter": 9
+    },
+    "E010": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 10,
+      "id": "E010",
+      "objective_fact": "守钟人以'想通了？'开场并首次提及沈竹；早餐铺老板娘（壳）记不清镜辞名字（遗忘扩散第一例）；镜辞夜访豆浆铺学着芽先喝汤；检视人群发现3个壳；对怀表说出'他们不是人'",
+      "reader_knowledge": "读者与主角同信息量：遗忘机制开始作用在镜辞身上；'带着习惯活着'主题首次落地；守钟人知道更多（沈竹/怀表）",
+      "reveal_chapter": 10,
+      "reveal_status": "已揭示",
+      "story_time": "周二傍晚-深夜",
+      "updated_chapter": 10
+    },
+    "E011": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "芽"
+      ],
+      "first_recorded_chapter": 11,
+      "id": "E011",
+      "objective_fact": "送别壳去村子；遗忘扩散（7人叫错名/记不清）；习惯账本开张；守钟人透露沈竹记账习惯与遗物；账本沈竹页被撕",
+      "reader_knowledge": "读者与主角同信息量：遗忘扩散加速；沈竹记账=母题呼应；账本被撕=新悬念",
+      "reveal_chapter": 11,
+      "reveal_status": "已揭示",
+      "story_time": "周三（清晨送别→白天市场→深夜钟表行）",
+      "updated_chapter": 11
+    },
+    "E012": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 12,
+      "id": "E012",
+      "objective_fact": "老板娘记不清芽的名字（遗忘扩散到芽）；账本写满芽的账页+旧物盒逐件记账；守钟人透露沈竹故意停表并受托看表",
+      "reader_knowledge": "读者与主角同信息量：被吃掉的芽正在被世界遗忘；沈竹停表=主动行为（她在离开前做好的安排）",
+      "reveal_chapter": 12,
+      "reveal_status": "已揭示",
+      "story_time": "周四（清晨豆浆铺→下午钟表行→傍晚守钟人夜访）",
+      "updated_chapter": 12
+    },
+    "E013": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 13,
+      "id": "E013",
+      "objective_fact": "镜辞修怀表失败（机芯完好秒针卡死）；发现表盘底盘刻字（沈竹的警告）；收到壳的报平安短信（河干树在）；守钟人反问修表动机",
+      "reader_knowledge": "读者与主角同信息量：怀表是被设计停的；沈竹刻字=她知道他会修；守钟人也修过（暗示他知道刻字）",
+      "reveal_chapter": 13,
+      "reveal_status": "已揭示",
+      "story_time": "周五（清晨→深夜）",
+      "updated_chapter": 13
+    },
+    "E014": {
+      "characters": [
+        "镜辞",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 14,
+      "id": "E014",
+      "objective_fact": "灰褂卖菜人死巷消失被目击；壳手写信到达（河干树在+周老太太的红毛衣姑娘）；镜辞账本写'她可能来过'；灰褂卖菜人夜访镜辞家门口",
+      "reader_knowledge": "读者与主角同信息量：芽确实去过村子（红毛衣姑娘）；壳潮开始盯上镜辞",
+      "reveal_chapter": 14,
+      "reveal_status": "已揭示",
+      "story_time": "周六（清晨→深夜）",
+      "updated_chapter": 14
+    },
+    "E015": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 15,
+      "id": "E015",
+      "objective_fact": "老板娘记起芽（铭记对抗遗忘）；壳第二封信（树下想喝豆浆）；镜辞买明早六点半去村子的车票",
+      "reader_knowledge": "读者与主角同信息量：铭记能对抗遗忘（主题机制实证）；先喝汤信号实体化但不坐实；镜辞出发去村子（单元1-2启动）",
+      "reveal_chapter": 15,
+      "reveal_status": "已揭示",
+      "story_time": "周日（清晨豆浆铺→傍晚车站）",
+      "updated_chapter": 15
+    },
+    "E016": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 16,
+      "id": "E016",
+      "objective_fact": "镜辞坐车去芽记忆中的村子，在村尾大柿树下坐了一下午；周老太太讲述红毛衣姑娘；树皮南面发现'芽'字浅刻痕",
+      "reader_knowledge": "读者与主角同信息量：芽确实来过村子并刻了字（希望线实体证据，不坐实她还在）；芽字刻痕是谁在什么心境下刻的=新问号",
+      "reveal_chapter": 16,
+      "reveal_status": "已揭示",
+      "story_time": "周一（清晨六点半出发→傍晚回城）",
+      "updated_chapter": 16
+    },
+    "E017": {
+      "characters": [
+        "镜辞",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 17,
+      "id": "E017",
+      "objective_fact": "镜辞收到神秘纸条，夜访猫眼拿到沈竹三年前的买消息记录和照片（去看河）",
+      "reader_knowledge": "读者与主角同信息量：沈竹也在查'被吃掉的人还能回来吗'；照片线索'去看河'；纸条来历未知（第三人在引导）",
+      "reveal_chapter": 17,
+      "reveal_status": "已揭示",
+      "story_time": "周二（清晨纸条→深夜旧城西街）",
+      "updated_chapter": 17
+    },
+    "E018": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 18,
+      "id": "E018",
+      "objective_fact": "镜辞照旧物看见沈竹残留影像；守钟人交底'她去找答案了'；发现纸条背面被刀片刮掉的词",
+      "reader_knowledge": "读者与主角同信息量：沈竹也在追查同一问题；看得见的人=被吃者的对手/食客；纸条被刮掉的词=新谜；河=沈竹去向",
+      "reveal_chapter": 18,
+      "reveal_status": "已揭示",
+      "story_time": "周三（白天照旧物→傍晚守钟人→深夜发现刮痕）",
+      "updated_chapter": 18
+    },
+    "E019": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 19,
+      "id": "E019",
+      "objective_fact": "镜辞在临江柳树处对照片；钓鱼老头留下规矩；深夜看见江底灰光群（约十几团）",
+      "reader_knowledge": "读者与主角同信息量：照片可能是另一条河（南边山里）；江底有灰光群；钓鱼老头知道什么（未知）",
+      "reveal_chapter": 19,
+      "reveal_status": "已揭示",
+      "story_time": "周四（白天临江→深夜江底灰光）",
+      "updated_chapter": 19
+    },
+    "E020": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 20,
+      "id": "E020",
+      "objective_fact": "市场出现多处可疑变化（修鞋/水果/老王/老马）；镜辞列名单（圈3叉15问号5）；早餐铺老板娘把他叫成'小程'",
+      "reader_knowledge": "读者与主角同信息量：壳潮在扩散（替换/漂移现象）；名单=铭记主题的惊悚化；'小程'=老板娘壳化加深",
+      "reveal_chapter": 20,
+      "reveal_status": "已揭示",
+      "story_time": "周五（全天）→周六早（早餐铺'小程'）",
+      "updated_chapter": 20
+    },
+    "E021": {
+      "characters": [
+        "镜辞",
+        "猫眼",
+        "船工"
+      ],
+      "first_recorded_chapter": 21,
+      "id": "E021",
+      "objective_fact": "猫眼提供沈竹最后踪迹（渡口末班船过河）；船工证词（秋天柿子熟时/往南走）；戴帽子男人在渡口观察镜辞",
+      "reader_knowledge": "读者与主角同信息量：沈竹过河往南去找那条河；有人在跟踪镜辞（戴帽子）；沈竹的事被组织打招呼压了三年",
+      "reveal_chapter": 21,
+      "reveal_status": "已揭示",
+      "story_time": "周六（白天猫眼→傍晚渡口）",
+      "updated_chapter": 21
+    },
+    "E022": {
+      "characters": [
+        "镜辞",
+        "船工"
+      ],
+      "first_recorded_chapter": 22,
+      "id": "E022",
+      "objective_fact": "镜辞过河找到照片拍摄地（南岸河湾）；船工认出他；她一个人来过河湾",
+      "reader_knowledge": "读者与主角同信息量：照片=南岸河湾；沈竹想看河底但看不见；她往南往山走了",
+      "reveal_chapter": 22,
+      "reveal_status": "已揭示",
+      "story_time": "周日（傍晚末班船过河→天黑）",
+      "updated_chapter": 22
+    },
+    "E023": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 23,
+      "id": "E023",
+      "objective_fact": "镜辞在河湾找到镜字/车票/布头；确认沈竹过河后到过河湾且还活着，然后往南往山走了；界碑'废渡口'；河湾河底灰光五团围大团",
+      "reader_knowledge": "读者与主角同信息量：沈竹活着到过河湾；她刻了'镜'字；车票说明她本可坐车到南县；灰光结构=围着大团（蚁围糖意象）",
+      "reveal_chapter": 23,
+      "reveal_status": "已揭示",
+      "story_time": "周一（清晨→深夜河湾）",
+      "updated_chapter": 23
+    },
+    "E024": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 24,
+      "id": "E024",
+      "objective_fact": "老板娘（壳）叫出他名字并提沈竹（组织性证据）；灰褂当面消失+知道回城；名单更新",
+      "reader_knowledge": "读者与主角同信息量：壳潮共享信息（她们互相知道）；她们记得沈竹；灰褂监视他",
+      "reveal_chapter": 24,
+      "reveal_status": "已揭示",
+      "story_time": "周二（中午回城→深夜）",
+      "updated_chapter": 24
+    },
+    "E025": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "卖报纸老头"
+      ],
+      "first_recorded_chapter": 25,
+      "id": "E025",
+      "objective_fact": "老板娘背出沈竹往事（细节矛盾）；东里巷顺记线索；镜辞照活人壳；代价首例",
+      "reader_knowledge": "读者与主角同信息量：老板娘记忆是背的；外公存在；怀表与外公的怀表可能同源；代价开始",
+      "reveal_chapter": 25,
+      "reveal_status": "已揭示",
+      "story_time": "周三（上午赴约→傍晚市场口）",
+      "updated_chapter": 25
+    },
+    "E026": {
+      "characters": [
+        "镜辞",
+        "巷口老太太",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 26,
+      "id": "E026",
+      "objective_fact": "顺记关张郑师傅三年前秋走；猫眼账本三条消息+河湾合影；沈竹怀揣修不好的表；夜里灰外套背影+纸条",
+      "reader_knowledge": "读者与主角同信息量：郑师傅与沈竹同时离开；沈竹查清了郑师傅来历；照片与'别查了'纸条",
+      "reveal_chapter": 26,
+      "reveal_status": "已揭示",
+      "story_time": "周四（上午东里巷→傍晚猫眼→深夜巷口）",
+      "updated_chapter": 26
+    },
+    "E027": {
+      "characters": [
+        "镜辞",
+        "草帽老头",
+        "修鞋摊男人",
+        "水果大姐"
+      ],
+      "first_recorded_chapter": 27,
+      "id": "E027",
+      "objective_fact": "郑师傅=外公坐实；怀表'不敢修'线索；代价扩展（两人认不出）；柿子叶",
+      "reader_knowledge": "读者与主角同信息量：外公身份坐实；怀表与外公同源疑云；代价加速；柿子叶=芽的痕迹",
+      "reveal_chapter": 27,
+      "reveal_status": "已揭示",
+      "story_time": "周五（上午东里巷→下午市场→深夜家）",
+      "updated_chapter": 27
+    },
+    "E028": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 28,
+      "id": "E028",
+      "objective_fact": "老板娘梦见郑师傅（信息共享）；郑师傅来过市场口正对钟表行；名单更新",
+      "reader_knowledge": "读者与主角同信息量：老板娘没听说过顺记却梦见郑师傅；郑师傅来看过钟表行",
+      "reveal_chapter": 28,
+      "reveal_status": "已揭示",
+      "story_time": "周六（上午早餐铺→深夜）",
+      "updated_chapter": 28
+    },
+    "E029": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 29,
+      "id": "E029",
+      "objective_fact": "守钟人修过怀表（二十年前）；沈竹为表学修表；她与父亲断交；守钟人转述沈竹交代的话",
+      "reader_knowledge": "读者与主角同信息量：怀表来历；话在表里；外公不是坏人只是怕",
+      "reveal_chapter": 29,
+      "reveal_status": "已揭示",
+      "story_time": "周日（上午钟表行→傍晚）",
+      "updated_chapter": 29
+    },
+    "E030": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 30,
+      "id": "E030",
+      "objective_fact": "怀表夹层信+表开始走；守钟人转交纸条（去南县找外公）；镜辞决定出发",
+      "reader_knowledge": "读者与主角同信息量：沈竹的信；表走了；去南县找外公",
+      "reveal_chapter": 30,
+      "reveal_status": "已揭示",
+      "story_time": "周一（上午拆表→晚上钟表行→深夜）",
+      "updated_chapter": 30
+    },
+    "E031": {
+      "characters": [
+        "镜辞",
+        "郑师傅（外公）"
+      ],
+      "first_recorded_chapter": 31,
+      "id": "E031",
+      "objective_fact": "镜辞到南县河湾，与外公（郑师傅）第一次见面并住下",
+      "reader_knowledge": "读者与主角同信息量；外公为什么在河湾=悬念",
+      "reveal_chapter": 31,
+      "reveal_status": "已揭示",
+      "story_time": "周二（清晨出发→傍晚到河湾）",
+      "updated_chapter": 31
+    },
+    "E032": {
+      "characters": [
+        "镜辞",
+        "郑师傅（外公）"
+      ],
+      "first_recorded_chapter": 32,
+      "id": "E032",
+      "objective_fact": "外公交底：外婆线/车票仪式/怀表来历；约定明早过河看山那边",
+      "reader_knowledge": "读者与主角同信息量：外婆走了；怀表=外婆的；她每年压票；她去河那边",
+      "reveal_chapter": 32,
+      "reveal_status": "已揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 32
+    },
+    "E033": {
+      "characters": [
+        "镜辞",
+        "郑师傅（外公）",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 33,
+      "id": "E033",
+      "objective_fact": "灰褂人在河湾现身（与沈竹过河当天的目击对应）；外公备干粮；镜辞决定明早过河进山",
+      "reader_knowledge": "读者与主角同信息量：灰褂人跟着他；沈竹与灰褂人一起进山；灰光在移动",
+      "reveal_chapter": 33,
+      "reveal_status": "已揭示",
+      "story_time": "周四（白天→夜）",
+      "updated_chapter": 33
+    },
+    "E034": {
+      "characters": [
+        "镜辞",
+        "郑师傅（外公）",
+        "周老头",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 34,
+      "id": "E034",
+      "objective_fact": "镜辞过河进山，夜宿岭下镇；得知沈竹三年前在电站住下（与灰褂人同行）",
+      "reader_knowledge": "读者与主角同信息量：旧火堆/周老头的证词",
+      "reveal_chapter": 34,
+      "reveal_status": "已揭示",
+      "story_time": "周五（清晨→夜）",
+      "updated_chapter": 34
+    },
+    "E035": {
+      "characters": [
+        "镜辞"
+      ],
+      "first_recorded_chapter": 35,
+      "id": "E035",
+      "objective_fact": "镜辞发现沈竹在电站住过的痕迹与墙上的字；发现地下井（有水声）；决定在机房过夜",
+      "reader_knowledge": "读者与主角同信息量：她看见了六团/井的存在",
+      "reveal_chapter": 35,
+      "reveal_status": "已揭示",
+      "story_time": "周六（晨→傍晚）",
+      "updated_chapter": 35
+    },
+    "E036": {
+      "characters": [
+        "镜辞",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 36,
+      "id": "E036",
+      "objective_fact": "半封信+记录纸；暗渠通河；灰褂人交付沈竹的工具",
+      "reader_knowledge": "读者与主角同信息量：她找到的东西/灰褂人的行为",
+      "reveal_chapter": 36,
+      "reveal_status": "已揭示",
+      "story_time": "周日（晨→夜）",
+      "updated_chapter": 36
+    },
+    "E037": {
+      "characters": [
+        "镜辞",
+        "周老头"
+      ],
+      "first_recorded_chapter": 37,
+      "id": "E037",
+      "objective_fact": "井底发现沈竹的图（岭后方向）；周老头确认她去看岭后",
+      "reader_knowledge": "读者与主角同信息量：图/岭后荒凉",
+      "reveal_chapter": 37,
+      "reveal_status": "已揭示",
+      "story_time": "周一（晨下井→下午回镇→夜宿山脚）",
+      "updated_chapter": 37
+    },
+    "E038": {
+      "characters": [
+        "镜辞",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 38,
+      "id": "E038",
+      "objective_fact": "镜辞到岭后山洞：发现沈竹的痕迹（31天/外套/记号）；水潭灰光朝他动；灰褂人开口",
+      "reader_knowledge": "读者与主角同信息量：她在岭后待了31天/灰褂人要说话了",
+      "reveal_chapter": 38,
+      "reveal_status": "已揭示",
+      "story_time": "周二（晨翻山脊→夜宿山洞）",
+      "updated_chapter": 38
+    },
+    "E039": {
+      "characters": [
+        "镜辞",
+        "灰褂卖菜人"
+      ],
+      "first_recorded_chapter": 39,
+      "id": "E039",
+      "objective_fact": "灰褂人交底（下潭三天/认得表/等听得见的人/三年之约）；带走外套布鞋；水底灰光只剩一团；涟漪朝他荡来",
+      "reader_knowledge": "读者获得核心信息：表=钥匙；它们等表；她没回来",
+      "reveal_chapter": 39,
+      "reveal_status": "已揭示",
+      "story_time": "周三（凌晨→天亮）",
+      "updated_chapter": 39
+    },
+    "E040": {
+      "characters": [
+        "镜辞",
+        "郑师傅（外公）",
+        "周老头"
+      ],
+      "first_recorded_chapter": 40,
+      "id": "E040",
+      "objective_fact": "镜辞返程交底给外公；确认表=外婆的表；她怕水却下潭的谜；带走车票",
+      "reader_knowledge": "读者获得：表的来历（外婆）/她怕水/她修表的原因",
+      "reveal_chapter": 40,
+      "reveal_status": "已揭示",
+      "story_time": "周四（岭后→岭下镇→河湾）→周五晨（离开河湾）",
+      "updated_chapter": 40
+    },
+    "E041": {
+      "characters": [
+        "镜辞",
+        "猫眼",
+        "卖报纸老头"
+      ],
+      "first_recorded_chapter": 41,
+      "id": "E041",
+      "objective_fact": "镜辞回市场；卖报纸老头认不出他；被戴帽子的人盯梢；锁孔有划痕",
+      "reader_knowledge": "读者确认：镜返代价已作用于熟人（路人级）；有人冲着表来",
+      "reveal_chapter": 41,
+      "reveal_status": "已揭示",
+      "story_time": "周五（晨大巴→午后市场→夜）",
+      "updated_chapter": 41
+    },
+    "E042": {
+      "characters": [
+        "镜辞",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 42,
+      "id": "E042",
+      "objective_fact": "纸条出现（仿沈竹笔迹）；守钟人交底（他找的是表）；镜辞把表锁进铁盒藏进油桶",
+      "reader_knowledge": "读者确认：有人在找表/会仿沈竹字/守钟人知道更多",
+      "reveal_chapter": 42,
+      "reveal_status": "已揭示",
+      "story_time": "周六（白天开摊→傍晚纸条→夜里守钟人→深夜锁表）",
+      "updated_chapter": 42
+    },
+    "E043": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人"
+      ],
+      "first_recorded_chapter": 43,
+      "id": "E043",
+      "objective_fact": "老太太取表；收旧书的换人痕迹（记忆矛盾）；油桶被掀开过",
+      "reader_knowledge": "读者确认：市场里有替换痕迹；藏点被发现",
+      "reveal_chapter": 43,
+      "reveal_status": "已揭示",
+      "story_time": "周日（白天→傍晚）",
+      "updated_chapter": 43
+    },
+    "E044": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人"
+      ],
+      "first_recorded_chapter": 44,
+      "id": "E044",
+      "objective_fact": "收旧书的翻书找东西（表相关）；接缝一闪；镜辞记忆模糊",
+      "reader_knowledge": "读者：收旧书的疑似壳（接缝观感同芽）；他在找'表'相关内容",
+      "reveal_chapter": 44,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（全天→夜）",
+      "updated_chapter": 44
+    },
+    "E045": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 45,
+      "id": "E045",
+      "objective_fact": "确认市场里有壳（Lv.1）；它在收集表相关旧物；巷子消失；镜辞决定找守钟人",
+      "reader_knowledge": "读者：收旧书的=壳（Lv.1侵蚀壳）；它在收集修表资料；巷子里有东西（它消失）",
+      "reveal_chapter": 45,
+      "reveal_status": "已揭示",
+      "story_time": "周二（白天→夜）",
+      "updated_chapter": 45
+    },
+    "E046": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "收旧书的中年人"
+      ],
+      "first_recorded_chapter": 46,
+      "id": "E046",
+      "objective_fact": "守钟人确认壳一个月前来钟表店问表、问修表手艺；点破'它找的不是表是修表的人（表是饵）'；真表藏入钟柜、假表放回油桶、钥匙保留；卖报老头认不出镜辞",
+      "reader_knowledge": "读者：收旧书的=壳，目标=修表的人；真表已转移至钟表店钟柜，假表诱饵入油桶",
+      "reveal_chapter": 46,
+      "reveal_status": "已揭示",
+      "story_time": "周三（上午）",
+      "updated_chapter": 46
+    },
+    "E047": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 47,
+      "id": "E047",
+      "objective_fact": "壳到镜辞摊前修座钟试探，问'修表的人，认得表么'，镜辞答'修好才算认得'；猫眼曝它昨夜在市场转、像在听什么；傍晚它站在巷口看镜辞",
+      "reader_knowledge": "读者：壳正式接触镜辞（修表人是目标）；它夜里在市场转；它盯上镜辞了",
+      "reveal_chapter": 47,
+      "reveal_status": "已揭示",
+      "story_time": "周四（白天→傍晚）",
+      "updated_chapter": 47
+    },
+    "E048": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "收旧书的中年人"
+      ],
+      "first_recorded_chapter": 48,
+      "id": "E048",
+      "objective_fact": "它深夜翻油桶验假表（'不是那块表'、'那块表不在你这儿了，它认得钥匙'）；去钟表店站一夜进不来；守钟人转交三年前沈竹托付的信（镜辞未拆）",
+      "reader_knowledge": "读者：壳验过假表、认得钥匙是线索；真表在钟表店它进不来；三年前沈竹留下信（未拆，内容未知）",
+      "reveal_chapter": 48,
+      "reveal_status": "部分揭示",
+      "story_time": "周五深夜→周六晨",
+      "updated_chapter": 48
+    },
+    "E049": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼",
+        "老太太"
+      ],
+      "first_recorded_chapter": 49,
+      "id": "E049",
+      "objective_fact": "壳两天内挨个排查跟表有关的人；夜里在老太太院外听表；镜辞暗中护送未揭破",
+      "reader_knowledge": "读者知道它在排查且在恶化（伪装度39）；听表原因未明",
+      "reveal_chapter": 49,
+      "reveal_status": "已揭示",
+      "story_time": "周日（晨→夜）",
+      "updated_chapter": 49
+    },
+    "E050": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "守钟人",
+        "老太太"
+      ],
+      "first_recorded_chapter": 50,
+      "id": "E050",
+      "objective_fact": "壳碰院门锁被镜辞自曝引开，在钟表店门槛外站一夜后离开并留话；老太太安全但忘记镜辞",
+      "reader_knowledge": "读者知它要表被修好、它在恶化（38）、被救者忘镜辞最快",
+      "reveal_chapter": 50,
+      "reveal_status": "已揭示",
+      "story_time": "周日夜→周一晨",
+      "updated_chapter": 50
+    },
+    "E051": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "收旧书的中年人"
+      ],
+      "first_recorded_chapter": 51,
+      "id": "E051",
+      "objective_fact": "市场平静它转入等待；阿婶取钟忘记镜辞；守钟人说表不是坏了/认得它就走/掉完要么等到要么换法子；它放《修表入门》在镜辞摊上",
+      "reader_knowledge": "读者知它在教他认表、代价在扩散、换法子的警告",
+      "reveal_chapter": 51,
+      "reveal_status": "已揭示",
+      "story_time": "周一",
+      "updated_chapter": 51
+    },
+    "E052": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 52,
+      "id": "E052",
+      "objective_fact": "镜辞夜读折角页;它坐马扎问'还有多久'(你认得它)后回摊;读它:伪装度36·缝到耳后;猫眼报有人塞纸条'别修'(横往右斜=芽树皮字特征);夜锁抽屉:书+纸条+信三样",
+      "reader_knowledge": "读者知它在求他(等期限)、代价加速(36·缝到耳后)、纸条字迹=芽特征(留条人悬置)",
+      "reveal_chapter": 52,
+      "reveal_status": "已揭示",
+      "story_time": "周二",
+      "updated_chapter": 52
+    },
+    "E053": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 53,
+      "id": "E053",
+      "objective_fact": "它搬凳坐镜辞摊斜对面三米，上午站摊旁看修并说'你慢慢来'；镜辞午后排查矮背影不确认；傍晚猫眼补情报留条人'不高·走路拖'，镜辞拒绝猫眼代盯；收摊后它跟随镜辞回家至巷口",
+      "reader_knowledge": "它换法子主动逼近（换位置→站摊旁→跟随）；留条人线索=不高+走路拖；镜辞不让猫眼卷入；修不修未决",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 53
+    },
+    "E054": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 54,
+      "id": "E054",
+      "objective_fact": "它坐摊板前一臂处问'表，在走吗'（镜辞答'在走'）；拖步人午后现市场后街看地绕两圈；傍晚它跟至镜辞家门口十步外不进，站路灯下看窗后离开；下半夜留条人（不高·拖步）在镜辞窗外站一夜，天亮窗台下踩实土",
+      "reader_knowledge": "它逼近到门口不进；留条人=不高+走路拖，夜里站镜辞窗外一夜；镜辞推论'修好表它就会走'（未证实）；代价扩至面馆老板",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周四（晨→夜→下半夜）",
+      "updated_chapter": 54
+    },
+    "E055": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 55,
+      "id": "E055",
+      "objective_fact": "它缺席一上午（摊子空·蓝布捆墙根）；午后现身市场入口远望后离开（伪装度34·接缝到后颈·背影驼）；有人打听镜辞底细（不高·拖步）；傍晚它未跟随；夜镜辞认零件承认自己会修；次晨门口台阶现老槐树皮'别修'（横往右斜·边缘旧刻痕），巷口人影一闪",
+      "reader_knowledge": "它退半步把选择权压给镜辞（不跟了）；留条人把'别修'写到树皮上送到镜辞家门口（笔迹与前纸条一致）；镜辞承认自己会修（抉择到台前）；芽走了两天无电话",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周五（晨→夜→次晨）",
+      "updated_chapter": 55
+    },
+    "E056": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 56,
+      "id": "E056",
+      "objective_fact": "它彻底缺席一整天（空摊蓝布捆）；镜辞翻树皮背面见更早的模糊'等'刻痕，收好不追；傍晚它巷口一闪守终点；夜镜辞主动取回真表铁盒放桌上不锁（守钟人'你认得它了'）；芽来电'树还在人没在'；半夜盒缝轻响他第一次没把盒收起",
+      "reader_knowledge": "它退到尽头把选择权交还镜辞（不逼不跟）；镜辞取回铁盒放桌上不锁（修不修到台前）；留条人树皮背面旧刻痕（不坐实身份）；芽确认村子存在人未寻得",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周六（晨→夜）",
+      "updated_chapter": 56
+    },
+    "E057": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 57,
+      "id": "E057",
+      "objective_fact": "镜辞第一次打开铁盒盖看见外婆怀表（仍不修·盒盖开着·表取出摆摊板）；出摊路它脚边影子短一截、衣角空了一块（更淡·不逼不跟）；猫眼补情报矮个子后街看影子也瘦；巷口婆婆快认不出（代价滑）；窗台下留条人换槐树叶七片不追；夜守钟人点破'怕修好它走'；芽去县里档案室；章末游丝悬停它更淡",
+      "reader_knowledge": "镜辞打开铁盒见外婆怀表（仍不修·盒盖开着）；它更淡把选择权交还（不逼不跟）；留条人换槐树叶七片（不坐实身份）；代价从忘了滑向快忘了；芽去档案室希望悬置",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周日（晨→夜）",
+      "updated_chapter": 57
+    },
+    "E058": {
+      "characters": [
+        "镜辞",
+        "收旧书的中年人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 58,
+      "id": "E058",
+      "objective_fact": "镜辞摆工具真正开修（拆表壳/清油/见表壳内侧'记得'刻字/换第一根游丝·表针微动又停）；猫眼见其修表说'你终于肯修了'被嘱'别声张'；夜里它最后一次完整出现站得极近，被问'你到底是谁'答'我是怕被忘了的那个，你修好它我就能记住自己是谁'后退入暗处不再出现；芽发来外婆户籍照片'亲属'栏登记沈竹；次日天明窗台下旧表链七节（第三样）",
+      "reader_knowledge": "镜辞真正开修（修好未完成）；它最后一次完整出现后退入暗处（可能真消失）；表壳内侧'记得'刻字（不坐实谁刻）；沈竹与外婆户籍同栏（关系浮现）；留条人第三样=旧表链七节",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周一（晨→夜→次日晨）",
+      "updated_chapter": 58
+    },
+    "E059": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 59,
+      "id": "E059",
+      "objective_fact": "表第一次试走（时走时停）；收旧书壳未出现（摊空）；芽明早出发去村子",
+      "reader_knowledge": "读者：表在活过来（临界）；壳退场后市场记忆淡出；留条人夜里又来（窗台声响）",
+      "reveal_chapter": 59,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜）",
+      "updated_chapter": 59
+    },
+    "E060": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 60,
+      "id": "E060",
+      "objective_fact": "早餐铺老板忘镜辞（老板娘记得）；芽出发到村子；表走三分钟（快慢不定）；绒布第四样",
+      "reader_knowledge": "读者：存在感流失到普通接触者（老板）；壳（老板娘）反而记得；表在活（不按时间走）；留条人在持续投放表相关旧物",
+      "reveal_chapter": 60,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 60
+    },
+    "E061": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "芽"
+      ],
+      "first_recorded_chapter": 61,
+      "id": "E061",
+      "objective_fact": "表走了一夜；表链接回；第一次正面看见留条人背影（追丢）；信的条件悬置（'你认得了吗'→'它还在走'）",
+      "reader_knowledge": "读者：表真正活了（认得他）；链与表同属；留条人=拖腿背影（与收旧书壳区分）；信临近可拆条件但未拆",
+      "reveal_chapter": 61,
+      "reveal_status": "部分揭示",
+      "story_time": "周四（晨→夜→周五晨）",
+      "updated_chapter": 61
+    },
+    "E062": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 62,
+      "id": "E062",
+      "objective_fact": "表走第三天渐慢至夜停；蓝布仍在（第六天）；卖瓷器老头不记得收旧书的；芽明天回",
+      "reader_knowledge": "读者：它退场后存在淡出（人先忘、壳后忘）；表'认得他但停了'（修好临界前反复）",
+      "reveal_chapter": 62,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（晨→夜）",
+      "updated_chapter": 62
+    },
+    "E063": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "守钟人",
+        "留条人"
+      ],
+      "first_recorded_chapter": 63,
+      "id": "E063",
+      "objective_fact": "表停第二天；蓝布被卷着收走；卖瓷器老头不记得收旧书的；芽回城；留条人夜访未放物",
+      "reader_knowledge": "读者：留条人与蓝布关联（可能）；芽的笔势与纸条/树皮/信相同（伏笔加强）；芽知道表的事（壳？）",
+      "reveal_chapter": 63,
+      "reveal_status": "部分揭示",
+      "story_time": "周六（晨→周日晨）",
+      "updated_chapter": 63
+    },
+    "E064": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "留条人"
+      ],
+      "first_recorded_chapter": 64,
+      "id": "E064",
+      "objective_fact": "第五样=表盘玻璃（装上严丝合缝）；表走几步又停；管市场的量地（下礼拜租出）；芽后天上班",
+      "reader_knowledge": "读者：留条人在持续'还'这块表的东西（链→玻璃）；玻璃划痕与未写完的字同属一套笔迹（不坐实）；表将醒未醒",
+      "reveal_chapter": 64,
+      "reveal_status": "部分揭示",
+      "story_time": "周日（晨→周一晨）",
+      "updated_chapter": 64
+    },
+    "E065": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 65,
+      "id": "E065",
+      "objective_fact": "表在手里走得久（破一小时记录）；生面孔打听他；对面空地贴出租条",
+      "reader_knowledge": "读者：表'认得他'机制在显现（手里才走）；壳巢线开始盯上镜辞（钩子）",
+      "reveal_chapter": 65,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（晨→夜）",
+      "updated_chapter": 65
+    },
+    "E066": {
+      "characters": [
+        "镜辞",
+        "猫眼",
+        "管市场的",
+        "卖零件的大姐"
+      ],
+      "first_recorded_chapter": 66,
+      "id": "E066",
+      "objective_fact": "换发条；表走了一下午+一夜；铁盒未开；信未拆",
+      "reader_knowledge": "读者：留条人把表的心还回来了；表'活'了但未修好",
+      "reveal_chapter": 66,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜）",
+      "updated_chapter": 66
+    },
+    "E067": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 67,
+      "id": "E067",
+      "objective_fact": "表走满三天；后门墙根新砖（空的）；细草；第七样铜钥匙",
+      "reader_knowledge": "读者：留条人把表的东西还到第七样（钥匙）；它/生面孔踪迹出现（后门）",
+      "reveal_chapter": 67,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 67
+    },
+    "E068": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "芽",
+        "管市场的"
+      ],
+      "first_recorded_chapter": 68,
+      "id": "E068",
+      "objective_fact": "守钟人透露它夜里来过钟表店；芽报沈竹户口线索；夜里表停",
+      "reader_knowledge": "读者：它在找表（表在修表的人手里）；快慢不定=归它自己信；表停=临界",
+      "reveal_chapter": 68,
+      "reveal_status": "部分揭示",
+      "story_time": "周四（晨→夜）",
+      "updated_chapter": 68
+    },
+    "E069": {
+      "characters": [
+        "镜辞",
+        "它",
+        "芽",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 69,
+      "id": "E069",
+      "objective_fact": "它回来取表；表在它指尖下走三步；约定明天让表自己选；芽明天去镇上",
+      "reader_knowledge": "读者：它只被镜辞看见（市场遗忘它）；表认得它；'让表自己选'=结局临界",
+      "reveal_chapter": 69,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（晨→夜）",
+      "updated_chapter": 69
+    },
+    "E070": {
+      "characters": [
+        "镜辞",
+        "它"
+      ],
+      "first_recorded_chapter": 70,
+      "id": "E070",
+      "objective_fact": "它还表离去；拆信（沈竹信内容揭示）；石头七块呼应；表在窗台走一夜",
+      "reader_knowledge": "读者：表第一次走得稳；信里话=它的话；它=找表的人（身份不坐实）；石头七块=留条人呼应",
+      "reveal_chapter": 70,
+      "reveal_status": "已揭示",
+      "story_time": "周六（晨→夜）",
+      "updated_chapter": 70
+    },
+    "E071": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 71,
+      "id": "E071",
+      "objective_fact": "芽从镇上回来；户口迁往地址涂改线索（纸印像'南'）；豆浆铺日常；纸印压窗台石头下",
+      "reader_knowledge": "读者：沈竹迁出地址被划掉（她主动划的）；纸印指向'南'方向；镜辞决定去南县",
+      "reveal_chapter": 71,
+      "reveal_status": "部分揭示",
+      "story_time": "周日（晨→夜）",
+      "updated_chapter": 71
+    },
+    "E072": {
+      "characters": [
+        "镜辞",
+        "猫眼",
+        "灰衣人（生面孔）"
+      ],
+      "first_recorded_chapter": 72,
+      "id": "E072",
+      "objective_fact": "蓝布角+旧铜扣还回门口；灰衣人（生面孔）蹲收旧书壳位置看表、伸手落空；他收表入怀；夜里摆旧物七样，留条人没再来；表走慢",
+      "reader_knowledge": "读者：留条人替它收布并还回；灰衣人对表（或对它）有旧情；留条人线暂歇",
+      "reveal_chapter": 72,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（晨→夜）",
+      "updated_chapter": 72
+    },
+    "E073": {
+      "characters": [
+        "镜辞",
+        "灰衣人（生面孔）",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 73,
+      "id": "E073",
+      "objective_fact": "灰衣人摊前开口讲表旧事；守钟人交底（每年开春看橱窗十年/找的是声音）；夜里灰衣人站他家巷口墙边；表走快一夜",
+      "reader_knowledge": "读者：灰衣人找的是'表的声音'；他认得这表的旧事；他与守钟人相互知情但互不点破；他夜里来看了他家",
+      "reveal_chapter": 73,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜）",
+      "updated_chapter": 73
+    },
+    "E074": {
+      "characters": [
+        "镜辞",
+        "猫眼",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 74,
+      "id": "E074",
+      "objective_fact": "市场生人问东问西；豆浆铺晚开门（老板娘梦多）；河对岸亮灯（以前是黑的）；河里有洗东西的人；表走慢",
+      "reader_knowledge": "读者：旧城区开始不安（生人/河对岸灯）；老板娘梦见有人站门口",
+      "reveal_chapter": null,
+      "reveal_status": "未揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 74
+    },
+    "E075": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 75,
+      "id": "E075",
+      "objective_fact": "芽先喝汤（第一次）；他忆起她八岁先喝汤；豆皮压纸印下；表走快一夜",
+      "reader_knowledge": "读者：芽身上出现真芽的痕迹（先喝汤信号）；他选择'记住今天'",
+      "reveal_chapter": 75,
+      "reveal_status": "部分揭示",
+      "story_time": "周四（晨→夜）",
+      "updated_chapter": 75
+    },
+    "E076": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 76,
+      "id": "E076",
+      "objective_fact": "瓷老头搬走；他守豆浆铺一上午；守钟人交底（往里收/表不能停）；芽说厂里查户口、周六去镇上；夜巷口脚步声；周六晨两人出发去镇上",
+      "reader_knowledge": "读者：旧城被'收'的实感；表不能停的规则提示；他决定陪芽去镇上（南县线推进）",
+      "reveal_chapter": 76,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（晨→次日晨）",
+      "updated_chapter": 76
+    },
+    "E077": {
+      "characters": [
+        "镜辞",
+        "芽"
+      ],
+      "first_recorded_chapter": 77,
+      "id": "E077",
+      "objective_fact": "第一次去镇上；档案室比对纸印（不像南）；南县在两条河外；回程镇西旧屋灰白石头；纸印压回石头下",
+      "reader_knowledge": "读者：纸印不是'南'（悬念反转）；镇西旧屋可能与沈竹有关（石头眼熟）；芽对旧屋回避",
+      "reveal_chapter": 77,
+      "reveal_status": "部分揭示",
+      "story_time": "周六（晨→夜）",
+      "updated_chapter": 77
+    },
+    "E078": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 78,
+      "id": "E078",
+      "objective_fact": "门口脚印（男人新鞋）；他守夜一夜无事；天亮擦净石板；老板娘端豆浆来市场口；约定'你来，我就开'",
+      "reader_knowledge": "读者：有人夜里来看豆浆铺（脚印）；他选择夜里守着；老板娘察觉（擦净的石板）但不问",
+      "reveal_chapter": 78,
+      "reveal_status": "部分揭示",
+      "story_time": "周日（晨→次日晨）",
+      "updated_chapter": 78
+    },
+    "E079": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 79,
+      "id": "E079",
+      "objective_fact": "老王位置空着；老主顾议论河对岸；夜里人影看门板；他在门口'你睡吧'；砖上坐痕；城南生人问收不收老座钟",
+      "reader_knowledge": "读者：有人夜里确认豆浆铺（人影与他互相看见但不接触）；他守着；城南生人正面接触开始",
+      "reveal_chapter": 79,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（晨→次日午前）",
+      "updated_chapter": 79
+    },
+    "E080": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 80,
+      "id": "E080",
+      "objective_fact": "收五十年座钟；生人问窑场路（不知）；守钟人提醒别带路；夜半门板响+缺口碗凉豆浆；晨问碗事（少一只）",
+      "reader_knowledge": "读者：生人接近窑场线索；守钟人警告（河对岸不碰）；缺口碗来历成谜（豆浆铺自己的碗）",
+      "reveal_chapter": 80,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜）",
+      "updated_chapter": 80
+    },
+    "E081": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 81,
+      "id": "E081",
+      "objective_fact": "生人开价买铺（他三次不卖）；老板娘手抖但不卖；猫眼报窑场扛缸；夜里门板响无碗；河对岸灯更亮",
+      "reader_knowledge": "读者：生人盯上豆浆铺（与芽的关联）；老板娘怕但不卖；窑场在'醒来'",
+      "reveal_chapter": 81,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（晨→夜）",
+      "updated_chapter": 81
+    },
+    "E082": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 82,
+      "id": "E082",
+      "objective_fact": "芽挡回买铺者（'我在这儿长大的'）；老板娘挂回铜灯；两人同守一夜；门槛边第二只碗（无缺口·热豆浆）；老板娘重热半碗豆浆",
+      "reader_knowledge": "读者：守铺约定完成（镜辞+芽+老板娘）；豆浆碗悬念延续（这次是热的新碗）；灯=守铺符号",
+      "reveal_chapter": 82,
+      "reveal_status": "部分揭示",
+      "story_time": "周四（晨→夜→周五晨）",
+      "updated_chapter": 82
+    },
+    "E083": {
+      "characters": [
+        "镜辞",
+        "老王",
+        "早餐铺老板娘",
+        "芽"
+      ],
+      "first_recorded_chapter": 83,
+      "id": "E083",
+      "objective_fact": "老王回来+捡的碗（与缺口碗一套）；老板娘'心里发慌'；夜并排两碗；晨第三只碗（凉的）出现；老板娘数三遍脸色白；芽'别查了'",
+      "reader_knowledge": "读者：碗是一整套（八只丢两只）；丢的碗'回来了'；老王变化体感",
+      "reveal_chapter": 83,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（晨→夜）",
+      "updated_chapter": 83
+    },
+    "E084": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "芽"
+      ],
+      "first_recorded_chapter": 84,
+      "id": "E084",
+      "objective_fact": "问遍市场无人夜里出门；老板娘记不清出没出门+数不清碗；夜蹲守追到死胡同只见背影+第四只空碗（温）；四碗并排；老板娘数了一夜碗",
+      "reader_knowledge": "读者：放碗人=个子不高灰衣裳背影（与老板娘个子相仿？不坐实）；老板娘记性在坏（壳变信号）；碗变十只",
+      "reveal_chapter": 84,
+      "reveal_status": "部分揭示",
+      "story_time": "周六（晨→夜→周日晨）",
+      "updated_chapter": 84
+    },
+    "E085": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "芽",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 85,
+      "id": "E085",
+      "objective_fact": "四碗未增；戴帽子人摊前'它记得你'后消失；市场口姑娘观察；字条出现（'别查了'）；他决定明日独自去河对岸（芽等他）",
+      "reader_knowledge": "读者：有人在暗处观察他（戴帽子人+姑娘）；字条警告来源不明；他要去河对岸",
+      "reveal_chapter": 85,
+      "reveal_status": "部分揭示",
+      "story_time": "周日（晨→夜→周一晨）",
+      "updated_chapter": 85
+    },
+    "E086": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 86,
+      "id": "E086",
+      "objective_fact": "独自过河：土路新脚印、七缸、窑台同套碗+字条'回去吧'；出窑起雾吞窑场；守钟人'你过河了/它记住了你吗'；五碗并排",
+      "reader_knowledge": "读者：河对岸有'它'在放碗写字条；雾=界；守钟人去过（'它记住了你吗'暗示他也被记过）",
+      "reveal_chapter": 86,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（上午→夜）",
+      "updated_chapter": 86
+    },
+    "E087": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 87,
+      "id": "E087",
+      "objective_fact": "窑碗=老板娘丢的那只；夜蹲守目击老板娘放碗（她不知情）；鞋底黑泥+泥印市场口消失；他收碗她仍放；豆浆温的他没喝",
+      "reader_knowledge": "读者：放碗人=老板娘（她自己不知道，夜里像程序）；她鞋底泥=河边泥（她夜里可能去过河边）",
+      "reveal_chapter": 87,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜→周三晨）",
+      "updated_chapter": 87
+    },
+    "E088": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "早餐铺老板娘",
+        "养母沈竹"
+      ],
+      "first_recorded_chapter": 88,
+      "id": "E088",
+      "objective_fact": "钟表铺交底（碰了会记住你/窑里认人/釉片/她以前也放过碗）；收碗不再放+字条压碗底；夜她仍放；晨他喝豆浆+问她以前放没放过（她说没有）",
+      "reader_knowledge": "读者：河对岸的'它'认人跟人；守钟人也中过招；老板娘是老病复发（？）；沈竹与守钟人有约",
+      "reveal_chapter": 88,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（上午→夜→周四晨）",
+      "updated_chapter": 88
+    },
+    "E089": {
+      "characters": [
+        "镜辞",
+        "芽",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 89,
+      "id": "E089",
+      "objective_fact": "听清'别哭啊'；问芽得悉老板娘儿子豆豆（三岁没的）；夜听'你来了'；他不再问",
+      "reader_knowledge": "读者：老板娘夜放豆浆=与儿子豆豆有关（壳的残余执念？）；她记得味道不记得名字",
+      "reveal_chapter": 89,
+      "reveal_status": "部分揭示",
+      "story_time": "周四（晨→夜→周五晨）",
+      "updated_chapter": 89
+    },
+    "E090": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "芽"
+      ],
+      "first_recorded_chapter": 90,
+      "id": "E090",
+      "objective_fact": "她白天说儿子（三岁·每天一碗·加糖·给猫）；叫对三个名字；夜'妈给你留的'；芽来同守",
+      "reader_knowledge": "读者：老板娘记忆在恢复（与夜放碗并存）；她记得的全是豆豆/舍不得的",
+      "reveal_chapter": 90,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（晨→夜→周六晨）",
+      "updated_chapter": 90
+    },
+    "E091": {
+      "characters": [
+        "镜辞",
+        "戴帽子的人（看表的人）",
+        "芽",
+        "早餐铺老板娘",
+        "带话人"
+      ],
+      "first_recorded_chapter": 91,
+      "id": "E091",
+      "objective_fact": "带话（该停了/桥头见）；午时等到未时，戴帽子人接触：'你叫镜辞'/'看表的人'/'走得不对的表我们都在等'；市场那人=他；约明日午时",
+      "reader_knowledge": "读者：剥壳人组织线入口（自称看表的人）；他知道镜辞+他的表；芽有预感",
+      "reveal_chapter": 91,
+      "reveal_status": "部分揭示",
+      "story_time": "周六（晨→夜）→周日（午→夜）",
+      "updated_chapter": 91
+    },
+    "E092": {
+      "characters": [
+        "镜辞",
+        "戴帽子的人（看表的人）",
+        "守钟人"
+      ],
+      "first_recorded_chapter": 92,
+      "id": "E092",
+      "objective_fact": "看表的人交底：表=记事（沈竹给表那天开始走）；沈竹也有表、走那天表停了；'表停人走'悬置；守钟人承认留着沈竹的表（沈竹走那天托付'等我儿子来拿'），约明日给看；两只表是一对",
+      "reader_knowledge": "读者：怀表真相层1（表替他记舍不得的事）；沈竹的表停在她走那天——她人还在吗？悬置；守钟人受托付藏表；两只表同源",
+      "reveal_chapter": 92,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（午→夜）",
+      "updated_chapter": 92
+    },
+    "E093": {
+      "characters": [
+        "镜辞",
+        "守钟人",
+        "芽"
+      ],
+      "first_recorded_chapter": 93,
+      "id": "E093",
+      "objective_fact": "守钟人交出沈竹的表（停着·指针停在一处·表盖没刻字）；镜辞讲沈竹走的那天（下雨·四句话）；芽：她给你表是怕你忘了她；他决定明日午时去桥头问表停人还在吗",
+      "reader_knowledge": "读者：沈竹的表停在她走那天，指针位置意义不明；沈竹走的那天细节（四句话）；芽对'记在走不了的地方'的解读；他要去问表停人还在吗",
+      "reveal_chapter": 93,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（晨→夜）",
+      "updated_chapter": 93
+    },
+    "E094": {
+      "characters": [
+        "镜辞",
+        "戴帽子的人（看表的人）",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 94,
+      "id": "E094",
+      "objective_fact": "桥头交底2：表停=不记事；沈竹离开旧城（生死悬置）；她信他会记着；夜老板娘放碗（他心中对照）；周四他决定：我记着，我不会忘",
+      "reader_knowledge": "读者：沈竹不是人没了而是离开+不记事（仍悬置）；'她信你会记着'主题落点；老板娘对照（她记豆豆靠的是自己不是表）",
+      "reveal_chapter": 94,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（午→夜）→周四",
+      "updated_chapter": 94
+    },
+    "E095": {
+      "characters": [
+        "镜辞",
+        "戴帽子的人（看表的人）",
+        "猫眼",
+        "芽"
+      ],
+      "first_recorded_chapter": 95,
+      "id": "E095",
+      "objective_fact": "桥头验证记着（清单获认可），看表的人邀约明天见'一个也记着事的人'；猫眼报市场生面孔+河对岸起雾；夜见老板娘放碗；后半夜河边见雾里黄光未过桥；天亮回市场",
+      "reader_knowledge": "读者：组织邀请实体化（明天见谁？）；壳巢逼近苗头（生面孔/河雾）；'记着的人就还活着'主题递进；他守约不碰河对岸",
+      "reveal_chapter": 95,
+      "reveal_status": "部分揭示",
+      "story_time": "周五（午→夜→周六凌晨）",
+      "updated_chapter": 95
+    },
+    "E096": {
+      "characters": [
+        "镜辞",
+        "老师傅",
+        "戴帽子的人（看表的人）"
+      ],
+      "first_recorded_chapter": 96,
+      "id": "E096",
+      "objective_fact": "进入'看表的人'据点见老师傅；确认表走得对；沈竹放表细节补全；获布包的表约明日；回市场口遇生面孔对视",
+      "reader_knowledge": "读者：'看表的人'据点=修锁铺后院（满墙停表）；老师傅世界观（人走表停/替他们记着）；沈竹当年放表（等他来拿）；布包表悬念；生面孔逼近",
+      "reveal_chapter": 96,
+      "reveal_status": "部分揭示",
+      "story_time": "周六（午→夜）",
+      "updated_chapter": 96
+    },
+    "E097": {
+      "characters": [
+        "镜辞",
+        "早餐铺老板娘",
+        "生面孔",
+        "猫眼"
+      ],
+      "first_recorded_chapter": 97,
+      "id": "E097",
+      "objective_fact": "拆布包（女式表裂纹表盖磨亮）；猫眼报生面孔学他修表；生面孔修表试探'走得对吗'；老板娘白天叫'镜辞'夜叫'豆豆，妈给你留的'；河边雾漫过桥一半黄光近了",
+      "reader_knowledge": "读者：布包表归属悬念；生面孔模仿者暗示（与看表的人同词）；老板娘记忆异动升级（叫名字/叫豆豆）；河雾逼近",
+      "reveal_chapter": 97,
+      "reveal_status": "部分揭示",
+      "story_time": "周日（晨→夜→周一凌晨）",
+      "updated_chapter": 97
+    },
+    "E098": {
+      "characters": [
+        "镜辞",
+        "老李",
+        "戴帽子的人（看表的人）",
+        "卖报纸老头",
+        "老李媳妇"
+      ],
+      "first_recorded_chapter": 98,
+      "id": "E098",
+      "objective_fact": "老李暴走被制服带走（读壳Lv.1模仿壳/他指颈侧/看表的人一掌切倒）；卖报纸老头认不出他（代价）；他记着老李决定明天去修锁铺",
+      "reader_knowledge": "读者：第一次当众识破壳（'他身上有东西'）；壳潜伏在修了三年表的熟人身上；镜返代价可感知（老头叫他小伙子）；老李被'发病送医院'带走",
+      "reveal_chapter": 98,
+      "reveal_status": "部分揭示",
+      "story_time": "周一（午→夜）",
+      "updated_chapter": 98
+    },
+    "E099": {
+      "characters": [
+        "镜辞",
+        "老师傅",
+        "早餐铺老板娘"
+      ],
+      "first_recorded_chapter": 99,
+      "id": "E099",
+      "objective_fact": "修锁铺：壳定义半揭+方法论（表认手/老李还在壳里）；招募提出，他犹豫后决定去；记不清老李的脸；老板娘记得他叫镜辞",
+      "reader_knowledge": "读者：壳定义组织视角半揭；'老李还在壳里头喘着'（救人悬念）；方法论（表认手）；招募提出；代价新形态（记不清老李的脸）",
+      "reveal_chapter": 99,
+      "reveal_status": "部分揭示",
+      "story_time": "周二（午→夜）",
+      "updated_chapter": 99
+    },
+    "E100": {
+      "characters": [
+        "镜辞",
+        "高阶壳",
+        "老师傅",
+        "芽"
+      ],
+      "first_recorded_chapter": 100,
+      "id": "E100",
+      "objective_fact": "修锁铺见Lv.5拟态壳（接缝几乎不可见）点头；接受记表（白天修表午时来记）；回市场芽等他约明天；第一卷收束（从装作正常的钟表摊主到被看表的人看见的觉醒者）",
+      "reader_knowledge": "读者：卷末钩子——Lv.5高阶壳（接缝几乎看不见，像认识他）；组织入口开启（他决定去记表）；第一卷'谁不是我'的恐惧升级（旧城里还有多少看不见的缝）；希望锚点（芽等他回来吃饭）",
+      "reveal_chapter": 100,
+      "reveal_status": "部分揭示",
+      "story_time": "周三（午→夜）",
+      "updated_chapter": 100
+    }
+  }
+}
