@@ -1,10 +1,3 @@
 # Local tool caches and generated analysis data
 .opencode/
 .tmp_analyze/
-
-# Reference novel source texts
-/全职法师（第一版）+作者：乱.txt
-/异兽迷城 - 彭湃.txt
-/拆文库/全职法师（第一版）+作者：乱.txt
-/拆文库/异兽迷城 - 彭湃.txt
-/拆文库/**/原文/
