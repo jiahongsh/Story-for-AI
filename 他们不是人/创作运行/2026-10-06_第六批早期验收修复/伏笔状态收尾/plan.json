@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "change_id": "sixth-foreshadow-section-status-20261006",
+  "summary": "统一F03/F09/F11生命周期段落与当前状态总表的已埋增压表述，保留未来正式强化任务",
+  "semantic_change": false,
+  "changed_files": ["大纲/伏笔总表.md"],
+  "affected_entities": [],
+  "affected_fact_ids": [],
+  "affected_chapters": [1, 12, 32, 39, 42, 43, 50, 95, 98, 100]
+}

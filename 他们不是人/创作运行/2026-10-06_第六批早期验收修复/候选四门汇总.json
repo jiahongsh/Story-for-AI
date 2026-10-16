@@ -1,0 +1,486 @@
+{
+  "第002章_先喝汤.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第002章_先喝汤.md",
+    "sha256": "ad49ce9f492db6222e3627b388d1222418609637fb9f01c88db1f3cd6bb2fc10",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第005章_她也在看我.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第005章_她也在看我.md",
+    "sha256": "88ef8431c7e097521f474c56aecc9930a4c97aa8169ec255f8f5f734153976ac",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第006章_两个周远.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第006章_两个周远.md",
+    "sha256": "f66d616ee35a467282a8e01e5074d48d30d7a36f17395b024018ce13c13737da",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第007章_摊牌.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第007章_摊牌.md",
+    "sha256": "7c9c4d4369b5cfe668ab9b9540affba768bec7d49b0e7c8e33d3c064426660f1",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第008章_不是她的过去.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第008章_不是她的过去.md",
+    "sha256": "b429cebe45ca13aea957e7e4e7382275dd18e1eb51e68d7759e487d4503cc245",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第009章_他们不是人.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第009章_他们不是人.md",
+    "sha256": "28e97579da9563b846ad87c0ebc628a969f19348327372b9267d8c0d2dc9c168",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第013章_北河没有答案.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第013章_北河没有答案.md",
+    "sha256": "9cbe4b541174d475f47470fc93d4b56a4df0596bbd92ee331ee4fd3f058f1b89",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第014章_十七.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第014章_十七.md",
+    "sha256": "6cf2caf745220e344e12f5ad9cd5106f267a7fe8fda3cf75c68a632fe85fa694",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第015章_十七号测点.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第015章_十七号测点.md",
+    "sha256": "e66b105d1b8e6b36c5899963dde8242c9693c70bd0a2a2c76f8e411f2b5fffd5",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第016章_十七号树.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_001-016/第016章_十七号树.md",
+    "sha256": "b659edc790546983a048d20f67776fc558379965cb6b1059e5e5bedd19f78130",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第017章_猫眼.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第017章_猫眼.md",
+    "sha256": "18cc844b1cca0f919b58e2f4c338214d59c79448cb1609a4d5f891486e89bdd3",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第018章_临江03.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第018章_临江03.md",
+    "sha256": "c439f977ee484aadaa797f434ff208fb8b2199400b95da5290d5a166c2ab9d77",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第019章_修得太正常.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第019章_修得太正常.md",
+    "sha256": "12b611dbf270acd8bdf7b5a77f2da62c3c2b9e73b27a44ae803a8e5e36deb313",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第020章_被改过的周远.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第020章_被改过的周远.md",
+    "sha256": "bf4808f7eba234b10be684253774ca229303c5d5a0f5421b5509919bd729518b",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第021章_渡口之后.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第021章_渡口之后.md",
+    "sha256": "543f9331bceb50f7bf9e67bbdc5d87d6fbb12c27ffc23e5f5392c8ac9ea89511",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第022章_有人知道.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第022章_有人知道.md",
+    "sha256": "b9cacc3615ccd87016a1f29a73a8a0e01de7add1b6d229d7a66f5b54cb3c2608",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第023章_姜霁.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第023章_姜霁.md",
+    "sha256": "03684c3e7f8232607e993cb3a3750f4cb1e182571163eaef087db8d767b5177f",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第024章_她不看接缝.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第024章_她不看接缝.md",
+    "sha256": "4677a3ace63c97391c1d031650b9129aea338780b712ba23723dc472fff85dcd",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第025章_真线索坏动机.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第025章_真线索坏动机.md",
+    "sha256": "8f2b7998b4f56f7897c9280e15e73d7483323fac66e74b8f89a88d8b7efdeb56",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第026章_顺记门外.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第026章_顺记门外.md",
+    "sha256": "741c86ae1f65fa54884e94d1b1a861b5d758cc2452de87fba85602ecf413a2ff",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第027章_记性最好的人.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第027章_记性最好的人.md",
+    "sha256": "837ebfbd95829b109d65c71fa12e7b47c01cfdd17a5b556e119bfb571c05452e",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第028章_有人回来.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第028章_有人回来.md",
+    "sha256": "dbcc03c512724b7f4c54e7cfc1d3f577e6aa286319e340153303ff51d895359d",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第029章_守钟人.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第029章_守钟人.md",
+    "sha256": "4f48f7eff498598b5cb7dd85a810d789307ba9de7e65e57fdcdbf4970eef728c",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第030章_顺记里面.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第030章_顺记里面.md",
+    "sha256": "2f25a5e625a73a4c9a28ee8a286cac7a28bdcab04d61bc3ba6448d16815f7ef3",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第031章_安平里六号楼.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第031章_安平里六号楼.md",
+    "sha256": "ce4cf4399f509d87e943d1937e751918dbce8cf9591a15db9efde3e22d16c70b",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第032章_一张填不下的表.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第032章_一张填不下的表.md",
+    "sha256": "05f7bb77c6e6a25a2c0928ffff60bd1c04e902da08a26b8e511bd2b13cc53467",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第033章_02点17分.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_017-033/全文/第033章_02点17分.md",
+    "sha256": "43bde62341f94f6f7ebed15b39a5b5aa69405dd090337c7ffd5b39398b5cb0a3",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第035章_另一个陈骁.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第035章_另一个陈骁.md",
+    "sha256": "253cf02298663172dde4b65d77509fb041dd853d3e275861eaea45f1108029b5",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第036章_两套时间线.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第036章_两套时间线.md",
+    "sha256": "4d9c80dadb68914ffed04f7e6e3196ab91c066214de5fa929eaec79aac9a3f4c",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第037章_临江七周.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第037章_临江七周.md",
+    "sha256": "846fba6f835575a18ced6cdc391d11b8780572052b2e8ca626d9e0b2ecb4b04e",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第038章_宁州九年.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第038章_宁州九年.md",
+    "sha256": "80d940f235b4dbdfc444f697221604b47a2b8e4f5aa3147948120803344f5e4b",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第039章_四年前的锁.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第039章_四年前的锁.md",
+    "sha256": "5c573e29d5e20f04e78f55deb03299cf1d77ae738b0e17ca4eec486e1a55c93f",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第040章_谁有权进屋.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第040章_谁有权进屋.md",
+    "sha256": "066be4990e3aad2828a3c1f4370fdfd906d7896deebc2e9b64eb8fc019f9bdd2",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第041章_不是暗号.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第041章_不是暗号.md",
+    "sha256": "5c164c92a5bedd6dab8960ef6b3221a39e34248716b8738e5ccd7e8d3a805944",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第042章_他今天做的事.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第042章_他今天做的事.md",
+    "sha256": "2e886810a7164da703c33b4876b2bdb4a82bbc8c5c3fcfc8315cbfb90db51720",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第045章_争议中.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第045章_争议中.md",
+    "sha256": "f81625742e4affaa86b66371841289ed6c1cd0d31ff402813c0a9db2008aa799",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第046章_凌晨又开了.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第046章_凌晨又开了.md",
+    "sha256": "47c3a519caeaa2d5cfecaaf0bcbfa0280956a2a84cd3d8371a47fac664c29596",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第047章_告警.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第047章_告警.md",
+    "sha256": "885a1ca68ea4b397475e57711bf00fb98016c472d2c0e6d784e35844eaf03802",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第048章_门链.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第048章_门链.md",
+    "sha256": "7e9d128bdb09f8e9020daa3acef9612fe33593ed3cad0f082655720dd8dbae30",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第050章_你不是我儿子.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_034-050/第050章_你不是我儿子.md",
+    "sha256": "23b531443d2a7e811437b89d0ee0450f6eebf05352b0c28134b0d8d19ad18f41",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第096章_没有缝的人.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_096-099/第096章_没有缝的人.md",
+    "sha256": "421bd6db9df14d57f51e941ad2cff493ad488450d38c7b176ad2e042ca6cc5f0",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第097章_前三年.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_096-099/第097章_前三年.md",
+    "sha256": "7276ea680230b63a0c9a6808bb1d4bc3f1e37d39011233d55f534b1be1673bce",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第098章_后五年.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_096-099/第098章_后五年.md",
+    "sha256": "dbee660dcabd25f79ea05af2ef2d62748fe8a9ff0f4ea8497f0d1c338253d4c7",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  },
+  "第099章_一只真的坏表.md": {
+    "candidate": "创作运行/2026-10-06_第六批早期验收修复/候选_096-099/第099章_一只真的坏表.md",
+    "sha256": "5361bcba5a45389f91fbee62689768f27b64066a0f0f36624eee41130c6ee996",
+    "passed": [
+      "language_gate.js",
+      "check-style-hygiene.js",
+      "check-ai-patterns.js",
+      "check-degeneration.js"
+    ],
+    "failures": []
+  }
+}

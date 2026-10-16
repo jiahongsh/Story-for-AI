@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "change_id": "fifth-D-20261006",
+  "summary": "081最终冷读：救援中不反复算钱，伤损与停工在救援后登记",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第081章_先把人带出来.md",
+    "大纲/细纲_第081章.md"
+  ],
+  "affected_chapters": [
+    81
+  ],
+  "affected_entities": [
+    "镜辞",
+    "姜霁",
+    "吴老板",
+    "刘成",
+    "市场管理员",
+    "陈平"
+  ],
+  "affected_fact_ids": [
+    "K001",
+    "K003"
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "revision_gate": {
+    "approval_stamp": "D:\\code\\stroy\\他们不是人\\追踪\\修改影响\\active.approved.json",
+    "change_id": "seventh-document-status-20261007",
+    "checked_file_count": 227,
+    "conflict_count": 1,
+    "required_check_count": 227,
+    "status": "PASS",
+    "tracking_action": "not_required"
+  },
+  "world_export": {
+    "status": "DERIVED_VIEWS_EXPORTED",
+    "output": "创作运行/派生视图",
+    "files": 116,
+    "state_revision": 219,
+    "limitations": [],
+    "semantic_limit": "派生视图可重建，非第二权威；未知历史保留待核，不晋升候选。"
+  },
+  "actor_views": {
+    "revision": 219,
+    "cards": 7,
+    "timelines": 7,
+    "authority_sha256": "5383a8f782b1f43607f8327c856374088675cc1ac04c512a886fccff1995315b"
+  },
+  "early_freeze": {
+    "output": "source_manifest.json frozen at r219\n"
+  },
+  "early_build": {
+    "output": "built r219; 54 chapter bindings; 22 reviewed CORE evidence rows\n"
+  },
+  "early_check": {
+    "output": "PASS r219; 54 chapter bindings; 22 reviewed CORE evidence rows\n"
+  },
+  "tracking": {
+    "last_committed_chapter": 99,
+    "state_revision": 219
+  },
+  "doctor": {
+    "status": "pass",
+    "project": "D:\\code\\stroy\\他们不是人",
+    "checks": [
+      {
+        "name": "tracking_commit",
+        "status": "pass"
+      },
+      {
+        "name": "writing_method",
+        "status": "pass",
+        "details": {
+          "status": "ready",
+          "method_branch": "A-standard",
+          "implicit_default": true,
+          "runtime_strategy": "existing-style-recall",
+          "read_benchmark_style": true,
+          "read_raw_anchor_excerpts": true
+        }
+      },
+      {
+        "name": "chapter_candidates",
+        "status": "pass",
+        "open": 0
+      },
+      {
+        "name": "accepted_prose_receipts",
+        "status": "pass",
+        "count": 43
+      },
+      {
+        "name": "accepted_voice_profile",
+        "status": "not_configured"
+      },
+      {
+        "name": "golden_voice_profile",
+        "status": "not_configured"
+      },
+      {
+        "name": "latest_projection",
+        "status": "pass",
+        "events": 128
+      },
+      {
+        "name": "revision_gate",
+        "status": "pass"
+      },
+      {
+        "name": "cold_read",
+        "status": "not_required"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      {
+        "code": "voice-profile-not-configured",
+        "message": "尚无本书声音画像；不足五章时正常，达到五章后可从接纳回执建立，旧章必须显式批准范围",
+        "path": "D:\\code\\stroy\\他们不是人\\追踪\\文风"
+      }
+    ]
+  }
+}

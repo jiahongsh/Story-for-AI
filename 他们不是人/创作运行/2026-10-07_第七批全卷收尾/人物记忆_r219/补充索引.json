@@ -1,0 +1,122 @@
+{
+  "state_revision": 219,
+  "authority_sha256": "5383a8f782b1f43607f8327c856374088675cc1ac04c512a886fccff1995315b",
+  "actors": {
+    "孙立": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/孙立.md",
+      "sha256": "64debc07b1463ce67eafc9b0f3fd623ba9d9cddb8c1cfc6758d56f1402199344",
+      "sources": [
+        {
+          "chapter": 60,
+          "path": "正文/第060章_不回答.md",
+          "sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66"
+        },
+        {
+          "chapter": 61,
+          "path": "正文/第061章_来修表的人.md",
+          "sha256": "b96e5752ca74066afa4f3ce263dc986e9b686d880445cf9c2bdd62e0f10a1e8d"
+        },
+        {
+          "chapter": 62,
+          "path": "正文/第062章_推荐店.md",
+          "sha256": "23499e67898568f385ca47db948f6a0122256630c63af27f17910d1eeb5ec52c"
+        },
+        {
+          "chapter": 65,
+          "path": "正文/第065章_不知道不是通过.md",
+          "sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674"
+        },
+        {
+          "chapter": 75,
+          "path": "正文/第075章_不看也收尾.md",
+          "sha256": "df33e42de701895e38abae1fc90762bccd85fed60d305ce9a135f041ae12ba66"
+        }
+      ]
+    },
+    "蓝拖鞋客": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/蓝拖鞋客.md",
+      "sha256": "033fb6827abe095580b9fd29ffacd9f9fffe961dde2115b0f06d61538d99bae6",
+      "sources": [
+        {
+          "chapter": 62,
+          "path": "正文/第062章_推荐店.md",
+          "sha256": "23499e67898568f385ca47db948f6a0122256630c63af27f17910d1eeb5ec52c"
+        },
+        {
+          "chapter": 63,
+          "path": "正文/第063章_别拿她试.md",
+          "sha256": "2ad26cd8a65e7a343cfd8970eabf146162ea4ed777d0a895537ef3b19d7c4b1d"
+        }
+      ]
+    },
+    "裴亮": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/裴亮.md",
+      "sha256": "71c33e9976068ba6c3dba0f400ee557922d0f84c1add4150768f12dbe1533f81",
+      "sources": [
+        {
+          "chapter": 57,
+          "path": "正文/第057章_同一张脸.md",
+          "sha256": "915f909257027ee3ccf7747c594e1dda01176f44cf5d248d82f7f48683ce9729"
+        },
+        {
+          "chapter": 58,
+          "path": "正文/第058章_你为什么不躲.md",
+          "sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834"
+        },
+        {
+          "chapter": 59,
+          "path": "正文/第059章_工单跟着我走.md",
+          "sha256": "52aec9bccd9210ac3673cd08022e17ee1540d6b0d065960b33ea7004623ea8d4"
+        }
+      ]
+    },
+    "侯强": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/侯强.md",
+      "sha256": "2246dfecb94a2ccbe3d426efc4dc66f9ce43adf1cc78ea5f7095348c1a731111",
+      "sources": [
+        {
+          "chapter": 75,
+          "path": "正文/第075章_不看也收尾.md",
+          "sha256": "df33e42de701895e38abae1fc90762bccd85fed60d305ce9a135f041ae12ba66"
+        }
+      ]
+    },
+    "郭老板": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/郭老板.md",
+      "sha256": "cf6d17dbe5cd318821da04a3d0eedd0d3b220db4d43dda8de5086659c772c369",
+      "sources": [
+        {
+          "chapter": 64,
+          "path": "正文/第064章_你也一直在验我.md",
+          "sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26"
+        },
+        {
+          "chapter": 69,
+          "path": "正文/第069章_她的朋友.md",
+          "sha256": "5862971eddfc9f5e3086f56e9db8d7ec47c65148a4c1be4b65396005718367a7"
+        },
+        {
+          "chapter": 70,
+          "path": "正文/第070章_先喝汤是谁教的.md",
+          "sha256": "b8557a92b4c679f29e6e34146a1a8eee462d0b6646f77a6e22676a8ab23eebe4"
+        }
+      ]
+    },
+    "打印店老板": {
+      "card_and_timeline": "创作运行/2026-10-07_第七批全卷收尾/人物记忆_r219/补充行动者/打印店老板.md",
+      "sha256": "1261af4f45c27d0895e5b2d2cbcbc3aaf4b16ea18c24050ff66dfa7d392fadd6",
+      "sources": [
+        {
+          "chapter": 54,
+          "path": "正文/第054章_假通过.md",
+          "sha256": "7201fa5fc54b794bc80a9a2c0b384a0640f7746d819b659079ee9f6646d7aefb"
+        },
+        {
+          "chapter": 55,
+          "path": "正文/第055章_没处理过.md",
+          "sha256": "d8bb1f3d597c9513d7b4b32975a47b61a4b7d9b1b362ac1743bfa21bca3791b7"
+        }
+      ]
+    }
+  }
+}

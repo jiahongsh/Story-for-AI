@@ -1,0 +1,11 @@
+{
+  "status": "PASS",
+  "revision": 219,
+  "last_committed_chapter": 99,
+  "events_and_records": "001—099连续",
+  "candidate_prose_matches": 28,
+  "language_checks": 112,
+  "actor_views": 13,
+  "locked_100_101_unchanged": true,
+  "limited_102_103_authorized": true
+}

@@ -1,0 +1,8 @@
+{
+  "approved_at": "2026-10-08T07:28:18Z",
+  "change_id": "cleanup-c01-r10-20261008",
+  "manifest_sha256": "970d713726974f526e1f79b12620d369d4618461e4121e3538fedcff110e2984",
+  "schema_version": 1,
+  "status": "PASS",
+  "tracking_action": "commit"
+}

@@ -1,0 +1,1414 @@
+[
+  {
+    "chapter": 71,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第071章_复核日.md",
+    "metrics": {
+      "dialogue_turns": 11,
+      "attribution_count": 0,
+      "attribution_density": 0,
+      "max_consecutive_tagged_turns": 0,
+      "top_verb": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "top_family": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.282
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 73,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第073章_又到两点十七.md",
+    "metrics": {
+      "dialogue_turns": 8,
+      "attribution_count": 1,
+      "attribution_density": 0.125,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 1,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 1,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.21
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [
+      {
+        "line": 11,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“你去摊。”镜辞说。黄页仍在包里，他没把包打开给她看。"
+      }
+    ],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 54,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第054章_假通过.md",
+    "metrics": {
+      "dialogue_turns": 25,
+      "attribution_count": 0,
+      "attribution_density": 0,
+      "max_consecutive_tagged_turns": 0,
+      "top_verb": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "top_family": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.15
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 63,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第063章_别拿她试.md",
+    "metrics": {
+      "dialogue_turns": 44,
+      "attribution_count": 12,
+      "attribution_density": 0.273,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "说",
+        "count": 12,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 12,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.239
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 100%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 12 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 9,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“你在车站。”他说。"
+      },
+      {
+        "line": 17,
+        "column": 9,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“远的有过。”她说，“三天里两回。一次在县城车站对面的天桥，人站得很远，手机举着，没下台阶。一次在我换车的路口，车窗反光里有个影子，车开了就没了。两次都没靠近。我把十二块的县班换成十八块的那趟，多花六块，在站里多站了四十分钟。六块我自己出。你别转账。”"
+      },
+      {
+        "line": 23,
+        "column": 16,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“你刚才那句在往记录上靠。”她说，“我现在报的是站名和票价。站名是县城车站。人是我自己。”"
+      },
+      {
+        "line": 31,
+        "column": 15,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“回不回临江，我不定。”镜辞说，“票你自己买。店里今天九点把那行推荐撤下。撤下是店的事。”"
+      },
+      {
+        "line": 49,
+        "column": 8,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“先喝汤。”她说，“缺口对着你左手的那只碗。你把左手放到桌沿，等我转。后来你说这个不试了。”"
+      },
+      {
+        "line": 57,
+        "column": 13,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“汤和碗，我停过。”镜辞说，“耳朵那些页还在。页在，就是我拿你当过题。陈屿要的是通过。我今天拒的是他这张单。两页我分开写。”"
+      },
+      {
+        "line": 59,
+        "column": 16,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“你分得开。我听着还是我。”她说，“他拍树，是想让你看。你早先看我吃饭、看我转碗、看我耳朵，也是在看。理由不一样。人是同一个。”"
+      },
+      {
+        "line": 67,
+        "column": 12,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“我不是为你的栏。”她说，“明天我回临江。车票我现在买。四十六，我自己付。到了先去旧市场那家早餐铺，不先进你的店。我不给你看耳朵。你要是站在铺子门口等着看，我就换一家。”"
+      },
+      {
+        "line": 79,
+        "column": 15,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“早餐铺不在这只抽屉里。”她说。"
+      },
+      {
+        "line": 85,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“分开。”镜辞说。他没再拨回去。备注仍是空的。他没往备注里填字。"
+      },
+      {
+        "line": 101,
+        "column": 9,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“准了就行。”她说，“名字我昨天没留，今天也不留。晚班那十块，昨天没扣上。你别再记一笔可能。”"
+      },
+      {
+        "line": 111,
+        "column": 11,
+        "text": "老人说",
+        "subject": "老人",
+        "verb": "说",
+        "family": "说",
+        "context": "“到哪我不管。”老人说，“章还在侧袋里就行。”他看了眼抽屉，没拉开，端茶回后间。镊子接着响。"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 53,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第053章_验收题.md",
+    "metrics": {
+      "dialogue_turns": 25,
+      "attribution_count": 1,
+      "attribution_density": 0.04,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 1,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 1,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.206
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [
+      {
+        "line": 19,
+        "column": 16,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“听了也不等于我看对了。”镜辞说。"
+      }
+    ],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 62,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第062章_推荐店.md",
+    "metrics": {
+      "dialogue_turns": 31,
+      "attribution_count": 8,
+      "attribution_density": 0.258,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 8,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 8,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.295
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 100%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 8 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 13,
+        "column": 8,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“表还准。”他说，“我爸那只，走得挺好。我这次为的是章。章要是盖不了，我就得再去窗口，告诉他们店不认这张纸。来回公交两块，我认。六块我不想丢。”"
+      },
+      {
+        "line": 21,
+        "column": 25,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“你带来的维修票，油干、四十五，都对得上。”镜辞说，“我给那张盖章。拿它问窗口，六块退不退，让他们当面说。名单我不盖。”"
+      },
+      {
+        "line": 35,
+        "column": 25,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "“你这张的印刷时间，和新版一样，八点二十。”姜霁说，“三天前你办的是证件。名单是今天更新之后才夹上去的。”"
+      },
+      {
+        "line": 43,
+        "column": 24,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“采购名字对得上服务部。恒准这一页对不上。”她说，“孙立拿到的是栏上的纸。纸能证明更新过，证明不了谁写进去的，也证明不了有人用这张纸来控你。”"
+      },
+      {
+        "line": 49,
+        "column": 21,
+        "text": "守钟人说",
+        "subject": "守钟人",
+        "verb": "说",
+        "family": "说",
+        "context": "镊子停了一停。“你手里那枚就是。”守钟人说，“异议单上盖店章，盖的是这店不认这行推荐。人别写成我们请来考试的。表真坏了的，明天照修。”"
+      },
+      {
+        "line": 77,
+        "column": 21,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“明天九点以后她要是自己来，表照修。”他说，“今天名单还挂着。这时候收新客，收进来的是名单上的下一双眼睛。”"
+      },
+      {
+        "line": 93,
+        "column": 10,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“今晚不打。”镜辞说。拨号页面退掉，图还留在陈屿那条对话里。没看出来那四个字仍在上面。他不回。两行挨着，他在本子上分开写：撤下回执已受理，明日九点生效。北河老树和十七号金属对上旧照片。未回。两件事不写成一件事的因。"
+      },
+      {
+        "line": 101,
+        "column": 12,
+        "text": "老人说",
+        "subject": "老人",
+        "verb": "说",
+        "family": "说",
+        "context": "“树的事我不管。”老人说，“章别落在外面。”他端着茶回后间，门掩上，镊子没停。"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 75,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第075章_不看也收尾.md",
+    "metrics": {
+      "dialogue_turns": 12,
+      "attribution_count": 4,
+      "attribution_density": 0.333,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "问",
+        "count": 2,
+        "ratio": 0.5
+      },
+      "top_family": {
+        "value": "问",
+        "count": 2,
+        "ratio": 0.5
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.246
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [
+      {
+        "line": 3,
+        "column": 89,
+        "text": "她问",
+        "subject": "她",
+        "verb": "问",
+        "family": "问",
+        "context": "早上七点五十，她进钟表行拿外套。柜台上还扣着北河那张收据，名字栏印着芽，背面朝下。她看见正面的一个角，指尖把角按回去，没把收据拿起来谈。谈够不够成为自己，今天不谈。外套穿上，她问：“今天的箱子我还分不分？”"
+      },
+      {
+        "line": 5,
+        "column": 7,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“分。”镜辞说，“那是你的活。东口不用你去。”"
+      },
+      {
+        "line": 69,
+        "column": 22,
+        "text": "洗的时候问",
+        "subject": "洗的时候",
+        "verb": "问",
+        "family": "问",
+        "context": "她进门时手上有灰。灰她在池子里洗。洗的时候问：“明天没有箱子了。我是留在店里，还是你要我去东口看那个坑？”"
+      },
+      {
+        "line": 71,
+        "column": 10,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“留在店里。”镜辞说，“坑不用你看。样本我也不找你当。”"
+      }
+    ],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 83,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第083章_合作条件.md",
+    "metrics": {
+      "dialogue_turns": 38,
+      "attribution_count": 15,
+      "attribution_density": 0.395,
+      "max_consecutive_tagged_turns": 3,
+      "top_verb": {
+        "value": "说",
+        "count": 12,
+        "ratio": 0.8
+      },
+      "top_family": {
+        "value": "说",
+        "count": 12,
+        "ratio": 0.8
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.241
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 80%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 12 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 6,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“谈。”她说。"
+      },
+      {
+        "line": 13,
+        "column": 9,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“这条我懂。”他说，“单独接触，西口那种，我不会再往前凑半步。”"
+      },
+      {
+        "line": 17,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“会想冲。”镜辞说，“冲之前先听你的停。”"
+      },
+      {
+        "line": 31,
+        "column": 9,
+        "text": "镜辞问",
+        "subject": "镜辞",
+        "verb": "问",
+        "family": "问",
+        "context": "“有问题？”镜辞问。"
+      },
+      {
+        "line": 33,
+        "column": 7,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“没有。”她说，“在想怎么写进我们的模板。别改短。越短越好被人顺手解释。”"
+      },
+      {
+        "line": 35,
+        "column": 10,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“保留原句。”镜辞说。"
+      },
+      {
+        "line": 41,
+        "column": 21,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "“现场负责人说了算。今晚多半是我。”姜霁说，“你反对可以记。记了也先执行停。”"
+      },
+      {
+        "line": 43,
+        "column": 2,
+        "text": "他问",
+        "subject": "他",
+        "verb": "问",
+        "family": "问",
+        "context": "他问：“资料呢。能查多少。”"
+      },
+      {
+        "line": 45,
+        "column": 35,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "“只开跟眼前这桩有关的页，还得看你能进哪一层，当事人同不同意。”姜霁说，“整库不开。名单不开放自助。你要的页，该申请申请，该拒绝拒绝。”"
+      },
+      {
+        "line": 53,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“不当。”镜辞说。怀表仍在盘里。箱盖仍严。她带着自己的信封往北河去了，对话框里仍只有一个在。他今晚不把案子细节发过去。发过去会把她从北河的路上拽回来听条款，条款她不该替他签。"
+      },
+      {
+        "line": 67,
+        "column": 29,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "张岚看了镜辞一眼，目光很快移开。“他样样都能说回来。”她说，声音发干，干到每个字都刮嗓子，“今晚那扇门，我推不开。”"
+      },
+      {
+        "line": 71,
+        "column": 10,
+        "text": "姜霁问",
+        "subject": "姜霁",
+        "verb": "问",
+        "family": "问",
+        "context": "“他失联过？”姜霁问。"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 59,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第059章_工单跟着我走.md",
+    "metrics": {
+      "dialogue_turns": 21,
+      "attribution_count": 9,
+      "attribution_density": 0.429,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 8,
+        "ratio": 0.8888888888888888
+      },
+      "top_family": {
+        "value": "说",
+        "count": 8,
+        "ratio": 0.8888888888888888
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.21
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 89%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 8 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 17,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“空着等，等的是你还交不交。”她说，“你要停，就写在这页上。通过不写，看不见也不写。人留在店里。南岸、北河、老码头，今天都不去。”"
+      },
+      {
+        "line": 13,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“不宣布。”镜辞说，“修表。”"
+      },
+      {
+        "line": 23,
+        "column": 15,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“十五点零二分你写了停。”她说，“十五点三十六页面改了。挨着。这页不写是你那行字改的。”"
+      },
+      {
+        "line": 37,
+        "column": 19,
+        "text": "裴亮说",
+        "subject": "裴亮",
+        "verb": "说",
+        "family": "说",
+        "context": "“我十五点十分就从仓库出来了。”裴亮说，“群里更早有一句，让到市场这头等补签。我到了西口，车没了，公示改了字。三点四十四群里说补签不算了，我还是在西口等到三点五十，没等到接单的人。骑车二十九分钟，等了十一分钟，他们合起来记四十分钟空跑，扣八块。到西口那趟单车三块。一共十一块。陈工人呢？他让我来的。”"
+      },
+      {
+        "line": 43,
+        "column": 20,
+        "text": "姜霁问",
+        "subject": "姜霁",
+        "verb": "问",
+        "family": "问",
+        "context": "“你知道单子为什么改成待复核吗。”姜霁问。"
+      },
+      {
+        "line": 47,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“不知道。”镜辞说。"
+      },
+      {
+        "line": 53,
+        "column": 25,
+        "text": "裴亮说",
+        "subject": "裴亮",
+        "verb": "说",
+        "family": "说",
+        "context": "“你要是知道陈工在哪，现在说。我还能赶上。”裴亮说。"
+      },
+      {
+        "line": 75,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“表走。”镜辞说。"
+      },
+      {
+        "line": 79,
+        "column": 30,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“今天的动作是你停了，然后有个人扛着十一块出现在门口。”她说，“下一步仍看单子把谁送来。陈屿本人要到这张柜台前，那是以后的事。今晚他没到。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 61,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第061章_来修表的人.md",
+    "metrics": {
+      "dialogue_turns": 22,
+      "attribution_count": 6,
+      "attribution_density": 0.273,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 6,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 6,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.284
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 100%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 6 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 12,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“他进门你就修表。”她说，“脸你早上看过一次。今天下午如果再闪，你把表修好。通过两个字别落下去。”"
+      },
+      {
+        "line": 21,
+        "column": 11,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“你先别说话。”镜辞说，“听三十秒。”"
+      },
+      {
+        "line": 29,
+        "column": 7,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“准了。”他说，“谢谢。我走了。下次慢了再来，不麻烦你们问东问西。”"
+      },
+      {
+        "line": 33,
+        "column": 12,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“表慢了就拿来。”镜辞说。他没有说通过，也没有说这个人看不见。维修单的结论栏只写：油干，已处理，走时正常。姓名孙立。没有别的字。"
+      },
+      {
+        "line": 49,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“不回。”镜辞说。他把手机扣上。扣上之后掌心还热。私人本翻开，上午那行未判还在。他在下面写：我看过。随后收到问话，来源未核。此人不写通过，也不写不通过。"
+      },
+      {
+        "line": 59,
+        "column": 38,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“他去复核过证件。复核的点接恒泰设施的下游活。恒准的外包页还在另一边。”她说，“这能证明他来过这个点，证明不了谁派他来试你。更不能写成他拿表是为了害你。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 72,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第072章_不是为了反着来.md",
+    "metrics": {
+      "dialogue_turns": 24,
+      "attribution_count": 6,
+      "attribution_density": 0.25,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "说",
+        "count": 4,
+        "ratio": 0.6666666666666666
+      },
+      "top_family": {
+        "value": "说",
+        "count": 4,
+        "ratio": 0.6666666666666666
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.198
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 67%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 4 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 3,
+        "column": 67,
+        "text": "喊",
+        "subject": null,
+        "verb": "喊",
+        "family": "喊叫",
+        "context": "回店后的那个早晨九点，旧市场西口的零件摊把三只木箱搬到太阳底下。箱盖一开，螺丝、轴尖、表把混在一起，灰沾手。摊主老秦冲着钟表行的方向喊：“三天。按大小分。一天六十。今天干完付。分错一箱扣十。人就在这儿，别进我屋里。”"
+      },
+      {
+        "line": 23,
+        "column": 104,
+        "text": "他只说",
+        "subject": "他只",
+        "verb": "说",
+        "family": "说",
+        "context": "镜辞十一点送一只表到西口，顺路停在摊后。他看见她从左到右，小的一列，大的一列，中间留一指宽。这个空档他认得。认得是以前柜台上教过的排法。话到了嘴边，他没把“像谁”说出来。指节在工具包带上发紧，发紧过去，他只说：“空档留着。这样找得快。”"
+      },
+      {
+        "line": 65,
+        "column": 8,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“别写芽。”她说。声音不高。旁边有人砍价，砍到一半停下来听。“另一个名字我现在没有。你要记账，别问我证件。”"
+      },
+      {
+        "line": 75,
+        "column": 14,
+        "text": "说",
+        "subject": null,
+        "verb": "说",
+        "family": "说",
+        "context": "老秦在摊上对一个来问价的人说：“分螺丝的明天还在。你要找人，看左边第三格。”那人没问芽，也没问她从哪来。问的是眼镜螺丝还有没有。她说明天还有。说明天还有的时候，指尖在箱沿上停了一下。停的是高兴。高兴很短。她没把高兴写成自己已经成了另一个人。"
+      },
+      {
+        "line": 81,
+        "column": 13,
+        "text": "镜辞问",
+        "subject": "镜辞",
+        "verb": "问",
+        "family": "问",
+        "context": "“坐一天，烦不烦？”镜辞问。"
+      },
+      {
+        "line": 83,
+        "column": 33,
+        "text": "想了想说",
+        "subject": "想了想",
+        "verb": "说",
+        "family": "说",
+        "context": "“分东西不烦。分好了又被人倒回一堆，烦。”她关掉水龙头，想了想又说，“还有老秦，一会儿喊快点，一会儿让我弄整齐。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 74,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第074章_不是我的履历.md",
+    "metrics": {
+      "dialogue_turns": 22,
+      "attribution_count": 8,
+      "attribution_density": 0.364,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "说",
+        "count": 6,
+        "ratio": 0.75
+      },
+      "top_family": {
+        "value": "说",
+        "count": 6,
+        "ratio": 0.75
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.125
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 75%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 6 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 7,
+        "column": 13,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“方远现在带学徒。”镜辞说，“我想听他身上还留着什么。你要是去，只旁听。结果写在谁名下，你自己定。”"
+      },
+      {
+        "line": 9,
+        "column": 12,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“写在原芽那一栏。”她说，“我这栏不领。你要是想听我背，我也能背。背出来的不算我做的。”"
+      },
+      {
+        "line": 17,
+        "column": 8,
+        "text": "他问",
+        "subject": "他",
+        "verb": "问",
+        "family": "问",
+        "context": "方远没先骂。他问：“你是真的想走，还是现在撑不住？”"
+      },
+      {
+        "line": 25,
+        "column": 3,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "镜辞说：“听你讲高中那次。我们不改你的说法。”"
+      },
+      {
+        "line": 33,
+        "column": 26,
+        "text": "方远说",
+        "subject": "方远",
+        "verb": "说",
+        "family": "说",
+        "context": "“后来我带学徒，有人说不干，我就先问那一句。”方远说，“问完再决定留不留。这句话是那次留下来的。不是谁一伸手就把我捞起来。”"
+      },
+      {
+        "line": 41,
+        "column": 20,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“那件事，现在坐在这儿的我没做过。”她说，“你记着的是当年那个人。我今天只是听见。”"
+      },
+      {
+        "line": 71,
+        "column": 13,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“细节我背得比你细。”她说，“能证明那次影响还在的，是方远现在那一句问法，是老师、同学、他母亲后来继续做的事。记忆复制到我这儿，功劳不跟着复制。”"
+      },
+      {
+        "line": 85,
+        "column": 16,
+        "text": "问",
+        "subject": null,
+        "verb": "问",
+        "family": "问",
+        "context": "她摸了摸指甲缝里没洗净的灰，又问：“她做过的，不能算我的。那我醒过来之后亲手做的那些，有没有真的进了别人的日子里？”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 91,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第091章_没有缝.md",
+    "metrics": {
+      "dialogue_turns": 9,
+      "attribution_count": 5,
+      "attribution_density": 0.556,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "说",
+        "count": 4,
+        "ratio": 0.8
+      },
+      "top_family": {
+        "value": "说",
+        "count": 4,
+        "ratio": 0.8
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.364
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 80%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 4 次"
+      },
+      {
+        "severity": "advisory",
+        "code": "baseline-drift",
+        "message": "本章密度 0.56，明显高于前期基线 0.02"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 3,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "姜霁说：“目标叫周诚。外派半年回家。妻子报案式求助：常用手换了，抱孩子的手换了，杯子和钥匙盘的位置也跟着换。我们观察两周。你只写你看见的。包括什么都没看见。”"
+      },
+      {
+        "line": 9,
+        "column": 87,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "姜霁把夹子翻到自己的观察页。页上密密麻麻几十条动作差异，旁边用红笔划掉已经排除的项：排班改了、搬家后的新习惯、夫妻冷战、孩子长高后的抱法变化。剩下几条都挤在右臂怎么用力。她说：“所以只写需复核。壳这个字我没落。”"
+      },
+      {
+        "line": 19,
+        "column": 110,
+        "text": "圈完她说",
+        "subject": "圈完她",
+        "verb": "说",
+        "family": "说",
+        "context": "谈话里周诚妻子无意提了一句：外派期间他右肩伤过，可本人总说早好了。这句话一落地，姜霁的笔尖停住。停住的时间不长，长的是优先级翻页。翻页后她把右臂相关几条圈起来：杯子改左手递、孩子换边抱、钥匙盘被家里人挪到另一侧。圈完她说：“先请周诚开放这次肩伤相关的医疗和康复记录，范围只这一段。普通解释排前面。”"
+      },
+      {
+        "line": 27,
+        "column": 11,
+        "text": "镜辞问",
+        "subject": "镜辞",
+        "verb": "问",
+        "family": "问",
+        "context": "“老李那边呢。”镜辞问。"
+      },
+      {
+        "line": 29,
+        "column": 17,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "“仍受控。原主状态仍未知。”姜霁说，“两边别串。串了你会想用同一把尺量所有人。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 94,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第094章_十一份.md",
+    "metrics": {
+      "dialogue_turns": 14,
+      "attribution_count": 8,
+      "attribution_density": 0.571,
+      "max_consecutive_tagged_turns": 3,
+      "top_verb": {
+        "value": "说",
+        "count": 6,
+        "ratio": 0.75
+      },
+      "top_family": {
+        "value": "说",
+        "count": 6,
+        "ratio": 0.75
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.431
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 75%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 6 次"
+      },
+      {
+        "severity": "advisory",
+        "code": "baseline-drift",
+        "message": "本章密度 0.57，明显高于前期基线 0.02"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 15,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“别把问号当成围猎名单。”她说，“先看获准的状态栏。隐私不开放。”"
+      },
+      {
+        "line": 15,
+        "column": 23,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "“按现有材料，甚至拉不到高风险那一档。”姜霁说，“可我仍盯了七天。每回顺着被重整理过的旧身份史往前追，他恰好在那一带住过或做过工。可没有一次能钉死是他动的手。”"
+      },
+      {
+        "line": 21,
+        "column": 3,
+        "text": "镜辞问",
+        "subject": "镜辞",
+        "verb": "问",
+        "family": "问",
+        "context": "镜辞问：“要是最后坐实他是壳，这些日子算谁留下的？”"
+      },
+      {
+        "line": 23,
+        "column": 3,
+        "text": "姜霁说",
+        "subject": "姜霁",
+        "verb": "说",
+        "family": "说",
+        "context": "姜霁说：“所以答案不能抢先落笔。”"
+      },
+      {
+        "line": 27,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“我跟。”镜辞说，“第一步不故意凑近试。先让猫眼核旧版本，你继续行为侧。我只等他本来就会出现的生活场面，做一次低干扰的看。别先把他逼出异常，再拿异常当证据。”"
+      },
+      {
+        "line": 35,
+        "column": 14,
+        "text": "随口问",
+        "subject": "随口",
+        "verb": "问",
+        "family": "问",
+        "context": "守钟人看他盯着空台面，随口问：“又来客？”"
+      },
+      {
+        "line": 37,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“可能来。”镜辞说，“也可能只是路过。”"
+      },
+      {
+        "line": 39,
+        "column": 12,
+        "text": "守钟人说",
+        "subject": "守钟人",
+        "verb": "说",
+        "family": "说",
+        "context": "“路过也付钱。”守钟人说，“表坏了才进门。人要是没事，别硬给人拆。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 96,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第096章_没有缝的人.md",
+    "metrics": {
+      "dialogue_turns": 6,
+      "attribution_count": 3,
+      "attribution_density": 0.5,
+      "max_consecutive_tagged_turns": 2,
+      "top_verb": {
+        "value": "说",
+        "count": 3,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 3,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.44
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [
+      {
+        "line": 11,
+        "column": 9,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“没看见。”镜辞说。"
+      },
+      {
+        "line": 13,
+        "column": 23,
+        "text": "短完她说",
+        "subject": "短完她",
+        "verb": "说",
+        "family": "说",
+        "context": "听筒里传来姜霁落笔的声音。落笔声很短。短完她说：“记上。你第一次在自然场面看他，结果空着。”她没有逼第二轮。没有端出更高阶的藏法。也没有拿还没证实的理论给怀疑垫底。现阶段只够写：身份历史可疑，主体错位证据仍不足。"
+      },
+      {
+        "line": 19,
+        "column": 10,
+        "text": "猫眼说",
+        "subject": "猫眼",
+        "verb": "说",
+        "family": "说",
+        "context": "“不是断档。”猫眼说，翻开最早三年，“恰恰相反。住址、缴费、工作、体检、租赁，一处空都没有。怪处可能在太齐。齐到早期像被熨过。”"
+      }
+    ],
+    "next_action": "continue_workflow"
+  },
+  {
+    "chapter": 66,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第066章_空白页.md",
+    "metrics": {
+      "dialogue_turns": 22,
+      "attribution_count": 8,
+      "attribution_density": 0.364,
+      "max_consecutive_tagged_turns": 1,
+      "top_verb": {
+        "value": "说",
+        "count": 8,
+        "ratio": 1
+      },
+      "top_family": {
+        "value": "说",
+        "count": 8,
+        "ratio": 1
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.281
+    },
+    "findings": [],
+    "advisories": [
+      {
+        "severity": "advisory",
+        "code": "verb-family-repeat",
+        "message": "“说”类标记占全部归属标记的 100%"
+      },
+      {
+        "severity": "advisory",
+        "code": "same-verb-repeat",
+        "message": "“说”重复 8 次"
+      }
+    ],
+    "examples": [
+      {
+        "line": 5,
+        "column": 18,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“左边我记得的。右边我做过的。”她说，“你看着。别在嘴里帮我总结。”"
+      },
+      {
+        "line": 11,
+        "column": 11,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“同一页也能拆。”她说，“拆开才知道哪半是我到过，哪半是我原先就觉得该在。”"
+      },
+      {
+        "line": 15,
+        "column": 9,
+        "text": "他说",
+        "subject": "他",
+        "verb": "说",
+        "family": "说",
+        "context": "“旧页不动。”他说。"
+      },
+      {
+        "line": 23,
+        "column": 8,
+        "text": "镜辞说",
+        "subject": "镜辞",
+        "verb": "说",
+        "family": "说",
+        "context": "“不修。”镜辞说。老人点头，回去敲他的座钟。门掩上。人没受伤。"
+      },
+      {
+        "line": 31,
+        "column": 10,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“账可以空着。”她说，“票不能。住的地方不能。手机号不能。要是租一间房，合同也不能。这些地方只认这个名字。你的白纸空白，窗口不认白纸。”"
+      },
+      {
+        "line": 37,
+        "column": 34,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“继续拿这张去买票、住店、办号码，新的记录会落到这个名字下面。”她说，“风险我记。记的是会落到哪里。办证的路我没有，也不在这张桌上找。”"
+      },
+      {
+        "line": 41,
+        "column": 14,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“手机号就是现在这个。”她说，“备注你继续空着。空着不影响我接电话。一到窗口，空着就办不成。明天我若要再买一张短途，窗口会先要这个名字。今天先把账分开。明天的窗口今天不排演。”"
+      },
+      {
+        "line": 45,
+        "column": 12,
+        "text": "她说",
+        "subject": "她",
+        "verb": "说",
+        "family": "说",
+        "context": "“房租的事更简单。”她说，“中介要身份证号。号在这张证上。我还没去问价。问了就要把号交出去。交出去，后面的合同就会写这个名字。今天不交。”"
+      }
+    ],
+    "next_action": "continue_with_semantic_dialogue_review"
+  },
+  {
+    "chapter": 98,
+    "status": "passed",
+    "file": "D:\\code\\stroy\\他们不是人\\正文\\第098章_后五年.md",
+    "metrics": {
+      "dialogue_turns": 3,
+      "attribution_count": 0,
+      "attribution_density": 0,
+      "max_consecutive_tagged_turns": 0,
+      "top_verb": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "top_family": {
+        "value": null,
+        "count": 0,
+        "ratio": 0
+      },
+      "baseline_density": 0.02,
+      "recent_density": 0.39
+    },
+    "findings": [],
+    "advisories": [],
+    "examples": [],
+    "next_action": "continue_workflow"
+  }
+]

@@ -1,0 +1,110 @@
+{
+  "status": "candidate_only",
+  "base_revision": 104,
+  "files": [
+    {
+      "chapter": 35,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第035章_另一个陈骁.md",
+      "source_sha256": "de8aaa9b33f3eabac03a819294e4d01c848e7e84f03a9d045f2bfa10863ec941",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+      "candidate_sha256": "253cf02298663172dde4b65d77509fb041dd853d3e275861eaea45f1108029b5",
+      "replacement_count": 1
+    },
+    {
+      "chapter": 36,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第036章_两套时间线.md",
+      "source_sha256": "a5d0caea25e52d032987a9c6ffbb6e5dc5a4c501979103bf2874f8ab5e6eae67",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第036章_两套时间线.md",
+      "candidate_sha256": "4d9c80dadb68914ffed04f7e6e3196ab91c066214de5fa929eaec79aac9a3f4c",
+      "replacement_count": 1
+    },
+    {
+      "chapter": 37,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第037章_临江七周.md",
+      "source_sha256": "20cb937f72e38e3fafb1e46f0ca1d6a6516f65983398984496324acfb0e3ed76",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第037章_临江七周.md",
+      "candidate_sha256": "846fba6f835575a18ced6cdc391d11b8780572052b2e8ca626d9e0b2ecb4b04e",
+      "replacement_count": 2
+    },
+    {
+      "chapter": 38,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第038章_宁州九年.md",
+      "source_sha256": "36c8e97a89798e8929dddc54e93f6b2b9295066d97d7700f6aba1252cf43c318",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第038章_宁州九年.md",
+      "candidate_sha256": "80d940f235b4dbdfc444f697221604b47a2b8e4f5aa3147948120803344f5e4b",
+      "replacement_count": 1
+    },
+    {
+      "chapter": 39,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第039章_四年前的锁.md",
+      "source_sha256": "8ccb49525f4c98988c4bdb398c09934ebe4dc167f32b3c717ba8088d1dba8df0",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第039章_四年前的锁.md",
+      "candidate_sha256": "5c573e29d5e20f04e78f55deb03299cf1d77ae738b0e17ca4eec486e1a55c93f",
+      "replacement_count": 4
+    },
+    {
+      "chapter": 40,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第040章_谁有权进屋.md",
+      "source_sha256": "b41ca46c36ce8693f8741f0da7abf213e3bf4837036e48cb94d3d2d4f38941b3",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第040章_谁有权进屋.md",
+      "candidate_sha256": "066be4990e3aad2828a3c1f4370fdfd906d7896deebc2e9b64eb8fc019f9bdd2",
+      "replacement_count": 6
+    },
+    {
+      "chapter": 41,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第041章_不是暗号.md",
+      "source_sha256": "2a5d1e5ffd0e04f5d129f5a11332cb06189943405a045232f34db00906e95e12",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第041章_不是暗号.md",
+      "candidate_sha256": "5c164c92a5bedd6dab8960ef6b3221a39e34248716b8738e5ccd7e8d3a805944",
+      "replacement_count": 1
+    },
+    {
+      "chapter": 42,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第042章_他今天做的事.md",
+      "source_sha256": "30058beca84d22bba60a2dc5276e742a032d356bc5a01e05ec098871d7467365",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第042章_他今天做的事.md",
+      "candidate_sha256": "2e886810a7164da703c33b4876b2bdb4a82bbc8c5c3fcfc8315cbfb90db51720",
+      "replacement_count": 2
+    },
+    {
+      "chapter": 45,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第045章_争议中.md",
+      "source_sha256": "825b33433207e0e3290c3c98a8542c501a0b9283aaaace72173aa16808e2085f",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第045章_争议中.md",
+      "candidate_sha256": "f81625742e4affaa86b66371841289ed6c1cd0d31ff402813c0a9db2008aa799",
+      "replacement_count": 0
+    },
+    {
+      "chapter": 46,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第046章_凌晨又开了.md",
+      "source_sha256": "47cf6a6e27a917d1e70c8250c91db208b610a26017501ae8802f3fd9f595b334",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第046章_凌晨又开了.md",
+      "candidate_sha256": "47c3a519caeaa2d5cfecaaf0bcbfa0280956a2a84cd3d8371a47fac664c29596",
+      "replacement_count": 1
+    },
+    {
+      "chapter": 47,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第047章_告警.md",
+      "source_sha256": "7109e2e1bac02a404c276324f974af05edc20fe5724ce24fa19158e00ce47df4",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第047章_告警.md",
+      "candidate_sha256": "885a1ca68ea4b397475e57711bf00fb98016c472d2c0e6d784e35844eaf03802",
+      "replacement_count": 3
+    },
+    {
+      "chapter": 48,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第048章_门链.md",
+      "source_sha256": "b328249227aefdbd563e477c62d51dd63f1791aad97efbe31e9c2add68f68dc4",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第048章_门链.md",
+      "candidate_sha256": "7e9d128bdb09f8e9020daa3acef9612fe33593ed3cad0f082655720dd8dbae30",
+      "replacement_count": 3
+    },
+    {
+      "chapter": 50,
+      "source": "D:\\code\\stroy\\他们不是人\\正文\\第050章_你不是我儿子.md",
+      "source_sha256": "0169f3db94951d2d3c0ddfba25120ae2494d446742a4118ce50e9f0987e6cee9",
+      "candidate": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第050章_你不是我儿子.md",
+      "candidate_sha256": "23b531443d2a7e811437b89d0ee0450f6eebf05352b0c28134b0d8d19ad18f41",
+      "replacement_count": 1
+    }
+  ]
+}

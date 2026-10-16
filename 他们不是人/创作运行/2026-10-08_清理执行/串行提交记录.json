@@ -1,0 +1,121 @@
+[
+  {
+    "chapter": 71,
+    "before_revision": 232,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 233}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 233}",
+    "removed_chars": 176
+  },
+  {
+    "chapter": 73,
+    "before_revision": 233,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 234}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 234}",
+    "removed_chars": 447
+  },
+  {
+    "chapter": 54,
+    "before_revision": 234,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 235}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 235}",
+    "removed_chars": 174
+  },
+  {
+    "chapter": 63,
+    "before_revision": 235,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 236}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 236}",
+    "removed_chars": 445
+  },
+  {
+    "chapter": 53,
+    "before_revision": 236,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 237}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 237}",
+    "removed_chars": 241
+  },
+  {
+    "chapter": 62,
+    "before_revision": 237,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 238}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 238}",
+    "removed_chars": 220
+  },
+  {
+    "chapter": 75,
+    "before_revision": 238,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 239}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 239}",
+    "removed_chars": 294
+  },
+  {
+    "chapter": 83,
+    "before_revision": 239,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 240}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 240}",
+    "removed_chars": 28
+  },
+  {
+    "chapter": 59,
+    "before_revision": 240,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 241}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 241}",
+    "removed_chars": 269
+  },
+  {
+    "chapter": 61,
+    "before_revision": 241,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 242}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 242}",
+    "removed_chars": 676
+  },
+  {
+    "chapter": 72,
+    "before_revision": 242,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 243}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 243}",
+    "removed_chars": 10
+  },
+  {
+    "chapter": 74,
+    "before_revision": 243,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 244}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 244}",
+    "removed_chars": 42
+  },
+  {
+    "chapter": 91,
+    "before_revision": 244,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 245}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 245}",
+    "removed_chars": 41
+  },
+  {
+    "chapter": 94,
+    "before_revision": 245,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 246}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 246}",
+    "removed_chars": 24
+  },
+  {
+    "chapter": 96,
+    "before_revision": 246,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 247}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 247}",
+    "removed_chars": 77
+  },
+  {
+    "chapter": 66,
+    "before_revision": 247,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 248}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 248}",
+    "removed_chars": 28
+  },
+  {
+    "chapter": 98,
+    "before_revision": 248,
+    "commit": "{\"last_committed_chapter\": 99, \"state_revision\": 249}",
+    "check": "{\"last_committed_chapter\": 99, \"state_revision\": 249}",
+    "removed_chars": 33
+  }
+]

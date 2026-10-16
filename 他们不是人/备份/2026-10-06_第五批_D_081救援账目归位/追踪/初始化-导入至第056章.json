@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "book_title": "他们不是人",
+  "last_chapter": 56,
+  "context": {
+    "position": {
+      "volume": "第一卷",
+      "volume_start_chapter": 1,
+      "story_time": "对上陈屿的脸的次日，西口公示写明次日上午他以项目负责人出现",
+      "scene": "旧市场钟表行，刚从西口返回"
+    },
+    "long_term_constraints": [
+      "恒准是第019章问过并回访的公司；恒泰设施是工单和公示上的名字。两家不能写成同一家。",
+      "不认证原主，不给当前存在起名，不解释02:17的来源。",
+      "接缝只证明身份错位。未见接缝不可反向认证。",
+      "100-103是锁定活动正文。104继续冻结。057-099的一轮旧稿不能覆盖001-056。",
+      "陈屿之名自停车场就有。056已对脸，且他知道自己被看着。057必须再看却不能确认。",
+      "时间挨着不等于因果。发现点位后先让别人留公开页面，再决定是否亲自到场。"
+    ],
+    "active_character_names": ["镜辞", "姜霁", "猫眼", "陈屿", "守钟人", "本地陈骁"],
+    "continuity_risks": [
+      "旧追踪曾把001-100写成已全部重写。活动正文以001-056加锁定的100-103为准。",
+      "左眉浅疤和弯曲小指是055对照市场监控才写下的，009正文没有这两句。",
+      "安平里待可见性复核和两个陈骁在054-056没有新进展。",
+      "南栏假异常已被拒绝。D4私人本仍写极淡残余，公共口径是看不见。",
+      "03南栏只是老码头03点从未进工单的那段旧护栏，不是新地点。"
+    ],
+    "recent_chapters": [
+      {
+        "chapter": 54,
+        "summary": "假反馈后南岸公示改为待收尾，旧件在五金店被拒。恒准售后与恒泰调度并列未合并。南栏假话已打好但未发送。"
+      },
+      {
+        "chapter": 55,
+        "summary": "基座按对方自己的复核收掉后，南栏假异常未被施工。对方回复没处理过。公开合影把陈屿的脸对上灰衬衫，两家公司仍不合并。"
+      },
+      {
+        "chapter": 56,
+        "summary": "用旧照片和公开页对照，南栏仍空。西口公示写陈屿次日为恒泰项目负责人。街对面看见极浅接缝一次，他问今天还准吗，镜辞没有追看。"
+      }
+    ],
+    "next_chapter_commitments": [
+      "057写陈屿在公开现场被同事按长期工友使用，损失要落到具体的班、配件或顶班。",
+      "镜辞刻意再看耳后，这次不能确认，并写下未见且不可反用。",
+      "不把056那一次看见改成看错，不宣布他是壳，不解释多重身份，不把工友称呼升级成恒准在编。"
+    ]
+  },
+  "character_snapshots": {
+    "镜辞": {
+      "identity": "二十一岁修表学徒，能看见接缝，不用接缝判决身份",
+      "location": "旧市场钟表行",
+      "goal": "先存公开页面再决定是否到场；下一眼对陈屿要能承认没看见",
+      "state": "西口看见陈屿极浅接缝一次后没有追看，也没有回答那句问表",
+      "abilities_resources": ["第一式看见接缝", "私人观察本", "市场监控拷贝", "南岸旧铝牌照片"],
+      "relationships": ["与姜霁互相制约", "猫眼只交换可核对的公开页", "守钟人拒绝替他判人"],
+      "knowledge": ["恒准售后系统里没有南岸", "恒泰设施出现在已保存的公开调度和西口公示上", "南栏假异常没有引来施工", "陈屿的名字在停车场文件夹里早就有，055才对上脸"],
+      "open_threads": ["02:17来源未知", "陈屿为何同时有五年工牌和周远取表身份", "D4极淡残余仍在私人本", "两个陈骁与待可见性复核未结"]
+    },
+    "姜霁": {
+      "identity": "与镜辞临时合作的调查者，记录可核对事实，不把接缝写入自己的文件夹",
+      "location": "旧市场钟表行",
+      "goal": "把恒准外包记录和恒泰公示分开保存",
+      "state": "已拦住镜辞去南岸和老码头；西口只拍通知，没有拍陈屿的耳后",
+      "abilities_resources": ["停车场陈屿文件夹", "更正过的左手旧伤记录", "硬纸隔开的两份公司材料"],
+      "relationships": ["制约镜辞亲自踩点", "接收猫眼的公开页", "不替守钟人解释沈竹"],
+      "knowledge": ["南栏不在对方处理过的点上", "合影胸牌与外包夹子不能画等号", "西口通知没有上级栏"],
+      "open_threads": ["陈屿多重身份的原因", "四十块菜款只有摊主口述、没有流水"]
+    },
+    "猫眼": {
+      "identity": "只交付公开页、出处和校验值的合作者",
+      "location": "不在钟表行，通过消息交页",
+      "goal": "继续留公开页，不进内部名册",
+      "state": "已拒绝顺着工号查人，并写明自己没有陈屿的上级",
+      "abilities_resources": ["公开页存档", "文件校验值"],
+      "relationships": ["与镜辞低频交换可交叉验证的材料"],
+      "knowledge": ["十七号旧设备已在公开页上整批更换", "零三金属箱在复测后有追加", "南栏公开页没有记录"],
+      "open_threads": ["内部名册仍不进入", "恒泰设施的上级未知"]
+    },
+    "陈屿": {
+      "identity": "停车场起即有名的恒准外包；五年公开合影胸牌为恒泰设施；曾穿灰衬衫以周远身份取表",
+      "location": "旧市场西口街对面",
+      "goal": "未说明；人停在对面，没有躲避",
+      "state": "浅色工装，未挂当天胸牌；点表问过今天还准吗，知道镜辞在看",
+      "abilities_resources": ["手表", "西口公示上的项目负责人名义"],
+      "relationships": ["恒准外包记录与恒泰公示负责人同时存在", "056之前已在009和停车场被镜辞看见过接缝"],
+      "knowledge": ["知道镜辞在看自己的耳后", "没有解释自己是谁"],
+      "open_threads": ["为何一边有五年工牌一边用过周远身份", "057将在同事中以长期工友出现，且再看接缝不能确认"]
+    },
+    "守钟人": {
+      "identity": "钟表行老人，修钟，不参与判人",
+      "location": "旧市场钟表行后间",
+      "goal": "继续修座钟，不替他们解释沈竹或短信",
+      "state": "认出合影上的人来过店，没有追问街对面是谁",
+      "abilities_resources": ["座钟", "柜台铁盒"],
+      "relationships": ["允许镜辞和姜霁在店里对材料", "拒绝把耳朵当标准答案"],
+      "knowledge": ["灰衬衫来过店", "假话已经发出去就会被拿去办事"],
+      "open_threads": ["沈竹的事他仍然不说"]
+    },
+    "本地陈骁": {
+      "identity": "临江配送员，与宁州陈骁共用一个法定身份，两边的生活都在继续",
+      "location": "临江配送站",
+      "goal": "拒绝把宁州工单并进自己的工号",
+      "state": "054至056没有再被观察；账户上的待可见性复核仍悬挂",
+      "abilities_resources": ["临江站工牌", "半趟配送"],
+      "relationships": ["父亲陈启明拒绝认他进502", "镜辞署名记录但不判谁是谁"],
+      "knowledge": ["502四年前换过锁，知道不等于当时在场"],
+      "open_threads": ["待可见性复核未完", "宁州一百八十六元扣款与临江停单仍分开存放"]
+    }
+  },
+  "foreshadow": [
+    {
+      "action": "upsert",
+      "id": "F001",
+      "summary": "02:17会把人工争议覆盖回正常，来源仍然未知",
+      "planted_chapter": 32,
+      "planned_resolution_chapter": null,
+      "status": "已埋",
+      "importance": "高"
+    },
+    {
+      "action": "upsert",
+      "id": "F002",
+      "summary": "恒准与恒泰设施两个名字已经碰到一起，仍不能写成同一家",
+      "planted_chapter": 21,
+      "planned_resolution_chapter": null,
+      "status": "已埋",
+      "importance": "高"
+    },
+    {
+      "action": "upsert",
+      "id": "F003",
+      "summary": "陈屿的脸已对上灰衬衫，五年工牌和周远取表身份为何并存仍无答案",
+      "planted_chapter": 9,
+      "planned_resolution_chapter": null,
+      "status": "已埋",
+      "importance": "高"
+    },
+    {
+      "action": "upsert",
+      "id": "F004",
+      "summary": "D4私人本仍记极淡残余，对陌生号码声称的看不见不能当成清理完成",
+      "planted_chapter": 53,
+      "planned_resolution_chapter": null,
+      "status": "已埋",
+      "importance": "中"
+    },
+    {
+      "action": "upsert",
+      "id": "F005",
+      "summary": "南栏是未处理对照点；对方有自己的目标图，不靠镜辞的话开新点",
+      "planted_chapter": 55,
+      "planned_resolution_chapter": null,
+      "status": "已埋",
+      "importance": "中"
+    },
+    {
+      "action": "upsert",
+      "id": "F006",
+      "summary": "陈屿已经知道镜辞在看他；056只看见一次接缝，下一眼不可提前加码",
+      "planted_chapter": 56,
+      "planned_resolution_chapter": 57,
+      "status": "已埋",
+      "importance": "高"
+    }
+  ],
+  "timeline_events": [
+    {
+      "action": "upsert",
+      "id": "E054",
+      "story_time": "假反馈次日晚上",
+      "objective_fact": "南岸公示改为待收尾，四十七号旧件被拒，恒准售后与恒泰公开调度并列出现但未合并。南栏那句假话打好后没有发送。",
+      "reader_knowledge": "读者看到基座仍留到次日，也看到两家公司被分开记下。",
+      "reveal_status": "已揭示",
+      "reveal_chapter": 54,
+      "characters": ["镜辞", "姜霁", "猫眼"]
+    },
+    {
+      "action": "upsert",
+      "id": "E055",
+      "story_time": "基座复核之后的那个清晨到对脸当日",
+      "objective_fact": "南栏假异常没有引来施工，陌生号码回复没处理过。五年公开合影上的陈屿与灰衬衫是同一张脸。",
+      "reader_knowledge": "读者知道对方不拿镜辞的话开新点，也知道名字早就有，新的只是脸对上了。",
+      "reveal_status": "已揭示",
+      "reveal_chapter": 55,
+      "characters": ["镜辞", "姜霁", "猫眼", "陈屿"]
+    },
+    {
+      "action": "upsert",
+      "id": "E056",
+      "story_time": "对脸次日，西口公示贴出之后",
+      "objective_fact": "镜辞没有回旧点现场。西口公示写陈屿次日为恒泰设施项目负责人。他在街对面点表问今天还准吗，镜辞只看见一次极浅接缝且没有追看。",
+      "reader_knowledge": "读者知道陈屿不怕被看见，也知道旧照片还在，南栏仍然没有新记录。",
+      "reveal_status": "已揭示",
+      "reveal_chapter": 56,
+      "characters": ["镜辞", "姜霁", "陈屿"]
+    }
+  ],
+  "facts": [
+    {
+      "action": "upsert",
+      "id": "K001",
+      "category": "规则",
+      "subject": "接缝",
+      "predicate": "证明范围",
+      "object": "只证明身份错位，不证明原主生死、善恶或主体连续",
+      "cardinality": "one",
+      "canon_status": "正文已证",
+      "reader_status": "已揭示",
+      "reveal_chapter": 43,
+      "established_chapter": 43,
+      "evidence": ["正文/第043章｜镜辞不拿接缝给普通行为材料加权", "正文/第056章_清理轨迹.md｜看见一次后拒绝追看加码"],
+      "related_entities": ["镜辞"],
+      "negative_constraints": ["未见接缝不得写成真人认证", "一次看见不得写成已经确认是壳"]
+    },
+    {
+      "action": "upsert",
+      "id": "K002",
+      "category": "规则",
+      "subject": "临江恒准设备维护有限公司",
+      "predicate": "与之并列但未合并的名称",
+      "object": "恒泰设施",
+      "cardinality": "one",
+      "canon_status": "正文已证",
+      "reader_status": "已揭示",
+      "reveal_chapter": 54,
+      "established_chapter": 50,
+      "evidence": ["正文/第019章_修得太正常.md｜恒准售后回访", "正文/第050章_你不是我儿子.md｜工单出现恒泰设施", "正文/第054章_假通过.md｜两家名字同日出现且不画等号"],
+      "related_entities": ["恒泰设施", "镜辞"],
+      "negative_constraints": ["不得把恒准售后改名成恒泰", "不得写成已经证实是同一家公司"]
+    },
+    {
+      "action": "upsert",
+      "id": "R001",
+      "category": "从属",
+      "subject": "陈屿",
+      "predicate": "已核对的公开履历",
+      "object": "恒准外包记录与恒泰设施项目胸牌同时存在",
+      "cardinality": "many",
+      "canon_status": "正文已证",
+      "reader_status": "已揭示",
+      "reveal_chapter": 55,
+      "established_chapter": 55,
+      "evidence": ["正文/第023章_姜霁.md｜姜霁说出陈屿是恒准外包", "正文/第055章_没处理过.md｜五年合影胸牌与灰衬衫对脸"],
+      "related_entities": ["恒泰设施", "镜辞", "姜霁"],
+      "negative_constraints": ["不因此把两家公司并成一家", "不解释他为何使用周远身份", "工友称陈工也不升级成恒准在编"]
+    },
+    {
+      "action": "upsert",
+      "id": "K003",
+      "category": "规则",
+      "subject": "上游同步窗口",
+      "predicate": "目前已知的作用",
+      "object": "把人工争议或权限状态覆盖回正常，发起来源未知",
+      "cardinality": "one",
+      "canon_status": "正文已证",
+      "reader_status": "已揭示",
+      "reveal_chapter": 46,
+      "established_chapter": 32,
+      "evidence": ["正文/第032章｜人工修正在凌晨被上游覆盖", "正文/第046章｜争议状态被压回正常"],
+      "related_entities": ["镜辞"],
+      "negative_constraints": ["不得在当前正文解释这个时刻的来源"]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 91,
+  "target": "正文/第091章_没有缝.md",
+  "accepted_prose_sha256": "2953f71599ac4abc86976f33e1910dbd073570d4126e9f324f417203bfb09acf",
+  "candidate_id": "C20261005-155721",
+  "candidate_manifest": "追踪/候选章/第091章/C20261005-155721/manifest.json",
+  "context_digest": "247f53fee48892852aadaee7a8b672caed13997b952351a4b58c38fa14cec192",
+  "state_revision_before": 34,
+  "state_revision_after": 103,
+  "accepted_at": "2026-10-05T07:58:07Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第091章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T06:16:01Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "93de3c2abce6eaf2dc602b7cc589d2e98ad5f1e8f6a6c28ca78ee43c149fb211",
+      "new_sha256": "2953f71599ac4abc86976f33e1910dbd073570d4126e9f324f417203bfb09acf",
+      "state_revision": 103,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T07:58:49Z"
+}

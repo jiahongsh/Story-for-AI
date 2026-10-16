@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 11,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "4b2940695ac61a9cef0fed79e15d7ba1052794e201e6804d0b3abe11ec05dcb5",
+      "state_revision": 43,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "ORIGINAL",
+      "path": "创作运行/2026-10-06_P0硬伤修订/第011章/original.md",
+      "sha256": "4f9e25b68372f122d212ae669c7cd3c31bdd6a03d99caa853b5ab7a30ef419a2",
+      "scope": "mixed"
+    },
+    {
+      "id": "AUDIT",
+      "path": "创作运行/2026-10-06_P0硬伤修订/写前七关与事实底表.md",
+      "sha256": "5ee9e3e6c9f02f4a10d3bb4e42eed89c404bc48ca623209e5664c2dfdff922a0",
+      "scope": "planned"
+    },
+    {
+      "id": "PRIOR1",
+      "path": "正文/第001章_钟表行的客人.md",
+      "sha256": "99ad868fc97b671569900cc3e143493bac096412f04d120b941a02601708ed85",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C011_1",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "追查停表原因并保存沈竹遗物",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：追查停表原因并保存沈竹遗物",
+      "voice_refs": [
+        {
+          "start_line": 183,
+          "end_line": 183,
+          "quote": "几天，半个月，最长一次撑了两个月，然后又停。",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 183,
+          "end_line": 183,
+          "quote": "几天，半个月，最长一次撑了两个月，然后又停。",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第011章原有直接受影响场景；其余旧场景不改变选择",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C011_1"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C011_1",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "镜辞在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：追查停表原因并保存沈竹遗物",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：七年里实际拆修过表，001已说明最长十一天；不知道为何停。",
+            "wants": "镜辞本次自身目标：追查停表原因并保存沈竹遗物。其他行动者的愿望不属于本人。",
+            "fears": "镜辞本场不愿承担：反复维修失败会令遗物线索丢失。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：能读自己的维修单、留影和拆修；不能凭走时确认人活着。",
+            "no_plot": "无剧情需要：普通反复故障也会核维修记录；可继续修，但旧方法多次失效。",
+            "costs": "代价：付时间检查、先不恢复走时；不改过往维修天数。",
+            "consequences": "后果：下一章有保留原状的拆检基础，十一天不成为新超自然规律。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "追查停表原因并保存沈竹遗物",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 39,
+              "end_line": 39,
+              "quote": "最里面躺着一只旧怀表，银灰色外壳已经磨暗，秒针卡在十一和十二之间。沈竹失踪七年，镜辞就断断续续修了它七年，修好以后能走，走着走着又会停，最长的一次也只撑了十一天。",
+              "source_id": "PRIOR1",
+              "access": "memory",
+              "available_chapter": 1,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本人七年维修亲历；第一章已呈现最长十一天",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "background_only": [],
+    "basis": "历史局部修订仅重评直接受影响选择；以上列齐改动涉及者，整章回读保留其他行动、因果和声线。不冒称旧稿写作时已过七关。"
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex /root solo",
+    "method": "原文、对应细纲、独立事实底表及直接证据章逐项核对；本轮写作与回读分阶段执行",
+    "basis": "知道：七年里实际拆修过表，001已说明最长十一天；不知道为何停。；后果：下一章有保留原状的拆检基础，十一天不成为新超自然规律。。不向角色转移作者秘密，不追加主角强行胜利。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "创作运行/2026-10-06_P0硬伤修订/第011章/写前行动审查.json",
+      "sha256": "156f1f4491223bfb303ee0ab3f2c3bbe908d43a9a13d52c52fb7ac0e64b1f356"
+    },
+    "candidate": {
+      "path": "创作运行/2026-10-06_P0硬伤修订/第011章/candidate.md",
+      "sha256": "66adbf6ac089a4b40b66168a034bacb5296e52597dac779328e632bf7a2999fd"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "actual_result": "后果：下一章有保留原状的拆检基础，十一天不成为新超自然规律。",
+        "action_ids": [
+          "A1"
+        ],
+        "evidence": [
+          {
+            "start_line": 183,
+            "end_line": 183,
+            "quote": "有时一天，有时几天，最长一次撑了十一天，然后又停。"
+          }
+        ],
+        "world_followups": [
+          "只校正本轮原有事件和证据边界；没有新追捕、新命名、能力升级或幕后揭底。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "既有钩子与未解范围保留；只纠正支撑事实，不声称额外回收长线伏笔。",
+        "evidence": [
+          {
+            "start_line": 183,
+            "end_line": 183,
+            "quote": "有时一天，有时几天，最长一次撑了十一天，然后又停。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex /root solo",
+      "method": "候选与原稿逐段差异对照，独立一轮事实、因果和去味回读",
+      "basis": "所改句段符合锁定年份、地点、发送记录与认知来源；整章既有结果保留，不提前消费100章首缝。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

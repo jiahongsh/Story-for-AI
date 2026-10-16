@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 92,
+  "target": "正文/第092章_右肩.md",
+  "accepted_prose_sha256": "abf0d58d0a1a4bd0622066a340d8540ddf3688523015800ae98b8b51df4bd24e",
+  "candidate_id": "C20261005-160828",
+  "candidate_manifest": "追踪/候选章/第092章/C20261005-160828/manifest.json",
+  "context_digest": "10ac3903f2d682f9250f5410aac91d93402c9d8a95b7183354b4ffc2a3b96d05",
+  "state_revision_before": 35,
+  "state_revision_after": 36,
+  "accepted_at": "2026-10-05T08:09:17Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第092章按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-05T08:09:42Z"
+}

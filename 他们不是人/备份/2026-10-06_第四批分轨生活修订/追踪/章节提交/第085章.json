@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 85,
+  "target": "正文/第085章_她摔了一下.md",
+  "accepted_prose_sha256": "8cc6118fa8ce4d3021d2fae56ec90beb59cb5937f17fa7b0e98d36def5c8b098",
+  "candidate_id": "C20261005-153406",
+  "candidate_manifest": "追踪/候选章/第085章/C20261005-153406/manifest.json",
+  "context_digest": "060b72952347f84a472d90916b3ce7b73b63913eb10848c0eac8015533021206",
+  "state_revision_before": 28,
+  "state_revision_after": 29,
+  "accepted_at": "2026-10-05T07:36:04Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第085章按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-05T07:36:30Z"
+}

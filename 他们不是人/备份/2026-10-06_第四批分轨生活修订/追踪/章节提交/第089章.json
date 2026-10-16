@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 89,
+  "target": "正文/第089章_另一个住处.md",
+  "accepted_prose_sha256": "62ac7a9fba1a5d106dbb86bd5b8711ca7da78304622325f6792c3819b45479db",
+  "candidate_id": "C20261005-155333",
+  "candidate_manifest": "追踪/候选章/第089章/C20261005-155333/manifest.json",
+  "context_digest": "e1d17ffbd30063e425d6e96991eb723e09f3ff3a29d8a2e35f99c8ef4ed11145",
+  "state_revision_before": 32,
+  "state_revision_after": 33,
+  "accepted_at": "2026-10-05T07:54:42Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第089章按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-05T07:55:23Z"
+}

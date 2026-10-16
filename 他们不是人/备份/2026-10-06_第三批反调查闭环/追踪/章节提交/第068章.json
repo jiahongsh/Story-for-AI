@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 68,
+  "target": "正文/第068章_这段路是我走的.md",
+  "accepted_prose_sha256": "6a52adf7d41b49bef33119558661a4749c64f0017ca6574adcb16a86aa6f6687",
+  "candidate_id": "C20261004-221017",
+  "candidate_manifest": "追踪/候选章/第068章/C20261004-221017/manifest.json",
+  "context_digest": "e0c013b28b288e4d23ca265395567b09a005ddf3925448da8c8722bdc20c94e0",
+  "state_revision_before": 11,
+  "state_revision_after": 12,
+  "accepted_at": "2026-10-04T14:19:06Z",
+  "approval_mode": "review",
+  "approval_note": "用户本次明确说自动定稿。第068章候选按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-04T14:20:21Z"
+}

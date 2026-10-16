@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "candidate_id": "C20261005-135718",
+  "status": "committed",
+  "created_at": "2026-10-05T05:57:18Z",
+  "project_root": "D:\\code\\stroy\\他们不是人",
+  "chapter": 75,
+  "target": "正文/第075章_不看也收尾.md",
+  "candidate": "追踪/候选章/第075章/C20261005-135718/candidate.md",
+  "outline": "大纲/细纲_第075章.md",
+  "approval_mode": "auto",
+  "authorization_note": "用户本次明确说自动定稿。本微批次连续写第074章到第076章，每章质检通过后写入正文并提交追踪。",
+  "expected_last_committed_chapter": 74,
+  "expected_state_revision": 18,
+  "writing_method": {
+    "method_branch": "A-standard",
+    "method_id": null,
+    "implicit_default": true
+  },
+  "base_files": [
+    {
+      "path": "大纲/细纲_第075章.md",
+      "sha256": "70b5560675bb0588dddc6f83ea3ae6ea148bb21f927ec06583dff1f51a551ee4",
+      "size": 1661
+    },
+    {
+      "path": "追踪/上下文.md",
+      "sha256": "294cbdfc2f1e0d412d45d84655182dc4e24eb532e16d8d37dafb8c967fd59895",
+      "size": 4946
+    },
+    {
+      "path": "正文/第074章_不是我的履历.md",
+      "sha256": "87059756e6b69a87bcf42291adeeae734310d3d950c6d323b7597b4bada5e23c",
+      "size": 10528
+    },
+    {
+      "path": "大纲/卷纲_第一卷.md",
+      "sha256": "d450bec1d640442dd73e6765dffebc4525654436661643ae22f54fa959972d2b",
+      "size": 12810
+    }
+  ],
+  "context_digest": "e07c8320a4c1716081454218b2fa63b1429d4c56517126acffe7d237eb3ee34c",
+  "validation": {
+    "status": "fresh",
+    "changed": [],
+    "current_last_committed_chapter": 74,
+    "current_state_revision": 18,
+    "current_context_digest": "e07c8320a4c1716081454218b2fa63b1429d4c56517126acffe7d237eb3ee34c",
+    "candidate_sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b",
+    "gates": [
+      {
+        "name": "writing_method",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ready\",\n  \"method_branch\": \"A-standard\",\n  \"implicit_default\": true,\n  \"runtime_strategy\": \"existing-style-recall\",\n  \"read_benchmark_style\": true,\n  \"read_raw_anchor_excerpts\": true\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "ready",
+          "method_branch": "A-standard",
+          "implicit_default": true,
+          "runtime_strategy": "existing-style-recall",
+          "read_benchmark_style": true,
+          "read_raw_anchor_excerpts": true
+        }
+      },
+      {
+        "name": "language",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第075章\\C20261005-135718\\candidate.md\n",
+        "stderr": ""
+      },
+      {
+        "name": "ai_patterns",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第075章\\C20261005-135718\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/43 段（14.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/43 (14.0%))\nD:\\code\\stroy\\他们不是人\\追踪\\候选章\\第075章\\C20261005-135718\\candidate.md:87:1: [advisory] long-paragraph: 段落过长（228 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (老秦在门外把空箱叠好，叠了三只。三只箱今天不再打开。他隔着玻璃说六十已经付清，账)\n",
+        "stderr": ""
+      },
+      {
+        "name": "degeneration",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "prose_metrics",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"measured\",\n  \"file\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\候选章\\\\第075章\\\\C20261005-135718\\\\candidate.md\",\n  \"sha256\": \"db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b\",\n  \"character_count\": 3059,\n  \"sentence_count\": 271,\n  \"paragraph_count\": 43,\n  \"bucket_contract\": {\n    \"short\": \"1-8字\",\n    \"medium\": \"9-34字\",\n    \"long\": \"35字及以上\"\n  },\n  \"sentence_distribution\": {\n    \"short\": {\n      \"count\": 97,\n      \"rate_pct\": 35.7934\n    },\n    \"medium\": {\n      \"count\": 174,\n      \"rate_pct\": 64.2066\n    },\n    \"long\": {\n      \"count\": 0,\n      \"rate_pct\": 0.0\n    }\n  },\n  \"sentence_mean_chars\": 11.2878,\n  \"sentence_median_chars\": 10.0,\n  \"paragraph_mean_chars\": 71.1395,\n  \"paragraph_median_chars\": 75.0,\n  \"sentences_per_paragraph\": 6.3023,\n  \"instruction\": \"只报告实测值；这些统计用于定位复核，不是跨题材质量配额。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "measured",
+          "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第075章\\C20261005-135718\\candidate.md",
+          "sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b",
+          "character_count": 3059,
+          "sentence_count": 271,
+          "paragraph_count": 43,
+          "bucket_contract": {
+            "short": "1-8字",
+            "medium": "9-34字",
+            "long": "35字及以上"
+          },
+          "sentence_distribution": {
+            "short": {
+              "count": 97,
+              "rate_pct": 35.7934
+            },
+            "medium": {
+              "count": 174,
+              "rate_pct": 64.2066
+            },
+            "long": {
+              "count": 0,
+              "rate_pct": 0.0
+            }
+          },
+          "sentence_mean_chars": 11.2878,
+          "sentence_median_chars": 10.0,
+          "paragraph_mean_chars": 71.1395,
+          "paragraph_median_chars": 75.0,
+          "sentences_per_paragraph": 6.3023,
+          "instruction": "只报告实测值；这些统计用于定位复核，不是跨题材质量配额。"
+        }
+      },
+      {
+        "name": "outline_copy",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "[PASS] candidate.md: 未发现未登记的细纲连续照搬\n",
+        "stderr": ""
+      },
+      {
+        "name": "accepted_voice_profile",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"not_configured\",\n  \"severity\": \"advisory\",\n  \"candidate\": \"追踪/候选章/第075章/C20261005-135718/candidate.md\",\n  \"message\": \"尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "not_configured",
+          "severity": "advisory",
+          "candidate": "追踪/候选章/第075章/C20261005-135718/candidate.md",
+          "message": "尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。"
+        }
+      },
+      {
+        "name": "cross_chapter_shape",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": " 1.0,\n        \"procedure_marker_per_1k\": 4.6667,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"小巴又过了两站，停在安平里北门。八点四十六，镜辞先下车，夹子竖在胸前。姜霁跟着，两块的票根还在各自口袋里。活动室在一楼侧厅，门开着，塑料椅上有水渍。502在楼上。楼道口的防盗门上，门链反着一点光，链还挂着。 / 陈启明没下来。声音从门里出来，又闷又冲。“门链挂着。我的话不改。钥匙\",\n      \"ending_excerpt\": \"屏幕上的正常两个字只活在照片里。照片在猫眼那儿。店里这一张仍是黄的。杜经理的当值工号写在副本角上，时间和两点十七并排，并排只为了对。对完他没再拨那个号码。 / 姜霁把硬纸仍夹在恒准和恒泰两页中间。两页今晚都没被改写成同一家。钥匙柜仍锁着。链的事留在楼上。镜辞把夹子推进柜台内侧，推\"\n    },\n    {\n      \"chapter\": 72,\n      \"path\": \"正文/第072章_不是为了反着来.md\",\n      \"sha256\": \"9d26b08f9962aa5585f8cefc4785878fe169e003545b5ac2a7a34b9fa9156d30\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"deadline\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 13.6364,\n        \"question_rate_pct\": 2.2727,\n        \"qa_pair_candidates_per_100p\": 2.2727,\n        \"rule_marker_per_1k\": 1.3311,\n        \"procedure_marker_per_1k\": 0.6656,\n        \"explanation_marker_per_1k\": 0.3328\n      },\n      \"opening_excerpt\": \"第二天早上九点，旧市场西口的零件摊把三只木箱搬到太阳底下。箱盖一开，螺丝、轴尖、表把混在一起，灰沾手。摊主老秦冲着钟表行的方向喊：“三天。按大小分。一天六十。今天干完付。分错一箱扣十。人就在这儿，别进我屋里。” / 她站在卷帘外，听见了。第一下想到的是另一张脸会不会接这种活。想到\",\n      \"ending_excerpt\": \"八点的钟表行还开着。有人来问慢表明天能不能取，镜辞说能，十二块明天付。她坐在侧面，没插嘴。插嘴就会把摊上的六十和这十二并成一笔。两笔分开。 / 她把口袋按了按，五十还在。老秦的灯已经灭了。灭了的摊位上，箱子按她码的方向留着。明天八点半她还要去。去之前，姓名栏仍空着。 / 镜辞把包\"\n    },\n    {\n      \"chapter\": 73,\n      \"path\": \"正文/第073章_又到两点十七.md\",\n      \"sha256\": \"a573b45625d997f206dd35e81c2ae9e7aac4a128f873c141c50b7f060b74eacd\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"action\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 11.9048,\n        \"question_rate_pct\": 0.0,\n        \"qa_pair_candidates_per_100p\": 0.0,\n        \"rule_marker_per_1k\": 0.0,\n        \"procedure_marker_per_1k\": 3.3333,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"第二天早上八点十分，杜经理的电话打进钟表行。镜辞还没吃早饭。她已经把口袋里的五十按好，准备去西口。电话响的时候她停了一下，没接。镜辞接了。 / “你来看页面。”杜经理的声音发紧，“纸还在我桌上。屏幕跟夜里不一样。北门的公示也多了一行。我没点任何按钮。你自己没来就算了，我现在叫你。\",\n      \"ending_excerpt\": \"许棠离开北门时没再要车钱。她走去公交站，两块是她自己的。两块和四十块她在电话里分开说了一遍，说给邻居听，让邻居别再下楼。邻居回了一句药不用送了。杜经理把这句话补进交接本。补完，502的药仍暂存在活动室。十二块挂着，门仍关着。镜辞没再回拨去问这十二块谁付。谁付，今天还没发生。 / \"\n    },\n    {\n      \"chapter\": 74,\n      \"path\": \"正文/第074章_不是我的履历.md\",\n      \"sha256\": \"87059756e6b69a87bcf42291adeeae734310d3d950c6d323b7597b4bada5e23c\",\n      \"opening_mode\": \"action\",\n      \"ending_mode\": \"deadline\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 12.766,\n        \"question_rate_pct\": 6.383,\n        \"qa_pair_candidates_per_100p\": 0.0,\n        \"rule_marker_per_1k\": 0.3331,\n        \"procedure_marker_per_1k\": 1.3324,\n        \"explanation_marker_per_1k\": 0.3331\n      },\n      \"opening_excerpt\": \"下午三点，她把第三格螺丝推齐，跟老秦说要出去一趟。迟到的五块是早上的规矩，下午离开不扣。六十等收摊再算。她洗了手，灰还在指甲缝里。 / 镜辞在巷口等。姜霁跟着，文件夹没带恒泰那一页。 / “方远现在带学徒。”镜辞说，“我想听他身上还留着什么。你要是去，只旁听。结果写在谁名下，你自\",\n      \"ending_excerpt\": \"她把城北的地址写在一张小便签上，写完交给姜霁。地址只到铺名，不写方远家里。姜霁把便签夹进原芽那张纸，不夹进她的无名页。夹错了位置，功劳就会跟着走。她看着姜霁夹完，才把自己的手收回来。收回来的时候指甲缝里的灰还在。灰是西口的。城北的油没沾到她手上。 / 西口收摊的声音传进来。老秦在\"\n    }\n  ],\n  \"comparisons\": [\n    {\n      \"chapter\": 69,\n      \"similarity\": 0.6322,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 70,\n      \"similarity\": 0.3338,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 71,\n      \"similarity\": 0.5392,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 72,\n      \"similarity\": 0.48,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 73,\n      \"similarity\": 0.4396,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 74,\n      \"similarity\": 0.4515,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    }\n  ],\n  \"signals\": [],\n  \"review_questions\": [\n    \"近章是否反复用同一种冲突发动机，而不只是共享题材物件？\",\n    \"配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？\",\n    \"信息是否总通过分栏、列举、公开验证或总结性对白交付？\",\n    \"章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？\",\n    \"候选是否保留人物特有的误解、回避、私心或未解决代价？\"\n  ],\n  \"instruction\": \"结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "semantic_review_required",
+          "severity": "advisory",
+          "chapter": 75,
+          "window": 6,
+          "candidate": {
+            "chapter": 75,
+            "path": "追踪/候选章/第075章/C20261005-135718/candidate.md",
+            "sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b",
+            "opening_mode": "question",
+            "ending_mode": "deadline",
+            "metrics": {
+              "dialogue_rate_pct": 13.9535,
+              "question_rate_pct": 9.3023,
+              "qa_pair_candidates_per_100p": 6.9767,
+              "rule_marker_per_1k": 2.6152,
+              "procedure_marker_per_1k": 4.2498,
+              "explanation_marker_per_1k": 0.0
+            },
+            "opening_excerpt": "早上七点五十，她进钟表行拿外套。柜台上还扣着北河那张收据，名字栏印着芽，背面朝下。她看见正面的一个角，指尖把角按回去，没把收据拿起来谈。谈够不够成为自己，今天不谈。外套穿上，她问：“今天的箱子我还分不分？” / “分。”镜辞说，“那是你的活。东口不用你去。” / 她点头，去西口。",
+            "ending_excerpt": "她把镊子放回柜台上。放回的时候说，三天的箱子完了。灰还在指甲缝里。灰她没要求镜辞看。看灰不能回答昨晚的问题，也不能给东口一个结论。镜辞点头。点头只表示镊子归位。归位的镊子不证明谁。 / 座钟又走了一格。复印件还在。人还在店里。 / 老秦在门外把空箱叠好，叠了三只。三只箱今天不再打"
+          },
+          "history": [
+            {
+              "chapter": 69,
+              "path": "正文/第069章_她的朋友.md",
+              "sha256": "d4535a1569a4d22c9ca568df906f1293de3dd4ee11075efb7bed046d0125a899",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 35.1852,
+                "question_rate_pct": 11.1111,
+                "qa_pair_candidates_per_100p": 7.4074,
+                "rule_marker_per_1k": 0.9997,
+                "procedure_marker_per_1k": 0.9997,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "第二天早上八点十分，她把抄着唐宁两个字的卡片翻过来，指尖在号码上按了三秒，才用自己的手机拨出去。镜辞的镊子停在表壳边上，没伸手要那只手机。姜霁把笔帽扣上。风险页背面那行字还在，她没把号码再念一遍。 / 第二声有人接。 / “你去北河为什么不告诉我？”",
+              "ending_excerpt": "晚上六点，手机震了一下。唐宁的对话框跳出两行：到家了。你自己想清楚。她看着，没回。回了就会变成再约一次。镜辞问要不要把这个号存进他的手机，她说号在卡片上，今天不进他的通讯录。姜霁只抄了到家了三个字，后面那句催促没抄。催促留给唐宁自己。 / 两块的水她这时候才喝了两口。胃还是空的。"
+            },
+            {
+              "chapter": 70,
+              "path": "正文/第070章_先喝汤是谁教的.md",
+              "sha256": "49747a8679c3c1bfa986a7d797df8c2174b36a6dabcfd51e7ea5fb79e0b76597",
+              "opening_mode": "action",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 18.1818,
+                "question_rate_pct": 0.0,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 0.0,
+                "procedure_marker_per_1k": 1.0,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "第二天早上七点四十，她已经坐在旧早餐铺靠窗的位子上。胃从醒来就发紧，她把手机扣在碗边，屏幕亮着唐宁凌晨的一行字：初一的时候，那个人还不先喝汤。她看完，没回。镜辞七点四十五进门，左手没去碰那只缺口碗。姜霁停在门口，豆浆没买，文件夹抱在胸前。 / 郭老板把小米汤放下，四块。油条两根，",
+              "ending_excerpt": "下一站报的是临江路口。安平里还要再过两站。杜经理又发来一句：人到了敲门。别进502。镜辞回了两个字：在路上。没回别的。姜霁把这两条并排存进自己的手机，不存进公司夹。车过路口的时候他的手心还贴着页角，页角已经抹平。 / 铺子里郭老板问她要不要续热。续热不另收，仍算在四块里。她摇头。"
+            },
+            {
+              "chapter": 71,
+              "path": "正文/第071章_复核日.md",
+              "sha256": "417533e65e779a67c64c9eedb597d908aff49d44a97a043812f14c5d19bd1699",
+              "opening_mode": "action",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 14.8148,
+                "question_rate_pct": 0.0,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 1.0,
+                "procedure_marker_per_1k": 4.6667,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "小巴又过了两站，停在安平里北门。八点四十六，镜辞先下车，夹子竖在胸前。姜霁跟着，两块的票根还在各自口袋里。活动室在一楼侧厅，门开着，塑料椅上有水渍。502在楼上。楼道口的防盗门上，门链反着一点光，链还挂着。 / 陈启明没下来。声音从门里出来，又闷又冲。“门链挂着。我的话不改。钥匙",
+              "ending_excerpt": "屏幕上的正常两个字只活在照片里。照片在猫眼那儿。店里这一张仍是黄的。杜经理的当值工号写在副本角上，时间和两点十七并排，并排只为了对。对完他没再拨那个号码。 / 姜霁把硬纸仍夹在恒准和恒泰两页中间。两页今晚都没被改写成同一家。钥匙柜仍锁着。链的事留在楼上。镜辞把夹子推进柜台内侧，推"
+            },
+            {
+              "chapter": 72,
+              "path": "正文/第072章_不是为了反着来.md",
+              "sha256": "9d26b08f9962aa5585f8cefc4785878fe169e003545b5ac2a7a34b9fa9156d30",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 13.6364,
+                "question_rate_pct": 2.2727,
+                "qa_pair_candidates_per_100p": 2.2727,
+                "rule_marker_per_1k": 1.3311,
+                "procedure_marker_per_1k": 0.6656,
+                "explanation_marker_per_1k": 0.3328
+              },
+              "opening_excerpt": "第二天早上九点，旧市场西口的零件摊把三只木箱搬到太阳底下。箱盖一开，螺丝、轴尖、表把混在一起，灰沾手。摊主老秦冲着钟表行的方向喊：“三天。按大小分。一天六十。今天干完付。分错一箱扣十。人就在这儿，别进我屋里。” / 她站在卷帘外，听见了。第一下想到的是另一张脸会不会接这种活。想到",
+              "ending_excerpt": "八点的钟表行还开着。有人来问慢表明天能不能取，镜辞说能，十二块明天付。她坐在侧面，没插嘴。插嘴就会把摊上的六十和这十二并成一笔。两笔分开。 / 她把口袋按了按，五十还在。老秦的灯已经灭了。灭了的摊位上，箱子按她码的方向留着。明天八点半她还要去。去之前，姓名栏仍空着。 / 镜辞把包"
+            },
+            {
+              "chapter": 73,
+              "path": "正文/第073章_又到两点十七.md",
+              "sha256": "a573b45625d997f206dd35e81c2ae9e7aac4a128f873c141c50b7f060b74eacd",
+              "opening_mode": "exposition",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 11.9048,
+                "question_rate_pct": 0.0,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 0.0,
+                "procedure_marker_per_1k": 3.3333,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "第二天早上八点十分，杜经理的电话打进钟表行。镜辞还没吃早饭。她已经把口袋里的五十按好，准备去西口。电话响的时候她停了一下，没接。镜辞接了。 / “你来看页面。”杜经理的声音发紧，“纸还在我桌上。屏幕跟夜里不一样。北门的公示也多了一行。我没点任何按钮。你自己没来就算了，我现在叫你。",
+              "ending_excerpt": "许棠离开北门时没再要车钱。她走去公交站，两块是她自己的。两块和四十块她在电话里分开说了一遍，说给邻居听，让邻居别再下楼。邻居回了一句药不用送了。杜经理把这句话补进交接本。补完，502的药仍暂存在活动室。十二块挂着，门仍关着。镜辞没再回拨去问这十二块谁付。谁付，今天还没发生。 / "
+            },
+            {
+              "chapter": 74,
+              "path": "正文/第074章_不是我的履历.md",
+              "sha256": "87059756e6b69a87bcf42291adeeae734310d3d950c6d323b7597b4bada5e23c",
+              "opening_mode": "action",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 12.766,
+                "question_rate_pct": 6.383,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 0.3331,
+                "procedure_marker_per_1k": 1.3324,
+                "explanation_marker_per_1k": 0.3331
+              },
+              "opening_excerpt": "下午三点，她把第三格螺丝推齐，跟老秦说要出去一趟。迟到的五块是早上的规矩，下午离开不扣。六十等收摊再算。她洗了手，灰还在指甲缝里。 / 镜辞在巷口等。姜霁跟着，文件夹没带恒泰那一页。 / “方远现在带学徒。”镜辞说，“我想听他身上还留着什么。你要是去，只旁听。结果写在谁名下，你自",
+              "ending_excerpt": "她把城北的地址写在一张小便签上，写完交给姜霁。地址只到铺名，不写方远家里。姜霁把便签夹进原芽那张纸，不夹进她的无名页。夹错了位置，功劳就会跟着走。她看着姜霁夹完，才把自己的手收回来。收回来的时候指甲缝里的灰还在。灰是西口的。城北的油没沾到她手上。 / 西口收摊的声音传进来。老秦在"
+            }
+          ],
+          "comparisons": [
+            {
+              "chapter": 69,
+              "similarity": 0.6322,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 70,
+              "similarity": 0.3338,
+              "same_opening_mode": false,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 71,
+              "similarity": 0.5392,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 72,
+              "similarity": 0.48,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 73,
+              "similarity": 0.4396,
+              "same_opening_mode": false,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 74,
+              "similarity": 0.4515,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            }
+          ],
+          "signals": [],
+          "review_questions": [
+            "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+            "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+            "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+            "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+            "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+          ],
+          "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+        }
+      }
+    ],
+    "validated_at": "2026-10-05T06:04:45Z"
+  },
+  "approval": {
+    "approved_at": "2026-10-05T06:04:45Z",
+    "mode": "auto",
+    "note": "用户本次明确说自动定稿。第075章按该授权接纳并写入正文。",
+    "candidate_sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b"
+  },
+  "promotion": {
+    "promoted_at": "2026-10-05T06:04:47Z",
+    "target_sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b",
+    "receipt": "追踪/章节提交/第075章.json"
+  },
+  "closed_at": "2026-10-05T06:05:17Z",
+  "state_revision_after": 19
+}

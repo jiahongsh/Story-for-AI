@@ -1,0 +1,311 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 58,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "4b2940695ac61a9cef0fed79e15d7ba1052794e201e6804d0b3abe11ec05dcb5",
+      "state_revision": 43,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "ORIGINAL",
+      "path": "创作运行/2026-10-06_P0硬伤修订/第058章/original.md",
+      "sha256": "aeb692b97c1de3dc6fb48fda3531a9033d053c0300f715c5568e0a084f9c9b62",
+      "scope": "mixed"
+    },
+    {
+      "id": "AUDIT",
+      "path": "创作运行/2026-10-06_P0硬伤修订/写前七关与事实底表.md",
+      "sha256": "5ee9e3e6c9f02f4a10d3bb4e42eed89c404bc48ca623209e5664c2dfdff922a0",
+      "scope": "planned"
+    },
+    {
+      "id": "PRIOR1",
+      "path": "正文/第006章_两个周远.md",
+      "sha256": "98af22aca9c6d72b5933f7114b9a1e0d1daeb18e73a5291531e9a9f06bcdd9fb",
+      "scope": "mixed"
+    },
+    {
+      "id": "PRIOR2",
+      "path": "正文/第009章_他们不是人.md",
+      "sha256": "5acdd74fd5c4e7e3e1c67434ab1ce922daa475c707e831fde9444d3009eb3e81",
+      "scope": "mixed"
+    },
+    {
+      "id": "PRIOR3",
+      "path": "正文/第057章_同一张脸.md",
+      "sha256": "b9c8676dc826f774b97559e5fe2fecbe70da05dfafc7d97e464f492658b972c5",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C058_1",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "向取表本人追问周远和陈屿两种名字的矛盾",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：向取表本人追问周远和陈屿两种名字的矛盾",
+      "voice_refs": [
+        {
+          "start_line": 23,
+          "end_line": 23,
+          "quote": "“谁收。”",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 23,
+          "end_line": 23,
+          "quote": "“谁收。”",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    },
+    {
+      "id": "C058_2",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "取得可见性反馈并在三点前回西口签字",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：取得可见性反馈并在三点前回西口签字",
+      "voice_refs": [
+        {
+          "start_line": 45,
+          "end_line": 45,
+          "quote": "“那你问我，是想让我填。”陈屿用表带敲了敲杯壁，一下。“我不填。名字你留着。表走不走，你比我清楚。”",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 45,
+          "end_line": 45,
+          "quote": "“那你问我，是想让我填。”陈屿用表带敲了敲杯壁，一下。“我不填。名字你留着。表走不走，你比我清楚。”",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    },
+    {
+      "id": "C058_3",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "保护来源并限制公开谈话的资料与权限",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：保护来源并限制公开谈话的资料与权限",
+      "voice_refs": [
+        {
+          "start_line": 49,
+          "end_line": 49,
+          "quote": "“要谈就谈这两处。”她说，“旧件回收，和一扇没让进的门。502的卡刷不开，家庭成员那道绿灯被人按掉了。`D4` 那句看不见已经发出去，基座按他们自己的复核收过。你再要结果，这桌不给。谁是周远，这桌也不判。”",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 49,
+          "end_line": 49,
+          "quote": "“要谈就谈这两处。”她说，“旧件回收，和一扇没让进的门。502的卡刷不开，家庭成员那道绿灯被人按掉了。`D4` 那句看不见已经发出去，基座按他们自己的复核收过。你再要结果，这桌不给。谁是周远，这桌也不判。”",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第058章原有直接受影响场景；其余旧场景不改变选择",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C058_1",
+        "C058_2",
+        "C058_3"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C058_1",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "镜辞在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：向取表本人追问周远和陈屿两种名字的矛盾",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：镜辞有006双周远证据和055对脸；陈屿009已知有两个周远；姜霁知道旧件与502资料。",
+            "wants": "镜辞本次自身目标：向取表本人追问周远和陈屿两种名字的矛盾。其他行动者的愿望不属于本人。",
+            "fears": "镜辞本场不愿承担：观察被利用与自己替人填判决都是风险。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：镜辞只能询问与留证；陈屿有拒答权但不全知；姜霁可阻断本场话题，不能认证两案的人。",
+            "no_plot": "无剧情需要：三人各有实务利益。镜辞可追问陈骁，但此刻对坐者就是使用过周远名的人，先问本人可核记录成立。",
+            "costs": "代价：不公开其他人的工号；陈屿拒答后留下疑问，镜辞不再换案寻求万能判决。",
+            "consequences": "后果：保留样本说法、拒供D4/502与追工单的下一步，双陈骁不被偷偷并入双周远。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "向取表本人追问周远和陈屿两种名字的矛盾",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 201,
+              "end_line": 201,
+              "quote": "周远转头看了一眼办公室墙上的排程板，脸上的血色慢慢退下去：“两点十三我在生产协调会。”",
+              "source_id": "PRIOR1",
+              "access": "memory",
+              "available_chapter": 6,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "宁州周远在电话中说明会议时间，镜辞留存两地对照；这是转述证据",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C058_2",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "陈屿在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：取得可见性反馈并在三点前回西口签字",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：镜辞有006双周远证据和055对脸；陈屿009已知有两个周远；姜霁知道旧件与502资料。",
+            "wants": "陈屿本次自身目标：取得可见性反馈并在三点前回西口签字。其他行动者的愿望不属于本人。",
+            "fears": "陈屿本场不愿承担：交出流程底细及误时等人的记录均不愿承担。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：镜辞只能询问与留证；陈屿有拒答权但不全知；姜霁可阻断本场话题，不能认证两案的人。",
+            "no_plot": "无剧情需要：三人各有实务利益。镜辞可追问陈骁，但此刻对坐者就是使用过周远名的人，先问本人可核记录成立。",
+            "costs": "代价：不公开其他人的工号；陈屿拒答后留下疑问，镜辞不再换案寻求万能判决。",
+            "consequences": "后果：保留样本说法、拒供D4/502与追工单的下一步，双陈骁不被偷偷并入双周远。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "取得可见性反馈并在三点前回西口签字",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 47,
+              "end_line": 47,
+              "quote": "灰衬衫抬眼：“你不是已经有两个周远了吗？”",
+              "source_id": "PRIOR2",
+              "access": "memory",
+              "available_chapter": 9,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本人此前说过双周远，不能由此推知他知道双陈骁的生活",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C058_3",
+          "order": 3,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "姜霁在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：保护来源并限制公开谈话的资料与权限",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：镜辞有006双周远证据和055对脸；陈屿009已知有两个周远；姜霁知道旧件与502资料。",
+            "wants": "姜霁本次自身目标：保护来源并限制公开谈话的资料与权限。其他行动者的愿望不属于本人。",
+            "fears": "姜霁本场不愿承担：私下交易会把观察者卷入他不能承诺的责任。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：镜辞只能询问与留证；陈屿有拒答权但不全知；姜霁可阻断本场话题，不能认证两案的人。",
+            "no_plot": "无剧情需要：三人各有实务利益。镜辞可追问陈骁，但此刻对坐者就是使用过周远名的人，先问本人可核记录成立。",
+            "costs": "代价：不公开其他人的工号；陈屿拒答后留下疑问，镜辞不再换案寻求万能判决。",
+            "consequences": "后果：保留样本说法、拒供D4/502与追工单的下一步，双陈骁不被偷偷并入双周远。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "保护来源并限制公开谈话的资料与权限",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 77,
+              "end_line": 77,
+              "quote": "姜霁把文件夹抱紧。“我坐另一张桌子。不进你们的对话，也不离开那家店。”",
+              "source_id": "PRIOR3",
+              "access": "memory",
+              "available_chapter": 57,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本人此前明确公开接触边界，未取得密室信息",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "background_only": [],
+    "basis": "历史局部修订仅重评直接受影响选择；以上列齐改动涉及者，整章回读保留其他行动、因果和声线。不冒称旧稿写作时已过七关。"
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex /root solo",
+    "method": "原文、对应细纲、独立事实底表及直接证据章逐项核对；本轮写作与回读分阶段执行",
+    "basis": "知道：镜辞有006双周远证据和055对脸；陈屿009已知有两个周远；姜霁知道旧件与502资料。；后果：保留样本说法、拒供D4/502与追工单的下一步，双陈骁不被偷偷并入双周远。。不向角色转移作者秘密，不追加主角强行胜利。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  }
+}

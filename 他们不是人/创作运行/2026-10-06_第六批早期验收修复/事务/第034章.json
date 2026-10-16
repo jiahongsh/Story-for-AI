@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 34,
+  "chapter_title": "儿子回来了",
+  "expected_state_revision": 136,
+  "delta": {
+    "result": "本地陈骁真实到门，首见极浅接缝；本人同意再次停凭证。",
+    "character_changes": [],
+    "foreshadow_changes": [],
+    "timeline_events": [
+      {
+        "action": "upsert",
+        "id": "E034",
+        "story_time": "本地陈骁到502门前时",
+        "objective_fact": "本地陈骁真实到门，首见极浅接缝；本人同意再次停凭证。",
+        "reader_knowledge": "镜辞已不立即判人，仍容易把关系节奏读成对象异常；没有完整来历答案。",
+        "reveal_status": "已揭示",
+        "reveal_chapter": 34,
+        "characters": [
+          "镜辞",
+          "陈骁",
+          "陈启明"
+        ]
+      }
+    ],
+    "fact_changes": [],
+    "constraints": [],
+    "next_chapter_commitments": [],
+    "retired_characters": [],
+    "retired_context_items": [],
+    "continuity_changes": []
+  },
+  "context": {
+    "position": {
+      "scene": "旧市场钟表行",
+      "story_time": "接修后当日午前",
+      "volume": "第一卷",
+      "volume_start_chapter": 1
+    },
+    "long_term_constraints": [
+      "恒准是第019章问过并回访的公司；恒泰设施是工单和公示上的名字。两家不能写成同一家。",
+      "不认证原主，不给当前存在起名，不解释02:17的来源。",
+      "接缝只证明身份错位。未见接缝不可反向认证。",
+      "100-103是锁定活动正文。104继续冻结。不以新稿覆盖锁定的100-103。",
+      "057再看未见且不可反用。十五点零二起不再提供通过或看不见。看的动作会被读到。送到店里修表的人只修表，不写通过或不通过。",
+      "时间挨着不等于因果。发现点位后先让别人留公开页面，再决定是否亲自到场。"
+    ],
+    "active_character_names": [
+      "镜辞",
+      "姜霁",
+      "张岚",
+      "老李",
+      "守钟人",
+      "周衡"
+    ],
+    "continuity_risks": [
+      "旧追踪曾把001-100写成已全部重写。活动正文以001-099加锁定的100-103为准。",
+      "左眉浅疤和弯曲小指是055对照市场监控才写下的，009正文没有这两句。",
+      "安平里活动室复核已做，页面在两点十七改回正常。502门链仍在，陈启明未改口。两个陈骁未被认证。",
+      "南栏假异常已被拒绝。D4私人本仍写极淡残余，公共口径是看不见。",
+      "03南栏只是老码头03点从未进工单的那段旧护栏，不是新地点。"
+    ]
+  },
+  "character_snapshots": {}
+}

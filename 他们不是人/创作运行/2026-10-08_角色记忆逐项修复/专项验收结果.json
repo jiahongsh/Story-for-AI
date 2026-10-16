@@ -1,0 +1,31 @@
+{
+  "status": "pass",
+  "state_revision": 232,
+  "last_committed_chapter": 99,
+  "changed_baseline_files": [
+    "追踪/修改影响/active.approved.json",
+    "追踪/修改影响/active.json"
+  ],
+  "prose_and_canon_unchanged": true,
+  "participation_coverage": {
+    "猫眼": {
+      "nodes": 25,
+      "official_participation_events": 11,
+      "missing": 0
+    },
+    "唐宁": {
+      "nodes": 5,
+      "official_participation_events": 2,
+      "missing": 0
+    }
+  },
+  "exact_voice_quotes": {
+    "唐宁": 4,
+    "老李": 5,
+    "张岚": 7,
+    "猫眼": 4
+  },
+  "stale_source_rejection": "pass",
+  "local_card_links": "pass",
+  "mode": "solo/direct"
+}

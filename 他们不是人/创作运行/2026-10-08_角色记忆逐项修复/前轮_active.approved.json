@@ -1,0 +1,8 @@
+{
+  "approved_at": "2026-10-08T04:37:42Z",
+  "change_id": "coldread-fixes-20261007",
+  "manifest_sha256": "40c82efbc146b43fa8f9bd98fb6b5882603d2fda2e6480f30f4e7f7b1f3eded8",
+  "schema_version": 1,
+  "status": "PASS",
+  "tracking_action": "commit"
+}

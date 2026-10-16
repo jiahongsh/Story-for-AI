@@ -1,0 +1,18 @@
+{
+  "language_gate.js": {
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\补录051\\候选_正文_第051章.md\n",
+    "stderr": ""
+  },
+  "check-style-hygiene.js": {
+    "stdout": "PASS: style hygiene clean (1 file)\n",
+    "stderr": ""
+  },
+  "check-ai-patterns.js": {
+    "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\补录051\\候选_正文_第051章.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 45/85 段（52.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (45/85 (52.9%))\n",
+    "stderr": ""
+  },
+  "check-degeneration.js": {
+    "stdout": "",
+    "stderr": ""
+  }
+}

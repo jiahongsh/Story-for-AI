@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 94,
+  "target": "正文/第094章_十一份.md",
+  "accepted_prose_sha256": "ceb94a77c0582200e385584df7eb5a73cd9417b73b96bf6e54d16b39de4d6d14",
+  "candidate_id": "C20261005-161130",
+  "candidate_manifest": "追踪/候选章/第094章/C20261005-161130/manifest.json",
+  "context_digest": "066bba0a0ad6959781d8dadc1b405c438d67ffd10b533010e313ac0e83b6e41c",
+  "state_revision_before": 37,
+  "state_revision_after": 103,
+  "accepted_at": "2026-10-05T08:12:50Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第094章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T03:35:03Z",
+      "reason": "用户授权按综合方案修复第一批P0；既有正文历史修订，章节位置和锁定接口保持",
+      "old_sha256": "9cc1ad275bfa7d11b811f943c9159cae4312b8be6c166e3fc1ba6054ac05e405",
+      "new_sha256": "911ed882e0898bba6b087cb84fdcc120777e6fa234eb1c81cf37a83b4a03f26c",
+      "state_revision": 50,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T06:16:04Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "911ed882e0898bba6b087cb84fdcc120777e6fa234eb1c81cf37a83b4a03f26c",
+      "new_sha256": "ceb94a77c0582200e385584df7eb5a73cd9417b73b96bf6e54d16b39de4d6d14",
+      "state_revision": 103,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T08:13:21Z"
+}

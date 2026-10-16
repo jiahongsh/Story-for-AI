@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 66,
+  "target": "正文/第066章_空白页.md",
+  "accepted_prose_sha256": "ecda72f240e143196e5ccd19f347f9699ffc2b92891e3d3ac2669c0dcbcba84b",
+  "candidate_id": "C20261004-215232",
+  "candidate_manifest": "追踪/候选章/第066章/C20261004-215232/manifest.json",
+  "context_digest": "6d704d22227bd059c032a281ce52dd5d2c9c9c438fe70abd8cf27252728b79ed",
+  "state_revision_before": 9,
+  "state_revision_after": 249,
+  "accepted_at": "2026-10-04T13:58:33Z",
+  "approval_mode": "review",
+  "approval_note": "用户明确回复定稿，接纳第066章候选。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T06:01:09Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "d9e49d41fb221e9beb9082ffbda23812b819e80315307fd926ed4de83d8dbf5f",
+      "new_sha256": "9d8d2217e6cbeb6aa65569befca60986fc9357ccd01807e192e9641c4f6dce2a",
+      "state_revision": 87,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T12:02:29Z",
+      "reason": "冷读清单限定修复，通过语义及四门检查",
+      "old_sha256": "9d8d2217e6cbeb6aa65569befca60986fc9357ccd01807e192e9641c4f6dce2a",
+      "new_sha256": "80fa298b91ba30f0627932f2dfd81ea192184da43d93d930a812e1166d255935",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T04:17:09Z",
+      "reason": "相对日句精确到明日18点，不改变预约",
+      "old_sha256": "80fa298b91ba30f0627932f2dfd81ea192184da43d93d930a812e1166d255935",
+      "new_sha256": "8c99c7e91e0f4aee6ed84985fc0659a2cfa3af51c3048fc08807fc348a375bab",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T07:25:29Z",
+      "reason": "用户确认C01—R10删减；无新增剧情；已完成串行修订和来源复核",
+      "old_sha256": "8c99c7e91e0f4aee6ed84985fc0659a2cfa3af51c3048fc08807fc348a375bab",
+      "new_sha256": "ecda72f240e143196e5ccd19f347f9699ffc2b92891e3d3ac2669c0dcbcba84b",
+      "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-04T13:59:17Z"
+}

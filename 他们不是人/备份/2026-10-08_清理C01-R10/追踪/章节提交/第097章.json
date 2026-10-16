@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 97,
+  "target": "正文/第097章_前三年.md",
+  "accepted_prose_sha256": "7a936d3f7b62ea90a5adcff5fa3236b15d1472f708b07f718a718eeead179502",
+  "candidate_id": "C20261005-161822",
+  "candidate_manifest": "追踪/候选章/第097章/C20261005-161822/manifest.json",
+  "context_digest": "39baea542695fcd99d2269ed6f50c465f275b2fc73c760cb4adc10c0ba1a2bec",
+  "state_revision_before": 40,
+  "state_revision_after": 158,
+  "accepted_at": "2026-10-05T08:19:15Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第097章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T12:20:15Z",
+      "reason": "用户授权逐步修正001—050与096—099详细验收问题",
+      "old_sha256": "a00677a6fc642ce84cbd2deb25a10d8742cd55317f6522c06579c82f4f4f1126",
+      "new_sha256": "7276ea680230b63a0c9a6808bb1d4bc3f1e37d39011233d55f534b1be1673bce",
+      "state_revision": 157,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T12:35:33Z",
+      "reason": "逐章验收后清理重复解释及错字",
+      "old_sha256": "7276ea680230b63a0c9a6808bb1d4bc3f1e37d39011233d55f534b1be1673bce",
+      "new_sha256": "7a936d3f7b62ea90a5adcff5fa3236b15d1472f708b07f718a718eeead179502",
+      "state_revision": 158,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T08:19:38Z"
+}

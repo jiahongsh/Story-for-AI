@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 73,
+  "target": "正文/第073章_又到两点十七.md",
+  "accepted_prose_sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
+  "candidate_id": "C20261005-133242",
+  "candidate_manifest": "追踪/候选章/第073章/C20261005-133242/manifest.json",
+  "context_digest": "2bde7316305c41924f878a525a9dca22fd4c53ffd16dac85e7be4b0e6e3325b5",
+  "state_revision_before": 16,
+  "state_revision_after": 249,
+  "accepted_at": "2026-10-05T05:40:04Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第073章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T03:56:47Z",
+      "reason": "用户授权继续修综合方案下一批；时间与实际现金连续性修订",
+      "old_sha256": "a573b45625d997f206dd35e81c2ae9e7aac4a128f873c141c50b7f060b74eacd",
+      "new_sha256": "321f03fde6b1fdc8e98a921f3a8907eedd7414aa03e3db85594c8e5f60ce2201",
+      "state_revision": 63,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T06:01:13Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "321f03fde6b1fdc8e98a921f3a8907eedd7414aa03e3db85594c8e5f60ce2201",
+      "new_sha256": "017012e9c190443fbed8bbe4d86a3190193ba88750b0ed0ab463c85a426bcccb",
+      "state_revision": 87,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T05:26:38Z",
+      "reason": "第七批限定修正与重复尾声收尾",
+      "old_sha256": "017012e9c190443fbed8bbe4d86a3190193ba88750b0ed0ab463c85a426bcccb",
+      "new_sha256": "14ae29dbe4da6b6a7e0050d0c22659356fe85fbc69e1e8cafc4bbfe846fcf18d",
+      "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T12:02:31Z",
+      "reason": "冷读清单限定修复，通过语义及四门检查",
+      "old_sha256": "14ae29dbe4da6b6a7e0050d0c22659356fe85fbc69e1e8cafc4bbfe846fcf18d",
+      "new_sha256": "375f512d420fa878820bfd5e75802a5ff157cb47561f043f546d62bb51e96df4",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T07:25:30Z",
+      "reason": "用户确认C01—R10删减；无新增剧情；已完成串行修订和来源复核",
+      "old_sha256": "375f512d420fa878820bfd5e75802a5ff157cb47561f043f546d62bb51e96df4",
+      "new_sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
+      "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T05:40:25Z"
+}

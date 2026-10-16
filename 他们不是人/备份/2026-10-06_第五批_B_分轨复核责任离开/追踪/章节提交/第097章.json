@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 97,
+  "target": "正文/第097章_前三年.md",
+  "accepted_prose_sha256": "a00677a6fc642ce84cbd2deb25a10d8742cd55317f6522c06579c82f4f4f1126",
+  "candidate_id": "C20261005-161822",
+  "candidate_manifest": "追踪/候选章/第097章/C20261005-161822/manifest.json",
+  "context_digest": "39baea542695fcd99d2269ed6f50c465f275b2fc73c760cb4adc10c0ba1a2bec",
+  "state_revision_before": 40,
+  "state_revision_after": 41,
+  "accepted_at": "2026-10-05T08:19:15Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第097章按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-05T08:19:38Z"
+}

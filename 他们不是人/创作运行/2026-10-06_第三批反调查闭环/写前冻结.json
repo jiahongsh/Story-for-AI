@@ -1,0 +1,25 @@
+{
+  "mode": "historical-local-revision-manual",
+  "state_revision": 63,
+  "status": "manual_pass",
+  "reviewer": "Codex /root solo/direct",
+  "source_hashes": {
+    "正文/第055章_没处理过.md": "f8abd51d94b6051561f9b30c6ac2c50b09300ed1a633f7d72d85d6744f2ce585",
+    "大纲/细纲_第055章.md": "35facfdcde5934572257e093dbf0d3c9e09d27d9fb2bd8f72dbfc824e18d50e4",
+    "正文/第061章_来修表的人.md": "ca3557ed14ab027429b611a7672059d1576f2b7ea0df52dc78d0afad41e638a7",
+    "大纲/细纲_第061章.md": "b3c50e30656ecc6e680631ca2ff895d9b7f2f32e0afc25e627f23b546189ca59",
+    "正文/第062章_推荐店.md": "b46fdc09f6f32f0a26655d24c8dd25fe424a8515171f0baf230797b01ada1188",
+    "大纲/细纲_第062章.md": "8c1d63bb81193df2a57ff06de7c440b009c22b409b937c38d88b8d05a2a42eb4",
+    "正文/第065章_不知道不是通过.md": "f42bc69300b68a0a99f4cfa1bcb15422ba0b6b38a19589835a3aaa06ba422ebd",
+    "大纲/细纲_第065章.md": "161a9b11e5e06fd5b2acffe812aee56663843dd2e95339cb832ff416f5247500",
+    "正文/第075章_不看也收尾.md": "24678f890e1e58afa607825281f70fba31691cfa0020fd5d07875e73ee726cfe",
+    "大纲/细纲_第075章.md": "e094aa4292230fa1e628844aaf113d76ca58e3ff736bc587c55cd52dd85379aa",
+    "正文/第100章_第一道缝.md": "16ac6389a05fb4813a0474a000f6c293213bfa6f104e3caa25f79812c776bd04",
+    "正文/第101章_死人刷了门禁.md": "14f6a0a039174f9e4b2190d1bcba40d9388743caabc457d992ec91434a1b6787",
+    "正文/第102章_十一个月从哪来的.md": "47264cad6fba65c2a3d6966cb66056410cc1a4ec52f7985ad37bd1f5e10573a8",
+    "正文/第103章_他早就在这里.md": "fb3c6a2f07e32c048b8488222a066ba003f58d432a0ff301128d48cfda7df06e"
+  },
+  "decision_path": "写前人物七关.md",
+  "decision_sha256": "14002b08acd79cc779fa80f77df5e9947b9aabbc24a64ffc4848a9856d0cb37a",
+  "limit": "仅受影响选择；不冒称新章world_gate机器接纳或旧章原写作许可"
+}

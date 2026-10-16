@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 58,
+  "target": "正文/第058章_你为什么不躲.md",
+  "accepted_prose_sha256": "f7691ba6530e7b56b392f3dd7e2f2d9c617e61ff8826087382c52f9fd7d95727",
+  "candidate_id": "C20261004-112730",
+  "candidate_manifest": "追踪/候选章/第058章/C20261004-112730/manifest.json",
+  "context_digest": "fa487cd9806c5d341f9df6e31836630e972735a2243a1efe1fe7163a3fb6676a",
+  "state_revision_before": 1,
+  "state_revision_after": 77,
+  "accepted_at": "2026-10-04T03:27:48Z",
+  "approval_mode": "review",
+  "approval_note": "用户明确回复接受",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T03:34:50Z",
+      "reason": "用户授权按综合方案修复第一批P0；既有正文历史修订，章节位置和锁定接口保持",
+      "old_sha256": "aeb692b97c1de3dc6fb48fda3531a9033d053c0300f715c5568e0a084f9c9b62",
+      "new_sha256": "f3965159fac897cdc3448d121fb4fd739511fb3b253795d0d547e37c2ebfdcaf",
+      "state_revision": 50,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T03:35:01Z",
+      "reason": "用户授权按综合方案修复第一批P0；既有正文历史修订，章节位置和锁定接口保持",
+      "old_sha256": "f3965159fac897cdc3448d121fb4fd739511fb3b253795d0d547e37c2ebfdcaf",
+      "new_sha256": "f3965159fac897cdc3448d121fb4fd739511fb3b253795d0d547e37c2ebfdcaf",
+      "state_revision": 50,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T05:52:52Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "f3965159fac897cdc3448d121fb4fd739511fb3b253795d0d547e37c2ebfdcaf",
+      "new_sha256": "f7691ba6530e7b56b392f3dd7e2f2d9c617e61ff8826087382c52f9fd7d95727",
+      "state_revision": 77,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-04T03:27:49Z"
+}

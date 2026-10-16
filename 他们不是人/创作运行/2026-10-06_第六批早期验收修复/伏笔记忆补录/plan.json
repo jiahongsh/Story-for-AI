@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "change_id": "sixth-foreshadow-memory-20261007",
+  "summary": "来源绑定补录早期伏笔阶段，明确CORE/TRACK映射和历史知情边界；055工牌改为五年前合影中的胸牌",
+  "semantic_change": true,
+  "changed_files": [
+    "大纲/伏笔总表.md",
+    "正文/第055章_没处理过.md"
+  ],
+  "affected_entities": [
+    "镜辞",
+    "猫眼",
+    "当前存在",
+    "陈屿"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    9,
+    11,
+    17,
+    19,
+    21,
+    32,
+    33,
+    38,
+    42,
+    45,
+    46,
+    50,
+    55,
+    56,
+    96,
+    97,
+    98
+  ]
+}

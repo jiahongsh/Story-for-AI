@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 59,
+  "target": "正文/第059章_工单跟着我走.md",
+  "accepted_prose_sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
+  "candidate_id": "C20261004-113959",
+  "candidate_manifest": "追踪/候选章/第059章/C20261004-113959/manifest.json",
+  "context_digest": "402343d4175f031a71b12e7f628b7d253dea25828ecc3310f7e806e1e960f922",
+  "state_revision_before": 2,
+  "state_revision_after": 249,
+  "accepted_at": "2026-10-04T03:40:19Z",
+  "approval_mode": "review",
+  "approval_note": "用户明确回复接受",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-07T05:26:25Z",
+      "reason": "第七批限定修正与重复尾声收尾",
+      "old_sha256": "0af82ce094f75bb4c2c2204e9bf2543f321ce93244daaafc6509579774755512",
+      "new_sha256": "52aec9bccd9210ac3673cd08022e17ee1540d6b0d065960b33ea7004623ea8d4",
+      "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T12:02:28Z",
+      "reason": "冷读清单限定修复，通过语义及四门检查",
+      "old_sha256": "52aec9bccd9210ac3673cd08022e17ee1540d6b0d065960b33ea7004623ea8d4",
+      "new_sha256": "337f98f916e2a9f69b7f0b2e6565912c6bc979b9635a7fbcb0d28af48b4d69c0",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T04:13:23Z",
+      "reason": "顺读合并裴亮重复离场，事件和11元账不变",
+      "old_sha256": "337f98f916e2a9f69b7f0b2e6565912c6bc979b9635a7fbcb0d28af48b4d69c0",
+      "new_sha256": "b342c81f3e9475077ee3ea449f22b04ed88712bdcc4f43dfcc8b4b8664dfe87a",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T04:14:09Z",
+      "reason": "时长证据已在对话落地，压缩重复旁白，保留等待自述来源",
+      "old_sha256": "b342c81f3e9475077ee3ea449f22b04ed88712bdcc4f43dfcc8b4b8664dfe87a",
+      "new_sha256": "c36a6fd382a1942fcfad7c4812d60ed1f00564f4a3f40d0033d445e195616ddf",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-08T07:25:26Z",
+      "reason": "用户确认C01—R10删减；无新增剧情；已完成串行修订和来源复核",
+      "old_sha256": "c36a6fd382a1942fcfad7c4812d60ed1f00564f4a3f40d0033d445e195616ddf",
+      "new_sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
+      "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-04T03:40:19Z"
+}

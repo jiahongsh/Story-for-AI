@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 80,
+  "target": "正文/第080章_不能只看着.md",
+  "accepted_prose_sha256": "a0ee402ff3ee58338f9112e5444382b363f9984488b1ebf0181a1b594428c111",
+  "candidate_id": "C20261005-145301",
+  "candidate_manifest": "追踪/候选章/第080章/C20261005-145301/manifest.json",
+  "context_digest": "a0230e4eed65a076316d24c97cba32db1fb263e9bad5e917feed5c51c99563b1",
+  "state_revision_before": 23,
+  "state_revision_after": 103,
+  "accepted_at": "2026-10-05T06:59:02Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第080章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T06:15:50Z",
+      "reason": "用户授权依次完成D4与两段修订",
+      "old_sha256": "ee3d45c35b32ff9dea4baeea18b8b99a80aba829ec85a33a58118db3cf151211",
+      "new_sha256": "a0ee402ff3ee58338f9112e5444382b363f9984488b1ebf0181a1b594428c111",
+      "state_revision": 103,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T06:59:34Z"
+}

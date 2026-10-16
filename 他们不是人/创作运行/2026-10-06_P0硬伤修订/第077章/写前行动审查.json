@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 77,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "4b2940695ac61a9cef0fed79e15d7ba1052794e201e6804d0b3abe11ec05dcb5",
+      "state_revision": 43,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "ORIGINAL",
+      "path": "创作运行/2026-10-06_P0硬伤修订/第077章/original.md",
+      "sha256": "96b4a890a97dabd5004c1d7180f3a4f6265d083e34a8a727160d26e67e7bbbc3",
+      "scope": "mixed"
+    },
+    {
+      "id": "AUDIT",
+      "path": "创作运行/2026-10-06_P0硬伤修订/写前七关与事实底表.md",
+      "sha256": "5ee9e3e6c9f02f4a10d3bb4e42eed89c404bc48ca623209e5664c2dfdff922a0",
+      "scope": "planned"
+    },
+    {
+      "id": "PRIOR2",
+      "path": "正文/第001章_钟表行的客人.md",
+      "sha256": "99ad868fc97b671569900cc3e143493bac096412f04d120b941a02601708ed85",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C077_1",
+      "name": "唐宁",
+      "protagonist": false,
+      "own_goal": "说清自己亲历的发烧并保留不认人的决定",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：说清自己亲历的发烧并保留不认人的决定",
+      "voice_refs": [
+        {
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "唐宁把票根收好。“我讲的是我陪过的那次。现在这个人是谁，我昨天没想通，今天也不想通。话就这些。四块是我的。你们别送。”",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "唐宁把票根收好。“我讲的是我陪过的那次。现在这个人是谁，我昨天没想通，今天也不想通。话就这些。四块是我的。你们别送。”",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    },
+    {
+      "id": "C077_2",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "核对旧工作底账与自己不知道的关系部分",
+      "without_protagonist": "仍处理本人日常职责和原有关系，不因镜头停留免除责任：核对旧工作底账与自己不知道的关系部分",
+      "voice_refs": [
+        {
+          "start_line": 33,
+          "end_line": 33,
+          "quote": "镜辞的笔尖顿住。顿住的位置在“可靠”两个字旁边。他想写自己愿意扛。写到一半，手心潮了。潮完他把后半句补上：别人会因此不来找。两句都留。可靠没有被划掉。不来找也没有被划掉。他没写长篇。没把发烧写成自己的错。烧是病。瞒是当时的选择。选择的后果是他那天觉得顺。",
+          "source_id": "ORIGINAL"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 33,
+          "end_line": 33,
+          "quote": "镜辞的笔尖顿住。顿住的位置在“可靠”两个字旁边。他想写自己愿意扛。写到一半，手心潮了。潮完他把后半句补上：别人会因此不来找。两句都留。可靠没有被划掉。不来找也没有被划掉。他没写长篇。没把发烧写成自己的错。烧是病。瞒是当时的选择。选择的后果是他那天觉得顺。",
+          "source_id": "ORIGINAL"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第077章原有直接受影响场景；其余旧场景不改变选择",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C077_1",
+        "C077_2"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C077_1",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "唐宁在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：说清自己亲历的发烧并保留不认人的决定",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：唐宁亲历原芽发烧；镜辞只记得按时完成普通送表与婚礼表。沈竹当时已失踪。",
+            "wants": "唐宁本次自身目标：说清自己亲历的发烧并保留不认人的决定。其他行动者的愿望不属于本人。",
+            "fears": "唐宁本场不愿承担：原芽旧事被拿去要求她接纳当前存在。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：唐宁能证亲历，镜辞能查账；复制记忆不能代替独立证人，账本不能证明原芽没发烧。",
+            "no_plot": "无剧情需要：他们仍会分别保留亲历与底账；也可不翻账，但他要核对当日工作是否真的牵制了通知决定。",
+            "costs": "代价：唐宁拒绝送行和认人；镜辞承认自己当日未知，不把病揽成自己的罪。",
+            "consequences": "后果：普通委托照样支撑关系副作用；沈竹失踪时间不破，守钟人不听见无人说出的名字。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "说清自己亲历的发烧并保留不认人的决定",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "唐宁把票根收好。“我讲的是我陪过的那次。现在这个人是谁，我昨天没想通，今天也不想通。话就这些。四块是我的。你们别送。”",
+              "source_id": "ORIGINAL",
+              "access": "memory",
+              "available_chapter": 0,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "高二时本人亲自陪芽就诊，发生在第一章之前；本章只是转述自己的旧经历，不获知镜辞当年的底账",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C077_2",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "镜辞在原场景中保持自身选择，依事实底表修正直接受影响的记录或说法：核对旧工作底账与自己不知道的关系部分",
+          "gates": {
+            "knows": "只引用本人此前亲历、持有或说出的部分，不授予其他人物私密认知。知道：唐宁亲历原芽发烧；镜辞只记得按时完成普通送表与婚礼表。沈竹当时已失踪。",
+            "wants": "镜辞本次自身目标：核对旧工作底账与自己不知道的关系部分。其他行动者的愿望不属于本人。",
+            "fears": "镜辞本场不愿承担：可靠导致亲近者避开自己而自己毫不知情。依据原话与既有选择，不新增旧经历。",
+            "capability": "能力：唐宁能证亲历，镜辞能查账；复制记忆不能代替独立证人，账本不能证明原芽没发烧。",
+            "no_plot": "无剧情需要：他们仍会分别保留亲历与底账；也可不翻账，但他要核对当日工作是否真的牵制了通知决定。",
+            "costs": "代价：唐宁拒绝送行和认人；镜辞承认自己当日未知，不把病揽成自己的罪。",
+            "consequences": "后果：普通委托照样支撑关系副作用；沈竹失踪时间不破，守钟人不听见无人说出的名字。"
+          },
+          "capacity": {
+            "resources": [
+              "原场景已有资料、记忆、工作权限及普通通信"
+            ],
+            "permission": "仅执行本章原有权限内的核对、陈述与拒绝，不新增身份认证职权",
+            "limits": "各角色只使用既有渠道；本轮不增加能力、内部后台或跨城到场条件",
+            "evidence_refs": [
+              "ORIGINAL",
+              "AUDIT"
+            ]
+          },
+          "outcome": {
+            "intent": "核对旧工作底账与自己不知道的关系部分",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝回答，材料可以只支持过去，未决问题保持未决不强填结论",
+            "opposition": "他人仍有自己的目标和边界，维护与日常生活不会因主角的愿望自动配合"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 39,
+              "end_line": 39,
+              "quote": "最里面躺着一只旧怀表，银灰色外壳已经磨暗，秒针卡在十一和十二之间。沈竹失踪七年，镜辞就断断续续修了它七年，修好以后能走，走着走着又会停，最长的一次也只撑了十一天。",
+              "source_id": "PRIOR2",
+              "access": "memory",
+              "available_chapter": 1,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本人长期修表与原有亲历记忆；本项不包括刚被唐宁告知的发烧证词",
+              "boundary": "只支持该人物原有声线、目的与本场选择，具体纠错依据另在事实底表逐项溯源；不支持原主生死或后台秘密。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "background_only": [],
+    "basis": "历史局部修订仅重评直接受影响选择；以上列齐改动涉及者，整章回读保留其他行动、因果和声线。不冒称旧稿写作时已过七关。"
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex /root solo",
+    "method": "原文、对应细纲、独立事实底表及直接证据章逐项核对；本轮写作与回读分阶段执行",
+    "basis": "知道：唐宁亲历原芽发烧；镜辞只记得按时完成普通送表与婚礼表。沈竹当时已失踪。；后果：普通委托照样支撑关系副作用；沈竹失踪时间不破，守钟人不听见无人说出的名字。。不向角色转移作者秘密，不追加主角强行胜利。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  }
+}
