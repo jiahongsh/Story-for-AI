@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 1,
+  "binding": {"tracking": null, "tracking_tool": null},
+  "sources": [],
+  "actors": [
+    {"id": "ACTOR_1", "name": "", "protagonist": false, "own_goal": "", "without_protagonist": "",
+     "voice_refs": [{"source_id": "", "start_line": 1, "end_line": 1, "quote": ""}],
+     "timeline_refs": [{"source_id": "", "start_line": 1, "end_line": 1, "quote": ""}]}
+  ],
+  "scenes": [
+    {
+      "id": "SCENE_1", "order": 1, "story_time": {"label": "", "tick": 1},
+      "actors_onstage": ["ACTOR_1"], "actors_offstage": [],
+      "actions": [
+        {
+          "id": "ACTION_1", "actor_id": "ACTOR_1", "order": 1, "story_tick": 1,
+          "kind": "action", "choice": "",
+          "gates": {"knows": "", "wants": "", "fears": "", "capability": "", "no_plot": "", "costs": "", "consequences": ""},
+          "knowledge_refs": [
+            {"source_id": "", "start_line": 1, "end_line": 1, "quote": "", "access": "memory",
+             "available_chapter": 0, "available_order": 0, "producer_action_id": null, "author_only": false,
+             "certainty": "unknown", "acquisition": "", "boundary": ""}
+          ],
+          "capacity": {"resources": [], "permission": "", "limits": "", "evidence_refs": []},
+          "outcome": {"intent": "", "success_guaranteed": false, "failure_path": "", "opposition": ""}
+        }
+      ]
+    }
+  ],
+  "coverage": {"all_actors_reviewed": false, "all_scenes_reviewed": false, "basis": "", "background_only": []},
+  "manual_review": {
+    "status": "unreviewed", "reviewer": "", "method": "", "basis": "",
+    "checks": {"seven_gates": "unreviewed", "knowledge_bounds": "unreviewed", "capacity_permissions": "unreviewed",
+      "autonomy": "unreviewed", "constraints": "unreviewed", "consequences": "unreviewed", "voice": "unreviewed",
+      "actor_scene_coverage": "unreviewed", "timeline": "unreviewed"}
+  },
+  "postwrite": {
+    "prewrite_packet": {"path": "", "sha256": ""}, "candidate": {"path": "", "sha256": ""},
+    "scene_results": [], "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed", "reviewer": "", "method": "", "basis": "",
+      "checks": {"actual_coverage": "unreviewed", "causality": "unreviewed", "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed", "consequences": "unreviewed", "foreshadow": "unreviewed"}
+    }
+  }
+}

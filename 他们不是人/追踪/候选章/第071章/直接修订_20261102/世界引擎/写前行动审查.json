@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 71,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "c55a82d2b9a0694477df4822fd66e3653c1b39ab8998f62ffacbb7194bf960e0",
+      "state_revision": 266,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第071章_复核日.md",
+      "sha256": "f32152a1009bc503ca09d0d29b93ad1d656fd11aee7c5593f36fc97d80e63f49",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第070章_先喝汤是谁教的.md",
+      "sha256": "09ae217d41ce41d458684f17bad4c6b051bd7242992421085fc4d5285cdbf111",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第071章.md",
+      "sha256": "acce99f34afe8d6e03ec403a2dc7c9bc4a6d48cb350f87a1655d56d2ad45ec5c",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第071章/写前依据.md",
+      "sha256": "b1a0d0c4f4486e8715ea3407a5662a9a3dce4730837ba024cc30a55115e4ec0f",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第050章_你不是我儿子.md",
+      "sha256": "23b531443d2a7e811437b89d0ee0450f6eebf05352b0c28134b0d8d19ad18f41",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "宁州陈骁",
+      "name": "宁州陈骁",
+      "protagonist": false,
+      "own_goal": "在不放弃家门争议的同时保住厂里工作，自己处理与父亲的关系。",
+      "without_protagonist": "可不接视频，但工单牵涉本人通行，明确拒代开比任他人解释更符合自身利益。",
+      "voice_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "视频接通时，宁州陈骁坐在厂门口的台阶上，背后有人打卡。他先看门链，再看镜头。“别替我把门打开。钥匙我不要。我人在厂里。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "视频接通时，宁州陈骁坐在厂门口的台阶上，背后有人打卡。他先看门链，再看镜头。“别替我把门打开。钥匙我不要。我人在厂里。”",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "八点四十六后视频接通时",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "宁州陈骁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "宁州陈骁",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "从厂门口参与视频，仍拒绝让人代开父亲家门",
+          "gates": {
+            "knows": "此前亲历父亲拒绝和门口争执，自己仍要处理家庭关系；今天视频只拍活动室，不见楼上门链。",
+            "wants": "在不放弃家门争议的同时保住厂里工作，自己处理与父亲的关系。",
+            "fears": "怕别人代为开门扩大冲突，也怕再丢工作收入。",
+            "capability": "有手机可视频，能看活动室；人在宁州不能查看502屋内或取钥匙。",
+            "no_plot": "可不接视频，但工单牵涉本人通行，明确拒代开比任他人解释更符合自身利益。",
+            "costs": "继续留厂而非来回奔波，接受争议暂悬，不能强求老人改口。",
+            "consequences": "杜经理保留空结论，镜辞不借远程画面认证身份，父亲仍可拒绝开门。"
+          },
+          "capacity": {
+            "resources": [
+              "本人工厂位置、手机视频、既有家庭争议经历"
+            ],
+            "permission": "有手机可视频，能看活动室；人在宁州不能查看502屋内或取钥匙。",
+            "limits": "继续留厂而非来回奔波，接受争议暂悬，不能强求老人改口。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "在不放弃家门争议的同时保住厂里工作，自己处理与父亲的关系。",
+            "success_guaranteed": false,
+            "failure_path": "继续留厂而非来回奔波，接受争议暂悬，不能强求老人改口。",
+            "opposition": "杜经理保留空结论，镜辞不借远程画面认证身份，父亲仍可拒绝开门。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 37,
+              "end_line": 37,
+              "quote": "宁州陈骁在屏幕那端说：“也别替我把门打开。我回来以后，进不进这扇门，我自己跟他吵。”",
+              "source_id": "SRC5",
+              "access": "memory",
+              "available_chapter": 50,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "此前亲历父亲拒绝和门口争执，自己仍要处理家庭关系；今天视频只拍活动室，不见楼上门链。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "收紧远程可见范围，修正猫眼指称并删除无来源的钥匙支段；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

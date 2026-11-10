@@ -1,0 +1,36 @@
+{
+  "contract_version": "1.0",
+  "genre_id": "tower-climber",
+  "display_name": "爬塔升级",
+  "aliases": ["爬塔", "爬塔升级", "无限塔", "试炼塔", "Tower Climber"],
+  "markets": ["海外长篇", "中文长篇"],
+  "languages": ["zh", "en"],
+  "core_promise": "用规则各异的楼层构成连续剧情单元，让探索所得直接参与破局，并让晋级持续接近明确的塔顶目标。",
+  "chapter_types": [
+    {"id": "floor-entry", "name": "楼层进入", "purpose": "展示新环境、目标、失败代价和初始误判"},
+    {"id": "rule-discovery", "name": "规则探索", "purpose": "通过行动和损失发现本层机制"},
+    {"id": "team-friction", "name": "队伍博弈", "purpose": "让能力分工、利益和信任影响通关方案"},
+    {"id": "floor-confrontation", "name": "核心对抗", "purpose": "用本层已发现的规则完成决定性行动"},
+    {"id": "advancement", "name": "晋级结算", "purpose": "兑现奖励、状态变化和下一层压力"}
+  ],
+  "satisfaction_types": ["识破楼层规则", "用规则反杀", "层主击破", "排名跃升", "能力或装备进阶", "接近塔顶真相"],
+  "conflict_engine": ["规则信息不完整", "通关资源有限", "队伍成员目标不一致", "其他攀登者竞争", "每层对旧打法形成针对"],
+  "pacing_rule": {
+    "opening": "前三章明确入塔原因、塔顶目标、首层规则和失败代价。",
+    "early": "每层按进入、探索、对抗、晋级形成三至八章的完整单元。",
+    "middle": "楼层开始关联阵营、排名和塔的历史，避免单纯关卡合集。",
+    "late": "楼层规则反向揭示塔的真实目的，并迫使主角重新定义登顶。",
+    "milestone": "每层必须至少兑现一个能力、关系、排名或真相变化；层主考验应使用本层学到的规则。"
+  },
+  "numerical_system": {"enabled": true, "rules": ["楼层、排名、奖励和失败代价必须前后一致", "隐藏规则可以延后揭示但不能事后凭空添加", "通关资源必须记录消耗"]},
+  "power_scaling": {"model": "楼层难度、个人能力、队伍协作和规则认知同步上升", "gates": ["新层不能只提高敌人数值", "旧能力在新规则下必须产生新的使用问题", "越级必须依赖已铺垫的代价或认知优势"]},
+  "reader_contract": ["塔顶目标持续可见", "每层有独立规则和完成感", "探索所得必须参与最终破局", "难度提升有可理解的因果"],
+  "forbidden_drift": ["楼层只换地图不换问题", "层主靠未铺垫能力突然击败", "奖励与风险长期不成比例", "中途忘记塔顶目标和登塔动机"],
+  "review_gates": [
+    {"id": "floor-rule-closure", "severity": "blocking", "check": "楼层结局是否由前文发现的规则和选择导出"},
+    {"id": "floor-distinction", "severity": "major", "check": "本层的规则、环境和通关问题是否区别于前层"},
+    {"id": "difficulty-causality", "severity": "major", "check": "难度升级是否改变决策，而非只增加血量"},
+    {"id": "summit-visibility", "severity": "minor", "check": "阶段推进是否仍与登顶目标或塔之真相相连"}
+  ],
+  "evidence": {"confidence": "medium", "basis": ["InkOS 题材机制", "oh-story 剧情单元、升级和钩子方法"], "adaptation_note": "把楼层四段式改造成可直接进入卷纲和细纲的剧情单元契约。"}
+}

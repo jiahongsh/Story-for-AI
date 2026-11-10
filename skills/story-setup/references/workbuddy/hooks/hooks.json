@@ -1,0 +1,49 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CODEBUDDY_PLUGIN_ROOT}/skills/story-setup/references/workbuddy/hooks/story_workbuddy_hook.js\" session-start",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|Write|Edit|MultiEdit)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CODEBUDDY_PLUGIN_ROOT}/skills/story-setup/references/workbuddy/hooks/story_workbuddy_hook.js\" pre-tool-prose-guard",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "^(Bash|PowerShell)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CODEBUDDY_PLUGIN_ROOT}/skills/story-setup/references/workbuddy/hooks/story_workbuddy_hook.js\" pre-tool-commit-advisory",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|Write|Edit|MultiEdit)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"${CODEBUDDY_PLUGIN_ROOT}/skills/story-setup/references/workbuddy/hooks/story_workbuddy_hook.js\" post-tool-prose-check",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,7 +1,7 @@
 ---
 name: browser-cdp
 description: "Use this skill when you need to control a Chrome browser via CDP (Chrome DevTools Protocol) to reuse existing login sessions. Covers: launching Chrome in debug mode, opening URLs, waiting for page load, evaluating JavaScript, taking snapshots, and extracting auth tokens. Trigger phrases: browser automation, CDP, agent-browser, 浏览器操作, 操作浏览器, Chrome CDP, 复用登录态, extract token from browser."
-metadata: {"openclaw":{"requires":{"bins":["agent-browser"]},"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+metadata: {"openclaw":{"requires":{"bins":["agent-browser"]},"source":"https://github.com/qin1473692580-ux/oh-story-claudecode"}}
 ---
 # Browser CDP 操作工具
 
@@ -48,7 +48,7 @@ CHROME_PID_COUNT=3
   ```bash
   node {SKILL_DIR}/scripts/setup-cdp-chrome.js 9222 --yes
   ```
-- `CDP_STATUS=needs-setup` 且 `CHROME_RUNNING=yes` → **先用 AskUserQuestion 工具向用户确认**：告知会杀掉 N 个 Chrome 进程、可能丢失未保存工作；用户同意后再带 `--yes` 启动；用户拒绝则放弃这次自动化。
+- `CDP_STATUS=needs-setup` 且 `CHROME_RUNNING=yes` → **先用当前平台交互能力向用户确认**（Claude 可用 `AskUserQuestion`；TRAE Code 直接在主会话提问并等待回复）：告知会杀掉 N 个 Chrome 进程、可能丢失未保存工作；用户同意后再带 `--yes` 启动；用户拒绝则放弃这次自动化。
 
 **为什么不能直接 `--yes`：** 脚本在非 TTY（即 skill 模式 / Bash 工具）下，如果检测到 Chrome 在跑而没有 `--yes`，会以退出码 3 报 `NEEDS_CONSENT: ...` 并中止，**不会**静默杀进程。这是有意的兜底——但 skill 流程仍应先问用户，而不是看到 3 就盲传 `--yes`。
 
@@ -166,7 +166,7 @@ timeout 30 agent-browser --cdp 9222 eval "window.location.replace('https://www.q
 
 | 问题 | 解决方案 |
 |------|----------|
-| `NEEDS_CONSENT` + 退出码 3 | 用 AskUserQuestion 询问用户是否允许杀掉 Chrome，同意后加 `--yes` 重跑 |
+| `NEEDS_CONSENT` + 退出码 3 | 用当前平台交互能力询问用户是否允许杀掉 Chrome；Claude 可用 `AskUserQuestion`，TRAE Code 直接提问并等待回复；同意后加 `--yes` 重跑 |
 | CDP 端口未监听 | `--detect-only` 再确认；端口被占用则换端口 |
 | 页面跳转到登录页 | `snapshot -i` 找登录按钮并操作 |
 | `eval` 返回 `null` | 检查 localStorage key 名；含引号的 JS 用 `eval -b` 或 `--stdin` |

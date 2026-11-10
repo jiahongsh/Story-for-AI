@@ -192,6 +192,19 @@ function localDateStamp(date) {
 }
 
 /**
+ * Capture one immutable clock for a scraper run. Reports keep the unambiguous
+ * UTC instant while filenames and the explicit report-date field use the same
+ * local calendar day, so a run cannot describe one day and save under another.
+ * @param {Date} [date] - injectable for tests; defaults to now
+ * @returns {{utc:string,localDate:string}}
+ */
+function captureRunClock(date) {
+  const d = date instanceof Date ? new Date(date.getTime()) : new Date();
+  if (Number.isNaN(d.getTime())) throw new Error("invalid capture clock");
+  return Object.freeze({ utc: d.toISOString(), localDate: localDateStamp(d) });
+}
+
+/**
  * Run a scraper entrypoint and turn empty/partial output into machine-readable
  * CLI status. Legacy entrypoints may return an integer; multi-target scrapers
  * return {planned,written,failed,partial,partialReasons}.
@@ -238,5 +251,6 @@ module.exports = {
   scrollLoad,
   getArg,
   localDateStamp,
+  captureRunClock,
   runCli,
 };

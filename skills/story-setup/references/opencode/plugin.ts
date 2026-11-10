@@ -7,6 +7,7 @@ import {
   resolveTarget,
   extractProseTargets,
   extractPatchTargets,
+  revisionBlockReason,
   proseBlockReason,
   proseAfterWrite,
 } from "./lib/story_hook_core.js"
@@ -135,9 +136,10 @@ export default (async () => {
       const root = projectRoot()
       const base = targetBase(root, output.args || input.args)
       for (const target of [...new Set(targets)]) {
-        const reason = proseBlockReason(root, resolveTarget(root, target, base))
+        const absolute = resolveTarget(root, target, base)
+        const reason = revisionBlockReason(root, absolute) || proseBlockReason(root, absolute)
         if (reason) {
-          const source = input.tool === "bash" ? "已从 Bash 命令识别到正文写入目标。" : "已识别到正文写入目标。"
+          const source = input.tool === "bash" ? "已从 Bash 命令识别到写入目标。" : "已识别到写入目标。"
           throw new Error(`${reason}（${source}）`)
         }
       }

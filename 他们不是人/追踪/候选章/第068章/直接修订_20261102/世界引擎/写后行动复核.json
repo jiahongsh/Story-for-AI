@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 68,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "43e3a52d1fcbc742ad688336440a4f49cf5b3ce77561d904219ede50dff47805",
+      "state_revision": 263,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第068章_这段路是我走的.md",
+      "sha256": "ff82f4fae323f5f004bd7fc6038a19574a8f4492130d0df14c7b9ce5fba2b30b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第067章_证件上的芽.md",
+      "sha256": "16a1be5c133ddbab3450928257bd6dfb0f91843db8eb4309b2f241371cdc810d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第068章.md",
+      "sha256": "4a04a508b5d21423ae88fda3a374e369386cbd152b4c0e98e595173c1a1f0787",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第068章/写前依据.md",
+      "sha256": "bc07cf7b7da0c977154efc35a1f599fea59a226021345be8896b9be82e54ce59",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "当前存在",
+      "name": "当前存在",
+      "protagonist": false,
+      "own_goal": "自己走完北河往返并保存实际经历。",
+      "without_protagonist": "可让同行代办，但已坚持本人交证，仍自己完成回程。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "复核日的十八点他们没出门。第二天早上七点半，私人本上那两行旁边仍是未到场。镜辞把铅笔搁下，不去补一个现场。她已经在卷帘外，手里是昨天那张仍印着芽的短途票根，说北河客栈今天去，人自己走，他们要跟就买自己的票。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "复核日的十八点他们没出门。第二天早上七点半，私人本上那两行旁边仍是未到场。镜辞把铅笔搁下，不去补一个现场。她已经在卷帘外，手里是昨天那张仍印着芽的短途票根，说北河客栈今天去，人自己走，他们要跟就买自己的票。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "客栈归程下午，先小巴后实名客运",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "当前存在"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "当前存在",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "分段乘车并记录用途，旧证只用于实名客运",
+          "gates": {
+            "knows": "昨日已用旧证坐东口至县城客运，今日去程在县城换四元小巴；返回也须分段。",
+            "wants": "自己走完北河往返并保存实际经历。",
+            "fears": "怕误车多花钱，怕用旧证被解释为认领旧身份。",
+            "capability": "有本人证件、车票和现金，可买票换乘，不能改票面实名。",
+            "no_plot": "可让同行代办，但已坚持本人交证，仍自己完成回程。",
+            "costs": "交通44和自己面钱4，旧证约束仍在。",
+            "consequences": "分地点记录，同伴各自付费；减收20不抵路费，不认证身份。"
+          },
+          "capacity": {
+            "resources": [
+              "本人票证、包和水瓶"
+            ],
+            "permission": "有本人证件、车票和现金，可买票换乘，不能改票面实名。",
+            "limits": "交通44和自己面钱4，旧证约束仍在。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "自己走完北河往返并保存实际经历。",
+            "success_guaranteed": false,
+            "failure_path": "交通44和自己面钱4，旧证约束仍在。",
+            "opposition": "分地点记录，同伴各自付费；减收20不抵路费，不认证身份。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 25,
+              "end_line": 25,
+              "quote": "下面她又补了几个字，字更小：这行只记用途。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 67,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "昨日已用旧证坐东口至县城客运，今日去程在县城换四元小巴；返回也须分段。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "分清北河至县城小巴与县城至东口实名客运两段返程；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第068章/直接修订_20261102/世界引擎/写前行动审查.json",
+      "sha256": "49e5680ec1665c0f1306d062e01dc7b516720612f28f19469867e289c74bd244"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第068章/直接修订_20261102/candidate.md",
+      "sha256": "ba76e1ed582f92ef5365a0ff60c5d84000a5297106614093e90383594df41409"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "当前存在实际完成的选择由下列正文原句限定：她先坐四块的小巴回县城车站，再在客运窗口拿出旧证，买了十八块的东口方向车票，票面仍是芽。卡片上分两行记下下午的时间和地点：北河客栈门口，上小巴；县城车站，买票回东口。旧证的用途记在后一行。名字仍不认。这一次没误点。少收的二十留在客栈的存根上，不进他们的损失页。车上她靠窗，票根压在掌心，掌心把纸捂热。热退了，名字还在纸上。",
+        "evidence": [
+          {
+            "start_line": 69,
+            "end_line": 69,
+            "quote": "她先坐四块的小巴回县城车站，再在客运窗口拿出旧证，买了十八块的东口方向车票，票面仍是芽。卡片上分两行记下下午的时间和地点：北河客栈门口，上小巴；县城车站，买票回东口。旧证的用途记在后一行。名字仍不认。这一次没误点。少收的二十留在客栈的存根上，不进他们的损失页。车上她靠窗，票根压在掌心，掌心把纸捂热。热退了，名字还在纸上。"
+          }
+        ],
+        "world_followups": [
+          "分地点记录，同伴各自付费；减收20不抵路费，不认证身份。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 69,
+            "end_line": 69,
+            "quote": "她先坐四块的小巴回县城车站，再在客运窗口拿出旧证，买了十八块的东口方向车票，票面仍是芽。卡片上分两行记下下午的时间和地点：北河客栈门口，上小巴；县城车站，买票回东口。旧证的用途记在后一行。名字仍不认。这一次没误点。少收的二十留在客栈的存根上，不进他们的损失页。车上她靠窗，票根压在掌心，掌心把纸捂热。热退了，名字还在纸上。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "分清北河至县城小巴与县城至东口实名客运两段返程。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

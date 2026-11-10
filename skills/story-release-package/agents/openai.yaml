@@ -1,0 +1,4 @@
+interface:
+  display_name: "发布材料"
+  short_description: "Prepare a validated manual publishing package."
+  default_prompt: "Use $story-release-package to prepare platform-ready copy and an export manifest from approved artifacts."

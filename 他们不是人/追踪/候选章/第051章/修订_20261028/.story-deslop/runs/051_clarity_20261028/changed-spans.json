@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "spans": [
+    {
+      "kind": "replace",
+      "source_start": 57,
+      "source_end": 61,
+      "candidate_start": 57,
+      "candidate_end": 57,
+      "source_preview": [
+        "镜辞没接他的目光。",
+        "",
+        "“问他。”他说。"
+      ],
+      "candidate_preview": [
+        "镜辞把文件袋收回身边，宁州陈骁把车票收回包里，自己开口：“活动室。我爸要来就来，不来我就在那儿等。”"
+      ]
+    }
+  ]
+}

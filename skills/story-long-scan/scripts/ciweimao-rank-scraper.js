@@ -17,7 +17,8 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ab, sleep, evalJSONBase64, scrollLoad, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSONBase64, scrollLoad, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 const RANK_URL = "https://www.ciweimao.com/rank-index";
 
@@ -182,7 +183,6 @@ function main() {
         continue;
       }
 
-      const now = new Date().toISOString();
       const norm = (s) => (s || "").replace(/\s+/g, "");
       const linked = section.entries.filter((e) =>
         urls.some((u) => norm(u.title) === norm(e.title))
@@ -191,7 +191,8 @@ function main() {
         `# 刺猬猫 · ${rt.label}`,
         "",
         `- 来源：${RANK_URL}`,
-        `- 抓取时间：${now}`,
+        `- 抓取时间（UTC）：${RUN_CLOCK.utc}`,
+        `- 报告日期（本地）：${RUN_CLOCK.localDate}`,
         `- 条目数：${section.entries.length}`,
         `- 作品页链接：${linked} / ${section.entries.length}`,
         "",
@@ -222,7 +223,7 @@ function main() {
         }
       }
 
-      const date = localDateStamp();
+      const date = RUN_CLOCK.localDate;
       const filename = `刺猬猫${rt.label}_${date}.md`;
       fs.mkdirSync(OUTDIR, { recursive: true });
       const filepath = path.join(OUTDIR, filename);

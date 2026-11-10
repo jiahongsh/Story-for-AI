@@ -1,0 +1,19 @@
+<!-- BEGIN oh-story-managed: workbuddy -->
+
+{{OH_STORY_AGENTS_IMPORT}}
+
+## 网文写作工具集（WorkBuddy / CodeBuddy Code）
+
+本项目通过 WorkBuddy / CodeBuddy Code 原生目录加载 oh-story：
+
+- Skills：`.codebuddy/skills/{browser-cdp,story*}/`
+- Commands：`.codebuddy/commands/*.md`，使用 `/story`、`/story-long-write` 等命令
+- Agents：`.codebuddy/agents/*.md`，由内置 `Agent` 工具通过 `subagent_type` 按名称调用；中文主包固定 10 张（8 个通用 + `story-data-fetcher` + `story-data-readonly-runner`）。19 张仅是 CodeBuddy 平台允许的 oh-story 项目物理卡容量边界
+- Rules：`.codebuddy/rules/oh-story.md`
+- Hooks：`.codebuddy/settings.json` 注册，执行 `.codebuddy/hooks/story_workbuddy_hook.js`
+
+意图路由：长篇写作 `story-long-write`；短篇写作 `story-short-write`；长/短篇拆文 `story-long-analyze` / `story-short-analyze`；长/短篇扫榜 `story-long-scan` / `story-short-scan`；数据分析 `story-data-analyze`；去 AI 味 `story-deslop`；审查 `story-review`；导入 `story-import`；作品查询 `story-explore`；资料研究 `story-research`；封面 `story-cover`；发布材料与平台发布分别为 `story-release-package` / `story-publish`；模糊意图先走 `story`。
+
+执行任何 Skill 前先完整读取对应 `SKILL.md`。数据分析的只读逻辑角色必须通过 `story-data-readonly-runner` 调用，并严格按该 Skill 的映射传入 `logical_role` 与角色卡路径；逻辑角色卡不直接注册为 Agent。Hooks 只负责大纲、追踪和正文的机械门禁，不替代 Skill 内的语义流程。新部署或升级 Agents、Skills、Commands、Rules、Hooks 后，新开 WorkBuddy / CodeBuddy 会话并实际调用 Agent；设置页可见或 enabled 不等于 Task registry 已能调度。
+
+<!-- END oh-story-managed: workbuddy -->

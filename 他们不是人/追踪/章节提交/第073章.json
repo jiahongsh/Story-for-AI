@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 73,
   "target": "正文/第073章_又到两点十七.md",
-  "accepted_prose_sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
+  "accepted_prose_sha256": "ebbd5b5255dbdbdfc94a39a7b5b4a7d182d6eade41b354a241094a3433c5d765",
   "candidate_id": "C20261005-133242",
   "candidate_manifest": "追踪/候选章/第073章/C20261005-133242/manifest.json",
   "context_digest": "2bde7316305c41924f878a525a9dca22fd4c53ffd16dac85e7be4b0e6e3325b5",
   "state_revision_before": 16,
-  "state_revision_after": 249,
+  "state_revision_after": 268,
   "accepted_at": "2026-10-05T05:40:04Z",
   "approval_mode": "auto",
   "approval_note": "用户本次明确说自动定稿。第073章按该授权接纳并写入正文。",
@@ -51,6 +51,14 @@
       "old_sha256": "375f512d420fa878820bfd5e75802a5ff157cb47561f043f546d62bb51e96df4",
       "new_sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
       "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-02T07:50:17Z",
+      "reason": "明确复查承接已参加的补核，送药人只报告本人敲门未应",
+      "old_sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
+      "new_sha256": "ebbd5b5255dbdbdfc94a39a7b5b4a7d182d6eade41b354a241094a3433c5d765",
+      "state_revision": 268,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

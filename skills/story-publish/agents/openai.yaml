@@ -1,0 +1,4 @@
+interface:
+  display_name: "平台发布"
+  short_description: "Publish approved chapters through a linked local adapter."
+  default_prompt: "Use $story-publish to preview, preflight, and publish approved chapters through the project's configured platform adapter."

@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "run_id": "D20261027-051010",
+  "edit_scope": "in-place",
+  "rewrite_intensity": "minimal",
+  "retention_ratio": 0.994096,
+  "changed_span_count": 7,
+  "blocking": [],
+  "advisory": []
+}

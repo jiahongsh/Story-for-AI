@@ -1,6 +1,6 @@
-deployed_at: 2026-08-14T09:39:48Z
-agents_version: 25
-setup_skill_version: 1.2.7
+deployed_at: 2026-10-03T10:50:00Z
+agents_version: 39
+setup_skill_version: 1.2.22
 target_cli: opencode,generic
 resolver_strategy: project-local-skill-reference
 references_dir: skills/story-setup/references/agent-references

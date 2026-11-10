@@ -130,4 +130,4 @@
 - **覆盖**：文风优先级排在 Gate D（节奏调整）、Gate B（句式去套路）、标点默认习惯之上——这些 Gate 是去 AI 味的**默认值**，文风有更具体的指令时文风赢。
 - **不可覆盖（硬约束）**：banned-words / Gate F 章末禁升华 / 禁止万能/堆叠比喻 / 禁止章末预告 / 字数下限——这些硬约束永远赢，即使文风示范了相反的用法。
 
-精确决议表见 `.claude/agents/narrative-writer.md` 的“被调用协议”段。
+精确决议表见当前运行时对应的 `narrative-writer` agent 定义（Claude `.claude/agents/narrative-writer.md`、OpenCode `.opencode/agents/narrative-writer.md`、TRAE Code `.trae/agents/narrative-writer.md`、WorkBuddy 项目模式 `.codebuddy/agents/narrative-writer.md`、Codex `.codex/agents/narrative-writer.toml`）中的“被调用协议”段。WorkBuddy plugin-only 模式不从项目磁盘猜路径；能否 spawn 以当前 Agent registry 是否真实返回 `oh-story:narrative-writer` 为准。

@@ -13,11 +13,16 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 | `/skill story-long-analyze`、长篇拆文 | story-long-analyze | 长篇小说深度拆解 |
 | `/skill story-short-analyze`、短篇拆文 | story-short-analyze | 短篇小说拆文分析 |
 | `/skill story-long-scan`、长篇扫榜 | story-long-scan | 长篇小说榜单与市场趋势 |
+| `/skill story-data-analyze`、数据分析、后台数据 | story-data-analyze | 后台数据归因分析，三层定位读者流失 |
 | `/skill story-short-scan`、短篇扫榜 | story-short-scan | 短篇小说榜单与情绪风口 |
 | `/skill story-deslop`、去 AI 味 | story-deslop | 去除 AI 写作痕迹 |
 | `/skill story-cover`、封面 | story-cover | 生成封面图；需要 `GPT_IMAGE_API_KEY` |
 | `/skill story-review`、审查 | story-review | 多视角审查；OpenClaw Phase 1 默认 solo/soft-fallback |
 | `/skill story-import`、导入 | story-import | 逆向导入已有小说到项目结构 |
+| `/skill story-explore`、作品查询 | story-explore | 只读查询作品进度、角色、伏笔与设定 |
+| `/skill story-research`、资料研究 | story-research | 带来源的创作事实查证 |
+| `/skill story-release-package`、发布材料 | story-release-package | 整理已审批作品的发布文案与清单 |
+| `/skill story-publish`、平台发布 | story-publish | 通过项目关联适配器预检、存草稿或正式发布 |
 | `/skill story`、网文 | story | 工具箱路由 · 模糊意图自动分发 |
 | `/skill story-setup`、准备写书 | story-setup | 环境部署 · 多 CLI 配置入口 |
 | `/skill browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
@@ -31,7 +36,7 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 
 ## 文件结构
 
-- `skills/` — OpenClaw workspace skills，包含 oh-story 的 13 个 skill
+- `skills/` — OpenClaw workspace skills，包含 oh-story 的 18 个 skill
 - `拆文库/` — 拆文分析结果存放目录
 - `{书名}/正文/` — 长篇小说正文章节
 - `{书名}/正文.md` — 短篇小说正文
@@ -43,8 +48,17 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 ## 写作约束
 
 - 写正文前必须先有对应大纲：长篇 `大纲/细纲_第N章*.md`，短篇 `小节大纲.md`。
+
+## 跨产物修订门禁
+
+修改已提交正文、既有大纲或设定时，暂停日更，按长篇写作 skill 的“跨产物修订与长期事实”协议，先以 `revision-governor phase=plan` 同等规则由主线程做只读影响分析，生成 `追踪/修改影响/active.json`；关联修改完成后按 `phase=verify` 同等规则复核，并通过带摘要审批戳的 `revision_guard.py check` 与 `tracking_commit.py check` 后才恢复续写。
+
+长篇“续写/继续写/日更”默认只授权精确下一章候选稿，按长篇写作 skill 的“章节候选、接纳与投影自检”协议写入 `追踪/候选章/`；这些词不等于接纳。只有用户明确“接受/定稿”，或本次任务事先明确授权自动定稿，才能写入 `正文/`、提交追踪并通过 `story_doctor.py`。卷末进入下一卷前按该 skill 的“顺序冷读”协议完成冷读，S1/S2 未清不得开新卷。
+- **接纳/黄金声音画像**：长篇至少有五章可信接纳样本后，按长篇写作 skill 的 `accepted-voice-profile.md` 建立接纳基线；作者可从其中明确精选至少五章、建议八至十二章建立黄金声线样本。两者只做双向 advisory；任一已配置画像过期时不得继续使用旧数据。
+- **近章结构指纹**：候选章生成近章证据包后，按场景发动机、标准问答、信息交付、章尾功能和人物未解代价五项语义复核；数值接近不等于 AI，也不自动授权改文。
+- 中文长篇/短篇正文全程锁定中文；英文、缩写、型号和剧情代号不得由 Agent 自行豁免。URL、邮箱、代码、路径和文件名只机械保护明确非叙事结构；其他外语只在用户单独确认后精确登记到 `.deslop-whitelist`；HTML 标记不得进入交付正文。英文/海外意图优先路由 `story-globalize`；未安装时报告缺失，不进入中文写作流程。
 - OpenClaw Phase 1 没有硬 hook 拦截；执行写作 skill 时必须由 skill 流程自行检查大纲，不得跳过。
-- **去AI味自锁**（本平台无 hook 兜底，此条是唯一防线）：每章正文落盘后，同一轮内立即按写作 skill 的「最毒句式速查 + 禁用词扫描」自检并清零（能运行 node 时跑 `check-ai-patterns.js --check --fail-on=blocking`）；写下一章前先复查上一章无欠账。唯一豁免＝用户显式说"本章不去味"，豁免章在标题行下加 `<!-- 去味:跳过 -->`。
+- **去AI味/语言泄漏/文风卫生自锁**（本平台无 hook 兜底，此条是唯一防线）：先把 `{当前写作 Skill 目录}` 替换为当轮已路由的长篇或短篇写作 Skill 目录。每章正文落盘后，同一轮内首先实际运行 `node "{当前写作 Skill 目录}/scripts/language_gate.js" "{正文文件}"`；返回零后先运行 `node "{当前写作 Skill 目录}/scripts/check-style-hygiene.js" --check --fail-on=blocking "{正文文件}"`，再运行 `node "{当前写作 Skill 目录}/scripts/check-ai-patterns.js" --check --fail-on=blocking "{正文文件}"` 与 `node "{当前写作 Skill 目录}/scripts/check-degeneration.js" --check --language=zh --fail-on=blocking "{正文文件}"`。文风卫生按本书 `设定/文风.md` 的出版级、对白弹性或逐类策略执行。写下一章前先复查上一章无欠账。正文不得写入 HTML 豁免标记；去味跳过不得跳过语言 Gate 或文风卫生门。
 - Compact / 新会话后优先读取 `{书名}/追踪/上下文.md` 恢复当前写作状态。
 
 ## Compact 后恢复上下文
@@ -56,3 +70,15 @@ OpenClaw 会从项目 `skills/` 目录发现 `SKILL.md`。优先通过 OpenClaw 
 4. 当前章节的情绪/节奏目标
 
 如果存在 `{书名}/追踪/上下文.md`，compact 后首先读取该文件恢复上下文。
+
+## 分支推演
+
+用户要求“分支推演 / 路线比较 / 推演几个走向”时，使用 `story-long-write` 的分支推演流程。推演产物放在 `大纲/推演/`，未经用户明确选择和另行授权，不得写入正式大纲或追踪状态。
+
+## 中文正文英文零容忍
+
+中文正文和台词中出现未授权拉丁字母词时一律 blocking，包括短词、专名、缩写和中英混合台词。只机械保护 URL、邮箱、文件路径、代码等明确非叙事结构；其他外语只有在用户单独确认并由 `.deslop-whitelist` 精确登记时才豁免。HTML 标记阻断；语言泄漏未清零不得交付。
+
+## 适度对白技巧与验收
+
+重要对白场景由当前写作 Skill 读取其自带的“适度对白技巧”参考，形成轻量对白卡。正文自然混用无标签对白、简单“说/问”、有效动作和叙述反应，不追求零标签或句句潜台词。中文语言 Gate 后运行当前写作 Skill 自带的对白漂移 Gate；明确机械阻断项退回，密度与动词集中预警进入语义审查。机械与语义验收通过前禁止追踪提交和下一章。

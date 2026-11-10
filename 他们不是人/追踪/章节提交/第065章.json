@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 65,
   "target": "正文/第065章_不知道不是通过.md",
-  "accepted_prose_sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674",
+  "accepted_prose_sha256": "9cd18e72b149056fd6a8133f55c50b36040afa4fc265b89329133cf715f22a0d",
   "candidate_id": "C20261004-192650",
   "candidate_manifest": "追踪/候选章/第065章/C20261004-192650/manifest.json",
   "context_digest": "297f2772a686435d7eefec4a0bcfed48d46318f84c3b7834d643de13792ad07c",
   "state_revision_before": 8,
-  "state_revision_after": 219,
+  "state_revision_after": 261,
   "accepted_at": "2026-10-04T13:45:42Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复接受，接纳第065章候选。",
@@ -35,6 +35,14 @@
       "old_sha256": "e5b6365be28211b6c8f4607e74882caff00188f36910507ff208361f23a016c6",
       "new_sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674",
       "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-01T07:02:33Z",
+      "reason": "限定工时见证与维修责任，理清车费及找零归属",
+      "old_sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674",
+      "new_sha256": "9cd18e72b149056fd6a8133f55c50b36040afa4fc265b89329133cf715f22a0d",
+      "state_revision": 261,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

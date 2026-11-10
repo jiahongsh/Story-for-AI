@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/validation.schema.json",
+  "title": "Independent analysis validation",
+  "type": "object",
+  "required": [
+    "decision", "independent_recalculation", "logic_checks", "method_checks",
+    "input_hashes_verified", "validator_independent", "reviewed_analysis_sha256",
+    "missing_nodes_assessed", "recalculation_disagreements", "causal_strength_cap",
+    "prohibited_claims", "input_artifact_hashes"
+  ],
+  "properties": {
+    "decision": {"enum": ["PASS", "RETURN", "BLOCKED"]},
+    "independent_recalculation": {
+      "type": "array", "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "metric_id", "dimensions", "formula", "source_refs", "source_observations",
+          "calculation", "recalculated_value"
+        ]
+      }
+    },
+    "logic_checks": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "object"}},
+    "method_checks": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "object"}},
+    "input_hashes_verified": {"type": "boolean"},
+    "validator_independent": {"type": "boolean"},
+    "reviewed_analysis_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "missing_nodes_assessed": {"type": "array", "items": {"type": "object"}},
+    "recalculation_disagreements": {"type": "array"},
+    "causal_strength_cap": {"enum": ["OBSERVED_ONLY", "DIRECTIONAL_ONLY", "NON_CAUSAL_ASSOCIATION", "CAUSAL_ALLOWED"]},
+    "prohibited_claims": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "additionalProperties": true
+}

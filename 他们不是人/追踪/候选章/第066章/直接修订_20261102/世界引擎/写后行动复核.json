@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 66,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "5b989c1916b42dddcb4054f87d13ff821858e3d7cbb48aad72c24215dbdf26c1",
+      "state_revision": 261,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第066章_空白页.md",
+      "sha256": "ecda72f240e143196e5ccd19f347f9699ffc2b92891e3d3ac2669c0dcbcba84b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第065章_不知道不是通过.md",
+      "sha256": "9cd18e72b149056fd6a8133f55c50b36040afa4fc265b89329133cf715f22a0d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第066章.md",
+      "sha256": "627ce0a9fc0e2f58b21f4683e9407f1bedef545a389dea21dc76269b09125912",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第066章/写前依据.md",
+      "sha256": "65e92e44d760de35482ef5e2467db6c5bf06a6914caa7089cf46aec9c1c3f719",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "保留她亲手做过的事，同时继续寻找原芽。",
+      "without_protagonist": "可以继续比较差距，但她已要求分开，因此仍按具体经历分别记。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，她进门就先伸手。薄笔记还在柜台正中，姓名栏空着。她按先前分好的两页，将散开的票据重新归拢。她没问镜辞答没答那些事，把笔记从中间揭开，左边一叠，右边一叠，揭开的声音很轻。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，她进门就先伸手。薄笔记还在柜台正中，姓名栏空着。她按先前分好的两页，将散开的票据重新归拢。她没问镜辞答没答那些事，把笔记从中间揭开，左边一叠，右边一叠，揭开的声音很轻。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "065次晨整理薄本",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "沿既有分栏记录当前新行动，不把它们续入芽的旧页",
+          "gates": {
+            "knows": "知道她留下的薄本和姓名空栏；新行为与旧记忆不能混作同一履历。",
+            "wants": "保留她亲手做过的事，同时继续寻找原芽。",
+            "fears": "怕又把新行动只当旧身份真假的证据。",
+            "capability": "可记录自己亲见和她交付的副本，不能替她命名或办证。",
+            "no_plot": "可以继续比较差距，但她已要求分开，因此仍按具体经历分别记。",
+            "costs": "接受未答及空名，失去的营业单不由她背账。",
+            "consequences": "她仍自行带证件票根离开，姜霁只留风险，不替她承担全部选择。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "可记录自己亲见和她交付的副本，不能替她命名或办证。",
+            "limits": "接受未答及空名，失去的营业单不由她背账。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "保留她亲手做过的事，同时继续寻找原芽。",
+            "success_guaranteed": false,
+            "failure_path": "接受未答及空名，失去的营业单不由她背账。",
+            "opposition": "她仍自行带证件票根离开，姜霁只留风险，不替她承担全部选择。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 61,
+              "end_line": 61,
+              "quote": "那就从不知道开始。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 65,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道她留下的薄本和姓名空栏；新行为与旧记忆不能混作同一履历。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "压缩重复分栏解释，保持既有分轨与明日复核期限；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第066章/直接修订_20261102/世界引擎/写前行动审查.json",
+      "sha256": "a08d5764c239bbffdc1934579b61508cb6f0fb0e3398da22a0dfda9b1fd90f96"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第066章/直接修订_20261102/candidate.md",
+      "sha256": "af5c885c81d726473eb6bb1b4e693fcdd62139f7ba39710a5ac766c66008b880"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "镜辞实际完成的选择由下列正文原句限定：“旧页不动。”他说。",
+        "evidence": [
+          {
+            "start_line": 15,
+            "end_line": 15,
+            "quote": "“旧页不动。”他说。"
+          }
+        ],
+        "world_followups": [
+          "她仍自行带证件票根离开，姜霁只留风险，不替她承担全部选择。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 15,
+            "end_line": 15,
+            "quote": "“旧页不动。”他说。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "压缩重复分栏解释，保持既有分轨与明日复核期限。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

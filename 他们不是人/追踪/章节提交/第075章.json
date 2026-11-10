@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 75,
   "target": "正文/第075章_不看也收尾.md",
-  "accepted_prose_sha256": "7d51c9903ebcbaf1e74580d83dab38608f788b669eafbba6592f4971f8b132fc",
+  "accepted_prose_sha256": "e0efa7e1853a95eaec79b426f26fc6aac5d166c4aef2dd710f03e0c7c515243e",
   "candidate_id": "C20261005-135718",
   "candidate_manifest": "追踪/候选章/第075章/C20261005-135718/manifest.json",
   "context_digest": "e07c8320a4c1716081454218b2fa63b1429d4c56517126acffe7d237eb3ee34c",
   "state_revision_before": 18,
-  "state_revision_after": 249,
+  "state_revision_after": 269,
   "accepted_at": "2026-10-05T06:04:47Z",
   "approval_mode": "auto",
   "approval_note": "用户本次明确说自动定稿。第075章按该授权接纳并写入正文。",
@@ -59,6 +59,14 @@
       "old_sha256": "76a92f53d8d394532dd0f2c56d7c5d3da145199cfc3969777d2fe8d57cd6a076",
       "new_sha256": "7d51c9903ebcbaf1e74580d83dab38608f788b669eafbba6592f4971f8b132fc",
       "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-02T07:51:35Z",
+      "reason": "撤去镜辞无来源的侯强损失账，保留工人独立经历和读者认知差",
+      "old_sha256": "7d51c9903ebcbaf1e74580d83dab38608f788b669eafbba6592f4971f8b132fc",
+      "new_sha256": "e0efa7e1853a95eaec79b426f26fc6aac5d166c4aef2dd710f03e0c7c515243e",
+      "state_revision": 269,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

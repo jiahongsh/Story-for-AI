@@ -128,8 +128,8 @@
 
 ### 标点确定性收尾
 
-精修后对 `正文.md` 先运行 `node scripts/check-ai-patterns.js --check --fail-on=blocking 正文.md`。blocking 先改正文并复扫；advisory 只作读感提示，确属问题才改，功能性写法标 `[需复核]`。
-再运行 `node scripts/normalize-punctuation.js 正文.md`（默认 `--quote-mode keep`）清理无功能省略号、破折号、双连字符和独立分隔线；盐言「」不受影响。
+精修后对 `正文.md` 先运行 `node scripts/language_gate.js 正文.md`，通过后运行 `node scripts/check-style-hygiene.js --check --fail-on=blocking 正文.md`，再运行 `node scripts/check-ai-patterns.js --check --fail-on=blocking 正文.md`。blocking 先改正文并从语言门复扫；advisory 只作读感提示，确属问题才改，功能性写法标 `[需复核]`。
+再运行 `node scripts/normalize-punctuation.js 正文.md` 做确定性格式收尾；默认保留停顿标点与引号风格，只清理 Markdown 分隔线等格式问题。只有项目/平台明确禁用时才加 `--pause-mode normalize`；盐言「」不受影响。
 
 ### 删减原则
 

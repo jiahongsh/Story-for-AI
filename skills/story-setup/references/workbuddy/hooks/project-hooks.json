@@ -1,0 +1,49 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e 'const p=require(\"node:path\");let r=process.env.CODEBUDDY_PROJECT_DIR||process.cwd();if(process.platform===\"win32\"&&/^\\/[A-Za-z]\\//.test(r))r=r[1]+\":\"+r.slice(2);require(p.join(r,\".codebuddy\",\"hooks\",\"story_workbuddy_hook.js\")).main(process.argv[1])' session-start",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|Write|Edit|MultiEdit)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e 'const p=require(\"node:path\");let r=process.env.CODEBUDDY_PROJECT_DIR||process.cwd();if(process.platform===\"win32\"&&/^\\/[A-Za-z]\\//.test(r))r=r[1]+\":\"+r.slice(2);require(p.join(r,\".codebuddy\",\"hooks\",\"story_workbuddy_hook.js\")).main(process.argv[1])' pre-tool-prose-guard",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "^(Bash|PowerShell)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e 'const p=require(\"node:path\");let r=process.env.CODEBUDDY_PROJECT_DIR||process.cwd();if(process.platform===\"win32\"&&/^\\/[A-Za-z]\\//.test(r))r=r[1]+\":\"+r.slice(2);require(p.join(r,\".codebuddy\",\"hooks\",\"story_workbuddy_hook.js\")).main(process.argv[1])' pre-tool-commit-advisory",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "^(Bash|PowerShell|Write|Edit|MultiEdit)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e 'const p=require(\"node:path\");let r=process.env.CODEBUDDY_PROJECT_DIR||process.cwd();if(process.platform===\"win32\"&&/^\\/[A-Za-z]\\//.test(r))r=r[1]+\":\"+r.slice(2);require(p.join(r,\".codebuddy\",\"hooks\",\"story_workbuddy_hook.js\")).main(process.argv[1])' post-tool-prose-check",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 77,
   "target": "正文/第077章_别告诉镜辞.md",
-  "accepted_prose_sha256": "3ccbb41266144de7cff8230cefb2467c345f24a1a7844f7b0665668df00ea1ed",
+  "accepted_prose_sha256": "ee67c8003d75dec32dc6e7793660523ca341655f60dc200e694bf29766adf51d",
   "candidate_id": "C20261005-142204",
   "candidate_manifest": "追踪/候选章/第077章/C20261005-142204/manifest.json",
   "context_digest": "b60d73e2f4ad7f4d6955e36c9b44a2779d6999a627c39ed789aeb79d0ac052b2",
   "state_revision_before": 20,
-  "state_revision_after": 87,
+  "state_revision_after": 270,
   "accepted_at": "2026-10-05T06:28:36Z",
   "approval_mode": "auto",
   "approval_note": "用户本次明确说自动定稿。第077章按该授权接纳并写入正文。",
@@ -43,6 +43,14 @@
       "old_sha256": "9a812e037fddd9608f1f4519c25c700a74f744d15811c3c640858c8b805a9884",
       "new_sha256": "3ccbb41266144de7cff8230cefb2467c345f24a1a7844f7b0665668df00ea1ed",
       "state_revision": 87,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-02T07:52:09Z",
+      "reason": "保留一次长期居住风险问答，删午后同义重问与重复回答",
+      "old_sha256": "3ccbb41266144de7cff8230cefb2467c345f24a1a7844f7b0665668df00ea1ed",
+      "new_sha256": "ee67c8003d75dec32dc6e7793660523ca341655f60dc200e694bf29766adf51d",
+      "state_revision": 270,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

@@ -2,7 +2,7 @@
 name: story-long-scan
 version: 1.0.0
 description: "长篇网文扫榜。分析起点、番茄、晋江等平台排行榜数据，提炼市场趋势与热门题材。触发方式：/story-long-scan、/长篇扫榜、「长篇什么火」「起点排行」。"
-metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+metadata: {"openclaw":{"source":"https://github.com/qin1473692580-ux/oh-story-claudecode"}}
 ---
 # story-long-scan：长篇网文扫榜
 
@@ -162,7 +162,7 @@ node scripts/jjwxc-rank-scraper.js --type 12 --list-only                 # 只�
 
 **用户提供操作指引：**
 - 用户提供已有的扫描结果文件路径 → 直接加载进入「数据分析」
-- 用户提供链接 → 用 WebFetch 抓取
+- 用户提供链接 → 使用当前平台获准的联网抓取能力；Claude 可用 `WebFetch`，TRAE Code 优先使用平台浏览/联网工具，没有时路由只读 `/browser-cdp`，不得假装调用不存在的 `WebFetch`
 - 用户粘贴/截图 → 手动解析进入分析
 
 **内置知识操作指引：**
@@ -209,7 +209,7 @@ node scripts/jjwxc-rank-scraper.js --type 12 --list-only                 # 只�
 
 #### 晋江文学城分析维度
 
-> **采集硬性要求**：若用了 `--list-only` 或文件头标 `[仅列表-无核心指标]`，则该数据不足以支撑以下分析维度，视为不合格。
+> **采集硬性要求**：必须有详情页核心指标（收藏数/营养液/积分/字数）。`jjwxc-rank-scraper.js` 默认已补采（top 本）；若用了 `--list-only` 或文件头标 `[仅列表-无核心指标]`，则该数据不足以支撑以下分析维度，视为不合格。
 
 | 维度 | 看什么 |
 |---|---|
@@ -285,10 +285,11 @@ node scripts/jjwxc-rank-scraper.js --type 12 --list-only                 # 只�
 
 **如信息不足，向用户补齐项目条件：**「目标平台、已有素材、擅长题材/写作约束、计划篇幅是什么？」
 
-按 `topic-decision.md` 的选题四步产出 2-3 个推荐选题（能爆的原因 → 市场验证 → 差异化定位 → 可行性+失败风险+验证动作），写入**本次扫榜输出目录** `{outdir}/选题决策.md`
+按 `topic-decision.md` 的选题四步产出 2-3 个推荐选题（能爆的原因 → 市场验证 → 差异化定位 → 可行性+失败风险+验证动作），写入**本次扫榜输出目录** `{outdir}/选题决策.md`——扫榜常在还没有小说项目的目录下跑，所以产物落在扫榜输出目录，不直接写进项目。告知用户路径与下一步：「开书时如果小说项目就建在这个目录里、或和这个目录同级（共用一个上级目录），`/story-long-write` 会自动找到并让你确认；隔得更远就把 `选题决策.md` 复制到小说项目根目录，或开书时把路径粘给它。想确认"能爆的原因"先 `/story-long-analyze` 拆对标书。」
 
 **硬规则：**
 - 可行性上限：背靠榜单标了 `[数据稀疏]` 或同方向样本 <15（小平台<10）⇒ 不许给"高"，强制降到"中" + 写明先验证；内置知识模式一律给"中"。
+- "能爆的原因"只记为假设（`待拆文验证`）——单本上榜是个例，多本重复才算信号；要坐实靠拆文回填，本阶段不拆文。
 - 不输出项目素材无法支撑的题材；不只看热度，必须给可行性和失败风险；不忽略平台调性差异（起点男频和晋江女频审美完全不同）。
 
 ---
@@ -328,10 +329,10 @@ node scripts/jjwxc-rank-scraper.js --type 12 --list-only                 # 只�
 | [references/publishing-guide.md](references/publishing-guide.md) | 平台适配+推荐机制校验+数据指标+简介设计 |
 | [references/scan-output-format.md](references/scan-output-format.md) | 脚本/CDP 采集字段定义+输出模板 |
 | [scripts/cdp-utils.js](scripts/cdp-utils.js) | CDP 公共工具函数（ab/sleep/evalJSON/safeStr/scrollLoad/getArg），各采集脚本共用 |
-| [scripts/fanqie-rank-scraper.js](scripts/fanqie-rank-scraper.js) | 番茄榜单采集，分批请求防超时，带连通性自检+标题解析率质量标注，配合 browser-cdp 使用 |
+| [scripts/fanqie-rank-scraper.js](scripts/fanqie-rank-scraper.js) | 番茄榜单采集，详情页多策略解码（书名/作者/题材/评分/标签/简介）绕过字体反爬，分批请求防超时，带连通性自检+标题解析率质量标注，配合 browser-cdp 使用 |
 | [scripts/qidian-rank-scraper.js](scripts/qidian-rank-scraper.js) | 起点榜单采集（畅销/月票/新书等），默认移动端 SSR 提取，PC/CDP 回退 |
 | [scripts/qimao-rank-scraper.js](scripts/qimao-rank-scraper.js) | 七猫榜单采集（大热/新书/完结等），tab 切换（失败重试）+滚动加载，按 bookId 取书名回填作品页链接，带连通性自检+链接/热度命中率标注 |
-| [scripts/jjwxc-rank-scraper.js](scripts/jjwxc-rank-scraper.js) | 晋江榜单采集（收入金榜/月榜等），按频道分组 |
+| [scripts/jjwxc-rank-scraper.js](scripts/jjwxc-rank-scraper.js) | 晋江榜单采集（收入金榜/月榜等），按频道分组；列表取书名/作者/novelid，再进 onebook.php 详情页（gb18030 解码 itemprop）补采收藏/营养液/积分/字数/状态，受 --top/--detail-limit 约束，--list-only 可跳过 |
 | [scripts/ciweimao-rank-scraper.js](scripts/ciweimao-rank-scraper.js) | 刺猬猫榜单采集（点击/收藏/月票等），单页 9 榜提取，按 bookId 归一书名回填作品页链接，带连通性自检+空结果重试+链接命中率标注 |
 
 ---

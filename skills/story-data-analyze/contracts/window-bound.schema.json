@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/window-bound.schema.json",
+  "title": "Modification-to-data-window binding",
+  "type": "object",
+  "required": [
+    "analysis_mode", "analysis_question", "baseline", "previous_snapshot",
+    "latest_snapshot", "changes", "confounders", "input_artifact_hashes"
+  ],
+  "properties": {
+    "analysis_mode": {"enum": ["modification_effect", "health_only"]},
+    "analysis_question": {"type": "string", "minLength": 1},
+    "baseline": {"$ref": "#/$defs/snapshotRef"},
+    "previous_snapshot": {"$ref": "#/$defs/snapshotRef"},
+    "latest_snapshot": {"$ref": "#/$defs/snapshotRef"},
+    "changes": {"type": "array", "items": {"$ref": "#/$defs/changeEvent"}},
+    "confounders": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "$defs": {
+    "snapshotRef": {
+      "type": "object",
+      "required": ["snapshot_date", "data_until", "source_file", "source_sha256", "work_id", "work_identity_status"],
+      "properties": {
+        "snapshot_date": {"type": "string", "format": "date"},
+        "data_until": {"type": "string", "format": "date"},
+        "source_file": {"type": "string", "minLength": 1},
+        "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "work_id": {"type": ["string", "integer"]},
+        "work_identity_status": {"enum": ["VERIFIED_SOURCE", "VERIFIED_FROZEN_REGISTRY"]}
+      },
+      "additionalProperties": true
+    },
+    "changeEvent": {
+      "type": "object",
+      "required": [
+        "change_id", "published_at", "first_covered_data_date", "first_full_data_date",
+        "coverage_status", "target_metric_ids", "version_status", "version_evidence",
+        "coverage_evidence", "concurrent_events"
+      ],
+      "properties": {
+        "change_id": {"type": "string", "minLength": 1},
+        "published_at": {"type": "string", "format": "date-time"},
+        "first_covered_data_date": {"type": "string", "format": "date"},
+        "first_full_data_date": {"type": "string", "format": "date"},
+        "coverage_status": {"enum": ["PARTIAL_DAY_COVERED", "FULL_DAY_COVERED", "NOT_COVERED"]},
+        "target_metric_ids": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+        "version_status": {"enum": ["VERIFIED", "UNVERIFIED", "MIXED"]},
+        "version_evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/versionEvidence"}},
+        "coverage_evidence": {"type": "array", "minItems": 1},
+        "concurrent_events": {"type": "array"}
+      },
+      "additionalProperties": true
+    },
+    "versionEvidence": {
+      "type": "object",
+      "required": [
+        "source_file", "source_sha256", "evidence_type", "verification_strength",
+        "record_locator", "assertion"
+      ],
+      "properties": {
+        "source_file": {"type": "string", "minLength": 1},
+        "source_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "evidence_type": {"type": "string", "minLength": 1},
+        "verification_strength": {"enum": ["DIRECT", "CORROBORATING", "LIMITATION"]},
+        "record_locator": {"type": "string", "minLength": 1},
+        "assertion": {"type": "string", "minLength": 1}
+      }
+    }
+  },
+  "additionalProperties": true
+}

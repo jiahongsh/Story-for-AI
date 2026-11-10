@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 67,
   "target": "正文/第067章_证件上的芽.md",
-  "accepted_prose_sha256": "895fe1f45d79d517b33938032bc7b07b527d7b9745b20bb2bcd5e3061ae790c3",
+  "accepted_prose_sha256": "16a1be5c133ddbab3450928257bd6dfb0f91843db8eb4309b2f241371cdc810d",
   "candidate_id": "C20261004-220034",
   "candidate_manifest": "追踪/候选章/第067章/C20261004-220034/manifest.json",
   "context_digest": "5ae04d15315b470c15ce3ec0f9ca36052051ac84a78da79a98f8f2045e4094df",
   "state_revision_before": 10,
-  "state_revision_after": 219,
+  "state_revision_after": 263,
   "accepted_at": "2026-10-04T14:07:40Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复定稿，接纳第067章候选。",
@@ -27,6 +27,14 @@
       "old_sha256": "baf2446860b9f275309115feb5948b0535b95f365ecd986c7afa9e458b4b7c9f",
       "new_sha256": "895fe1f45d79d517b33938032bc7b07b527d7b9745b20bb2bcd5e3061ae790c3",
       "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-02T00:23:17Z",
+      "reason": "补清不退小票从手中到窗台的动作，避免遗留物凭空出现",
+      "old_sha256": "895fe1f45d79d517b33938032bc7b07b527d7b9745b20bb2bcd5e3061ae790c3",
+      "new_sha256": "16a1be5c133ddbab3450928257bd6dfb0f91843db8eb4309b2f241371cdc810d",
+      "state_revision": 263,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

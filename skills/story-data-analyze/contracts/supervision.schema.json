@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/supervision.schema.json",
+  "title": "Observe-only workflow supervision",
+  "type": "object",
+  "required": [
+    "mode", "decision", "stage_checks", "novel_edits_made", "artifact_hashes_verified",
+    "role_separation_verified", "reviewed_chain_head_sha256", "accepted_findings",
+    "rejected_findings", "report_claims", "final_strength_cap", "input_artifact_hashes"
+  ],
+  "properties": {
+    "mode": {"const": "OBSERVE_ONLY"},
+    "decision": {"enum": ["PASS", "RETURN", "BLOCKED"]},
+    "stage_checks": {"type": "array", "minItems": 8, "maxItems": 8, "items": {"type": "object"}},
+    "novel_edits_made": {"const": false},
+    "artifact_hashes_verified": {"type": "boolean"},
+    "role_separation_verified": {"type": "boolean"},
+    "reviewed_chain_head_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "accepted_findings": {"type": "array", "items": {"type": "object"}},
+    "rejected_findings": {"type": "array", "items": {"type": "object"}},
+    "report_claims": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "final_strength_cap": {"enum": ["OBSERVED_ONLY", "DIRECTIONAL_ONLY", "NON_CAUSAL_ASSOCIATION", "CAUSAL_ALLOWED"]},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "additionalProperties": true
+}

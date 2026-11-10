@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "default_action": "advisory",
+  "patterns": [
+    {
+      "id": "action-explanation-tail",
+      "scope": "paragraph",
+      "semantic_risk": "high",
+      "signals": ["动作或对话已经表达结果，随后旁白再次解释人物情绪或意义"],
+      "exclusions": ["人物得出新的可行动结论", "第一人称自我欺骗", "悬疑中的错误归因"],
+      "preservation": "保留新的认知、决定和后果，只删除重复解释",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "dialogue-interpretation-tail",
+      "scope": "scene",
+      "semantic_risk": "high",
+      "signals": ["台词已暴露立场，叙述者紧接着替读者翻译同一立场"],
+      "exclusions": ["言行不一致", "视角人物误读", "台词存在双关或反话"],
+      "preservation": "保留信息差、误读和关系变化",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "uniform-beat-shape",
+      "scope": "chapter",
+      "semantic_risk": "medium",
+      "signals": ["多个场景重复使用冲突、解释、金句、钩子的同一落点", "段落长度与收束方式长期一致"],
+      "exclusions": ["有意的仪式结构", "喜剧重复", "倒计时或审判场景"],
+      "preservation": "保持事件顺序和节奏功能，只改变不必要的同构表达",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "voice-convergence",
+      "scope": "chapter",
+      "semantic_risk": "high",
+      "signals": ["不同人物都使用完整、正确、会总结的相同句式", "不同身份共享同一抽象词和情绪表达"],
+      "exclusions": ["正式会议", "共同背诵或训练", "同一组织的固定术语"],
+      "preservation": "按人物样本恢复词汇、句长、回避方式和信息权限",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "cross-chapter-reaction-loop",
+      "scope": "cross-chapter",
+      "semantic_risk": "medium",
+      "signals": ["同一身体反应跨章重复承担不同情绪"],
+      "exclusions": ["角色稳定症状", "伏笔症状", "创伤触发或能力代价"],
+      "preservation": "保留设定性症状和情绪强度，改变无角色归属的模板反应",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    },
+    {
+      "id": "metaphor-loop",
+      "scope": "chapter",
+      "semantic_risk": "medium",
+      "signals": ["同一比喻域反复解释不同场景", "每个情绪节点都补一个精致比喻"],
+      "exclusions": ["主题意象", "伏笔意象", "角色固定认知框架"],
+      "preservation": "保留有回收价值的主题意象和最有功能的少数比喻",
+      "auto_fix": false,
+      "evidence_status": "candidate"
+    }
+  ]
+}

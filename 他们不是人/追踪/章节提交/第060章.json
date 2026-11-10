@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 60,
   "target": "正文/第060章_不回答.md",
-  "accepted_prose_sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66",
+  "accepted_prose_sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450",
   "candidate_id": "C20261004-120147",
   "candidate_manifest": "追踪/候选章/第060章/C20261004-120147/manifest.json",
   "context_digest": "e0b69515e43bd70e3bb0301ff051a408cdbc215b054e3acf16deb0cfaabee499",
   "state_revision_before": 3,
-  "state_revision_after": 219,
+  "state_revision_after": 258,
   "accepted_at": "2026-10-04T04:02:05Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复定稿",
@@ -19,6 +19,14 @@
       "old_sha256": "0e64c76b900318c181bc7b39d3255366130f9c586a58c4ae712803a2a57eac3a",
       "new_sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66",
       "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-01T06:59:33Z",
+      "reason": "普通维修与验收分离，纠正服装和待修表物件动作",
+      "old_sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66",
+      "new_sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450",
+      "state_revision": 258,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

@@ -1,0 +1,4 @@
+interface:
+  display_name: "小说指标树与五 Agent 改进验证"
+  short_description: "按指标树下钻异动，经抓取、分析、独立校验、文本定位和看守门禁形成单变量实验"
+  default_prompt: "使用 $story-data-analyze 运行指标树 + 五 Agent 门禁流程：抓取并冻结最新数据，识别异动后联查和下钻，独立复算反证，只对已验证断点阅读具体章节/段落并设计单变量修改实验，最后由 supervisor 验收 hash 链与全部 gate。"

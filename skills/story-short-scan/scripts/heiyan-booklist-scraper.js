@@ -19,7 +19,8 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ab, sleep, evalJSON, safeStr, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSON, safeStr, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 const BOOKLIST_URL = "https://manage.zhangwenpindu.cn/books/booklist";
 const API_BASE = "https://ms.zhangwenpindu.cn";
@@ -103,7 +104,6 @@ function outputFilename(channel, date) {
 }
 
 function buildAndSave(allBooks, total, filtered, filepath) {
-  const now = new Date().toISOString();
   const maleBooks = filtered.filter((b) => b.classifyStr === "男频");
   const femaleBooks = filtered.filter((b) => b.classifyStr === "女频");
   const otherBooks = filtered.filter(
@@ -122,7 +122,8 @@ function buildAndSave(allBooks, total, filtered, filepath) {
     `# 黑岩 · 书库列表`,
     "",
     `- 来源：${BOOKLIST_URL}`,
-    `- 抓取时间：${now}`,
+    `- 抓取时间（UTC）：${RUN_CLOCK.utc}`,
+    `- 报告日期（本地）：${RUN_CLOCK.localDate}`,
     `- 总条目：${total}`,
     `- 已采集：${filtered.length} 条（${PAGES} 页）`,
     DETAIL ? "- 含详情（标签、简介）" : "- 列表模式（加 --detail 获取标签和简介）",
@@ -181,7 +182,7 @@ function main() {
   console.log("\n→ 采集 黑岩书库列表（API 模式）...");
   console.log(`  计划采集: ${PAGES} 页（每页 ${PAGE_SIZE} 条）`);
 
-  const date = localDateStamp();
+  const date = RUN_CLOCK.localDate;
   const filename = outputFilename(CHANNEL, date);
   const filepath = path.join(OUTDIR, filename);
 

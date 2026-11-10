@@ -1,0 +1,88 @@
+{
+  "schema_version": "metric-tree.v1",
+  "catalog_ref": "metrics.v1.json",
+  "design_rules": [
+    "质量门先于业务树；任一关键质量门失败，受影响分支不得做内容归因。",
+    "指标树表达业务因果顺序和计算关系；只有标注 exact_identity 的边才可做精确乘法/加法分解。",
+    "长篇的分发、章节、回访指标分母和 cohort 不同，根节点是概念综合结果，不伪造总分。",
+    "短故事在同 story_id、period、platform_scope 下可作完整漏斗乘法分解。",
+    "channel 是维度，不将书城/分类/搜索等成员展开成重复指标。"
+  ],
+  "quality_gate_order": [
+    "dq.freshness", "dq.completeness", "dq.validity", "dq.synchronization", "dq.consistency", "dq.versioning", "dq.comparability", "dq.contamination", "dq.stability"
+  ],
+  "trees": [
+    {
+      "id": "dq", "name": "数据质量门禁树", "node_type": "quality_root", "formula": null,
+      "children": [
+        {"id": "dq.freshness", "name": "时效", "metric_ids": ["dq_snapshot_freshness_lag_hours"], "gate": "BLOCK if data_until is not the required cutoff or the platform has not stabilized"},
+        {"id": "dq.completeness", "name": "完整", "metric_ids": ["dq_snapshot_completeness_rate", "dq_required_field_missing_count"], "gate": "BLOCK affected branch when required fields are absent or unparseable"},
+        {"id": "dq.validity", "name": "合法性", "metric_ids": ["dq_null_zero_ambiguity_count", "dq_funnel_monotonicity_violation_count", "dq_ratio_bounds_violation_count"], "gate": "BLOCK affected rate or transition until zero semantics and mathematical bounds are valid"},
+        {"id": "dq.synchronization", "name": "字段同步", "metric_ids": ["dq_field_sync_lag_count"], "gate": "Use synchronized absolute counts or wait; never copy a stale displayed ratio"},
+        {"id": "dq.consistency", "name": "内部一致性", "metric_ids": ["dq_channel_balance_gap"], "gate": "Investigate attribution/sync when balance fails; do not infer content"},
+        {"id": "dq.versioning", "name": "版本覆盖", "metric_ids": ["dq_version_coverage_status"], "gate": "NOT_COVERED => 数据未覆盖改动; PARTIAL_DAY_COVERED != 完整自然日; 时间覆盖不替代线上版本证据"},
+        {"id": "dq.comparability", "name": "口径可比", "metric_ids": ["dq_scope_comparability_status"], "gate": "Incomparable observations cannot support improvement/regression judgment"},
+        {"id": "dq.contamination", "name": "样本污染", "metric_ids": ["dq_self_visit_risk"], "gate": "Confirmed contamination => 样本受自访污染; unconfirmed search dominance => ask and downgrade"},
+        {"id": "dq.stability", "name": "回填稳定", "metric_ids": ["dq_backfill_instability_count"], "gate": "Material same-cutoff backfill keeps conclusion provisional"}
+      ]
+    },
+    {
+      "id": "long", "name": "长篇可持续有效阅读树", "node_type": "conceptual_business_root", "formula": null,
+      "formula_reason": "分发、累计章节、14日在读、7日追更和日互动的窗口/分母不一致，不能乘成一个伪综合分。",
+      "diagnostic_order": ["long.distribution", "long.packaging", "long.golden_three", "long.depth", "long.return_engagement", "long.active_scale"],
+      "children": [
+        {
+          "id": "long.distribution", "name": "分发与入口规模", "node_type": "block", "formula": null,
+          "children": [
+            {"id": "long.distribution.exposure", "name": "展示机会（当前不可用）", "metric_ids": ["long_impressions"]},
+            {"id": "long.distribution.reach", "name": "日阅读规模", "metric_ids": ["long_daily_readers"]},
+            {"id": "long.distribution.channel_mix", "name": "渠道结构", "metric_ids": ["long_channel_readers", "long_channel_share", "long_search_share", "long_distribution_concentration"], "identity": {"type": "conditional_identity", "expression": "long_daily_readers = sum_channel(long_channel_readers)", "condition": "dq_channel_balance_gap=0 for this snapshot; this does not prove permanent mutual exclusivity"}}
+          ]
+        },
+        {"id": "long.packaging", "name": "包装承接", "node_type": "block", "metric_ids": ["long_display_to_read_rate"], "availability": "unavailable_in_current_pull", "direct_surfaces": ["title", "cover", "intro", "chapter_1_opening"]},
+        {
+          "id": "long.golden_three", "name": "黄金三章激活", "node_type": "block", "metric_ids": ["long_first_three_retention_rate", "long_first_three_retained_count"],
+          "identity": {"type": "exact_if_synchronized_unrounded_same_cohort", "expression": "A4/A1 = (A2/A1) * (A3/A2) * (A4/A3)"},
+          "children": [
+            {"id": "long.activation_depth.chapter_curve", "name": "累计到达曲线", "metric_ids": ["long_chapter_reach_rate", "long_chapter_reach_count"]},
+            {"id": "long.activation_depth.transition", "name": "条件跟读边界", "metric_ids": ["long_chapter_follow_rate_displayed", "long_chapter_follow_rate_sync", "long_chapter_transition_loss_count"], "ordered_dimensions": {"chapter_index": [1, 2, 3]}, "direct_surfaces": ["chapter_n_full", "chapter_n_ending", "chapter_n_plus_1_title_and_opening"]}
+          ]
+        },
+        {
+          "id": "long.depth", "name": "中深度阅读", "node_type": "block", "metric_ids": ["long_deep_chapter_reach_rate", "long_deep_chapter_reach_count", "long_word_completion_rate"],
+          "children": [
+            {"id": "long.depth_return", "name": "追平最新章规模", "metric_ids": ["long_latest_chapter_reach_count"]},
+            {"id": "long.depth_quality", "name": "深度曲线质量", "metric_ids": ["long_nonsequential_reach_violation_count"]}
+          ]
+        },
+        {
+          "id": "long.return_engagement", "name": "回访与互动", "node_type": "block", "formula": null, "formula_reason": "资格人群不同，不得统一除以在读或日阅读。",
+          "children": [
+            {"id": "long.return.entry", "name": "继续阅读入口", "metric_ids": ["long_continue_reading_share"]},
+            {"id": "long.engagement.save_value", "name": "保存价值", "metric_ids": ["long_add_shelf_count", "long_shelf_per_daily_reader_proxy"]},
+            {"id": "long.engagement.follow_serial", "name": "连载追读", "metric_ids": ["long_chase_count", "long_chase_per_daily_reader_proxy"]},
+            {"id": "long.engagement.expectation", "name": "待更期待", "metric_ids": ["long_urge_count"]},
+            {"id": "long.engagement.expression", "name": "表达与讨论", "metric_ids": ["long_comment_count", "long_comment_per_daily_reader_proxy"]},
+            {"id": "long.engagement.satisfaction", "name": "评分满意度", "metric_ids": ["long_rating"]}
+          ]
+        },
+        {"id": "long.active_scale", "name": "近期活跃规模", "node_type": "outcome_block", "metric_ids": ["long_rolling_14d_readers"], "identity": {"type": "non_additive_rolling_unique", "expression": null, "warning": "R_t-R_(t-1) is entry plus rollout net effect, not exact acquisition or churn"}}
+      ]
+    },
+    {
+      "id": "short", "name": "短故事有效触底漏斗树", "node_type": "exact_funnel_root",
+      "formula": "short_finish_readers = short_impressions * short_click_rate * short_15s_retention * short_15s_to_30_rate * short_30s_to_60_rate * short_60s_to_finish_rate",
+      "formula_conditions": ["same story_id", "same period", "same platform_scope", "same data_until", "no funnel quality violation", "rates use raw counts rather than independently rounded displays"],
+      "diagnostic_order": ["short.distribution", "short.packaging", "short.opening.15s", "short.opening.30s", "short.opening.60s", "short.completion"],
+      "children": [
+        {"id": "short.distribution", "name": "展示规模", "metric_ids": ["short_impressions"], "direct_surfaces": [], "warning": "low display alone is not a body-text diagnosis"},
+        {"id": "short.packaging", "name": "展示到阅读", "metric_ids": ["short_readers", "short_click_rate", "short_click_loss_count"], "direct_surfaces": ["title", "cover", "opening_lead"]},
+        {"id": "short.opening.15s", "name": "阅读到15秒", "metric_ids": ["short_15s_readers", "short_15s_retention"], "text_window": "opening through approximately first 300 Chinese characters"},
+        {"id": "short.opening.30s", "name": "15到30秒", "metric_ids": ["short_30s_readers", "short_15s_to_30_rate"], "text_window": "read from opening; focus approximately characters 300-1000"},
+        {"id": "short.opening.60s", "name": "30到60秒", "metric_ids": ["short_60s_readers", "short_30s_to_60_rate"], "text_window": "read from opening; focus approximately characters 500-2000"},
+        {"id": "short.completion", "name": "60秒到触底", "metric_ids": ["short_finish_readers", "short_60s_to_finish_rate", "short_overall_finish_rate"], "text_window": "after approximately 2000 characters through ending; inspect whole middle-to-end units"},
+        {"id": "short.funnel_diagnostics", "name": "漏斗路由辅助", "metric_ids": ["short_stage_loss_count", "short_earliest_abnormal_stage_index"], "role": "select earliest material abnormal conditional stage after gates; never replaces text verification"}
+      ]
+    }
+  ]
+}

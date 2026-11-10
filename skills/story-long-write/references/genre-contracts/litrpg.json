@@ -1,0 +1,36 @@
+{
+  "contract_version": "1.0",
+  "genre_id": "litrpg",
+  "display_name": "数值冒险",
+  "aliases": ["数值冒险", "数值流", "属性流", "LitRPG", "游戏化冒险"],
+  "markets": ["海外长篇", "中文长篇"],
+  "languages": ["zh", "en"],
+  "core_promise": "数值、技能和装备不是装饰，而是读者可以理解、预测并用于期待战斗结果的稳定因果系统。",
+  "chapter_types": [
+    {"id": "system-discovery", "name": "系统发现", "purpose": "通过行动确认一条可复用的系统规则"},
+    {"id": "build-choice", "name": "构筑选择", "purpose": "在互斥技能、属性或装备路线间做有代价的决定"},
+    {"id": "combat-test", "name": "战斗验证", "purpose": "让数值和技能组合在压力下产生可解释结果"},
+    {"id": "resource-run", "name": "资源获取", "purpose": "为明确的升级目标获取并消耗有限资源"},
+    {"id": "progression-payoff", "name": "成长兑现", "purpose": "把前期投入转化为新打法、权限或生存边界"}
+  ],
+  "satisfaction_types": ["升级", "技能解锁", "构筑成型", "装备协同", "数值反杀", "资源目标达成", "隐藏规则被验证"],
+  "conflict_engine": ["升级资源有限", "构筑选择互斥", "敌人针对既有打法", "数值优势与情境限制冲突", "短期收益与长期成长冲突"],
+  "pacing_rule": {
+    "opening": "前三章展示最少一项属性、一个可执行规则、一次行动结算和一个明确成长目标。",
+    "early": "早期每一至三章出现一次有意义的成长，但每次成长必须改变可做之事。",
+    "middle": "成长间隔拉长到五至十章，通过构筑协同和敌人针对替代频繁升级。",
+    "late": "数值增长让位于规则权限、组合创新和世界系统真相。",
+    "milestone": "每个剧情单元至少完成一次构筑选择与一次压力验证。"
+  },
+  "numerical_system": {"enabled": true, "rules": ["主属性、派生属性和技能效果保持固定定义", "面板优先在行动后结算，不在战斗高潮中连续打断", "同资源重复投入要有递减、上限或机会成本", "重要数值先用叙事说明意义，再展示面板"]},
+  "power_scaling": {"model": "属性、技能、装备、资源和规则权限共同成长", "gates": ["技能解锁必须满足已声明条件", "跨级胜利必须来自构筑、情报、环境或代价", "新能力不能让旧系统全部失效"]},
+  "reader_contract": ["关键数值可以回溯", "升级改变行动能力而非只改变数字", "构筑选择有机会成本", "战斗结果能由规则和选择解释"],
+  "forbidden_drift": ["同一属性前后含义变化", "未满足条件突然解锁技能", "连续面板淹没行动", "战斗中临时新增规则救场", "数值巨大但场景表现没有差异"],
+  "review_gates": [
+    {"id": "stat-consistency", "severity": "blocking", "check": "关键属性、派生值、技能条件和消耗是否前后一致"},
+    {"id": "earned-unlock", "severity": "blocking", "check": "技能、装备和权限是否满足已铺垫的解锁条件"},
+    {"id": "narrative-impact", "severity": "major", "check": "数值变化是否实际改变角色选择或场景结果"},
+    {"id": "ui-interruption", "severity": "minor", "check": "面板展示是否打断战斗、情绪或有声阅读连贯性"}
+  ],
+  "evidence": {"confidence": "medium", "basis": ["InkOS 题材机制", "oh-story 游戏体育、玄幻脑洞、升级与连续性方法"], "adaptation_note": "从游戏赛事题材中拆出独立的数值因果、构筑和界面叙事契约。"}
+}

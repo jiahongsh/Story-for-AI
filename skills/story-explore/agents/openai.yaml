@@ -1,0 +1,4 @@
+interface:
+  display_name: "作品查询"
+  short_description: "Read-only story state queries with traceable artifact citations"
+  default_prompt: "Use $story-explore to answer a question from one isolated story project with artifact citations."

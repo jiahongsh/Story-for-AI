@@ -23,7 +23,7 @@ from typing import Any
 
 
 INPUT_SCHEMA_VERSION = 1
-TRACKING_SCHEMA_VERSION = 4
+TRACKING_SCHEMA_VERSION = 5
 DELTA_TARGET_BYTES = 1536
 DELTA_MAX_BYTES = 3072
 CONTEXT_TARGET_BYTES = 8192
@@ -40,12 +40,31 @@ CONTEXT_HEADINGS = (
     "## 下一章承诺",
     "## 连贯性风险",
 )
+# 跨章连续性守卫字段：这两项一旦被无声改写，就是「上一章住宿舍、下一章骑车从家出发」
+# 「上一章娘摆针线摊、下一章变卖菜摊」这类读者一眼看穿的硬伤。改它们必须报旧值。
+# 位置与持有物进热上下文时按字节截断。两者的 schema 上限分别是 240 和每项 384，
+# 6 个活跃角色原样铺开最坏能给热上下文多加约 6KB，直接把 12288 的硬顶顶穿，
+# 届时作者只会看到「hot context exceeds」而不知道该删哪。热上下文本来就是摘要：
+# 让写作端知道「人在学校宿舍」就够了，精确原文在 角色状态/{名}.md，
+# 而申报 continuity_changes 的 from 要求匹配完整值，正好逼模型去读那份文件。
+CONTEXT_FIELD_BYTES = 60
+GUARDED_SNAPSHOT_FIELDS = ("location", "abilities_resources")
+GUARDED_FIELD_LABEL = {"location": "位置", "abilities_resources": "持有物"}
+
 FORESHADOW_STATUSES = ("已埋", "已回收", "已过期", "放弃")
 FORESHADOW_IMPORTANCE = ("高", "中", "低")
 REVEAL_STATUSES = ("未揭示", "部分揭示", "已揭示")
 INVALID_FILE_CHARS = re.compile(r"[<>:\"/\\|?*\x00-\x1f]")
 FORESHADOW_ID = re.compile(r"^F\d{3,}$")
 EVENT_ID = re.compile(r"^E\d{3,}$")
+FACT_ID = re.compile(r"^[KR]\d{3,}$")
+FACT_CATEGORIES = (
+    "身份", "血缘", "亲属", "婚姻", "别名", "传承", "从属", "合作", "敌对",
+    "所有权", "规则", "权限", "不可逆状态", "历史因果", "其他",
+)
+RELATION_CATEGORIES = {"血缘", "亲属", "婚姻", "传承", "从属", "合作", "敌对"}
+FACT_CARDINALITIES = ("one", "many")
+FACT_CANON_STATUSES = ("锁定设定", "正文已证")
 WINDOWS_RESERVED_NAMES = {
     "CON",
     "PRN",
@@ -130,6 +149,15 @@ def portable_name_key(name: str) -> str:
 
 def byte_size(text: str) -> int:
     return len(text.encode("utf-8"))
+
+
+def clip_bytes(text: str, limit: int) -> str:
+    if byte_size(text) <= limit:
+        return text
+    clipped = text
+    while byte_size(clipped) > limit - 3:
+        clipped = clipped[:-1]
+    return clipped + "…"
 
 
 def emit(text: str, *, error: bool = False) -> None:
@@ -502,6 +530,182 @@ def render_timeline_views(events: dict[str, dict[str, Any]], revision: int) -> t
     return "\n".join(author_lines) + "\n", "\n".join(reader_lines) + "\n"
 
 
+def normalize_fact_change(
+    value: object,
+    label: str,
+    *,
+    allow_delete: bool,
+    through_chapter: int,
+) -> dict[str, Any]:
+    fact = as_mapping(value, label)
+    require_known_keys(
+        fact,
+        {
+            "action", "id", "category", "subject", "predicate", "object", "cardinality",
+            "canon_status", "reader_status", "reveal_chapter", "established_chapter",
+            "evidence", "related_entities", "negative_constraints",
+        },
+        label,
+    )
+    action = clean_text(fact.get("action", "upsert"), f"{label}.action", max_bytes=24)
+    require(action in ({"upsert", "delete"} if allow_delete else {"upsert"}), f"{label}.action is invalid")
+    identifier = clean_text(fact.get("id"), f"{label}.id", max_bytes=24)
+    require(FACT_ID.fullmatch(identifier) is not None, f"{label}.id must look like K001 or R001")
+    if action == "delete":
+        return {"action": action, "id": identifier}
+
+    category = clean_text(fact.get("category"), f"{label}.category", max_bytes=24)
+    require(category in FACT_CATEGORIES, f"{label}.category must be one of {FACT_CATEGORIES}")
+    cardinality = clean_text(fact.get("cardinality"), f"{label}.cardinality", max_bytes=16)
+    require(cardinality in FACT_CARDINALITIES, f"{label}.cardinality must be one of {FACT_CARDINALITIES}")
+    canon_status = clean_text(fact.get("canon_status"), f"{label}.canon_status", max_bytes=24)
+    require(canon_status in FACT_CANON_STATUSES, f"{label}.canon_status must be one of {FACT_CANON_STATUSES}")
+    reader_status = clean_text(fact.get("reader_status"), f"{label}.reader_status", max_bytes=24)
+    require(reader_status in REVEAL_STATUSES, f"{label}.reader_status must be one of {REVEAL_STATUSES}")
+    reveal_raw = fact.get("reveal_chapter")
+    reveal_chapter = None if reveal_raw is None else as_int(reveal_raw, f"{label}.reveal_chapter", minimum=1)
+    if reader_status == "未揭示":
+        require(reveal_chapter is None, f"{label} must not put a future reveal chapter in established facts")
+    else:
+        require(reveal_chapter is not None, f"{label}.reveal_chapter is required once revealed")
+        require(reveal_chapter <= through_chapter, f"{label}.reveal_chapter cannot be in the future")
+    established = as_int(fact.get("established_chapter", 0), f"{label}.established_chapter")
+    require(established <= through_chapter, f"{label}.established_chapter cannot be in the future")
+    evidence = clean_string_list(fact.get("evidence", []), f"{label}.evidence", maximum=12, item_max_bytes=480)
+    require(evidence, f"{label}.evidence must contain at least one source reference")
+    related_entities = [
+        safe_file_component(item, f"{label}.related_entities[{index}]")
+        for index, item in enumerate(as_list(fact.get("related_entities", []), f"{label}.related_entities"))
+    ]
+    require(len(related_entities) <= 12, f"{label}.related_entities may contain at most 12 items")
+    require(
+        len({portable_name_key(item) for item in related_entities}) == len(related_entities),
+        f"{label}.related_entities contains duplicates",
+    )
+    if category in RELATION_CATEGORIES:
+        require(related_entities, f"{label}.related_entities is required for relationship facts")
+    return {
+        "action": action,
+        "id": identifier,
+        "category": category,
+        "subject": clean_text(fact.get("subject"), f"{label}.subject", max_bytes=180),
+        "predicate": clean_text(fact.get("predicate"), f"{label}.predicate", max_bytes=180),
+        "object": clean_text(fact.get("object"), f"{label}.object", max_bytes=360),
+        "cardinality": cardinality,
+        "canon_status": canon_status,
+        "reader_status": reader_status,
+        "reveal_chapter": reveal_chapter,
+        "established_chapter": established,
+        "evidence": evidence,
+        "related_entities": related_entities,
+        "negative_constraints": clean_string_list(
+            fact.get("negative_constraints", []), f"{label}.negative_constraints", maximum=8, item_max_bytes=360
+        ),
+    }
+
+
+def fact_slot_key(fact: dict[str, Any]) -> tuple[str, str]:
+    return (portable_name_key(fact["subject"]), portable_name_key(fact["predicate"]))
+
+
+def validate_fact_set(facts: dict[str, dict[str, Any]]) -> None:
+    triples: dict[tuple[str, str, str], str] = {}
+    slots: dict[tuple[str, str], list[tuple[str, dict[str, Any]]]] = {}
+    for identifier, fact in facts.items():
+        triple = (*fact_slot_key(fact), portable_name_key(fact["object"]))
+        previous = triples.get(triple)
+        require(previous is None or previous == identifier, f"fact {identifier} duplicates the same triple as {previous}")
+        triples[triple] = identifier
+        slots.setdefault(fact_slot_key(fact), []).append((identifier, fact))
+    for slot, rows in slots.items():
+        if not any(row["cardinality"] == "one" for _, row in rows):
+            continue
+        objects = {portable_name_key(row["object"]) for _, row in rows}
+        require(
+            len(objects) == 1,
+            f"single-valued canon slot {slot[0]} / {slot[1]} has conflicting objects: "
+            + ", ".join(identifier for identifier, _ in rows),
+        )
+
+
+def normalize_fact_state(value: object, last_chapter: int) -> dict[str, dict[str, Any]]:
+    rows = as_mapping(value, "tracking state.facts")
+    normalized: dict[str, dict[str, Any]] = {}
+    for raw_identifier, raw_fact in rows.items():
+        identifier = clean_text(raw_identifier, "tracking state.facts ID", max_bytes=24)
+        fact = as_mapping(raw_fact, f"tracking state.facts.{identifier}")
+        require_known_keys(
+            fact,
+            {
+                "id", "category", "subject", "predicate", "object", "cardinality", "canon_status",
+                "reader_status", "reveal_chapter", "established_chapter", "evidence", "related_entities",
+                "negative_constraints", "first_recorded_chapter", "updated_chapter",
+            },
+            f"tracking state.facts.{identifier}",
+        )
+        require(fact.get("id") == identifier, f"tracking state.facts.{identifier}.id does not match its key")
+        change = normalize_fact_change(
+            {
+                "action": "upsert",
+                **{
+                    key: item
+                    for key, item in fact.items()
+                    if key not in {"first_recorded_chapter", "updated_chapter"}
+                },
+            },
+            f"tracking state.facts.{identifier}",
+            allow_delete=False,
+            through_chapter=last_chapter,
+        )
+        change.pop("action")
+        first = as_int(fact.get("first_recorded_chapter"), f"tracking state.facts.{identifier}.first_recorded_chapter")
+        updated = as_int(fact.get("updated_chapter"), f"tracking state.facts.{identifier}.updated_chapter")
+        require(first <= last_chapter, f"fact {identifier} starts after current chapter")
+        require(updated <= last_chapter, f"fact {identifier} updates after current chapter")
+        change["first_recorded_chapter"] = first
+        change["updated_chapter"] = updated
+        normalized[identifier] = change
+    validate_fact_set(normalized)
+    return normalized
+
+
+def fact_reveal_label(fact: dict[str, Any]) -> str:
+    if fact["reader_status"] == "未揭示":
+        return "未揭示"
+    return f"{fact['reader_status']}（第{fact['reveal_chapter']}章）"
+
+
+def render_fact_table(title: str, facts: dict[str, dict[str, Any]], revision: int) -> str:
+    lines = [
+        f"# {title}",
+        "",
+        f"> 状态修订：{revision}。由 `_tracking-state.json` 确定性生成，禁止手改。",
+        "",
+        "| ID | 类别 | 主体 | 关系/断言 | 客体/值 | 口径 | 读者状态 | 证据 | 禁止误读 | 最近变更章 |",
+        "|---|---|---|---|---|---|---|---|---|---:|",
+    ]
+    for identifier in sorted(facts):
+        fact = facts[identifier]
+        evidence = "；".join(fact["evidence"])
+        negatives = "；".join(fact["negative_constraints"]) or "—"
+        lines.append(
+            f"| {identifier} | {fact['category']} | {fact['subject']} | {fact['predicate']} | {fact['object']} | "
+            f"{fact['canon_status']}/{fact['cardinality']} | {fact_reveal_label(fact)} | {evidence} | "
+            f"{negatives} | 第{fact['updated_chapter']}章 |"
+        )
+    return "\n".join(lines) + "\n"
+
+
+def render_entity_dossier(entity: str, facts: dict[str, dict[str, Any]], revision: int) -> str:
+    selected = {
+        identifier: fact
+        for identifier, fact in facts.items()
+        if portable_name_key(fact["subject"]) == portable_name_key(entity)
+        or portable_name_key(entity) in {portable_name_key(item) for item in fact["related_entities"]}
+    }
+    return render_fact_table(f"{entity}｜长期事实档案", selected, revision)
+
+
 def validate_context_input(value: object, *, include_initial_fields: bool) -> dict[str, Any]:
     context = as_mapping(value, "context")
     allowed = {"position", "long_term_constraints", "active_character_names", "continuity_risks"}
@@ -565,11 +769,20 @@ def render_context(state: dict[str, Any]) -> str:
     current_chapter = (
         "尚未开篇" if state["last_committed_chapter"] == 0 else f"第{state['last_committed_chapter']}章"
     )
-    character_lines = [
-        f"{name}｜{state['characters'][name]['identity']}｜{state['characters'][name]['state']}｜"
-        f"目标：{state['characters'][name]['goal']}"
-        for name in context["active_character_names"]
-    ]
+    # 位置与持有物必须进热上下文。它们此前只存在快照文件里，而日更规则是
+    # 「核心复用角色若不在本节，才去读 角色状态/{名}.md」——主角必然在本节，
+    # 那条分支永不触发，于是写下一章时模型看不到人在哪、手里有什么。
+    # 实测后果：上一章写住校宿舍，下一章骑车从家出发；上一章娘摆针线摊，
+    # 下一章变卖菜摊。这两类是跨章连续性最高频的崩法。
+    character_lines = []
+    for name in context["active_character_names"]:
+        snapshot = state["characters"][name]
+        held = "；".join(snapshot["abilities_resources"][:2]) or "无"
+        character_lines.append(
+            f"{name}｜{snapshot['identity']}｜{snapshot['state']}｜"
+            f"位置：{clip_bytes(snapshot['location'], CONTEXT_FIELD_BYTES)}｜"
+            f"持有：{clip_bytes(held, CONTEXT_FIELD_BYTES)}｜目标：{snapshot['goal']}"
+        )
     sections: list[tuple[str, list[str]]] = [
         (
             "## 当前位置",
@@ -615,11 +828,25 @@ def normalize_delta(
     require_known_keys(
         delta,
         {
-            "result", "character_changes", "foreshadow_changes", "timeline_events", "constraints",
+            "result", "character_changes", "foreshadow_changes", "timeline_events", "fact_changes", "constraints",
             "next_chapter_commitments", "retired_context_items", "retired_characters",
+            "continuity_changes",
         },
         "delta",
     )
+    continuity_changes: list[dict[str, Any]] = []
+    for index, raw in enumerate(as_list(delta.get("continuity_changes", []), "delta.continuity_changes")):
+        item = as_mapping(raw, f"delta.continuity_changes[{index}]")
+        require_known_keys(item, {"name", "field", "from", "to", "reason"}, f"delta.continuity_changes[{index}]")
+        field = clean_text(item.get("field"), f"delta.continuity_changes[{index}].field", max_bytes=32)
+        require(field in GUARDED_SNAPSHOT_FIELDS, f"delta.continuity_changes[{index}].field must be one of {GUARDED_SNAPSHOT_FIELDS}")
+        continuity_changes.append({
+            "name": safe_file_component(item.get("name"), f"delta.continuity_changes[{index}].name"),
+            "field": field,
+            "from": clean_text(item.get("from"), f"delta.continuity_changes[{index}].from", max_bytes=480),
+            "to": clean_text(item.get("to"), f"delta.continuity_changes[{index}].to", max_bytes=480),
+            "reason": clean_text(item.get("reason"), f"delta.continuity_changes[{index}].reason", max_bytes=240),
+        })
     retired_characters = [
         safe_file_component(name, f"delta.retired_characters[{index}]")
         for index, name in enumerate(as_list(delta.get("retired_characters", []), "delta.retired_characters"))
@@ -656,6 +883,12 @@ def normalize_delta(
         )
         for index, raw in enumerate(as_list(delta.get("timeline_events", []), "delta.timeline_events"))
     ]
+    fact_changes = [
+        normalize_fact_change(
+            raw, f"delta.fact_changes[{index}]", allow_delete=True, through_chapter=through_chapter
+        )
+        for index, raw in enumerate(as_list(delta.get("fact_changes", []), "delta.fact_changes"))
+    ]
     require(
         len({item["id"] for item in foreshadow_changes}) == len(foreshadow_changes),
         "delta.foreshadow_changes contains duplicate IDs",
@@ -663,6 +896,10 @@ def normalize_delta(
     require(
         len({item["id"] for item in timeline_events}) == len(timeline_events),
         "delta.timeline_events contains duplicate IDs",
+    )
+    require(
+        len({item["id"] for item in fact_changes}) == len(fact_changes),
+        "delta.fact_changes contains duplicate IDs",
     )
     require(
         set(snapshots).issubset({item["name"] for item in character_changes}),
@@ -673,6 +910,7 @@ def normalize_delta(
         "character_changes": character_changes,
         "foreshadow_changes": foreshadow_changes,
         "timeline_events": timeline_events,
+        "fact_changes": fact_changes,
         "constraints": clean_string_list(delta.get("constraints", []), "delta.constraints", maximum=6),
         "next_chapter_commitments": clean_string_list(
             delta.get("next_chapter_commitments", []), "delta.next_chapter_commitments", maximum=5
@@ -681,6 +919,7 @@ def normalize_delta(
             delta.get("retired_context_items", []), "delta.retired_context_items", maximum=11
         ),
         "retired_characters": retired_characters,
+        "continuity_changes": continuity_changes,
     }
 
 
@@ -718,10 +957,29 @@ def render_delta(chapter: int, title: str, delta: dict[str, Any], core_names: se
             )
     if not delta["timeline_events"]:
         lines.append("- 无")
+    lines.extend(["", "## 长期事实变化"])
+    for item in delta["fact_changes"]:
+        if item["action"] == "delete":
+            lines.append(f"- {item['id']}｜删除当前登记")
+        else:
+            lines.append(
+                f"- {item['id']}｜{item['category']}｜{item['subject']} {item['predicate']} {item['object']}｜"
+                f"{item['canon_status']}｜{fact_reveal_label(item)}"
+            )
+    if not delta["fact_changes"]:
+        lines.append("- 无")
     lines.extend(["", "## 连贯性约束"])
     lines.extend(f"- {item}" for item in delta["constraints"])
     if not delta["constraints"]:
         lines.append("- 无")
+    if delta.get("continuity_changes"):
+        # 位置/持有物的改动单列一节：这两项是跨章硬伤高发区，出问题时要能一眼
+        # 翻到是哪一章、从什么改成什么、给的理由是什么。
+        lines.extend(["", "## 跨章连续性变更"])
+        lines.extend(
+            f"- {item['name']}｜{GUARDED_FIELD_LABEL[item['field']]}｜{item['from']} → {item['to']}｜{item['reason']}"
+            for item in delta["continuity_changes"]
+        )
     retired = delta.get("retired_context_items", []) + [
         f"角色状态：{name}" for name in delta.get("retired_characters", [])
     ]
@@ -741,7 +999,7 @@ def normalize_state(document: object) -> dict[str, Any]:
         root,
         {
             "schema_version", "book_title", "last_committed_chapter", "imported_through_chapter",
-            "state_revision", "context", "characters", "foreshadow", "timeline",
+            "state_revision", "context", "characters", "foreshadow", "timeline", "facts",
         },
         "tracking state",
     )
@@ -763,6 +1021,7 @@ def normalize_state(document: object) -> dict[str, Any]:
         require(name in characters, f"active core character {name} has no current snapshot")
     foreshadow = normalize_foreshadow_state(root.get("foreshadow", {}), last_chapter)
     timeline = normalize_timeline_state(root.get("timeline", {}), last_chapter)
+    facts = normalize_fact_state(root.get("facts", {}), last_chapter)
     if last_chapter == 0:
         require(not foreshadow, "a chapter-0 project cannot have planted foreshadow facts")
         require(not timeline, "a chapter-0 project cannot have established timeline facts")
@@ -776,6 +1035,7 @@ def normalize_state(document: object) -> dict[str, Any]:
         "characters": characters,
         "foreshadow": foreshadow,
         "timeline": timeline,
+        "facts": facts,
     }
 
 
@@ -789,7 +1049,10 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
     root = as_mapping(document, "init input")
     require_known_keys(
         root,
-        {"schema_version", "book_title", "last_chapter", "context", "character_snapshots", "foreshadow", "timeline_events"},
+        {
+            "schema_version", "book_title", "last_chapter", "context", "character_snapshots",
+            "foreshadow", "timeline_events", "facts",
+        },
         "init input",
     )
     require(root.get("schema_version") == INPUT_SCHEMA_VERSION, "init input schema_version is unsupported")
@@ -815,6 +1078,17 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
         event["first_recorded_chapter"] = max(1, last_chapter)
         event["updated_chapter"] = max(1, last_chapter)
         timeline[event["id"]] = event
+    facts: dict[str, dict[str, Any]] = {}
+    for index, raw_fact in enumerate(as_list(root.get("facts", []), "facts")):
+        fact = normalize_fact_change(
+            raw_fact, f"facts[{index}]", allow_delete=False, through_chapter=last_chapter
+        )
+        require(fact["id"] not in facts, f"duplicate fact ID {fact['id']}")
+        fact.pop("action")
+        fact["first_recorded_chapter"] = last_chapter
+        fact["updated_chapter"] = last_chapter
+        facts[fact["id"]] = fact
+    validate_fact_set(facts)
     return normalize_state(
         {
             "schema_version": TRACKING_SCHEMA_VERSION,
@@ -826,6 +1100,7 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
             "characters": snapshots,
             "foreshadow": foreshadow,
             "timeline": timeline,
+            "facts": facts,
         }
     )
 
@@ -882,6 +1157,88 @@ def checkpoint_record(
     if keep_first_chapter:
         current["first_recorded_chapter"] = previous["first_recorded_chapter"] if previous else chapter
     return current
+
+
+def guarded_field_value(snapshot: dict[str, Any], field: str) -> str:
+    """人看到的形态：保持存储顺序，与 角色状态/{名}.md 渲染出来的一致。
+
+    申报的 from 要跟这个比对，作者/模型从快照文件里照抄即可。
+    """
+    value = snapshot[field]
+    return "；".join(value) if isinstance(value, list) else value
+
+
+def guarded_field_key(snapshot: dict[str, Any], field: str) -> str:
+    """判「变没变」用的形态：列表排序后再比，顺序不算变化。
+
+    持有物列表重新生成时顺序常会抖动，按原序比会把纯重排判成改动，
+    逼作者为一个没发生的变化写申报——闸口一旦开始误报就会被忽略。
+    """
+    value = snapshot[field]
+    return "；".join(sorted(value)) if isinstance(value, list) else value
+
+
+def brief(text: str, limit: int = 60) -> str:
+    """错误信息里的旧值/新值要截断。
+
+    持有物是列表拼串，正常项目就可能上千字；原样拼进报错会刷屏，作者根本
+    看不到后面那句「该怎么办」。
+    """
+    return text if len(text) <= limit else f"{text[:limit]}…（共 {len(text)} 字）"
+
+
+def enforce_continuity_guard(state: dict[str, Any], transaction: dict[str, Any]) -> None:
+    """位置与持有物改变时，必须逐字报出库内旧值才放行。
+
+    新快照是整份覆盖，工具原先不比对，于是「学校宿舍 302 室」可以被一句
+    「家中（每日骑车走读）」无声顶掉，commit 和 check 全绿。这正是读者最容易
+    一眼看穿的那类硬伤（上一章住校、下一章骑车从家出发；上一章娘摆针线摊、
+    下一章变卖菜摊）。
+
+    要求 from 与库内旧值逐字相同，是这条守卫的关键：模型必须先去读旧值才写得
+    出来，光靠热上下文里那点信息猜不出。写对了说明它确实知道自己在改什么，
+    这时候再改就是有意为之，不是漂移。
+    """
+    acknowledged: dict[tuple[str, str], dict[str, Any]] = {}
+    for item in transaction["delta"]["continuity_changes"]:
+        key = (portable_name_key(item["name"]), item["field"])
+        require(key not in acknowledged, f"delta.continuity_changes 重复申报 {item['name']} 的 {item['field']}")
+        acknowledged[key] = item
+
+    for name, snapshot in transaction["snapshots"].items():
+        previous = state["characters"].get(name)
+        if previous is None:
+            continue
+        for field in GUARDED_SNAPSHOT_FIELDS:
+            before = guarded_field_value(previous, field)
+            after = guarded_field_value(snapshot, field)
+            if guarded_field_key(previous, field) == guarded_field_key(snapshot, field):
+                continue
+            label = GUARDED_FIELD_LABEL[field]
+            item = acknowledged.pop((portable_name_key(name), field), None)
+            require(
+                item is not None,
+                f"{name} 的{label}从「{brief(before)}」改成了「{brief(after)}」，但 delta.continuity_changes 没有申报。"
+                f"跨章连续性硬伤多数是这样无声发生的：先确认这次改动是剧情需要还是忘了上一章的设定，"
+                f"确实要改就补一条 {{name, field={field}, from, to, reason}}，from 必须是库内旧值原文。",
+            )
+            claimed_from = brief(item["from"])
+            claimed_to = brief(item["to"])
+            require(
+                item["from"] == before,
+                f"{name} 的{label}申报的 from 与库内旧值不符：申报「{claimed_from}」，库内是「{brief(before)}」。"
+                f"说明这次改动没有基于上一章的真实状态——先读 追踪/角色状态/{name}.md 再改。",
+            )
+            require(
+                item["to"] == after,
+                f"{name} 的{label}申报的 to 与新快照不符：申报「{claimed_to}」，快照是「{brief(after)}」。",
+            )
+
+    require(
+        not acknowledged,
+        "delta.continuity_changes 申报了并未发生的变更："
+        + "、".join(f"{name}.{field}" for name, field in sorted(acknowledged)),
+    )
 
 
 def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dict[str, Any]:
@@ -942,6 +1299,14 @@ def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dic
             next_state["timeline"][change["id"]] = checkpoint_record(
                 change, chapter, next_state["timeline"].get(change["id"]), keep_first_chapter=True
             )
+    for change in transaction["delta"]["fact_changes"]:
+        if change["action"] == "delete":
+            next_state["facts"].pop(change["id"], None)
+        else:
+            next_state["facts"][change["id"]] = checkpoint_record(
+                change, chapter, next_state["facts"].get(change["id"]), keep_first_chapter=True
+            )
+    validate_fact_set(next_state["facts"])
 
     recent_by_chapter = {item["chapter"]: item for item in state["context"]["recent_chapters"]}
     if chapter in recent_by_chapter or transaction["mode"] == "append":
@@ -966,6 +1331,16 @@ def render_views(state: dict[str, Any]) -> dict[str, str]:
     views = {
         "上下文.md": render_context(state),
         "伏笔.md": render_foreshadow(state["foreshadow"], revision),
+        "长期事实.md": render_fact_table("长期事实索引", state["facts"], revision),
+        "关系清单.md": render_fact_table(
+            "关系清单",
+            {
+                identifier: fact
+                for identifier, fact in state["facts"].items()
+                if fact["category"] in RELATION_CATEGORIES or identifier.startswith("R")
+            },
+            revision,
+        ),
     }
     author, reader = render_timeline_views(state["timeline"], revision)
     views["时间线/作者真相.md"] = author
@@ -974,6 +1349,19 @@ def render_views(state: dict[str, Any]) -> dict[str, str]:
         views[f"角色状态/{name}.md"] = render_snapshot(
             name, snapshot, state["last_committed_chapter"], revision
         )
+    entities = {
+        entity
+        for fact in state["facts"].values()
+        for entity in [fact["subject"], *fact["related_entities"]]
+    }
+    portable_entities: dict[str, str] = {}
+    for entity in entities:
+        safe = safe_file_component(entity, "fact entity")
+        key = portable_name_key(safe)
+        require(key not in portable_entities or portable_entities[key] == safe, f"facts contain colliding entity names: {safe}")
+        portable_entities[key] = safe
+    for entity in sorted(portable_entities.values(), key=portable_name_key):
+        views[f"事实档案/{entity}.md"] = render_entity_dossier(entity, state["facts"], revision)
     return views
 
 
@@ -990,6 +1378,14 @@ def write_views(tracking: Path, views: dict[str, str]) -> None:
     character_dir.mkdir(parents=True, exist_ok=True)
     for path in character_dir.glob("*.md"):
         if path.name not in expected_character_files:
+            path.unlink()
+    expected_dossier_files = {
+        Path(relative).name for relative in views if relative.startswith("事实档案/")
+    }
+    dossier_dir = tracking / "事实档案"
+    dossier_dir.mkdir(parents=True, exist_ok=True)
+    for path in dossier_dir.glob("*.md"):
+        if path.name not in expected_dossier_files:
             path.unlink()
 
 
@@ -1022,7 +1418,9 @@ def initialize(project: Path, document: object) -> dict[str, Any]:
 
     # 输入全部校验通过后才动用户文件，失败的 init 不会挪走任何东西。
     archived = archive_retired_tracking_paths(tracking)
-    for directory in (tracking / "逐章记录", tracking / "角色状态", tracking / "时间线"):
+    for directory in (
+        tracking / "逐章记录", tracking / "角色状态", tracking / "时间线", tracking / "事实档案"
+    ):
         directory.mkdir(parents=True, exist_ok=True)
     write_views(tracking, views)
     atomic_write_text(state_path(project), state_payload)
@@ -1051,6 +1449,9 @@ def apply_transaction(project: Path, document: object) -> dict[str, Any]:
         set(next_state["characters"]) | set(transaction["delta"]["retired_characters"]),
     )
     views = render_views(next_state)
+    # 放在渲染之后：快照体积超硬上限之类的结构性错误应当先报，
+    # 否则一份又超大又漂移的快照只会看到连续性告警，看不到真正的拦截原因。
+    enforce_continuity_guard(state, transaction)
     next_state_payload = json_payload(next_state)
     path = delta_path(tracking, transaction["chapter"])
     if transaction["mode"] == "append" and path.exists():
@@ -1096,13 +1497,59 @@ def check_project(project: Path) -> dict[str, Any]:
     }
     actual_character_files = {path.name for path in (tracking / "角色状态").glob("*.md")}
     require(actual_character_files == expected_character_files, "character snapshot files differ from tracking state")
+    expected_dossier_files = {
+        Path(relative).name for relative in expected_views if relative.startswith("事实档案/")
+    }
+    actual_dossier_files = {path.name for path in (tracking / "事实档案").glob("*.md")}
+    require(actual_dossier_files == expected_dossier_files, "fact dossier files differ from tracking state")
+    return state
+
+
+def migrate_v4(project: Path, document: object) -> dict[str, Any]:
+    """Upgrade a schema-4 authority in place and optionally seed durable canon facts.
+
+    This is a state migration, not a fictional chapter event: it never creates or
+    rewrites a chapter delta.  All derived views are rebuilt and authority is still
+    written last, so an interrupted migration can be retried from the same input.
+    """
+    tracking = tracking_root(project)
+    require_no_retired_tracking_paths(tracking)
+    raw = as_mapping(read_json(state_path(project)), "tracking state")
+    require(raw.get("schema_version") == 4, "migrate-v4 requires an existing schema_version=4 state")
+    migration = as_mapping(document, "migration input")
+    require_known_keys(migration, {"schema_version", "expected_state_revision", "facts"}, "migration input")
+    require(migration.get("schema_version") == INPUT_SCHEMA_VERSION, "migration input schema_version is unsupported")
+    expected = as_int(migration.get("expected_state_revision"), "expected_state_revision")
+    current_revision = as_int(raw.get("state_revision"), "tracking state.state_revision")
+    require(expected == current_revision, "tracking state changed since this migration was prepared")
+    last_chapter = as_int(raw.get("last_committed_chapter"), "tracking state.last_committed_chapter")
+    facts: dict[str, dict[str, Any]] = {}
+    for index, raw_fact in enumerate(as_list(migration.get("facts", []), "facts")):
+        fact = normalize_fact_change(
+            raw_fact, f"facts[{index}]", allow_delete=False, through_chapter=last_chapter
+        )
+        require(fact["id"] not in facts, f"duplicate fact ID {fact['id']}")
+        fact.pop("action")
+        fact["first_recorded_chapter"] = last_chapter
+        fact["updated_chapter"] = last_chapter
+        facts[fact["id"]] = fact
+    validate_fact_set(facts)
+    candidate = copy.deepcopy(raw)
+    candidate["schema_version"] = TRACKING_SCHEMA_VERSION
+    candidate["state_revision"] = current_revision + 1
+    candidate["facts"] = facts
+    state = normalize_state(candidate)
+    views = render_views(state)
+    write_views(tracking, views)
+    atomic_write_text(state_path(project), json_payload(state))
+    warn_sizes(views)
     return state
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    for command in ("init", "commit"):
+    for command in ("init", "commit", "migrate-v4"):
         subparser = subparsers.add_parser(command)
         subparser.add_argument("--project", type=Path, required=True, help="book project root containing 追踪/")
         subparser.add_argument("--input", type=Path, required=True, help="UTF-8 JSON input document")
@@ -1118,6 +1565,8 @@ def main() -> int:
             result = initialize(args.project, read_json(args.input))
         elif args.command == "commit":
             result = apply_transaction(args.project, read_json(args.input))
+        elif args.command == "migrate-v4":
+            result = migrate_v4(args.project, read_json(args.input))
         else:
             result = check_project(args.project)
     except (TrackingError, OSError, UnicodeError) as exc:

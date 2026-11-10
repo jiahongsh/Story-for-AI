@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/run.schema.json",
+  "title": "Story data-analysis run manifest",
+  "type": "object",
+  "required": [
+    "schema_version", "run_id", "stage", "state", "revision", "scope", "scope_sha256",
+    "max_returns", "return_count", "return_counts_by_root_cause", "attempts",
+    "chain_head_sha256", "artifact_hashes", "artifacts", "history", "quality_status",
+    "usable_fields", "sample_size", "sample_size_qualified", "sample_size_authoritative", "authorization",
+    "supervisor_verdict", "promoted_cases", "promoted_methods"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "run_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "stage": {"type": "string"},
+    "state": {"type": "string"},
+    "revision": {"type": "integer", "minimum": 0},
+    "scope": {"type": "object", "minProperties": 5},
+    "scope_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "max_returns": {"const": 3},
+    "return_count": {"type": "integer", "minimum": 0},
+    "return_counts_by_root_cause": {"type": "object"},
+    "attempts": {"type": "object"},
+    "chain_head_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "artifact_hashes": {"type": "array", "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "artifacts": {"type": "array"},
+    "history": {"type": "array", "minItems": 1},
+    "quality_status": {"type": ["string", "null"]},
+    "usable_fields": {"type": "array"},
+    "sample_size": {"type": ["integer", "null"], "minimum": 0},
+    "sample_size_qualified": {"type": ["boolean", "null"]},
+    "sample_size_authoritative": {"type": ["boolean", "null"]},
+    "authorization": {"type": "object"},
+    "supervisor_verdict": {"type": ["string", "null"]},
+    "promoted_cases": {"type": "array"},
+    "promoted_methods": {"type": "array"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 65,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "840247247134ab017c138f92c97d99e733f6c36006823e664a15e661048da5e0",
+      "state_revision": 260,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第065章_不知道不是通过.md",
+      "sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第064章_你也一直在验我.md",
+      "sha256": "fa4bdbd05e20b45527412380d51f09a44fcca0f89138626f6ae40ba0b3dc1dde",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第065章.md",
+      "sha256": "35a15e3ad61cd693e181d79bec4feb688fcaa44365d89ebabea16084a75a443a",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第065章/写前依据.md",
+      "sha256": "4999573b798b1024967388452ad15546c4b421a05cee5d57001af024fcbcd2fa",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第061章_来修表的人.md",
+      "sha256": "8f3856c92208c16cec10a809a3a1d3a4adcb5c4e2fdb48dca034089bdff227b9",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "拒绝把三个人当项目认证，同时不替普通工人编出未见的工时证据。",
+      "without_protagonist": "可以为安慰工人一口答应，但没有亲见便不能负责；这个限制与主线无关也成立。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "下午两点十分，猫眼先把南岸围栏外的公开栏拍来。校验值在图下，人没进栏。栏上 `D4` 那一行仍写着待收尾，旁边新贴了一张复核通知，502的格子从今天上午改到后日。镜辞的指尖在改期两个字上停住，没把这张图当成进门的理由。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "下午两点十分，猫眼先把南岸围栏外的公开栏拍来。校验值在图下，人没进栏。栏上 `D4` 那一行仍写着待收尾，旁边新贴了一张复核通知，502的格子从今天上午改到后日。镜辞的指尖在改期两个字上停住，没把这张图当成进门的理由。",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "留存拒填材料并将自己的开销与修表账分开。",
+      "without_protagonist": "即使不调查也会收回本人的零钱，分账符合她既有处理习惯。",
+      "voice_refs": [
+        {
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "姜霁把恒准那一页按进硬纸另一侧，恒泰设施的公示单独摊着。“先存页，再决定去不去。去的话只站在栏外。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "姜霁把恒准那一页按进硬纸另一侧，恒泰设施的公示单独摊着。“先存页，再决定去不去。去的话只站在栏外。”",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "下午两点十分后的栏外问询至离场",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "拒填身份验收，只对维修和本人下午所见负责，不替口述晨间到场作证",
+          "gates": {
+            "knows": "亲历孙立维修、下午栏外人和空签到；早上六点半仅工人口述，没有亲见。",
+            "wants": "拒绝把三个人当项目认证，同时不替普通工人编出未见的工时证据。",
+            "fears": "怕自己的签字把维修责任扩成身份结论，或替他人误证工时。",
+            "capability": "能证明自己修过的表和下午所见，不能代签早晨到场或确定十五元已扣。",
+            "no_plot": "可以为安慰工人一口答应，但没有亲见便不能负责；这个限制与主线无关也成立。",
+            "costs": "无法替工人解决签到和待认十五元，拒填也无法令既有复核停止。",
+            "consequences": "工人仍可找队上认账，陈屿仍按自身流程离开，孙立自己保票及争取退费。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "能证明自己修过的表和下午所见，不能代签早晨到场或确定十五元已扣。",
+            "limits": "无法替工人解决签到和待认十五元，拒填也无法令既有复核停止。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "拒绝把三个人当项目认证，同时不替普通工人编出未见的工时证据。",
+            "success_guaranteed": false,
+            "failure_path": "无法替工人解决签到和待认十五元，拒填也无法令既有复核停止。",
+            "opposition": "工人仍可找队上认账，陈屿仍按自身流程离开，孙立自己保票及争取退费。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 37,
+              "end_line": 37,
+              "quote": "“这块表的事，我认。票留好，再慢了拿来。”",
+              "source_id": "SRC5",
+              "access": "memory",
+              "available_chapter": 61,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "亲历孙立维修、下午栏外人和空签到；早上六点半仅工人口述，没有亲见。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "四点二十回店后到市场口打印",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "姜霁",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "自付一块五打印费并取回自己的五毛找零",
+          "gates": {
+            "knows": "知道自己支付打印费用、纸张只供留存，没有将这笔钱交给镜辞的约定。",
+            "wants": "留存拒填材料并将自己的开销与修表账分开。",
+            "fears": "怕个人付款和共同车费混账，后来无法说清承担者。",
+            "capability": "能用自己的现金付打印并收回找零，没有转交他人钱款的理由。",
+            "no_plot": "即使不调查也会收回本人的零钱，分账符合她既有处理习惯。",
+            "costs": "自担一块五打印，两人来回车费共八块仍另从修表格子支出。",
+            "consequences": "镜辞只夹核过的材料，不持有她未转交的找零；普通店员只按印张收费。"
+          },
+          "capacity": {
+            "resources": [
+              "本人文件夹、已获准材料、现金和手机"
+            ],
+            "permission": "能用自己的现金付打印并收回找零，没有转交他人钱款的理由。",
+            "limits": "自担一块五打印，两人来回车费共八块仍另从修表格子支出。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "留存拒填材料并将自己的开销与修表账分开。",
+            "success_guaranteed": false,
+            "failure_path": "自担一块五打印，两人来回车费共八块仍另从修表格子支出。",
+            "opposition": "镜辞只夹核过的材料，不持有她未转交的找零；普通店员只按印张收费。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 55,
+              "end_line": 55,
+              "quote": "姜霁的豆浆喝到一半。她没抬头替他们回答。文件夹仍合着。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 64,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道自己支付打印费用、纸张只供留存，没有将这笔钱交给镜辞的约定。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "限定工时见证与维修责任，理清车费及找零归属；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

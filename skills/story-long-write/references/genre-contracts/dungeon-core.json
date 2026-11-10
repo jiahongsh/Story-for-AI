@@ -1,0 +1,36 @@
+{
+  "contract_version": "1.0",
+  "genre_id": "dungeon-core",
+  "display_name": "地下城核心",
+  "aliases": ["地下城核心", "地下城之心", "迷宫核心", "Dungeon Core"],
+  "markets": ["海外长篇", "中文长篇试验题材"],
+  "languages": ["zh", "en"],
+  "core_promise": "以不能自由移动的核心为主角，通过资源取舍、空间建设和冒险者反馈持续扩大地下城能力与影响范围。",
+  "chapter_types": [
+    {"id": "core-planning", "name": "核心规划", "purpose": "发现约束并在防御、扩张、奖励之间做可见取舍"},
+    {"id": "build-test", "name": "建设试验", "purpose": "建造房间、陷阱或生态，并暴露实际代价"},
+    {"id": "delver-run", "name": "探索者闯关", "purpose": "从外部视角验证地下城设计与威胁"},
+    {"id": "resource-crisis", "name": "资源危机", "purpose": "迫使核心牺牲一个目标以保住另一个目标"},
+    {"id": "expansion", "name": "楼层扩张", "purpose": "兑现空间、眷属或核心能力的阶段升级"}
+  ],
+  "satisfaction_types": ["陷阱按预期生效", "楼层或房间扩张", "眷属进化", "资源里程碑", "核心能力升级", "探索者误判被反制"],
+  "conflict_engine": ["核心不能自由移动", "防御、扩张和奖励争夺同一资源", "探索者学习并反制旧设计", "核心位置暴露会形成致命风险"],
+  "pacing_rule": {
+    "opening": "前三章建立核心苏醒、固定位置、第一批资源和第一次外部入侵。",
+    "early": "每一至两章在核心建设视角与探索者反馈视角之间形成一次因果闭环。",
+    "middle": "加入会学习的对手、生态失衡和势力争夺，避免重复换皮闯关。",
+    "late": "把地下城扩张与外部政治、领地和核心身世连接，提升决策尺度。",
+    "milestone": "每五至八章至少兑现一次楼层、眷属、资源或核心能力的实质升级。"
+  },
+  "numerical_system": {"enabled": true, "rules": ["资源收入和支出必须能回溯", "同一资源不能在同一时点重复消费", "建设收益必须经过探索者或生态反馈验证"]},
+  "power_scaling": {"model": "空间、资源、眷属和认知范围并行成长", "gates": ["扩张必须付出资源或暴露风险", "新楼层必须产生新规则而非只增加数值", "核心本体始终保留可被威胁的边界"]},
+  "reader_contract": ["主角虽不能移动但必须持续做出主动选择", "建设结果必须被外部视角验证", "每个扩张都会带来新能力和新脆弱点"],
+  "forbidden_drift": ["核心突然无代价自由行动", "连续建设却没有探索者或环境反馈", "资源凭空增长", "楼层只换场景名称而规则不变"],
+  "review_gates": [
+    {"id": "immobility-agency", "severity": "blocking", "check": "核心固定限制是否仍然成立，且主角是否通过规划保持主动性"},
+    {"id": "resource-ledger", "severity": "major", "check": "关键资源的来源、消费和结果是否一致"},
+    {"id": "dual-perspective-feedback", "severity": "major", "check": "建设是否得到探索者、眷属或生态的外部验证"},
+    {"id": "floor-distinction", "severity": "major", "check": "新区域是否拥有不同规则、代价或战术问题"}
+  ],
+  "evidence": {"confidence": "medium", "basis": ["InkOS 题材机制", "oh-story 长篇剧情单元、读者契约和追踪方法"], "adaptation_note": "重构为中文网文可执行的建设、反馈与资源审查契约。"}
+}

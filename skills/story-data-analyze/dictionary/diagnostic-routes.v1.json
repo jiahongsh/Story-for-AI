@@ -1,0 +1,245 @@
+{
+  "schema_version": "diagnostic-routes.v1",
+  "metric_catalog_ref": "metrics.v1.json",
+  "metric_tree_ref": "metric-tree.v1.json",
+  "route_count": 25,
+  "threshold_disclaimer": "以下异动门禁、样本分层和 MDE 是内部分析治理规则，不是番茄官方及格线、推荐权重或行业标准。",
+  "anomaly_gate_stack": [
+    {
+      "order": 0, "gate": "data_quality", "rule": "时效、完整、合法、同步、版本覆盖和口径可比门先行。",
+      "pass": "affected quality metrics are valid or explicitly isolated", "fail": "受影响分支只报数据异常/未覆盖，不诊断正文"
+    },
+    {
+      "order": 1, "gate": "denominator", "rule": "比率必须有原始分子/分母，并展示绝对人数。",
+      "zero_sample": "denominator=0 => not_computable; numerator=0 and denominator>0 => observed zero, still apply sample/baseline gates",
+      "small_sample": {"lt_30": "样本不足；只报人数和方向，禁止文本归因", "30_to_99": "最多方向性；需人数/比率同向且重复窗口一致", "gte_100": "可进入区间/MDE检验，但不自动得出因果"}
+    },
+    {
+      "order": 2, "gate": "historical_baseline", "rule": "只使用同书/同故事、同口径、同更新/推荐阶段的有效点。",
+      "baseline_size": {"gte_14": "使用最近28个可比点的中位数/MAD或合适控制限", "7_to_13": "临时提醒，不下稳健统计结论", "lt_7": "只报绝对变化与改前快照"},
+      "robust_count_alert": "abs(x-median) > max(3*1.4826*MAD, historical_abs_daily_change_P95, 2 persons)",
+      "mad_zero": "use IQR/control chart suitable for count distribution or absolute-only reporting; never divide by zero"
+    },
+    {
+      "order": 3, "gate": "effect_size", "rule": "计数同时报绝对差和分母变化；比率同时报 numerator/denominator、Δpp、置信区间和预先 MDE。",
+      "ratio_tests": {"small_samples": "Wilson/exact interval plus Fisher exact for two independent groups when assumptions hold", "large_samples": "two-proportion difference interval; p-value alone is insufficient"},
+      "mde_rule": "MDE must be declared before seeing the result; absent MDE => describe detectable difference, not business importance"
+    },
+    {
+      "order": 4, "gate": "continuity_and_multiplicity", "rule": "至少近3个可比点有2个同向，或两个非重叠 cohort/窗口同向。扫描多章节使用复现要求，正式检验可用 BH-FDR。",
+      "single_point": "L1 reminder only unless it is a validated data incident"
+    },
+    {
+      "order": 5, "gate": "upstream_and_guardrails", "rule": "检查上游规模、渠道换血、更新/推荐阶段、并发改动及下游护栏。",
+      "causal_language": "观察数据默认上限是 association/hypothesis；无随机实验或可信准实验不写‘证明修改导致’"
+    }
+  ],
+  "result_states": ["改善", "恶化", "无明显变化", "样本不足", "数据未覆盖改动", "样本受自访污染"],
+  "routes": [
+    {
+      "id": "R01_DATA_QUALITY_FAIL", "trigger_metric_ids": ["dq_snapshot_freshness_lag_hours", "dq_snapshot_completeness_rate", "dq_required_field_missing_count", "dq_null_zero_ambiguity_count", "dq_field_sync_lag_count", "dq_channel_balance_gap", "dq_funnel_monotonicity_violation_count", "dq_ratio_bounds_violation_count", "dq_version_coverage_status", "dq_scope_comparability_status", "dq_self_visit_risk", "dq_backfill_instability_count"],
+      "trigger": "any affected-branch quality gate FAIL or BLOCK", "must_check_metric_ids": ["dq_snapshot_freshness_lag_hours", "dq_snapshot_completeness_rate", "dq_field_sync_lag_count", "dq_version_coverage_status", "dq_scope_comparability_status"],
+      "candidate_problems": ["platform_not_refreshed", "login_or_endpoint_partial_failure", "schema_drift", "staggered_field_refresh", "mixed_scope", "version_not_covered", "self_visit_contamination"],
+      "direct_edit_surfaces": [], "operational_actions": ["preserve_raw", "repull_same_cutoff", "verify_tooltip", "repair_parser_contract", "wait_for_full_effective_day", "confirm_self_visit"],
+      "cannot_infer": ["text_quality", "recommendation_failure", "modification_effect"], "stop_condition": "quality issue unresolved"
+    },
+    {
+      "id": "R02_LONG_DAILY_READERS", "trigger_metric_ids": ["long_daily_readers"], "trigger": "count crosses own comparable baseline/control alert or materially shifts across valid windows",
+      "must_check_metric_ids": ["long_channel_readers", "long_channel_share", "long_distribution_concentration", "long_rolling_14d_readers", "dq_channel_balance_gap", "dq_self_visit_risk"],
+      "candidate_problems": ["distribution_opportunity_changed", "channel_mix_changed", "update_or_recommendation_stage_changed", "search_contamination", "returning_reader_activity_changed"],
+      "direct_edit_surfaces": [], "indirect_action_surfaces": ["update_cadence", "classification_tags", "packaging_only_if_impression_conversion_exists"],
+      "cannot_infer": ["platform_zero_impressions", "chapter_text_became_better_or_worse", "CTR_without_impressions"], "drilldown_next": ["R04_LONG_CHANNEL_MIX", "R05_LONG_SEARCH_DOMINANCE", "R06_LONG_PACKAGING_IF_AVAILABLE", "R07_LONG_CHAPTER_CURVE"]
+    },
+    {
+      "id": "R03_LONG_ROLLING_14D", "trigger_metric_ids": ["long_rolling_14d_readers"], "trigger": "non-overlapping or sufficiently separated rolling windows move beyond own noise; adjacent +/-1 is monitoring only",
+      "must_check_metric_ids": ["long_daily_readers", "long_continue_reading_share", "long_chase_count", "long_latest_chapter_reach_count"],
+      "candidate_problems": ["new_day_entry_vs_old_day_rollout_net_effect", "update_cadence", "return_value", "deep_reader_pool_change"],
+      "direct_edit_surfaces": ["latest_story_unit_next_goal_after_other_gates"], "indirect_action_surfaces": ["update_cadence"],
+      "cannot_infer": ["exact_new_readers", "exact_churn", "single_day_modification_effect"], "drilldown_next": ["R02_LONG_DAILY_READERS", "R15_LONG_CHASE", "R13_LONG_LATEST_REACH"]
+    },
+    {
+      "id": "R04_LONG_CHANNEL_MIX", "trigger_metric_ids": ["long_channel_readers", "long_channel_share", "long_distribution_concentration"], "trigger": "channel count/share structure crosses own historical noise or materially replaces the dominant source",
+      "must_check_metric_ids": ["long_daily_readers", "dq_channel_balance_gap", "long_search_share", "long_chapter_follow_rate_sync", "dq_scope_comparability_status"],
+      "candidate_problems": ["platform_distribution_mix", "classification_or_search_demand", "shelf_or_continue_return", "reader_composition_shift"],
+      "direct_edit_surfaces": [], "indirect_action_surfaces": ["classification_tags", "title_keyword_fit", "update_cadence"],
+      "cannot_infer": ["channel_impressions", "channel_ctr", "content_effect_when_conversion_shift_is_composition_only"], "drilldown_next": ["R05_LONG_SEARCH_DOMINANCE", "R07_LONG_CHAPTER_CURVE"]
+    },
+    {
+      "id": "R05_LONG_SEARCH_DOMINANCE", "trigger_metric_ids": ["long_search_share"], "trigger": "search is the primary recent source, especially on a small base",
+      "must_check_metric_ids": ["dq_self_visit_risk", "long_channel_readers", "long_daily_readers", "long_chapter_follow_rate_sync"],
+      "candidate_problems": ["author_or_acquaintance_visit", "organic_exact_title_search", "reader_mix_not_recommendation_mix"],
+      "direct_edit_surfaces": [], "operational_actions": ["ask_author_to_confirm_test_visits", "register_confirmed_contaminated_dates"],
+      "cannot_infer": ["text_caused_chapter_change_before_identity_confirmation", "all_search_is_fake", "recommendation_distribution_quality"], "stop_condition": "confirmed contamination => affected result state is 样本受自访污染"
+    },
+    {
+      "id": "R06_LONG_PACKAGING_IF_AVAILABLE", "trigger_metric_ids": ["long_impressions", "long_display_to_read_rate"], "trigger": "qualified same-scope impression-to-read conversion changes after gates; current pull normally has no denominator",
+      "must_check_metric_ids": ["long_impressions", "long_daily_readers", "long_channel_share", "long_chapter_follow_rate_sync"],
+      "candidate_problems": ["title_or_cover_unclear", "intro_weak", "tag_mismatch", "overpromise_rejected_in_chapter_1"],
+      "direct_edit_surfaces": ["title", "cover", "intro_first_1_to_3_sentences", "chapter_1_first_200_to_500_chars"],
+      "change_hypothesis_chain": "clearer accurate promise -> more correct readers enter -> display_to_read rises -> first transition must not deteriorate",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_first_three_retention_rate"],
+      "cannot_infer": ["packaging_problem_when_impressions_are_unavailable", "algorithm_weight"]
+    },
+    {
+      "id": "R07_LONG_CHAPTER_CURVE", "trigger_metric_ids": ["long_chapter_reach_rate", "long_chapter_reach_count", "long_chapter_transition_loss_count"], "trigger": "curve shows an earliest material break after synchronized-count, version and sample gates",
+      "must_check_metric_ids": ["long_chapter_follow_rate_sync", "long_chapter_follow_rate_displayed", "dq_field_sync_lag_count", "dq_version_coverage_status", "long_nonsequential_reach_violation_count", "long_channel_share"],
+      "candidate_problems": ["single_transition_break", "multi_chapter_decay", "reader_mix", "version_mixing", "unpublished_next_chapter", "jump_reading_or_field_lag"],
+      "direct_edit_surfaces": ["chapter_before_break_full_text", "chapter_before_break_last_10_to_20_percent", "next_chapter_title", "next_chapter_first_200_to_500_chars", "story_unit_outline"],
+      "cannot_infer": ["exact_exit_paragraph_without_word_level_data", "window_delta_is_same_new_reader_cohort", "zero_tail_means_every_late_chapter_is_bad"], "drilldown_next": ["R08_LONG_1_TO_2", "R09_LONG_2_TO_3", "R10_LONG_3_TO_4", "R11_LONG_GENERIC_TRANSITION"]
+    },
+    {
+      "id": "R08_LONG_1_TO_2", "trigger_metric_ids": ["long_chapter_follow_rate_sync"], "trigger_dimensions": {"chapter_index": 1}, "trigger": "1->2 is earliest material abnormal transition after gates",
+      "must_check_metric_ids": ["long_chapter_reach_count", "long_chapter_follow_rate_displayed", "long_first_three_retention_rate", "long_channel_share", "dq_version_coverage_status"],
+      "candidate_problems": ["title_intro_promise_not_landed", "slow_first_200_500_chars", "protagonist_only_suffers_without_choice", "chapter_has_no_small_payoff", "abstract_or_fake_cliff", "chapter_2_retracts_or_restarts"],
+      "direct_edit_surfaces": ["title_and_intro", "chapter_1_first_200_to_500_chars", "chapter_1_full", "chapter_1_last_10_to_20_percent", "chapter_2_title", "chapter_2_first_200_to_500_chars"],
+      "change_hypothesis_chain": "lower comprehension cost + land the advertised mechanism + visible state change + honest cross-chapter promise -> expected value of entering chapter 2 rises -> 1->2 improves",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_first_three_retention_rate"], "guardrail_dimensions": {"long_chapter_follow_rate_sync": {"chapter_index": 2}},
+      "cannot_infer": ["problem_is_only_last_sentence", "chapter_2_quality_from_A2_A1_alone", "causal_effect_without_new-version cohort"]
+    },
+    {
+      "id": "R09_LONG_2_TO_3", "trigger_metric_ids": ["long_chapter_follow_rate_sync"], "trigger_dimensions": {"chapter_index": 2}, "trigger": "2->3 is earliest material abnormal transition after gates",
+      "must_check_metric_ids": ["long_chapter_reach_count", "long_first_three_retention_rate", "long_chapter_follow_rate_sync", "dq_version_coverage_status"],
+      "candidate_problems": ["chapter_2_repeats_chapter_1_exposition", "core_mechanism_not_operating", "no_result_cost_or_relationship_change", "chapter_3_cold_restart", "first_payoff_delayed"],
+      "direct_edit_surfaces": ["chapters_1_to_3_full", "chapter_2_last_10_to_20_percent", "chapter_3_title", "chapter_3_first_200_to_500_chars"],
+      "change_hypothesis_chain": "turn repeated promise into mechanism-in-action and visible consequence -> reader sees recurring value -> 2->3 improves",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_first_three_retention_rate", "long_deep_chapter_reach_rate"], "guardrail_dimensions": {"long_chapter_follow_rate_sync": {"chapter_index": 3}},
+      "cannot_infer": ["chapter_3_is_bad_from_2_to_3_alone", "single paragraph exit"]
+    },
+    {
+      "id": "R10_LONG_3_TO_4", "trigger_metric_ids": ["long_chapter_follow_rate_sync"], "trigger_dimensions": {"chapter_index": 3}, "trigger": "3->4 is earliest material abnormal transition after gates",
+      "must_check_metric_ids": ["long_first_three_retention_rate", "long_first_three_retained_count", "long_deep_chapter_reach_rate", "long_chapter_follow_rate_sync"],
+      "candidate_problems": ["golden_three_closes_without_long_goal", "mechanism_has_no_scalable_space", "chapter_4_feels_like_new_book", "post_climax_cleanup_drop", "map_or_viewpoint_reset"],
+      "direct_edit_surfaces": ["chapters_1_to_4_full", "chapter_3_payoff_and_next_problem", "chapter_3_ending", "chapter_4_title_and_opening"],
+      "change_hypothesis_chain": "pay first small goal while opening a concrete larger problem and immediately carrying state into chapter 4 -> post-golden-three expected value rises -> 3->4 improves",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_deep_chapter_reach_rate", "long_chase_count"], "guardrail_dimensions": {"long_chapter_follow_rate_sync": {"chapter_index": 4}},
+      "cannot_infer": ["add_one_cliff_sentence_is_sufficient", "long_term_goal_should_be_spoiled_in_full"]
+    },
+    {
+      "id": "R11_LONG_GENERIC_TRANSITION", "trigger_metric_ids": ["long_chapter_follow_rate_sync", "long_chapter_transition_loss_count"], "trigger_dimensions": {"chapter_index": "n>=4"}, "trigger": "N->N+1 is earliest reproducible material break, or a predeclared unit boundary underperforms",
+      "must_check_metric_ids": ["long_chapter_reach_count", "long_nonsequential_reach_violation_count", "long_deep_chapter_reach_rate", "long_chase_count", "dq_version_coverage_status"],
+      "candidate_problems": ["no_information_or_state_gain", "promise_debt_unpaid", "repeated_conflict", "fake_cliff_or_retraction", "unit_transition_vacuum", "side_plot_displaces_core_promise"],
+      "direct_edit_surfaces": ["chapter_n_minus_1_ending", "chapter_n_full", "chapter_n_last_10_to_20_percent", "chapter_n_plus_1_title_and_first_200_to_500_chars", "complete_story_unit"],
+      "change_hypothesis_chain": "remove repetition + advance state/payoff + honest immediate carryover -> expected value of next chapter rises -> N->N+1 improves without harming N+1->N+2",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_deep_chapter_reach_rate", "long_chase_count", "long_comment_count"], "guardrail_dimensions": {"long_chapter_follow_rate_sync": {"chapter_index": "n+1"}},
+      "cannot_infer": ["largest_percentage_drop_on_tiny_base_is_real_break", "reader_exited_at_chapter_end", "late_zero_tail_is_local_text_problem"]
+    },
+    {
+      "id": "R12_LONG_DEEP_REACH", "trigger_metric_ids": ["long_deep_chapter_reach_rate", "long_deep_chapter_reach_count", "long_word_completion_rate"], "trigger": "predeclared depth anchor or word interval changes beyond valid baseline after early funnel is controlled",
+      "must_check_metric_ids": ["long_first_three_retention_rate", "long_chapter_follow_rate_sync", "long_chapter_transition_loss_count", "long_chase_count", "long_nonsequential_reach_violation_count"],
+      "candidate_problems": ["multi_chapter_uniform_decay", "core_promise_drift", "long_payoff_cycle", "repeated_set_piece", "post_climax_vacuum", "side_plot_overgrowth"],
+      "direct_edit_surfaces": ["abnormal_interval_plus_two_chapters_each_side", "complete_story_unit", "unit_outline", "expectation_debt_and_payoff_points"],
+      "change_hypothesis_chain": "compress low-information units + pay stage interest + preserve core promise -> fewer incremental exits -> depth anchor reach improves",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_chase_count", "long_comment_count"],
+      "cannot_infer": ["rewrite_deep_chapter_when_early_funnel_has_no_readers", "single-late-chapter blame from aggregate depth"]
+    },
+    {
+      "id": "R13_LONG_LATEST_REACH", "trigger_metric_ids": ["long_latest_chapter_reach_count"], "trigger": "latest published chapter reach materially changes after publication-window and early/deep funnel gates",
+      "must_check_metric_ids": ["long_deep_chapter_reach_count", "long_chase_count", "long_urge_count", "long_continue_reading_share", "dq_version_coverage_status"],
+      "candidate_problems": ["not_enough_deep_readers", "latest_unit_progress", "release_window_too_short", "nonsequential_direct_entry"],
+      "direct_edit_surfaces": ["latest_story_unit", "latest_1_to_3_chapters", "next_stage_goal"],
+      "cannot_infer": ["urge_weak_when_no_one_reached_latest", "latest_text_caused_early_funnel_loss"]
+    },
+    {
+      "id": "R14_LONG_ADD_SHELF", "trigger_metric_ids": ["long_add_shelf_count", "long_shelf_per_daily_reader_proxy"], "trigger": "absolute shelf additions and scale-normalized proxy move materially and comparably",
+      "must_check_metric_ids": ["long_daily_readers", "long_first_three_retention_rate", "long_channel_share", "long_rolling_14d_readers", "long_chase_count"],
+      "candidate_problems": ["reader_scale_only", "weak_long_term_promise", "one-shot_gimmick", "low_character_attachment", "no_visible_next_stage"],
+      "direct_edit_surfaces": ["intro_long_term_reading_reward", "chapters_1_to_3", "natural_stage_payoff", "next_goal_and_growth_loop"],
+      "change_hypothesis_chain": "make continuing value and repeatable growth/relationship loop visible at a genuine payoff -> saving the work has more future utility -> shelf action may rise",
+      "guardrail_metric_ids": ["long_chapter_follow_rate_sync", "long_chase_count", "long_comment_count"],
+      "cannot_infer": ["net_shelf_growth", "algorithm_weight", "official_shelf_conversion_from_proxy"]
+    },
+    {
+      "id": "R15_LONG_CHASE", "trigger_metric_ids": ["long_chase_count", "long_chase_per_daily_reader_proxy", "long_continue_reading_share"], "trigger": "recent-update effective readership/return entry changes beyond baseline after update cadence and eligible depth are checked",
+      "must_check_metric_ids": ["long_latest_chapter_reach_count", "long_deep_chapter_reach_count", "long_rolling_14d_readers", "long_daily_readers", "long_urge_count"],
+      "candidate_problems": ["unstable_update_cadence", "latest_unit_has_no_progress", "too_complete_no_next_goal", "fake_cliff_trust_debt", "small_deep_reader_pool"],
+      "direct_edit_surfaces": ["recent_7_day_chapters", "latest_unit_payoff", "next_concrete_goal", "cross-update_carryover"], "indirect_action_surfaces": ["update_cadence"],
+      "change_hypothesis_chain": "deliver current update value and establish credible next-update value -> effective readers return to recent updates -> chase/continue signals improve",
+      "guardrail_metric_ids": ["long_comment_count", "long_chapter_follow_rate_sync", "long_urge_count"],
+      "cannot_infer": ["subscription_total", "content_problem_before_update_cadence_check", "official_chase_conversion_from_proxy"]
+    },
+    {
+      "id": "R16_LONG_URGE", "trigger_metric_ids": ["long_urge_count"], "trigger": "urge count changes with a non-zero, stable latest-chapter eligible proxy and comparable update interval",
+      "must_check_metric_ids": ["long_latest_chapter_reach_count", "long_chase_count", "long_daily_readers", "long_continue_reading_share"],
+      "candidate_problems": ["eligible_pool_changed", "next_action_not_important", "payoff_without_new_expectation", "update_interval_changed"],
+      "direct_edit_surfaces": ["latest_chapter_payoff", "latest_chapter_last_10_to_20_percent", "next_action_deadline_or_cost"], "indirect_action_surfaces": ["update_interval"],
+      "change_hypothesis_chain": "after a real payoff, open a concrete important next action with honest cost/deadline -> eligible latest readers have stronger update expectation -> urge may rise",
+      "guardrail_metric_ids": ["long_comment_count", "long_chase_count"],
+      "cannot_infer": ["text_weak_when_latest_reach_is_zero", "all_readers_are_uninterested", "urge_conversion_without_eligible_denominator"]
+    },
+    {
+      "id": "R17_LONG_COMMENTS_RATING", "trigger_metric_ids": ["long_comment_count", "long_comment_per_daily_reader_proxy", "long_rating"], "trigger": "engagement count/proxy or rating changes beyond own baseline with sufficient rating/comment evidence",
+      "must_check_metric_ids": ["long_daily_readers", "long_comment_count", "long_rating", "long_chapter_follow_rate_sync"],
+      "required_nonmetric_evidence": ["comment_text", "comment_location", "rating_count_if_available"],
+      "candidate_problems": ["reader_scale_only", "positive_emotional_peak", "logic_or_character_complaint", "controversy", "deletion_or_platform_filter"],
+      "direct_edit_surfaces": ["specific_scene_or_paragraph_repeatedly_named_in_comments", "character_choice", "ending_aftertaste"],
+      "cannot_infer": ["comment_sentiment_from_count", "unique_commenters", "small_rating_change_without_rating_count", "high_comments_always_good"]
+    },
+    {
+      "id": "R18_SHORT_IMPRESSIONS", "trigger_metric_ids": ["short_impressions"], "trigger": "daily or comparable-period impressions change beyond own baseline/control limits",
+      "must_check_metric_ids": ["short_readers", "short_click_rate", "dq_scope_comparability_status", "dq_snapshot_freshness_lag_hours"],
+      "candidate_problems": ["distribution_opportunity", "eligibility_or_sign_state", "topic_or_tag_fit", "platform_stage", "scope_change"],
+      "direct_edit_surfaces": [], "indirect_action_surfaces": ["topic_tags", "compliance", "publication_state"],
+      "cannot_infer": ["body_text_quality", "title_problem_without_click_rate", "new_users_by_subtracting_incompatible_periods"], "drilldown_next": ["R19_SHORT_CLICK"]
+    },
+    {
+      "id": "R19_SHORT_CLICK", "trigger_metric_ids": ["short_click_rate", "short_click_loss_count", "short_readers"], "trigger": "display-to-read conversion crosses own baseline/MDE with adequate impression denominator and stable scope",
+      "must_check_metric_ids": ["short_impressions", "short_readers", "short_15s_retention", "short_click_loss_count", "dq_scope_comparability_status"],
+      "candidate_problems": ["title_or_cover_unclear", "core_conflict_not_legible", "topic_reader_mismatch", "opening_lead_does_not_support_card", "overpromise_if_15s_low"],
+      "direct_edit_surfaces": ["title", "cover", "opening_lead", "first_screen_promise", "first_300_chars_for_alignment"],
+      "change_hypothesis_chain": "make protagonist-conflict-outcome promise specific and accurate -> correct displayed readers enter -> click rises; accurate opening prevents 15s guardrail damage",
+      "guardrail_metric_ids": ["short_15s_retention", "short_15s_to_30_rate"],
+      "cannot_infer": ["body_middle_is_problem", "platform_algorithm_weight", "click_issue_from_low_impressions_alone"]
+    },
+    {
+      "id": "R20_SHORT_15S", "trigger_metric_ids": ["short_15s_retention", "short_15s_readers"], "trigger": "reader-to-15s conversion is the earliest material abnormal stage after click and denominator gates",
+      "must_check_metric_ids": ["short_click_rate", "short_readers", "short_15s_to_30_rate", "short_stage_loss_count"],
+      "candidate_problems": ["packaging_promise_not_landed", "slow_background_opening", "unclear_who_and_what_is_happening", "name_or_setting_overload", "generic_emotion_without_event"],
+      "direct_edit_surfaces": ["opening_through_approximately_300_chars", "title_to_first_screen_alignment"],
+      "change_hypothesis_chain": "land the promised conflict/person/reversal in a concrete event with lower comprehension cost -> more starters continue beyond first screen -> 15s retention improves",
+      "guardrail_metric_ids": ["short_15s_to_30_rate", "short_30s_to_60_rate"],
+      "cannot_infer": ["exact_exit_sentence", "ending_problem", "300_chars_is_exact_for_every_reader"]
+    },
+    {
+      "id": "R21_SHORT_15_TO_30", "trigger_metric_ids": ["short_15s_to_30_rate", "short_30s_readers"], "trigger": "15->30s is the earliest material abnormal conditional stage",
+      "must_check_metric_ids": ["short_15s_retention", "short_15s_readers", "short_30s_to_60_rate", "short_stage_loss_count"],
+      "candidate_problems": ["hook_has_no_goal", "opponent_or_core_conflict_unclear", "information_gain_stalls", "repeats_initial_shock", "protagonist_has_no_choice"],
+      "direct_edit_surfaces": ["read_opening_to_1000_chars", "focus_approximately_chars_300_to_1000", "first_goal_resistance_choice"],
+      "change_hypothesis_chain": "convert opening shock into a clear goal, obstacle and new information/choice -> engaged readers see forward motion -> 15->30 improves",
+      "guardrail_metric_ids": ["short_30s_to_60_rate", "short_60s_to_finish_rate"],
+      "cannot_infer": ["only_sentence_at_15_seconds_is_wrong", "middle_or_ending_is_primary_problem"]
+    },
+    {
+      "id": "R22_SHORT_30_TO_60", "trigger_metric_ids": ["short_30s_to_60_rate", "short_60s_readers"], "trigger": "30->60s is the earliest material abnormal conditional stage",
+      "must_check_metric_ids": ["short_15s_to_30_rate", "short_30s_readers", "short_60s_to_finish_rate", "short_stage_loss_count"],
+      "candidate_problems": ["conflict_does_not_escalate", "evidence_or_explanation_repeats", "first_payoff_or_reversal_delayed", "continued_reading_value_unclear"],
+      "direct_edit_surfaces": ["read_opening_to_2000_chars", "focus_approximately_chars_500_to_2000", "first_escalation_and_small_payoff"],
+      "change_hypothesis_chain": "compress repeated proof/explanation and advance the first consequential escalation or payoff -> readers receive new value before fatigue -> 30->60 improves",
+      "guardrail_metric_ids": ["short_60s_to_finish_rate", "short_overall_finish_rate"],
+      "cannot_infer": ["add_random_twist", "exact_time-to-paragraph mapping"]
+    },
+    {
+      "id": "R23_SHORT_60_TO_FINISH", "trigger_metric_ids": ["short_60s_to_finish_rate", "short_finish_readers"], "trigger": "60s->finish is the earliest material abnormal conditional stage, or remains abnormal after opening stages are healthy",
+      "must_check_metric_ids": ["short_30s_to_60_rate", "short_60s_readers", "short_overall_finish_rate", "short_stage_loss_count"],
+      "candidate_problems": ["middle_repeats_evidence_or_punishment", "long_procedural_chain", "reversal_predictable_or_unpaid", "protagonist_agency_disappears", "ending_payoff_weak_or_overlong"],
+      "direct_edit_surfaces": ["entire_text_after_approximately_2000_chars", "complete_middle_units", "evidence_chain", "reversal_sequence", "ending_payoff_and_aftertaste"],
+      "change_hypothesis_chain": "remove redundant middle steps while preserving necessary causality; move state-changing reversal/payoff earlier and close promised emotional account -> post-60s readers face less drag and more earned reward -> finish improves",
+      "guardrail_metric_ids": ["short_30s_to_60_rate"], "nonmetric_guardrails": ["story_logic_continuity", "ending_emotional_payoff"],
+      "cannot_infer": ["last_paragraph_is_the_problem", "all_post_60s_losses_share_one_cause", "cutting_length_alone_guarantees_finish"]
+    },
+    {
+      "id": "R24_SHORT_OVERALL_FINISH", "trigger_metric_ids": ["short_overall_finish_rate"], "trigger": "overall finish moves materially",
+      "must_check_metric_ids": ["short_click_rate", "short_15s_retention", "short_15s_to_30_rate", "short_30s_to_60_rate", "short_60s_to_finish_rate", "short_stage_loss_count", "short_earliest_abnormal_stage_index"],
+      "candidate_problems": ["propagated_upstream_loss", "one_or_multiple_conditional_stage_issues", "reader_mix_change"],
+      "direct_edit_surfaces": ["only_the_text_window_selected_by_earliest_abnormal_stage_after_validation"],
+      "cannot_infer": ["ending_problem_from_total_rate", "rewrite_entire_story_before_decomposition", "best_stage_by_percentage_without_absolute_loss_and_sample"]
+    },
+    {
+      "id": "R25_SHORT_MULTI_STAGE_OR_NO_BASELINE", "trigger_metric_ids": ["short_earliest_abnormal_stage_index", "short_stage_loss_count"], "trigger": "multiple stages appear weak, no stable historical baseline exists, or denominators are below 30",
+      "must_check_metric_ids": ["short_impressions", "short_readers", "short_15s_readers", "short_30s_readers", "short_60s_readers", "short_finish_readers", "dq_scope_comparability_status"],
+      "candidate_problems": ["small_sample_noise", "shared_upstream_loss", "multiple_text_mechanisms", "scope_or_version_mix"],
+      "direct_edit_surfaces": [], "operational_actions": ["report_full_absolute_funnel", "mark_sample_insufficient", "collect_next_independent_window", "predeclare_primary_stage_and_MDE"],
+      "cannot_infer": ["choose_largest_percent_drop_as_problem", "claim_text_cause", "make_multi-location_rewrite_without_text_evidence"],
+      "stop_condition": "until denominator and continuity gates pass; a text review may form hypotheses but not an effectiveness verdict"
+    }
+  ]
+}

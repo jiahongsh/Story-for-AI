@@ -20,7 +20,8 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ab, sleep, evalJSONBase64, safeStr, scrollLoad, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSONBase64, safeStr, scrollLoad, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 const CHANNELS = [
   { id: "male", label: "男频", tab: "男频", url: "https://www.ishugui.com/browse" },
@@ -173,12 +174,12 @@ function scrapeChannel(port, channelId) {
     console.error(`  ⚠ 书名解析率偏低（${titled}/${stories.length}），结果质量已标注。`);
   }
 
-  const now = new Date().toISOString();
   const lines = [
     `# 点众 · ${ch.label}短篇`,
     "",
     `- 来源：${ch.url}`,
-    `- 抓取时间：${now}`,
+    `- 抓取时间（UTC）：${RUN_CLOCK.utc}`,
+    `- 报告日期（本地）：${RUN_CLOCK.localDate}`,
     `- 条目数：${stories.length}`,
     `- 书名解析：${titled} / ${stories.length}`,
     `- 数据质量：${quality}`,
@@ -217,7 +218,7 @@ function main() {
     if (!content) continue;
 
     const chInfo = CHANNELS.find((c) => c.id === ch);
-    const date = localDateStamp();
+    const date = RUN_CLOCK.localDate;
     const filename = `点众${chInfo.label}短篇_${date}.md`;
     fs.mkdirSync(OUTDIR, { recursive: true });
     const filepath = path.join(OUTDIR, filename);

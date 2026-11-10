@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/authorization.schema.json",
+  "title": "Procedural user-authorization record (not host-attested and not executable)",
+  "type": "object",
+  "required": [
+    "decision", "authorized_by", "user_confirmation", "user_event_id",
+    "user_message_sha256", "authorization_nonce", "proposal_ids", "authorized_scope",
+    "authorized_actions", "confirmed_at", "attestation_status"
+  ],
+  "properties": {
+    "decision": {"enum": ["APPROVED", "REJECTED"]},
+    "authorized_by": {"const": "user"},
+    "attestation_status": {"const": "UNATTESTED_PROCEDURAL"},
+    "user_confirmation": {"type": "boolean"},
+    "user_event_id": {"type": "string", "minLength": 1},
+    "user_message_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "authorization_nonce": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "proposal_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "authorized_scope": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "authorized_actions": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "confirmed_at": {"type": "string"}
+  },
+  "additionalProperties": true
+}

@@ -1,0 +1,36 @@
+{
+  "contract_version": "1.0",
+  "genre_id": "cozy-fantasy",
+  "display_name": "温馨奇幻",
+  "aliases": ["温馨奇幻", "治愈奇幻", "舒适奇幻", "Cozy Fantasy"],
+  "markets": ["海外长篇", "中文治愈向长篇"],
+  "languages": ["zh", "en"],
+  "core_promise": "用社区、手艺、关系和小型奇迹提供稳定安全感；风险可以真实，但不依赖持续的生死威胁推动阅读。",
+  "chapter_types": [
+    {"id": "craft", "name": "手艺成长", "purpose": "通过劳动、试错和改进获得可感知的能力增长"},
+    {"id": "community-problem", "name": "社区小事", "purpose": "解决影响具体人的局部问题并改变社区关系"},
+    {"id": "relationship", "name": "关系靠近", "purpose": "让信任、理解、边界或亲密发生不可逆的小变化"},
+    {"id": "seasonal-event", "name": "节令事件", "purpose": "用节庆、天气或生产周期组织阶段结构"},
+    {"id": "quiet-reckoning", "name": "安静回望", "purpose": "让角色处理旧伤、误解或归属问题，而非停滞闲聊"}
+  ],
+  "satisfaction_types": ["关系加深", "社区问题解决", "手艺掌握", "空间变得更像家", "微小奇迹", "旧伤得到温柔回应"],
+  "conflict_engine": ["有限资源下照顾不同人的需求", "新成员与社区旧习惯磨合", "善意造成意外后果", "角色必须在安全感和成长之间迈出一步"],
+  "pacing_rule": {
+    "opening": "前三章建立可停留的场所、主角想获得的生活和一个具体但非末日级的问题。",
+    "early": "每章至少改变认知、决定、亲密、手艺或小型损失之一。",
+    "middle": "通过节令、经营目标或社区共同任务形成阶段推进，避免纯日常散点。",
+    "late": "让归属感接受一次真实考验，但不突然切换成残酷战争或连续死亡。",
+    "milestone": "每三至五章兑现一次关系、手艺、社区或空间状态的可见改善。"
+  },
+  "numerical_system": {"enabled": false, "rules": ["经营数字只服务生活变化，不以面板结算替代人物感受", "物资改善必须在场景中体现"]},
+  "power_scaling": {"model": "手艺、信任、社区协作和生活空间成长", "gates": ["成长必须来自劳动或关系投入", "重大改善需要时间积累", "能力增长不能消灭所有日常摩擦"]},
+  "reader_contract": ["阅读安全感高于危机刺激", "安静场景仍必须产生状态变化", "社区和场所拥有持续记忆", "冲突解决不靠突然施暴"],
+  "forbidden_drift": ["为制造钩子突然引入灭门或世界毁灭", "把温馨写成没有选择和变化的流水账", "用强行误会反复破坏已建立的信任", "连续用煽情创伤代替生活推进"],
+  "review_gates": [
+    {"id": "emotional-safety", "severity": "blocking", "check": "是否无预警破坏已建立的低烈度阅读契约"},
+    {"id": "quiet-state-change", "severity": "major", "check": "安静章节是否至少改变一项人物或社区状态"},
+    {"id": "community-memory", "severity": "major", "check": "配角、场所和共同经历是否在后文留下影响"},
+    {"id": "earned-comfort", "severity": "minor", "check": "治愈和改善是否来自具体行动，而不是空泛抒情"}
+  ],
+  "evidence": {"confidence": "medium", "basis": ["InkOS 题材机制", "oh-story 情绪落地、人物关系和日常题材方法"], "adaptation_note": "为现有强钩子审查增加低烈度题材的有效推进标准。"}
+}

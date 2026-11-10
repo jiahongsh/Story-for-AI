@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oh-story.local/schemas/genre-contract.schema.json",
+  "title": "oh-story genre contract",
+  "type": "object",
+  "required": [
+    "contract_version",
+    "genre_id",
+    "display_name",
+    "aliases",
+    "markets",
+    "languages",
+    "core_promise",
+    "chapter_types",
+    "satisfaction_types",
+    "conflict_engine",
+    "pacing_rule",
+    "numerical_system",
+    "power_scaling",
+    "reader_contract",
+    "forbidden_drift",
+    "review_gates",
+    "evidence"
+  ],
+  "properties": {
+    "contract_version": {"type": "string", "pattern": "^[0-9]+\\.[0-9]+$"},
+    "genre_id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "display_name": {"type": "string", "minLength": 1},
+    "aliases": {"type": "array", "items": {"type": "string"}, "minItems": 1, "uniqueItems": true},
+    "markets": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "languages": {"type": "array", "items": {"enum": ["zh", "en"]}, "minItems": 1, "uniqueItems": true},
+    "core_promise": {"type": "string", "minLength": 1},
+    "chapter_types": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "purpose"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "name": {"type": "string"},
+          "purpose": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "satisfaction_types": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "conflict_engine": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "pacing_rule": {
+      "type": "object",
+      "required": ["opening", "early", "middle", "late", "milestone"],
+      "properties": {
+        "opening": {"type": "string"},
+        "early": {"type": "string"},
+        "middle": {"type": "string"},
+        "late": {"type": "string"},
+        "milestone": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "numerical_system": {
+      "type": "object",
+      "required": ["enabled", "rules"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "rules": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "power_scaling": {
+      "type": "object",
+      "required": ["model", "gates"],
+      "properties": {
+        "model": {"type": "string"},
+        "gates": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "reader_contract": {"type": "array", "items": {"type": "string"}, "minItems": 2},
+    "forbidden_drift": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+    "review_gates": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["id", "severity", "check"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+          "severity": {"enum": ["blocking", "major", "minor"]},
+          "check": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "required": ["confidence", "basis", "adaptation_note"],
+      "properties": {
+        "confidence": {"enum": ["high", "medium", "low"]},
+        "basis": {"type": "array", "items": {"type": "string"}, "minItems": 1},
+        "adaptation_note": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "source_contract": {"type": "string"},
+    "project_binding": {
+      "type": "object",
+      "properties": {
+        "materialized_at": {"type": "string"},
+        "project_root": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "project_overrides": {"type": "object"}
+  },
+  "additionalProperties": false
+}

@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 64,
   "target": "正文/第064章_你也一直在验我.md",
-  "accepted_prose_sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26",
+  "accepted_prose_sha256": "fa4bdbd05e20b45527412380d51f09a44fcca0f89138626f6ae40ba0b3dc1dde",
   "candidate_id": "C20261004-170354",
   "candidate_manifest": "追踪/候选章/第064章/C20261004-170354/manifest.json",
   "context_digest": "8882386e78a2353e7e8053f305055e94a786f8babc4150b71e9796feb11f2a2d",
   "state_revision_before": 7,
-  "state_revision_after": 219,
+  "state_revision_after": 260,
   "accepted_at": "2026-10-04T11:24:16Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复定稿，接纳第064章候选。",
@@ -19,6 +19,14 @@
       "old_sha256": "05d90768bbde89a7be95f130a6111319d55157f8e889c3144fdee60203c36fcf",
       "new_sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26",
       "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-01T07:00:46Z",
+      "reason": "普通熟客只问关系，店主按店务回应，转碗者明确",
+      "old_sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26",
+      "new_sha256": "fa4bdbd05e20b45527412380d51f09a44fcca0f89138626f6ae40ba0b3dc1dde",
+      "state_revision": 260,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

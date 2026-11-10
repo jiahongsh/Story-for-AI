@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://oh-story.local/schemas/dialogue-scene-card.schema.json",
+  "title": "Dialogue Scene Card",
+  "description": "中文小说重要对白场景的轻量内部规划卡，不要求逐句规划或持久化。",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scene_purpose",
+    "participants",
+    "turning_point",
+    "clarity_risks"
+  ],
+  "properties": {
+    "scene_purpose": {
+      "type": "string",
+      "minLength": 1,
+      "description": "这场对话结束后必须发生的变化。"
+    },
+    "surface_topic": {
+      "type": "string",
+      "description": "人物表面上正在谈论的事情。"
+    },
+    "participants": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "wants", "cannot_say", "voice"],
+        "properties": {
+          "name": {"type": "string", "minLength": 1},
+          "wants": {"type": "string", "minLength": 1},
+          "cannot_say": {"type": "string"},
+          "strategy": {"type": "string"},
+          "voice": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "sentence_shape": {"type": "string"},
+              "directness": {"type": "string"},
+              "focus": {"type": "string"},
+              "pressure_response": {"type": "string"}
+            }
+          }
+        }
+      }
+    },
+    "turning_point": {
+      "type": "string",
+      "minLength": 1,
+      "description": "哪句话、沉默或行动改变了关系、信息或下一步。"
+    },
+    "clarity_risks": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "需要重新锚定说话人的位置，尤其是多人场景。"
+    }
+  }
+}

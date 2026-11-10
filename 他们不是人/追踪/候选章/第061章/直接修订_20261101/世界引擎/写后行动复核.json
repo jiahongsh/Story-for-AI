@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 61,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "5f9c1a12ef5d0c831938f509d6fba8fb4e240db6884e7228e27faf59b4573b0a",
+      "state_revision": 258,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第061章_来修表的人.md",
+      "sha256": "bef9d2ee12512bc6a466dea05a6ed33efdd0c830822d9fe700fad35473dfd657",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第060章_不回答.md",
+      "sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第061章.md",
+      "sha256": "b1578b478c26fa9bd7746de9f9b0cc0b28eb37a82afbd925ec63e2c5b92b8429",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第061章/写前依据.md",
+      "sha256": "62278703a251dbff6d800d9730de0134878c6d1efcad34f5f89a3c192b94427c",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "保住正常维修之外的边界，弄清对方是否继续索取反馈。",
+      "without_protagonist": "可以不理消息，但看见已到的问话并保留原文更符合他的调查习惯。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "下午一点三十，孙立还没到。镜辞把待修盘转回来，慢表的表蒙仍朝着墙。定金小票的底联在抽屉里，二十块和裴亮的十一块分开。他把工具铺开：洗油、竹签、新油、镊子。铺完又把私人本压在工具左边，上午那行未判朝下。姜霁坐在侧面，文件夹合着。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "下午一点三十，孙立还没到。镜辞把待修盘转回来，慢表的表蒙仍朝着墙。定金小票的底联在抽屉里，二十块和裴亮的十一块分开。他把工具铺开：洗油、竹签、新油、镊子。铺完又把私人本压在工具左边，上午那行未判朝下。姜霁坐在侧面，文件夹合着。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "十四点十八分读到问话",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "读取陈屿工号发来的问话并保留来源未知",
+          "gates": {
+            "knows": "早上已经见到孙立浅线并接了维修单；不知道陈屿从何取得顾客或观察信息。",
+            "wants": "保住正常维修之外的边界，弄清对方是否继续索取反馈。",
+            "fears": "怕自己的自然反应和客人资料被别人利用。",
+            "capability": "只能看自己手机上的消息和维修记录，没有追踪消息上游的权限。",
+            "no_plot": "可以不理消息，但看见已到的问话并保留原文更符合他的调查习惯。",
+            "costs": "收到问话会加重疑虑，拒绝回复也不能保证别人不知道观察。",
+            "consequences": "姜霁仍只查公开来源，孙立自持维修票离店，信息路径仍无人证实。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "只能看自己手机上的消息和维修记录，没有追踪消息上游的权限。",
+            "limits": "收到问话会加重疑虑，拒绝回复也不能保证别人不知道观察。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "保住正常维修之外的边界，弄清对方是否继续索取反馈。",
+            "success_guaranteed": false,
+            "failure_path": "收到问话会加重疑虑，拒绝回复也不能保证别人不知道观察。",
+            "opposition": "姜霁仍只查公开来源，孙立自持维修票离店，信息路径仍无人证实。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 87,
+              "end_line": 87,
+              "quote": "镜辞把私人本合上。合上之前只多了一行：新客孙立，脸侧极浅，几乎贴平。未问。未判。陈屿已离开。抽屉和门的那两下，另记。定金二十在抽屉里。裴亮的十一块仍在昨天的损失页。两笔分开夹。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 60,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "早上已经见到孙立浅线并接了维修单；不知道陈屿从何取得顾客或观察信息。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "其后记下时刻和疑问",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "镜辞",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "记下六分钟先后，只担心目击被利用，不断言短信就是那一眼的代价",
+          "gates": {
+            "knows": "已读取问话，知道孙立约14:12离店和14:18来信，二者有先后而没有已证传递路径。",
+            "wants": "区分可记的时刻与尚待查明的泄露原因，继续拒绝身份背书。",
+            "fears": "怕把自己的焦虑当成事实，反过来无据盘问顾客。",
+            "capability": "能保留原文、记录时间并拒答，不能看穿发送者如何知情。",
+            "no_plot": "可以把问话当成露馅证据，但此前误判经验使他仍会容许对方只是试探。",
+            "costs": "接受没有即时答案，也不通过盘问孙立换取安心。",
+            "consequences": "公开名单仍只证明服务采购关系，孙立作为顾客的选择及票据权利不被撤销。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "能保留原文、记录时间并拒答，不能看穿发送者如何知情。",
+            "limits": "接受没有即时答案，也不通过盘问孙立换取安心。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "区分可记的时刻与尚待查明的泄露原因，继续拒绝身份背书。",
+            "success_guaranteed": false,
+            "failure_path": "接受没有即时答案，也不通过盘问孙立换取安心。",
+            "opposition": "公开名单仍只证明服务采购关系，孙立作为顾客的选择及票据权利不被撤销。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "拟行动A1｜镜辞｜读取陈屿工号发来的问话并保留来源未知",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 61,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已读取问话，知道孙立约14:12离店和14:18来信，二者有先后而没有已证传递路径。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "把短信与目击的已证因果降回有限怀疑；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第061章/直接修订_20261101/世界引擎/写前行动审查.json",
+      "sha256": "61d4b6765e88a41ca4fccae1d4477ca9abee6a06a04945aaf310030aa9fff2b7"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第061章/直接修订_20261101/candidate.md",
+      "sha256": "8f3856c92208c16cec10a809a3a1d3a4adcb5c4e2fdb48dca034089bdff227b9"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "镜辞实际完成的选择由下列正文原句限定：没看出来？",
+        "evidence": [
+          {
+            "start_line": 45,
+            "end_line": 45,
+            "quote": "没看出来？"
+          }
+        ],
+        "world_followups": [
+          "姜霁仍只查公开来源，孙立自持维修票离店，信息路径仍无人证实。"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "action_ids": [
+          "A2"
+        ],
+        "actual_result": "镜辞实际完成的选择由下列正文原句限定：镜辞把陈屿那四个字的时间写在“来源未核”旁边：十四时十八分。孙立离店大约十四时十二分。中间六分钟。他不写这六分钟是谁通知的。短信已经到，谁提供过什么消息，仍没有来源。他盯着那四个字，想起刚才灯下那一闪：他看见的事，会不会又被人拿去用？他不知道这条消息和那一眼有没有关系，也不知道是谁告诉了陈屿什么。",
+        "evidence": [
+          {
+            "start_line": 71,
+            "end_line": 71,
+            "quote": "镜辞把陈屿那四个字的时间写在“来源未核”旁边：十四时十八分。孙立离店大约十四时十二分。中间六分钟。他不写这六分钟是谁通知的。短信已经到，谁提供过什么消息，仍没有来源。他盯着那四个字，想起刚才灯下那一闪：他看见的事，会不会又被人拿去用？他不知道这条消息和那一眼有没有关系，也不知道是谁告诉了陈屿什么。"
+          }
+        ],
+        "world_followups": [
+          "公开名单仍只证明服务采购关系，孙立作为顾客的选择及票据权利不被撤销。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 45,
+            "end_line": 45,
+            "quote": "没看出来？"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "把短信与目击的已证因果降回有限怀疑。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

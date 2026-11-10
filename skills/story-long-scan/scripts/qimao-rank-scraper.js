@@ -19,7 +19,8 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ab, sleep, evalJSONBase64, scrollLoad, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSONBase64, scrollLoad, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 const RANK_URL = "https://www.qimao.com/paihang";
 
@@ -78,7 +79,7 @@ function selectionMatches(observed, channelId, rankTypeId, periodId) {
   const expectedUrl = rankUrl(channelId, rankTypeId, periodId);
   if (!expectedUrl) return false;
   const expectedPath = new URL(expectedUrl).pathname;
-  const actualPath = String(observed && observed.path || "").replace(/\/+$/, "/");
+  const actualPath = String((observed && observed.path) || "").replace(/\/+$/, "/");
   return !!(
     actualPath === expectedPath &&
     String(observed.channel || "").includes(channel.tab) &&
@@ -218,7 +219,16 @@ function summarizeQuality(books, rawCount) {
   };
 }
 
-function renderMarkdown(ch, rt, period, url, books, rawCount, now = new Date().toISOString()) {
+function renderMarkdown(
+  ch,
+  rt,
+  period,
+  url,
+  books,
+  rawCount,
+  now = RUN_CLOCK.utc,
+  reportDate = RUN_CLOCK.localDate
+) {
   const periodLabel = period ? period.label : "";
   const summary = summarizeQuality(books, rawCount);
   const lines = [
@@ -230,7 +240,8 @@ function renderMarkdown(ch, rt, period, url, books, rawCount, now = new Date().t
     `- 作品页链接：${summary.linked} / ${books.length}`,
     `- 热度命中：${summary.heated} / ${books.length}`,
     `- 来源：${url}`,
-    `- 抓取时间：${now}`,
+    `- 抓取时间（UTC）：${now}`,
+    `- 报告日期（本地）：${reportDate}`,
     `- 条目数：${books.length}`,
     "",
     "---",
@@ -309,6 +320,7 @@ function scrapeRank(port, channelId, rankTypeId, periodId) {
       console.error(`  ✗ 当前页面非七猫（host=${probe.host}），可能被重定向，已跳过。`);
       return null;
     }
+
     const observed = extractObservedSelection(port);
     if (!selectionMatches(observed, channelId, rankTypeId, periodId)) {
       console.error(
@@ -403,7 +415,7 @@ function main() {
       continue;
     }
 
-    const date = localDateStamp();
+    const date = RUN_CLOCK.localDate;
     const filename = outputFilename(target.channel, target.rankType, target.period, date);
     fs.mkdirSync(OUTDIR, { recursive: true });
     const filepath = path.join(OUTDIR, filename);

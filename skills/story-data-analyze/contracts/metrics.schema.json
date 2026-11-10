@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/metrics.schema.json",
+  "title": "Metric facts bound to the canonical catalog and metric tree",
+  "type": "object",
+  "required": [
+    "metric_catalog_version", "definition_artifacts", "facts", "computed_metric_ids",
+    "required_nodes_checked", "node_statuses", "quality_summary", "input_artifact_hashes"
+  ],
+  "properties": {
+    "metric_catalog_version": {"type": "string", "minLength": 1},
+    "definition_artifacts": {
+      "type": "object",
+      "required": ["metric_catalog", "metric_tree", "diagnostic_routes"],
+      "additionalProperties": false
+    },
+    "facts": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/fact"}},
+    "computed_metric_ids": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "required_nodes_checked": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+    "node_statuses": {"type": "array", "minItems": 1, "items": {"type": "object"}},
+    "quality_summary": {"type": "object", "required": ["status", "limitations"]},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "$defs": {
+    "fact": {
+      "type": "object",
+      "required": [
+        "metric_id", "value", "unit", "time_grain", "dimensions", "quality_status",
+        "authoritative", "source_refs", "source_observations", "calculation"
+      ],
+      "properties": {
+        "metric_id": {"type": "string", "minLength": 1},
+        "value": {"type": "number"},
+        "unit": {"type": "string"},
+        "time_grain": {"type": "string"},
+        "dimensions": {"type": "object"},
+        "quality_status": {"enum": ["OK", "PARTIAL"]},
+        "authoritative": {"type": "boolean"},
+        "source_refs": {"type": "array", "minItems": 1},
+        "source_observations": {"type": "array", "minItems": 1},
+        "calculation": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

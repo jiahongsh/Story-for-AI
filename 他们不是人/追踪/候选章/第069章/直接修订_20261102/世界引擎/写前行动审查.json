@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 69,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "0963e94df53da85d34a8ca3f62d92cd2d8f333d85d6dcd751b3c5f0ad6d0832e",
+      "state_revision": 264,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第069章_她的朋友.md",
+      "sha256": "5862971eddfc9f5e3086f56e9db8d7ec47c65148a4c1be4b65396005718367a7",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第068章_这段路是我走的.md",
+      "sha256": "ba76e1ed582f92ef5365a0ff60c5d84000a5297106614093e90383594df41409",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第069章.md",
+      "sha256": "b21ee82bd4a9453702d5ca33596d963b5a62e89b222348dace6539d669a873ca",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第069章/写前依据.md",
+      "sha256": "a7c70fb01176ba9c9d1f0bad0c228d3c529aaa5e50251d15f40414d0dd69b1dd",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "当前存在",
+      "name": "当前存在",
+      "protagonist": false,
+      "own_goal": "喝水缓解空腹不适，尚未想好答复。",
+      "without_protagonist": "可继续搁着，但一整天没喝，回店喝水有生理需要。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，她把抄着唐宁两个字的卡片翻过来，指尖在号码上按了三秒，才用自己的手机拨出去。镜辞的镊子停在表壳边上，没伸手要那只手机。姜霁把笔帽扣上。风险页背面那行字还在，她没把号码再念一遍。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，她把抄着唐宁两个字的卡片翻过来，指尖在号码上按了三秒，才用自己的手机拨出去。镜辞的镊子停在表壳边上，没伸手要那只手机。姜霁把笔帽扣上。风险页背面那行字还在，她没把号码再念一遍。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "傍晚收到唐宁到家消息之后",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "当前存在"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "当前存在",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "回店后再次拧开早上买的水瓶饮水",
+          "gates": {
+            "knows": "知道水瓶早上已拧开又盖上，唐宁傍晚发来到家消息；昨日决定自行联系唐宁。",
+            "wants": "喝水缓解空腹不适，尚未想好答复。",
+            "fears": "怕借熟话敷衍唐宁，失去信任。",
+            "capability": "水在手边，可自行饮用，不能替唐宁决定和解。",
+            "no_plot": "可继续搁着，但一整天没喝，回店喝水有生理需要。",
+            "costs": "水2元已付，胃空不会立刻恢复，消息仍未回。",
+            "consequences": "饮水不撤销争执；镜辞修表，不代为联系。"
+          },
+          "capacity": {
+            "resources": [
+              "本人票证、包和水瓶"
+            ],
+            "permission": "水在手边，可自行饮用，不能替唐宁决定和解。",
+            "limits": "水2元已付，胃空不会立刻恢复，消息仍未回。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "喝水缓解空腹不适，尚未想好答复。",
+            "success_guaranteed": false,
+            "failure_path": "水2元已付，胃空不会立刻恢复，消息仍未回。",
+            "opposition": "饮水不撤销争执；镜辞修表，不代为联系。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 81,
+              "end_line": 81,
+              "quote": "“到时候再看。我说的是先打电话。”她把卡片收回去，“唐宁这个，我明天自己打。你别先问她。”",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 68,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道水瓶早上已拧开又盖上，唐宁傍晚发来到家消息；昨日决定自行联系唐宁。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "修正已开水瓶在结尾再次首次开启的动作矛盾；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

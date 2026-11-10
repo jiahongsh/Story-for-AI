@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 58,
   "target": "正文/第058章_你为什么不躲.md",
-  "accepted_prose_sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834",
+  "accepted_prose_sha256": "73b5ab2eefc257a114dc9f956627fd62920c9d63ebc4cbdda494f0a5dc4f73fa",
   "candidate_id": "C20261004-112730",
   "candidate_manifest": "追踪/候选章/第058章/C20261004-112730/manifest.json",
   "context_digest": "fa487cd9806c5d341f9df6e31836630e972735a2243a1efe1fe7163a3fb6676a",
   "state_revision_before": 1,
-  "state_revision_after": 219,
+  "state_revision_after": 256,
   "accepted_at": "2026-10-04T03:27:48Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复接受",
@@ -43,6 +43,14 @@
       "old_sha256": "f7691ba6530e7b56b392f3dd7e2f2d9c617e61ff8826087382c52f9fd7d95727",
       "new_sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834",
       "state_revision": 219,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-01T06:57:54Z",
+      "reason": "遮挡公共座位上的无关住户信息",
+      "old_sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834",
+      "new_sha256": "73b5ab2eefc257a114dc9f956627fd62920c9d63ebc4cbdda494f0a5dc4f73fa",
+      "state_revision": 256,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

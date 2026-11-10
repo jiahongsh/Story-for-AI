@@ -1,0 +1,462 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 52,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "f23c6c8ecc6bf50949033991f13c3c95c3288b5155dc345a3e289a88647e8793",
+      "state_revision": 250,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "创作运行/2026-10-28_052-065直接修订/052写前依据.md",
+      "sha256": "e5cdeec4d1f7ba6373c27d9ac5559f1fffdc0aa073814bc4f415d8c89bb50e06",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第051章_真的回来了.md",
+      "sha256": "15b58a4b34697ae842954951a60e5d90db862a67c6e310f7d0a4b3a8d469433a",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "正文/第052章_一条时间线.md",
+      "sha256": "a4c75468968147daacff54ac147781ae1a165271b934ead768e1e2bf28e3e1ad",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "正文/第053章_验收题.md",
+      "sha256": "5130b027816fe77b9819f1803fc8ef9b18732e1bbb1c0f143fc5d1cbd438fab5",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "大纲/细纲_第052章.md",
+      "sha256": "8862929b54257623d8a349239d5c42e3949a3480c141eb44feb2c7e92f5ab087",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "宁州陈骁",
+      "name": "宁州陈骁",
+      "protagonist": false,
+      "own_goal": "拒绝合并两个生活记录并争取维护自己的工资",
+      "without_protagonist": "可以签字止损但不会自愿认下与本人不符的经历",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "宁州陈骁：亲历宁州生活、051当晚楼下拦截与工厂拒假，只知本人当时没有在临江，不凭空知道门禁机制或有早晨检票记录；想阻止把他人的进出写进自己履历，也要保工作和父亲，怕工资受损与被迫认下不属于他的经历；能陈述自己所在城市、附上亲见的拦截编号并拒勾，不能替系统改结果；可选择签字止损但不愿承认不实经历，所以依旧拒签；承担扣款与申诉失败，镜辞和厂方各自行动。其申诉备注写本人的宁州所在陈述和实际拦截编号，不声称新取得的证人或检票材料。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "宁州陈骁：亲历宁州生活、051当晚楼下拦截与工厂拒假，只知本人当时没有在临江，不凭空知道门禁机制或有早晨检票记录；想阻止把他人的进出写进自己履历，也要保工作和父亲，怕工资受损与被迫认下不属于他的经历；能陈述自己所在城市、附上亲见的拦截编号并拒勾，不能替系统改结果；可选择签字止损但不愿承认不实经历，所以依旧拒签；承担扣款与申诉失败，镜辞和厂方各自行动。其申诉备注写本人的宁州所在陈述和实际拦截编号，不声称新取得的证人或检票材料。"
+        }
+      ]
+    },
+    {
+      "id": "杜经理",
+      "name": "杜经理",
+      "protagonist": false,
+      "own_goal": "如实交接记录并避免替系统生成不实确认",
+      "without_protagonist": "可以不提送药时点，但选择如实交接有助于处理住户需求",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "杜经理：亲眼经历051当晚邻居代送药、本人拦截，以及052早上门禁仍红；要交接真实事件并保护自己的当值记录，怕按不属于自己的字段背责且耽误住户；可依据已发生交接说药昨晚代送，不得承诺已修复权限或说药物效果；可以略去药的时间但会继续被追问，选择按实际日期说明符合其交接职责；代价是住户的后续不满，姜霁可只留获准页面，许棠仍自主决定是否配合。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "杜经理：亲眼经历051当晚邻居代送药、本人拦截，以及052早上门禁仍红；要交接真实事件并保护自己的当值记录，怕按不属于自己的字段背责且耽误住户；可依据已发生交接说药昨晚代送，不得承诺已修复权限或说药物效果；可以略去药的时间但会继续被追问，选择按实际日期说明符合其交接职责；代价是住户的后续不满，姜霁可只留获准页面，许棠仍自主决定是否配合。"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "准确保存物业页面与两位陈骁各自的解释",
+      "without_protagonist": "可推断同源，但保留假设是本人一贯复核方法",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 19,
+          "end_line": 19,
+          "quote": "姜霁：知道051短信与052新字段来源，想保存可核的两个现象，怕把时间相邻误当因果；可保留假设和操作记录，不知道发送者、上游规则与真正目的；可强行归因，但拒绝过早结论符合已有左手误判经验；承担调查尚无定论，由镜辞和杜经理自行决定各自的动作。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 19,
+          "end_line": 19,
+          "quote": "姜霁：知道051短信与052新字段来源，想保存可核的两个现象，怕把时间相邻误当因果；可保留假设和操作记录，不知道发送者、上游规则与真正目的；可强行归因，但拒绝过早结论符合已有左手误判经验；承担调查尚无定论，由镜辞和杜经理自行决定各自的动作。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "次日七点四十的有限电话",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [
+        "宁州陈骁"
+      ],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "姜霁",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "询问早间那条记录的当事人说法",
+          "gates": {
+            "knows": "知道前夜短信与眼下字段，未知二者是否同源",
+            "wants": "准确保存物业页面与两位陈骁各自的解释",
+            "fears": "怕重蹈将未证关联写成结论的错误",
+            "capability": "能请求对方提供可获准的原页和操作时点",
+            "no_plot": "可推断同源，但保留假设是本人一贯复核方法",
+            "costs": "花时间分开保存，不强迫当事人签认",
+            "consequences": "他人可拒交资料，调查仍无法认定后台来源"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 19,
+              "end_line": 19,
+              "quote": "姜霁：知道051短信与052新字段来源，想保存可核的两个现象，怕把时间相邻误当因果；可保留假设和操作记录，不知道发送者、上游规则与真正目的；可强行归因，但拒绝过早结论符合已有左手误判经验；承担调查尚无定论，由镜辞和杜经理自行决定各自的动作。",
+              "access": "memory",
+              "available_chapter": 51,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "来源为本人既有经历、当值交接或亲见事实；本场新增事实待听见后才可使用。",
+              "boundary": "知道前夜短信与眼下字段，未知二者是否同源；本章计划结果不是事前已知。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人电话、亲历及限定范围的已有页面"
+            ],
+            "permission": "能请求对方提供可获准的原页和操作时点",
+            "limits": "花时间分开保存，不强迫当事人签认",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "询问早间那条记录的当事人说法",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝，申诉仍可能无效，后台机制仍未核清。",
+            "opposition": "他人可拒交资料，调查仍无法认定后台来源"
+          }
+        },
+        {
+          "id": "A2",
+          "actor_id": "宁州陈骁",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "说明自己早间在宁州、拒绝把不属于自己的记录写成本人进出",
+          "gates": {
+            "knows": "知道本人曾在宁州和昨晚楼下的拦截，不知后台触发者",
+            "wants": "拒绝合并两个生活记录并争取维护自己的工资",
+            "fears": "怕工钱受损和被迫认可不属于自己的经历",
+            "capability": "本人可陈述位置并拒签，不能调上游日志",
+            "no_plot": "可以签字止损但不会自愿认下与本人不符的经历",
+            "costs": "接受扣款风险，不编造早晨检票或未曾取得的证据",
+            "consequences": "工厂可拒绝备注，镜辞可保存本人陈述而不认证身份"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 15,
+              "end_line": 15,
+              "quote": "宁州陈骁：亲历宁州生活、051当晚楼下拦截与工厂拒假，只知本人当时没有在临江，不凭空知道门禁机制或有早晨检票记录；想阻止把他人的进出写进自己履历，也要保工作和父亲，怕工资受损与被迫认下不属于他的经历；能陈述自己所在城市、附上亲见的拦截编号并拒勾，不能替系统改结果；可选择签字止损但不愿承认不实经历，所以依旧拒签；承担扣款与申诉失败，镜辞和厂方各自行动。其申诉备注写本人的宁州所在陈述和实际拦截编号，不声称新取得的证人或检票材料。",
+              "access": "memory",
+              "available_chapter": 51,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "来源为本人既有经历、当值交接或亲见事实；本场新增事实待听见后才可使用。",
+              "boundary": "知道本人曾在宁州和昨晚楼下的拦截，不知后台触发者；本章计划结果不是事前已知。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人电话、亲历及限定范围的已有页面"
+            ],
+            "permission": "本人可陈述位置并拒签，不能调上游日志",
+            "limits": "接受扣款风险，不编造早晨检票或未曾取得的证据",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "说明自己早间在宁州、拒绝把不属于自己的记录写成本人进出",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝，申诉仍可能无效，后台机制仍未核清。",
+            "opposition": "工厂可拒绝备注，镜辞可保存本人陈述而不认证身份"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "当日物业账户截图与电话",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [
+        "杜经理"
+      ],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "姜霁",
+          "order": 3,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "请求当值人员保留原页和获取时间",
+          "gates": {
+            "knows": "知道前夜短信与眼下字段，未知二者是否同源",
+            "wants": "准确保存物业页面与两位陈骁各自的解释",
+            "fears": "怕重蹈将未证关联写成结论的错误",
+            "capability": "能请求对方提供可获准的原页和操作时点",
+            "no_plot": "可推断同源，但保留假设是本人一贯复核方法",
+            "costs": "花时间分开保存，不强迫当事人签认",
+            "consequences": "他人可拒交资料，调查仍无法认定后台来源"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 19,
+              "end_line": 19,
+              "quote": "姜霁：知道051短信与052新字段来源，想保存可核的两个现象，怕把时间相邻误当因果；可保留假设和操作记录，不知道发送者、上游规则与真正目的；可强行归因，但拒绝过早结论符合已有左手误判经验；承担调查尚无定论，由镜辞和杜经理自行决定各自的动作。",
+              "access": "memory",
+              "available_chapter": 51,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "来源为本人既有经历、当值交接或亲见事实；本场新增事实待听见后才可使用。",
+              "boundary": "知道前夜短信与眼下字段，未知二者是否同源；本章计划结果不是事前已知。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人电话、亲历及限定范围的已有页面"
+            ],
+            "permission": "能请求对方提供可获准的原页和操作时点",
+            "limits": "花时间分开保存，不强迫当事人签认",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "请求当值人员保留原页和获取时间",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝，申诉仍可能无效，后台机制仍未核清。",
+            "opposition": "他人可拒交资料，调查仍无法认定后台来源"
+          }
+        },
+        {
+          "id": "A4",
+          "actor_id": "杜经理",
+          "order": 4,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "按亲历说明前夜邻居代送药、今日许棠卡仍红",
+          "gates": {
+            "knows": "亲见前夜邻居代送药及拦截，今晨看到许棠卡仍失效",
+            "wants": "如实交接记录并避免替系统生成不实确认",
+            "fears": "怕住户延误和不明字段最后算自己头上",
+            "capability": "能报告当值交接与现页，不能改写上游或认证身份",
+            "no_plot": "可以不提送药时点，但选择如实交接有助于处理住户需求",
+            "costs": "承担住户不满，不将卡失效归入陈骁案",
+            "consequences": "姜霁可保存相关记录，许棠仍有自己的诉求与拒绝权"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "杜经理：亲眼经历051当晚邻居代送药、本人拦截，以及052早上门禁仍红；要交接真实事件并保护自己的当值记录，怕按不属于自己的字段背责且耽误住户；可依据已发生交接说药昨晚代送，不得承诺已修复权限或说药物效果；可以略去药的时间但会继续被追问，选择按实际日期说明符合其交接职责；代价是住户的后续不满，姜霁可只留获准页面，许棠仍自主决定是否配合。",
+              "access": "memory",
+              "available_chapter": 51,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "来源为本人既有经历、当值交接或亲见事实；本场新增事实待听见后才可使用。",
+              "boundary": "亲见前夜邻居代送药及拦截，今晨看到许棠卡仍失效；本章计划结果不是事前已知。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人电话、亲历及限定范围的已有页面"
+            ],
+            "permission": "能报告当值交接与现页，不能改写上游或认证身份",
+            "limits": "承担住户不满，不将卡失效归入陈骁案",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "按亲历说明前夜邻居代送药、今日许棠卡仍红",
+            "success_guaranteed": false,
+            "failure_path": "对方可以拒绝，申诉仍可能无效，后台机制仍未核清。",
+            "opposition": "姜霁可保存相关记录，许棠仍有自己的诉求与拒绝权"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "本包仅覆盖两处具体日序及相关电话行动；其他已接纳场景未新增行动，原文完整保留。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "核对049—053现行正文及052细纲，将亲历、陈述和未证机制分开。",
+    "basis": "宁州陈骁仅说本人在宁州，不补检票或新证人；杜经理按前夜事实交接，姜霁仍只提出关联假设。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第052章/直接修订_20261028/世界引擎/写前行动审查.json",
+      "sha256": "fd4315a6ef73c082e5d1902eb0ce6403e9b2c126ed09b6b1afa4a9de0c51400f"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第052章/直接修订_20261028/candidate.md",
+      "sha256": "38710600921b4033a17a56e977a0e7de52234a8e7ed9d41d2986a59f9e86000e"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "actual_result": "宁州陈骁陈述当时在宁州并拒签，工资扣款风险由其承担；姜霁分存材料，不认证身份。",
+        "action_ids": [
+          "A1",
+          "A2"
+        ],
+        "evidence": [
+          {
+            "start_line": 11,
+            "end_line": 11,
+            "quote": "“还有晚上那条拦截。”陈骁说，“六点四十一我还在宁州，那时候我没到临江。晚上七点十二我人是到了楼下，门没进，杜经理按掉的。他们要我签一份说明，承认这些都是我本人进出。”"
+          },
+          {
+            "start_line": 21,
+            "end_line": 21,
+            "quote": "镜辞让他把未勾选的页面再截一张，单独存。姜霁看完，只说：“这一张归宁州那夹。别跟临江的门禁贴在一起。”"
+          }
+        ],
+        "world_followups": [
+          "工厂未接受备注，陈骁继续承担工资损失，双方履历未合并。"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "actual_result": "姜霁要求保留页面与时间；杜经理交接昨晚代送药与今早卡仍红，拒点非本人写的字段。",
+        "action_ids": [
+          "A3",
+          "A4"
+        ],
+        "evidence": [
+          {
+            "start_line": 37,
+            "end_line": 37,
+            "quote": "姜霁让他把原页面再拍一张，连同浏览器地址和电脑右下角的时间。杜经理拍了三张，第三张才把那行新字拍全。他在语音里补了一句：许棠的卡今早还是红的，药昨晚已经由邻居送进去了，这件事别写进陈骁的账户。"
+          }
+        ],
+        "world_followups": [
+          "物业字段与短信的关系仍是待核假设，许棠的问题独立于陈骁账户。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本次更正两个时间表述，没有新增或回收伏笔；新字段来源仍待核。",
+        "evidence": [
+          {
+            "start_line": 33,
+            "end_line": 33,
+            "quote": "姜霁的手机这时候亮了。杜经理把今早刷新过的账户页拍了过来。昨天那条十九点十二分的拦截还在，上周三下午四点二十的离开也在。页面底部多了一行新字：两条行为记录已写入同一身份账户，待可见性复核。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "回读052候选、冻结行动包及051相邻事实，检查具体措辞和证据边界。",
+      "basis": "陈骁仅陈述自身所在地，杜经理说前夜代送，未将短信先后写成后台因果或身份结论。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 60,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "7b4509b9e4a4fddea47ed4352a059535363c1b0510bdb47062e5866c621a82e4",
+      "state_revision": 257,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第060章_不回答.md",
+      "sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第059章_工单跟着我走.md",
+      "sha256": "afaf3e2c8980c60a579f6c3b4877078964d9c5666422b5a343ba5937a0a10ee9",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第060章.md",
+      "sha256": "986ce39576676f2642d57a187e43d708759938d66cf4815819e703a23ea03a0f",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第060章/写前依据.md",
+      "sha256": "41915a988420d63a4ae2577975e861de60ad759e7180ea53faf35385cb546085",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "承接正常营业的维修，守住不替别人认证身份的边界。",
+      "without_protagonist": "可以拒客避风险，但真实故障和正常修表生计使他选择按维修范围接单。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上九点十分，卷帘拉到一半，陈屿已经站在门槛外。手里托着一只旧机械表，表蒙朝上，没有口袋，也没有纸袋。镜辞认得这个把表放到柜台上的动作。上一次是石英表，腕上摘下来，往玻璃上一搁。这一次他等卷帘完全拉开，才把机械表放进柜台正中，链子绕成一圈。玻璃上立刻起了一小块雾。雾的位置和上次石英表压过的地方错开两指。镜辞的指尖在那块雾旁边顿住，没有去擦。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上九点十分，卷帘拉到一半，陈屿已经站在门槛外。手里托着一只旧机械表，表蒙朝上，没有口袋，也没有纸袋。镜辞认得这个把表放到柜台上的动作。上一次是石英表，腕上摘下来，往玻璃上一搁。这一次他等卷帘完全拉开，才把机械表放进柜台正中，链子绕成一圈。玻璃上立刻起了一小块雾。雾的位置和上次石英表压过的地方错开两指。镜辞的指尖在那块雾旁边顿住，没有去擦。",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "保护正常维修权利，维持既有不作身份认证的边界。",
+      "without_protagonist": "可以等待更多线索再决定验不验，但承诺过不供结果，仍会要求只按维修办。",
+      "voice_refs": [
+        {
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "姜霁坐在柜台侧面，文件夹合着。她没有把恒泰和恒准的纸抽出来。她把椅子往后挪了半尺，让柜台正面只剩镜辞和那只表。挪完她低声说了一句：他问的时候我不出声。你要是答了，算你答的。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 15,
+          "end_line": 15,
+          "quote": "姜霁坐在柜台侧面，文件夹合着。她没有把恒泰和恒准的纸抽出来。她把椅子往后挪了半尺，让柜台正面只剩镜辞和那只表。挪完她低声说了一句：他问的时候我不出声。你要是答了，算你答的。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "九点四十接收孙立的维修表",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "按普通维修范围接收孙立的表和定金，不把脸侧观察写入小票",
+          "gates": {
+            "knows": "已有修表技能和停止供给记录；孙立当场送表、报慢并愿付定金，身份真相未知。",
+            "wants": "承接正常营业的维修，守住不替别人认证身份的边界。",
+            "fears": "怕一位普通顾客被自己变成验人样本，也怕表件和账款说不清。",
+            "capability": "可接修机械表、开定金票，不能依据浅线给客人身份定性。",
+            "no_plot": "可以拒客避风险，但真实故障和正常修表生计使他选择按维修范围接单。",
+            "costs": "承担正常保管与维修责任，收二十定金；自然看到浅线也不能保证不会被利用。",
+            "consequences": "孙立决定交表和下午取表，保留父亲遗表的要求，不配合身份盘问。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "可接修机械表、开定金票，不能依据浅线给客人身份定性。",
+            "limits": "承担正常保管与维修责任，收二十定金；自然看到浅线也不能保证不会被利用。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "承接正常营业的维修，守住不替别人认证身份的边界。",
+            "success_guaranteed": false,
+            "failure_path": "承担正常保管与维修责任，收二十定金；自然看到浅线也不能保证不会被利用。",
+            "opposition": "孙立决定交表和下午取表，保留父亲遗表的要求，不配合身份盘问。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "镜辞的笔尖在纸上顿了一下。他没有打开那个陌生号码，也没有把停供两个字发出去。他只在横线下面写下时间和地点：十五点零二分，钟表行。自此时起，不再提供通过，也不再提供看不见。写的人，镜辞。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 59,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已有修表技能和停止供给记录；孙立当场送表、报慢并愿付定金，身份真相未知。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "孙立离店后、约九点五十五前",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "姜霁",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "要求下午只修表，不重新开放通过与不通过的验收",
+          "gates": {
+            "knows": "知道镜辞已经停止供给，眼前顾客已正常交表付定金；不能证明谁安排他来。",
+            "wants": "保护正常维修权利，维持既有不作身份认证的边界。",
+            "fears": "怕把自然目击重新写成可向外提供的验收结论。",
+            "capability": "能提醒和分存记录，不能阻止自然看见，也不能替顾客决定身份。",
+            "no_plot": "可以等待更多线索再决定验不验，但承诺过不供结果，仍会要求只按维修办。",
+            "costs": "失去主动验人的机会，保留信息泄露的不确定风险。",
+            "consequences": "镜辞仍自主维修，孙立自主取表；陈屿获得了多少弱信息继续未知。"
+          },
+          "capacity": {
+            "resources": [
+              "本人文件夹、已获准材料、现金和手机"
+            ],
+            "permission": "能提醒和分存记录，不能阻止自然看见，也不能替顾客决定身份。",
+            "limits": "失去主动验人的机会，保留信息泄露的不确定风险。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "保护正常维修权利，维持既有不作身份认证的边界。",
+            "success_guaranteed": false,
+            "failure_path": "失去主动验人的机会，保留信息泄露的不确定风险。",
+            "opposition": "镜辞仍自主维修，孙立自主取表；陈屿获得了多少弱信息继续未知。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "拟行动A1｜镜辞｜按普通维修范围接收孙立的表和定金，不把脸侧观察写入小票",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 60,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道镜辞已经停止供给，眼前顾客已正常交表付定金；不能证明谁安排他来。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "普通维修与验收分离，纠正服装和待修表物件动作；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

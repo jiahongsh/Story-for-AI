@@ -2,7 +2,7 @@
 name: story-long-analyze
 version: 1.0.0
 description: "长篇网文拆文。深度拆解爆款长篇小说的黄金三章、人设架构、爽点设计、节奏控制。单一深度拆解管道：跑完黄金三章（Stage 1）后产出快速预览报告并询问是否继续全量拆解，确认后从 Stage 2 续跑逐章摘要、聚合分析、设定关系、汇总报告，全程产物落盘 拆文库/{书名}/。触发方式：/story-long-analyze、/长篇拆文、「帮我拆这本书」「拆这本书」「分析黄金三章」「深度拆解」「完整拆解」「系统拆解」或提供小说文本文件路径——全部进入同一管道。"
-metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+metadata: {"openclaw":{"source":"https://github.com/qin1473692580-ux/oh-story-claudecode"}}
 ---
 # story-long-analyze：长篇网文拆文
 
@@ -12,9 +12,9 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 ---
 
-> Agent 兼容性：检查专业 agent 是否可用时，按 `.claude/agents/{agent}.md` → `.opencode/agents/{agent}.md` → `.codex/agents/{agent}.toml` 的顺序查找。Codex 原生子代理调用优先使用同名 `agent_type`；如果当前 Codex 运行时返回 `unknown agent_type` 或未暴露 custom-agent registry，必须降级为 solo/direct。检测到 `.zcode/` 时同样直接 solo/direct，因为 ZCode 3.3.4 不执行项目 custom agents；报告 `Fallback: project custom agents unavailable -> solo`。Claude/OpenCode 兼容面保留 `subagent_type`。
+> Agent 兼容性：先识别当前运行时，只检查对应的项目定义：Claude Code 为 `.claude/agents/{agent}.md`，OpenCode 为 `.opencode/agents/{agent}.md`，TRAE Code 为 `.trae/agents/{agent}.md`，WorkBuddy（CodeBuddy Code）项目模式为 `.codebuddy/agents/{agent}.md`，Codex 为 `.codex/agents/{agent}.toml`；运行时无法识别时才按上述顺序探测。TRAE Code 使用内置 `Agent` 智能体按 `.trae/agents/{agent}.md` 的名称选择同名 Subagent，并把下文 prompt 作为任务正文，不把 Claude 的 `subagent_type` 参数原样传给 TRAE；WorkBuddy 项目模式使用内置 `Agent` 与原始 `subagent_type: "{agent}"`。WorkBuddy plugin-only 模式只有在当前 Agent registry 真实返回 `oh-story:{agent}` 时才使用该精确命名空间值，不从 plugin manifest 或磁盘文件推测已注册；未返回则按 solo/direct fallback。Codex 原生子代理优先使用同名 `agent_type`，Claude/OpenCode 兼容面保留 `subagent_type`。当前运行时未暴露对应 Agent registry/tool 或 Codex 返回 `unknown agent_type` 时，必须降级为 solo/direct，并报告 `Fallback: project custom agents unavailable -> solo`。只有当前运行时确实是 ZCode 时才强制该降级；其他运行时不得因项目里并存 `.zcode/` 而误判。
 >
-> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 25` 不一致时（标记缺失、字段缺失/非整数、小于或大于 25）**照常按文件存在性检查并 spawn**，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 25）` 并提示重新运行 `/story-setup` 后新开会话；大于 25 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有 agent 文件缺失、或运行时不暴露 custom agent 时才降级 solo/direct，报告 `Fallback: ... -> solo`。
+> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 39` 不一致时（标记缺失、字段缺失/非整数、小于或大于 39）**照常按文件存在性检查并 spawn**，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 39）` 并提示重新运行 `/story-setup` 后新开会话；大于 39 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有 agent 文件缺失、或运行时不暴露 custom agent 时才降级 solo/direct，报告 `Fallback: ... -> solo`。
 
 ## 拆解边界声明（主线程同样适用）
 
@@ -142,7 +142,7 @@ Stage 0+1 完成后，管道**自动停靠**，产出快速预览报告并询问
 
 1. **生成停靠交付物**：写 `拆文库/{书名}/快速预览.md`（模板见 [output-templates.md](references/output-templates.md) 的「快速预览报告」）。此时 `概要.md`、`章节/第1章_深度拆解.md`、`章节/第2章_深度拆解.md`、`章节/第3章_深度拆解.md`、`原文/` 均已落盘。
 2. **写停靠状态**：`_progress.md` 的「最终状态」字段写 `paused_after_stage1`，「断点」段记录「下一操作：Stage 2 逐章摘要」。
-3. **询问用户**（用 AskUserQuestion 风格的明确二选一）：
+3. **询问用户**（使用当前平台可用的交互方式给出明确二选一；Claude 可用 `AskUserQuestion`，TRAE Code 直接在主会话提问）：
    > 「黄金三章已拆完，快速预览报告见 `快速预览.md`。是否继续全量拆解（Stage 2-6：逐章摘要 / 聚合分析（含 `剧情/节奏.md`、`剧情/情绪模块.md`）/ 设定关系 / 汇总报告 / 文风）？预计耗时 {基于章节数粗估}。」
    - 选「继续全量拆解」→ 读 `_progress.md`，从 **Stage 2** 续跑，**不重跑 Stage 0/1**。
    - 选「就到这里」→ 管道结束，`_progress.md` 状态保持 `paused_after_stage1`，告知用户「之后可随时 `/story-long-analyze` 同一本书，会自动从 Stage 2 续跑」。
@@ -152,7 +152,7 @@ Stage 0+1 完成后，管道**自动停靠**，产出快速预览报告并询问
 
 `拆文报告.md` 出来后（Stage 5 跑完）执行——和 Stage 6 无关，Stage 6 失败也不影响这步。
 
-先定位 `选题决策.md`：项目根有就用它。项目根没有 → 从项目根及其上一级目录起、向下最多 3 层按文件名搜（跳过隐藏目录），按 mtime 由新到旧取最新 3 份。回填是写文件，项目根之外的文件写之前必须先确认：搜到 1 份 → 报出路径问「把本书的拆解支撑回填进这份吗？」；搜到多份 → 用 AskUserQuestion 列候选（路径 + `扫榜日期` + 「都不回填」）。用户不选 → 记「未回填」跳过，不动任何文件。
+先定位 `选题决策.md`：项目根有就用它。项目根没有 → 从项目根及其上一级目录起、向下最多 3 层按文件名搜（跳过隐藏目录），按 mtime 由新到旧取最新 3 份。回填是写文件，项目根之外的文件写之前必须先确认：搜到 1 份 → 报出路径问「把本书的拆解支撑回填进这份吗？」；搜到多份 → 用当前平台交互能力列候选（Claude 可用 `AskUserQuestion`；TRAE Code 直接列出路径 + `扫榜日期` + 「都不回填」并等待回复）。用户不选 → 记「未回填」跳过，不动任何文件。
 
 **仅当**定位到 `选题决策.md`（项目根那份直接用；项目根之外的那份须经上面的确认）时：按本书题材，在它的推荐选题里找**题材关键词对得上**的那个——
 - 正好对上一个 → 把该选题的"能爆的原因"从 `待拆文验证` 改成带出处的支撑：「本书拆解支撑：{`拆文报告.md` 的 读者需求/情绪引擎 + `剧情/情绪模块.md` 的可复现模块 Top + `剧情/节奏.md` 的爽点/触动点节奏摘要}（`拆文库/{书名}/拆文报告.md`、`剧情/情绪模块.md`、`剧情/节奏.md`）」。注意还只是假设（只拆了一本，不算坐实）。
@@ -205,20 +205,22 @@ Stage 3-4 完成前需通过质量检查（置信度、覆盖率、重叠率）�
 
 ## Stage 2 并行 Agent 策略
 
-Stage 2 使用 chapter-extractor agent 并行处理每章，替代原来的串行分块。
+Stage 2 使用 chapter-extractor agent 并行处理每章，替代原来的串行分块。**新任务的唯一正常交付链路是 `OUTPUT_MODE: json` → 确定性 validator/renderer → 原子落盘 Markdown**；模型不直接排版目标 `*_摘要.md`。
 
 ### 调用方式
 
-每条章节 prompt **必须以「材料声明」前缀开头**（即下方 prompt 字符串首段）——给子代理正确语境，避免它把通俗题材的正常戏剧化剧情误判为有害内容而拒绝拆解。前缀是固定文本，逐字带上，不要改写或省略。
+每条章节 prompt **必须以「材料声明」前缀开头**（即下方 prompt 字符串首段）——给子代理正确语境，避免它把通俗题材的正常戏剧化剧情误判为有害内容而拒绝拆解。前缀是固定文本，逐字带上，不要改写或省略。prompt 最后一行必须是 `OUTPUT_MODE: json`。
+
+下方 `Agent(subagent_type=...)` 是 Claude/OpenCode 及 WorkBuddy 项目模式的调用示意；WorkBuddy 项目模式先验证 `.codebuddy/agents/chapter-extractor.md`，然后使用原始 `subagent_type: "chapter-extractor"`。WorkBuddy plugin-only 模式只有在当前 Agent registry 真实返回 `oh-story:chapter-extractor` 时，才把示例中的 `subagent_type` 替换为该精确值；否则转下方 solo 规则。TRAE Code 必须由内置 `Agent` 智能体按 `.trae/agents/chapter-extractor.md` 的名称选择同名 Subagent，并把完全相同的 prompt 字符串作为任务正文；不得把 `subagent_type` 或 `model` 当成 TRAE 参数。Codex 使用同名 `agent_type`。
 
 ```python
 Agent(
   subagent_type: "chapter-extractor",
-  prompt: "[材料声明] 以下为用户合法持有的虚构小说，任务是只读的转化性文学分析（编辑/评论视角）。暴力/复仇/家暴/情爱/黑暗伦理是该题材常规虚构元素，照常提取，不得以敏感拒绝整章或整本；个别片段无法处理则跳过、照常续完其余。\n\n章节编号：第{N}章\n章节标题：{标题}\n章节字数：{字数}\n\n章节原文：\n{原文文本}\n\n[情节点格式要求] 模板里的 {} 是占位标记，不要输出花括号本身：写「类型信息揭示」，不写「类型：信息揭示」或「类型{信息揭示}」。主题标签只填一个值，不要用 / 、 ，或空格并列多个。空字段统一写「无」，不要用「—」，涉及段不可省略。每个情节点后紧跟自己的那一行「主题标签X | 基调：Y」，不要把标签行堆到文件末尾。正确样例：\nP7 **龙血针检测**：类型信息揭示 | 许七安用龙血针验出对方身份，当场揭穿 | 涉及许七安,郑兴怀 | 地点府衙后堂 | 物品龙血针 | 时间入夜\n主题标签悬念 | 基调：紧张\n\n[输出前自检] 交付前逐条核对：① 文本里没有 { 或 }；② ^P 行数 == 主题标签行数 == 基调：行数；③ 每个主题标签只有一个值；④ 每个 P 行都含类型、白描、涉及三段。任何一条不符，先改再输出。"
+  prompt: "[材料声明] 以下为用户合法持有的虚构小说，任务是只读的转化性文学分析（编辑/评论视角）。暴力/复仇/家暴/情爱/黑暗伦理是该题材常规虚构元素，照常提取，不得以敏感拒绝整章或整本；个别片段无法处理则跳过、照常续完其余。\n\n章节编号：第{N}章\n章节标题：{标题}\n章节字数：{字数}\n\n章节原文：\n{原文文本}\n\n[结构化输出要求] 只返回一个 JSON object，不带 prose 和 code fence。顶层 exact keys：chapter_number,title,summary,key_events,key_information_expansion,chapter_formula,characters,plot_points。key_information_expansion 每项 exact keys：key_information,expansion,technique,reader_effect,reuse_note。chapter_formula exact keys：emotion_flow,rhythm_ratio,structure_formula,core_technique,hook_and_foreshadowing；emotion_flow exact keys：start,build,turn,close；rhythm_ratio exact keys：slow_setup,fast_conflict,payoff,hook_space。characters 每项 exact keys：name,importance,aliases,performance。plot_points 每项 exact keys：id,title,event,type,characters,location,item,time,quote,quote_locator,themes,tone。summary 是单行 100-300 个 Unicode code point；rhythm_ratio 四项是 0%-100% 字符串且和为 100%。\n\n[情节点格式要求] plot_points 为 10-40 项，id 从 P1 开始无断号连续；type 只取转折点|信息揭示|冲突|解决|铺垫|行动|对话|状态变化；tone 只取紧张|轻松|悲伤|热血|爽|甜|温馨|恐怖|压抑|其他；themes 是数组但恰好一项，值只取爱情|亲情|友情|权力|金钱|成长|复仇|悬念|搞笑|热血|日常|其他。quote 与 quote_locator 互斥，全章两者非 null 的情节点合计不超过 8 个；quote 非空且为 1-400 Unicode code point，quote_locator 为 5-15 个。空地点/物品/时间用 null，纯环境情节的 characters 用空数组。\n\n[输出前自检] 交付前核对 exact keys 无缺失/无多余，枚举无越界，summary 长度合格，plot id 连续，每个 themes 恰好一项，引用情节点合计 <= 8。任何一条不符，先修正 JSON 再输出。\n\nOUTPUT_MODE: json"
 )
 ```
 
-> 上面的 `[情节点格式要求]` / `[输出前自检]` 两段由主线程在 spawn 时拼进 prompt，**不依赖项目里已部署的 agent 文件版本**——老项目不重新跑 `/story-setup` 也能拿到这份格式约束。sonnet 升级重试沿用同一段。
+> 上面的 `[结构化输出要求]` / `[情节点格式要求]` / `[输出前自检]` 由主线程在 spawn 时拼进 prompt，**不依赖项目里已部署的 agent 文件版本**。完整 JSON schema 以 [output-templates.md](references/output-templates.md)「Stage 2 结构化中间件」为人类可读契约，以 `scripts/render_chapter_summary.py` 的 validator 为机器权威。sonnet 升级重试沿用同一份 prompt，且末行仍是 `OUTPUT_MODE: json`。
 
 ### 批量策略
 
@@ -228,46 +230,62 @@ Agent(
 
 ### Agent 输出收集
 
-- 每个 agent 返回 markdown 格式的提取结果
-- 主线程将 agent 输出写入 `章节/第{N}章_摘要.md`
+- 每个 agent 返回**单个纯 JSON object**（无 prose、无 code fence）；返回值先存临时 `.json`，不得直接写入目标 Markdown
+- 主线程调用确定性 renderer：
+
+  ```bash
+  for PYBIN in python3 python py; do "$PYBIN" -c "" 2>/dev/null && break; done
+  "$PYBIN" skills/story-long-analyze/scripts/render_chapter_summary.py \
+    --input "$RAW_CHAPTER_JSON" \
+    --output "拆文库/{书名}/章节/第{N}章_摘要.md" \
+    --expect-chapter-number "{N}" \
+    --expect-title "{标题}"
+  ```
+
+- renderer 先完整校验 JSON，再在目标同目录写临时文件并用 `os.replace` 原子替换；解析/校验失败时不创建、不截断、不覆盖已有 `章节/第{N}章_摘要.md`
 - 收集所有 agent 的出场人物表，供 Stage 3 合并使用
 
 ### 失败处理 + 质量升级重试
 
-**两类失败**：
+**三类失败**：
 1. **执行失败**（agent crash / 超时 / 空输出）→ 同模型（haiku）重试 1 次
-2. **质量失败**（输出落盘后跑 chapter-extractor.md「质量检查」12 条自检，任一不达标——典型：情节点 < 10、P 行缺白描、概要写成条目罗列或整段「因为…所以…」串联、类型/基调/主题标签超出枚举、`基调：` 漏全角冒号、角色名为昵称/通用称呼）→ **升级到 sonnet 重试 1 次**
+2. **JSON 契约失败**（非单一 JSON object、exact schema/类型/枚举不合、summary 超界、P ID 不连续、多主题、引用超限、章号/标题与任务不符）→ **把 renderer stderr 作为上次失败原因，升级到 sonnet 重试 1 次**
+3. **语义质量失败**（虽通过 schema，但 chapter-extractor.md「质量检查」12 条中非机械项不达标——例如白描推测动机、概要反复用同一连接词、角色使用通用称呼）→ **升级到 sonnet 重试 1 次**
 
-**可机械校验的硬检查**（主线程落盘后直接 grep，命中即判质量失败，不依赖 agent 自报）：
-- 情节点数 `N = grep -cE '^P[0-9]+ '`；`grep -c '基调：'` 必须 == N（少于 N = 有情节点漏 `基调：` 或漏全角冒号 → 下游 Stage 6 文风采样按全角 `基调：` grep，会静默漏章）
-- 白描段有内容：`grep -cE '^P[0-9]+ [^|]+\|[^|]*[^|[:space:]][^|]*\|[^|]*涉及'` 必须 == N（`涉及` 段前要有两个 `|`，即 类型段与白描段各占一段，且白描段不能只有空白；少于 N = 有情节点缺白描，或字段顺序/分隔符不对。白描是情节点的主要证据，引用改为精选后由它承担事实回查）
-- `grep -hoE '基调：[^ |]+'` 去重后 ⊆ {紧张, 轻松, 悲伤, 热血, 爽, 甜, 温馨, 恐怖, 压抑, 其他}
-- `grep -hoE '主题标签[：]?[^ |]+'` 去重（去 `主题标签`/冒号前缀后）⊆ {爱情, 亲情, 友情, 权力, 金钱, 成长, 复仇, 悬念, 搞笑, 热血, 日常, 其他}（出现 `主题标签：` 带冒号、或值为基调词均判失败）
+**renderer 的可机械校验是新任务的唯一格式权威**：
+- 顶层与每个嵌套 object 必须 exact keys，拒绝缺字段、额外字段、重复 JSON key、`NaN` / `Infinity`
+- 类型、基调、主题、扩写技法、读者情绪、角色重要性全部严格取枚举；`themes` 必须恰好 1 项
+- `plot_points` 数量 10-40，ID 必须严格为 `P1..PN` 连续序列；标题 ≤15 Unicode code point，不得与白描 `event` 相同
+- `summary` 按 Python `len(str)` 计 Unicode code point（不按 UTF-8 bytes），单行 100-300；节奏四项为百分比字符串且合计 100%
+- 每个情节点的 `quote` / `quote_locator` 互斥；全章两者非 null 的情节点合计≤8，quote 非空且单条为 1-400 Unicode code point，locator 为 5-15
 
-> **硬检查就是上面 4 条，没有更多。** 格式漂移主要靠 spawn prompt 与 agent 模板里的格式约束**事前预防**，不靠事后再加校验：花括号残留、标签行位置、空字段占位这类变体只影响可读性，下游没有消费方（Stage 6 文风只 grep `基调：`），为它们新增校验只会让本可用的章节触发重跑。**因此已经落盘的 `章节/*_摘要.md` 不会因为本次格式说明而变成「不合格」，无需重新生成**；老摘要里的 `类型{行动}`、`物品—` 等写法照旧可用，Stage 3-6 读取行为不变。
+> **旧已落盘 Markdown 不追溯。** 不得用新 JSON contract 反向审判或重写已有 `章节/*_摘要.md`；老摘要里的 `类型{行动}`、`物品—` 等写法照旧可用，Stage 3-6 读取行为不变。下面的 legacy Markdown 四项 grep 只在「JSON 升级重试仍失败」后的明示兜底中使用，不扫历史文件：`^P` 数与 `基调：` 数相等；P 行含非空白描与 `涉及` 段；基调值不越界；主题标签值不越界。
 
 **升级重试调用方式**（主线程在校验失败后执行）：
+
+Claude/OpenCode 可按下例显式升级模型。TRAE Code 的项目 subagent 不接受 Claude 的 `sonnet` 模型名或调用时 `model` 覆盖；在 TRAE 中仍选择同名 `chapter-extractor`，把“升级重试、逐项修复 renderer stderr”写入任务正文，由当前 TRAE 模型执行。WorkBuddy 当前 `Agent` 调用同样不把 Claude 的 `model: "sonnet"` 当成可移植参数：项目模式仍用 `chapter-extractor`，plugin-only 模式仍用 registry 真实返回的 `oh-story:chapter-extractor`，把失败原因与修复要求写入 prompt，由当前 WorkBuddy 模型执行。若当前 TRAE/WorkBuddy registry 无该 agent，按下方 solo 规则处理，不伪造升级成功。
 
 ```python
 Agent(
   subagent_type: "chapter-extractor",
   model: "sonnet",            # 显式覆盖 frontmatter 的 haiku
-  prompt: "章节编号：第{N}章\n...（同首次 prompt，含开头的「材料声明」前缀，可追加：'上次校验失败原因：{自检失败项}'）"
+  prompt: "章节编号：第{N}章\n...（同首次 prompt，含开头的「材料声明」前缀，追加：'上次校验失败原因：{renderer stderr / 自检失败项}'，末行仍为 OUTPUT_MODE: json）"
 )
 ```
 
 **最终落盘规则**：
-- haiku 首次通过 → 写入 `章节/第{N}章_摘要.md`，`_progress.md` 标记 `success`
+- haiku 首次 JSON 通过 validator 与语义自检 → 由 renderer 原子写入 `章节/第{N}章_摘要.md`，`_progress.md` 标记 `success`
 - haiku 失败 + 同模型 retry 通过 → 同上，备注 `retry_same_model`
 - 质量失败 + sonnet retry 通过 → 同上，备注 `retry_sonnet`
-- sonnet retry 仍失败 → 章节标记 `⚠️ 跳过`，失败原因写入 `_progress.md` 「失败记录」表，拆文报告中注明
+- **仅 JSON 契约失败且 sonnet JSON 升级重试仍失败** → 允许一次明示的 legacy Markdown fallback；模型输出先写临时文件，通过上述四项 grep 再原子替换，`_progress.md` 备注 `legacy_markdown_fallback` + 两次 JSON 失败原因。不得在首次失败后直接要求 Markdown
+- sonnet 语义质量重试仍失败，或 legacy fallback 仍不过 → 章节标记 `⚠️ 跳过`，失败原因写入 `_progress.md` 「失败记录」表，拆文报告中注明
 - 单章失败不阻断管道；批次全部 spawn 完成后才决定是否进入 Stage 3
 
 ### Agent 不可用降级
 
-以下任一情况，Stage 2 自动退回串行模式，由主线程逐章处理（质量不受影响，只是改为串行、速度略慢）。**两条路径的要求是同一份**：串行时概要写法、情节点白描、原文引用精选规则和输出自检都按 [output-templates.md](references/output-templates.md)「Stage 2 章节摘要+情节点」执行；上面的机械硬检查串行同样要跑。串行没有 sonnet 升级重试这条路——硬检查命中时由主线程按失败项重写本章摘要 1 次，仍不过按 `⚠️ 跳过` 记入 `_progress.md` 「失败记录」表。
+以下任一情况，Stage 2 自动退回串行模式，由主线程逐章处理（质量不受影响，只是改为串行、速度略慢）。**两条路径使用同一 JSON contract 和同一 renderer**：主线程按 [output-templates.md](references/output-templates.md)「Stage 2 结构化中间件」先产出 JSON，调用 `scripts/render_chapter_summary.py`，不直接排版 Markdown。validator 或语义自检失败时，主线程按具体失败项重写 JSON 1 次；第二次仍为 JSON 契约失败才可走一次明示 `legacy_markdown_fallback`，仍不过则按 `⚠️ 跳过` 记入 `_progress.md` 「失败记录」表。
 
-- **agent 未部署**：agent 目录（优先 `.claude/agents/`，其次 `.opencode/agents/`，再检查 `.codex/agents/`）下的 `chapter-extractor.md` 或 `.codex/agents/chapter-extractor.toml` 不存在。`.claude/agents/` 通常不随仓库提交，应重新运行 `/story-setup` 完成当前适配器部署，不跨 Skill 读取模板源。
+- **agent 未部署/未注册**：当前运行时对应目录（Claude `.claude/agents/`、OpenCode `.opencode/agents/`、TRAE Code `.trae/agents/`、WorkBuddy 项目模式 `.codebuddy/agents/`、Codex `.codex/agents/`）下的 `chapter-extractor.md` 或 `chapter-extractor.toml` 不存在，或 WorkBuddy plugin-only 模式的当前 registry 未返回 `oh-story:chapter-extractor`。应重新运行 `/story-setup`（WorkBuddy plugin 模式为 `/oh-story:story-setup`）完成当前适配器部署，不跨 Skill 读取模板源。
 - **环境不支持 spawn 子代理**：本 skill 正运行在某个子代理上下文中，无法再起下一层 agent。
 
 ### Stage 2 收尾：合并章节摘要（_章节摘要汇总.md）
@@ -284,7 +302,7 @@ ls 章节/*_摘要.md | sed -E 's/.*第([0-9]+)章.*/\1 &/' | sort -n | cut -d' 
 
 Stage 3 / 4a / 4c / 散落情节兜底改为**只读一次 `_章节摘要汇总.md`** 并在上下文中复用，替代每阶段 `glob 章节/*_摘要.md` 重扫（同一份语料的 4-5 次冷读降为 1 次）。
 
-**仅当语料能放进上下文时才生成汇总文件**：>500 章、或合并后 `_章节摘要汇总.md` 过大放不进上下文时**跳过本步骤**，改走 [material-decomposition.md](references/material-decomposition.md)「处理批次 → A. 子代理并行模式」：按 10-20 章/批 spawn 子代理，子代理在自己上下文里读该批摘要、只回传 ≤8K tokens 的降维聚合，主线程仅合并聚合结果（必要时分层两两合并）。**主线程不逐章读原始摘要**——跳过汇总文件不等于回到逐文件扫描，那对大书同样放不下。`_章节摘要汇总.md` 不替代 `章节/*_摘要.md`——单章文件仍是落盘真源，Stage 6 文风采样、人工复核照用单章文件。管道结束（Stage 6 后）删除 `_章节摘要汇总.md`——它是派生临时文件，不随 `拆文库/` 交付（`拆文库/` 会被 story-import 保留为写作工程）。
+**仅当语料能放进上下文时才生成汇总文件**：>500 章、或合并后 `_章节摘要汇总.md` 过大放不进上下文时**跳过本步骤**，改走 [material-decomposition.md](references/material-decomposition.md)“处理批次 → A. 子代理并行模式”：按 10-20 章/批 spawn 子代理，子代理在自己上下文里读该批摘要、只回传 ≤8K tokens 的降维聚合，主线程仅合并聚合结果（必要时分层两两合并）。**主线程不逐章读原始摘要**——跳过汇总文件不等于回到逐文件扫描，那对大书同样放不下。`_章节摘要汇总.md` 不替代 `章节/*_摘要.md`——单章文件仍是落盘真源，Stage 6 文风采样、人工复核照用单章文件。管道结束（Stage 6 后）删除 `_章节摘要汇总.md`——它是派生临时文件，不随 `拆文库/` 交付（`拆文库/` 会被 story-import 保留为写作工程）。
 
 Stage 3-5 分块见 [material-decomposition.md](references/material-decomposition.md)（唯一权威）。
 

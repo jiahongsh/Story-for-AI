@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 77,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "1db8284cd9d00861b8c11acfa1a97dd37f5715061fe0c377954fe20dc6de8543",
+      "state_revision": 269,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第077章_别告诉镜辞.md",
+      "sha256": "3ccbb41266144de7cff8230cefb2467c345f24a1a7844f7b0665668df00ea1ed",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第076章_也算我的.md",
+      "sha256": "92760460f3820c38c0c2fdb4dd5d785c64b3ea6a5b75e457196464fb614514d1",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第077章.md",
+      "sha256": "486fb58c8fccd96444eb4975330a8b393732484e99a7f109c91ebc658f6709a3",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第077章/写前依据.md",
+      "sha256": "63d7b96e68c153a60c4388837ca9d1abee186e373d2b4f8cf5104f8b62cfe096",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "当前存在",
+      "name": "当前存在",
+      "protagonist": false,
+      "own_goal": "决定自己之后的生活，不让当下不适总变成镜辞代办。",
+      "without_protagonist": "可反复索要保证，但首次问答已知他无法立刻回答，具体离开计划留待次日，不需再问同句。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点，信封还在侧袋里，一百四十四没动。背面那两行也没划。镜辞把私人本翻到空白，笔悬着。昨晚那句责任，他仍没写。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点，信封还在侧袋里，一百四十四没动。背面那两行也没划。镜辞把私人本翻到空白，笔悬着。昨晚那句责任，他仍没写。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "唐宁限定作证并核旧账后的中午",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "当前存在"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "当前存在",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "说清不长期留店后暂不重复追问，午饭照常自付",
+          "gates": {
+            "knows": "已观察镜辞会停下手中工作，今日核听唐宁限定旧事，亲听镜辞没能保证不会一直盯风险。",
+            "wants": "决定自己之后的生活，不让当下不适总变成镜辞代办。",
+            "fears": "怕保护变成长住条件，也怕将当前亲历又只归入原芽。",
+            "capability": "可说自己不长期住旧市场、自己保管钱，不能替镜辞保证改变。",
+            "no_plot": "可反复索要保证，但首次问答已知他无法立刻回答，具体离开计划留待次日，不需再问同句。",
+            "costs": "中午饼2由144中出，余142；仍承担关系悬而未决。",
+            "consequences": "镜辞保留可靠与不敢求助两面；唐宁限定证词不和解，078由她本人提出回北河。"
+          },
+          "capacity": {
+            "resources": [
+              "本人票证、包和水瓶"
+            ],
+            "permission": "可说自己不长期住旧市场、自己保管钱，不能替镜辞保证改变。",
+            "limits": "中午饼2由144中出，余142；仍承担关系悬而未决。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "决定自己之后的生活，不让当下不适总变成镜辞代办。",
+            "success_guaranteed": false,
+            "failure_path": "中午饼2由144中出，余142；仍承担关系悬而未决。",
+            "opposition": "镜辞保留可靠与不敢求助两面；唐宁限定证词不和解，078由她本人提出回北河。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 47,
+              "end_line": 47,
+              "quote": "“你一直觉得什么都自己扛。那是你的选择。”她说，“可她以前已经因为这个开始瞒你。你准备把这件事算在谁头上？”",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 76,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已观察镜辞会停下手中工作，今日核听唐宁限定旧事，亲听镜辞没能保证不会一直盯风险。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "保留一次长期居住风险问答，删午后同义重问与重复回答；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第077章/直接修订_20261102/世界引擎/写前行动审查.json",
+      "sha256": "2aa06418d38b909efed2c4874816137f88a657532ba34989b5936ea6b7024e0d"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第077章/直接修订_20261102/candidate.md",
+      "sha256": "ee67c8003d75dec32dc6e7793660523ca341655f60dc200e694bf29766adf51d"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "当前存在实际完成的选择由下列正文原句限定：中午她买了两块的饼，信封一百四十四变一百四十二。吃完将饼纸丢进篓里，把信封收回侧袋。去哪里、哪天走，她还没说。",
+        "evidence": [
+          {
+            "start_line": 55,
+            "end_line": 55,
+            "quote": "中午她买了两块的饼，信封一百四十四变一百四十二。吃完将饼纸丢进篓里，把信封收回侧袋。去哪里、哪天走，她还没说。"
+          }
+        ],
+        "world_followups": [
+          "镜辞保留可靠与不敢求助两面；唐宁限定证词不和解，078由她本人提出回北河。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 55,
+            "end_line": 55,
+            "quote": "中午她买了两块的饼，信封一百四十四变一百四十二。吃完将饼纸丢进篓里，把信封收回侧袋。去哪里、哪天走，她还没说。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "保留一次长期居住风险问答，删午后同义重问与重复回答。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

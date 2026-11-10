@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 57,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "3bd39e64c675836c44cb9a8e3b3923f2371ac5606c6064fa1b0578b29fd708b4",
+      "state_revision": 254,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第057章_同一张脸.md",
+      "sha256": "915f909257027ee3ccf7747c594e1dda01176f44cf5d248d82f7f48683ce9729",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第056章_清理轨迹.md",
+      "sha256": "382869cf7572392a51afcda718c36aa17d820b0a8be036fb8bba97d5fc521777",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第057章.md",
+      "sha256": "9db21cd269f5c3d6ec8f7d0665c9f3fa5458b4ab6a5925e8e8902596d4510565",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第057章/写前依据.md",
+      "sha256": "157eb412e5f82f5e5952beab37a793cb656442a5165e2f50bf05f62e596ef80d",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "水果摊老板",
+      "name": "水果摊老板",
+      "protagonist": false,
+      "own_goal": "要让占摊造成的客流损失被人看见，争取正常摆摊卖菜。",
+      "without_protagonist": "可以只骂占位，但为了让旁人理解自己的损失，仍会拿熟客通常的购买量举例。",
+      "voice_refs": [
+        {
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "水果摊老板在东口支了半个摊，韭菜捆得比平时紧。一个提着布袋的女人站住，问西口那个卖韭菜的人去哪了。镜辞往东口指了一下。女人看了眼这边的工具车，没再往东走，布袋空着离开。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "水果摊老板在东口支了半个摊，韭菜捆得比平时紧。一个提着布袋的女人站住，问西口那个卖韭菜的人去哪了。镜辞往东口指了一下。女人看了眼这边的工具车，没再往东走，布袋空着离开。",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "保留真实生活影响，避免把一项推测并入已发生的工钱损失。",
+      "without_protagonist": "可以只抄金额，但她已有分源核对的习惯，会宁可留下不完整估计。",
+      "voice_refs": [
+        {
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "姜霁把昨天存下的公示照片调出来，跟车上这张复印件对工号，数字没变。她说猫眼的公开页已经留过，这是通知上的现场，人站在摊位外面看就行，不必再骑去南岸。镜辞指尖在复印件边上顿了一下，还是把私人本拿在手里。本子里昨天那行写着未追看。今天他换一侧，看完就停。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "姜霁把昨天存下的公示照片调出来，跟车上这张复印件对工号，数字没变。她说猫眼的公开页已经留过，这是通知上的现场，人站在摊位外面看就行，不必再骑去南岸。镜辞指尖在复印件边上顿了一下，还是把私人本拿在手里。本子里昨天那行写着未追看。今天他换一侧，看完就停。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "西口清晨客人离开后",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "水果摊老板"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "水果摊老板",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "按熟客往常购买量估算七块五，并承认当天未成交",
+          "gates": {
+            "knows": "本轮新增的普通经营背景：认得常来的买菜人，记得她往常买三把；只见她今天离开，不知道她今天一定买多少。",
+            "wants": "要让占摊造成的客流损失被人看见，争取正常摆摊卖菜。",
+            "fears": "怕熟客找不到新位置，蔬菜继续晒蔫，自己白忙一上午。",
+            "capability": "有经营记忆和本人价目，能估计，不能代顾客承诺购买或开出不存在的流水。",
+            "no_plot": "可以只骂占位，但为了让旁人理解自己的损失，仍会拿熟客通常的购买量举例。",
+            "costs": "估计可能不准，也可能不被认可；仍要回去照看蔬菜，没有获得补偿的保证。",
+            "consequences": "姜霁可以只记估算，顾客可以离开不买，施工人员仍按自己的公示作业。"
+          },
+          "capacity": {
+            "resources": [
+              "本人菜摊、价目牌、熟客经营记忆"
+            ],
+            "permission": "有经营记忆和本人价目，能估计，不能代顾客承诺购买或开出不存在的流水。",
+            "limits": "估计可能不准，也可能不被认可；仍要回去照看蔬菜，没有获得补偿的保证。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "要让占摊造成的客流损失被人看见，争取正常摆摊卖菜。",
+            "success_guaranteed": false,
+            "failure_path": "估计可能不准，也可能不被认可；仍要回去照看蔬菜，没有获得补偿的保证。",
+            "opposition": "姜霁可以只记估算，顾客可以离开不买，施工人员仍按自己的公示作业。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "既往背景｜本轮拟增的普通经营背景：摊主记得熟客往常买三把、按现价七块五；此记忆先于当天客人离开，不冒称旧章已写过。",
+              "source_id": "SRC4",
+              "access": "memory",
+              "available_chapter": 56,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "belief",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "本轮新增的普通经营背景：认得常来的买菜人，记得她往常买三把；只见她今天离开，不知道她今天一定买多少。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "同场听完摊主估计后",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "姜霁",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "记录摊主估计并标明未成交，不把七块五当流水",
+          "gates": {
+            "knows": "听到摊主按往常购买量估计，也亲见女人离开；没有付款或成交凭据。",
+            "wants": "保留真实生活影响，避免把一项推测并入已发生的工钱损失。",
+            "fears": "怕调查记录替普通人造出错误账目，后续问责失去来源。",
+            "capability": "能写清陈述与估计的来源，无权决定顾客是否本该购买。",
+            "no_plot": "可以只抄金额，但她已有分源核对的习惯，会宁可留下不完整估计。",
+            "costs": "暂时无法替摊主拿到赔偿，也不能把未成交算成确定少收。",
+            "consequences": "摊主可以不满意，裴亮的工资另记，镜辞不能凭这笔替施工方定责。"
+          },
+          "capacity": {
+            "resources": [
+              "本人文件夹、已获准材料、现金和手机"
+            ],
+            "permission": "能写清陈述与估计的来源，无权决定顾客是否本该购买。",
+            "limits": "暂时无法替摊主拿到赔偿，也不能把未成交算成确定少收。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "保留真实生活影响，避免把一项推测并入已发生的工钱损失。",
+            "success_guaranteed": false,
+            "failure_path": "暂时无法替摊主拿到赔偿，也不能把未成交算成确定少收。",
+            "opposition": "摊主可以不满意，裴亮的工资另记，镜辞不能凭这笔替施工方定责。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "拟行动A1｜水果摊老板｜按熟客往常购买量估算七块五，并承认当天未成交",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 57,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "听到摊主按往常购买量估计，也亲见女人离开；没有付款或成交凭据。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "区分摊主习惯估算与实际成交；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

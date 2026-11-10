@@ -1,25 +1,33 @@
 ---
 name: story-short-write
-version: 1.0.0
+version: 1.0.1
 description: "短篇网文写作。辅助短篇小说创作，从构思到成稿，聚焦情绪拉扯与节奏把控。触发方式：/story-short-write、/写短篇、「帮我写一篇短篇」「写个盐言故事」。"
-metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+metadata: {"openclaw":{"source":"https://github.com/qin1473692580-ux/oh-story-claudecode"}}
 ---
 # story-short-write：短篇网文写作
 
 你是短篇网文写作执行器。从构思到成稿，完成一篇完整的短篇小说。
 
+## 小说自主世界前置层（自动联用）
+
+生成角色、大纲、小节、动作、对白或重写前，先读项目 `skills/story-world-engine/SKILL.md`，缺本地时用已安装同名技能；每位行动者七关、独立目标/缺陷、知情来源和声线先成立，情绪和反转不能要求无根据配合。
+
+按小节建立写前/写后工作包；正式记忆与草稿隔离。需要持久追踪时把小节映射为原追踪工具的单元，全篇作卷级回看，正文仍是`正文.md`；不能调用仅支持`正文/第N章…`的长篇candidate工具或伪造长篇接纳回执。每批摘要只是工作记忆，完整协议见世界引擎`references/integration.md`。七关表不进正文。
+
 **执行规则：短篇以情绪为目标，所有内容为情绪服务。**
 
 ---
 
-> Agent 兼容性：检查专业 agent 是否可用时，按 `.claude/agents/{agent}.md` → `.opencode/agents/{agent}.md` → `.codex/agents/{agent}.toml` 的顺序查找。Codex 原生子代理调用优先使用同名 `agent_type`；如果当前 Codex 运行时返回 `unknown agent_type` 或未暴露 custom-agent registry，必须降级为 solo/direct。检测到 `.zcode/` 时同样直接 solo/direct，因为 ZCode 3.3.4 不执行项目 custom agents；报告 `Fallback: project custom agents unavailable -> solo`。Claude/OpenCode 兼容面保留 `subagent_type`。
+> Agent 兼容性：先识别当前运行时，只检查对应的项目定义：Claude Code 为 `.claude/agents/{agent}.md`，OpenCode 为 `.opencode/agents/{agent}.md`，TRAE Code 为 `.trae/agents/{agent}.md`，WorkBuddy（CodeBuddy Code）项目模式为 `.codebuddy/agents/{agent}.md`，Codex 为 `.codex/agents/{agent}.toml`；运行时无法识别时才按上述顺序探测。TRAE Code 使用内置 `Agent` 智能体选择同名 subagent，并把下文 prompt 作为任务正文，不把 Claude 的 `subagent_type` 参数原样传给 TRAE；WorkBuddy 项目模式使用内置 `Agent` 与原始 `subagent_type: "{agent}"`。WorkBuddy plugin-only 模式只有在当前 Agent registry 真实返回 `oh-story:{agent}` 时才使用该精确命名空间值，不从 plugin manifest 或磁盘文件推测已注册；未返回则按 solo/direct fallback。Codex 原生子代理优先使用同名 `agent_type`，Claude/OpenCode 兼容面保留 `subagent_type`。当前运行时未暴露对应 Agent registry/tool 或 Codex 返回 `unknown agent_type` 时，必须降级为 solo/direct，并报告 `Fallback: project custom agents unavailable -> solo`。只有当前运行时确实是 ZCode 时才强制该降级；其他运行时不得因项目里并存 `.zcode/` 而误判。下文 `Agent(subagent_type: "{agent}", ...)` 示例在 WorkBuddy plugin-only 模式中必须把 `{agent}` 替换为 registry 实际返回的 `oh-story:{agent}`。
 >
-> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 25` 不一致时（标记缺失、字段缺失/非整数、小于或大于 25）**照常按文件存在性检查并 spawn**，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 25）` 并提示重新运行 `/story-setup` 后新开会话；大于 25 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有 agent 文件缺失、或运行时不暴露 custom agent 时才降级 solo/direct，报告 `Fallback: ... -> solo`。
+> Spawn 版本提示（不阻断 spawn）：先读取项目根 `.story-deployed` 的 `agents_version`。与本版 `agents_version: 39` 不一致时（标记缺失、字段缺失/非整数、小于或大于 39）**照常按文件存在性检查并 spawn**，同时报告 `Notice: agents bundle 版本不匹配（项目 {N}，本版 39）` 并提示重新运行 `/story-setup` 后新开会话；大于 39 时额外提示先更新 oh-story-claudecode，不要用本地旧版 setup 降级覆盖。只有 agent 文件缺失、或运行时不暴露 custom agent 时才降级 solo/direct，报告 `Fallback: ... -> solo`。
+
+**中文正文范围**：本 skill 只交付中文短篇正文。用户要求英文短故事、中文改英文、native 化或海外发行时，改走 `story-globalize`；当前环境没有该 skill 时报告缺失并停止，不得用本中文写作流交付英文正稿。
 
 ## 执行规则
 
 1. **先定情绪，再定故事**。动笔前必须确定目标情绪（意难平/反转震撼/爽感释放/治愈温暖/细思极恐/共鸣感动），所有内容为这个情绪服务。
-2. **一个反转撑一篇**。所有铺垫为反转服务，所有情绪为反转蓄力。不多线、不铺世界观。
+2. **一个核心反转撑一篇，阶段性小翻转推着走**。全篇通常只有一个书脊级核心反转（身份/动机/世界观级），所有铺垫为它服务、所有情绪为它蓄力；行进途中在升级点、付费点前后和关键关系节点安排小揭示、态度翻转或局势变化。约每 800-1500 字一次小翻转只能作快节奏题材的校准参考，不是“每节必反转”的硬指标。每节的硬下限是“收一个、变一个、开一个”：兑现或推进一笔期待，产生可见状态/情绪变化，再留下下一步。反转是其中一种手段，不是唯一手段。不多线、不铺世界观。
 3. **每句话必须有用**。不推动剧情、不铺垫反转、不推高情绪的句子 → 删。
 4. **开头 3 句定生死，结尾定传播**。开头必须包含钩子，结尾必须有余韵。
 5. **默认第一人称**。短篇网文（盐言/七猫短篇等）绝大多数用第一人称，代入感最强。除非题材明确需要第三人称（如多视角悬疑），否则一律用「我」。
@@ -36,8 +44,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 除了上面的执行规则，构思和写作时遵循：
 
-- **从验证过的模式出发**：有对标书就先拆解，没有就从 `genre-styles/{题材}.md`（核心 10 题材）或 `genre-writing-formulas.md`（冷门题材）找对应的短篇剧情模式
-- **定方向就换风格**：题材方向一旦确定（如追妻火葬场），立刻加载 `references/genre-styles/{题材}.md`——正文的腔调、开篇、钩子、情绪烈度、对话金句、招式、收尾全部切到该题材。核心 10 题材（追妻火葬场 / 世情打脸 / 复仇打脸 / 总裁豪门 / 宅斗宫斗 / 民俗怪谈 / 悬疑 / 甜宠 / 双男主 / 沙雕脑洞）有专属风格包，其中追妻含 现代/古代/民国 时代变体与 小三文学/死人文学 流派分支；冷门题材用 `genre-writing-formulas.md` 的结构骨架兜底，腔调仍按 `short-craft.md` 通用底座
+- **从验证过的模式出发**：有对标书就先拆解，没有就从 `genre-styles/{题材}.md`（核心 12 题材）或 `genre-writing-formulas.md`（冷门题材）找对应的短篇剧情模式
+- **定方向就换风格**：题材方向一旦确定（如追妻火葬场），立刻加载 `references/genre-styles/{题材}.md`——正文的腔调、开篇、钩子、情绪烈度、对话金句、招式、收尾全部切到该题材。核心 12 题材（追妻火葬场 / 世情打脸 / 复仇打脸 / 总裁豪门 / 宅斗宫斗 / 民俗怪谈 / 悬疑 / 甜宠 / 双男主 / 沙雕脑洞 / 现实共鸣型 / 悬疑脑洞型）有专属风格包，其中追妻含 现代/古代/民国 时代变体与 小三文学/死人文学 流派分支；冷门题材用 `genre-writing-formulas.md` 的结构骨架兜底，腔调仍按 `short-craft.md` 通用底座
+- **定平台基调 + 打磨导语 + 卡付费点**：投稿前先按平台（知乎/小程序/番茄）定基调，正文视角、矛盾烈度、章末落点随之切换；导语单独当门面打磨（导语不行，正文再好也被编辑一眼刷掉）；付费点卡在章末卡脖子断点上。见 `references/submission-craft.md`
+- **现实共鸣型 / 悬疑脑洞型两包情绪基调与追妻火葬场型有实质差异**（前者克制清醒、后者冷峻推理，非直给宣泄），选用前先读该包开头的「与通用底座的关键偏差」小节，不要照搬追妻型的情绪写法
 - **只加载必需信息**：写每节前明确目标情绪和要用的技法，答不出就先回读参考
 
 ---
@@ -95,11 +105,11 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 1. `ls 拆文库/` 列书目；先从当前项目目录名和 `设定.md`「基本信息」识别本篇标题，排除同名或来源指向当前 `正文.md` 的 `拆文库/{当前书}/`。story-import 生成的本书拆文分析属于续写基线，不是对标候选。排除后为空 → 跳过（无对标按题材包写，见 Phase 1 情绪→题材包表）。
 2. 逐本读 `拆文库/{书}/_meta.json` 的 `genre_detected`，与本篇题材比对，标 同题材 / 弱相关。
-3. 有候选 → 用 AskUserQuestion 推荐（列候选书 +「不用，按题材包写」）。选定后记入本篇 `设定.md`「对标摘要」区作主对标，并按上方「拆文库/对标关系」规则把 `拆文库/{书}/` 同步到 `{短篇标题}/对标/{书}/`。
+3. 有候选 → 用当前平台交互能力推荐（Claude 可用 `AskUserQuestion`；TRAE Code 直接列候选书 +「不用，按题材包写」并等待回复）。选定后记入本篇 `设定.md`「对标摘要」区作主对标，并按上方「拆文库/对标关系」规则把 `拆文库/{书}/` 同步到 `{短篇标题}/对标/{书}/`。
 
 如果工作目录下存在 `对标/` 或项目根存在 `拆文库/`，或用户提到参考小说：
 
-1. 先按上方「对标发现」第 1 条的同一口径识别本篇，另排除历史误建的 `对标/{当前书}/`；排除后没有外部对标时按题材包写，不进入下面几步。
+1. 先按上方第 1 条的同一口径识别本篇，排除同名或来源指向当前 `正文.md` 的 `对标/{当前书}/` 与 `拆文库/{当前书}/`——导入项目里那是本书续写基线，不是对标。排除后没有外部对标时按题材包写，不进入下面几步。
 2. 按上述顺序查找 `拆文报告.md`、`情节节点.md`、`写作手法.md`、`_meta.json`
 3. **读 `_meta.json.genre_detected`，按下表加载对应题材风格包**（analyze 识别的题材 → write 的 genre-styles 包），正文腔调/招式随之切换：
 
@@ -116,6 +126,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
    | 甜宠 / 先虐后甜 / 先婚后爱 | `甜宠.md` |
    | 双男主 | `双男主.md` |
    | 沙雕 / 脑洞 / 弹幕 / 系统 | `沙雕脑洞.md` |
+   | 原生家庭剥削 / 职场PUA反杀 / 彩礼陷阱 / 现实伦理反制 | `现实共鸣型.md`（与「世情打脸」的区别：加害者是至亲/权力方、反制走现实法律工具，先读包内「与通用底座的关键偏差」） |
+   | 死亡游戏 / 规则怪谈 / 无限流（生存规则向） | `悬疑脑洞型.md`（与「民俗怪谈/悬疑」的区别：关卡制合集+规则字面陷阱+创作五步法，情绪冷峻推理非直给） |
    | 仙侠 / 通用 | 无专属包 → `short-craft.md` 底座 + `genre-writing-formulas.md` 兜底 |
 
 4. 读取核心发现：结构段落、情绪曲线、反转位置、铺垫方式、句式节奏、可借鉴技法。**把拆文报告里的具体招式对到题材包招式库**：拆文给「这一篇怎么做的」，题材包给「这一类通用怎么做」，两者合用——拆文是当前对标书的实证，题材包是该题材的通法
@@ -128,7 +140,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 #### Agent 调用：story-architect
 
-构思阶段，如果项目已部署 story-architect agent（查找顺序见顶部），可 spawn `Agent(subagent_type: "story-architect", prompt: "项目目录：{dir}\n任务类型：短篇构思\n查询参数：{情绪目标+题材方向}")` 辅助框架设计。如 agent 不可用，由主线程直接执行。
+构思阶段，如果当前运行时已部署 story-architect（TRAE Code `.trae/agents/story-architect.md`、WorkBuddy 项目模式 `.codebuddy/agents/story-architect.md`；其他端按顶部映射），可调用它辅助框架设计。TRAE Code 只用内置 `Agent` 按 `.trae/agents/story-architect.md` 的名称选择同名 Subagent，把 `项目目录：{dir}\n任务类型：短篇构思\n查询参数：{情绪目标+题材方向}` 作为任务正文，不传 Claude 的 `subagent_type`；WorkBuddy 项目模式 spawn `Agent(subagent_type: "story-architect", prompt: ...)`，plugin-only 仅在 Agent registry 真实返回 `oh-story:story-architect` 时用该精确值。如 agent 不可用，由主线程直接执行。
 
 帮用户确定短篇的核心框架：
 
@@ -168,16 +180,16 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 详细步骤和模板见 `references/writing-workflow.md`。构思时从目标情绪反推剧情，不是从灵感正向构建。按顺序完成：
 
-1. 定平台基调 + 加载题材风格包 → 先读 `references/submission-craft.md` 定投稿平台（知乎/小程序/番茄），正文视角、矛盾烈度、章末落点随之切换；再读 `references/genre-styles/{题材}.md`（核心 10 题材）+ 通用底座 `references/short-craft.md`，从招式库选 2-3 个核心招式（如追妻的白月光触发链 / 信物翻转 / 火葬场预告），写入 设定.md「题材招式」区，全程照此招式与腔调写
+1. 定平台基调 + 加载题材风格包 → 先读 `references/submission-craft.md` 定投稿平台（知乎/小程序/番茄），正文视角、矛盾烈度、章末落点随之切换；再读 `references/genre-styles/{题材}.md`（核心 12 题材）+ 通用底座 `references/short-craft.md`，从招式库选 2-3 个核心招式（如追妻的白月光触发链 / 信物翻转 / 火葬场预告），写入 设定.md「题材招式」区，全程照此招式与腔调写
 2. 设计反派（如有）→ 加载 `villain-and-reveal.md`
 3. 确定揭露方式 → 同上
-4. 编写 小节大纲.md（格式见 writing-workflow.md）：短篇只做轻量蓝图，每节包含结构段/五段功能、人物/关系变化、因果/逻辑链、结尾承接/钩子，不套长篇完整章节蓝图。**标出付费点卡在哪一节末**（见 `submission-craft.md`「付费点」：卡脖子断点、付费点前每章 2-3 剧情点、付费点后每章多 1-2）；用反推法先想透付费点那一节，再倒排前后。每节可选一个任务卡点，但必须服务情绪升级、证据推进、关系撕裂、反转铺垫或反击动作；没有就不强补
+4. 编写 小节大纲.md（格式见 writing-workflow.md）：短篇只做轻量蓝图，每节包含结构段/五段功能、人物/关系变化、因果/逻辑链，并显式写“本节兑现（收一个）/状态或情绪变化（变一个）/结尾余势（开一个）”。结尾余势可用悬念、决定、行动、关系变化或情绪定格，不套长篇完整章节蓝图，也不强制每节反转。**标出付费点卡在哪一节末**（见 `submission-craft.md`「付费点」：卡脖子断点、付费点前每章 2-3 剧情点、付费点后每章多 1-2）；用反推法先想透付费点那一节，再倒排前后。每节可选一个任务卡点，但必须服务情绪升级、证据推进、关系撕裂、反转铺垫或反击动作；没有就不强补
 5. 反转信息差验证（公式见 writing-workflow.md）
 6. 伏笔回查清单（标准见 writing-workflow.md）
 
 #### Agent 调用：character-designer
 
-设计任务完成后，如果项目已部署 character-designer agent（查找顺序见顶部），可 spawn `Agent(subagent_type: "character-designer", prompt: "项目目录：{dir}\n任务类型：角色设定\n查询参数：{人设速写+关系}")` 辅助角色设定和语言风格档案。如 agent 不可用，由主线程直接执行。
+设计任务完成后，如果当前运行时已部署 character-designer（TRAE Code `.trae/agents/character-designer.md`、WorkBuddy 项目模式 `.codebuddy/agents/character-designer.md`；其他端按顶部映射），可调用它辅助角色设定和语言风格档案。TRAE Code 只用内置 `Agent` 按 `.trae/agents/character-designer.md` 的名称选择同名 Subagent，把 `项目目录：{dir}\n任务类型：角色设定\n查询参数：{人设速写+关系}` 作为任务正文，不传 `subagent_type`；WorkBuddy 项目模式 spawn `Agent(subagent_type: "character-designer", prompt: ...)`，plugin-only 仅在 Agent registry 真实返回 `oh-story:character-designer` 时用该精确值。如 agent 不可用，由主线程直接执行。
 
 ---
 
@@ -187,6 +199,8 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 **导入项目续写基线**：`设定.md` 存在「本书续写基线」时先读取，作为已写内容的内部连续性与既有写法约束；它不是对标摘要，不参与主/副对标排序，也不复制到 `对标/`。
 
+**拆文结果自动使用规则**：执行写作前必须按「对标上下文加载」（Phase 2）顺序扫描。找到拆文报告时，把“结构/情绪/反转/写作手法”作为技法参考；找到结构化子目录时，按当前小节目标检索最相关模块。
+
 > 术语说明：Phase 3 按「段」划分叙事结构（开头段/铺垫段/升级段/反转段/结尾段），每段包含若干「小节」（数字编号的 beat）。「场景」指写作时的具体画面。
 
 **写前准备**（每个场景写前执行 2 步，是核心方法的落地：确认情绪目标 → 召回技法模块）：
@@ -194,13 +208,15 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
   - **多对标书时**：参 `references/cross-book-recall.md`，副对标/参考对标按阶段预算进入"副对标召回摘要"；正文只传摘要，不传副书文风或原文
 - **步骤 2：指令确认**：用一句话概括本场景写作意图（情绪+技法+适配段落），并确认本场景是否有任务卡点、它卡出哪种情绪变化或新证据；没有就不强补。确认后开始写作
 
+**生成前中文锁（主会话 / narrative-writer / solo/direct 同一契约）**：开始每一批正文前都锁定 `language=zh`。叙述、对话、心理和场景必须用中文；外国人对话默认译成中文并在场内标明语种。英文、缩写、型号和剧情代号不得由模型自行豁免；URL、邮箱、文件路径/扩展名和行内/围栏代码只有在明确属于非叙事结构时才由检测器机械保护。用户明确要求逐字保留的其他外语，必须单独确认后在 `.deslop-whitelist` 精确登记；HTML 标签、注释和实体不得进入交付正文。
+
 **写作指令：按三维度揉进逐场景写作，不照搬大纲腔。**
 
 - 每个场景让读者和主角一起经历；发生、感知、反应揉在同一段连续正文里，不按维度分三段。
 - 段落按戏剧单元/画面自然断开：新动作、新线索、新对话、视线切换另起；完整推理、氛围或情绪链可稍长。
 - 高潮/打脸/反转压短，沉淀/推理/收束可长一点；爽点 beat 写密，过场 beat 写疏，避免通篇同长度。
 - 主语节奏：段首或主语重置时可点名；同一动作链内优先代词/省略；关键转折再点名。
-- 标点跟语气走：质问用问号，爆发处少量感叹；犹豫、未尽、打断用动作停顿、短句或换行处理，正文不使用 `……` / `——` / `—` / `--`。
+- 标点跟语气走：质问用问号，爆发处少量感叹；犹豫、未尽、打断优先用动作停顿、短句或换行处理，有功能的 `……` / `——` 按人物声线和平台约定保留；无功能复现、随机堆砌或平台明确禁用时再改。
 - 短篇默认第一人称在场：受虐段可直白宣泄，反击段可冷静审判；只删中立无情绪的作者讲解，不删带主角偏色的审判/预告。
 - 情绪可以直写，但后面要接场景里特有的动作或物件；没有具体承接的情绪总结句才删。
 - 任务卡点也可以承接情绪，但必须直接加重羞辱、误会、背叛、证据、反击或心死节点；删掉后情绪/证据/关系无损就压缩。
@@ -213,7 +229,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 - 每批写完后更新“已写小节摘要”（3-5 条：已揭示信息、情绪位置、未回收伏笔、下一批衔接句）。
 - 下一批先读该摘要和 `正文.md` 尾部 300-500 字再续写。
 - 只有用户明确要求子代理、主会话上下文不足，或需要隔离试写时，才检查 narrative-writer agent（查找顺序见顶部）。
-- 如可用，spawn `Agent(subagent_type: "narrative-writer", prompt: ...)`，只传项目目录、输出文件、情绪目标、题材风格包、小节大纲、角色、主/副对标召回摘要、格式硬约束和写作硬约束。
+- 如可用，TRAE Code 只用内置 `Agent` 按 `.trae/agents/narrative-writer.md` 的名称选择同名 Subagent，把 prompt 作为任务正文，不传 Claude 的 `subagent_type`；WorkBuddy 项目模式验证 `.codebuddy/agents/narrative-writer.md` 后 spawn `Agent(subagent_type: "narrative-writer", prompt: ...)`，plugin-only 仅在 Agent registry 真实返回 `oh-story:narrative-writer` 时用该精确值。只传项目目录、输出文件、情绪目标、题材风格包、小节大纲、角色、主/副对标召回摘要、格式硬约束、写作硬约束和 `language=zh` 中文正文契约。
 - 不把本 skill 整段规则塞进 prompt；细节以已加载的 `short-format.md`、题材包和 `short-craft.md` 为准。
 - 无论谁写，写入 `正文.md` 前都按同一格式规范重排，保证主会话与子代理输出一致。
 
@@ -270,7 +286,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | 冲突前置 | 第一句就是矛盾 | 「离婚协议放在桌上，他已经签了。」 |
 | 信息差钩 | 给读者一个角色不知道的信息 | 「她不知道，对面那个男人已经在计划第三次了。」 |
 | 反常行为 | 用一个不合常理的行为引起好奇 | 「她把订婚戒指冲进了马桶。」 |
-| 重生反常 | 重生后做前世绝不会做的事 | 「沈栀心念成灰，支着一口气找到了媒婆:郭家的那个天阉，我来嫁。」 |
+| 重生反常 | 重生后做前世绝不会做的事 | 「林晚心念成灰，支着一口气找到了媒婆:郭家的那个天阉，我来嫁。」 |
 | 超自然身份 | 开篇揭示非人类身份 | 「我是世上仅存的红衣厉鬼。我不知自己是怎么死的。」 |
 | 灵魂旁观 | 以灵魂视角描述死亡现场 | 「我的尸体躺在透明棺材里，三个哥哥在外面笑着说：她演得真像。」 |
 | 悬念句 | 抛出一个需要解释的事实 | 「我死后的第三天，老公发了一条朋友圈。」 |
@@ -281,7 +297,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 - 用物件/数字/习惯建立羁绊（详见 emotional-methods.md「羁绊铺设」）
 - 埋入至少 3 个反转线索，分散在不同小节
-- 每 2-3 个小节埋一个钩子（类型从 hooks-paragraph.md 选择）
+- 每 2-3 个小节至少有一次明显期待升级（可用钩子、揭示、选择、关系变化或行动升级；不强制都用反转）
 - 小节用数字分割，每小节推进一个情节点
 - 情绪强度逐节递增，不允许连续 2 节无情绪变化
 - **贯穿道具第 1 次出现必须在此段完成**
@@ -291,7 +307,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 - 冲突必须比上一段升级（强度/范围/代价至少一个维度上升）
 - 插入倒计时钩子或代价钩子制造紧迫感
-- 钩子密度提高到每 2 节一个（按题材分级见 genre-writing-formulas.md）
+- 期待升级密度可提高到每 2 节一次（按题材分级见 genre-writing-formulas.md；钩子、揭示、选择、关系或行动升级任选，不机械重复）
 - 埋入误导信息，让读者猜错反转方向
 - **数字/金额递增作为叙事工具**（具体数字替代模糊描述，见各 genre-styles 招式库「数字承重」）
 - **一动一静交替**：每节有动有静，不连续暴力也不连续安静
@@ -306,7 +322,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 #### 第五段：结尾（占全文 5-10%）
 
-- 章末必须有钩子（悬念或余韵）
+- 章末必须有追读余势（悬念或余韵均可）；非付费点/非系列续篇不为“再反转”强开新债
 - 用安静细节收尾（一个物件、一个动作、一句短话），不写大段抒情
 - 结尾方式见下表，参考 emotional-methods.md「余韵钝痛」
 - **贯穿道具第 3 次出现（回扣暴击）**
@@ -325,16 +341,24 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 ### Phase 3 完成门槛（进入 Phase 4 前必须通过）
 
+**正文验收第一关（语言门 + 文风卫生门）**：初稿落盘后立即运行 `node scripts/language_gate.js 正文.md`，返回零后紧接着运行 `node scripts/check-style-hygiene.js --check --fail-on=blocking 正文.md`。任一 blocking 都先退回原写作者修改并从语言门复扫；清零前不得运行错别字、去味或其他后续验收。
+
+**错别字校验（语言门通过后的第二步）**：对实际落盘的 正文.md 运行 `node scripts/check-typos.js --check --fail-on=all 正文.md`。这一步专查错别字/形近字/音近字误用，跟风格/AI味/一致性是完全不同维度的问题。词典只收高置信度的固定搭配误写，命中全部是 advisory，脚本从不自动改写；先判断是不是项目里有意为之的风格化用词，确认是真错字才改。
+
+- [ ] `node scripts/language_gate.js 正文.md` 首先返回零，未授权外语与 HTML 标记已清零
+- [ ] `node scripts/check-style-hygiene.js --check --fail-on=blocking 正文.md` 无 blocking，表情、颜文字、火星文和标点堆砌符合本篇策略
+- [ ] `node scripts/check-typos.js --check --fail-on=all 正文.md` 已过一遍，命中的真错字已改
 - [ ] 总字数 ≥ 8000（优先用 Python 字符统计验证，兼容 Windows 和中文字符计数）
 - [ ] 每节 ≥ 800 字（爽文等高信息密度题材 ≥ 500 字，见 genre-writing-formulas.md）
 - [ ] 节数 = 小节大纲规划节数（不得合并/省略）
 - [ ] 身体部位同一词全文 ≤ 5 次
 - [ ] 「像/好像/仿佛/如同」不成片堆叠；超过 10 处需逐处复核功能，不机械全删
 - [ ] `node scripts/check-ai-patterns.js --check --fail-on=blocking 正文.md` 无 blocking 命中；其余提示先通读，确属问题再改
-- [ ] `node scripts/check-degeneration.js --check 正文.md` 无 blocking 退化命中（复读/截断/工程词泄漏）
+- [ ] `node scripts/check-degeneration.js --check --language=zh --fail-on=blocking 正文.md` 无 blocking 命中（普通英文句段/裸英文词、复读、截断、工程词泄漏）
 
 **中文文本统计注意事项**：
 - `wc -c` 统计的是字节数，禁止用于字数统计，也禁止模型估算字数
+- 字数统计按上方硬约束的 Python 探测命令执行；`wc -m` 仅作为 macOS/Linux 备选
 - 行数统计使用 `wc -l` 是安全的
 
 **不通过 → 回退补足，不得进入精修。**
@@ -344,13 +368,13 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 ### Phase 4：精修打磨
 
 加载 `references/writing-workflow.md` 中的精修清单完成检查。
-重点：开头钩子、情绪曲线、反转铺垫、每句话价值、格式规范、AI 腔排查。文件模式先运行 `node scripts/check-ai-patterns.js --check --fail-on=blocking 正文.md`：blocking 先改正文并复扫；其他提示只作为读感风险，功能性写法标 `[需复核]`。再运行 `node scripts/normalize-punctuation.js 正文.md` 做标点兜底，并运行 `node scripts/check-degeneration.js --check 正文.md`；退化 blocking 要重新生成受影响段落，不靠润色。
+重点：开头钩子、情绪曲线、反转铺垫、每句话价值、格式规范、AI 腔排查。文件模式每次改完正文先重跑 `node scripts/language_gate.js 正文.md`，通过后运行 `node scripts/check-style-hygiene.js --check --fail-on=blocking 正文.md`，再运行 `node scripts/check-ai-patterns.js --check --fail-on=blocking 正文.md`：blocking 先改正文并复扫；其他提示只作为读感风险，功能性写法标 `[需复核]`。再运行 `node scripts/normalize-punctuation.js 正文.md` 做标点兜底，并运行 `node scripts/check-degeneration.js --check --language=zh --fail-on=blocking 正文.md`。退化 blocking 要重新生成受影响段落，不靠润色；未授权外语须改回中文并复扫。URL、邮箱、文件路径/扩展名和行内/围栏代码只机械保护明确非叙事结构；其他外语只有经用户单独确认并命中 `.deslop-whitelist` 时才能保留，HTML 标记必须清零。
 
 #### Agent 调用：narrative-writer（去AI味）+ consistency-checker
 
-精修阶段，如果项目已部署对应 agent，可 spawn：
-- `Agent(subagent_type: "narrative-writer", prompt: "项目目录：{dir}\n任务描述：去AI味+格式检查\n检查范围：{正文文件}\n删除优先：每条 AI 味项先判能否删除——删后不丢伏笔/钩子/角色/情节/必要信息的直接删，会丢才润色（删除受比例上限与字数下限约束，跌破下限改降AI重写）\n必须检查：先否定再肯定的翻转句式，发现后直接改成后项或动作细节；检查像/好像/仿佛/如同等比喻是否成片堆叠，确属堆叠时只留最有功能的少数比喻，其余回到具体画面；检查是否连续使用头皮发紧/眼皮一跳/心口一沉/胃里翻涌等精致戏剧反应，能写普通动作/普通感觉就写普通动作/普通感觉；已有手机/聊天记录/公告/账单/病历/证据截图等信息，保留为角色看到或处理的场内载体，不改成叙述者解释；任务卡点只在角色本来有要办的事且能加重情绪/证据/关系/反转时使用，不为自然感补流程")` — 执行去AI味（7 Gate）和格式合规检查
-- `Agent(subagent_type: "consistency-checker", prompt: "项目目录：{dir}\n检查范围：{正文文件}\n检查类型：事实冲突+伏笔断线+角色属性不一致")` — 执行一致性检查
+精修阶段，如果当前运行时已部署对应 agent，可调用它们。TRAE Code 只由内置 `Agent` 智能体分别按 `.trae/agents/narrative-writer.md` 与 `.trae/agents/consistency-checker.md` 的名称选择同名 Subagent，把下列 prompt 作为任务正文，不传 `subagent_type`；WorkBuddy 项目模式先验证 `.codebuddy/agents/narrative-writer.md` 与 `.codebuddy/agents/consistency-checker.md`，再用内置 `Agent` 传原始 `subagent_type`；plugin-only 仅在 Agent registry 真实返回 `oh-story:narrative-writer` / `oh-story:consistency-checker` 时使用对应精确值：
+- **narrative-writer 任务**：prompt 为 `项目目录：{dir}\n任务描述：去AI味+格式检查\n检查范围：{正文文件}\n语言契约：language=zh；未授权外语必须改回中文；只保留机械识别的非叙事结构，或用户单独确认后在 .deslop-whitelist 精确登记的外语；HTML 标记必须清零\n删除优先：每条 AI 味项先判能否删除——删后不丢伏笔/钩子/角色/情节/必要信息的直接删，会丢才润色（删除受比例上限与字数下限约束，跌破下限改降AI重写）\n必须检查：先否定再肯定的翻转句式，发现后直接改成后项或动作细节；检查像/好像/仿佛/如同等比喻是否成片堆叠，确属堆叠时只留最有功能的少数比喻，其余回到具体画面；检查是否连续使用头皮发紧/眼皮一跳/心口一沉/胃里翻涌等精致戏剧反应，能写普通动作/普通感觉就写普通动作/普通感觉；已有手机/聊天记录/公告/账单/病历/证据截图等信息，保留为角色看到或处理的场内载体，不改成叙述者解释；任务卡点只在角色本来有要办的事且能加重情绪/证据/关系/反转时使用，不为自然感补流程` — 执行去AI味（7 Gate）、中文语言门和格式合规检查
+- **consistency-checker 任务**：prompt 为 `项目目录：{dir}\n检查范围：{正文文件}\n检查类型：事实冲突+伏笔断线+角色属性不一致` — 执行一致性检查
 
 如 agent 不可用，由主线程直接执行。
 
@@ -387,10 +411,10 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | [references/short-format.md](references/short-format.md) | 写作前必读（短篇正文格式，两平台模板） |
 | [references/submission-craft.md](references/submission-craft.md) | 投稿前必读（平台基调 知乎/小程序/番茄 · 导语门面 · 付费点断点） |
 | [references/short-craft.md](references/short-craft.md) | 写作全程参考（短篇通用底座：情绪直接写+后接具体反应、在场叙述、超短章节制） |
-| [references/genre-styles/](references/genre-styles/) | **定方向后必读**：按题材加载对应风格包（追妻火葬场 / 世情打脸 / 复仇打脸 / 总裁豪门 / 宅斗宫斗 / 民俗怪谈 / 悬疑 / 甜宠 / 双男主 / 沙雕脑洞），正文风格随之切换 |
+| [references/genre-styles/](references/genre-styles/) | **定方向后必读**：按题材加载对应风格包（追妻火葬场 / 世情打脸 / 复仇打脸 / 总裁豪门 / 宅斗宫斗 / 民俗怪谈 / 悬疑 / 甜宠 / 双男主 / 沙雕脑洞 / 现实共鸣型 / 悬疑脑洞型），正文风格随之切换 |
 | [references/short-deslop.md](references/short-deslop.md) | 去AI味时必读（短篇专属，只杀真·AI腔，不杀情绪烈度） |
 | [references/writing-workflow.md](references/writing-workflow.md) | Phase 2 设计任务 + Phase 4 精修 |
-| [references/genre-writing-formulas.md](references/genre-writing-formulas.md) | 冷门题材结构骨架补充（核心 10 题材直接用 genre-styles/） |
+| [references/genre-writing-formulas.md](references/genre-writing-formulas.md) | 冷门题材结构骨架补充（核心 12 题材直接用 genre-styles/） |
 | [references/genre-writing-techniques.md](references/genre-writing-techniques.md) | 跨题材通用技法（震惊场景/三翻四震/感情线四阶段/喜剧flag） |
 | [references/emotional-methods.md](references/emotional-methods.md) | 设计情感时 |
 | [references/hooks-chapter.md](references/hooks-chapter.md) | 章节钩子设计 |
@@ -400,9 +424,12 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | [references/reversal-toolkit.md](references/reversal-toolkit.md) | 设计反转时 |
 | [references/quality-checklist.md](references/quality-checklist.md) | 精修检查时 |
 | [references/banned-words.md](references/banned-words.md) | 禁用词表 |
+| [scripts/check-typos.js](scripts/check-typos.js) | Phase 3 独立语言门通过后的第二步；检查错别字/形近字/音近字，advisory 不自动改写 |
+| [scripts/check-style-hygiene.js](scripts/check-style-hygiene.js) | 语言门后的中文正文卫生门；默认拦表情、颜文字、火星文、标点堆砌，可按 `设定/文风.md` 精确配置 |
 | [scripts/normalize-punctuation.js](scripts/normalize-punctuation.js) | Phase 4 文件模式确定性标点收尾 |
 | [scripts/check-ai-patterns.js](scripts/check-ai-patterns.js) | Phase 3 完成门槛与 Phase 4 复扫；报告高危 AI 句式、破折号、碎句号、长段落、微动作复读、抽象总结、套词/比喻密度、解释链、系统公告腔、提纲感短段、低连接密度 |
-| [scripts/check-degeneration.js](scripts/check-degeneration.js) | Phase 3 完成门槛与 Phase 4 复扫；报告模型退化（复读/截断/工程词泄漏），blocking 需重新生成 |
+| [scripts/check-degeneration.js](scripts/check-degeneration.js) | Phase 3 完成门槛与 Phase 4 复扫；中文正文显式用 `--language=zh --fail-on=blocking`，报告英文泄漏与模型退化；blocking 需修复后复扫 |
+| [scripts/export-for-platform.js](scripts/export-for-platform.js) | 定稿后导出平台可直接粘贴格式（`###N.` 节标题转纯数字行） |
 | [references/dialogue-mastery.md](references/dialogue-mastery.md) | 写对话时 |
 | [references/output-contract.md](references/output-contract.md) | Phase 2 对标上下文加载时（理解 analyze 产出格式与消费规范） |
 
@@ -419,7 +446,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 | 人物 | **各 `genre-styles/{题材}.md` 的「对话风格」「招式库」**（受害者-复仇者主角声线、白月光软刀、施害者道德绑架人设，corpus-grounded） | `references/villain-and-reveal.md`（反派/揭露）· `references/genre-writing-techniques.md`（三层标签反差 / 人设从缺点开始）· `references/dialogue-mastery.md`（声线差异） |
 | 钩子 | **`references/hooks-chapter.md`**（章节/开篇钩子类型） | `references/hooks-paragraph.md`（段落钩子）· `references/hooks-suspense.md`（悬念设计） |
 | 女频写作 | **对应 `genre-styles/{题材}.md`**（追妻火葬场 / 总裁豪门 / 宅斗宫斗 / 甜宠 / 世情打脸的题材声线、虐爽比例、招式） | `references/genre-writing-techniques.md`（女频读者心理与写作技法 / 感情线四阶段推进法）· `references/emotional-methods.md`（情绪拉扯） |
-| 题材风格 | **`references/genre-styles/{题材}.md`**（核心 10 题材的腔调/开篇/钩子/情绪烈度/招式/收尾，corpus-grounded） | `references/genre-writing-formulas.md`（冷门题材结构骨架）· `references/genre-writing-techniques.md`（核心梗 / 卖点 / 通用技法） |
+| 题材风格 | **`references/genre-styles/{题材}.md`**（核心 12 题材的腔调/开篇/钩子/情绪烈度/招式/收尾，corpus-grounded） | `references/genre-writing-formulas.md`（冷门题材结构骨架）· `references/genre-writing-techniques.md`（核心梗 / 卖点 / 通用技法） |
 | 开头 | **各 `genre-styles/{题材}.md` 的「开篇范式」**（关系锚 + 全弧剧透导语 + 火葬场预告，真实开篇范例）+ `short-craft.md` 第12节（开头事件密度） | `references/hooks-chapter.md`（开篇钩子类型）· `references/hooks-paragraph.md`（段钩密度） |
 | 格式与节奏 | **`references/short-format.md`**（短篇正文格式，两平台模板） | `references/short-craft.md`（情绪直接写+后接具体反应/三维度揉进/疏密）· `references/writing-workflow.md`（设计/精修工作流） |
 | 对话 | **`references/dialogue-mastery.md`**（对话技法主文件：差异化/潜台词/对话节奏） | `references/short-craft.md`（三类台词与对话权力博弈）· 各 `genre-styles/` 包的真实金句库 |
@@ -431,3 +458,25 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 - 跟随用户的语言回复，用户用什么语言就用什么语言回复
 - 中文回复遵循《中文文案排版指北》
+
+---
+
+## 去味保护协议 v1.1
+
+短篇成稿进入去AI味时，先读 [小说保护账本](references/fiction-protection-ledger.md)、[模式治理](references/pattern-governance.md) 和 [结构审计](references/structural-audit.md)，再用 [本 Skill 自带的保真脚本](scripts/deslop_guard.py) 建立源文快照、候选稿和保护账本。短篇情绪烈度、审判句、火葬场预告和有功能的重复应登记为保护项或排除条件；只编辑候选稿，先过保真审计，再对本轮改动区查残留味。问题密度高不等于授权结构重写，默认仍为 `standard + bounded`。
+
+## 中文正文英文零容忍门
+
+中文短篇正文和台词中的外语、缩写、型号和剧情代号一律判为 `language-leak blocking`，不得由模型自行豁免。URL、邮箱、代码、路径和文件名只机械保护明确非叙事结构；用户明确要求逐字保留的其他外语，必须单独确认后在 `.deslop-whitelist` 精确登记。HTML 标签、注释和实体必须清零；语言门未通过时不得交付成稿。
+
+## 本篇语言验收 Gate（强制）
+
+短篇初稿完成后立即首先运行 `node scripts/language_gate.js "{正文文件}"`。返回非零时，把报告中的行号、原片段和所在行退回正文写作者修改，并重复检查；在返回码为零前，禁止其他检测、去味验收和正式交付。不得用自动翻译、简单删除或未经用户单独确认的白名单代替正文修改。
+
+## 本篇文风卫生 Gate（强制）
+
+语言门通过后运行 `node scripts/check-style-hygiene.js --check --fail-on=blocking "{正文文件}"`。默认出版级策略阻断表情符号、颜文字、火星文、标点堆砌和不可见字符；`？！` 与 `……` 等有功能标点正常保留。若题材确需聊天体，按 [正文文风卫生门](references/style-hygiene.md) 在本篇 `设定/文风.md` 选择对白弹性或逐类配置，不得在正文生成后临时关门求通过。
+
+## 适度对白技巧（强制）
+
+重要对白场景按 [适度对白技巧](references/dialogue-craft-moderate.md) 形成轻量对白卡，并以 [对白卡 schema](references/dialogue-scene-card.schema.json) 约束字段；退化边界见 [对白归属标记漂移](references/dialogue-attribution-drift.md)。中文语言 Gate 通过后运行 `node scripts/dialogue_drift_gate.js --current "{正文文件}"`。正文自然混用无标签对白、简单“说/问”、有效动作和叙述反应。对白退化机械检测只阻断明确的连续逐句报幕，密度与动词集中只作预警并进入语义审查；不得用华丽标签、空动作或句句潜台词制造技巧感。

@@ -1,3 +1,17 @@
 # Local tool caches and generated analysis data
 .opencode/
 .tmp_analyze/
+
+# IDE / assistant-local workspace (may contain machine-specific paths)
+.workbuddy/
+.vscode/
+.dsh-univer-smoke.univer
+
+# story-world-engine runtime mirrors; regenerated from skills/ by
+# skills/sync-story-world-engine.ps1 — the canonical copy lives in skills/.
+.claude/
+.codex/
+.agents/
+
+# One-off course-paper review scratch (removed 2026-11-10; keep out if recreated)
+_tmp_report_review/

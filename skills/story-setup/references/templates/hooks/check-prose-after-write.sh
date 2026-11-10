@@ -4,7 +4,8 @@
 # 即使主会话漏跑「确定性收尾」步骤（压缩/弱模型/分心），这些硬信号也保证被抓。
 #
 # 只兜「硬信号」（漏跑最伤、退化模型自己发现不了的）：截断、生成拒绝语 / AI 自指、
-# 工程词漏进正文、紧邻整行复读、毒句式（确定性 AI 句式指纹）、落盘失败/截断、字数欠账。
+# 工程词漏进正文、中文语言漂移（英文句段/台词/裸词）、紧邻整行复读、毒句式
+# （确定性 AI 句式指纹）、落盘失败/截断、字数欠账。
 # 碎句号/长段落/破折号这类 advisory，以及复读全量 / tier2 歧义词，仍由 workflow 收尾
 # 步骤的 check-ai-patterns / check-degeneration 全量跑——本 hook 不部署也不依赖那两个
 # 检测器，是独立的轻量网（毒句式规则与 check-ai-patterns.js 的同名规则统一规格）。
@@ -39,7 +40,8 @@ fi
 # 探测 node（官方现在推荐原生二进制装 Claude Code，只有 npm 装法才带 Node——native 安装
 # 可能无 node。探测不到就静默放行：兜底网降级停用，session-start.sh 会在会话起点提示一次）。
 node -e "" >/dev/null 2>&1 || exit 0
-CLI="$(dirname "$0")/story_hook_cli.js"
+HOOK_DIR="$(cd "$(dirname "$0")" 2>/dev/null && pwd -P || dirname "$0")"
+CLI="$HOOK_DIR/story_hook_cli.js"
 [ -f "$CLI" ] || exit 0
 
 # 抽取目标文件路径（负载走管道喂 node 的 stdin，按 UTF-8 写回路径）。
@@ -91,11 +93,61 @@ if [ "$BYTES" -lt 200 ]; then
   OUT+="【落盘】正文仅 ${BYTES} 字节，疑似未写完/落盘失败（quota/超时中断？），请核对并补写。${NL}"
 fi
 
-# 内容网 + 字数：走 node 共享核。net 抓 截断/拒绝语/AI自指/工程词tier1/紧邻复读/毒句式
+# 内容网 + 字数：走 node 共享核。net 抓 截断/拒绝语/AI自指/工程词tier1/中文语言漂移/
+# 紧邻复读/毒句式
 # （硬信号，退化模型自己发现不了）；字数从 大纲/细纲_第N章*.md 的「字数目标」对照实际<90% 提示。
 # best-effort：找不到细纲/目标静默跳过，不误报。
-NET_MSG="$(node "$CLI" prose-net "$ABS" 2>/dev/null || true)"
-[ -n "$NET_MSG" ] && OUT+="【退化/工程词/毒句式/字数】（硬信号：截断/拒绝语/工程词/毒句式→重写；命中即处理，别留给下一章）${NL}${NET_MSG}${NL}"
+# Windows Git Bash/MSYS 启动原生 node.exe 前会改写 POSIX 形式 argv；若 root/file
+# 落入不同路径命名空间，共享核会把书目级 `.deslop-whitelist` 安全地判为
+# 越界而漏读。Windows 薄壳先在 Bash 命名空间确认目标仍属于项目，再进入项目根，
+# 令原生 Node 以 `.` 作安全边界、从 stdin 读取项目内相对路径。这样 root/file
+# 都不进入 MSYS argv 转换；绝对化的 CLI 路径仍由 Git Bash 正常转换。项目外目标保留
+# 旧 argv 兼容路径，共享核仍不会读取项目外白名单。
+case "$(uname -s 2>/dev/null || true)" in
+  MINGW*|MSYS*|CYGWIN*)
+    # `/tmp/...` 在 Git Bash 中可能只是虚拟别名，而 `project_root` 的 `pwd -P`
+    # 已返回盘符对应的物理路径。若直接做字符串前缀比较，同一个文件会被误判成
+    # 项目外路径，继而回退到会受 MSYS argv 转换影响的旧调用。先分别 `cd` 到项目根
+    # 和目标父目录再取 `pwd -P`，让两边落入同一 Bash 物理路径命名空间；文件名本身
+    # 不经重新编码，继续按原 UTF-8 字节拼回。
+    BASH_ROOT="$(cd "$ROOT" 2>/dev/null && pwd -P || printf '%s' "$ROOT")"
+    BASH_PARENT="$(cd "$(dirname "$ABS")" 2>/dev/null && pwd -P || true)"
+    if [ -n "$BASH_PARENT" ]; then
+      BASH_ABS="${BASH_PARENT%/}/$(basename "$ABS")"
+    else
+      BASH_ABS="$ABS"
+    fi
+    case "$BASH_ROOT" in
+      [A-Za-z]:/*)
+        if command -v cygpath >/dev/null 2>&1; then
+          BASH_ROOT="$(cygpath -u "$BASH_ROOT" 2>/dev/null || printf '%s' "$BASH_ROOT")"
+        fi
+        ;;
+    esac
+    case "$BASH_ABS" in
+      [A-Za-z]:/*)
+        if command -v cygpath >/dev/null 2>&1; then
+          BASH_ABS="$(cygpath -u "$BASH_ABS" 2>/dev/null || printf '%s' "$BASH_ABS")"
+        fi
+        ;;
+    esac
+    ROOT_PREFIX="${BASH_ROOT%/}/"
+    case "$BASH_ABS" in
+      "$ROOT_PREFIX"*)
+        RELATIVE_TARGET="${BASH_ABS#"$ROOT_PREFIX"}"
+        NET_MSG="$(printf '%s' "$RELATIVE_TARGET" \
+          | (cd "$BASH_ROOT" 2>/dev/null && node "$CLI" prose-net-relative 2>/dev/null) || true)"
+        ;;
+      *)
+        NET_MSG="$(node "$CLI" prose-net "$ROOT" "$ABS" 2>/dev/null || true)"
+        ;;
+    esac
+    ;;
+  *)
+    NET_MSG="$(node "$CLI" prose-net "$ROOT" "$ABS" 2>/dev/null || true)"
+    ;;
+esac
+[ -n "$NET_MSG" ] && OUT+="【退化/工程词/中文语言/毒句式/字数】（硬信号：截断/拒绝语/工程词/语言漂移/毒句式→重写；命中即处理，别留给下一章）${NL}${NET_MSG}${NL}"
 
 [ -z "$OUT" ] && exit 0
 

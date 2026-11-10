@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "spans": [
+    {
+      "kind": "replace",
+      "source_start": 71,
+      "source_end": 71,
+      "candidate_start": 71,
+      "candidate_end": 71,
+      "source_preview": [
+        "芽又咬了一口：“陈姨女儿是不是去南方了？”"
+      ],
+      "candidate_preview": [
+        "芽又撕了截油条：“陈姨女儿是不是去南方了？”"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 79,
+      "source_end": 79,
+      "candidate_start": 79,
+      "candidate_end": 79,
+      "source_preview": [
+        "芽拿油条的手停了一下，先看那碗小米汤，又看了眼自己已经咬掉一截的油条。"
+      ],
+      "candidate_preview": [
+        "芽拿油条的手停了，先看那碗小米汤，又去看自己已经咬掉一截的油条。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 103,
+      "source_end": 103,
+      "candidate_start": 103,
+      "candidate_end": 103,
+      "source_preview": [
+        "芽低头看了一眼，脸色很快沉下来：“你专门找的？”"
+      ],
+      "candidate_preview": [
+        "芽低头去看，脸色很快沉下来：“你专门找的？”"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 147,
+      "source_end": 147,
+      "candidate_start": 147,
+      "candidate_end": 147,
+      "source_preview": [
+        "芽没有立刻反驳，后厨的油锅却在这时候噼啪炸响，郭老板隔着帘子喊了一声：“你俩吵归吵，账别赖！”"
+      ],
+      "candidate_preview": [
+        "芽没有立刻反驳，后厨的油锅却在这时候噼啪炸响，郭老板隔着帘子喊：“你俩吵归吵，账别赖！”"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 155,
+      "source_end": 155,
+      "candidate_start": 155,
+      "candidate_end": 155,
+      "source_preview": [
+        "郭老板在里面笑骂了一句，镜辞也低头吃了一口豆腐脑，桌边那股绷紧的气氛松开一点，却没真的散掉。"
+      ],
+      "candidate_preview": [
+        "郭老板在里面笑骂了一句，镜辞也低头吃豆腐脑，桌边那股绷紧的气氛松开一点，却没真的散掉。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 179,
+      "source_end": 179,
+      "candidate_start": 179,
+      "candidate_end": 179,
+      "source_preview": [
+        "走到门口时，芽又停了一下。"
+      ],
+      "candidate_preview": [
+        "走到门口，芽又站住。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 195,
+      "source_end": 195,
+      "candidate_start": 195,
+      "candidate_end": 195,
+      "source_preview": [
+        "第四行原本写到一半，他停了一下，把那几个字划掉，重新写成："
+      ],
+      "candidate_preview": [
+        "第四行原本写到一半，笔尖停住，他把那几个字划掉，重新写成："
+      ]
+    }
+  ]
+}

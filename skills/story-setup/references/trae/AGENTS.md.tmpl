@@ -1,0 +1,102 @@
+<!-- BEGIN oh-story-managed: trae -->
+
+# {项目名} — 网文写作工具集（TRAE Code）
+
+本项目已通过 oh-story 接入 TRAE Code。可在自然语言中明确点名 Skill，或从 `/` 面板选择同名 Command；`/story-long-write` 等斜杠输入命中的是 Command，再由它路由对应 Skill。
+
+## Skill 路由表
+
+| 命令/意图 | Skill | 说明 |
+|---|---|---|
+| `/story-long-write`、写长篇 | story-long-write | 长篇网文写作（逐章推进） |
+| `/story-short-write`、写短篇 | story-short-write | 短篇网文写作（情绪驱动） |
+| `/story-long-analyze`、长篇拆文 | story-long-analyze | 长篇小说深度拆解 |
+| `/story-short-analyze`、短篇拆文 | story-short-analyze | 短篇小说拆文分析 |
+| `/story-long-scan`、长篇扫榜 | story-long-scan | 长篇小说榜单与市场趋势 |
+| `/story-data-analyze`、数据分析、后台数据 | story-data-analyze | 后台数据归因分析，三层定位读者流失 |
+| `/story-short-scan`、短篇扫榜 | story-short-scan | 短篇小说榜单与情绪风口 |
+| `/story-deslop`、去 AI 味 | story-deslop | 去除 AI 写作痕迹 |
+| `/story-cover`、封面 | story-cover | 生成封面图 |
+| `/story-review`、审查 | story-review | 调用项目子 Agent 的多视角对抗式审查 |
+| `/story-import`、导入 | story-import | 逆向导入已有小说到项目结构 |
+| `/story-explore`、作品查询 | story-explore | 只读查询作品进度、角色、伏笔与设定 |
+| `/story-research`、资料研究 | story-research | 带来源的创作事实查证 |
+| `/story-release-package`、发布材料 | story-release-package | 整理已审批作品的发布文案与清单 |
+| `/story-publish`、平台发布 | story-publish | 通过项目关联适配器预检、存草稿或正式发布 |
+| `/story`、网文 | story | 模糊意图自动分发 |
+| `/story-setup`、准备写书 | story-setup | 部署 TRAE Code Skills、Commands、Agents、Rules 与 Hooks |
+| `/browser-cdp` | browser-cdp | 浏览器 CDP 工具 |
+
+## 文件结构
+
+- `.trae/skills/` — TRAE Code 原生发现的项目 Skills
+- `.trae/commands/` — 项目本地 Commands
+- `.trae/agents/` — 项目子 Agent 角色定义
+- `.trae/rules/` — 按 globs 生效的项目规则
+- `.trae/hooks.json` — TRAE Code 原生 Hook 注册
+- `.trae/hooks/` — oh-story Hook runner 与共享核心
+- `拆文库/` — 拆文分析结果
+- `{书名}/正文/` — 长篇章节正文
+- `{书名}/正文.md` — 短篇正文
+- `{书名}/设定/` — 角色、世界和题材设定
+- `{书名}/大纲/` — 卷纲与逐章细纲
+- `{书名}/追踪/` — `_tracking-state.json` 唯一结构化权威、固定 7 栏 `上下文.md` 续写状态卡、逐章紧凑记录、核心角色独立派生快照、伏笔当前视图、作者与读者双时间线；全部通过追踪工具生成
+- `{书名}/对标/` — 当前项目引用的对标分析
+
+## TRAE Code 项目约定
+
+- 写正文前必须先有对应大纲：长篇需要 `大纲/细纲_第N章*.md`，短篇需要 `小节大纲.md`。PreToolUse Hook 会做机械守卫，Skill 流程本身也必须遵守。
+- 中文长篇/短篇正文全程锁定中文；英文、缩写、型号和剧情代号不得由 Agent 自行豁免。URL、邮箱、代码、路径和文件名只机械保护明确非叙事结构；其他外语只在用户单独确认后精确登记到 `.deslop-whitelist`；HTML 标记不得进入交付正文。
+- 英文小说/英文短故事/中文改英文/海外发行意图优先路由 `story-globalize`；若当前环境未安装，报告缺失并停止中文正文流程。
+- 正文写入后，PostToolUse Hook 会检查落盘、截断、占位符、工程词泄漏、复读、字数欠账和标题重复；有发现时先处理再继续。
+- TRAE Code 从 `.trae/agents/*.md` 发现 Subagents；需要多角色时必须在内置 **Agent** 智能体中明确调用同名 Subagent。这不是 Claude Code 的 `subagent_type` 参数，也不得用其他工具或文本伪造已独立执行。
+- 子 Agent 不递归调用其他子 Agent；多角色流程由主 Agent 平级编排。子 Agent 不可用时按对应 Skill 降级 solo 并如实报告。
+- `.trae/rules/*.md` 只在其 globs 命中时生效；具体创作流程仍以对应 Skill 为准。
+- Compact 后优先读取 `{书名}/追踪/上下文.md` 恢复当前写作状态。
+
+## TRAE Code 运行时激活门
+
+- 部署后必须新建会话，并在「设置 > Hooks」 review/启用项目 `.trae/hooks.json`；项目 Hook 未启用时，磁盘上文件齐全也不等于门禁生效。
+- 在「设置 > Rules」确认 `.trae/rules/oh-story.md` 已加载；依赖根 `AGENTS.md` 时还要开启「将 AGENTS.md 包含在上下文中」。
+- 在「设置 > Beta > Subagents」开启「启用 Subagents 目录」，并用输入框 `@` 菜单中的内置 Agent 执行多 Agent 流程；Chat/普通自定义智能体不能调用这些 Subagents。
+- TraeCode 若同时启用 `.trae/hooks.json` 和导入的 `.claude/settings*.json`，会合并两者。oh-story Claude hook 在 `TRAE_PROJECT_DIR` 存在时必须静默退出，以原生 `.trae` runner 为唯一执行源。
+- 完整操作与验证清单见 `.trae/skills/story-setup/references/trae/runtime-activation.md`。未完成实际面板/会话验证时，只能报告“静态兼容，运行时未验证”。
+
+## 跨产物修订门禁
+
+修改已提交正文、既有大纲或设定时，暂停日更，按长篇写作 skill 的“跨产物修订与长期事实”协议，先调用 `revision-governor phase=plan` 做只读影响分析，生成 `追踪/修改影响/active.json`；关联修改完成后按 `phase=verify` 复核，并通过带摘要审批戳的 `revision_guard.py check` 与 `tracking_commit.py check` 后才恢复续写。
+
+长篇“续写/继续写/日更”默认只授权精确下一章候选稿，按长篇写作 skill 的“章节候选、接纳与投影自检”协议写入 `追踪/候选章/`；这些词不等于接纳。只有用户明确“接受/定稿”，或本次任务事先明确授权自动定稿，才能写入 `正文/`、提交追踪并通过 `story_doctor.py`。卷末进入下一卷前按该 skill 的“顺序冷读”协议完成冷读，S1/S2 未清不得开新卷。
+
+## 已接纳正文声音画像
+
+长篇达到至少五章可信接纳样本后，按 `story-long-write` 的 `accepted-voice-profile.md` 建立本书声音画像：新章只认 `committed` 接纳回执，无回执旧章必须由作者显式批准连续范围。已接纳基线负责防漂移；作者可从其中明确精选至少五章、建议八至十二章建立黄金声线样本。两者都只做双向 advisory，不以统计均值自动改文；任一已配置画像过期时由 `story_doctor.py` 阻断继续使用旧数据。
+
+候选章还必须生成近章结构指纹证据包，按同一场景发动机、标准问答、信息交付方式、章尾功能和人物未解代价五项做语义复核；数值接近不等于 AI，也不自动授权改文。
+
+## Compact 后恢复上下文
+
+恢复写作前确认：
+
+1. 当前书目与已完成章节；
+2. 最近的角色/设定变更；
+3. 未回收伏笔；
+4. 当前章节的情绪和节奏目标。
+
+如果存在 `{书名}/追踪/上下文.md`，先读取该文件再继续写作。
+
+## 分支推演
+
+用户要求“分支推演 / 路线比较 / 推演几个走向”时，使用 `story-long-write` 的分支推演流程。推演产物放在 `大纲/推演/`，未经用户明确选择和另行授权，不得写入正式大纲或追踪状态。
+
+## 中文正文英文零容忍
+
+中文正文和台词中出现未授权拉丁字母词时一律 blocking，包括短词、专名、缩写和中英混合台词。只机械保护 URL、邮箱、文件路径、代码等明确非叙事结构；其他外语只有在用户单独确认并由 `.deslop-whitelist` 精确登记时才豁免。HTML 标记阻断；语言泄漏未清零不得交付。
+
+正文落盘后，把 `{当前写作 Skill 目录}` 替换为当轮已路由的长篇或短篇写作 Skill 目录，首先实际运行 `node "{当前写作 Skill 目录}/scripts/language_gate.js" "{正文文件}"`；返回零后紧接着运行 `node "{当前写作 Skill 目录}/scripts/check-style-hygiene.js" --check --fail-on=blocking "{正文文件}"`，按本书 `设定/文风.md` 策略拦截表情、颜文字、火星文与标点堆砌。两门返回零前不得运行错别字、去味、退化或对白等后续验收。
+
+## 适度对白技巧与验收
+
+重要对白场景由当前写作 Skill 读取其自带的“适度对白技巧”参考，形成轻量对白卡。正文自然混用无标签对白、简单“说/问”、有效动作和叙述反应，不追求零标签或句句潜台词。中文语言 Gate 后运行当前写作 Skill 自带的对白漂移 Gate；明确机械阻断项退回，密度与动词集中预警进入语义审查。机械与语义验收通过前禁止追踪提交和下一章。
+
+<!-- END oh-story-managed: trae -->

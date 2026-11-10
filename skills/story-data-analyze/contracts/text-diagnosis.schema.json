@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/text-diagnosis.schema.json",
+  "title": "Read-only text diagnosis and single-variable proposals",
+  "type": "object",
+  "required": [
+    "diagnosis_status", "online_version_status", "online_version_evidence",
+    "body_modified", "hypotheses_checked", "proposals", "input_artifact_hashes"
+  ],
+  "properties": {
+    "diagnosis_status": {"enum": ["PROPOSAL_READY", "NOT_APPLICABLE", "VERSION_UNVERIFIED"]},
+    "online_version_status": {"enum": ["VERIFIED", "UNVERIFIED", "MIXED", "NOT_APPLICABLE"]},
+    "online_version_evidence": {"type": "array", "items": {"type": "object"}},
+    "body_modified": {"const": false},
+    "hypotheses_checked": {"type": "array", "items": {"type": "object"}},
+    "proposals": {"type": "array", "items": {"$ref": "#/$defs/proposal"}},
+    "not_applicable_reason": {"type": "string"},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "$defs": {
+    "proposal": {
+      "type": "object",
+      "required": [
+        "proposal_id", "action", "target", "target_sha256_before", "text_evidence",
+        "data_trigger", "change_intent", "reader_mechanism", "expected_metric",
+        "single_variable", "counterfactual", "do_not_change", "guardrails", "validation_plan"
+      ],
+      "properties": {
+        "proposal_id": {"type": "string", "minLength": 1},
+        "action": {"enum": ["modify_text", "modify_packaging", "publish"]},
+        "target": {"type": "string", "minLength": 1},
+        "target_sha256_before": {"type": "string", "pattern": "^(?:[0-9a-f]{64}|MISSING)$"},
+        "text_evidence": {"type": "array", "minItems": 1},
+        "data_trigger": {"type": "object"},
+        "change_intent": {"type": "string", "minLength": 1},
+        "reader_mechanism": {"type": "string", "minLength": 1},
+        "expected_metric": {"type": "string", "minLength": 1},
+        "single_variable": {"const": true},
+        "counterfactual": {"type": "string", "minLength": 1},
+        "do_not_change": {"type": "array", "minItems": 1},
+        "guardrails": {"type": "array", "minItems": 1},
+        "validation_plan": {"type": "object"}
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

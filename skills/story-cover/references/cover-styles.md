@@ -127,8 +127,8 @@ holding a glowing blue spirit sword
 **示例**：
 ```
 Chinese web novel cover, xianxia fantasy style.
-Title text '剑道独尊' at top center in bold golden brush calligraphy with metallic glow and sharp strokes.
-Author name '青椒炒肉' at bottom center in small refined white serif text with faint golden glow, flanked by delicate cloud-scroll ornaments, resting on a thin horizontal gold line.
+Title text '霜河剑影' at top center in bold golden brush calligraphy with metallic glow and sharp strokes.
+Author name '云外客' at bottom center in small refined white serif text with faint golden glow, flanked by delicate cloud-scroll ornaments, resting on a thin horizontal gold line.
 A young swordsman in flowing white robes standing on a mountain peak,
 holding a glowing blue spirit sword, long black hair flowing in the wind.
 Ethereal clouds swirling below, dramatic golden divine light from above,

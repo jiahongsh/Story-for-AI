@@ -3,7 +3,7 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 249,
+  "state_revision": 261,
   "last_committed_chapter": 99,
   "range": [
     1,
@@ -12,7 +12,7 @@
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "07db0d0cdaba7e2bd0d22e0ef15707813fe408f5b216068ae194ebd2bcb729ce"
+      "sha256": "5b989c1916b42dddcb4054f87d13ff821858e3d7cbb48aad72c24215dbdf26c1"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -25,7 +25,7 @@
     },
     {
       "path": "正文/第002章_先喝汤.md",
-      "sha256": "ad49ce9f492db6222e3627b388d1222418609637fb9f01c88db1f3cd6bb2fc10"
+      "sha256": "1c23ccdef4dcb6cd488c82255208b46dcea16ecac1f66957099215648b8cdee3"
     },
     {
       "path": "正文/第003章_光在发抖.md",
@@ -57,7 +57,7 @@
     },
     {
       "path": "正文/第010章_三个版本.md",
-      "sha256": "47df13d965e7e09b279d53beebf808954a00a401e2ad9adb100c19a091d23403"
+      "sha256": "12388d8a01eeeb331f0e39cb229d6a72dd5e874ac6887f9c2737b455d9bbacb8"
     },
     {
       "path": "正文/第011章_两页名字.md",
@@ -225,7 +225,7 @@
     },
     {
       "path": "正文/第052章_一条时间线.md",
-      "sha256": "a4c75468968147daacff54ac147781ae1a165271b934ead768e1e2bf28e3e1ad"
+      "sha256": "38710600921b4033a17a56e977a0e7de52234a8e7ed9d41d2986a59f9e86000e"
     },
     {
       "path": "正文/第053章_验收题.md",
@@ -233,11 +233,11 @@
     },
     {
       "path": "正文/第054章_假通过.md",
-      "sha256": "b3a54c8615b98aa9da0efdd34ed049523e5f84e9c2e1cf7845bb13070fdac469"
+      "sha256": "8979a6d3f32c14967490c0fee4937e849dcd7f91e70a0f5cc8242a8ad0286c04"
     },
     {
       "path": "正文/第055章_没处理过.md",
-      "sha256": "d8bb1f3d597c9513d7b4b32975a47b61a4b7d9b1b362ac1743bfa21bca3791b7"
+      "sha256": "84ff584613934211c343e56f210346a246b9d278a60b5619b6bce41f46c35027"
     },
     {
       "path": "正文/第056章_清理轨迹.md",
@@ -245,23 +245,23 @@
     },
     {
       "path": "正文/第057章_同一张脸.md",
-      "sha256": "915f909257027ee3ccf7747c594e1dda01176f44cf5d248d82f7f48683ce9729"
+      "sha256": "971b666e42562fb9671ec691e0413bbfb3e443b10f986d5c140e4738563c881a"
     },
     {
       "path": "正文/第058章_你为什么不躲.md",
-      "sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834"
+      "sha256": "73b5ab2eefc257a114dc9f956627fd62920c9d63ebc4cbdda494f0a5dc4f73fa"
     },
     {
       "path": "正文/第059章_工单跟着我走.md",
-      "sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71"
+      "sha256": "afaf3e2c8980c60a579f6c3b4877078964d9c5666422b5a343ba5937a0a10ee9"
     },
     {
       "path": "正文/第060章_不回答.md",
-      "sha256": "839b7af9181c4efaa535b25ec08111ef3659bb669a233f7c7d38fb7a601dfe66"
+      "sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450"
     },
     {
       "path": "正文/第061章_来修表的人.md",
-      "sha256": "bef9d2ee12512bc6a466dea05a6ed33efdd0c830822d9fe700fad35473dfd657"
+      "sha256": "8f3856c92208c16cec10a809a3a1d3a4adcb5c4e2fdb48dca034089bdff227b9"
     },
     {
       "path": "正文/第062章_推荐店.md",
@@ -273,11 +273,11 @@
     },
     {
       "path": "正文/第064章_你也一直在验我.md",
-      "sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26"
+      "sha256": "fa4bdbd05e20b45527412380d51f09a44fcca0f89138626f6ae40ba0b3dc1dde"
     },
     {
       "path": "正文/第065章_不知道不是通过.md",
-      "sha256": "b18a252cac2df03958c9b42560b59425d2272178daeb3504b790131438e31674"
+      "sha256": "9cd18e72b149056fd6a8133f55c50b36040afa4fc265b89329133cf715f22a0d"
     },
     {
       "path": "正文/第066章_空白页.md",
@@ -453,7 +453,7 @@
     },
     {
       "path": "追踪/逐章记录/第010章.md",
-      "sha256": "25d3f89ac79bcf7800b1821c1387dd6935f7ff11ac6d1fea23f9c0d5b0a3972f"
+      "sha256": "7bd1aec93022ddbbc74d83ba844e730ee5e9fa42f10467ca38a93ef3a865dbac"
     },
     {
       "path": "追踪/逐章记录/第011章.md",
@@ -621,7 +621,7 @@
     },
     {
       "path": "追踪/逐章记录/第052章.md",
-      "sha256": "71fc409576bceafb20e6fce888bb5d0cf5b40e03dca2fc905e0274574eb50cab"
+      "sha256": "c5dc17624d29231df465ede2ed98f74e77bd2de47d3a0e3e19ff4a1422557ec6"
     },
     {
       "path": "追踪/逐章记录/第053章.md",
@@ -629,11 +629,11 @@
     },
     {
       "path": "追踪/逐章记录/第054章.md",
-      "sha256": "e423887e951f6f9446f03cb2989cdfdf6797002e953598db5cfda574634d524d"
+      "sha256": "3177af9b402545b89f0409226a77ef71aee01f9d3cac0491ae76502e67815034"
     },
     {
       "path": "追踪/逐章记录/第055章.md",
-      "sha256": "4f78554f52940f2a287953e04ca8645bfe4b6a857b6a865c9b476e851bb8651b"
+      "sha256": "0d0ba4599349c9c792a91c8a084ef74f75cbf992d01becfb4224db08fa4a5bb1"
     },
     {
       "path": "追踪/逐章记录/第056章.md",
@@ -641,27 +641,27 @@
     },
     {
       "path": "追踪/逐章记录/第057章.md",
-      "sha256": "b53892ee987e8adf856f06dd3c1e883ed8e0261452ae20f241dfe46f325d20f3"
+      "sha256": "224b0f841d404e95d4ddce19187cceadcf1abb7763571909e7f643d51863d5b5"
     },
     {
       "path": "追踪/逐章记录/第058章.md",
-      "sha256": "d718982321f099982e7ba808b27f17b617e5bc00ace0011c35b5fdbcceeae453"
+      "sha256": "657cf3d42c7d8b5efada8d08839f0c5ea97509928223c1371faa724fc35ce8e1"
     },
     {
       "path": "追踪/逐章记录/第059章.md",
-      "sha256": "53192f8b925df0c70a8c89133effc8dc065dc42e7d5928afd00ae9f850c32b08"
+      "sha256": "620330874c8a9c80cb628ff68cdc9478e91cdefc56e92ae980ccb15c2ece6100"
     },
     {
       "path": "追踪/逐章记录/第060章.md",
-      "sha256": "7a0cec91b59ed773ceb3ec483d050a734b836a92a3f09f07b13f8049fef5dc64"
+      "sha256": "fae90f3b61552639a8c2dfc99ae71301e03c069d35f76778bc154b82221838c8"
     },
     {
       "path": "追踪/逐章记录/第061章.md",
-      "sha256": "a9ee1b3ec7ff850ba25dc07a56df12b68b625042844fef4d158abd62982c8e71"
+      "sha256": "7ed2d5723fc7c3643b3725eb495178a9a52098bf7897ebed59b285d622e64553"
     },
     {
       "path": "追踪/逐章记录/第062章.md",
-      "sha256": "19580d2ed64f134e67c4b93cb0a668f115606b4d3498b5281a39335feec20aac"
+      "sha256": "e10fb66ec49a21c80fbabe55df84cfc643c0f24be0dec387743215b2ec3b4b1e"
     },
     {
       "path": "追踪/逐章记录/第063章.md",
@@ -669,11 +669,11 @@
     },
     {
       "path": "追踪/逐章记录/第064章.md",
-      "sha256": "76df64bfdff501b38979a02f067fa3825a8e89982c31037641954d75092f6286"
+      "sha256": "1208fdf382e68f223fa4ef8b55f651e5a1e3fa5d186cfe2bc57977ad276fa263"
     },
     {
       "path": "追踪/逐章记录/第065章.md",
-      "sha256": "8e7534469c831d6a2e04133ea5ca0ac42be1dee2b6999a33f0129e37349b561c"
+      "sha256": "cac887dde5662309cc8fa94b4656d91f26d0ae9150aeb647d9bb1a6084965217"
     },
     {
       "path": "追踪/逐章记录/第066章.md",

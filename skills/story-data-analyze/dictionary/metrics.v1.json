@@ -1,0 +1,421 @@
+{
+  "schema_version": "metrics.v1",
+  "catalog_name": "番茄长篇与短故事数据分析指标字典",
+  "definition_verified_at": "2026-08-12",
+  "metric_family_count": 56,
+  "counting_rule": "按指标家族计数；channel、chapter_index、story_id、period等是维度，书城/分类/搜索等是维度成员，不重复冒充独立指标。",
+  "counts_by_scope": {"data_quality": 12, "long_novel": 29, "short_story": 15},
+  "evidence_levels": {
+    "official": "番茄后台 tooltip 或官方公告明确定义",
+    "official_derived": "由官方分子/分母确定性复算",
+    "internal_derived": "内部诊断派生，不是平台指标",
+    "internal_quality": "内部数据治理门禁",
+    "unavailable": "当前拉取未获得，仅作未来指标槽位"
+  },
+  "preferred_direction_vocabulary": {
+    "HIGHER_BETTER": "在口径可比且护栏通过时，数值上升才可能支持改善",
+    "LOWER_BETTER": "在口径可比且护栏通过时，数值下降才可能支持改善",
+    "CONTEXT_DEPENDENT": "方向本身不等于好坏，必须联查结构、资格分母或文本情绪",
+    "STATUS_GATE": "分类质量门，不使用数值升降判断改善"
+  },
+  "preferred_direction_by_metric": {
+    "dq_snapshot_freshness_lag_hours": "LOWER_BETTER",
+    "dq_snapshot_completeness_rate": "HIGHER_BETTER",
+    "dq_required_field_missing_count": "LOWER_BETTER",
+    "dq_null_zero_ambiguity_count": "LOWER_BETTER",
+    "dq_field_sync_lag_count": "LOWER_BETTER",
+    "dq_channel_balance_gap": "LOWER_BETTER",
+    "dq_funnel_monotonicity_violation_count": "LOWER_BETTER",
+    "dq_ratio_bounds_violation_count": "LOWER_BETTER",
+    "dq_version_coverage_status": "STATUS_GATE",
+    "dq_scope_comparability_status": "STATUS_GATE",
+    "dq_self_visit_risk": "LOWER_BETTER",
+    "dq_backfill_instability_count": "LOWER_BETTER",
+    "long_daily_readers": "HIGHER_BETTER",
+    "long_rolling_14d_readers": "HIGHER_BETTER",
+    "long_channel_readers": "CONTEXT_DEPENDENT",
+    "long_channel_share": "CONTEXT_DEPENDENT",
+    "long_search_share": "CONTEXT_DEPENDENT",
+    "long_continue_reading_share": "CONTEXT_DEPENDENT",
+    "long_distribution_concentration": "CONTEXT_DEPENDENT",
+    "long_impressions": "HIGHER_BETTER",
+    "long_display_to_read_rate": "HIGHER_BETTER",
+    "long_chapter_reach_rate": "HIGHER_BETTER",
+    "long_chapter_reach_count": "HIGHER_BETTER",
+    "long_chapter_follow_rate_displayed": "HIGHER_BETTER",
+    "long_chapter_follow_rate_sync": "HIGHER_BETTER",
+    "long_chapter_transition_loss_count": "LOWER_BETTER",
+    "long_first_three_retention_rate": "HIGHER_BETTER",
+    "long_first_three_retained_count": "HIGHER_BETTER",
+    "long_deep_chapter_reach_rate": "HIGHER_BETTER",
+    "long_deep_chapter_reach_count": "HIGHER_BETTER",
+    "long_latest_chapter_reach_count": "HIGHER_BETTER",
+    "long_word_completion_rate": "HIGHER_BETTER",
+    "long_nonsequential_reach_violation_count": "LOWER_BETTER",
+    "long_add_shelf_count": "HIGHER_BETTER",
+    "long_chase_count": "HIGHER_BETTER",
+    "long_urge_count": "HIGHER_BETTER",
+    "long_comment_count": "CONTEXT_DEPENDENT",
+    "long_rating": "HIGHER_BETTER",
+    "long_shelf_per_daily_reader_proxy": "HIGHER_BETTER",
+    "long_comment_per_daily_reader_proxy": "CONTEXT_DEPENDENT",
+    "long_chase_per_daily_reader_proxy": "HIGHER_BETTER",
+    "short_impressions": "HIGHER_BETTER",
+    "short_readers": "HIGHER_BETTER",
+    "short_click_rate": "HIGHER_BETTER",
+    "short_click_loss_count": "LOWER_BETTER",
+    "short_15s_readers": "HIGHER_BETTER",
+    "short_30s_readers": "HIGHER_BETTER",
+    "short_60s_readers": "HIGHER_BETTER",
+    "short_finish_readers": "HIGHER_BETTER",
+    "short_15s_retention": "HIGHER_BETTER",
+    "short_15s_to_30_rate": "HIGHER_BETTER",
+    "short_30s_to_60_rate": "HIGHER_BETTER",
+    "short_60s_to_finish_rate": "HIGHER_BETTER",
+    "short_overall_finish_rate": "HIGHER_BETTER",
+    "short_stage_loss_count": "LOWER_BETTER",
+    "short_earliest_abnormal_stage_index": "CONTEXT_DEPENDENT"
+  },
+  "metrics": [
+    {
+      "id": "dq_snapshot_freshness_lag_hours", "name": "快照时效滞后小时", "scope": "data_quality", "block": "freshness", "metric_type": "quality",
+      "semantic_signature": {"object": "data_snapshot", "event_or_state": "expected_cutoff_not_reached", "measure": "elapsed_hours", "fixed_qualifiers": ["Asia/Shanghai"], "time_grain_or_window": "per_pull", "aggregation": "difference", "unit": "hour"},
+      "definition": "拉取时刻与预期 data_until 已应可用时刻的差；是数据时效门，不是业务表现。", "formula_or_source": {"mode": "formula", "expression": "max(0, pulled_at - expected_available_at(data_until))"}, "numerator": null, "denominator": null, "unit": "hour", "time_grain": "per_pull", "dimensions": ["work_id", "endpoint", "timezone"], "parent_node": "dq.freshness",
+      "drivers": ["platform_refresh", "pull_schedule", "timezone", "endpoint_lag"], "must_joint_check": ["dq_field_sync_lag_count", "dq_backfill_instability_count"], "actionability": {"level": "operational_direct", "surfaces": ["repull_time", "endpoint_check"], "not_text_actionable": true}, "guardrails": ["do_not_reuse_old_snapshot_as_new"], "limitations": ["平台刷新可回填，不能只看 data_until"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_snapshot_completeness_rate", "name": "快照完整率", "scope": "data_quality", "block": "completeness", "metric_type": "quality",
+      "semantic_signature": {"object": "required_metric_field", "event_or_state": "present_and_parseable", "measure": "share", "fixed_qualifiers": ["contract_version"], "time_grain_or_window": "per_snapshot", "aggregation": "count_ratio", "unit": "percent"},
+      "definition": "本次分析合约中必需字段存在且可解析的比例。", "formula_or_source": {"mode": "formula", "expression": "valid_required_fields / required_fields"}, "numerator": "valid_required_fields", "denominator": "required_fields", "unit": "percent", "time_grain": "per_snapshot", "dimensions": ["scope", "endpoint", "field_group"], "parent_node": "dq.completeness",
+      "drivers": ["api_schema_change", "partial_failure", "parser_failure"], "must_joint_check": ["dq_required_field_missing_count", "dq_null_zero_ambiguity_count"], "actionability": {"level": "operational_direct", "surfaces": ["fetch_contract", "parser", "repull"], "not_text_actionable": true}, "guardrails": ["business_analysis_requires_required_groups_complete"], "limitations": ["完整不代表数值已同步"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_required_field_missing_count", "name": "必需字段缺失数", "scope": "data_quality", "block": "completeness", "metric_type": "quality",
+      "semantic_signature": {"object": "required_metric_field", "event_or_state": "missing_or_unparseable", "measure": "count", "fixed_qualifiers": ["contract_version"], "time_grain_or_window": "per_snapshot", "aggregation": "sum", "unit": "field"},
+      "definition": "按运行范围和合约版本计数的缺失或无法解析必需字段。", "formula_or_source": {"mode": "formula", "expression": "count(required_field where absent or parse_error)"}, "numerator": null, "denominator": null, "unit": "field", "time_grain": "per_snapshot", "dimensions": ["scope", "endpoint", "field_name"], "parent_node": "dq.completeness",
+      "drivers": ["api_failure", "schema_drift", "authentication_partial_failure"], "must_joint_check": ["dq_snapshot_completeness_rate", "dq_field_sync_lag_count"], "actionability": {"level": "operational_direct", "surfaces": ["fetcher", "schema_adapter"], "not_text_actionable": true}, "guardrails": ["never_impute_missing_as_zero"], "limitations": ["非必需字段缺失不应阻塞无关分支"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_null_zero_ambiguity_count", "name": "Null/0 混淆数", "scope": "data_quality", "block": "validity", "metric_type": "quality",
+      "semantic_signature": {"object": "metric_value", "event_or_state": "zero_without_availability_semantics", "measure": "count", "fixed_qualifiers": [], "time_grain_or_window": "per_snapshot", "aggregation": "sum", "unit": "field"},
+      "definition": "值为 0 但无法区分真实零、未出数、请求失败或不适用的字段数。", "formula_or_source": {"mode": "formula", "expression": "count(value=0 and availability_status is null)"}, "numerator": null, "denominator": null, "unit": "field", "time_grain": "per_snapshot", "dimensions": ["scope", "field_name", "availability_status"], "parent_node": "dq.validity",
+      "drivers": ["legacy_schema", "placeholder_zero", "empty_sample"], "must_joint_check": ["dq_required_field_missing_count", "dq_snapshot_freshness_lag_hours"], "actionability": {"level": "operational_direct", "surfaces": ["normalization_schema"], "not_text_actionable": true}, "guardrails": ["zero_requires_qualified_denominator_or_status"], "limitations": ["只能发现语义不足，不自动判断真实值"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_field_sync_lag_count", "name": "字段不同步数", "scope": "data_quality", "block": "synchronization", "metric_type": "quality",
+      "semantic_signature": {"object": "related_metric_field", "event_or_state": "violates_same_snapshot_identity", "measure": "count", "fixed_qualifiers": ["rounding_tolerance"], "time_grain_or_window": "per_snapshot", "aggregation": "sum", "unit": "field_pair"},
+      "definition": "同快照应满足恒等或时点一致的字段对超出舍入容差的数量。", "formula_or_source": {"mode": "formula", "expression": "count(identity_residual > declared_rounding_tolerance)"}, "numerator": null, "denominator": null, "unit": "field_pair", "time_grain": "per_snapshot", "dimensions": ["identity_id", "chapter_index", "story_id"], "parent_node": "dq.synchronization",
+      "drivers": ["staggered_refresh", "rounded_display_rate", "mixed_cutoff"], "must_joint_check": ["dq_backfill_instability_count", "dq_funnel_monotonicity_violation_count"], "actionability": {"level": "operational_direct", "surfaces": ["repull", "select_synchronized_absolute_counts"], "not_text_actionable": true}, "guardrails": ["preserve_raw_fields", "do_not_copy_stale_displayed_rate"], "limitations": ["顺序直达/跳读也可造成部分关系不成立"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_channel_balance_gap", "name": "渠道合计差额", "scope": "data_quality", "block": "consistency", "metric_type": "quality",
+      "semantic_signature": {"object": "daily_reader_sources", "event_or_state": "channel_sum_vs_total", "measure": "absolute_gap", "fixed_qualifiers": [], "time_grain_or_window": "day", "aggregation": "absolute_difference", "unit": "person"},
+      "definition": "渠道阅读人数合计与日阅读人数的绝对差。", "formula_or_source": {"mode": "formula", "expression": "abs(sum(long_channel_readers) - long_daily_readers)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day", "dimensions": ["work_id", "data_date"], "parent_node": "dq.consistency",
+      "drivers": ["nonexclusive_attribution", "partial_refresh", "parser_gap"], "must_joint_check": ["long_daily_readers", "long_channel_readers", "dq_field_sync_lag_count"], "actionability": {"level": "operational_direct", "surfaces": ["metric_definition_check", "repull"], "not_text_actionable": true}, "guardrails": ["balance_is_check_not_proof_of_permanent_exclusivity"], "limitations": ["官方未公开所有场景下的渠道互斥去重规则"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_funnel_monotonicity_violation_count", "name": "漏斗单调性违反数", "scope": "data_quality", "block": "validity", "metric_type": "quality",
+      "semantic_signature": {"object": "same_cohort_funnel", "event_or_state": "downstream_exceeds_upstream", "measure": "count", "fixed_qualifiers": ["same_scope_and_cutoff"], "time_grain_or_window": "per_snapshot", "aggregation": "sum", "unit": "transition"},
+      "definition": "同 cohort、同口径漏斗中下游人数大于上游的转移数。", "formula_or_source": {"mode": "formula", "expression": "count(downstream_count > upstream_count)"}, "numerator": null, "denominator": null, "unit": "transition", "time_grain": "per_snapshot", "dimensions": ["work_id", "funnel_id", "stage"], "parent_node": "dq.validity",
+      "drivers": ["mixed_scope", "staggered_refresh", "nonsequential_entry", "bad_parse"], "must_joint_check": ["dq_field_sync_lag_count", "dq_scope_comparability_status"], "actionability": {"level": "operational_direct", "surfaces": ["scope_alignment", "repull", "exclude_invalid_transition"], "not_text_actionable": true}, "guardrails": ["block_transition_interpretation_until_explained"], "limitations": ["长篇累计章节可有直达/跳读，应先区分真实非顺序路径"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_ratio_bounds_violation_count", "name": "比率边界违反数", "scope": "data_quality", "block": "validity", "metric_type": "quality",
+      "semantic_signature": {"object": "ratio_metric", "event_or_state": "outside_valid_bounds_or_numerator_gt_denominator", "measure": "count", "fixed_qualifiers": [], "time_grain_or_window": "per_snapshot", "aggregation": "sum", "unit": "metric"},
+      "definition": "比例超出 0–100% 或分子大于分母的指标数。", "formula_or_source": {"mode": "formula", "expression": "count(rate<0 or rate>1 or numerator>denominator)"}, "numerator": null, "denominator": null, "unit": "metric", "time_grain": "per_snapshot", "dimensions": ["metric_id", "work_id", "chapter_index", "stage"], "parent_node": "dq.validity",
+      "drivers": ["unit_error", "parse_error", "scope_mismatch"], "must_joint_check": ["dq_funnel_monotonicity_violation_count", "dq_snapshot_completeness_rate"], "actionability": {"level": "operational_direct", "surfaces": ["parser", "scope_contract"], "not_text_actionable": true}, "guardrails": ["block_affected_metric"], "limitations": ["不能检出边界内但口径错误的值"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_version_coverage_status", "name": "改动版本覆盖状态", "scope": "data_quality", "block": "versioning", "metric_type": "quality",
+      "semantic_signature": {"object": "content_change", "event_or_state": "covered_by_observation_window", "measure": "categorical_status", "fixed_qualifiers": ["actual_live_time", "first_full_effective_day"], "time_grain_or_window": "per_change_per_snapshot", "aggregation": "state", "unit": "status"},
+      "definition": "按 Asia/Shanghai 的实际上线时间机械推导版本进入统计日的状态：NOT_COVERED/PARTIAL_DAY_COVERED/FULL_DAY_COVERED；该状态不替代线上版本证据。", "formula_or_source": {"mode": "rule", "expression": "derive first_covered_data_date and first_full_data_date from actual_live_time; compare data_until"}, "numerator": null, "denominator": null, "unit": "status", "time_grain": "per_change_per_snapshot", "dimensions": ["work_id", "change_id", "chapter_version", "channel"], "parent_node": "dq.versioning",
+      "drivers": ["edit_time", "platform_publish_time", "cohort_mix"], "must_joint_check": ["dq_scope_comparability_status", "dq_snapshot_freshness_lag_hours"], "actionability": {"level": "operational_direct", "surfaces": ["wait_for_full_day", "register_change_event"], "not_text_actionable": true}, "guardrails": ["NOT_COVERED_must_not_be_evaluated", "PARTIAL_DAY_COVERED_is_not_full_day_evidence", "time_coverage_does_not_replace_version_evidence"], "limitations": ["平台未提供章节版本 cohort 时只能判断时间覆盖不能分离新旧读者"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_scope_comparability_status", "name": "口径可比状态", "scope": "data_quality", "block": "comparability", "metric_type": "quality",
+      "semantic_signature": {"object": "metric_observation_pair", "event_or_state": "same_definition_scope_period_version", "measure": "categorical_status", "fixed_qualifiers": [], "time_grain_or_window": "per_comparison", "aggregation": "state", "unit": "status"},
+      "definition": "待比较观测是否在定义、统计范围、周期、去重、版本上可比。", "formula_or_source": {"mode": "rule", "expression": "all(required_semantic_signature_fields_equal_or_explicitly_adjusted)"}, "numerator": null, "denominator": null, "unit": "status", "time_grain": "per_comparison", "dimensions": ["metric_id", "period", "channel", "version", "platform_scope"], "parent_node": "dq.comparability",
+      "drivers": ["definition_change", "period_mismatch", "daily_sum_vs_cumulative", "platform_scope_change"], "must_joint_check": ["dq_version_coverage_status", "dq_snapshot_completeness_rate"], "actionability": {"level": "operational_direct", "surfaces": ["reselect_baseline", "separate_scope"], "not_text_actionable": true}, "guardrails": ["incomparable_blocks_directional_business_conclusion"], "limitations": ["所有口径必须显式登记才能检查"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_self_visit_risk", "name": "自访/熟人访问污染风险", "scope": "data_quality", "block": "contamination", "metric_type": "quality",
+      "semantic_signature": {"object": "reader_traffic", "event_or_state": "potential_author_or_acquaintance_visit", "measure": "risk_level", "fixed_qualifiers": ["unconfirmed_identity"], "time_grain_or_window": "analysis_window", "aggregation": "rule_score", "unit": "risk_level"},
+      "definition": "搜索主导、小样本、发布后密集人工查看等特征引发的样本污染风险，未经确认不自动扣除。", "formula_or_source": {"mode": "rule", "expression": "risk(search_share, sample_size, visit_log_confirmation, timing_pattern)"}, "numerator": null, "denominator": null, "unit": "risk_level", "time_grain": "analysis_window", "dimensions": ["work_id", "channel", "data_date"], "parent_node": "dq.contamination",
+      "drivers": ["author_search", "acquaintance_search", "organic_exact_search"], "must_joint_check": ["long_search_share", "long_daily_readers", "dq_version_coverage_status"], "actionability": {"level": "operational_direct", "surfaces": ["confirm_visit_log", "exclude_confirmed_test_window"], "not_text_actionable": true}, "guardrails": ["unconfirmed_search_must_not_be_deleted", "high_risk_downgrades_attribution"], "limitations": ["没有用户级身份数据时无法从平台记录直接确认"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "dq_backfill_instability_count", "name": "同截止日回填变动字段数", "scope": "data_quality", "block": "stability", "metric_type": "quality",
+      "semantic_signature": {"object": "same_cutoff_snapshot_pair", "event_or_state": "value_changed_after_repull", "measure": "count", "fixed_qualifiers": ["same_metric_definition"], "time_grain_or_window": "same_data_until", "aggregation": "sum", "unit": "field"},
+      "definition": "同 data_until 多次拉取中数值发生变化的字段数。", "formula_or_source": {"mode": "formula", "expression": "count(field_value_pull_n != field_value_pull_n_minus_1)"}, "numerator": null, "denominator": null, "unit": "field", "time_grain": "same_data_until", "dimensions": ["metric_id", "work_id", "chapter_index", "story_id"], "parent_node": "dq.stability",
+      "drivers": ["platform_backfill", "staggered_refresh", "anti_fraud_recount"], "must_joint_check": ["dq_snapshot_freshness_lag_hours", "dq_field_sync_lag_count"], "actionability": {"level": "operational_direct", "surfaces": ["repull_until_stable", "version_raw_by_pulled_at"], "not_text_actionable": true}, "guardrails": ["do_not_freeze_conclusion_while_material_fields_change"], "limitations": ["需同截止日至少两次快照"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+
+    {
+      "id": "long_daily_readers", "name": "长篇日阅读人数", "scope": "long_novel", "block": "distribution", "metric_type": "atomic",
+      "semantic_signature": {"object": "long_novel_reader", "event_or_state": "listen_or_read_work", "measure": "unique_user_count", "fixed_qualifiers": ["work_id"], "time_grain_or_window": "day", "aggregation": "daily_deduplicated_count", "unit": "person"},
+      "definition": "每日作品产生听+读的用户数。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.阅读人数"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day", "dimensions": ["work_id", "data_date", "update_state", "recommendation_stage"], "parent_node": "long.distribution.reach",
+      "drivers": ["long_channel_readers", "distribution_opportunity", "returning_reader_activity"], "must_joint_check": ["long_channel_readers", "long_channel_share", "long_rolling_14d_readers", "dq_channel_balance_gap"], "actionability": {"level": "indirect", "surfaces": ["update_cadence", "packaging_if_impression_data_exists", "classification_and_tags"], "not_text_actionable": false}, "guardrails": ["do_not_infer_impressions_or_ctr", "separate_distribution_from_chapter_conversion"], "limitations": ["无法区分新老读者或曝光规模"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_rolling_14d_readers", "name": "长篇近14日在读人数", "scope": "long_novel", "block": "active_scale", "metric_type": "atomic",
+      "semantic_signature": {"object": "long_novel_reader", "event_or_state": "listen_or_read_work", "measure": "unique_user_count", "fixed_qualifiers": ["work_id"], "time_grain_or_window": "rolling_14_day", "aggregation": "window_deduplicated_count", "unit": "person"},
+      "definition": "最近14天作品累计听+读用户数，表示本书近期活跃规模。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.在读人数"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "rolling_14_day", "dimensions": ["work_id", "window_end_date"], "parent_node": "long.active_scale",
+      "drivers": ["long_daily_readers", "return_frequency", "old_day_rollout"], "must_joint_check": ["long_daily_readers", "long_continue_reading_share", "long_chase_count"], "actionability": {"level": "indirect", "surfaces": ["update_cadence", "serial_goal_and_return_value"], "not_text_actionable": false}, "guardrails": ["adjacent_windows_share_13_days", "do_not_call_delta_new_readers_or_churn"], "limitations": ["相邻值强相关，改后13天内仍混入改前流量"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_channel_readers", "name": "长篇渠道阅读人数", "scope": "long_novel", "block": "distribution", "metric_type": "atomic",
+      "semantic_signature": {"object": "long_novel_reader", "event_or_state": "attributed_read_source", "measure": "user_count", "fixed_qualifiers": ["channel_member"], "time_grain_or_window": "day", "aggregation": "platform_attributed_count", "unit": "person"},
+      "definition": "后台按书城/分类/书架/继续阅读/搜索/其他展示的阅读来源人数；渠道是维度。", "formula_or_source": {"mode": "source", "source_field": "novel_traffic[channel]"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day", "dimensions": ["work_id", "data_date", "channel"], "parent_node": "long.distribution.channel_mix",
+      "drivers": ["platform_distribution", "search_demand", "shelf_return", "continue_read_entry"], "must_joint_check": ["long_daily_readers", "long_channel_share", "dq_channel_balance_gap", "dq_self_visit_risk"], "actionability": {"level": "indirect", "surfaces": ["classification_tags", "update_cadence", "searchable_packaging", "reader_return_value"], "not_text_actionable": false}, "guardrails": ["zero_channel_readers_is_not_zero_impressions", "source_attribution_rules_not_fully_public"], "limitations": ["不能用来反推曝光或渠道内转化"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_channel_share", "name": "长篇渠道阅读占比", "scope": "long_novel", "block": "distribution", "metric_type": "derived",
+      "semantic_signature": {"object": "long_novel_daily_reader", "event_or_state": "attributed_to_channel", "measure": "share", "fixed_qualifiers": ["channel_member"], "time_grain_or_window": "day", "aggregation": "ratio", "unit": "percent"},
+      "definition": "单一渠道阅读人数占日阅读人数的比例，仅用于结构诊断。", "formula_or_source": {"mode": "formula", "expression": "long_channel_readers(channel) / long_daily_readers"}, "numerator": "long_channel_readers", "denominator": "long_daily_readers", "unit": "percent", "time_grain": "day", "dimensions": ["work_id", "data_date", "channel"], "parent_node": "long.distribution.channel_mix",
+      "drivers": ["long_channel_readers", "long_daily_readers"], "must_joint_check": ["long_channel_readers", "long_daily_readers", "long_distribution_concentration"], "actionability": {"level": "indirect", "surfaces": ["channel_specific_packaging_or_cadence"], "not_text_actionable": false}, "guardrails": ["always_report_numerator_and_denominator", "composition_change_can_move_total_conversion"], "limitations": ["渠道归因是否永久互斥未公开"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_search_share", "name": "长篇搜索来源占比", "scope": "long_novel", "block": "distribution", "metric_type": "derived",
+      "semantic_signature": {"object": "long_novel_daily_reader", "event_or_state": "attributed_to_search", "measure": "share", "fixed_qualifiers": ["channel=search"], "time_grain_or_window": "day", "aggregation": "ratio", "unit": "percent"},
+      "definition": "搜索来源阅读人数占日阅读人数的比例，用于触发自访污染核查。", "formula_or_source": {"mode": "formula", "expression": "long_channel_readers(channel=search) / long_daily_readers"}, "numerator": "long_channel_readers[channel=search]", "denominator": "long_daily_readers", "unit": "percent", "time_grain": "day", "dimensions": ["work_id", "data_date"], "parent_node": "long.distribution.channel_mix",
+      "drivers": ["organic_search", "author_or_acquaintance_search", "title_keyword_demand"], "must_joint_check": ["dq_self_visit_risk", "long_channel_readers", "long_daily_readers"], "actionability": {"level": "indirect", "surfaces": ["searchable_title_and_intro_after_identity_check"], "not_text_actionable": false}, "guardrails": ["must_ask_author_or_acquaintance_visit_when_search_dominates", "unconfirmed_search_not_deleted"], "limitations": ["无用户身份无法证明是自访"], "evidence": {"definition_level": "official_derived", "threshold_level": "internal_only"}
+    },
+    {
+      "id": "long_continue_reading_share", "name": "继续阅读来源占比", "scope": "long_novel", "block": "return", "metric_type": "derived",
+      "semantic_signature": {"object": "long_novel_daily_reader", "event_or_state": "attributed_to_continue_reading", "measure": "share", "fixed_qualifiers": ["channel=continue_reading"], "time_grain_or_window": "day", "aggregation": "ratio", "unit": "percent"},
+      "definition": "继续阅读来源人数占日阅读人数比例，是回访入口代理之一，不是完整跨日留存。", "formula_or_source": {"mode": "formula", "expression": "long_channel_readers(channel=continue_reading) / long_daily_readers"}, "numerator": "long_channel_readers[channel=continue_reading]", "denominator": "long_daily_readers", "unit": "percent", "time_grain": "day", "dimensions": ["work_id", "data_date"], "parent_node": "long.return.entry",
+      "drivers": ["prior_reading_depth", "update_cadence", "unfinished_expectation"], "must_joint_check": ["long_chase_count", "long_rolling_14d_readers", "long_latest_chapter_reach_count"], "actionability": {"level": "indirect", "surfaces": ["latest_chapter_return_promise", "update_cadence"], "not_text_actionable": false}, "guardrails": ["do_not_call_retention_rate", "always_report_daily_reader_denominator"], "limitations": ["来源归因不等于全部回访用户"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_distribution_concentration", "name": "长篇渠道集中度", "scope": "long_novel", "block": "distribution", "metric_type": "derived",
+      "semantic_signature": {"object": "daily_reader_channel_mix", "event_or_state": "concentrated_across_channels", "measure": "herfindahl_index", "fixed_qualifiers": ["available_channels"], "time_grain_or_window": "day", "aggregation": "sum_squared_shares", "unit": "index_0_1"},
+      "definition": "各渠道占比平方和，只用于判断结构换血和单渠道依赖。", "formula_or_source": {"mode": "formula", "expression": "sum(long_channel_share(channel)^2)"}, "numerator": null, "denominator": null, "unit": "index_0_1", "time_grain": "day", "dimensions": ["work_id", "data_date", "channel_set"], "parent_node": "long.distribution.channel_mix",
+      "drivers": ["long_channel_share"], "must_joint_check": ["long_channel_share", "long_daily_readers", "dq_self_visit_risk"], "actionability": {"level": "diagnostic_only", "surfaces": ["segment_analysis"], "not_text_actionable": true}, "guardrails": ["threshold_uses_own_history_not_industry_cutoff"], "limitations": ["小样本日值易取极端"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_impressions", "name": "长篇展示人数（待接入）", "scope": "long_novel", "block": "distribution", "metric_type": "atomic",
+      "semantic_signature": {"object": "long_novel_candidate_reader", "event_or_state": "work_card_displayed", "measure": "unique_user_count", "fixed_qualifiers": ["platform_definition_required"], "time_grain_or_window": "day_or_experiment", "aggregation": "platform_count", "unit": "person"},
+      "definition": "长篇作品卡片展示人数槽位；当前拉取未获得，不得由渠道阅读反推。", "formula_or_source": {"mode": "source_unavailable", "source_field": null}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day_or_experiment", "dimensions": ["work_id", "data_date", "channel", "experiment_variant"], "parent_node": "long.distribution.exposure",
+      "drivers": ["platform_distribution", "eligibility", "recommendation_stage"], "must_joint_check": ["long_daily_readers", "long_channel_readers", "dq_scope_comparability_status"], "actionability": {"level": "indirect", "surfaces": ["eligibility", "classification_tags", "update_state"], "not_text_actionable": true}, "guardrails": ["unavailable_means_no_exposure_claim"], "limitations": ["当前无数据"], "evidence": {"definition_level": "unavailable", "threshold_level": "none"}
+    },
+    {
+      "id": "long_display_to_read_rate", "name": "长篇展示到阅读率（待接入）", "scope": "long_novel", "block": "packaging", "metric_type": "derived",
+      "semantic_signature": {"object": "displayed_long_novel_candidate", "event_or_state": "became_reader", "measure": "conversion_rate", "fixed_qualifiers": ["same_channel_and_scope"], "time_grain_or_window": "day_or_experiment", "aggregation": "ratio", "unit": "percent"},
+      "definition": "同口径展示人群中产生阅读的比例；当前无长篇展示分母，不计算。", "formula_or_source": {"mode": "formula_unavailable", "expression": "qualified_readers / long_impressions"}, "numerator": "qualified_readers_same_scope", "denominator": "long_impressions", "unit": "percent", "time_grain": "day_or_experiment", "dimensions": ["work_id", "channel", "experiment_variant"], "parent_node": "long.packaging",
+      "drivers": ["title", "cover", "intro", "tag_fit", "reader_mix"], "must_joint_check": ["long_impressions", "long_chapter_follow_rate_sync", "long_channel_share"], "actionability": {"level": "text_direct", "surfaces": ["title", "cover", "intro", "first_chapter_opening_200_500_chars"], "not_text_actionable": false}, "guardrails": ["packaging_promise_must_match_first_chapter", "monitor_first_transition"], "limitations": ["当前无合格分母"], "evidence": {"definition_level": "unavailable", "threshold_level": "none"}
+    },
+
+    {
+      "id": "long_chapter_reach_rate", "name": "章节累计到达率", "scope": "long_novel", "block": "activation_depth", "metric_type": "atomic",
+      "semantic_signature": {"object": "first_chapter_reader_cohort", "event_or_state": "read_to_chapter_n", "measure": "share", "fixed_qualifiers": ["chapter_index=n"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "platform_ratio", "unit": "percent"},
+      "definition": "读者阅读至第 N 章的比例；第1章为100%基准，不是打开第N章后读完本章。", "formula_or_source": {"mode": "source", "source_field": "novel_chapters[n].read"}, "numerator": "readers_reaching_chapter_n", "denominator": "chapter_1_reader_cohort", "unit": "percent", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "chapter_version", "data_until"], "parent_node": "long.activation_depth.chapter_curve",
+      "drivers": ["prior_transition_rates", "reader_mix", "chapter_availability"], "must_joint_check": ["long_chapter_reach_count", "long_chapter_follow_rate_sync", "dq_field_sync_lag_count", "dq_version_coverage_status"], "actionability": {"level": "text_direct_after_drilldown", "surfaces": ["chapter_n_minus_1_full", "chapter_n_minus_1_ending", "chapter_n_opening"], "not_text_actionable": false}, "guardrails": ["cumulative_snapshot_mixes_versions", "rounded_percent_requires_approximation_label"], "limitations": ["无版本 cohort 时不能严格评估改文因果"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chapter_reach_count", "name": "章节累计到达人数", "scope": "long_novel", "block": "activation_depth", "metric_type": "derived",
+      "semantic_signature": {"object": "first_chapter_reader_cohort", "event_or_state": "read_to_chapter_n", "measure": "user_count", "fixed_qualifiers": ["chapter_index=n"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "rate_times_base", "unit": "person"},
+      "definition": "第1章基数乘章节到达率还原的第N章到达人数；百分比只有舍入值时为约数。", "formula_or_source": {"mode": "formula", "expression": "chapter_1_reader_count * long_chapter_reach_rate(n)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "chapter_version", "data_until", "estimate_status"], "parent_node": "long.activation_depth.chapter_curve",
+      "drivers": ["chapter_1_reader_count", "long_chapter_reach_rate"], "must_joint_check": ["long_chapter_reach_rate", "long_chapter_follow_rate_sync", "dq_field_sync_lag_count"], "actionability": {"level": "text_direct_after_drilldown", "surfaces": ["prior_chapter_decision_window", "current_chapter_entry"], "not_text_actionable": false}, "guardrails": ["mark_approximately_when_back_calculated", "do_not_claim_window_delta_same_new_cohort"], "limitations": ["累计快照差包含旧读者推进、跳读和去重校正"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chapter_follow_rate_displayed", "name": "章节跟读率（平台展示）", "scope": "long_novel", "block": "activation_depth", "metric_type": "atomic",
+      "semantic_signature": {"object": "chapter_n_reader", "event_or_state": "also_read_chapter_n_plus_1", "measure": "conditional_share", "fixed_qualifiers": ["chapter_index=n"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "platform_ratio", "unit": "percent"},
+      "definition": "阅读第N章后又阅读第N+1章的占比，保留平台原值。", "formula_or_source": {"mode": "source", "source_field": "novel_chapters[n].follow"}, "numerator": "platform_internal_readers_n_to_n_plus_1", "denominator": "platform_internal_readers_n", "unit": "percent", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "data_until"], "parent_node": "long.activation_depth.transition",
+      "drivers": ["chapter_n_value", "chapter_n_ending", "chapter_n_plus_1_entry", "field_refresh"], "must_joint_check": ["long_chapter_follow_rate_sync", "long_chapter_reach_count", "dq_field_sync_lag_count"], "actionability": {"level": "text_direct_after_sync_check", "surfaces": ["chapter_n_full", "chapter_n_ending_10_20_percent", "chapter_n_plus_1_title_and_opening"], "not_text_actionable": false}, "guardrails": ["prefer_synchronized_absolute_counts_when_fields_disagree", "next_chapter_must_be_available"], "limitations": ["展示率可滞后或四舍五入"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chapter_follow_rate_sync", "name": "章节同步到达跟读率", "scope": "long_novel", "block": "activation_depth", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_n_reacher", "event_or_state": "reached_chapter_n_plus_1_in_same_snapshot", "measure": "conditional_share", "fixed_qualifiers": ["chapter_index=n", "synchronized_counts"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "ratio", "unit": "percent"},
+      "definition": "同一快照的第N+1章到达人数除以第N章到达人数，用于校验平台 follow 字段。", "formula_or_source": {"mode": "formula", "expression": "long_chapter_reach_count(n+1) / long_chapter_reach_count(n)"}, "numerator": "long_chapter_reach_count[n+1]", "denominator": "long_chapter_reach_count[n]", "unit": "percent", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "data_until", "estimate_status"], "parent_node": "long.activation_depth.transition",
+      "drivers": ["long_chapter_reach_count", "chapter_transition_experience", "reader_mix"], "must_joint_check": ["long_chapter_follow_rate_displayed", "long_chapter_transition_loss_count", "dq_field_sync_lag_count", "dq_version_coverage_status"], "actionability": {"level": "text_direct_after_quality_gate", "surfaces": ["chapter_n_full", "chapter_n_ending_10_20_percent", "chapter_n_plus_1_title", "chapter_n_plus_1_opening_200_500_chars"], "not_text_actionable": false}, "guardrails": ["denominator_below_30_is_sample_insufficient", "scan_breakpoint_requires_reproduction", "never_locate_exact_paragraph_without_text_evidence"], "limitations": ["累计转化混合版本和 cohort"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chapter_transition_loss_count", "name": "章节转移损失人数", "scope": "long_novel", "block": "activation_depth", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_n_reacher", "event_or_state": "did_not_reach_chapter_n_plus_1_in_snapshot", "measure": "user_count", "fixed_qualifiers": ["chapter_index=n"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "difference", "unit": "person"},
+      "definition": "第N章到达人数减第N+1章到达人数，表示该累计快照在转移边界的绝对损失。", "formula_or_source": {"mode": "formula", "expression": "long_chapter_reach_count(n) - long_chapter_reach_count(n+1)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "data_until", "estimate_status"], "parent_node": "long.activation_depth.transition",
+      "drivers": ["long_chapter_reach_count", "long_chapter_follow_rate_sync"], "must_joint_check": ["long_chapter_follow_rate_sync", "long_chapter_reach_count", "long_daily_readers"], "actionability": {"level": "text_direct_after_drilldown", "surfaces": ["chapter_boundary_decision_window"], "not_text_actionable": false}, "guardrails": ["prioritize_earliest_material_break_not_largest_percent_on_tiny_base"], "limitations": ["不是精确退出用户数，可有未来继续阅读"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_first_three_retention_rate", "name": "黄金三章保留率", "scope": "long_novel", "block": "golden_three", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_1_reader_cohort", "event_or_state": "reached_chapter_4", "measure": "share", "fixed_qualifiers": ["A4_over_A1"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "ratio", "unit": "percent"},
+      "definition": "第4章到达人数/第1章到达人数，概括前三个跨章决策边界；不替代分解 1→2、2→3、3→4。", "formula_or_source": {"mode": "formula", "expression": "long_chapter_reach_count(4) / long_chapter_reach_count(1)"}, "numerator": "long_chapter_reach_count[4]", "denominator": "long_chapter_reach_count[1]", "unit": "percent", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_version_set", "data_until"], "parent_node": "long.golden_three",
+      "drivers": ["follow_1_to_2", "follow_2_to_3", "follow_3_to_4"], "must_joint_check": ["long_chapter_follow_rate_sync", "long_first_three_retained_count", "dq_version_coverage_status", "long_channel_share"], "actionability": {"level": "text_direct_after_decomposition", "surfaces": ["title_intro_chapters_1_to_4"], "not_text_actionable": false}, "guardrails": ["must_decompose_to_earliest_abnormal_transition", "denominator_below_30_is_sample_insufficient"], "limitations": ["累计快照不是新版 cohort"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_first_three_retained_count", "name": "到达第4章人数", "scope": "long_novel", "block": "golden_three", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_1_reader_cohort", "event_or_state": "reached_chapter_4", "measure": "user_count", "fixed_qualifiers": [], "time_grain_or_window": "cumulative_snapshot", "aggregation": "chapter_reach_count", "unit": "person"},
+      "definition": "累计到达第4章的人数，用于避免只看百分比。", "formula_or_source": {"mode": "alias", "expression": "long_chapter_reach_count(chapter_index=4)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_version_set", "data_until", "estimate_status"], "parent_node": "long.golden_three",
+      "drivers": ["long_chapter_reach_count", "long_first_three_retention_rate", "chapter_1_base"], "must_joint_check": ["long_first_three_retention_rate", "long_chapter_follow_rate_sync", "long_daily_readers"], "actionability": {"level": "text_direct_after_decomposition", "surfaces": ["earliest_failed_transition_in_chapters_1_to_4"], "not_text_actionable": false}, "guardrails": ["report_count_and_rate_together"], "limitations": ["快照净变化不等于同一批新读者路径"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_deep_chapter_reach_rate", "name": "深章到达率", "scope": "long_novel", "block": "depth", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_1_reader_cohort", "event_or_state": "reached_configured_deep_chapter", "measure": "share", "fixed_qualifiers": ["chapter_index=depth_anchor"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "ratio", "unit": "percent"},
+      "definition": "到达预先登记的深度锚点章（如单元结束章）人数占第1章基数比例。", "formula_or_source": {"mode": "formula", "expression": "long_chapter_reach_count(depth_anchor) / long_chapter_reach_count(1)"}, "numerator": "long_chapter_reach_count[depth_anchor]", "denominator": "long_chapter_reach_count[1]", "unit": "percent", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "depth_anchor", "story_unit", "data_until"], "parent_node": "long.depth",
+      "drivers": ["all_prior_transition_rates", "unit_payoff", "serial_goal"], "must_joint_check": ["long_deep_chapter_reach_count", "long_chapter_follow_rate_sync", "long_chase_count"], "actionability": {"level": "text_direct_after_unit_drilldown", "surfaces": ["abnormal_story_unit", "payoff_cycle", "transition_into_next_unit"], "not_text_actionable": false}, "guardrails": ["anchor_defined_before_result_scan", "do_not_blame_late_chapter_if_early_funnel_empty"], "limitations": ["深章小样本和未发布章容易误判"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_deep_chapter_reach_count", "name": "深章到达人数", "scope": "long_novel", "block": "depth", "metric_type": "derived",
+      "semantic_signature": {"object": "chapter_1_reader_cohort", "event_or_state": "reached_configured_deep_chapter", "measure": "user_count", "fixed_qualifiers": ["chapter_index=depth_anchor"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "chapter_reach_count", "unit": "person"},
+      "definition": "预先登记深度锚点章的到达人数。", "formula_or_source": {"mode": "alias", "expression": "long_chapter_reach_count(depth_anchor)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "depth_anchor", "story_unit", "data_until", "estimate_status"], "parent_node": "long.depth",
+      "drivers": ["chapter_1_base", "long_deep_chapter_reach_rate"], "must_joint_check": ["long_deep_chapter_reach_rate", "long_chapter_transition_loss_count", "long_latest_chapter_reach_count"], "actionability": {"level": "text_direct_after_unit_drilldown", "surfaces": ["earliest_abnormal_transition_before_anchor"], "not_text_actionable": false}, "guardrails": ["report_absolute_count", "do_not_scan_zero_tail_as_multiple_problems"], "limitations": ["可为约数"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_latest_chapter_reach_count", "name": "最新章到达人数", "scope": "long_novel", "block": "depth_return", "metric_type": "derived",
+      "semantic_signature": {"object": "reader", "event_or_state": "reached_latest_published_chapter", "measure": "user_count", "fixed_qualifiers": ["latest_published_at_cutoff"], "time_grain_or_window": "cumulative_snapshot", "aggregation": "chapter_reach_count", "unit": "person"},
+      "definition": "数据截止日最新已发布章的到达人数，是催更合格人群的上限代理，不等于官方资格分母。", "formula_or_source": {"mode": "alias", "expression": "long_chapter_reach_count(latest_published_chapter)"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "latest_chapter_index", "data_until", "estimate_status"], "parent_node": "long.depth_return",
+      "drivers": ["early_funnel", "deep_retention", "chapter_release_time"], "must_joint_check": ["long_urge_count", "long_chase_count", "long_deep_chapter_reach_count"], "actionability": {"level": "text_direct_after_eligibility_check", "surfaces": ["latest_story_unit", "latest_chapter_ending", "next_goal"], "not_text_actionable": false}, "guardrails": ["zero_urge_with_zero_latest_reach_has_no_text_meaning", "latest_chapter_must_have_full_exposure_window"], "limitations": ["不是官方催更分母"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_word_completion_rate", "name": "万字读完率", "scope": "long_novel", "block": "depth", "metric_type": "atomic",
+      "semantic_signature": {"object": "new_reader_after_eligibility", "event_or_state": "read_to_n_ten_thousand_words", "measure": "share", "fixed_qualifiers": ["work_length_at_least_100k_words"], "time_grain_or_window": "platform_defined_cohort", "aggregation": "platform_ratio", "unit": "percent"},
+      "definition": "作品满10万字后新增读者从第1章读至第N万字的比例。", "formula_or_source": {"mode": "source_conditional", "source_field": "word_completion_curve"}, "numerator": "new_readers_reaching_n_10k_words", "denominator": "eligible_new_readers", "unit": "percent", "time_grain": "platform_defined_cohort", "dimensions": ["work_id", "ten_thousand_word_index", "cohort"], "parent_node": "long.depth",
+      "drivers": ["multi_chapter_value", "unit_pacing", "reader_mix"], "must_joint_check": ["long_chapter_reach_rate", "long_chapter_follow_rate_sync", "dq_scope_comparability_status"], "actionability": {"level": "text_direct_after_unit_drilldown", "surfaces": ["word_interval_before_breakpoint", "story_unit"], "not_text_actionable": false}, "guardrails": ["only_when_platform_marks_eligible", "do_not_mix_with_all_reader_chapter_curve"], "limitations": ["不满10万字时不出数"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_nonsequential_reach_violation_count", "name": "章节非顺序到达反常数", "scope": "long_novel", "block": "depth_quality", "metric_type": "quality_proxy",
+      "semantic_signature": {"object": "chapter_reach_curve", "event_or_state": "downstream_count_exceeds_prior_count_or_reappears_after_zero", "measure": "count", "fixed_qualifiers": [], "time_grain_or_window": "cumulative_snapshot", "aggregation": "sum", "unit": "transition"},
+      "definition": "累计章节曲线中后章人数高于前章或在连续0后重现的数量，触发跳读/直达/字段不同步调查。", "formula_or_source": {"mode": "formula", "expression": "count(A[n+1]>A[n] or (A[n]=0 and any later A>0))"}, "numerator": null, "denominator": null, "unit": "transition", "time_grain": "cumulative_snapshot", "dimensions": ["work_id", "chapter_index", "data_until"], "parent_node": "long.depth_quality",
+      "drivers": ["direct_entry", "skip_reading", "staggered_refresh", "rounding"], "must_joint_check": ["dq_funnel_monotonicity_violation_count", "dq_field_sync_lag_count", "long_chapter_reach_count"], "actionability": {"level": "diagnostic_only", "surfaces": ["exclude_invalid_sequential_path"], "not_text_actionable": true}, "guardrails": ["do_not_call_follow_or_return_when_intermediate_zero"], "limitations": ["无用户路径无法区分跳读与刷新异常"], "evidence": {"definition_level": "internal_quality", "threshold_level": "internal_only"}
+    },
+
+    {
+      "id": "long_add_shelf_count", "name": "日加书架人数", "scope": "long_novel", "block": "engagement_return", "metric_type": "atomic",
+      "semantic_signature": {"object": "long_novel_reader", "event_or_state": "added_work_to_shelf", "measure": "user_count", "fixed_qualifiers": ["not_net_of_same_day_removal"], "time_grain_or_window": "day", "aggregation": "daily_count", "unit": "person"},
+      "definition": "当日将作品加入书架的读者数，未扣当日移除。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.加书架人数"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day", "dimensions": ["work_id", "data_date", "channel", "update_state"], "parent_node": "long.engagement.save_value",
+      "drivers": ["daily_reader_scale", "long_term_reading_value", "first_three_retention", "reader_mix"], "must_joint_check": ["long_daily_readers", "long_shelf_per_daily_reader_proxy", "long_first_three_retention_rate", "long_channel_share"], "actionability": {"level": "text_direct_after_scale_check", "surfaces": ["intro_long_term_promise", "chapters_1_to_3", "stage_payoff_and_next_goal"], "not_text_actionable": false}, "guardrails": ["not_net_shelf_growth", "no_official_eligible_denominator"], "limitations": ["不保证回访或算法权重"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chase_count", "name": "追更人数", "scope": "long_novel", "block": "engagement_return", "metric_type": "atomic",
+      "semantic_signature": {"object": "effective_reader", "event_or_state": "read_recent_7_day_updated_chapters", "measure": "user_count", "fixed_qualifiers": ["effective_reader"], "time_grain_or_window": "recent_7_day_updates", "aggregation": "platform_count", "unit": "person"},
+      "definition": "阅读最近7日更新章节的有效读者数。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.追更人数"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "recent_7_day_updates", "dimensions": ["work_id", "window_end_date", "update_state"], "parent_node": "long.engagement.follow_serial",
+      "drivers": ["update_cadence", "latest_unit_progress", "deep_reader_scale", "return_promise"], "must_joint_check": ["long_latest_chapter_reach_count", "long_continue_reading_share", "long_rolling_14d_readers", "long_chase_per_daily_reader_proxy"], "actionability": {"level": "text_and_operations", "surfaces": ["latest_7_day_chapters", "next_stage_goal", "update_cadence"], "not_text_actionable": false}, "guardrails": ["separate_update_stability_from_content", "not_a_subscription_total"], "limitations": ["不是单章跟读率"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_urge_count", "name": "催更人数", "scope": "long_novel", "block": "engagement_return", "metric_type": "atomic",
+      "semantic_signature": {"object": "reader_at_latest_chapter", "event_or_state": "clicked_urge_update", "measure": "user_count", "fixed_qualifiers": ["eligible_after_reaching_latest"], "time_grain_or_window": "day", "aggregation": "platform_count", "unit": "person"},
+      "definition": "读到最新章后点击催更的读者数。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.催更人数"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "day", "dimensions": ["work_id", "data_date", "update_interval"], "parent_node": "long.engagement.expectation",
+      "drivers": ["eligible_latest_chapter_readers", "next_update_expectation", "update_interval"], "must_joint_check": ["long_latest_chapter_reach_count", "long_chase_count", "long_daily_readers"], "actionability": {"level": "text_and_operations", "surfaces": ["latest_chapter_payoff", "latest_chapter_next_action", "update_interval"], "not_text_actionable": false}, "guardrails": ["zero_without_eligible_latest_readers_has_no_text_meaning", "no_official_eligible_denominator_in_current_pull"], "limitations": ["不代表所有读者期待"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_comment_count", "name": "评论次数", "scope": "long_novel", "block": "engagement_return", "metric_type": "atomic",
+      "semantic_signature": {"object": "comment_event", "event_or_state": "segment_chapter_book_or_end_discussion_posted", "measure": "event_count", "fixed_qualifiers": ["deletions_may_reduce"], "time_grain_or_window": "day", "aggregation": "event_count", "unit": "comment"},
+      "definition": "段评、章评、书评、章末讨论总条数，删除后可下降。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.评论次数"}, "numerator": null, "denominator": null, "unit": "comment", "time_grain": "day", "dimensions": ["work_id", "data_date", "comment_surface", "chapter_index"], "parent_node": "long.engagement.expression",
+      "drivers": ["reader_scale", "emotion_intensity", "discussion_prompt", "controversy", "deletion"], "must_joint_check": ["long_daily_readers", "long_comment_per_daily_reader_proxy", "long_chapter_follow_rate_sync"], "required_nonmetric_evidence": ["comment_text", "comment_location"], "actionability": {"level": "text_direct_after_qualitative_read", "surfaces": ["commented_scene", "character_choice", "ending_aftertaste"], "not_text_actionable": false}, "guardrails": ["count_is_not_unique_users_or_sentiment", "read_comment_text_before_optimization"], "limitations": ["当前 raw 没有评论文本"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_rating", "name": "作品评分", "scope": "long_novel", "block": "engagement_return", "metric_type": "atomic",
+      "semantic_signature": {"object": "eligible_rater", "event_or_state": "rated_work", "measure": "average_score", "fixed_qualifiers": ["qualified_reading_time", "platform_filtering"], "time_grain_or_window": "platform_current", "aggregation": "platform_average", "unit": "score"},
+      "definition": "有一定阅读时间的读者评分，短时或恶意评分不计。", "formula_or_source": {"mode": "source", "source_field": "novel_metrics.作品评分"}, "numerator": null, "denominator": null, "unit": "score", "time_grain": "platform_current", "dimensions": ["work_id", "data_until"], "parent_node": "long.engagement.satisfaction",
+      "drivers": ["qualified_rater_mix", "overall_satisfaction", "platform_filtering"], "must_joint_check": ["long_comment_count", "long_chapter_follow_rate_sync"], "required_nonmetric_evidence": ["rating_count_if_available", "rating_definition_and_filter_status"], "actionability": {"level": "text_indirect", "surfaces": ["recurring_negative_feedback_location"], "not_text_actionable": false}, "guardrails": ["without_rating_count_do_not_overread_small_change", "not_daily_reader_satisfaction"], "limitations": ["当前缺评分人数与评论文本"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_shelf_per_daily_reader_proxy", "name": "加书架/日阅读诊断代理率", "scope": "long_novel", "block": "engagement_return", "metric_type": "proxy",
+      "semantic_signature": {"object": "daily_long_novel_activity", "event_or_state": "shelf_action_relative_to_reader_scale", "measure": "proxy_ratio", "fixed_qualifiers": ["not_official_conversion"], "time_grain_or_window": "day", "aggregation": "ratio", "unit": "percent"},
+      "definition": "日加书架人数/日阅读人数，仅用于规模归一的诊断代理，不是官方加书架转化率。", "formula_or_source": {"mode": "formula", "expression": "long_add_shelf_count / long_daily_readers"}, "numerator": "long_add_shelf_count", "denominator": "long_daily_readers", "unit": "percent", "time_grain": "day", "dimensions": ["work_id", "data_date", "channel_mix"], "parent_node": "long.engagement.save_value",
+      "drivers": ["long_add_shelf_count", "long_daily_readers", "reader_mix"], "must_joint_check": ["long_add_shelf_count", "long_daily_readers", "long_first_three_retention_rate", "long_channel_share"], "actionability": {"level": "text_indirect", "surfaces": ["long_term_promise", "stage_payoff", "character_attachment"], "not_text_actionable": false}, "guardrails": ["label_proxy_every_time", "qualification_populations_do_not_match_exactly"], "limitations": ["当日阅读者可非首次读者，加书架人群口径不同"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_comment_per_daily_reader_proxy", "name": "评论/日阅读诊断代理率", "scope": "long_novel", "block": "engagement_return", "metric_type": "proxy",
+      "semantic_signature": {"object": "daily_long_novel_activity", "event_or_state": "comment_events_relative_to_reader_scale", "measure": "proxy_ratio", "fixed_qualifiers": ["events_not_users", "not_official_conversion"], "time_grain_or_window": "day", "aggregation": "ratio", "unit": "comments_per_reader"},
+      "definition": "日评论次数/日阅读人数，用于规模归一，不是用户评论转化率。", "formula_or_source": {"mode": "formula", "expression": "long_comment_count / long_daily_readers"}, "numerator": "long_comment_count", "denominator": "long_daily_readers", "unit": "comments_per_reader", "time_grain": "day", "dimensions": ["work_id", "data_date"], "parent_node": "long.engagement.expression",
+      "drivers": ["long_comment_count", "long_daily_readers"], "must_joint_check": ["long_comment_count", "long_daily_readers"], "required_nonmetric_evidence": ["comment_text", "comment_location"], "actionability": {"level": "text_indirect", "surfaces": ["specific_commented_scene", "ending_aftertaste"], "not_text_actionable": false}, "guardrails": ["label_proxy", "repeat_comments_and_deletions_distort"], "limitations": ["分子是次数、分母是人数"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "long_chase_per_daily_reader_proxy", "name": "追更/日阅读诊断代理率", "scope": "long_novel", "block": "engagement_return", "metric_type": "proxy",
+      "semantic_signature": {"object": "recent_serial_activity", "event_or_state": "effective_update_readers_relative_to_daily_scale", "measure": "proxy_ratio", "fixed_qualifiers": ["mismatched_windows", "not_official_conversion"], "time_grain_or_window": "mixed_day_and_7day", "aggregation": "ratio", "unit": "proxy_ratio"},
+      "definition": "追更人数/日阅读人数，因窗口不同只能作弱代理，默认不用于横向判断。", "formula_or_source": {"mode": "formula", "expression": "long_chase_count / long_daily_readers"}, "numerator": "long_chase_count", "denominator": "long_daily_readers", "unit": "proxy_ratio", "time_grain": "mixed_day_and_7day", "dimensions": ["work_id", "window_end_date", "update_state"], "parent_node": "long.engagement.follow_serial",
+      "drivers": ["long_chase_count", "long_daily_readers", "update_cadence"], "must_joint_check": ["long_chase_count", "long_daily_readers", "long_latest_chapter_reach_count"], "actionability": {"level": "diagnostic_only", "surfaces": ["update_and_latest_unit_review"], "not_text_actionable": false}, "guardrails": ["always_label_mismatched_window_proxy", "never_call_chase_conversion"], "limitations": ["分子和分母统计窗口不一致"], "evidence": {"definition_level": "internal_derived", "threshold_level": "none"}
+    },
+
+    {
+      "id": "short_impressions", "name": "短故事展示人数", "scope": "short_story", "block": "distribution", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_candidate_reader", "event_or_state": "work_displayed", "measure": "unique_user_count_or_period_sum_per_platform", "fixed_qualifiers": ["fanqie_app_scope_after_2025_06_24"], "time_grain_or_window": "period_dimension", "aggregation": "platform_defined", "unit": "person"},
+      "definition": "作品被展示的总人数；累计与日/7/14/30日口径不同。", "formula_or_source": {"mode": "source", "source_field": "shorts[].show or day_show"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope", "data_until"], "parent_node": "short.distribution",
+      "drivers": ["platform_distribution", "eligibility", "topic_tags", "recommendation_stage"], "must_joint_check": ["short_readers", "short_click_rate", "dq_scope_comparability_status", "dq_snapshot_freshness_lag_hours"], "actionability": {"level": "indirect", "surfaces": ["topic_tags", "compliance", "publication_state"], "not_text_actionable": true}, "guardrails": ["low_impressions_alone_does_not_justify_body_rewrite", "do_not_subtract_cumulative_and_daily_sum_as_new_users"], "limitations": ["展示口径和去重受 period 影响"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_readers", "name": "短故事阅读人数", "scope": "short_story", "block": "packaging", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_candidate_reader", "event_or_state": "started_reading", "measure": "unique_user_count_or_period_sum_per_platform", "fixed_qualifiers": ["same_scope_as_impressions"], "time_grain_or_window": "period_dimension", "aggregation": "platform_defined", "unit": "person"},
+      "definition": "短故事产生阅读的人数。", "formula_or_source": {"mode": "source", "source_field": "shorts[].read or day_read"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope", "data_until"], "parent_node": "short.packaging",
+      "drivers": ["short_impressions", "title", "cover", "opening_lead", "reader_mix"], "must_joint_check": ["short_impressions", "short_click_rate", "short_15s_readers"], "actionability": {"level": "text_direct_after_decomposition", "surfaces": ["title", "cover", "opening_lead"], "not_text_actionable": false}, "guardrails": ["separate_scale_from_conversion", "same_scope_required"], "limitations": ["绝对阅读人数同时受展示规模影响"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_click_rate", "name": "短故事点击率", "scope": "short_story", "block": "packaging", "metric_type": "derived",
+      "semantic_signature": {"object": "displayed_short_story_candidate", "event_or_state": "started_reading", "measure": "conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "展示人群中产生阅读的占比。", "formula_or_source": {"mode": "formula", "expression": "short_readers / short_impressions"}, "numerator": "short_readers", "denominator": "short_impressions", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.packaging",
+      "drivers": ["title", "cover", "opening_lead", "topic_fit", "reader_mix"], "must_joint_check": ["short_impressions", "short_readers", "short_15s_retention", "short_click_loss_count"], "actionability": {"level": "text_direct", "surfaces": ["title", "cover", "opening_lead", "first_screen_promise"], "not_text_actionable": false}, "guardrails": ["promise_must_match_first_300_chars", "report_numerator_denominator_and_pp"], "limitations": ["无渠道细分时无法排除读者换血"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_click_loss_count", "name": "短故事展示未读损失人数", "scope": "short_story", "block": "packaging", "metric_type": "derived",
+      "semantic_signature": {"object": "displayed_short_story_candidate", "event_or_state": "did_not_start_reading", "measure": "user_count", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "difference", "unit": "person"},
+      "definition": "展示人数减阅读人数，用于评估包装阶段绝对损失。", "formula_or_source": {"mode": "formula", "expression": "short_impressions - short_readers"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.packaging",
+      "drivers": ["short_impressions", "short_readers", "short_click_rate"], "must_joint_check": ["short_click_rate", "short_15s_retention", "short_stage_loss_count"], "actionability": {"level": "text_direct_after_rate_check", "surfaces": ["title", "cover", "opening_lead"], "not_text_actionable": false}, "guardrails": ["large_loss_can_be_purely_large_upstream_scale", "must_compare_rate_and_baseline"], "limitations": ["不知道每个未点击用户的原因"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_15s_readers", "name": "15秒阅读人数", "scope": "short_story", "block": "opening_activation", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "read_more_than_15_seconds", "measure": "user_count", "fixed_qualifiers": ["approximately_first_300_chars"], "time_grain_or_window": "period_dimension", "aggregation": "platform_count", "unit": "person"},
+      "definition": "阅读超过15秒的人数，官方指南约对应开头前300字。", "formula_or_source": {"mode": "source", "source_field": "shorts[].s15"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.15s",
+      "drivers": ["short_readers", "first_screen_conflict", "promise_match", "readability"], "must_joint_check": ["short_readers", "short_15s_retention", "short_30s_readers"], "actionability": {"level": "text_direct", "surfaces": ["first_300_chars", "title_to_opening_promise"], "not_text_actionable": false}, "guardrails": ["300_chars_is_approximate_not_exact_exit_point"], "limitations": ["无字数级用户退出位置"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_30s_readers", "name": "30秒阅读人数", "scope": "short_story", "block": "opening_activation", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "read_more_than_30_seconds", "measure": "user_count", "fixed_qualifiers": ["approximately_first_500_1000_chars"], "time_grain_or_window": "period_dimension", "aggregation": "platform_count", "unit": "person"},
+      "definition": "阅读超过30秒的人数，约对应开头500–1000字。", "formula_or_source": {"mode": "source", "source_field": "shorts[].s30"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.30s",
+      "drivers": ["short_15s_readers", "goal_clarity", "opponent_and_conflict", "information_gain"], "must_joint_check": ["short_15s_to_30_rate", "short_15s_readers", "short_60s_readers"], "actionability": {"level": "text_direct", "surfaces": ["chars_300_to_1000", "first_goal_and_resistance"], "not_text_actionable": false}, "guardrails": ["range_is_approximate", "read_from_start_through_1000_chars"], "limitations": ["阅读速度不同导致字数映射不精确"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_60s_readers", "name": "60秒阅读人数", "scope": "short_story", "block": "opening_activation", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "read_more_than_60_seconds", "measure": "user_count", "fixed_qualifiers": ["approximately_first_1000_2000_chars"], "time_grain_or_window": "period_dimension", "aggregation": "platform_count", "unit": "person"},
+      "definition": "阅读超过60秒的人数，约对应开头1000–2000字。", "formula_or_source": {"mode": "source", "source_field": "shorts[].s60"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.60s",
+      "drivers": ["short_30s_readers", "conflict_escalation", "first_payoff", "continued_reading_reason"], "must_joint_check": ["short_30s_to_60_rate", "short_30s_readers", "short_finish_readers"], "actionability": {"level": "text_direct", "surfaces": ["chars_500_to_2000", "first_escalation_or_payoff"], "not_text_actionable": false}, "guardrails": ["range_is_approximate", "avoid_adding_false_cliff_only"], "limitations": ["无法精确到段落秒数"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_finish_readers", "name": "短故事触底人数", "scope": "short_story", "block": "completion", "metric_type": "atomic",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "read_to_story_bottom", "measure": "user_count", "fixed_qualifiers": ["fanqie_app_complete_read"], "time_grain_or_window": "period_dimension", "aggregation": "platform_count", "unit": "person"},
+      "definition": "在番茄系 App 阅读完整本的人数。", "formula_or_source": {"mode": "source", "source_field": "shorts[].fin"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.completion",
+      "drivers": ["short_60s_readers", "midstory_progress", "reversal_payoff", "ending_return"], "must_joint_check": ["short_60s_to_finish_rate", "short_overall_finish_rate", "short_60s_readers", "short_stage_loss_count"], "actionability": {"level": "text_direct_after_earliest_break", "surfaces": ["midstory_after_2000_chars", "reversal_chain", "ending_payoff"], "not_text_actionable": false}, "guardrails": ["find_earliest_abnormal_conditional_stage_first", "do_not_assume_ending_is_problem_from_overall_finish"], "limitations": ["只有触底，没有中段字数曲线"], "evidence": {"definition_level": "official", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_15s_retention", "name": "阅读到15秒承接率", "scope": "short_story", "block": "opening_activation", "metric_type": "derived",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "continued_beyond_15_seconds", "measure": "conditional_conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "15秒阅读人数/阅读人数。", "formula_or_source": {"mode": "formula", "expression": "short_15s_readers / short_readers"}, "numerator": "short_15s_readers", "denominator": "short_readers", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.15s",
+      "drivers": ["first_300_chars", "promise_match", "reader_mix"], "must_joint_check": ["short_click_rate", "short_15s_readers", "short_15s_to_30_rate", "short_stage_loss_count"], "actionability": {"level": "text_direct", "surfaces": ["first_300_chars", "title_to_opening_alignment"], "not_text_actionable": false}, "guardrails": ["denominator_gate", "high_click_low_15s_suggests_promise_mismatch_not_proof"], "limitations": ["300字只是官方约数"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_15s_to_30_rate", "name": "15→30秒承接率", "scope": "short_story", "block": "opening_activation", "metric_type": "derived",
+      "semantic_signature": {"object": "reader_beyond_15_seconds", "event_or_state": "continued_beyond_30_seconds", "measure": "conditional_conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "30秒阅读人数/15秒阅读人数。", "formula_or_source": {"mode": "formula", "expression": "short_30s_readers / short_15s_readers"}, "numerator": "short_30s_readers", "denominator": "short_15s_readers", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.30s",
+      "drivers": ["goal_clarity", "opponent", "core_conflict", "information_gain"], "must_joint_check": ["short_15s_retention", "short_30s_readers", "short_30s_to_60_rate", "short_stage_loss_count"], "actionability": {"level": "text_direct", "surfaces": ["approximately_chars_300_to_1000"], "not_text_actionable": false}, "guardrails": ["read_cross_boundary_from_opening", "denominator_gate"], "limitations": ["无法精确指定用户停在某一句"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_30s_to_60_rate", "name": "30→60秒承接率", "scope": "short_story", "block": "opening_activation", "metric_type": "derived",
+      "semantic_signature": {"object": "reader_beyond_30_seconds", "event_or_state": "continued_beyond_60_seconds", "measure": "conditional_conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "60秒阅读人数/30秒阅读人数。", "formula_or_source": {"mode": "formula", "expression": "short_60s_readers / short_30s_readers"}, "numerator": "short_60s_readers", "denominator": "short_30s_readers", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.opening.60s",
+      "drivers": ["conflict_escalation", "first_payoff", "repetition", "continued_reading_reason"], "must_joint_check": ["short_15s_to_30_rate", "short_60s_readers", "short_60s_to_finish_rate", "short_stage_loss_count"], "actionability": {"level": "text_direct", "surfaces": ["approximately_chars_500_to_2000"], "not_text_actionable": false}, "guardrails": ["denominator_gate", "do_not_pad_with_fake_twist"], "limitations": ["字数范围依阅读速度浮动"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_60s_to_finish_rate", "name": "60秒后触底率", "scope": "short_story", "block": "completion", "metric_type": "derived",
+      "semantic_signature": {"object": "reader_beyond_60_seconds", "event_or_state": "reached_story_bottom", "measure": "conditional_conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "触底人数/60秒阅读人数，隔离开头吸引和中后段完读。", "formula_or_source": {"mode": "formula", "expression": "short_finish_readers / short_60s_readers"}, "numerator": "short_finish_readers", "denominator": "short_60s_readers", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.completion",
+      "drivers": ["midstory_progress", "evidence_chain_length", "reversal_payoff", "ending_return"], "must_joint_check": ["short_30s_to_60_rate", "short_overall_finish_rate", "short_stage_loss_count", "short_finish_readers"], "actionability": {"level": "text_direct", "surfaces": ["text_after_approximately_2000_chars", "middle_units", "reversal", "ending"], "not_text_actionable": false}, "guardrails": ["denominator_gate", "read_complete_middle_to_end_not_only_last_paragraph"], "limitations": ["中后段无更细漏斗节点"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_overall_finish_rate", "name": "短故事整体触底率", "scope": "short_story", "block": "completion", "metric_type": "derived",
+      "semantic_signature": {"object": "short_story_reader", "event_or_state": "reached_story_bottom", "measure": "conversion_rate", "fixed_qualifiers": ["same_period_and_scope"], "time_grain_or_window": "period_dimension", "aggregation": "ratio", "unit": "percent"},
+      "definition": "触底人数/阅读人数，是多段条件转化乘积，必须向上分解最早异常节点。", "formula_or_source": {"mode": "formula", "expression": "short_finish_readers / short_readers = short_15s_retention * short_15s_to_30_rate * short_30s_to_60_rate * short_60s_to_finish_rate"}, "numerator": "short_finish_readers", "denominator": "short_readers", "unit": "percent", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "platform_scope"], "parent_node": "short.completion",
+      "drivers": ["short_15s_retention", "short_15s_to_30_rate", "short_30s_to_60_rate", "short_60s_to_finish_rate"], "must_joint_check": ["short_15s_retention", "short_15s_to_30_rate", "short_30s_to_60_rate", "short_60s_to_finish_rate", "short_earliest_abnormal_stage_index"], "actionability": {"level": "text_direct_after_decomposition", "surfaces": ["earliest_abnormal_text_window"], "not_text_actionable": false}, "guardrails": ["never_jump_directly_to_ending", "same_cohort_scope_required"], "limitations": ["总率不传达流失位置"], "evidence": {"definition_level": "official_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_stage_loss_count", "name": "短故事分段损失人数", "scope": "short_story", "block": "funnel_diagnostics", "metric_type": "derived",
+      "semantic_signature": {"object": "short_story_funnel_stage_entrant", "event_or_state": "did_not_reach_next_stage", "measure": "user_count", "fixed_qualifiers": ["stage_dimension"], "time_grain_or_window": "period_dimension", "aggregation": "difference", "unit": "person"},
+      "definition": "每个漏斗节点人数减下一节点人数；stage 是维度。", "formula_or_source": {"mode": "formula", "expression": "upstream_stage_count - downstream_stage_count"}, "numerator": null, "denominator": null, "unit": "person", "time_grain": "period_dimension", "dimensions": ["story_id", "period", "stage", "platform_scope"], "parent_node": "short.funnel_diagnostics",
+      "drivers": ["upstream_scale", "conditional_stage_rate"], "must_joint_check": ["short_click_rate", "short_15s_retention", "short_15s_to_30_rate", "short_30s_to_60_rate", "short_60s_to_finish_rate"], "actionability": {"level": "text_direct_after_rate_and_baseline", "surfaces": ["stage_mapped_text_window"], "not_text_actionable": false}, "guardrails": ["absolute_loss_and_rate_must_be_reported_together", "large_upstream_stage_can_create_large_loss"], "limitations": ["不说明单个用户离开原因"], "evidence": {"definition_level": "internal_derived", "threshold_level": "historical_internal_only"}
+    },
+    {
+      "id": "short_earliest_abnormal_stage_index", "name": "短故事最早异常节点", "scope": "short_story", "block": "funnel_diagnostics", "metric_type": "composite_diagnostic",
+      "semantic_signature": {"object": "short_story_conditional_funnel", "event_or_state": "first_stage_exceeding_anomaly_gate", "measure": "ordered_stage", "fixed_qualifiers": ["quality_and_sample_gates_passed"], "time_grain_or_window": "analysis_window", "aggregation": "ordered_rule_selection", "unit": "stage_id"},
+      "definition": "在数据质量、分母、历史基线/MDE、绝对损失和连续性门禁通过后，按顺序选出第一个异常条件转化。", "formula_or_source": {"mode": "rule", "expression": "first(stage in [click,15s,15_30,30_60,60_finish] where anomaly_gate(stage)=PASS)"}, "numerator": null, "denominator": null, "unit": "stage_id", "time_grain": "analysis_window", "dimensions": ["story_id", "period", "baseline_id", "stage"], "parent_node": "short.funnel_diagnostics",
+      "drivers": ["all_conditional_stage_rates", "sample_size", "historical_noise", "absolute_loss", "continuity"], "must_joint_check": ["short_stage_loss_count", "dq_scope_comparability_status", "dq_funnel_monotonicity_violation_count"], "actionability": {"level": "routing_only", "surfaces": ["mapped_text_window_from_diagnostic_routes"], "not_text_actionable": true}, "guardrails": ["thresholds_are_internal_not_official", "no_stage_when_denominator_zero_or_quality_gate_fails", "multiple_testing_requires_reproduction_or_fdr"], "limitations": ["异常节点是诊断起点，不是文本因果证明"], "evidence": {"definition_level": "internal_derived", "threshold_level": "internal_only"}
+    }
+  ]
+}

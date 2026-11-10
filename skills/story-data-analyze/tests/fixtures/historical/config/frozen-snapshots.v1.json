@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "registry_type": "test_fixture_provenance",
+  "authority": "non_platform_identity_registry",
+  "warning": "These synthetic legacy fixtures omit embedded work identity and authoritative cohort counts by design.",
+  "snapshots": [
+    {
+      "snapshot_sha256": "b07811f07b305357bac73bc2dccaac272296b5dceb7fb50acea03318e7cb05af",
+      "work_id": "1000000000000000000",
+      "snapshot_date": "2026-08-06",
+      "data_until": "2026-08-05"
+    },
+    {
+      "snapshot_sha256": "4d274641c2ffc2e7c3baae49b6474d69be02a7faf507947b05543b180290d3d3",
+      "work_id": "1000000000000000000",
+      "snapshot_date": "2026-08-08",
+      "data_until": "2026-08-07"
+    },
+    {
+      "snapshot_sha256": "77a461866d8030034802787a791aca2a28686609f9dbab110fb936ac1b5f01a2",
+      "work_id": "1000000000000000000",
+      "snapshot_date": "2026-08-10",
+      "data_until": "2026-08-09"
+    },
+    {
+      "snapshot_sha256": "37b60e0b3fe9548edd14cd3cd1e48597625893feadd6dc717aa22701ee104abe",
+      "work_id": "1000000000000000000",
+      "snapshot_date": "2026-08-11",
+      "data_until": "2026-08-10"
+    }
+  ]
+}

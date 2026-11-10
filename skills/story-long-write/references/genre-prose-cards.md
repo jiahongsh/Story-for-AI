@@ -89,3 +89,16 @@
 3. 本章细纲里的目标情绪、出场顺序、信息差和章尾钩子。
 
 若三件事缺两件以上，只生成临时 `genre_prose_card` 并标注“低置信”，不要让题材卡压过细纲。
+
+## v0.8 专项机制题材卡
+
+以下题材不是现有大类的别名，命中时优先读取独立正文卡和结构化题材契约：
+
+| 用户题材词 | 正文卡 | 题材契约 | 与现有题材的边界 |
+|---|---|---|---|
+| 地下城核心、地下城之心、迷宫核心、Dungeon Core | `genre-prose-cards/地下城核心.md` | `genre-contracts/dungeon-core.json` | 重点是固定核心、建设和探索者反馈，不等同普通经营文 |
+| 温馨奇幻、治愈奇幻、舒适奇幻、Cozy Fantasy | `genre-prose-cards/温馨奇幻.md` | `genre-contracts/cozy-fantasy.json` | 以低烈度关系和社区推进为契约，不套强危机审查 |
+| 爬塔、无限塔、试炼塔、Tower Climber | `genre-prose-cards/爬塔升级.md` | `genre-contracts/tower-climber.json` | 每层是规则独特的剧情单元，不等同泛副本或秘境 |
+| 数值冒险、数值流、属性流、LitRPG | `genre-prose-cards/数值冒险.md` | `genre-contracts/litrpg.json` | 重点是可核对的数值因果和构筑，不等同游戏赛事 |
+
+匹配到以上题材时，同时读取 `genre-contracts.md`。若只是辅题材，只抽取补充满足点，不并列加载两套冲突的节奏硬门。

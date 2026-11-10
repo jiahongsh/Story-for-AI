@@ -3,12 +3,12 @@
   "status": "committed",
   "chapter": 59,
   "target": "正文/第059章_工单跟着我走.md",
-  "accepted_prose_sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
+  "accepted_prose_sha256": "afaf3e2c8980c60a579f6c3b4877078964d9c5666422b5a343ba5937a0a10ee9",
   "candidate_id": "C20261004-113959",
   "candidate_manifest": "追踪/候选章/第059章/C20261004-113959/manifest.json",
   "context_digest": "402343d4175f031a71b12e7f628b7d253dea25828ecc3310f7e806e1e960f922",
   "state_revision_before": 2,
-  "state_revision_after": 249,
+  "state_revision_after": 257,
   "accepted_at": "2026-10-04T03:40:19Z",
   "approval_mode": "review",
   "approval_note": "用户明确回复接受",
@@ -51,6 +51,14 @@
       "old_sha256": "c36a6fd382a1942fcfad7c4812d60ed1f00564f4a3f40d0033d445e195616ddf",
       "new_sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
       "state_revision": 249,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-11-01T06:59:16Z",
+      "reason": "补齐离开西口后寻找负责人及到店的时间经过",
+      "old_sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
+      "new_sha256": "afaf3e2c8980c60a579f6c3b4877078964d9c5666422b5a343ba5937a0a10ee9",
+      "state_revision": 257,
       "revision_manifest": "追踪/修改影响/active.json"
     }
   ],

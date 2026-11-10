@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/case.schema.json",
+  "title": "Promotable analysis case",
+  "type": "object",
+  "required": [
+    "case_id", "title", "verification_level", "context", "input_hashes",
+    "metric_definition_version", "anomaly", "diagnostic_metrics", "text_evidence",
+    "proposal", "outcome", "alternative_explanations", "applicability"
+  ],
+  "properties": {
+    "case_id": {"type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$"},
+    "title": {"type": "string", "minLength": 1},
+    "verification_level": {
+      "enum": [
+        "ANALYSIS_VERIFIED_OUTCOME_UNVERIFIED", "VERIFIED_IMPROVEMENT",
+        "VERIFIED_NO_EFFECT", "VERIFIED_REGRESSION", "HIGH_QUALITY_INCONCLUSIVE"
+      ]
+    },
+    "context": {"type": "object"},
+    "input_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "metric_definition_version": {"type": "string"},
+    "anomaly": {"type": "object"},
+    "diagnostic_metrics": {"type": "array"},
+    "text_evidence": {"type": "array"},
+    "proposal": {"type": "object"},
+    "outcome": {"type": "object"},
+    "alternative_explanations": {"type": "array"},
+    "applicability": {"type": "object"}
+  },
+  "additionalProperties": true
+}

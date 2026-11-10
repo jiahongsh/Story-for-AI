@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/data-quality.schema.json",
+  "title": "Freshness, identity, scope, branch and sample gate",
+  "type": "object",
+  "required": [
+    "status", "snapshot_date", "data_until", "expected_snapshot_date", "expected_data_until",
+    "sample_size", "sample_size_qualified", "sample_size_authoritative", "sample_size_basis", "sample_size_evidence",
+    "sample_aggregation", "sample_unavailability_reasons", "scope_verified", "work_id", "expected_work_id", "work_id_verified",
+    "usable_fields", "quality_checks", "branch_statuses", "normalizer_version",
+    "normalized_snapshot", "normalized_snapshot_sha256", "raw_snapshot_sha256",
+    "input_artifact_hashes"
+  ],
+  "properties": {
+    "status": {"enum": ["OK", "PARTIAL", "LOGIN_INVALID", "PLATFORM_NOT_UPDATED", "SCOPE_UNKNOWN", "CORRUPT"]},
+    "snapshot_date": {"type": "string", "format": "date"},
+    "data_until": {"type": "string", "format": "date"},
+    "expected_snapshot_date": {"type": "string", "format": "date"},
+    "expected_data_until": {"type": "string", "format": "date"},
+    "sample_size": {"type": "integer", "minimum": 0},
+    "sample_size_qualified": {"type": "boolean"},
+    "sample_size_authoritative": {"type": "boolean"},
+    "sample_size_basis": {"type": "string", "minLength": 1},
+    "sample_size_evidence": {"type": "array", "items": {"type": "object"}},
+    "sample_aggregation": {"enum": ["single", "sum", "max", "min", "unavailable"]},
+    "sample_unavailability_reasons": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "scope_verified": {"type": "boolean"},
+    "work_id": {"type": ["string", "integer"]},
+    "expected_work_id": {"type": ["string", "integer"]},
+    "work_id_verified": {"type": "boolean"},
+    "usable_fields": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "quality_checks": {"type": "array", "minItems": 6, "maxItems": 6, "items": {"type": "object"}},
+    "branch_statuses": {"type": "object", "minProperties": 1},
+    "normalizer_version": {"type": "string", "minLength": 1},
+    "normalized_snapshot": {"type": "object"},
+    "normalized_snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "raw_snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_artifact_hashes": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}}
+  },
+  "additionalProperties": true
+}

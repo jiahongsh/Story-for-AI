@@ -154,6 +154,7 @@
 |---|---|---|
 | `story` | 网文工具箱总路由、工作台、项目查询 | `/story`、`/网文` |
 | `story-long-write` | 长篇开书、建纲、写章、日更、续写、回炉 | `/story-long-write`、`/写长篇` |
+| `story-world-engine` | 人物七关、独立世界推进、章卷记忆、写前/写后审查包（写作前置必用） | 随写作自动接入；单独调用 `$story-world-engine` |
 | `story-short-write` | 短篇小说创作 | `/story-short-write`、`/写短篇` |
 | `story-long-analyze` | 长篇参考作品拆解 | `/story-long-analyze`、`/长篇拆文` |
 | `story-short-analyze` | 短篇参考作品拆解 | `/story-short-analyze`、`/短篇拆文` |

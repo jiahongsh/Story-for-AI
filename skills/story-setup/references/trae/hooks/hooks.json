@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .trae/hooks/story_trae_hook.js session-start",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "RunCommand|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .trae/hooks/story_trae_hook.js pre-tool-prose-guard",
+            "timeout": 30
+          }
+        ]
+      },
+      {
+        "matcher": "RunCommand",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .trae/hooks/story_trae_hook.js pre-tool-commit-advisory",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "RunCommand|Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node .trae/hooks/story_trae_hook.js post-tool-prose-check",
+            "timeout": 30
+          }
+        ]
+      }
+    ]
+  }
+}

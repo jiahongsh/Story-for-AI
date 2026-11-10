@@ -24,14 +24,16 @@ Detect high-risk AI-flavor prose patterns that need human rewrite:
   - 音量反差腔 (声音不高/不大…却…, 实战漏网句式)
   - 否定排比 (没有X，没有Y…连排 / 没X…只是Y 先否定后肯定, 实战漏网句式)
   - 工整并列 (至于X不X，怎么X / 同动词「不V A，不V B」，含台词，advisory)
+  - 感官主体错位 (霉味/潮气/声音/光等感官对象误作「醒来/听见/看见」的感知主体，advisory)
   - 反序对比 (是A，不是B — not-is 的反序变种, 实战漏网句式)
   - 预告式总结收尾 (文末窗口 没人知道/才刚刚开始/正朝着…压了过去, 实战漏网句式)
   - 章尾状态总结体 (文末窗口 这一夜注定/这一切都结束了/新的人生才刚刚开始/命运的齿轮)
   - 引号强调滥用 (叙述里 1-4 字短词加引号强调，密度型)
+  - 对话密度统计 (info，独立成行对话段占比，非问题项，不影响退出码，仅供节奏判断参考)
 
-Each finding carries severity: blocking by default for generation/deslop cleanup (not-is-comparison / em-dash / voice-contrast / negation-parade / reverse-not-is / trailer-ending / trailer-summary). This is a local style/readability gate, not an AIGC detector score; functional human text can be marked for review instead of hard-edited for a detector.
-或 advisory (period-stutter / long-paragraph / micro-action-tic / action-list-tic / abstract-summary-tic / cliche-density-tic / metaphor-density-tic / reasoning-chain-tic / system-notice-formality-tic / overcompressed-prose-tic / low-connective-density-tic / quote-emphasis-tic / formulaic-parallelism，是提示，justified 的长推理/氛围段可保留)。
---fail-on=blocking 只在出现 blocking finding 时退出 1；默认 --fail-on=all 有任何 finding 即退出 1。
+Each finding carries severity: blocking by default only for high-confidence generation/deslop patterns (not-is-comparison / voice-contrast / negation-parade / reverse-not-is / trailer-ending / trailer-summary). Em dashes are contextual advisory because they may belong to stable author voice or functional interruption. This is a local style/readability gate, not an AIGC detector score; functional human text can be marked for review instead of hard-edited for a detector.
+或 advisory (period-stutter / long-paragraph / micro-action-tic / action-list-tic / abstract-summary-tic / cliche-density-tic / metaphor-density-tic / reasoning-chain-tic / system-notice-formality-tic / overcompressed-prose-tic / low-connective-density-tic / quote-emphasis-tic / formulaic-parallelism / sensory-subject-mismatch，是提示，justified 的长推理/氛围段或有意拟人可保留)。
+--fail-on=blocking 只在出现 blocking finding 时退出 1；默认 --fail-on=all 有任何 blocking/advisory finding 即退出 1（info 级 dialogue-density-stat 是确定性统计输出，不计入退出码）。
 
 The script reports findings only. It never rewrites text, because the safe fix is
 contextual: usually delete the negative setup, write the positive term directly,
@@ -159,6 +161,8 @@ const AFFIRMATION_TAG_PARTICLES = new Set(['的', '啊', '呀', '呢']);
 const AFFIRMATION_TAG_BOUNDARY = new Set(['', '，', ',', '。', '.', '！', '!', '？', '?', '、', '；', ';', '：', ':', '\n', '\r', '\t', ' ']);
 
 // 成对引号（台词/系统播报/弹幕）的字符对，stripQuoted 与 quotedRanges 共用一份来源。
+const DIALOGUE_DENSITY_REFERENCE_LOW = 40;
+const DIALOGUE_DENSITY_REFERENCE_HIGH = 55;
 // 引号片段一律不跨行（字符类里排掉 \n）：正文漏一个收引号很常见（多段台词只在末段收尾、
 // 全半角引号混用都会漏），若允许跨行配对，一个未闭合的开引号会把后面成百上千字全算成
 // 「引号内」，让 quotedRanges 的消费方（not-is 跨行扫描）把整段叙述静默豁免掉。
@@ -166,13 +170,13 @@ const QUOTE_PAIRS = [['「', '」'], ['『', '』'], ['【', '】'], ['“', '�
 const QUOTE_SOURCES = QUOTE_PAIRS.map(([open, close]) => `${escapeRegExp(open)}[^${escapeRegExpCharClass(close)}\\n]*${escapeRegExp(close)}`);
 
 // ---- 实战测试漏网句式（来源：实战写作抓到的真实漏网例句；2026-07 校准）----
-// 校准基线：《万疆》真人正文 20 章（第1/10/20/…/190章）+ demo 前 20 章。
+// 校准基线：真人长篇语料 20 章（第1/10/20/…/190章）+ 历史回归语料前 20 章。
 // blocking 规则要求真人语料命中 ≈0（每 20 章 ≤1 处且人工判定确属该句式）；数据见各规则注释。
 
 // 音量反差腔（实战漏网 A）：「声音不高，第一句却稳稳压住了整个大厅。」
 // 旧网只有套词密度桶里的「声音不大，却带着」，音量词/转折词一换就漏。
 // 引号外叙述逐处 blocking；修法是删掉音量铺垫，直接写声音落进场子的具体效果。
-// 校准：《万疆》20 章 0 命中，demo 前 20 章 0 命中。
+// 校准：真人长篇语料 20 章 0 命中，历史回归语料前 20 章 0 命中。
 const VOICE_CONTRAST_PATTERN = /声音(?:并)?不[大高响亮][^。！？!?\n]{0,16}[却但偏]/g;
 
 // 否定排比（实战漏网 B）：「没有伴奏，没有和声，没有提词器。」同句 ≥2 个「没有X，」连排；
@@ -183,7 +187,7 @@ const VOICE_CONTRAST_PATTERN = /声音(?:并)?不[大高响亮][^。！？!?\n]{
 //   2) 时间惯用语（没多久/没过多久/没等X）——后字排除，「没多久，没等她撑伞，…只有…」不算。
 // 「没有X」段不带这两种歧义（黏着语素后接不出「有」，时间惯用语已被后字排除覆盖），
 // 第一条连排式照旧不加护栏。
-// 校准：《万疆》20 章 0 命中，demo 前 20 章 0 命中。
+// 校准：真人长篇语料与中性回归语料各 20 章均为 0 命中。
 const NEGATION_PARADE_PATTERNS = [
   /(?:没有[^。！？!?\n，,]{1,12}[，,]){2}/g,
   /(?<![沉淹埋出隐湮吞覆漫泯])没(?!有?过?多久)(?:有)?[^。！？!?\n，,]{1,12}[，,]\s*没(?!有?过?多久)(?:有)?[^。！？!?\n，,]{1,16}[，,。.][^。！？!?\n，,]{0,6}只(?:是|会|有)/g,
@@ -197,13 +201,34 @@ const CROSS_NEGATION_END = /^只是[^。！？!?\n]{1,32}[。！？!?]?$/;
 const DECISION_FRAME_PATTERN = /至于([\u3400-\u9fff]{1,3})不\1[，,]\s*怎么\1/g;
 const REPEATED_NEGATIVE_VERB_PATTERN = /不([\u3400-\u9fff]{1,2})([\u3400-\u9fff]{2,8})[，,]\s*不\1([\u3400-\u9fff]{2,8})/g;
 
+// 感官主体错位：霉味/潮气/声音/光线通常是「被感知对象」，不是会醒来、
+// 睁眼或听/看/闻/感到什么的有生感知主体。只收“感官名词 + 有限副词 + 感知谓词”
+// 的紧邻高置信形状，不跨过「钻进鼻腔，他醒了」这类物理路径去连后面的真实主体。
+// 倒装只收不及物的醒来/睁眼分支；「先听见的是声音」里“声音”是正常宾语，不能报。
+// 引号内台词/逐字引用、跨行中文引号块、书名号、Markdown inline code 与引用行豁免。
+// 文学拟人仍有合法场景，初期只做 advisory。
+const SENSORY_OBJECT_SOURCE = '(?:血腥味|腐臭味|土腥味|霉味|潮味|腥味|药味|烟味|焦味|糊味|腐味|臭味|香味|气味|味道|潮气|湿气|水汽|雾气|寒气|热气|冷气|香气|脚步声|呼吸声|说话声|敲门声|声音|声响|响声|回声|哭声|笑声|喊声|叫声|歌声|琴声|风声|雨声|水声|铃声|钟声|雷声|枪声|光线|灯光|阳光|日光|月光|星光|火光|烛光|晨光|霞光|荧光|微光|亮光|(?<![时目眼荣阿小])光)';
+const SENSORY_SUBJECT_PREFIX_SOURCE = '(?:(?:(?:这|那)(?:一)?|一|两|三|几)(?:股|缕|阵|丝|道|束|片|团|层|抹)?)?';
+const SENSORY_SUBJECT_MODIFIER_SOURCE = '(?:(?:浓重|浓烈|刺鼻|难闻|熟悉|淡淡|潮湿|阴冷|冰冷|灼热|微弱|昏暗|昏黄|惨白|刺眼|低沉|尖锐|遥远|轻微)的)?';
+const SENSORY_SUBJECT_NOMINAL_SOURCE = `${SENSORY_SUBJECT_PREFIX_SOURCE}${SENSORY_SUBJECT_MODIFIER_SOURCE}(?:${SENSORY_OBJECT_SOURCE})`;
+const SENSORY_SUBJECT_ADVERB_SOURCE = '(?:(?:最先|率先|早早|一下子|忽然|突然|慢慢|缓缓|终于|仿佛|好像|似乎|悄然|逐渐|已经|猛地|竟然|偏偏|先|也|又|才|就|便|还|都|竟|偏)[地得]?\\s*)';
+const SENSORY_SUBJECT_PREDICATE_SOURCE = '(?:醒(?:了)?过来了?|醒来了?|醒了|苏醒了?|睁(?:开(?:了)?|了)?(?:双)?眼(?:睛)?|听(?:见|到|清|懂|出)了?|看(?:见|到|清|懂|出)了?|闻(?:到|见|出)了?|嗅(?:到|见|出)了?|感(?:到|觉到|受到|知到)了?|察觉(?:到)?了?|意识到了?)';
+const SENSORY_SUBJECT_WAKE_PREDICATE_SOURCE = '(?:醒(?:了)?过来了?|醒来了?|醒了|苏醒了?|睁(?:开(?:了)?|了)?(?:双)?眼(?:睛)?)';
+const SENSORY_SUBJECT_DIRECT_PATTERN = new RegExp(`(?:${SENSORY_SUBJECT_NOMINAL_SOURCE})(?:\\s*(?:和|与|跟|同|及|、)\\s*(?:${SENSORY_SUBJECT_NOMINAL_SOURCE}))?\\s*(?:${SENSORY_SUBJECT_ADVERB_SOURCE}){0,3}${SENSORY_SUBJECT_PREDICATE_SOURCE}`, 'g');
+const SENSORY_SUBJECT_INVERTED_PATTERN = new RegExp(`(?:(?:最先|率先|最早|先|竟然|突然)\\s*)?${SENSORY_SUBJECT_WAKE_PREDICATE_SOURCE}的[，,]?(?:竟然?|偏偏)?是(?:${SENSORY_SUBJECT_NOMINAL_SOURCE})`, 'g');
+const SENSORY_SUBJECT_ALLOWED_PREV = new Set(['', ' ', '\t', '的', '，', ',', '。', '！', '!', '？', '?', '；', ';', '：', ':', '*', '_']);
+const SENSORY_SUBJECT_TOPIC_QUESTION_PREDICATE = /(?:听(?:见|到|清|懂|出)了?|看(?:见|到|清|懂|出)了?|闻(?:到|见|出)了?|嗅(?:到|见|出)了?|感(?:到|觉到|受到|知到)了?|察觉(?:到)?了?|意识到了?)$/;
+const SENSORY_MULTILINE_REFERENCE_PAIRS = new Map([['“', '”'], ['‘', '’'], ['「', '」'], ['『', '』'], ['《', '》'], ['〈', '〉']]);
+const SENSORY_REFERENCE_MAX_SPAN_LINES = 12;
+const SENSORY_INLINE_CODE_PATTERN = /`+[^`\n]*`+/g;
+
 // 反序对比腔（实战漏网 C）：「是真嗓子，不是修音修出来的」——not-is-comparison 的反序变种。
 // 复用 not-is 的排除基建：引号内剥离（maskQuoted）、「是的/是啊」确认语（isAffirmationTagAt）；
 // 前字排除从 either-or 的 不/就/也 扩展到全部「X是」连词/副词合成词（还是/只是/可是/但是/
 // 于是/倒是/像是/若是/要是/正是/便是/总是/老是/更是/最是/算是/怕是/凡是/或是/即是/自是/
 // 竟是/原是/本是/仍是/许是/净是/光是/单是/尽是）；「是不是」问句起头与「不是吗/不是么/
 // 不是吧」反问尾巴单独排除。
-// 校准：《万疆》20 章 0 命中，demo 前 20 章 0 命中，按 blocking 实现。
+// 校准：真人长篇语料 20 章 0 命中，历史回归语料前 20 章 0 命中，按 blocking 实现。
 const REVERSE_NOT_IS_PATTERN = /是([^。！？!?\n，,]{1,12})[，,]\s*(?:而)?不是([^。！？!?\n]{1,20})/g;
 const REVERSE_NOT_IS_PREV_EXCLUDE = new Set([...COMPACT_EITHER_OR_PREV, '还', '只', '可', '但', '于', '倒', '像', '若', '要', '正', '便', '总', '老', '更', '最', '算', '怕', '凡', '或', '即', '自', '竟', '原', '本', '仍', '许', '净', '光', '单', '尽']);
 
@@ -212,7 +237,7 @@ const REVERSE_NOT_IS_PREV_EXCLUDE = new Set([...COMPACT_EITHER_OR_PREV, '还', '
 // 正文中段的「没人知道」多为普通叙述，不误伤；引号内台词（「没人知道…」）不计。
 // 「正式拉开序幕/帷幕」是场内事件的报幕式陈述（真人语料「钟声再度响起，比赛正式拉开序幕」），
 // 不是叙述者预告，前置 lookbehind 排除。
-// 校准：《万疆》20 章排除「正式拉开序幕」2 处报幕句后 0 命中，demo 前 20 章 0 命中。
+// 校准：真人长篇语料 20 章排除「正式拉开序幕」2 处报幕句后 0 命中，历史回归语料前 20 章 0 命中。
 const TRAILER_ENDING_PATTERN = /没人知道|谁也不知道|谁也没想到|殊不知|(?:这)?才刚刚开(?:始|头)|正(?:朝着|向着)[^。！？!?\n]{0,24}(?:压|涌|袭|逼)(?:了?过去|了?过来|来)|(?<!正式)拉开(?:序幕|帷幕)|即将(?:开始|来临|降临)/g;
 const TRAILER_ENDING_WINDOW_CHARS = 600;
 
@@ -237,7 +262,7 @@ const TRAILER_SUMMARY_PATTERN = /这一(?:夜|天|刻|战|年|局|役)[，,]?[^�
 // 前 6 字/后 3 字邻接的极短台词、引号内含句读的台词、引号外无叙述的行（独立台词/
 // 弹幕流/拟声词连发）、引号套引号（台词内强调）。全文 ≥3 处报一条——单处强调是
 // 正常修辞，密度高才是模板腔。
-// 校准：demo 前 20 章 0 章过阈值；《万疆》20 章 2 章过阈值（海报标语“我在番城”系列、
+// 校准：历史回归语料前 20 章 0 章过阈值；真人长篇语料 20 章 2 章过阈值（海报标语“我在番城”系列、
 // “邀战书”等转述载体，真人也这么写），所以该规则只做 advisory，不升 blocking。
 const QUOTE_EMPHASIS_MIN_HITS = 3;
 const QUOTE_EMPHASIS_MAX_VISIBLE = 4;
@@ -302,7 +327,8 @@ if (options.json) {
 if (failed) process.exit(2);
 // --fail-on=blocking 只在出现 blocking finding 时退出 1（advisory 仅报告）；默认 all 沿用「有任何 finding 即 1」。
 const hasBlocking = allFindings.some((f) => f.severity === 'blocking');
-if (options.failOn === 'blocking' ? hasBlocking : allFindings.length > 0) process.exit(1);
+const hasActionable = allFindings.some((f) => f.severity === 'blocking' || f.severity === 'advisory');
+if (options.failOn === 'blocking' ? hasBlocking : hasActionable) process.exit(1);
 
 function escapeRegExp(text) {
   return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
@@ -380,7 +406,7 @@ function scanProsePatterns(proseLines) {
         line: lineNo,
         column: dash.index + 1,
         type: 'em-dash',
-        severity: 'blocking',
+        severity: 'advisory',
         message: '破折号按功能改写：打断→动作 beat/短句，拖长音→省略或动作，插入说明→逗号/冒号；勿一律改句号。',
         excerpt: compact(text.slice(Math.max(0, dash.index - 8), dash.index + dash[0].length + 8)),
       });
@@ -401,6 +427,7 @@ function scanProsePatterns(proseLines) {
   findings.push(...findVoiceContrast(proseLines));
   findings.push(...findNegationParade(proseLines));
   findings.push(...findFormulaicParallelism(proseLines));
+  findings.push(...findSensorySubjectMismatch(proseLines));
   findings.push(...findReverseNotIs(proseLines));
   findings.push(...findTrailerEnding(proseLines));
   findings.push(...findQuoteEmphasisTic(proseLines));
@@ -414,6 +441,7 @@ function scanProsePatterns(proseLines) {
   findings.push(...findNoticeFormalityTic(proseLines));
   findings.push(...findOvercompressedProseTic(proseLines));
   findings.push(...findLowConnectiveDensityTic(proseLines));
+  findings.push(...computeDialogueDensity(proseLines));
   return findings;
 }
 
@@ -537,6 +565,94 @@ function findFormulaicParallelism(proseLines) {
   }
 
   return findings;
+}
+
+// 感官对象误作感知主体：紧邻正序 + 「先醒过来的是霉味」式倒装。
+// 引用专用掩码与原文等长，因此命中位置可直接映射回原文。
+function findSensorySubjectMismatch(proseLines) {
+  const findings = [];
+  const referenceState = { close: null };
+
+  for (let proseIndex = 0; proseIndex < proseLines.length; proseIndex += 1) {
+    const { text, lineNo } = proseLines[proseIndex];
+    // 先更新跨行引用状态，再跳过结构行；否则引号开/闭落在 Markdown 行时会泄漏。
+    const masked = maskSensoryReferences(text, referenceState, proseLines, proseIndex);
+    const trimmed = text.trim();
+    if (!trimmed || isDivider(trimmed) || isStructural(trimmed)) continue;
+    if (isDialogueParagraph(trimmed) && quotedRanges(trimmed).length === 0) continue;
+    const occupied = [];
+
+    for (const [pattern, needsSubjectBoundary, needsRightBoundary, isDirect] of [
+      [SENSORY_SUBJECT_DIRECT_PATTERN, true, false, true],
+      [SENSORY_SUBJECT_INVERTED_PATTERN, false, true, false],
+    ]) {
+      pattern.lastIndex = 0;
+      let match;
+      while ((match = pattern.exec(masked)) !== null) {
+        const start = match.index;
+        const end = start + match[0].length;
+        // 「她借着月光看清」/「她闻到一股霉味感到恶心」里的感官名词是前一动词的宾语；
+        // 数量词、修饰语与并列对象已纳入整个名词短语，边界检查不会从短语中间重新起算。
+        if (needsSubjectBoundary && !SENSORY_SUBJECT_ALLOWED_PREV.has(masked[start - 1] || '')) continue;
+        // 倒装的感官对象在句尾，必须是完整词；「光头/灯光师」不得命中「光/灯光」前缀。
+        if (needsRightBoundary && /[\u3400-\u9fffA-Za-z0-9]/.test(masked[end] || '')) continue;
+        // 「药味闻到了吗？」「脚步声听见了吗？」是话题化宾语 + 零主语问句，不是感官对象在执行感知。
+        if (isDirect && isSensoryTopicQuestion(masked, match[0], end)) continue;
+        if (occupied.some(([otherStart, otherEnd]) => start < otherEnd && otherStart < end)) continue;
+        occupied.push([start, end]);
+        findings.push({
+          line: lineNo,
+          column: start + 1,
+          type: 'sensory-subject-mismatch',
+          severity: 'advisory',
+          message: '感官主体可能错位：霉味/潮气/声音/光等通常是被感知对象，不是会“醒来/睁眼/听见/看见/闻到/感到”的主体；改成钻进/响起/渗进等物理路径，再落到角色反应。若是有意拟人，通读确认后可保留。',
+          excerpt: compact(text.slice(start, end)),
+        });
+      }
+    }
+  }
+
+  return findings;
+}
+
+// 不改全局 maskQuoted 的单行契约：这一规则单独支持跨行中文引号/书名号，
+// 但只有有限前瞻内确实存在配对闭引号时才跨行。未闭合开引号不得吞掉后文。
+// 同时继续复用全局同行引号对，并掩掉 Markdown inline code 样例。
+function maskSensoryReferences(text, state, proseLines, proseIndex) {
+  const chars = text.split('');
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+    if (state.close !== null) {
+      chars[index] = '？';
+      if (char === state.close) state.close = null;
+      continue;
+    }
+    const close = SENSORY_MULTILINE_REFERENCE_PAIRS.get(char);
+    if (close) {
+      chars[index] = '？';
+      const closesOnThisLine = text.indexOf(close, index + 1) >= 0;
+      if (closesOnThisLine || sensoryReferenceClosesAhead(proseLines, proseIndex, close)) {
+        state.close = close;
+      }
+    }
+  }
+
+  let masked = maskQuoted(chars.join(''));
+  masked = masked.replace(SENSORY_INLINE_CODE_PATTERN, (match) => '？'.repeat(match.length));
+  return masked;
+}
+
+function sensoryReferenceClosesAhead(proseLines, proseIndex, close) {
+  const end = Math.min(proseLines.length, proseIndex + SENSORY_REFERENCE_MAX_SPAN_LINES + 1);
+  for (let index = proseIndex + 1; index < end; index += 1) {
+    if (proseLines[index].text.includes(close)) return true;
+  }
+  return false;
+}
+
+function isSensoryTopicQuestion(masked, matchText, end) {
+  if (!SENSORY_SUBJECT_TOPIC_QUESTION_PREDICATE.test(matchText)) return false;
+  return /^\s*(?:[*_]{1,3}\s*)?[吗么吧](?:[？?!！。.]|$)/.test(masked.slice(end));
 }
 
 // 反序对比腔（实战漏网 C）：「是A，不是B」。排除基建复用 not-is-comparison：
@@ -1368,4 +1484,36 @@ function trimTrailingNoise(text) {
 function compact(text) {
   const normalized = text.replace(/\s+/g, ' ').trim();
   return normalized.length > 80 ? `${normalized.slice(0, 77)}...` : normalized;
+}
+
+// 对话密度统计：独立成行、以成对引号开头的段落占叙述段总数的比例。这是 info 级别的
+// 确定性统计，不是问题判定——不同场景类型（独角戏 vs 多人对手戏）密度上限天然不同，
+// 不作为唯一门槛，也不计入退出码。供写作时快速核对节奏基线，替代手写脚本现算。
+function computeDialogueDensity(proseLines) {
+  let narrativeParas = 0;
+  let dialogueParas = 0;
+
+  for (const { text } of proseLines) {
+    const trimmed = text.trim();
+    if (!trimmed || isDivider(trimmed) || isStructural(trimmed) || /^【[^】]+】$/.test(trimmed)) continue;
+    narrativeParas += 1;
+    if (isDialogueParagraph(trimmed)) dialogueParas += 1;
+  }
+
+  if (narrativeParas === 0) return [];
+  const ratio = (dialogueParas / narrativeParas) * 100;
+
+  return [{
+    line: 1,
+    column: 1,
+    type: 'dialogue-density-stat',
+    severity: 'info',
+    message: `对话密度统计：独立成行对话/字条段 ${dialogueParas}/${narrativeParas} 段（${ratio.toFixed(1)}%）；对标参考区间 ${DIALOGUE_DENSITY_REFERENCE_LOW}-${DIALOGUE_DENSITY_REFERENCE_HIGH}%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。`,
+    excerpt: `${dialogueParas}/${narrativeParas} (${ratio.toFixed(1)}%)`,
+  }];
+}
+
+// 独立成行对话/字条段：整段trim后以成对引号开头（「/『/【/"/'等），与"对话独立成行"格式规则同口径。
+function isDialogueParagraph(trimmed) {
+  return QUOTE_PAIRS.some(([open]) => trimmed.startsWith(open));
 }

@@ -1,0 +1,15 @@
+{
+  "date": "2026-08-11",
+  "data_until": "2026-08-10",
+  "trend_dates": ["08-10"],
+  "novel_chapters": [
+    {"i": 1, "title": "第一章", "read": "100", "follow": "32", "loss": "0", "words": 1800},
+    {"i": 2, "title": "第二章", "read": "32", "follow": "87.5", "loss": "68", "words": 1900},
+    {"i": 3, "title": "第三章", "read": "28", "follow": "0", "loss": "72", "words": 1850},
+    {"i": 4, "title": "第四章", "read": "34", "follow": "0", "loss": "66", "words": 1820}
+  ],
+  "novel_common": {"reader_uv_daily": null},
+  "novel_metrics": {"阅读人数": ["0"]},
+  "novel_traffic": {"搜索": ["0"]},
+  "shorts": []
+}

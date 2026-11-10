@@ -1,0 +1,301 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 59,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "89e18ffa9f1fb3c13834efca1c362f399dc4792135c34577ee77c6c1b928dbc4",
+      "state_revision": 256,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第059章_工单跟着我走.md",
+      "sha256": "05cec36864fb17dea49c2787c84db944376361c37e2b14e0507ffb50c0472f71",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第058章_你为什么不躲.md",
+      "sha256": "73b5ab2eefc257a114dc9f956627fd62920c9d63ebc4cbdda494f0a5dc4f73fa",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第059章.md",
+      "sha256": "ade35d172af9c2b54a52b4f35afa0dad79e9ed7aa1721fea09a8637ab9dbb6c4",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第059章/写前依据.md",
+      "sha256": "a36dde1505b02024924d64fcbaae8629a81ae98cbec3b445c0111e0ac23646fa",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第057章_同一张脸.md",
+      "sha256": "971b666e42562fb9671ec691e0413bbfb3e443b10f986d5c140e4738563c881a",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "裴亮",
+      "name": "裴亮",
+      "protagonist": false,
+      "own_goal": "弄清本次派工还能不能补签，避免再丢工钱。",
+      "without_protagonist": "可以直接回去，但为了自己的工资仍会先核对调度和结算。",
+      "voice_refs": [
+        {
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "公示下半截的到场名单还在。裴亮的名字没有被划掉，陈屿的名字在负责人那一格，状态栏单独改了字。镜辞用指腹点过这三个位置，呼吸放慢，没有把它们用线连起来。名单说明人曾经被派到场。状态说明现在不让签。两句话都印在同一张纸上，纸是公开的。他把纸的翻拍时间写在十五点三十六旁边，来源写猫眼，校验值照抄后四位。后四位他念给姜霁听，她对上了，才允许这张进恒泰那一袋。外包的夹子仍不打开。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "公示下半截的到场名单还在。裴亮的名字没有被划掉，陈屿的名字在负责人那一格，状态栏单独改了字。镜辞用指腹点过这三个位置，呼吸放慢，没有把它们用线连起来。名单说明人曾经被派到场。状态说明现在不让签。两句话都印在同一张纸上，纸是公开的。他把纸的翻拍时间写在十五点三十六旁边，来源写猫眼，校验值照抄后四位。后四位他念给姜霁听，她对上了，才允许这张进恒泰那一袋。外包的夹子仍不打开。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "十五点四十四读取群消息",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "裴亮"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "裴亮",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "查看已经到达的群消息和本人扣款页",
+          "gates": {
+            "knows": "知道自己受派到西口，已有迟到扣款经验；不了解接缝或镜辞停供。",
+            "wants": "弄清本次派工还能不能补签，避免再丢工钱。",
+            "fears": "怕到场无人接单却被算成自己没有上班。",
+            "capability": "能看本人群消息、工号和扣款页，不能改签到或决定复核。",
+            "no_plot": "可以直接回去，但为了自己的工资仍会先核对调度和结算。",
+            "costs": "查消息和等候消耗时间，看到指令也不保证有人接收。",
+            "consequences": "群里取消补签，现场仍无人接；他自己决定下一步找谁。"
+          },
+          "capacity": {
+            "resources": [
+              "本人工号群、手机、单车付费页"
+            ],
+            "permission": "能看本人群消息、工号和扣款页，不能改签到或决定复核。",
+            "limits": "查消息和等候消耗时间，看到指令也不保证有人接收。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "弄清本次派工还能不能补签，避免再丢工钱。",
+            "success_guaranteed": false,
+            "failure_path": "查消息和等候消耗时间，看到指令也不保证有人接收。",
+            "opposition": "群里取消补签，现场仍无人接；他自己决定下一步找谁。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 33,
+              "end_line": 33,
+              "quote": "“券我在仓库吃了。”那人把手套在箱沿上磕了磕，“回来赶八点，车等不到，走的。十五块你看能不能销。件按你平时的放法放的，我早跑这一趟，就是为了那只箱子。”",
+              "source_id": "SRC5",
+              "access": "memory",
+              "available_chapter": 57,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道自己受派到西口，已有迟到扣款经验；不了解接缝或镜辞停供。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "十五点五十至十六点四十一寻人并到店陈述",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "裴亮"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "裴亮",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "十五点五十以后继续找陈工并打电话，四点半后推车到钟表行询问",
+          "gates": {
+            "knows": "已读到取消补签消息并知道八元扣款；不知道陈工去向，无法得知停供调查。",
+            "wants": "找能说明到场经过的人，争取销掉八元，避免白跑损失无人负责。",
+            "fears": "怕一走了之就再也说不清自己来过，晚饭钱也没了。",
+            "capability": "能在市场公开区域找人和拨电话，不能要求接听或获准补签。",
+            "no_plot": "可以马上回仓库，但已有扣款让他愿意再花一些时间找实际负责人。",
+            "costs": "电话未接通、寻找无果；额外时间自己承担，不能混入原四十分钟扣款。",
+            "consequences": "到四点半仍没找到人，于是向上午见过的镜辞询问；镜辞可拒绝透露陈屿去向。"
+          },
+          "capacity": {
+            "resources": [
+              "本人工号群、手机、单车付费页"
+            ],
+            "permission": "能在市场公开区域找人和拨电话，不能要求接听或获准补签。",
+            "limits": "电话未接通、寻找无果；额外时间自己承担，不能混入原四十分钟扣款。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "找能说明到场经过的人，争取销掉八元，避免白跑损失无人负责。",
+            "success_guaranteed": false,
+            "failure_path": "电话未接通、寻找无果；额外时间自己承担，不能混入原四十分钟扣款。",
+            "opposition": "到四点半仍没找到人，于是向上午见过的镜辞询问；镜辞可拒绝透露陈屿去向。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "拟行动A1｜裴亮｜查看已经到达的群消息和本人扣款页",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 59,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已读到取消补签消息并知道八元扣款；不知道陈工去向，无法得知停供调查。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "补齐离开西口后寻找负责人及到店的时间经过；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第059章/直接修订_20261101/世界引擎/写前行动审查.json",
+      "sha256": "4a5c45e3e84911ae2a6ab0365985f6e10189fa123ac0731473babace4bae5f3b"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第059章/直接修订_20261101/candidate.md",
+      "sha256": "afaf3e2c8980c60a579f6c3b4877078964d9c5666422b5a343ba5937a0a10ee9"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "裴亮实际完成的选择由下列正文原句限定：发送人是陈屿的工号。内容两行：待复核。已经出发的，工时自己记，现场别等。",
+        "evidence": [
+          {
+            "start_line": 35,
+            "end_line": 35,
+            "quote": "发送人是陈屿的工号。内容两行：待复核。已经出发的，工时自己记，现场别等。"
+          }
+        ],
+        "world_followups": [
+          "群里取消补签，现场仍无人接；他自己决定下一步找谁。"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "action_ids": [
+          "A2"
+        ],
+        "actual_result": "裴亮实际完成的选择由下列正文原句限定：“三点五十以后我还在找陈工。西口外面几个摊位问了一圈，电话打了三遍，没接通。四点半还没找到，我才推车来问你们。”裴亮抹了一把额角，“这段不是那四十分钟，别给我一起报进去。”",
+        "evidence": [
+          {
+            "start_line": 39,
+            "end_line": 39,
+            "quote": "“三点五十以后我还在找陈工。西口外面几个摊位问了一圈，电话打了三遍，没接通。四点半还没找到，我才推车来问你们。”裴亮抹了一把额角，“这段不是那四十分钟，别给我一起报进去。”"
+          }
+        ],
+        "world_followups": [
+          "到四点半仍没找到人，于是向上午见过的镜辞询问；镜辞可拒绝透露陈屿去向。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 35,
+            "end_line": 35,
+            "quote": "发送人是陈屿的工号。内容两行：待复核。已经出发的，工时自己记，现场别等。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "补齐离开西口后寻找负责人及到店的时间经过。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

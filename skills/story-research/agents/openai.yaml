@@ -1,0 +1,4 @@
+interface:
+  display_name: "创作资料研究"
+  short_description: "Research public facts for fiction with evidence and citations"
+  default_prompt: "Use $story-research to research a story detail from public sources and return traceable citations."

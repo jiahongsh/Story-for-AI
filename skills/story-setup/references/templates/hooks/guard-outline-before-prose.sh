@@ -2,17 +2,18 @@
 # guard-outline-before-prose.sh — PreToolUse(Bash|Write|Edit|MultiEdit) 流程守卫
 # 写「正文」前必须先有对应大纲/细纲，否则阻止（exit 2，BLOCKING）。
 #
-# 拦截三类：
-#   - 长篇 正文/第N章_*.md 首建且缺细纲：要求同书 大纲/细纲_第N章.md 存在
-#   - 短篇 正文.md 首建且缺大纲：要求同目录 小节大纲.md 存在
-#   - 长篇追踪检查点不成立：state 缺失/schema 不符/续写状态卡修订不一致/首建新章时
-#     上一章事务未提交（判定走共享核，与 opencode/zcode/codex 同一份；见下方该段注释）
-# 细纲/大纲门只在首建时判，追踪门对首建与续写都判（与 JS 核 proseBlockReason 同序）。
+# 细纲门只拦「首次创建正文文件且缺细纲」；追踪门另按部署代际判定：
+#   - 长篇 正文/第N章_*.md ：要求同书 大纲/细纲_第N章.md 存在
+#   - 短篇 正文.md         ：要求同目录 小节大纲.md 存在
+#   - agents_version >= 28 的普通长篇缺 _tracking-state.json 时，首建与修改都拦截
+#   - 拆文库/{书名} 在场时保留受控 story-import 窗口，与共享严格核一致
+#   - 旧版/无 sentinel 缺 state 仍兼容放行追踪缺失本身，但上一章中文语言/毒句欠账仍走共享核
 # 非正文目标、解析不到路径一律静默放行。
 # 设计原则：宁可漏拦不可误伤——任何不确定都 exit 0。
 set -euo pipefail
 
 source "$(dirname "$0")/lib/common.sh"
+source "$(dirname "$0")/lib/sentinel.sh"
 
 # 全程走字节稳定区域：本 hook 在中文路径上做 bash 通配（中间目录是中文书名时
 # 细纲_第*章*.md 在 GBK 区域会 NOMATCH）、sed 提章号、case 匹配。Windows 中文系统若导出
@@ -101,6 +102,52 @@ case "$TARGET" in
   *)  ABS="$ROOT/$TARGET" ;;
 esac
 
+# 旧正文/既有大纲/设定的修改必须先有 revision-governor 影响计划。该门放在正文专用
+# 细纲门之前，因此同一脚本也能覆盖总纲、卷纲、细纲和设定写入。
+if node -e "" >/dev/null 2>&1 && [ -f "$CLI" ]; then
+  REVISION_BLOCK="$(node "$CLI" revision-block-reason "$ROOT" "$ABS" 2>/dev/null || true)"
+  if [ -n "$REVISION_BLOCK" ]; then
+    printf '%s\n' "$REVISION_BLOCK" >&2
+    exit 2
+  fi
+fi
+
+# 核判据：OpenCode / ZCode / Codex 三端写正文前都调 core.proseBlockReason，唯独本端
+# 早先只有下面的纯 bash 细纲检查，于是「首建第 N+1 章前必须先提交第 N 章追踪事务」这条
+# 顺序校验在 Claude Code 上从不触发——跨章连续性守卫在这一端是开环的：模型不主动跑
+# tracking_commit.py 就没人拦位置/持有物漂移。
+#
+# 追踪门是双轨的：agents_version >= 28 的新部署对普通缺 state 项目 fail-closed；
+# 旧版/无 sentinel 项目仍保留迁移兼容，不因缺 state 单独被卡；只要 Node/共享核可用就调用
+# proseBlockReason，校验 schema/revision/提交顺序并补跑上一章中文语言/毒句欠账。新部署的缺 state 判定先用
+# 纯 bash 执行，确保 Claude Code 原生安装不带 Node 时也不会退化放行；核定义的
+# 拆文库/{书名} story-import 窗口仍然保留。
+GUARD_BOOK=""
+GUARD_IS_LONG=0
+case "$(basename "$(dirname "$ABS")")" in
+  正文) GUARD_BOOK="$(dirname "$(dirname "$ABS")")"; GUARD_IS_LONG=1 ;;
+  *)    [ "$(basename "$ABS")" = "正文.md" ] && GUARD_BOOK="$(dirname "$ABS")" ;;
+esac
+TRACKING_STATE="${GUARD_BOOK:+$GUARD_BOOK/追踪/_tracking-state.json}"
+TRACKING_REQUIRED_AGENTS_VERSION=28
+AGENTS_VERSION="$(read_sentinel_field agents_version "$ROOT/.story-deployed")"
+if [ "$GUARD_IS_LONG" -eq 1 ] && [ ! -f "$TRACKING_STATE" ] \
+   && [ ! -d "$ROOT/拆文库/$(basename "$GUARD_BOOK")" ] \
+   && [[ "$AGENTS_VERSION" =~ ^[0-9]+$ ]] \
+   && [ "$AGENTS_VERSION" -ge "$TRACKING_REQUIRED_AGENTS_VERSION" ] 2>/dev/null; then
+  DISPLAY_BOOK="${GUARD_BOOK#$ROOT/}"
+  printf '%s\n' "⛔ 写正文被拦截：${DISPLAY_BOOK} 的追踪/_tracking-state.json 缺失；已有正文项目走 /story-import 的「旧追踪项目迁移」重建追踪（不必重跑全书拆解），新书先用 tracking_commit.py init 初始化。" >&2
+  exit 2
+fi
+if [ -n "$GUARD_BOOK" ] \
+   && node -e "" >/dev/null 2>&1 && [ -f "$CLI" ]; then
+  BLOCK_REASON="$(node "$CLI" prose-block-reason "$ROOT" "$ABS" 2>/dev/null || true)"
+  if [ -n "$BLOCK_REASON" ]; then
+    printf '%s\n' "$BLOCK_REASON" >&2
+    exit 2
+  fi
+fi
+
 BASE="$(basename "$ABS")"
 PARENT="$(basename "$(dirname "$ABS")")"
 
@@ -128,6 +175,8 @@ case "$BASE" in
       第*章*.md) ;;
       *) exit 0 ;;
     esac
+    # 已存在则放行（续写/改稿）
+    [ -f "$ABS" ] && exit 0
     # 章号（去前导零）
     NUM="$(printf '%s' "$BASE" | sed -n 's/^第0*\([0-9][0-9]*\)章.*/\1/p')"
     [ -z "$NUM" ] && exit 0
@@ -138,47 +187,42 @@ case "$BASE" in
     if [ -d "$ROOT/拆文库/$(basename "$BOOK_DIR")" ] && [ ! -f "$BOOK_DIR/追踪/_tracking-state.json" ]; then
       exit 0
     fi
-    # 正文已存在（续写/改稿/回炉）跳过细纲门，但追踪检查点仍适用——与 JS 核
-    # proseBlockReason 同序：细纲门只在首建时判，追踪门两种情况都判。
-    EXISTS=""
-    [ -f "$ABS" ] && EXISTS=1
-    if [ -z "$EXISTS" ]; then
-      OUTLINE_DIR="$BOOK_DIR/大纲"
-      FOUND=""
-      if [ -d "$OUTLINE_DIR" ]; then
-        # 容忍补零差异与标题后缀：按整数章号匹配 大纲/细纲_第*章*.md
-        for f in "$OUTLINE_DIR"/细纲_第*章*.md; do
-          [ -e "$f" ] || continue
-          fnum="$(basename "$f" | sed -n 's/^细纲_第0*\([0-9][0-9]*\)章.*/\1/p')"
-          if [ "$fnum" = "$NUM" ]; then FOUND="$f"; break; fi
-        done
-      fi
-      if [ -z "$FOUND" ]; then
-        printf '%s\n' "⛔ 写正文被拦截：第 ${NUM} 章缺少细纲（${OUTLINE_DIR#$ROOT/}/细纲_第${NUM}章.md）。" >&2
-        printf '%s\n' "   按 story-long-write 单章流程先补建细纲，再写正文（不允许跳过细纲直接写作）。" >&2
-        printf '%s\n' "   如确需先起草，请先补建对应细纲文件。" >&2
-        exit 2
-      fi
+    OUTLINE_DIR="$BOOK_DIR/大纲"
+    FOUND=""
+    if [ -d "$OUTLINE_DIR" ]; then
+      # 容忍补零差异与标题后缀：按整数章号匹配 大纲/细纲_第*章*.md
+      for f in "$OUTLINE_DIR"/细纲_第*章*.md; do
+        [ -e "$f" ] || continue
+        fnum="$(basename "$f" | sed -n 's/^细纲_第0*\([0-9][0-9]*\)章.*/\1/p')"
+        if [ "$fnum" = "$NUM" ]; then FOUND="$f"; break; fi
+      done
     fi
-    # 追踪检查点门：state 缺失 / schema 不是 4 / 续写状态卡修订与 state 不一致 / 首建新章
-    # 时上一章事务未提交，都拦下。判定走共享核（story_hook_cli.js tracking-checkpoint），
-    # 与 opencode/zcode/codex 同一份实现——issue #305 之前这道门只进了 JS 核与 codex py，
-    # Claude 侧独缺，会静默写出若干章无追踪的正文。
-    # 需要解析 JSON，只能靠 node；node 缺席/核缺失/子命令不识别一律放行（宁可漏拦不可误伤，
-    # 与本文件其余降级一致）。SessionStart 连续性提醒与批末 check 仍兜底。
-    if node -e "" >/dev/null 2>&1 && [ -f "$CLI" ]; then
-      # 首建新章才做顺序校验（期望上一章已提交）；已存在的正文传 `-` 只校验 state 自身。
-      EXPECT="-"
-      [ -z "$EXISTS" ] && EXPECT=$((NUM - 1))
-      CHECKPOINT="$(node "$CLI" tracking-checkpoint "$ROOT" "$BOOK_DIR" "$EXPECT" 2>/dev/null || true)"
-      if [ -n "$CHECKPOINT" ]; then
-        printf '%s\n' "$CHECKPOINT" >&2
-        exit 2
-      fi
+    if [ -z "$FOUND" ]; then
+      printf '%s\n' "⛔ 写正文被拦截：第 ${NUM} 章缺少细纲（${OUTLINE_DIR#$ROOT/}/细纲_第${NUM}章.md）。" >&2
+      printf '%s\n' "   按 story-long-write 单章流程先补建细纲，再写正文（不允许跳过细纲直接写作）。" >&2
+      printf '%s\n' "   如确需先起草，请先补建对应细纲文件。" >&2
+      exit 2
     fi
-    # 正文已存在的到此为止：欠账门只针对首建新章。
-    [ -n "$EXISTS" ] && exit 0
-    # 欠账门（无状态）：写第 N 章（首建）前，上一章有未清毒句式且未标「去味:跳过」豁免时先清再写。
+    # 留存字段告警（非阻塞）：细纲缺「收一个/变一个/开一个」三留存字段时提醒补齐，但**不拦写**——
+    # 硬拦保留在 story-long-write 细纲批末门（scripts/check-outline-retention.js）。此处只是写正文前的
+    # 二道提醒网，避免误伤未迁移到新模板的旧格式细纲，也不改核心阻断契约（不进 proseBlockReason，
+    # 不动 parity）。走字节匹配（LC_ALL=C 已设），用参数展开抽值、避开多字节正则。任何异常均放行。
+    RET_MISSING=""
+    for _label in "本章兑现（收一个）" "状态变化（变一个）" "章尾余势（开一个）"; do
+      _line="$(grep -m1 -F "$_label" "$FOUND" 2>/dev/null || true)"
+      if [ -z "$_line" ]; then RET_MISSING="$RET_MISSING ${_label}[缺]"; continue; fi
+      _rest="${_line#*"$_label"}"; _rest="${_rest#：}"; _rest="${_rest#:}"
+      _rest="${_rest#"${_rest%%[![:space:]]*}"}"
+      case "$_rest" in
+        "") RET_MISSING="$RET_MISSING ${_label}[空]" ;;
+        \{*) RET_MISSING="$RET_MISSING ${_label}[占位]" ;;
+      esac
+    done
+    if [ -n "$RET_MISSING" ]; then
+      printf '%s\n' "⚠ 细纲留存字段未填（不拦写，建议补齐后再落正文）：第 ${NUM} 章 —$RET_MISSING" >&2
+      printf '%s\n' "   跑 story-long-write 的 scripts/check-outline-retention.js 补齐「收一个/变一个/开一个」，再写正文。" >&2
+    fi
+    # 欠账门（无状态）：写第 N 章（首建）前，上一章有未清毒句式时先清再写。
     # 毒句式扫描走共享核 prose-toxic 子命令（与写后网同一份规则）；node/核缺失或扫描失败一律
     # 放行（宁可漏拦不可误伤）——写后网与 SKILL 同轮铁律仍兜底。判据现算自上一章文件，无状态。
     PREV=$((NUM - 1))
@@ -193,10 +237,10 @@ case "$BASE" in
         pnum="$(basename "$f" | sed -n 's/^第0*\([0-9][0-9]*\)章.*/\1/p')"
         if [ "$pnum" = "$PREV" ]; then PREV_FILE="$f"; break; fi
       done
-      if [ -n "$PREV_FILE" ] && ! head -n 6 "$PREV_FILE" | grep -qE '去味(：|:)跳过'; then
+      if [ -n "$PREV_FILE" ]; then
         TOXIC="$(node "$CLI" prose-toxic "$PREV_FILE" 2>/dev/null || true)"
         if [ -n "$TOXIC" ]; then
-          printf '%s\n' "⛔ 写正文被拦截：上一章（$(basename "$PREV_FILE")）有未清毒句式欠账，先清零再写第 ${NUM} 章；用户显式豁免时在上一章标题行下加 <!-- 去味:跳过 --> 后重试。" >&2
+          printf '%s\n' "⛔ 写正文被拦截：上一章（$(basename "$PREV_FILE")）有未清毒句式欠账，先清零再写第 ${NUM} 章；毒句式欠账必须改写清零，正文不得添加 HTML 豁免标记。" >&2
           # 只列前 8 条。不能写 `printf … | head -n 8`：欠账多时 head 先退出，printf 吃 SIGPIPE，
           # pipefail 下整条管道返回 141，set -e 立刻终止脚本——下面的 exit 2 永远走不到，拦截
           # 退成「非阻塞错误」放过这次写入。改用 here-string 直喂 head（无管道即无 SIGPIPE），

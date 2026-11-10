@@ -4,16 +4,17 @@
 const fs = require('fs');
 const path = require('path');
 
-const USAGE = `Usage: node normalize-punctuation.js [--check] [--quote-mode keep|ascii|yan] <file...>
+const USAGE = `Usage: node normalize-punctuation.js [--check] [--pause-mode keep|normalize] [--quote-mode keep|ascii|yan] <file...>
 
 Normalize正文 punctuation deterministically:
-  - replace ellipses, em dashes, and double hyphens with Chinese punctuation
+  - keep ellipses and em dashes by default; normalize them only with --pause-mode normalize
   - remove markdown divider lines (---) from正文
   - keep quote style by default; convert quotes only when explicitly requested
 `;
 
 const options = {
   check: false,
+  pauseMode: 'keep',
   quoteMode: 'keep',
   files: [],
 };
@@ -22,6 +23,13 @@ for (let i = 2; i < process.argv.length; i += 1) {
   const arg = process.argv[i];
   if (arg === '--check') {
     options.check = true;
+  } else if (arg === '--pause-mode') {
+    const value = process.argv[i + 1];
+    if (!value) die('--pause-mode requires keep or normalize');
+    options.pauseMode = value;
+    i += 1;
+  } else if (arg.startsWith('--pause-mode=')) {
+    options.pauseMode = arg.slice('--pause-mode='.length);
   } else if (arg === '--quote-mode') {
     const value = process.argv[i + 1];
     if (!value) die('--quote-mode requires keep, ascii, or yan');
@@ -42,6 +50,9 @@ for (let i = 2; i < process.argv.length; i += 1) {
 if (!['keep', 'ascii', 'yan'].includes(options.quoteMode)) {
   die(`Invalid --quote-mode: ${options.quoteMode}`);
 }
+if (!['keep', 'normalize'].includes(options.pauseMode)) {
+  die(`Invalid --pause-mode: ${options.pauseMode}`);
+}
 if (options.files.length === 0) {
   die('No files provided');
 }
@@ -61,7 +72,7 @@ for (const file of options.files) {
     continue;
   }
 
-  const result = normalizeDocument(input, options.quoteMode);
+  const result = normalizeDocument(input, options.quoteMode, options.pauseMode);
   totalFindings += result.findings.length;
 
   if (options.check) {
@@ -94,7 +105,7 @@ function die(message) {
   process.exit(2);
 }
 
-function normalizeDocument(input, quoteMode) {
+function normalizeDocument(input, quoteMode, pauseMode) {
   const { lines, endings } = splitLinesKeepingEndings(input);
 
   const findings = [];
@@ -159,10 +170,14 @@ function normalizeDocument(input, quoteMode) {
     }
 
     const commentOpenBefore = commentOpen;
-    const punctuationResult = normalizePausePunctuation(line, lineNo, commentOpen);
-    findings.push(...punctuationResult.findings);
-    line = punctuationResult.line;
-    commentOpen = punctuationResult.commentOpen;
+    if (pauseMode === 'normalize') {
+      const punctuationResult = normalizePausePunctuation(line, lineNo, commentOpen);
+      findings.push(...punctuationResult.findings);
+      line = punctuationResult.line;
+      commentOpen = punctuationResult.commentOpen;
+    } else {
+      commentOpen = htmlCommentSpans(line, commentOpen).open;
+    }
     if (!commentOpenBefore && commentOpen) {
       commentStart = { line: lineNo, column: Math.max(1, line.lastIndexOf('<!--') + 1) };
     } else if (!commentOpen) {
@@ -264,8 +279,8 @@ function normalizePausePunctuationPass(line, lineNo, commentSpans) {
 
   while ((match = pattern.exec(original)) !== null) {
     const token = match[0];
-    // HTML 注释是正文里的元信息（如 `<!-- 去味:跳过 -->` 豁免标记）：`<!--`/`-->` 里的
-    // `--` 不是停顿标点，改掉它注释就散了，标记会变成读者看得见的正文。
+    // HTML 注释不属于交付正文，会被独立语言门阻断。这里仍保持格式化器的
+    // 非破坏性：`<!--`/`-->` 里的 `--` 不是停顿标点，不应被正常化拆坏。
     if (insideSpans(match.index, match.index + token.length, commentSpans)) continue;
     output += original.slice(lastIndex, match.index);
     const replacement = choosePauseReplacement(original, match.index, token.length);

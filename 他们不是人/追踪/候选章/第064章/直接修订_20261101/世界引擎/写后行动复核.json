@@ -1,0 +1,422 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 64,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "adffb5fbf31f94d0c73a6c16f48be891dee7caad07faa8a0365a31cd1589cbf3",
+      "state_revision": 259,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第064章_你也一直在验我.md",
+      "sha256": "24346731611af360e9a8dae75d9c395f872e2e9fec41b96de4a8ff2eb91c3b26",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第063章_别拿她试.md",
+      "sha256": "205fd215e4c4c243538839e5c684761460551dac8e361fb32307c83e5f4dc45a",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第064章.md",
+      "sha256": "23241c7b7ddf004cb272eee77c30bcb9c1db6a7e80f1bd4b1e105700f59e86d8",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第064章/写前依据.md",
+      "sha256": "76144eb7b4ccdaad90f198bb73bf6d71acb031709bd6578de9eafb2fd67e10e8",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "窗边老头",
+      "name": "窗边老头",
+      "protagonist": false,
+      "own_goal": "满足对熟人关系的好奇，也想让自己的搭话得到回应。",
+      "without_protagonist": "可以闭嘴，但长期占座、爱多嘴的习惯会使他在普通关系变化时也插话。",
+      "voice_refs": [
+        {
+          "start_line": 43,
+          "end_line": 43,
+          "quote": "窗边那个常年占座的老头把凳子拖近了半尺，豆浆碗顿在他们桌角。“镜辞，这不是芽吗？你还看不看得见她，跟以前一样不一样？”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 43,
+          "end_line": 43,
+          "quote": "窗边那个常年占座的老头把凳子拖近了半尺，豆浆碗顿在他们桌角。“镜辞，这不是芽吗？你还看不看得见她，跟以前一样不一样？”",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "郭老板",
+      "name": "郭老板",
+      "protagonist": false,
+      "own_goal": "让几桌客人吃上饭，保持上菜通道和自己的生意。",
+      "without_protagonist": "可以绕路忍着，但忙于上菜、老客占道使他像平常一样直接招呼。",
+      "voice_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "郭老板从柜台后探出头，手里还掂着漏勺。“芽来了？小米汤，豆腐脑，油条四根。豆腐脑别放香菜，他不吃。你们俩今天倒是没吵架先进门。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "郭老板从柜台后探出头，手里还掂着漏勺。“芽来了？小米汤，豆腐脑，油条四根。豆腐脑别放香菜，他不吃。你们俩今天倒是没吵架先进门。”",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "准确记下今天的事，避免再次把她压进原芽的模板。",
+      "without_protagonist": "可以沿用熟悉的转碗说法，但刚承认混淆，更应按实际发生者写。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "七点四十五，镜辞才从钟表行出来。她的消息停在七点四十：到了，人在铺子里，别在门口等。他把手机扣上，扣上的时候指尖还停在拨号旁边，没再拨。姜霁跟到巷口，不跟到那张桌子。钥匙留在抽屉里层，私人本在衣袋里，耳后那一页朝下。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "七点四十五，镜辞才从钟表行出来。她的消息停在七点四十：到了，人在铺子里，别在门口等。他把手机扣上，扣上的时候指尖还停在拨号旁边，没再拨。姜霁跟到巷口，不跟到那张桌子。钥匙留在抽屉里层，私人本在衣袋里，耳后那一页朝下。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "早餐铺七点四十八以后邻桌挪凳",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "窗边老头"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "窗边老头",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "挪凳到桌边，以旧称呼多嘴询问两人为何生分",
+          "gates": {
+            "knows": "本轮明确的普通熟客背景：听惯店家叫她芽，看见两人同桌却生分；不知道接缝和私人调查。",
+            "wants": "满足对熟人关系的好奇，也想让自己的搭话得到回应。",
+            "fears": "怕被当作多事丢脸，又不愿在熟人面前显得自己什么都不知道。",
+            "capability": "能从邻桌靠近问话，没有权力替他们认亲或解释身份。",
+            "no_plot": "可以闭嘴，但长期占座、爱多嘴的习惯会使他在普通关系变化时也插话。",
+            "costs": "可能挡住上菜而遭店主驱赶，私人问题未必得到回答。",
+            "consequences": "郭老板按店务赶他回桌，他嘟囔后退开，两人的争执不因此解决。"
+          },
+          "capacity": {
+            "resources": [
+              "本人凳子和豆浆、熟客经历"
+            ],
+            "permission": "能从邻桌靠近问话，没有权力替他们认亲或解释身份。",
+            "limits": "可能挡住上菜而遭店主驱赶，私人问题未必得到回答。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "满足对熟人关系的好奇，也想让自己的搭话得到回应。",
+            "success_guaranteed": false,
+            "failure_path": "可能挡住上菜而遭店主驱赶，私人问题未必得到回答。",
+            "opposition": "郭老板按店务赶他回桌，他嘟囔后退开，两人的争执不因此解决。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "既往背景｜本轮明确的熟客背景：长期在这间铺子占座，听惯郭老板叫她芽，爱插话；不知身份接缝或调查。",
+              "source_id": "SRC4",
+              "access": "memory",
+              "available_chapter": 63,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "belief",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "本轮明确的普通熟客背景：听惯店家叫她芽，看见两人同桌却生分；不知道接缝和私人调查。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "同场端油条上菜",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "郭老板"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "郭老板",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "侧身让过挪凳熟客并制止挡路，继续按旧称呼催汤",
+          "gates": {
+            "knows": "看见老客拖凳挡着上菜，知道油条要趁热送；听不到也不懂两人的身份调查。",
+            "wants": "让几桌客人吃上饭，保持上菜通道和自己的生意。",
+            "fears": "怕食物洒落、客人催闹，自己赔钱又耽误下一锅。",
+            "capability": "作为店主可以要求客人让路和处理食物，不能决定她的身份或名字。",
+            "no_plot": "可以绕路忍着，但忙于上菜、老客占道使他像平常一样直接招呼。",
+            "costs": "托盘碰撞造成的食物损耗自己承担，不能借称呼把账推给她。",
+            "consequences": "老头退回座位，客人仍催餐；镜辞和她仍须自己面对称呼与未答的问题。"
+          },
+          "capacity": {
+            "resources": [
+              "竹匾、油条、漏勺、店内服务权"
+            ],
+            "permission": "作为店主可以要求客人让路和处理食物，不能决定她的身份或名字。",
+            "limits": "托盘碰撞造成的食物损耗自己承担，不能借称呼把账推给她。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "让几桌客人吃上饭，保持上菜通道和自己的生意。",
+            "success_guaranteed": false,
+            "failure_path": "托盘碰撞造成的食物损耗自己承担，不能借称呼把账推给她。",
+            "opposition": "老头退回座位，客人仍催餐；镜辞和她仍须自己面对称呼与未答的问题。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "拟行动A1｜窗边老头｜挪凳到桌边，以旧称呼多嘴询问两人为何生分",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 64,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "看见老客拖凳挡着上菜，知道油条要趁热送；听不到也不懂两人的身份调查。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "story_time": {
+        "label": "八点二十前回店记录",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "镜辞",
+          "order": 3,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "回店只记录自己看见的喝汤与郭老板转碗，不把她写成转碗人",
+          "gates": {
+            "knows": "亲眼看过店主把缺口转向墙，也听过她对旧模仿的承认；不能混同过去习惯和当前动作。",
+            "wants": "准确记下今天的事，避免再次把她压进原芽的模板。",
+            "fears": "怕记错行动者后，又拿自己的记录逼她承担不属于她的动作。",
+            "capability": "能够只记亲见和未答，不能认证她的主体连续性或命名。",
+            "no_plot": "可以沿用熟悉的转碗说法，但刚承认混淆，更应按实际发生者写。",
+            "costs": "接受备注和归属暂时空着，关系不会因为一句改正立刻复原。",
+            "consequences": "她仍自己付钱并离开，郭老板承担损耗，姜霁不替他们回答。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "能够只记亲见和未答，不能认证她的主体连续性或命名。",
+            "limits": "接受备注和归属暂时空着，关系不会因为一句改正立刻复原。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "准确记下今天的事，避免再次把她压进原芽的模板。",
+            "success_guaranteed": false,
+            "failure_path": "接受备注和归属暂时空着，关系不会因为一句改正立刻复原。",
+            "opposition": "她仍自己付钱并离开，郭老板承担损耗，姜霁不替他们回答。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "拟行动A2｜郭老板｜侧身让过挪凳熟客并制止挡路，继续按旧称呼催汤",
+              "source_id": "SRC4",
+              "access": "planned-earlier-action",
+              "available_chapter": 64,
+              "available_order": 2,
+              "producer_action_id": "A2",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "亲眼看过店主把缺口转向墙，也听过她对旧模仿的承认；不能混同过去习惯和当前动作。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "普通熟客只问关系，店主按店务回应，转碗者明确；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第064章/直接修订_20261101/世界引擎/写前行动审查.json",
+      "sha256": "634bf0cb07a7564e21a695a70b07d9589c51f9f06a5480df7e0209be73359ede"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第064章/直接修订_20261101/candidate.md",
+      "sha256": "fa4bdbd05e20b45527412380d51f09a44fcca0f89138626f6ae40ba0b3dc1dde"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "窗边老头实际完成的选择由下列正文原句限定：窗边那个常年占座的老头把凳子拖近了半尺，豆浆碗顿在他们桌角。“镜辞，这不是芽吗？你们俩坐一块儿，怎么还这么生分？”",
+        "evidence": [
+          {
+            "start_line": 43,
+            "end_line": 43,
+            "quote": "窗边那个常年占座的老头把凳子拖近了半尺，豆浆碗顿在他们桌角。“镜辞，这不是芽吗？你们俩坐一块儿，怎么还这么生分？”"
+          }
+        ],
+        "world_followups": [
+          "郭老板按店务赶他回桌，他嘟囔后退开，两人的争执不因此解决。"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "action_ids": [
+          "A2"
+        ],
+        "actual_result": "郭老板实际完成的选择由下列正文原句限定：“老爷子，豆浆端回你自个儿桌上去，挡着我上菜了。芽，先把汤喝了！”",
+        "evidence": [
+          {
+            "start_line": 47,
+            "end_line": 47,
+            "quote": "“老爷子，豆浆端回你自个儿桌上去，挡着我上菜了。芽，先把汤喝了！”"
+          }
+        ],
+        "world_followups": [
+          "老头退回座位，客人仍催餐；镜辞和她仍须自己面对称呼与未答的问题。"
+        ]
+      },
+      {
+        "scene_id": "S3",
+        "action_ids": [
+          "A3"
+        ],
+        "actual_result": "镜辞实际完成的选择由下列正文原句限定：私人本等到进门才掏出来。他写：早餐铺。汤她自己喝的，碗是郭老板转开的。我承认三件事写成过一行。称呼未定，备注仍空。那些事，未答。",
+        "evidence": [
+          {
+            "start_line": 85,
+            "end_line": 85,
+            "quote": "私人本等到进门才掏出来。他写：早餐铺。汤她自己喝的，碗是郭老板转开的。我承认三件事写成过一行。称呼未定，备注仍空。那些事，未答。"
+          }
+        ],
+        "world_followups": [
+          "她仍自己付钱并离开，郭老板承担损耗，姜霁不替他们回答。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 43,
+            "end_line": 43,
+            "quote": "窗边那个常年占座的老头把凳子拖近了半尺，豆浆碗顿在他们桌角。“镜辞，这不是芽吗？你们俩坐一块儿，怎么还这么生分？”"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "普通熟客只问关系，店主按店务回应，转碗者明确。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

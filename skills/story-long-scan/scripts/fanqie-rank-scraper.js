@@ -20,7 +20,8 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ab, sleep, evalJSONBase64, scrollLoad, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSONBase64, scrollLoad, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 // 一次详情请求的并发批大小。番茄详情页用同步 XHR 拉取，批太大会撞上
 // cdp-utils 里 ab() 的 20s 超时；超时会显式失败，这里分批是为了避免整个题材被中断。
@@ -282,12 +283,12 @@ function scrapeChannel(ch, type) {
     console.log(`  发现 ${categories.length} 个品类`);
   }
 
-  const now = new Date().toISOString();
   const lines = [
     `# 番茄 · ${chLabel}${tyLabel} · 全 ${categories.length} 题材`,
     "",
     `- 频道参数：channel=${ch}，type=${type}`,
-    `- 抓取时间：${now}`,
+    `- 抓取时间（UTC）：${RUN_CLOCK.utc}`,
+    `- 报告日期（本地）：${RUN_CLOCK.localDate}`,
     `- 每题材上限 ≈ ${TOP}`,
     "",
     "---",
@@ -402,7 +403,7 @@ function main() {
         const content = scrapeChannel(ch, ty);
         if (!content) continue;
 
-        const date = localDateStamp();
+        const date = RUN_CLOCK.localDate;
         const filename = `番茄${channelLabel(ch)}${typeLabel(ty)}_全题材_${date}.md`;
         fs.mkdirSync(OUTDIR, { recursive: true });
         const filepath = path.join(OUTDIR, filename);

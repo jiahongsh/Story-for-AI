@@ -29,7 +29,8 @@
 const fs = require("fs");
 const https = require("https");
 const path = require("path");
-const { ab, sleep, evalJSON, scrollLoad, getArg, localDateStamp, runCli } = require("./cdp-utils");
+const { ab, sleep, evalJSON, scrollLoad, getArg, captureRunClock, runCli } = require("./cdp-utils");
+const RUN_CLOCK = captureRunClock();
 
 const PC_BASE_URL = "https://www.qidian.com/rank";
 const MOBILE_BASE_URL = "https://m.qidian.com";
@@ -357,13 +358,13 @@ function cleanDesc(raw) {
 }
 
 function renderMarkdown(rt, books, url, sourceMode, extraLines = []) {
-  const now = new Date().toISOString();
   const lines = [
     `# 起点 · ${rt.label}`,
     "",
     `- 来源：${url}`,
     `- 抓取方式：${sourceMode}`,
-    `- 抓取时间：${now}`,
+    `- 抓取时间（UTC）：${RUN_CLOCK.utc}`,
+    `- 报告日期（本地）：${RUN_CLOCK.localDate}`,
     `- 条目数：${books.length}`,
     ...extraLines,
     "",
@@ -553,7 +554,7 @@ async function main() {
       }
 
       const rtInfo = RANK_TYPES.find((r) => r.id === rt);
-      const date = localDateStamp();
+      const date = RUN_CLOCK.localDate;
       const filename = `起点${rtInfo.label}_${date}.md`;
       fs.mkdirSync(OUTDIR, { recursive: true });
       const filepath = path.join(OUTDIR, filename);

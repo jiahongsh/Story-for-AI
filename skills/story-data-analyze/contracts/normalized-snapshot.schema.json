@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/story-data-analyze/normalized-snapshot.schema.json",
+  "title": "Presence-preserving normalized Fanqie snapshot",
+  "type": "object",
+  "required": ["normalization_schema_version", "source", "facts", "quality"],
+  "properties": {
+    "normalization_schema_version": {"const": 2},
+    "source": {"type": "object", "required": ["name", "sha256", "detected_shape", "declared_schema_version"]},
+    "facts": {"type": "object", "required": ["metadata", "long_novel", "short_stories"]},
+    "quality": {
+      "type": "object",
+      "required": [
+        "status", "snapshot_date", "data_until", "platform_current", "scope",
+        "scope_verified", "expected_work_id", "work_id", "work_id_verified",
+        "date_relation_valid", "branch_statuses", "usable_fields", "issues", "presence_summary"
+      ]
+    }
+  },
+  "additionalProperties": true
+}

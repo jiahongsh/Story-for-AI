@@ -1,0 +1,276 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 73,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "0f7dc15606f84aeb16c0f4ba23ef7654b742afbef02537ec44399ab290edd1bf",
+      "state_revision": 267,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第073章_又到两点十七.md",
+      "sha256": "43b01f41aa7a16056df308dfd382a9cc1aba941c9eea6adaf0304533aa11e897",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第072章_不是为了反着来.md",
+      "sha256": "fdddd08656efb415aa5d490cac8b819435b99a4ff357d484871001baf64df715",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第073章.md",
+      "sha256": "1e9118509dcfe0f705a2c32ee41855b50b601e93f4034be5cdde7dd47455c938",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第073章/写前依据.md",
+      "sha256": "f3864514b0f2713bdcff486c32a87826be90e75345ec2d823a4fc7d24180b7c4",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第071章_复核日.md",
+      "sha256": "6f4387f1e33726eb2fa5002a5aebb02f0db79c93d773a0c22c8b1e4d253f2c34",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "杜经理",
+      "name": "杜经理",
+      "protagonist": false,
+      "own_goal": "让共同见证者核对现状，保留本人没点确认的依据。",
+      "without_protagonist": "可只存副本，但状态仍异常且影响住户收入，叫原见证者来核对符合自保。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，杜经理的电话打进钟表行。镜辞还没吃早饭。她已经把口袋里的四十八按好，准备去西口。电话响的时候她停了一下，没接。镜辞接了。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上八点十分，杜经理的电话打进钟表行。镜辞还没吃早饭。她已经把口袋里的四十八按好，准备去西口。电话响的时候她停了一下，没接。镜辞接了。",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "送药人",
+      "name": "送药人",
+      "protagonist": false,
+      "own_goal": "完成这笔送达或留下可核的未交付结果，免得药物去向说不清。",
+      "without_protagonist": "可以一直等，但敲门无人答时找现场经办人暂存，比编造成功送达更符合普通配送职责。",
+      "voice_refs": [
+        {
+          "start_line": 43,
+          "end_line": 43,
+          "quote": "送药的人进了单元门，上到五楼又下来。502没有应。他在活动室把药放下，说门链从猫眼边上看得见。杜经理签了代收，签的是药到活动室，没签门开过。药费十二，送药的人说收货人自己付，付不了就先挂。许棠在旁边说这药别写她的名。杜经理把十二写在502的边栏，写明门未开，药暂存。这十二和陈骁今早的十二用线隔开。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 43,
+          "end_line": 43,
+          "quote": "送药的人进了单元门，上到五楼又下来。502没有应。他在活动室把药放下，说门链从猫眼边上看得见。杜经理签了代收，签的是药到活动室，没签门开过。药费十二，送药的人说收货人自己付，付不了就先挂。许棠在旁边说这药别写她的名。杜经理把十二写在502的边栏，写明门未开，药暂存。这十二和陈骁今早的十二用线隔开。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第二工日八点十分杜经理通知",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "杜经理"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "杜经理",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "重新打开持续正常页面后请镜辞复查",
+          "gates": {
+            "knows": "071与镜辞留守至02:17，已亲见覆盖并保存纸签日志；今早重开仍正常。",
+            "wants": "让共同见证者核对现状，保留本人没点确认的依据。",
+            "fears": "怕页面正常被算成本人撤争议，独担后果。",
+            "capability": "可打开本人经办页面、致电与对比纸签，没有替住户开门权限。",
+            "no_plot": "可只存副本，但状态仍异常且影响住户收入，叫原见证者来核对符合自保。",
+            "costs": "继续花工时处理争议，不得把070之前原约缺席说成071补核未到。",
+            "consequences": "镜辞可以只看页面不验人；当前存在按约去摊，许棠仍可拒签。"
+          },
+          "capacity": {
+            "resources": [
+              "本人工单、副本、页面与电话，住宅门无代开权限"
+            ],
+            "permission": "可打开本人经办页面、致电与对比纸签，没有替住户开门权限。",
+            "limits": "继续花工时处理争议，不得把070之前原约缺席说成071补核未到。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "让共同见证者核对现状，保留本人没点确认的依据。",
+            "success_guaranteed": false,
+            "failure_path": "继续花工时处理争议，不得把070之前原约缺席说成071补核未到。",
+            "opposition": "镜辞可以只看页面不验人；当前存在按约去摊，许棠仍可拒签。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 41,
+              "end_line": 41,
+              "quote": "“今晚两点十七还有一次上游同步。我留在这儿。你们要看，就看页面变不变。别让我点确认。我点了，挨骂的还是坐在这把椅子上的人。”",
+              "source_id": "SRC5",
+              "access": "memory",
+              "available_chapter": 71,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "071与镜辞留守至02:17，已亲见覆盖并保存纸签日志；今早重开仍正常。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "八点四十后送药人上五楼",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "送药人"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "送药人",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "按已有送药任务上楼敲门，未应答后只报告本人所见并暂存药",
+          "gates": {
+            "knows": "出发时只知手里药物待送502，不知道屋内是否有人或门链如何；无人应门只在本人敲门后成为亲历。",
+            "wants": "完成这笔送达或留下可核的未交付结果，免得药物去向说不清。",
+            "fears": "怕未交到人却被当作已签收，药物费用和保管责任无人认。",
+            "capability": "能进单元门上楼敲门，带药回活动室；无透视门、取住宅钥匙或强开门权限。",
+            "no_plot": "可以一直等，但敲门无人答时找现场经办人暂存，比编造成功送达更符合普通配送职责。",
+            "costs": "尚未交到收货人；药12先挂，代收不等于门开，也不替许棠认账。",
+            "consequences": "杜经理可只签药到活动室，陈启明仍不被强迫开门；交接门链状态不因送药人到场变成其目击。"
+          },
+          "capacity": {
+            "resources": [
+              "待送药物、本人脚程和敲门结果"
+            ],
+            "permission": "能进单元门上楼敲门，带药回活动室；无透视门、取住宅钥匙或强开门权限。",
+            "limits": "尚未交到收货人；药12先挂，代收不等于门开，也不替许棠认账。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "完成这笔送达或留下可核的未交付结果，免得药物去向说不清。",
+            "success_guaranteed": false,
+            "failure_path": "尚未交到收货人；药12先挂，代收不等于门开，也不替许棠认账。",
+            "opposition": "杜经理可只签药到活动室，陈启明仍不被强迫开门；交接门链状态不因送药人到场变成其目击。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "既往背景｜只恢复本段已有送药任务的行动前提：此人此前接到将手里这笔药送至502的任务。正文未命名患者、单位或说明处方，不新增这些资料；本轮不冒称旧章另有此人的出场记录。该前提不包括门内状态。",
+              "source_id": "SRC4",
+              "access": "memory",
+              "available_chapter": 72,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "belief",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "出发时只知手里药物待送502，不知道屋内是否有人或门链如何；无人应门只在本人敲门后成为亲历。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "明确复查承接已参加的补核，送药人只报告本人敲门未应；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

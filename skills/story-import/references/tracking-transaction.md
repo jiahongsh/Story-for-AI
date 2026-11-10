@@ -6,9 +6,9 @@
 
 | 层级 | 文件 | 语义 |
 |---|---|---|
-| 唯一权威 | `_tracking-state.json` | schema、最后提交章、导入截止章、状态修订号、上下文结构、全部当前角色/伏笔/时间线状态 |
+| 唯一权威 | `_tracking-state.json` | schema、最后提交章、导入截止章、状态修订号、上下文结构、全部当前角色/伏笔/时间线/长期事实状态 |
 | 章节记录 | `逐章记录/第NNN章.md` | 本章对未来连续性有用的紧凑变化；目标 ≤1536 字节，硬上限 3072 字节；导入范围内修订写成覆盖记录 |
-| 派生视图 | `上下文.md`、`角色状态/{角色名}.md`、`伏笔.md`、`时间线/作者真相.md`、`时间线/读者已知.md` | 完全从 `_tracking-state.json` 生成；禁止手改，不作为程序输入 |
+| 派生视图 | `上下文.md`、`角色状态/{角色名}.md`、`伏笔.md`、`时间线/作者真相.md`、`时间线/读者已知.md`、`长期事实.md`、`关系清单.md`、`事实档案/{实体}.md` | 完全从 `_tracking-state.json` 生成；禁止手改，不作为程序输入 |
 
 Markdown 只负责给作者和 Agent 阅读，工具不再反向解析 Markdown。`check` 直接从 `_tracking-state.json` 重渲染并逐文件比较。未来“第几章揭示”的计划写在卷纲/细纲，不写成时间线既成事实。
 逐章记录只是便于人阅读的紧凑变化记录，不承诺单独无损重建全部当前状态；完整当前语义以 `_tracking-state.json` 为准。
@@ -20,11 +20,13 @@ Markdown 只负责给作者和 Agent 阅读，工具不再反向解析 Markdown�
 ```text
 {PYTHON} {当前 skill 根}/scripts/tracking_commit.py init   --project {书项目根} --input {初始化事务.json}
 {PYTHON} {当前 skill 根}/scripts/tracking_commit.py commit --project {书项目根} --input {逐章事务.json}
+{PYTHON} {当前 skill 根}/scripts/tracking_commit.py migrate-v4 --project {书项目根} --input {v4迁移.json}
 {PYTHON} {当前 skill 根}/scripts/tracking_commit.py check  --project {书项目根}
 ```
 
 - `init`：只在 `_tracking-state.json` 不存在时执行，绝不覆盖已初始化项目。
 - `commit`：读取唯一权威状态，在内存中完成合并、引用检查、全部视图渲染和容量检查；随后写逐章记录与派生视图，最后原子替换 `_tracking-state.json` 作为唯一提交点。
+- `migrate-v4`：只对已有 `schema_version=4` 的权威状态执行一次，升级到 schema 5 并可同时植入有证据的长期事实；不创建、不重写任何逐章记录。
 - `check`：严格验证 state schema、逐章记录连续性/规范名/体积、固定 7 栏、角色快照硬上限、派生文件集合，以及所有派生视图与 state 的逐字一致性。
 
 同一本书只允许工作流串行提交，不支持多个 Agent 或终端并发写。`expected_state_revision` 用于拒绝基于旧状态构造的顺序 stale transaction，不是并发锁。
@@ -59,7 +61,8 @@ Markdown 只负责给作者和 Agent 阅读，工具不再反向解析 Markdown�
   },
   "character_snapshots": {},
   "foreshadow": [],
-  "timeline_events": []
+  "timeline_events": [],
+  "facts": []
 }
 ```
 
@@ -102,6 +105,24 @@ Markdown 只负责给作者和 Agent 阅读，工具不再反向解析 Markdown�
         "characters": ["江晨", "周薄森", "张耀祖"]
       }
     ],
+    "fact_changes": [
+      {
+        "action": "upsert",
+        "id": "R001",
+        "category": "合作",
+        "subject": "江晨",
+        "predicate": "稳定军宣合作对象",
+        "object": "钟嘉嘉",
+        "cardinality": "many",
+        "canon_status": "正文已证",
+        "reader_status": "已揭示",
+        "reveal_chapter": 10,
+        "established_chapter": 10,
+        "evidence": ["正文/第010章_专业团队拍得还不如他拍的好.md｜军报稿过审与看片会合作"],
+        "related_entities": ["江晨", "钟嘉嘉"],
+        "negative_constraints": ["稳定合作不等于恋爱或婚姻关系"]
+      }
+    ],
     "constraints": ["后续继续用作品落地效果和围观反应放大江晨的高光，不能只写系统奖励数字"],
     "next_chapter_commitments": ["结算五天百万粉任务，并承接老兵主题的新任务"]
   },
@@ -139,11 +160,36 @@ Markdown 只负责给作者和 Agent 阅读，工具不再反向解析 Markdown�
 - 角色快照的四个列表不限制条数，只限制单项长度和最终文件总字节：目标 ≤4096 字节，超过警告；硬上限 8192 字节，超过则在任何写入前拒绝。
 - 没有快照的角色变化视为临时角色，不建立状态文件；`context.active_character_names` 最多 6 人且必须已有当前快照。
 - `context.long_term_constraints` 和 `context.continuity_risks` 是整份提交的当前值。凡是上一版有、本次没有的条目，必须逐条列进 `delta.retired_context_items`，否则工具在任何写入前拒绝——漏写不会被当成删除。实际退役的条目由工具写进本章逐章记录的 `## 本章退役登记`，随后仍可回查。
+### 跨章连续性守卫（位置 / 持有物）
+
+`location` 与 `abilities_resources` 是整份覆盖的快照字段，一旦被无声改写就是读者一眼看穿的硬伤——上一章住学校宿舍、下一章骑车从家出发；上一章娘摆针线摊、下一章变卖菜摊。工具对这两项做前后比对：
+
+- 新快照与库内旧值不同时，**必须**在 `delta.continuity_changes` 申报一条 `{name, field, from, to, reason}`，否则事务被拒。
+- `from` 必须与库内旧值**逐字相同**。这是这条守卫的关键：模型得先去读 `追踪/角色状态/{名}.md` 才写得出来，凭热上下文猜不出。写对了说明它知道自己在改什么，此时改动是有意为之，不是漂移。
+- 申报了并未发生的变更同样拒绝，避免用空申报绕过。
+- 申报会写进 `逐章记录/第NNN章.md` 的「## 跨章连续性变更」一节，事后能翻到是哪一章、从什么改成什么、理由是什么。
+
+```json
+"continuity_changes": [
+  {
+    "name": "林小满",
+    "field": "location",
+    "from": "学校宿舍 302 室（本周起住校，不再走读）",
+    "to": "家中（每日骑车走读）",
+    "reason": "周末回家住，周一骑车返校"
+  }
+]
+```
+
+这两项同时也进热上下文（`上下文.md` 的核心角色行含「位置：」「持有：」），写下一章时不必再去翻小文件。
+
 - 不再复用的核心角色写进 `delta.retired_characters`：工具删除其当前快照与 `角色状态/{角色名}.md`，并在逐章记录留档。同一事务里不能既退役又提交快照，也不能退役仍列在 `context.active_character_names` 的角色。角色阵亡/退场这一章，把变化照写进 `character_changes` 即可，本章退役的角色不必再交一份马上要删的快照，逐章记录仍按核心角色标注。退役只表示不再进入热上下文，正文与逐章记录不受影响。
 - 两类退役都只能在 `mode=append` 提交。退役表示「从此刻起离开当前状态」，而修订事务的逐章记录属于被改写的旧章，落在那里会谎报退役发生的章节；`mode=revision` 必须原样重交当前全部上下文条目，需要退役就放到下一次 append。
 - `伏笔.md` 只呈现已经埋设过的当前状态。未来规划仍留在大纲。
 - `timeline_events.action` 可为 `upsert/delete`。`未揭示` 的 `reveal_chapter` 必须为 `null`；部分/完全揭示只能填写已经发生的实际章节。
+- `fact_changes.action` 可为 `upsert/delete`。事实 ID 用 `K001` 或 `R001`；类别覆盖身份/血缘/亲属/婚姻/别名/传承/从属/合作/敌对/所有权/规则/权限/不可逆状态/历史因果。每条必须带 `evidence`；关系类必须带 `related_entities`；单值槽位 `cardinality=one` 不得同时存在两个不同 object。未揭示的作者真相不会出现在读者视图，但会在作者用事实档案中保留。
 - `mode=revision` 时，逐章记录必须重算为修订后该章仍然成立的完整连续性记录；当前角色、伏笔、时间线和上下文则提交受影响对象截至最新已写章的当前值。
+- 长期事实与关系的完整收录边界、召回路径和跨总纲/卷纲/细纲/正文的修订要求见当前写作流程的“跨产物修订与长期事实”协议。
 - 修订导入截止章内的正文时，会新增或覆盖该章的逐章记录；`imported_through_chapter` 不变。
 
 ## 续写状态卡固定格式

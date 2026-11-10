@@ -2,7 +2,7 @@
 name: story-short-scan
 version: 1.0.0
 description: "短篇网文扫榜。分析知乎盐言、七猫、黑岩、点众等平台热门短篇数据，捕捉风口题材。触发方式：/story-short-scan、/短篇扫榜、「短篇什么火」「知乎故事排行」。"
-metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claudecode"}}
+metadata: {"openclaw":{"source":"https://github.com/qin1473692580-ux/oh-story-claudecode"}}
 ---
 # story-short-scan：短篇网文扫榜
 
@@ -77,7 +77,7 @@ metadata: {"openclaw":{"source":"https://github.com/worldwonderer/oh-story-claud
 
 **用户提供操作指引：**
 - 请用户截图或复制粘贴榜单内容
-- 如果用户提供链接，用 WebFetch 抓取页面内容
+- 如果用户提供链接，使用当前平台获准的联网抓取能力；Claude 可用 `WebFetch`，TRAE Code 优先使用平台浏览/联网工具，没有时路由只读 `/browser-cdp`，不得假装调用不存在的 `WebFetch`
 - 如果用户只提供故事名列表，直接进入分析
 
 **内置知识操作指引：**
