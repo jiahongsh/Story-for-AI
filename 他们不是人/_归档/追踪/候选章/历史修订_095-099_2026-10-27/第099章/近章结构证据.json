@@ -1,0 +1,174 @@
+{
+  "status": "semantic_review_required",
+  "severity": "advisory",
+  "chapter": 99,
+  "window": 6,
+  "candidate": {
+    "chapter": 99,
+    "path": "追踪/候选章/历史修订_095-099_2026-10-27/第099章/第099章_一只真的坏表.md",
+    "sha256": "b1eee2d1f653f1217d6e9016dc7e392e03fe79d8b976b6a9da3996bddc0621aa",
+    "opening_mode": "action",
+    "ending_mode": "deadline",
+    "metrics": {
+      "dialogue_rate_pct": 44.8276,
+      "question_rate_pct": 12.069,
+      "qa_pair_candidates_per_100p": 10.3448,
+      "rule_marker_per_1k": 2.9976,
+      "procedure_marker_per_1k": 1.7986,
+      "explanation_marker_per_1k": 0.5995
+    },
+    "opening_excerpt": "周衡先把管钳放在柜台角，钳口沾着一点干泥。他看了看自己的手，没碰旁边白色的维修垫。 / “徐师傅的。昨晚顺路没碰上，说搁你这儿。” / 镜辞点头，抽了张纸垫住管钳。周衡又从手腕上摘下旧机械表，表壳边有使用留下的擦痕，扣口还带着刚才戴过的温度。",
+    "ending_excerpt": "“那就先做这些。别拿着镊子想别的，把游丝碰了。” / 镜辞将镊子放稳，挪开私人本，给维修垫让出地方。单子夹进铁盒上层，旧锁芯留在下层隔开，管钳仍放在柜台角等徐师傅来拿。 / 灯下只剩表。他用清理刷慢慢带出积灰，将细小零件按工序排好。周衡说过明天来取，他得在合上后盖以前，把这只表修"
+  },
+  "history": [
+    {
+      "chapter": 93,
+      "path": "正文/第093章_旧经验.md",
+      "sha256": "8aafcd6ec635e604ad2376260dd0db16ff3a590a8b624a60333db1778572abe3",
+      "opening_mode": "exposition",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 22.7273,
+        "question_rate_pct": 9.0909,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 0.9166,
+        "procedure_marker_per_1k": 5.4995,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "复盘会散了，问题没散。镜辞跟姜霁回钟表行，把茶杯按在桌上，按到指节发白。“他们为什么对撤案那么不安。” / 姜霁不替组织辩护。她从夹层里抽出三份去标识旧案，纸边发黄，黄得像被人反复摸过。摸过的地方字迹更淡。淡完仍能读。 / 第一份：局部侵入。异常结构解除后，原主体能把处置前后连起",
+      "ending_excerpt": "守钟人哼了一声。“问号比血干净。干净也别高兴。问号多了，人会想快点填。” / 镜辞将周诚回执和老李三行新字段放在桌上，十一份编号卡只看允许公开的部分。周衡那张薄卡还没批给他全卷，他没有去翻。 / 夜里姜霁发来旧字段拆分已入卷、署名更正留存的短讯，周衡卡暂不外传。他回收到，将旧案压"
+    },
+    {
+      "chapter": 94,
+      "path": "正文/第094章_十一份.md",
+      "sha256": "073080736ebba8a2006e67ac2322f5a7b0fd8bee9116b4ac6e2510cce230cc39",
+      "opening_mode": "action",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 25.0,
+        "question_rate_pct": 10.0,
+        "qa_pair_candidates_per_100p": 5.0,
+        "rule_marker_per_1k": 1.912,
+        "procedure_marker_per_1k": 9.5602,
+        "explanation_marker_per_1k": 1.912
+      },
+      "opening_excerpt": "十一份编号卡在柜台上摊成一排。摊开的时候纸角互碰，碰出很轻的声。声落下去，镜辞才发现自己把未结听成了待抓。姜霁看他一眼，像早就料到。 / “别把问号当成围猎名单。”她说，“先看获准的状态栏。隐私不开放。” / 她只让镜辞看处置栏。有的已经能用病、伤、家里过日子的变化解释，准备撤。",
+      "ending_excerpt": "“可能来。”镜辞说，“也可能只是路过。” / “路过也付钱。”守钟人说，“表坏了才进门。人要是没事，别硬给人拆。” / 镜辞把私人本合上。合上的页里写着：周衡。低干扰。先看生活。写完他熄灯。灯灭以后，旧市场的夜还是普通的夜。普通的夜里，有人明天会来买菜、送工具、叫一声周师傅。叫完"
+    },
+    {
+      "chapter": 95,
+      "path": "正文/第095章_七天都正常.md",
+      "sha256": "87e7975b478128a0c4160931cc08cfcb13bba608d939c440ada3b93c1d111b23",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 15.7895,
+        "question_rate_pct": 10.5263,
+        "qa_pair_candidates_per_100p": 5.2632,
+        "rule_marker_per_1k": 3.6276,
+        "procedure_marker_per_1k": 3.6276,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "姜霁把七天记录压成两页纸，纸边还热。热完她推到柜台上。“别找不像。七天里他都很像一个长期存在的熟人。” / 工作时间稳。和同事的来往前后不拧。老邻居能顺口说出多年前一起办过的事。市场摊主会自然喊他修水管、搬东西。他还记得别人近些年才发生的伤、搬家、换工作。记得这些，说明他不只是复",
+      "ending_excerpt": "“路过。”镜辞说。 / “路过也别先拆。”守钟人哼了一声，把茶推过来，“表坏了才进门。” / 镜辞接过茶。茶烫。烫完他仍只喝了一口。喝完他把目光放回柜台。柜台外，周师傅三个字还在几个摊位之间传来传去。传完，旧货市场像往常一样吵。吵里没有敌意。没有敌意的早晨，低干扰观察正式开始。"
+    },
+    {
+      "chapter": 96,
+      "path": "正文/第096章_没有缝的人.md",
+      "sha256": "a541b3c87647c559759e6a9e4e2a9d59c04cbe9895f5da07a3e8de16f8d7ff1d",
+      "opening_mode": "action",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 15.3846,
+        "question_rate_pct": 7.6923,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 4.0107,
+        "procedure_marker_per_1k": 4.0107,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "镜辞照常开摊。摊布一掀，座钟声先响。响完他把工具摆齐，摆齐时余光才扫向旧货市场口。周衡已经在里头了。没朝钟表行走。先蹲在修鞋摊边，看漏水接头。接头拧紧后，赵奶奶把他喊住，问上次送医的事。五金摊借过工具的人跟他点头。一个孩子的球滚远，他顺手捡回来。捡完拍拍手上的灰，灰落在水泥地上，",
+      "ending_excerpt": "守钟人看了一眼纸堆，哼了一声：“表盘太干净，也得拆开看看机芯。拆之前先别下结论。” / 镜辞点头。点头时把早年过整四个字写进私人本。写完他看向市场空出来的那条路。 / 姜霁傍晚来短讯：未见已入档。纸质履历今晚先别外传。镜辞回了个‘收’，把纸堆扣在本子下面。茶凉了，守钟人过来端走，"
+    },
+    {
+      "chapter": 97,
+      "path": "正文/第097章_前三年.md",
+      "sha256": "7a936d3f7b62ea90a5adcff5fa3236b15d1472f708b07f718a718eeead179502",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 6.6667,
+        "question_rate_pct": 0.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 8.8608,
+        "procedure_marker_per_1k": 6.3291,
+        "explanation_marker_per_1k": 1.2658
+      },
+      "opening_excerpt": "猫眼把八年履历按时间切开，纸页在柜台上摊成三段。现系统写着周衡八年前起就在临江连续生活。更早留下来的独立旧版本却不完全跟。 / 六年前社区纸质住户汇总表上，临江某址当时登记的是另一名租客。一家已倒闭快递点留下的交接本，同日期签收人是另一个名字。旧网页缓存和房屋出租页面也能定年。这",
+      "ending_excerpt": "守钟人哼了一声：“一刀切的是坏表匠。” / 夜里姜霁把版本回填结论入档。入档页上没有“周衡实施”四个字；实施者一栏仍空着。她另列近五年系统外的关系后果，发短讯给镜辞：暂不接触。先把近五年关系后果核完。 / 镜辞回：收。旧市场的灯一盏盏灭了。他把纸上的冲突页与近五年的材料分开收好。"
+    },
+    {
+      "chapter": 98,
+      "path": "正文/第098章_后五年.md",
+      "sha256": "e61476eaecf9e4ee5153aec2c10d27053cbf069292bf60232f753b55f47fd1e8",
+      "opening_mode": "action",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 0.0,
+        "question_rate_pct": 0.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 0.0,
+        "procedure_marker_per_1k": 0.0,
+        "explanation_marker_per_1k": 1.2723
+      },
+      "opening_excerpt": "纸上的前三年还发着冲突的光。光旁边，猫眼又摊开近五年。近五年不看漂亮统一的系统履历，去找别人日子里被他改过的地方。 / 修鞋摊老板住院那阵，周衡替他看过三天摊。赵奶奶摔伤，他送去社区医院，挂号小票和邻居记忆能对上。东口有小孩走丢过一次，是他把孩子领回来。一名同事搬家借过他的车，后",
+      "ending_excerpt": "镜辞收下，把锁芯放进铁盒隔层。徐师傅交来的只是旧锁业务留下的东西，他没有在芯上写周衡。 / 天擦黑时，周衡在市场口停下，看了眼镜辞钟表摊上的招牌。没有靠近。站了两秒就走了。他走过去，没回头。镜辞看着市场口，再低头看纸，没把其中一叠塞到另一叠里。 / 夜里姜霁短讯：后五年关系后果单"
+    }
+  ],
+  "comparisons": [
+    {
+      "chapter": 93,
+      "similarity": 0.3823,
+      "same_opening_mode": false,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 94,
+      "similarity": 0.5015,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 95,
+      "similarity": 0.576,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 96,
+      "similarity": 0.4295,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 97,
+      "similarity": 0.2075,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 98,
+      "similarity": 0.0785,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    }
+  ],
+  "signals": [],
+  "review_questions": [
+    "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+    "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+    "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+    "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+    "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+  ],
+  "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+}

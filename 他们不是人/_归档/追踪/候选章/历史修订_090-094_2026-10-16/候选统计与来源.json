@@ -1,0 +1,37 @@
+[
+  {
+    "chapter": 90,
+    "old_hanzi": 1457,
+    "candidate_hanzi": 2209,
+    "candidate_sha256": "709f0dea329218f2f6d63e02535532d34b2b95fd6540a47e26bf1234dbc16c11",
+    "original_sha256": "6a0bb82d9b55fb3d3f972e0d51364b348656e02901d52045ce6565c0fa395eff"
+  },
+  {
+    "chapter": 91,
+    "old_hanzi": 1078,
+    "candidate_hanzi": 1997,
+    "candidate_sha256": "d9a5e1cae1eb0058b709248ceaa12d3f1eb1e86d7653e6c9e2836f70b7b6fff1",
+    "original_sha256": "63ca90be93d5bb06671cb9f04b9a62b0b51d5a7cedf6049b0fa5a09b76685daa"
+  },
+  {
+    "chapter": 92,
+    "old_hanzi": 1133,
+    "candidate_hanzi": 1988,
+    "candidate_sha256": "40d4e94f8057e70755d742819ec3e804e7ae3f84258bdc660878782047763264",
+    "original_sha256": "cc040b09f133a66b931aa0edfa3617526f49d36853d1c3ade4a026244145416f"
+  },
+  {
+    "chapter": 93,
+    "old_hanzi": 1091,
+    "candidate_hanzi": 1962,
+    "candidate_sha256": "ea8beb9115961f6dde80bd57d9144f14fd45325e80790fd8b884d752fab636dc",
+    "original_sha256": "8aafcd6ec635e604ad2376260dd0db16ff3a590a8b624a60333db1778572abe3"
+  },
+  {
+    "chapter": 94,
+    "old_hanzi": 1046,
+    "candidate_hanzi": 1963,
+    "candidate_sha256": "ab8ee16bda654ed5b456282a76404fbb735ac6ef5825cd1707ca7e81affd9d53",
+    "original_sha256": "073080736ebba8a2006e67ac2322f5a7b0fd8bee9116b4ac6e2510cce230cc39"
+  }
+]

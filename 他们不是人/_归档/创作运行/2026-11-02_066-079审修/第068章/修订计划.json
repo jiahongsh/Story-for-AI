@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-068-20261102",
+  "summary": "分清北河至县城小巴与县城至东口实名客运两段返程",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第068章_这段路是我走的.md",
+    "大纲/细纲_第068章.md"
+  ],
+  "affected_entities": [
+    "回程小巴",
+    "东口方向"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    68
+  ]
+}

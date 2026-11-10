@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "run_id": "ch099_evidence",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "retention_ratio": 1.002414,
+  "changed_span_count": 1,
+  "blocking": [],
+  "advisory": []
+}

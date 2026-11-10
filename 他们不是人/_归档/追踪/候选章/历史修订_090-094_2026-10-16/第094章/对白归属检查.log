@@ -1,0 +1,81 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16\\第094章\\第094章_十一份.md",
+  "metrics": {
+    "dialogue_turns": 35,
+    "attribution_count": 6,
+    "attribution_density": 0.171,
+    "max_consecutive_tagged_turns": 1,
+    "top_verb": {
+      "value": "说",
+      "count": 3,
+      "ratio": 0.5
+    },
+    "top_family": {
+      "value": "说",
+      "count": 3,
+      "ratio": 0.5
+    },
+    "baseline_density": 0.02,
+    "recent_density": 0.431
+  },
+  "findings": [],
+  "advisories": [],
+  "examples": [
+    {
+      "line": 7,
+      "column": 10,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“先看这些。”姜霁说，“无关隐私不开放。”"
+    },
+    {
+      "line": 21,
+      "column": 17,
+      "text": "他问",
+      "subject": "他",
+      "verb": "问",
+      "family": "问",
+      "context": "“安平里这份，还照原来分开？”他问。"
+    },
+    {
+      "line": 33,
+      "column": 35,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“顺着被重新整理过的旧身份历史往前追，会碰到他在那一带的记录。”姜霁说，“两处。没有一次能证明是他动的手。”"
+    },
+    {
+      "line": 47,
+      "column": 11,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“已经看了七天。”他说。"
+    },
+    {
+      "line": 95,
+      "column": 3,
+      "text": "姜霁问",
+      "subject": "姜霁",
+      "verb": "问",
+      "family": "问",
+      "context": "姜霁问：“没有看见？”"
+    },
+    {
+      "line": 121,
+      "column": 20,
+      "text": "问",
+      "subject": null,
+      "verb": "问",
+      "family": "问",
+      "context": "守钟人出来收工具，看见台面已经清出来，问：“明天有客？”"
+    }
+  ],
+  "next_action": "continue_workflow"
+}

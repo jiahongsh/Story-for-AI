@@ -1,0 +1,16 @@
+{
+  "run_version": 1,
+  "run_id": "ch097_final",
+  "status": "applied",
+  "created_at": "2026-10-27T01:52:21.897696+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27",
+  "source_path": "第097章/第097章_前三年.md",
+  "source_sha256": "6f18b81f57c59d87fe9bca5470ef42de851b759e08565aa9cb599825423630fb",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light",
+  "applied_at": "2026-10-27T01:52:22.038396+00:00",
+  "applied_sha256": "bf9b55755c8c3f9956a1d98df711dc477b6c589a903a89676b5f831398b08731"
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "auto": {
+    "numbers": [
+      "091章"
+    ],
+    "titled_terms": [],
+    "inline_code": []
+  },
+  "manual": {
+    "protected_literals": [],
+    "entities": [
+      "镜辞",
+      "姜霁",
+      "周诚"
+    ],
+    "timeline_facts": [
+      "090处置后次日上午接案；091至092经过五天；093当晚至094次日；094夜约次日市场。"
+    ],
+    "knowledge_boundaries": [
+      "接缝只证错位，未见不认证；原老李状态未知；周衡新接缝与回填分段不能前置。"
+    ],
+    "clues": [
+      "原案身份与长期伏笔未解决，展开人物冲突不增加阵营或能力答案。"
+    ],
+    "voice_markers": [
+      "镜辞问具体人事；姜霁直接追依据；周诚不必感谢；年长者保留旧成功。"
+    ],
+    "intentional_roughness": [
+      "保留未答完的短句、正常问答和有限重复，不把专业对白机械改成隐喻。"
+    ]
+  },
+  "allowed_changes": []
+}

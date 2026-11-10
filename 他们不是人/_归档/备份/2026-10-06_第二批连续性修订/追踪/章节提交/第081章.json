@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 81,
+  "target": "正文/第081章_先把人带出来.md",
+  "accepted_prose_sha256": "a8dea7514238a510922d33e33f697128763b982d3a1446f6f916901092ec325b",
+  "candidate_id": "C20261005-145935",
+  "candidate_manifest": "追踪/候选章/第081章/C20261005-145935/manifest.json",
+  "context_digest": "d833a73d3676b4eb02f0a2e51f75a0f8186f4e93359fff537cbc767123e9c9c3",
+  "state_revision_before": 24,
+  "state_revision_after": 25,
+  "accepted_at": "2026-10-05T07:04:59Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第081章按该授权接纳并写入正文。",
+  "sync_history": [],
+  "closed_at": "2026-10-05T07:05:23Z"
+}

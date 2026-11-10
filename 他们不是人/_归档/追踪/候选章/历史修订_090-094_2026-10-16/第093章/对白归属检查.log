@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16\\第093章\\第093章_旧经验.md",
+  "metrics": {
+    "dialogue_turns": 43,
+    "attribution_count": 7,
+    "attribution_density": 0.163,
+    "max_consecutive_tagged_turns": 2,
+    "top_verb": {
+      "value": "说",
+      "count": 6,
+      "ratio": 0.8571428571428571
+    },
+    "top_family": {
+      "value": "说",
+      "count": 6,
+      "ratio": 0.8571428571428571
+    },
+    "baseline_density": 0.02,
+    "recent_density": 0.398
+  },
+  "findings": [],
+  "advisories": [
+    {
+      "severity": "advisory",
+      "code": "verb-family-repeat",
+      "message": "“说”类标记占全部归属标记的 86%"
+    },
+    {
+      "severity": "advisory",
+      "code": "same-verb-repeat",
+      "message": "“说”重复 6 次"
+    }
+  ],
+  "examples": [
+    {
+      "line": 27,
+      "column": 23,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“旧成功是他坚持的依据。这次他也在场。”姜霁说，“你看后面。”"
+    },
+    {
+      "line": 57,
+      "column": 12,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“三份成功别拿掉。”他说。"
+    },
+    {
+      "line": 79,
+      "column": 9,
+      "text": "镜辞说",
+      "subject": "镜辞",
+      "verb": "说",
+      "family": "说",
+      "context": "“我听了。”镜辞说。"
+    },
+    {
+      "line": 101,
+      "column": 20,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“我在复盘会上说的漏案风险，也留。”他说。"
+    },
+    {
+      "line": 121,
+      "column": 11,
+      "text": "说",
+      "subject": null,
+      "verb": "说",
+      "family": "说",
+      "context": "姜霁收齐获准的旧档，说：“我手里还有一批没有结论的。”"
+    },
+    {
+      "line": 143,
+      "column": 23,
+      "text": "问",
+      "subject": null,
+      "verb": "问",
+      "family": "问",
+      "context": "守钟人从后间出来，将台面上的工具盒挪回原处，问：“又带名单？”"
+    },
+    {
+      "line": 145,
+      "column": 10,
+      "text": "镜辞说",
+      "subject": "镜辞",
+      "verb": "说",
+      "family": "说",
+      "context": "“还没结论。”镜辞说。"
+    }
+  ],
+  "next_action": "continue_with_semantic_dialogue_review"
+}

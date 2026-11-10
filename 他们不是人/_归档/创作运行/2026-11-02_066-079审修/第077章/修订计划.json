@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-077-20261102",
+  "summary": "保留一次长期居住风险问答，删午后同义重问与重复回答",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第077章_别告诉镜辞.md",
+    "大纲/细纲_第077章.md"
+  ],
+  "affected_entities": [
+    "唐宁",
+    "旧市场"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    77
+  ]
+}

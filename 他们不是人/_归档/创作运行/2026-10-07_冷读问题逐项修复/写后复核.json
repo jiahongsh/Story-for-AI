@@ -1,0 +1,233 @@
+[
+  {
+    "chapter": 5,
+    "path": "正文/第005章_她也在看我.md",
+    "sha256": "2ee1cf5e6abf252e2daefb50ec454c9fc50b0b206996d9aeaa22892df90dace8",
+    "before_chars": 1880,
+    "after_chars": 1880,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 33,
+    "path": "正文/第033章_02点17分.md",
+    "sha256": "95fef896fa8766b386d0e8e760723b428467f6708ca08d4f01229cebf15af233",
+    "before_chars": 2301,
+    "after_chars": 2312,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 45,
+    "path": "正文/第045章_争议中.md",
+    "sha256": "16ee62eae33c8f90d3756c528b7017a9c3e0ecf77a4e0ef2501c9b1795168a78",
+    "before_chars": 2726,
+    "after_chars": 2742,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 56,
+    "path": "正文/第056章_清理轨迹.md",
+    "sha256": "382869cf7572392a51afcda718c36aa17d820b0a8be036fb8bba97d5fc521777",
+    "before_chars": 3462,
+    "after_chars": 3493,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 59,
+    "path": "正文/第059章_工单跟着我走.md",
+    "sha256": "c36a6fd382a1942fcfad7c4812d60ed1f00564f4a3f40d0033d445e195616ddf",
+    "before_chars": 3269,
+    "after_chars": 3324,
+    "changed_lines": [
+      37
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 66,
+    "path": "正文/第066章_空白页.md",
+    "sha256": "8c99c7e91e0f4aee6ed84985fc0659a2cfa3af51c3048fc08807fc348a375bab",
+    "before_chars": 2688,
+    "after_chars": 2702,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 70,
+    "path": "正文/第070章_先喝汤是谁教的.md",
+    "sha256": "cbfff3b04e9e3e2b45f37f0ae1951aff97f5ec06dc420ac12f9b99e2b89ca471",
+    "before_chars": 2524,
+    "after_chars": 2560,
+    "changed_lines": [
+      37
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 71,
+    "path": "正文/第071章_复核日.md",
+    "sha256": "b7725173e8937743999787bd5b8b1b619e5ee6a5f8ede50f91e9c5822d8595eb",
+    "before_chars": 2881,
+    "after_chars": 2888,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 72,
+    "path": "正文/第072章_不是为了反着来.md",
+    "sha256": "44d9397da490d7450ad5f7c4e23fe9a585b71afad4488ca7ea91bb062d6ab31c",
+    "before_chars": 3166,
+    "after_chars": 3169,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 73,
+    "path": "正文/第073章_又到两点十七.md",
+    "sha256": "375f512d420fa878820bfd5e75802a5ff157cb47561f043f546d62bb51e96df4",
+    "before_chars": 2109,
+    "after_chars": 2124,
+    "changed_lines": [
+      5,
+      43
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 79,
+    "path": "正文/第079章_哪些是我的.md",
+    "sha256": "653a5769d7641f89bfa942802656a0d70566592996ade80a66387e4d805231be",
+    "before_chars": 1952,
+    "after_chars": 1952,
+    "changed_lines": [
+      51
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 80,
+    "path": "正文/第080章_不能只看着.md",
+    "sha256": "1f2c8acb8bf7a185fd0eac9d6b435f63fe31b0c6fe67dc300498464d6973d61d",
+    "before_chars": 975,
+    "after_chars": 975,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 99,
+    "path": "正文/第099章_一只真的坏表.md",
+    "sha256": "3fa042f97af751045780a9a47bae8dac07e2608f115f983af3af62141e5f7cbb",
+    "before_chars": 814,
+    "after_chars": 878,
+    "changed_lines": [
+      11,
+      21,
+      27
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 100,
+    "path": "正文/第100章_第一道缝.md",
+    "sha256": "5b263e0acdbb8edc0d65f86168e1cd5a4b94985e3d58b727ebbe2be0666b401a",
+    "before_chars": 1990,
+    "after_chars": 1946,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 101,
+    "path": "正文/第101章_死人刷了门禁.md",
+    "sha256": "cfbca4be668c6c0301ed8285af950c844dab13d7d9a782a5f7d3d5e2e0bcb85c",
+    "before_chars": 3665,
+    "after_chars": 3670,
+    "changed_lines": [
+      383
+    ],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 61,
+    "path": "正文/第061章_来修表的人.md",
+    "sha256": "69fafe501834d5b95e0321bf97663b6e2ce5645afdd32f59561cfbd5d04e592e",
+    "before_chars": 3732,
+    "after_chars": 3668,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 74,
+    "path": "正文/第074章_不是我的履历.md",
+    "sha256": "9dcd39478b46eabbe1b862b18acbd4f546e2f011d4d5ca9a12cb5308fe8cd085",
+    "before_chars": 2847,
+    "after_chars": 2792,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 75,
+    "path": "正文/第075章_不看也收尾.md",
+    "sha256": "76a92f53d8d394532dd0f2c56d7c5d3da145199cfc3969777d2fe8d57cd6a076",
+    "before_chars": 3299,
+    "after_chars": 3243,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 84,
+    "path": "正文/第084章_今晚不回去.md",
+    "sha256": "bc4df496064314cae6bc0c9d87d5766ec0ada21b1df8d452a71c03780f9d95b4",
+    "before_chars": 3198,
+    "after_chars": 3181,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 86,
+    "path": "正文/第086章_知道，和做到.md",
+    "sha256": "026afdc9fa78ac8c755f4b2343c5c0f27920ce613e6f45c255da822109c03d10",
+    "before_chars": 2135,
+    "after_chars": 2116,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 88,
+    "path": "正文/第088章_先停下来.md",
+    "sha256": "15c2a670a7fe1fe5e1bd6f2a3fe50737af283cfc1807410036773b6dfdc65fbd",
+    "before_chars": 1871,
+    "after_chars": 1826,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 90,
+    "path": "正文/第090章_剥开以后.md",
+    "sha256": "6a0bb82d9b55fb3d3f972e0d51364b348656e02901d52045ce6565c0fa395eff",
+    "before_chars": 1741,
+    "after_chars": 1732,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 92,
+    "path": "正文/第092章_右肩.md",
+    "sha256": "cc040b09f133a66b931aa0edfa3617526f49d36853d1c3ade4a026244145416f",
+    "before_chars": 1351,
+    "after_chars": 1325,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  },
+  {
+    "chapter": 95,
+    "path": "正文/第095章_七天都正常.md",
+    "sha256": "87e7975b478128a0c4160931cc08cfcb13bba608d939c440ada3b93c1d111b23",
+    "before_chars": 1087,
+    "after_chars": 1021,
+    "changed_lines": [],
+    "semantic_review": "限定事实口径及既有动机，未授予新能力/组织知识；实际正文与冻结七关一致"
+  }
+]

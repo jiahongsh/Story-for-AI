@@ -1,0 +1,45 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27\\第099章\\第099章_一只真的坏表.md",
+  "metrics": {
+    "dialogue_turns": 30,
+    "attribution_count": 2,
+    "attribution_density": 0.067,
+    "max_consecutive_tagged_turns": 1,
+    "top_verb": {
+      "value": "说",
+      "count": 2,
+      "ratio": 1
+    },
+    "top_family": {
+      "value": "说",
+      "count": 2,
+      "ratio": 1
+    },
+    "baseline_density": 0.025,
+    "recent_density": 0.262
+  },
+  "findings": [],
+  "advisories": [],
+  "examples": [
+    {
+      "line": 25,
+      "column": 10,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“先清灰校时。”他说，“里面有个小件要再看。”"
+    },
+    {
+      "line": 37,
+      "column": 15,
+      "text": "周衡说",
+      "subject": "周衡",
+      "verb": "说",
+      "family": "说",
+      "context": "“买一只也就那么回事。”周衡说。"
+    }
+  ],
+  "next_action": "continue_workflow"
+}

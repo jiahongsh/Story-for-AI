@@ -1,0 +1,186 @@
+{
+  "status": "semantic_review_required",
+  "severity": "advisory",
+  "chapter": 91,
+  "window": 6,
+  "candidate": {
+    "chapter": 91,
+    "path": "追踪/候选章/历史修订_090-094_2026-10-16/第091章/第091章_没有缝.md",
+    "sha256": "d9a5e1cae1eb0058b709248ceaa12d3f1eb1e86d7653e6c9e2836f70b7b6fff1",
+    "opening_mode": "exposition",
+    "ending_mode": "action",
+    "metrics": {
+      "dialogue_rate_pct": 37.3333,
+      "question_rate_pct": 17.3333,
+      "qa_pair_candidates_per_100p": 5.3333,
+      "rule_marker_per_1k": 3.0045,
+      "procedure_marker_per_1k": 2.5038,
+      "explanation_marker_per_1k": 0.5008
+    },
+    "opening_excerpt": "周诚的文件夹在柜台上摊了一上午。 / 第一页是妻子的求助，后面几页挤着动作记录。换手拿东西，抱孩子换边，进门先摸另一侧的钥匙盘。镜辞顺着日期往下看，发现不少已经被划掉，旁边另写了原因。 / “外派半年，回来以后开始变。”姜霁说，“我们观察了两周。排班、住处、夫妻冷战、孩子长高，能",
+    "ending_excerpt": "姜霁将笔停在申请日期上：“周诚这次要核的是右肩。老李给不了这条材料。” / 镜辞没再问。 / 回店后，他把两份记录分别收好。周诚的文件夹里，待核材料那一页留在最上面。镜辞没有另记小区门外的观察位置，下午仍坐回柜台，修上午没修完的表。"
+  },
+  "history": [
+    {
+      "chapter": 85,
+      "path": "正文/第085章_她摔了一下.md",
+      "sha256": "fbbdeba16a0c9b99dad8de4109ef54e0195ed7b40c6f0488c2e4c0c61dbcd7dc",
+      "opening_mode": "exposition",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 26.1905,
+        "question_rate_pct": 4.7619,
+        "qa_pair_candidates_per_100p": 2.381,
+        "rule_marker_per_1k": 1.3393,
+        "procedure_marker_per_1k": 1.3393,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "取物约在下午三点。张岚仍住姐姐家，换洗衣物、身份证复印件和另一盒常备药还在楼上。姜霁提前把时间发给物业，公共区安排两名安保，另有一名行动员站在单元门外，不进门。门内十分钟。超时结束。 / “今晚还是不住这里。”张岚在车里说，嗓子发干，“只拿东西。拿完就走。” / 镜辞点头。协查复",
+      "ending_excerpt": "姜霁回复：已记。明日再谈验证方法。 / 夜里，镜辞提出下一次怎样验证，姜霁把今日失衡备案放到他面前：“不能设计她再摔一次。她只愿拿自然留下的片段，就只看那些。” / 他收起本子，没有给张岚发重演的要求。那只花瓶仍在原来的家里，今晚她住姐姐家，取回的药和衣服放在自己身边。"
+    },
+    {
+      "chapter": 86,
+      "path": "正文/第086章_知道，和做到.md",
+      "sha256": "026afdc9fa78ac8c755f4b2343c5c0f27920ce613e6f45c255da822109c03d10",
+      "opening_mode": "exposition",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 16.6667,
+        "question_rate_pct": 5.5556,
+        "qa_pair_candidates_per_100p": 2.7778,
+        "rule_marker_per_1k": 3.4345,
+        "procedure_marker_per_1k": 8.5861,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "第二天上午，张岚把一个加密优盘交给姜霁。优盘里只有她自愿挑出的片段：门口监控、手机随手录、历年的家庭短视频。片段全是旧日随手留下的，没有为调查重演。 / “你们只看自然发生过的。”她说，嗓子发干，“别让我再摔一次给你们看。” / 姜霁点头。“不做实验。只核对。”",
+      "ending_excerpt": "镜辞看着那句不教他动作，胸口沉下去一点。沉的是老李那句我可以改。改字像一把钥匙，钥匙一旦递出去，门锁的形状就会被人量走。量走以后，那些动作就不能再当作没有教过的依据。 / 姜霁把评估单留给他一页，写明转入队列不等于强制带走，分居继续。张岚后来发来想念旧片段那个人的短信，姜霁没有转"
+    },
+    {
+      "chapter": 87,
+      "path": "正文/第087章_他学得很快.md",
+      "sha256": "5dd2f0b2dd8735d37dcb875bfe9d756b345cc0feaf1feb2020f167be5e57903f",
+      "opening_mode": "exposition",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 21.4286,
+        "question_rate_pct": 0.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.8802,
+        "procedure_marker_per_1k": 3.4562,
+        "explanation_marker_per_1k": 1.1521
+      },
+      "opening_excerpt": "第三天他们再去城南旧小区，公共区交接剩余物品。张岚只取两件冬衣和一只药箱隔层，姜霁带着镜辞和一名物业员进门，行动员仍停在单元门外。门内时限仍是十分钟，超时就撤。 / 老李先把走廊小灯打开，灯亮了，他才侧身让路。张岚轻咳一声，他已经转身去厨房接水，水杯递到她手边时指尖很稳，稳得像排",
+      "ending_excerpt": "姜霁回：已记。公开标准清单已更新。 / 镜辞把下降那行补成相关、因果未知。张岚仍不肯共住，老李的信纸请求也没有被扔掉。姜霁次晨带来法律咨询预约，要核的是这套租赁住宅中哪些临时权限能停、机械钥匙怎样处理，不由夫妻字段替他们决定。 / 他收好记录，没有先跟去试那扇门。"
+    },
+    {
+      "chapter": 88,
+      "path": "正文/第088章_先停下来.md",
+      "sha256": "15c2a670a7fe1fe5e1bd6f2a3fe50737af283cfc1807410036773b6dfdc65fbd",
+      "opening_mode": "exposition",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 16.6667,
+        "question_rate_pct": 4.1667,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.5806,
+        "procedure_marker_per_1k": 3.871,
+        "explanation_marker_per_1k": 0.6452
+      },
+      "opening_excerpt": "法律咨询约在上午。张岚带着本人为主租户的租约、个人门锁账号及物业申请。律师逐项核本案临时安全安排，房屋产权属出租方；夫妻共同居住的事实、老李的长期居住主张均保留，今天不借身份疑点裁断。咨询室的空调声很稳，稳得像故意把情绪压低。姜霁只带张岚问清一件事：哪些私人授权可以先停，停了也不",
+      "ending_excerpt": "“人在，位置先空着。”镜辞说。位置空着不等于他被注销。注销的笔他们今天没拿。没拿，合作才还像协查，不像判决。 / 姜霁确认张岚仍在姐姐家，门锁本地暂停与机械备用通道都没有因同步恢复。她把当夜安置和老李要求后续审查的请求分别收好，临时安全没有被写成婚姻或居住权已永久注销。 / 镜辞"
+    },
+    {
+      "chapter": 89,
+      "path": "正文/第089章_另一个住处.md",
+      "sha256": "edcbfc28e60f60b94c5deff82075aef32cf5d2c1acd4d9772e82e7e69b9892e1",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 14.8148,
+        "question_rate_pct": 7.4074,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 1.7986,
+        "procedure_marker_per_1k": 2.3981,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "城北旧仓库的门缝里先漏出潮气。潮气贴着水泥地走，走过折叠床腿，走过电热壶底盘，走过墙角一叠皱了边的现金小票。姜霁拿到场地产权方同意和现场程序许可后，才带镜辞跟外围观察的人进去。进去只看，不碰。不碰是条款。条款写在她夹子第一页。 / 折叠床垫压出长期睡印，睡印中间凹下去一块，凹处还",
+      "ending_excerpt": "镜辞在本子上又写一行：独立生活成立。强制由危险触发。身份未知。写完他合上本子。合上的页里，收音机零件的边还烫。烫的是未知。未知压着条款。条款压着他把“里面的人”四个字咽回去。咽回去的夜里，仓库灯灭了一半。灭了一半的灯下，城北这间住处第一次被单独立档。 / 回城的车上，姜霁让他核程"
+    },
+    {
+      "chapter": 90,
+      "path": "正文/第090章_剥开以后.md",
+      "sha256": "6a0bb82d9b55fb3d3f972e0d51364b348656e02901d52045ce6565c0fa395eff",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 12.0,
+        "question_rate_pct": 8.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.7454,
+        "procedure_marker_per_1k": 8.2361,
+        "explanation_marker_per_1k": 2.7454
+      },
+      "opening_excerpt": "受控处置点的灯白得发冷。冷光贴着地面走，走过约束带，走过隔音墙，走过玻璃观察口。张岚不在场。姜霁提前把这句写进程序：当事人无义务亲眼看丈夫里面有什么。 / 承担镇封的行动员站在约束区外，将限制范围保持在目标这一侧。另一名负责定向剥蚀，自己先核清外观伪装层的位置，只作一次短介入；镇",
+      "ending_excerpt": "镜辞盯着那行字，喉咙发紧。紧的是“未见”。未见写不成通过，也写不成否定存在。他抬眼看姜霁。 / 姜霁说：“先读。读完再决定你跟不跟。” / 镜辞将新案卷按在柜台上，只看姜霁给的关联页。老李受控回执仍留在另一个袋里，风险已经降低，原来的丈夫却没有因此得到确认。下一份未见的记录，也不"
+    }
+  ],
+  "comparisons": [
+    {
+      "chapter": 85,
+      "similarity": 0.4838,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 86,
+      "similarity": 0.4922,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 87,
+      "similarity": 0.4486,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 88,
+      "similarity": 0.508,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 89,
+      "similarity": 0.48,
+      "same_opening_mode": false,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 90,
+      "similarity": 0.3639,
+      "same_opening_mode": false,
+      "same_ending_mode": true
+    }
+  ],
+  "signals": [
+    {
+      "code": "ending-mode-run",
+      "mode": "action",
+      "chapters": [
+        88,
+        89,
+        90,
+        91
+      ],
+      "message": "连续四章使用同一粗粒度收尾方式；检查钩子功能是否也同构。"
+    }
+  ],
+  "review_questions": [
+    "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+    "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+    "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+    "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+    "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+  ],
+  "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+}

@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27\\第096章\\第096章_没有缝的人.md",
+  "metrics": {
+    "dialogue_turns": 24,
+    "attribution_count": 0,
+    "attribution_density": 0,
+    "max_consecutive_tagged_turns": 0,
+    "top_verb": {
+      "value": null,
+      "count": 0,
+      "ratio": 0
+    },
+    "top_family": {
+      "value": null,
+      "count": 0,
+      "ratio": 0
+    },
+    "baseline_density": 0.025,
+    "recent_density": 0.44
+  },
+  "findings": [],
+  "advisories": [],
+  "examples": [],
+  "next_action": "continue_workflow"
+}

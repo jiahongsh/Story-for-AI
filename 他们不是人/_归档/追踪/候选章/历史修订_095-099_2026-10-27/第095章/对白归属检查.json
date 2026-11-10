@@ -1,0 +1,63 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27\\第095章\\第095章_七天都正常.md",
+  "metrics": {
+    "dialogue_turns": 29,
+    "attribution_count": 4,
+    "attribution_density": 0.138,
+    "max_consecutive_tagged_turns": 1,
+    "top_verb": {
+      "value": "说",
+      "count": 2,
+      "ratio": 0.5
+    },
+    "top_family": {
+      "value": "说",
+      "count": 2,
+      "ratio": 0.5
+    },
+    "baseline_density": 0.025,
+    "recent_density": 0.437
+  },
+  "findings": [],
+  "advisories": [],
+  "examples": [
+    {
+      "line": 31,
+      "column": 20,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“查七天，你总想让它留下点什么。”姜霁说，“先把这七天留下。”"
+    },
+    {
+      "line": 63,
+      "column": 31,
+      "text": "问",
+      "subject": null,
+      "verb": "问",
+      "family": "问",
+      "context": "镜辞在本子上写下回填嫌疑，后面留出空位。猫眼看见他又提笔，便问：“后头准备添谁？”"
+    },
+    {
+      "line": 73,
+      "column": 9,
+      "text": "猫眼问",
+      "subject": "猫眼",
+      "verb": "问",
+      "family": "问",
+      "context": "“能看吗？”猫眼问。"
+    },
+    {
+      "line": 109,
+      "column": 10,
+      "text": "镜辞说",
+      "subject": "镜辞",
+      "verb": "说",
+      "family": "说",
+      "context": "“修水管的。”镜辞说。"
+    }
+  ],
+  "next_action": "continue_workflow"
+}

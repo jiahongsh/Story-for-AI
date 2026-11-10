@@ -1,0 +1,14 @@
+{
+  "run_version": 1,
+  "run_id": "ch094_final2",
+  "status": "draft",
+  "created_at": "2026-10-16T07:51:27.842602+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16",
+  "source_path": "第094章/第094章_十一份.md",
+  "source_sha256": "ab8ee16bda654ed5b456282a76404fbb735ac6ef5825cd1707ca7e81affd9d53",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light"
+}

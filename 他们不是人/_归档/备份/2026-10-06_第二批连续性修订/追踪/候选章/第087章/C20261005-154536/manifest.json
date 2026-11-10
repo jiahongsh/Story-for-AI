@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "candidate_id": "C20261005-154536",
+  "status": "committed",
+  "created_at": "2026-10-05T07:45:36Z",
+  "project_root": "D:\\code\\stroy\\他们不是人",
+  "chapter": 87,
+  "target": "正文/第087章_他学得很快.md",
+  "candidate": "追踪/候选章/第087章/C20261005-154536/candidate.md",
+  "outline": "大纲/细纲_第087章.md",
+  "approval_mode": "auto",
+  "authorization_note": "用户本次明确说自动定稿。授权连续写并自动定稿第086-088章；每章单独过门禁、接纳、写入正文、提交追踪与doctor；本批次最多三章，结束后或中断即失效。",
+  "expected_last_committed_chapter": 86,
+  "expected_state_revision": 30,
+  "writing_method": {
+    "method_branch": "A-standard",
+    "method_id": null,
+    "implicit_default": true
+  },
+  "base_files": [
+    {
+      "path": "大纲/细纲_第087章.md",
+      "sha256": "de9247ea7299fc364971d8e08e15c818b7b5b414e997f4e8d1bba757c167d197",
+      "size": 3040
+    },
+    {
+      "path": "追踪/上下文.md",
+      "sha256": "87110ff7878523a533e6ada59ecfd573f34d50de6a5b2af3bc25296e3ad5ac70",
+      "size": 4499
+    },
+    {
+      "path": "正文/第086章_知道，和做到.md",
+      "sha256": "52284b3855602673096dccdfe90049268b0c0f932fd9c6091c1979f2c39290ef",
+      "size": 9067
+    },
+    {
+      "path": "大纲/卷纲_第一卷.md",
+      "sha256": "d450bec1d640442dd73e6765dffebc4525654436661643ae22f54fa959972d2b",
+      "size": 12810
+    }
+  ],
+  "context_digest": "0c4f866efec0bce38d4e089759ce93985e04ac34760093ddacb477922fc68760",
+  "validation": {
+    "status": "fresh",
+    "changed": [],
+    "current_last_committed_chapter": 86,
+    "current_state_revision": 30,
+    "current_context_digest": "0c4f866efec0bce38d4e089759ce93985e04ac34760093ddacb477922fc68760",
+    "candidate_sha256": "92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387",
+    "gates": [
+      {
+        "name": "writing_method",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ready\",\n  \"method_branch\": \"A-standard\",\n  \"implicit_default\": true,\n  \"runtime_strategy\": \"existing-style-recall\",\n  \"read_benchmark_style\": true,\n  \"read_raw_anchor_excerpts\": true\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "ready",
+          "method_branch": "A-standard",
+          "implicit_default": true,
+          "runtime_strategy": "existing-style-recall",
+          "read_benchmark_style": true,
+          "read_raw_anchor_excerpts": true
+        }
+      },
+      {
+        "name": "language",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第087章\\C20261005-154536\\candidate.md\n",
+        "stderr": ""
+      },
+      {
+        "name": "ai_patterns",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第087章\\C20261005-154536\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/33 段（18.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/33 (18.2%))\nD:\\code\\stroy\\他们不是人\\追踪\\候选章\\第087章\\C20261005-154536\\candidate.md:5:1: [advisory] metaphor-density-tic: 比喻密度过高：像/好像/仿佛/如同等比喻标记 8 处（4.3/千字）；保留最有叙事功能的少数比喻，其余回到具体动作、物件、声音或后果，不要换成新比喻。 (张岚轻咳一声，他已经转身去厨房接水，水杯递到她手边时指尖很稳，稳得像排练过 | 玄关那只玻璃花瓶被他提前收到柜子顶层，柜门关严，关严的响声很轻，轻得像怕再...)\n",
+        "stderr": ""
+      },
+      {
+        "name": "degeneration",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "prose_metrics",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"measured\",\n  \"file\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\候选章\\\\第087章\\\\C20261005-154536\\\\candidate.md\",\n  \"sha256\": \"92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387\",\n  \"character_count\": 2219,\n  \"sentence_count\": 145,\n  \"paragraph_count\": 33,\n  \"bucket_contract\": {\n    \"short\": \"1-8字\",\n    \"medium\": \"9-34字\",\n    \"long\": \"35字及以上\"\n  },\n  \"sentence_distribution\": {\n    \"short\": {\n      \"count\": 38,\n      \"rate_pct\": 26.2069\n    },\n    \"medium\": {\n      \"count\": 100,\n      \"rate_pct\": 68.9655\n    },\n    \"long\": {\n      \"count\": 7,\n      \"rate_pct\": 4.8276\n    }\n  },\n  \"sentence_mean_chars\": 15.3034,\n  \"sentence_median_chars\": 13.0,\n  \"paragraph_mean_chars\": 67.2424,\n  \"paragraph_median_chars\": 73.0,\n  \"sentences_per_paragraph\": 4.3939,\n  \"instruction\": \"只报告实测值；这些统计用于定位复核，不是跨题材质量配额。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "measured",
+          "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第087章\\C20261005-154536\\candidate.md",
+          "sha256": "92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387",
+          "character_count": 2219,
+          "sentence_count": 145,
+          "paragraph_count": 33,
+          "bucket_contract": {
+            "short": "1-8字",
+            "medium": "9-34字",
+            "long": "35字及以上"
+          },
+          "sentence_distribution": {
+            "short": {
+              "count": 38,
+              "rate_pct": 26.2069
+            },
+            "medium": {
+              "count": 100,
+              "rate_pct": 68.9655
+            },
+            "long": {
+              "count": 7,
+              "rate_pct": 4.8276
+            }
+          },
+          "sentence_mean_chars": 15.3034,
+          "sentence_median_chars": 13.0,
+          "paragraph_mean_chars": 67.2424,
+          "paragraph_median_chars": 73.0,
+          "sentences_per_paragraph": 4.3939,
+          "instruction": "只报告实测值；这些统计用于定位复核，不是跨题材质量配额。"
+        }
+      },
+      {
+        "name": "outline_copy",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "[PASS] candidate.md: 未发现未登记的细纲连续照搬\n",
+        "stderr": ""
+      },
+      {
+        "name": "accepted_voice_profile",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"not_configured\",\n  \"severity\": \"advisory\",\n  \"candidate\": \"追踪/候选章/第087章/C20261005-154536/candidate.md\",\n  \"message\": \"尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "not_configured",
+          "severity": "advisory",
+          "candidate": "追踪/候选章/第087章/C20261005-154536/candidate.md",
+          "message": "尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。"
+        }
+      },
+      {
+        "name": "cross_chapter_shape",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "per_1k\": 1.6661,\n        \"procedure_marker_per_1k\": 4.9983,\n        \"explanation_marker_per_1k\": 0.3332\n      },\n      \"opening_excerpt\": \"薄纸还在台面上，背面朝上。守钟人把茶又端出来，茶水晃过碗沿，没洒。姜霁坐下，把笔帽拧开，笔帽掉在桌边，她伸手去捡，指节撞到铁盒沿，疼得抽了一口气。 / “谈。”她说。 / 镜辞把纸翻过来。正面只有身份和几行空条款。他先写姜霁那边要的限制，字写得很慢，慢到笔尖在纸上多停了两拍。\",\n      \"ending_excerpt\": \"姜霁没有上楼。她在店门口停了一停，把明天取物的时间发到张岚姐姐的号码上，发完才说：“你回去睡。明天我叫你。” / 镜辞点头。点头的时候胸口仍沉，沉的是城南那扇还亮着的灯。灯不在旧市场。城南的灯他今晚没上去看。没上去，条款才算生效了第一夜。 / 店里茶凉了。凉了的茶守钟人端回去。端\"\n    },\n    {\n      \"chapter\": 84,\n      \"path\": \"正文/第084章_今晚不回去.md\",\n      \"sha256\": \"e05e8d653826c8b69d50157746efee9d9516812bad939bff65096b357ea743d1\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"deadline\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 30.5085,\n        \"question_rate_pct\": 5.0847,\n        \"qa_pair_candidates_per_100p\": 0.0,\n        \"rule_marker_per_1k\": 1.0388,\n        \"procedure_marker_per_1k\": 3.1163,\n        \"explanation_marker_per_1k\": 1.385\n      },\n      \"opening_excerpt\": \"早上七点四十，姜霁的电话先响。张岚姐姐确认人到了，胃药没有带出来，银行卡也没有。共享门锁还开着，车钥匙还在老李那边。 / “今晚继续住这边。”张岚在电话里说，嗓子发干，“药得取。门锁我想先停。” / 姜霁把三件事写进本子：住处、药物、权限。写完她看向镜辞。“你跟。只观察。观察完按\",\n      \"ending_excerpt\": \"“不发。”镜辞说。 / 他把私人本合上。合上的页里，张岚不敢睡着的那一个月还热，老李耳后那道缝还在，身份结论的空格还空着。空着，今晚才算真的没有把人判完。 / 傍晚前姜霁又打给张岚一次。电话里只确认三件事：人仍在姐家；药够今晚；门锁暂停回执她已拍照存档。张岚说完“今晚不回去”，把\"\n    },\n    {\n      \"chapter\": 85,\n      \"path\": \"正文/第085章_她摔了一下.md\",\n      \"sha256\": \"8cc6118fa8ce4d3021d2fae56ec90beb59cb5937f17fa7b0e98d36def5c8b098\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"action\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 27.6596,\n        \"question_rate_pct\": 4.2553,\n        \"qa_pair_candidates_per_100p\": 2.1277,\n        \"rule_marker_per_1k\": 0.7474,\n        \"procedure_marker_per_1k\": 1.1211,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"取物约在下午三点。张岚仍住姐姐家，换洗衣物、身份证复印件和另一盒常备药还在楼上。姜霁提前把时间发给物业，公共区安排两名安保，另有一名行动员站在单元门外，不进门。门内十分钟。超时结束。 / “今晚还是不住这里。”张岚在车里说，嗓子发干，“只拿东西。拿完就走。” / 镜辞点头。协查复\",\n      \"ending_excerpt\": \"“验她愿不愿意继续靠近。愿意的边界由她写。我们只保证边界不被他用正确知识冲垮。”姜霁把夹子合上，合上时纸边刮过指腹，刮得她抽了一口气，“正确知识最难缠。难缠的东西今天已经露面了。” / 镜辞点头。点头时胸口仍沉。沉的是那半秒：花瓶先稳，人才稳。人稳了，门更不敢开。门不敢开的夜里，\"\n    },\n    {\n      \"chapter\": 86,\n      \"path\": \"正文/第086章_知道，和做到.md\",\n      \"sha256\": \"52284b3855602673096dccdfe90049268b0c0f932fd9c6091c1979f2c39290ef\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"deadline\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 20.0,\n        \"question_rate_pct\": 4.0,\n        \"qa_pair_candidates_per_100p\": 2.0,\n        \"rule_marker_per_1k\": 1.9833,\n        \"procedure_marker_per_1k\": 7.9334,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"第二天上午，张岚把一个加密优盘交给姜霁。优盘里只有她自愿挑出的片段：门口监控、手机随手录、两年前的家庭短视频。片段全是旧日随手留下的，没有为调查重演。 / “你们只看自然发生过的。”她说，嗓子发干，“别让我再摔一次给你们看。” / 姜霁点头。“不做实验。只核对。”\",\n      \"ending_excerpt\": \"姜霁清晨打来电话，声音仍平：“评估单已进处置队列。队列不等于强制带走。今天先观察他会不会自己补动作。补了，你记；别当场纠正他。” / “不纠正。”镜辞说。 / 挂断以后他把电话放下，放下时手心仍热。热的是他知道下一场会更难写。难写的是正确动作开始长出来之后，眼睛还怎么站得住。站得\"\n    }\n  ],\n  \"comparisons\": [\n    {\n      \"chapter\": 81,\n      \"similarity\": 0.4046,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 82,\n      \"similarity\": 0.4138,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 83,\n      \"similarity\": 0.3241,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 84,\n      \"similarity\": 0.7179,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 85,\n      \"similarity\": 0.3197,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 86,\n      \"similarity\": 0.2841,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": true\n    }\n  ],\n  \"signals\": [],\n  \"review_questions\": [\n    \"近章是否反复用同一种冲突发动机，而不只是共享题材物件？\",\n    \"配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？\",\n    \"信息是否总通过分栏、列举、公开验证或总结性对白交付？\",\n    \"章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？\",\n    \"候选是否保留人物特有的误解、回避、私心或未解决代价？\"\n  ],\n  \"instruction\": \"结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "semantic_review_required",
+          "severity": "advisory",
+          "chapter": 87,
+          "window": 6,
+          "candidate": {
+            "chapter": 87,
+            "path": "追踪/候选章/第087章/C20261005-154536/candidate.md",
+            "sha256": "92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387",
+            "opening_mode": "exposition",
+            "ending_mode": "deadline",
+            "metrics": {
+              "dialogue_rate_pct": 18.1818,
+              "question_rate_pct": 0.0,
+              "qa_pair_candidates_per_100p": 0.0,
+              "rule_marker_per_1k": 0.9013,
+              "procedure_marker_per_1k": 2.7039,
+              "explanation_marker_per_1k": 1.352
+            },
+            "opening_excerpt": "第三天他们再去城南旧小区，公共区交接剩余物品。张岚只取两件冬衣和一只药箱隔层，姜霁带着镜辞和一名物业员进门，行动员仍停在单元门外。门内时限仍是十分钟，超时就撤。 / 老李先把走廊小灯打开，灯亮了，他才侧身让路。张岚轻咳一声，他已经转身去厨房接水，水杯递到她手边时指尖很稳，稳得像排",
+            "ending_excerpt": "他在开门前又把私人本翻到空白，空白处写下今日上限：已暴露标准作废；更像时接缝更淡；张岚仍拒绝共住；下一步停私人授权。写完他停笔。停笔时指节还发紧。发紧过去，新的一天才算真正开始。 / 姜霁临出门前把法律咨询的预约条按在柜台上。预约条上只有时间和地址，没有罪名。她说：“停授权要走得"
+          },
+          "history": [
+            {
+              "chapter": 81,
+              "path": "正文/第081章_先把人带出来.md",
+              "sha256": "a8dea7514238a510922d33e33f697128763b982d3a1446f6f916901092ec325b",
+              "opening_mode": "exposition",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 12.1951,
+                "question_rate_pct": 2.439,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 2.2809,
+                "procedure_marker_per_1k": 0.9775,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "警笛停在市场口。人还没下来。铺里吴老板又哼了一声。哼的是疼。灰外套仍把他按在柜台边上。 / 姜霁对门槛里那个男人说，声音不高，每句都能听完。 / “里面两个人。出口只有前门。侧窗钉死。后门从外面上了锁，钥匙在围裙里。”",
+              "ending_excerpt": "人还在西口。血还在纱布上。车已经走了。下一句还没来。 / 灭火器的管子还在漏最后一点白粉。白粉落在米上。米更不能吃。不能吃的十五块仍算损失。损失和吴老板的胳膊分两行。两行镜辞都写了。写的时候笔尖顿住。顿住是因为他还想补一句接缝。接缝他没补进给警察的那一遍。那一遍只有出口和人数。人"
+            },
+            {
+              "chapter": 82,
+              "path": "正文/第082章_姜霁没说的那部分.md",
+              "sha256": "4a52f0a1967de8f3495d43a8f841b363a498fe89fea9c5eae993cbc26cd2a0e8",
+              "opening_mode": "action",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 23.0769,
+                "question_rate_pct": 5.1282,
+                "qa_pair_candidates_per_100p": 5.1282,
+                "rule_marker_per_1k": 3.0,
+                "procedure_marker_per_1k": 3.0,
+                "explanation_marker_per_1k": 0.6667
+              },
+              "opening_excerpt": "他们离开西口的时候，担架已经不在。警察还在铺里。八十六块仍标着现场。刘成坐在卫生站方向的三轮边，手腕固定着。二十块今天没有。灭火器的管子还漏过粉，充装三十写在市场的本子上。镜辞和姜霁走回钟表行。鞋边有干了的酱油。酱油是六块那瓶。 / 路上他问了一次号码现在打不打。姜霁说这一次人已",
+              "ending_excerpt": "未谈两个字他看了很久。看的时候没把她叫回来。她的路还在北河方向。方向上的平安只有一个字。一个字够今天。今天的重话留在店里两个人之间。两个人都没有签名。没有签名，茶还是喝了。茶凉了。凉了的茶守钟人端回去。端回去的时候他看了眼台面，没问那张薄纸。不问，纸还在。纸在，下一场才能谈。下一"
+            },
+            {
+              "chapter": 83,
+              "path": "正文/第083章_合作条件.md",
+              "sha256": "793642b67d622375c9900277b96f90607d598f2cffadd9e3db4495e731575e83",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 29.5082,
+                "question_rate_pct": 4.918,
+                "qa_pair_candidates_per_100p": 4.918,
+                "rule_marker_per_1k": 1.6661,
+                "procedure_marker_per_1k": 4.9983,
+                "explanation_marker_per_1k": 0.3332
+              },
+              "opening_excerpt": "薄纸还在台面上，背面朝上。守钟人把茶又端出来，茶水晃过碗沿，没洒。姜霁坐下，把笔帽拧开，笔帽掉在桌边，她伸手去捡，指节撞到铁盒沿，疼得抽了一口气。 / “谈。”她说。 / 镜辞把纸翻过来。正面只有身份和几行空条款。他先写姜霁那边要的限制，字写得很慢，慢到笔尖在纸上多停了两拍。",
+              "ending_excerpt": "姜霁没有上楼。她在店门口停了一停，把明天取物的时间发到张岚姐姐的号码上，发完才说：“你回去睡。明天我叫你。” / 镜辞点头。点头的时候胸口仍沉，沉的是城南那扇还亮着的灯。灯不在旧市场。城南的灯他今晚没上去看。没上去，条款才算生效了第一夜。 / 店里茶凉了。凉了的茶守钟人端回去。端"
+            },
+            {
+              "chapter": 84,
+              "path": "正文/第084章_今晚不回去.md",
+              "sha256": "e05e8d653826c8b69d50157746efee9d9516812bad939bff65096b357ea743d1",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 30.5085,
+                "question_rate_pct": 5.0847,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 1.0388,
+                "procedure_marker_per_1k": 3.1163,
+                "explanation_marker_per_1k": 1.385
+              },
+              "opening_excerpt": "早上七点四十，姜霁的电话先响。张岚姐姐确认人到了，胃药没有带出来，银行卡也没有。共享门锁还开着，车钥匙还在老李那边。 / “今晚继续住这边。”张岚在电话里说，嗓子发干，“药得取。门锁我想先停。” / 姜霁把三件事写进本子：住处、药物、权限。写完她看向镜辞。“你跟。只观察。观察完按",
+              "ending_excerpt": "“不发。”镜辞说。 / 他把私人本合上。合上的页里，张岚不敢睡着的那一个月还热，老李耳后那道缝还在，身份结论的空格还空着。空着，今晚才算真的没有把人判完。 / 傍晚前姜霁又打给张岚一次。电话里只确认三件事：人仍在姐家；药够今晚；门锁暂停回执她已拍照存档。张岚说完“今晚不回去”，把"
+            },
+            {
+              "chapter": 85,
+              "path": "正文/第085章_她摔了一下.md",
+              "sha256": "8cc6118fa8ce4d3021d2fae56ec90beb59cb5937f17fa7b0e98d36def5c8b098",
+              "opening_mode": "exposition",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 27.6596,
+                "question_rate_pct": 4.2553,
+                "qa_pair_candidates_per_100p": 2.1277,
+                "rule_marker_per_1k": 0.7474,
+                "procedure_marker_per_1k": 1.1211,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "取物约在下午三点。张岚仍住姐姐家，换洗衣物、身份证复印件和另一盒常备药还在楼上。姜霁提前把时间发给物业，公共区安排两名安保，另有一名行动员站在单元门外，不进门。门内十分钟。超时结束。 / “今晚还是不住这里。”张岚在车里说，嗓子发干，“只拿东西。拿完就走。” / 镜辞点头。协查复",
+              "ending_excerpt": "“验她愿不愿意继续靠近。愿意的边界由她写。我们只保证边界不被他用正确知识冲垮。”姜霁把夹子合上，合上时纸边刮过指腹，刮得她抽了一口气，“正确知识最难缠。难缠的东西今天已经露面了。” / 镜辞点头。点头时胸口仍沉。沉的是那半秒：花瓶先稳，人才稳。人稳了，门更不敢开。门不敢开的夜里，"
+            },
+            {
+              "chapter": 86,
+              "path": "正文/第086章_知道，和做到.md",
+              "sha256": "52284b3855602673096dccdfe90049268b0c0f932fd9c6091c1979f2c39290ef",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 20.0,
+                "question_rate_pct": 4.0,
+                "qa_pair_candidates_per_100p": 2.0,
+                "rule_marker_per_1k": 1.9833,
+                "procedure_marker_per_1k": 7.9334,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "第二天上午，张岚把一个加密优盘交给姜霁。优盘里只有她自愿挑出的片段：门口监控、手机随手录、两年前的家庭短视频。片段全是旧日随手留下的，没有为调查重演。 / “你们只看自然发生过的。”她说，嗓子发干，“别让我再摔一次给你们看。” / 姜霁点头。“不做实验。只核对。”",
+              "ending_excerpt": "姜霁清晨打来电话，声音仍平：“评估单已进处置队列。队列不等于强制带走。今天先观察他会不会自己补动作。补了，你记；别当场纠正他。” / “不纠正。”镜辞说。 / 挂断以后他把电话放下，放下时手心仍热。热的是他知道下一场会更难写。难写的是正确动作开始长出来之后，眼睛还怎么站得住。站得"
+            }
+          ],
+          "comparisons": [
+            {
+              "chapter": 81,
+              "similarity": 0.4046,
+              "same_opening_mode": true,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 82,
+              "similarity": 0.4138,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 83,
+              "similarity": 0.3241,
+              "same_opening_mode": true,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 84,
+              "similarity": 0.7179,
+              "same_opening_mode": true,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 85,
+              "similarity": 0.3197,
+              "same_opening_mode": true,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 86,
+              "similarity": 0.2841,
+              "same_opening_mode": true,
+              "same_ending_mode": true
+            }
+          ],
+          "signals": [],
+          "review_questions": [
+            "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+            "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+            "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+            "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+            "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+          ],
+          "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+        }
+      }
+    ],
+    "validated_at": "2026-10-05T07:47:22Z"
+  },
+  "approval": {
+    "approved_at": "2026-10-05T07:47:22Z",
+    "mode": "auto",
+    "note": "用户本次明确说自动定稿。第087章按该授权接纳并写入正文。",
+    "candidate_sha256": "92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387"
+  },
+  "promotion": {
+    "promoted_at": "2026-10-05T07:47:23Z",
+    "target_sha256": "92e42c1364b7761467ffc6f1c550cf663aaecab34d34f5b50bef924758ef4387",
+    "receipt": "追踪/章节提交/第087章.json"
+  },
+  "closed_at": "2026-10-05T07:48:00Z",
+  "state_revision_after": 31
+}

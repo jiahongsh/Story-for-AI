@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "auto": {
+    "numbers": [
+      "090章"
+    ],
+    "titled_terms": [],
+    "inline_code": []
+  },
+  "manual": {
+    "protected_literals": [],
+    "entities": [],
+    "timeline_facts": [],
+    "knowledge_boundaries": [],
+    "clues": [],
+    "voice_markers": [],
+    "intentional_roughness": []
+  },
+  "allowed_changes": []
+}

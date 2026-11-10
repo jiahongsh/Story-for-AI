@@ -1,0 +1,174 @@
+{
+  "status": "semantic_review_required",
+  "severity": "advisory",
+  "chapter": 96,
+  "window": 6,
+  "candidate": {
+    "chapter": 96,
+    "path": "追踪/候选章/历史修订_095-099_2026-10-27/第096章/第096章_没有缝的人.md",
+    "sha256": "2961d6d0e2069c7a401320b5dbef5500f310ada8e705126b9431d0790453a105",
+    "opening_mode": "action",
+    "ending_mode": "deadline",
+    "metrics": {
+      "dialogue_rate_pct": 36.3636,
+      "question_rate_pct": 10.9091,
+      "qa_pair_candidates_per_100p": 3.6364,
+      "rule_marker_per_1k": 0.5845,
+      "procedure_marker_per_1k": 1.7534,
+      "explanation_marker_per_1k": 0.0
+    },
+    "opening_excerpt": "修鞋摊老板把箱子挪开，鞋底擦过水泥地，拖出一道湿痕。周衡放下工具袋，蹲在墙边，手还没伸过去，老板先说只动接头。 / “别又让我换一整段。昨天才把这儿收拾好。” / 周衡抬头看他：“我让你今天换了吗？”",
+    "ending_excerpt": "猫眼挪了半叠，镜辞把表盘收回托盘。纸页铺平以后，桌上终于分出了两块地方。 / 傍晚姜霁发来短讯：未见已入档。旧资料暂不外传。 / 镜辞把手机给猫眼看了一眼，将最早那叠留到灯下。八年的履历从那页开始，每一栏都填着，旁边却还没有能一一对上的旧来源。"
+  },
+  "history": [
+    {
+      "chapter": 90,
+      "path": "正文/第090章_剥开以后.md",
+      "sha256": "6a0bb82d9b55fb3d3f972e0d51364b348656e02901d52045ce6565c0fa395eff",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 12.0,
+        "question_rate_pct": 8.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.7454,
+        "procedure_marker_per_1k": 8.2361,
+        "explanation_marker_per_1k": 2.7454
+      },
+      "opening_excerpt": "受控处置点的灯白得发冷。冷光贴着地面走，走过约束带，走过隔音墙，走过玻璃观察口。张岚不在场。姜霁提前把这句写进程序：当事人无义务亲眼看丈夫里面有什么。 / 承担镇封的行动员站在约束区外，将限制范围保持在目标这一侧。另一名负责定向剥蚀，自己先核清外观伪装层的位置，只作一次短介入；镇",
+      "ending_excerpt": "镜辞盯着那行字，喉咙发紧。紧的是“未见”。未见写不成通过，也写不成否定存在。他抬眼看姜霁。 / 姜霁说：“先读。读完再决定你跟不跟。” / 镜辞将新案卷按在柜台上，只看姜霁给的关联页。老李受控回执仍留在另一个袋里，风险已经降低，原来的丈夫却没有因此得到确认。下一份未见的记录，也不"
+    },
+    {
+      "chapter": 91,
+      "path": "正文/第091章_没有缝.md",
+      "sha256": "63ca90be93d5bb06671cb9f04b9a62b0b51d5a7cedf6049b0fa5a09b76685daa",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 12.5,
+        "question_rate_pct": 0.0,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.7829,
+        "procedure_marker_per_1k": 1.8553,
+        "explanation_marker_per_1k": 0.9276
+      },
+      "opening_excerpt": "文件夹在柜台上摊开一上午。上午的光从门楣斜进来，斜过封面上的四个字：疑似身份异常。镜辞把第二页又读了一遍。读完他点头，点头时喉咙发紧。紧的是他得跟。跟不是为了证明自己有用。有用的幻想昨天已经撤过一次。 / 姜霁说：“目标叫周诚。外派半年回家。妻子报案式求助：常用手换了，抱孩子的手",
+      "ending_excerpt": "“仍受控。原主状态仍未知。”姜霁说，“两边别串。串了你会想用同一把尺量所有人。” / 镜辞合上周诚文件夹。姜霁把本次材料申请交给周诚确认日期范围，其他就医内容没有索取。结果出来前，异常观察暂缓，镜辞也不去家门口转。 / 回店后他将未见与右肩转述分别记清，老李案仍在另袋，原人未知的"
+    },
+    {
+      "chapter": 92,
+      "path": "正文/第092章_右肩.md",
+      "sha256": "cc040b09f133a66b931aa0edfa3617526f49d36853d1c3ade4a026244145416f",
+      "opening_mode": "exposition",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 5.2632,
+        "question_rate_pct": 10.5263,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 2.6478,
+        "procedure_marker_per_1k": 7.0609,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "医疗材料分五天陆续到齐。首诊单和影像在同一家外派地医院盖章；康复训练记录隔两天一页；单位请假条上写着右肩软组织损伤；同事口述里提过他短期固定肩部，固定带颜色还记得。回家后的随访备注写着：高举、后伸时仍有轻微避让。材料互相顶着，顶着才站得住。一张孤零零冒出来的病历撑不起结案。 / ",
+      "ending_excerpt": "散会后姜霁把周诚文件夹封边。封边上盖“结案”两个字。盖完她看向镜辞。“你记住今天。记住不是为了心软。是为了下次别手快。” / 姜霁再核了一遍撤点交接，原先被圈出的右臂动作不再挂在高风险栏。镜辞跟着离开，没有另外坐到花园看他抱孩子。 / 回店时他把回执和老李案分开。普通人的名字从名"
+    },
+    {
+      "chapter": 93,
+      "path": "正文/第093章_旧经验.md",
+      "sha256": "8aafcd6ec635e604ad2376260dd0db16ff3a590a8b624a60333db1778572abe3",
+      "opening_mode": "exposition",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 22.7273,
+        "question_rate_pct": 9.0909,
+        "qa_pair_candidates_per_100p": 0.0,
+        "rule_marker_per_1k": 0.9166,
+        "procedure_marker_per_1k": 5.4995,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "复盘会散了，问题没散。镜辞跟姜霁回钟表行，把茶杯按在桌上，按到指节发白。“他们为什么对撤案那么不安。” / 姜霁不替组织辩护。她从夹层里抽出三份去标识旧案，纸边发黄，黄得像被人反复摸过。摸过的地方字迹更淡。淡完仍能读。 / 第一份：局部侵入。异常结构解除后，原主体能把处置前后连起",
+      "ending_excerpt": "守钟人哼了一声。“问号比血干净。干净也别高兴。问号多了，人会想快点填。” / 镜辞将周诚回执和老李三行新字段放在桌上，十一份编号卡只看允许公开的部分。周衡那张薄卡还没批给他全卷，他没有去翻。 / 夜里姜霁发来旧字段拆分已入卷、署名更正留存的短讯，周衡卡暂不外传。他回收到，将旧案压"
+    },
+    {
+      "chapter": 94,
+      "path": "正文/第094章_十一份.md",
+      "sha256": "073080736ebba8a2006e67ac2322f5a7b0fd8bee9116b4ac6e2510cce230cc39",
+      "opening_mode": "action",
+      "ending_mode": "deadline",
+      "metrics": {
+        "dialogue_rate_pct": 25.0,
+        "question_rate_pct": 10.0,
+        "qa_pair_candidates_per_100p": 5.0,
+        "rule_marker_per_1k": 1.912,
+        "procedure_marker_per_1k": 9.5602,
+        "explanation_marker_per_1k": 1.912
+      },
+      "opening_excerpt": "十一份编号卡在柜台上摊成一排。摊开的时候纸角互碰，碰出很轻的声。声落下去，镜辞才发现自己把未结听成了待抓。姜霁看他一眼，像早就料到。 / “别把问号当成围猎名单。”她说，“先看获准的状态栏。隐私不开放。” / 她只让镜辞看处置栏。有的已经能用病、伤、家里过日子的变化解释，准备撤。",
+      "ending_excerpt": "“可能来。”镜辞说，“也可能只是路过。” / “路过也付钱。”守钟人说，“表坏了才进门。人要是没事，别硬给人拆。” / 镜辞把私人本合上。合上的页里写着：周衡。低干扰。先看生活。写完他熄灯。灯灭以后，旧市场的夜还是普通的夜。普通的夜里，有人明天会来买菜、送工具、叫一声周师傅。叫完"
+    },
+    {
+      "chapter": 95,
+      "path": "正文/第095章_七天都正常.md",
+      "sha256": "87e7975b478128a0c4160931cc08cfcb13bba608d939c440ada3b93c1d111b23",
+      "opening_mode": "action",
+      "ending_mode": "action",
+      "metrics": {
+        "dialogue_rate_pct": 15.7895,
+        "question_rate_pct": 10.5263,
+        "qa_pair_candidates_per_100p": 5.2632,
+        "rule_marker_per_1k": 3.6276,
+        "procedure_marker_per_1k": 3.6276,
+        "explanation_marker_per_1k": 0.0
+      },
+      "opening_excerpt": "姜霁把七天记录压成两页纸，纸边还热。热完她推到柜台上。“别找不像。七天里他都很像一个长期存在的熟人。” / 工作时间稳。和同事的来往前后不拧。老邻居能顺口说出多年前一起办过的事。市场摊主会自然喊他修水管、搬东西。他还记得别人近些年才发生的伤、搬家、换工作。记得这些，说明他不只是复",
+      "ending_excerpt": "“路过。”镜辞说。 / “路过也别先拆。”守钟人哼了一声，把茶推过来，“表坏了才进门。” / 镜辞接过茶。茶烫。烫完他仍只喝了一口。喝完他把目光放回柜台。柜台外，周师傅三个字还在几个摊位之间传来传去。传完，旧货市场像往常一样吵。吵里没有敌意。没有敌意的早晨，低干扰观察正式开始。"
+    }
+  ],
+  "comparisons": [
+    {
+      "chapter": 90,
+      "similarity": 0.2482,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 91,
+      "similarity": 0.2619,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 92,
+      "similarity": 0.4298,
+      "same_opening_mode": false,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 93,
+      "similarity": 0.5742,
+      "same_opening_mode": false,
+      "same_ending_mode": false
+    },
+    {
+      "chapter": 94,
+      "similarity": 0.4701,
+      "same_opening_mode": true,
+      "same_ending_mode": true
+    },
+    {
+      "chapter": 95,
+      "similarity": 0.6224,
+      "same_opening_mode": true,
+      "same_ending_mode": false
+    }
+  ],
+  "signals": [],
+  "review_questions": [
+    "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+    "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+    "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+    "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+    "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+  ],
+  "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+}

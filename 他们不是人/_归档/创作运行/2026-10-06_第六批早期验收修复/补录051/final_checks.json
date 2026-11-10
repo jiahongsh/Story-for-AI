@@ -1,0 +1,100 @@
+{
+  "commit": {
+    "last_committed_chapter": 99,
+    "state_revision": 158
+  },
+  "revision_gate": {
+    "approval_stamp": "D:\\code\\stroy\\他们不是人\\追踪\\修改影响\\active.approved.json",
+    "change_id": "sixth-chapter051-memory-20261006",
+    "checked_file_count": 274,
+    "conflict_count": 1,
+    "required_check_count": 274,
+    "status": "PASS",
+    "tracking_action": "commit"
+  },
+  "tracking": {
+    "last_committed_chapter": 99,
+    "state_revision": 158
+  },
+  "doctor": {
+    "status": "pass",
+    "project": "D:\\code\\stroy\\他们不是人",
+    "checks": [
+      {
+        "name": "tracking_commit",
+        "status": "pass"
+      },
+      {
+        "name": "writing_method",
+        "status": "pass",
+        "details": {
+          "status": "ready",
+          "method_branch": "A-standard",
+          "implicit_default": true,
+          "runtime_strategy": "existing-style-recall",
+          "read_benchmark_style": true,
+          "read_raw_anchor_excerpts": true
+        }
+      },
+      {
+        "name": "chapter_candidates",
+        "status": "pass",
+        "open": 0
+      },
+      {
+        "name": "accepted_prose_receipts",
+        "status": "pass",
+        "count": 43
+      },
+      {
+        "name": "accepted_voice_profile",
+        "status": "not_configured"
+      },
+      {
+        "name": "golden_voice_profile",
+        "status": "not_configured"
+      },
+      {
+        "name": "latest_projection",
+        "status": "pass",
+        "events": 102
+      },
+      {
+        "name": "revision_gate",
+        "status": "pass"
+      },
+      {
+        "name": "cold_read",
+        "status": "not_required"
+      }
+    ],
+    "errors": [],
+    "warnings": [
+      {
+        "code": "voice-profile-not-configured",
+        "message": "尚无本书声音画像；不足五章时正常，达到五章后可从接纳回执建立，旧章必须显式批准范围",
+        "path": "D:\\code\\stroy\\他们不是人\\追踪\\文风"
+      },
+      {
+        "code": "projection-log-behind",
+        "message": "投影日志早于当前追踪修订；追踪派生一致性仍由 tracking_commit.py check 验证",
+        "path": "D:\\code\\stroy\\他们不是人\\追踪\\投影日志.jsonl"
+      }
+    ]
+  },
+  "world_export": {
+    "status": "DERIVED_VIEWS_EXPORTED",
+    "output": "创作运行/派生视图",
+    "files": 116,
+    "state_revision": 158,
+    "limitations": [],
+    "semantic_limit": "派生视图可重建，非第二权威；未知历史保留待核，不晋升候选。"
+  },
+  "locked_100_103": "hash_unchanged",
+  "prose_051": {
+    "status": "two_wording_fixes",
+    "sha256": "de91281462c287ab3db3f7e862617a7e07e6a8feb15737aa38e234eb4b17c9f1",
+    "language_gates": "4/4 PASS"
+  },
+  "revision_after": 158
+}

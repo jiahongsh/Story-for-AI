@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "change_id": "fifth-A-20261006",
+  "summary": "核实D4观察来源并阻止第一式扫描空间",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第053章_验收题.md",
+    "大纲/细纲_第053章.md",
+    "正文/第054章_假通过.md",
+    "大纲/细纲_第054章.md",
+    "正文/第055章_没处理过.md",
+    "大纲/细纲_第055章.md",
+    "正文/第058章_你为什么不躲.md",
+    "大纲/细纲_第058章.md"
+  ],
+  "affected_chapters": [
+    53,
+    54,
+    55,
+    58
+  ],
+  "affected_entities": [
+    "镜辞",
+    "姜霁",
+    "陈屿",
+    "D4"
+  ],
+  "affected_fact_ids": [
+    "K001"
+  ]
+}

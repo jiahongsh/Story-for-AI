@@ -1,0 +1,58 @@
+### 57 language_gate.js exit=0
+PASS: no foreign letters or forbidden markup in D:\code\stroy\他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第057章_同一张脸.md
+
+### 57 check-style-hygiene.js exit=0
+PASS: style hygiene clean (1 file)
+
+### 57 check-ai-patterns.js exit=0
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第057章_同一张脸.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 8/47 段（17.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (8/47 (17.0%))
+
+### 57 check-degeneration.js exit=0
+
+### 58 language_gate.js exit=0
+PASS: no foreign letters or forbidden markup in D:\code\stroy\他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第058章_你为什么不躲.md
+
+### 58 check-style-hygiene.js exit=0
+PASS: style hygiene clean (1 file)
+
+### 58 check-ai-patterns.js exit=0
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第058章_你为什么不躲.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/49 段（34.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/49 (34.7%))
+
+### 58 check-degeneration.js exit=0
+
+### 59 language_gate.js exit=0
+PASS: no foreign letters or forbidden markup in D:\code\stroy\他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第059章_工单跟着我走.md
+
+### 59 check-style-hygiene.js exit=0
+PASS: style hygiene clean (1 file)
+
+### 59 check-ai-patterns.js exit=0
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第059章_工单跟着我走.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/40 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/40 (25.0%))
+
+### 59 check-degeneration.js exit=0
+
+### 60 language_gate.js exit=0
+PASS: no foreign letters or forbidden markup in D:\code\stroy\他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第060章_不回答.md
+
+### 60 check-style-hygiene.js exit=0
+PASS: style hygiene clean (1 file)
+
+### 60 check-ai-patterns.js exit=0
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第060章_不回答.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 12/45 段（26.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (12/45 (26.7%))
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第060章_不回答.md:11:1: [advisory] micro-action-tic: 微动作复读：「了下/了一下」式轻量补语 17 处（6.4/千字）；同一反应模板高密度复现是机械指纹，合并动作 beat、换具体细节，别每个动作都补一个轻反应尾巴。 (了一下 了一声 了下 了道 了一眼 了口)
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第060章_不回答.md:89:1: [advisory] long-paragraph: 段落过长（251 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (姜霁用手机拍了维修单，不拍孙立的脸。照片里只有姓名、故障和取表时间。她把照片放进)
+
+### 60 check-degeneration.js exit=0
+
+### 61 language_gate.js exit=0
+PASS: no foreign letters or forbidden markup in D:\code\stroy\他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第061章_来修表的人.md
+
+### 61 check-style-hygiene.js exit=0
+PASS: style hygiene clean (1 file)
+
+### 61 check-ai-patterns.js exit=0
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第061章_来修表的人.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 11/36 段（30.6%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (11/36 (30.6%))
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第061章_来修表的人.md:13:1: [advisory] long-paragraph: 段落过长（232 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (孙立把定金小票放在台面上，折角还在。二十块已经收过。他问还要补多少。镜辞说看完再)
+他们不是人\创作运行\2026-10-28_052-065直接修订\准备_057-061\第061章_来修表的人.md:31:1: [advisory] long-paragraph: 段落过长（302 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (他没有立刻出门。表戴上之后，他在柜台边又站了半分钟，用墙上的钟核自己的秒针。半分)
+
+### 61 check-degeneration.js exit=0

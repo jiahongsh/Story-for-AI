@@ -1,0 +1,344 @@
+{
+  "schema_version": 1,
+  "candidate_id": "C20261004-192650",
+  "status": "committed",
+  "created_at": "2026-10-04T11:26:50Z",
+  "project_root": "D:\\code\\stroy\\他们不是人",
+  "chapter": 65,
+  "target": "正文/第065章_不知道不是通过.md",
+  "candidate": "追踪/候选章/第065章/C20261004-192650/candidate.md",
+  "outline": "大纲/细纲_第065章.md",
+  "approval_mode": "review",
+  "authorization_note": "",
+  "expected_last_committed_chapter": 64,
+  "expected_state_revision": 8,
+  "writing_method": {
+    "method_branch": "A-standard",
+    "method_id": null,
+    "implicit_default": true
+  },
+  "base_files": [
+    {
+      "path": "大纲/细纲_第065章.md",
+      "sha256": "254e347982f633b39de69933bde60425424b7a7e4c2af1bc48e6a9fedb04887c",
+      "size": 2803
+    },
+    {
+      "path": "追踪/上下文.md",
+      "sha256": "408d9b8532c74aa37e10675f9c0e0100a7f3fec9468e88a71811cc569f0e6290",
+      "size": 5062
+    },
+    {
+      "path": "正文/第064章_你也一直在验我.md",
+      "sha256": "05d90768bbde89a7be95f130a6111319d55157f8e889c3144fdee60203c36fcf",
+      "size": 10618
+    },
+    {
+      "path": "大纲/卷纲_第一卷.md",
+      "sha256": "d450bec1d640442dd73e6765dffebc4525654436661643ae22f54fa959972d2b",
+      "size": 12810
+    }
+  ],
+  "context_digest": "297f2772a686435d7eefec4a0bcfed48d46318f84c3b7834d643de13792ad07c",
+  "validation": {
+    "status": "fresh",
+    "changed": [],
+    "current_last_committed_chapter": 64,
+    "current_state_revision": 8,
+    "current_context_digest": "297f2772a686435d7eefec4a0bcfed48d46318f84c3b7834d643de13792ad07c",
+    "candidate_sha256": "0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc",
+    "gates": [
+      {
+        "name": "writing_method",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"ready\",\n  \"method_branch\": \"A-standard\",\n  \"implicit_default\": true,\n  \"runtime_strategy\": \"existing-style-recall\",\n  \"read_benchmark_style\": true,\n  \"read_raw_anchor_excerpts\": true\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "ready",
+          "method_branch": "A-standard",
+          "implicit_default": true,
+          "runtime_strategy": "existing-style-recall",
+          "read_benchmark_style": true,
+          "read_raw_anchor_excerpts": true
+        }
+      },
+      {
+        "name": "language",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第065章\\C20261004-192650\\candidate.md\n",
+        "stderr": ""
+      },
+      {
+        "name": "ai_patterns",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第065章\\C20261004-192650\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 9/47 段（19.1%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (9/47 (19.1%))\n",
+        "stderr": ""
+      },
+      {
+        "name": "degeneration",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "",
+        "stderr": ""
+      },
+      {
+        "name": "prose_metrics",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"measured\",\n  \"file\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\候选章\\\\第065章\\\\C20261004-192650\\\\candidate.md\",\n  \"sha256\": \"0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc\",\n  \"character_count\": 3002,\n  \"sentence_count\": 196,\n  \"paragraph_count\": 46,\n  \"bucket_contract\": {\n    \"short\": \"1-8字\",\n    \"medium\": \"9-34字\",\n    \"long\": \"35字及以上\"\n  },\n  \"sentence_distribution\": {\n    \"short\": {\n      \"count\": 59,\n      \"rate_pct\": 30.102\n    },\n    \"medium\": {\n      \"count\": 133,\n      \"rate_pct\": 67.8571\n    },\n    \"long\": {\n      \"count\": 4,\n      \"rate_pct\": 2.0408\n    }\n  },\n  \"sentence_mean_chars\": 15.3163,\n  \"sentence_median_chars\": 14.0,\n  \"paragraph_mean_chars\": 65.2609,\n  \"paragraph_median_chars\": 59.0,\n  \"sentences_per_paragraph\": 4.2609,\n  \"instruction\": \"只报告实测值；这些统计用于定位复核，不是跨题材质量配额。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "measured",
+          "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第065章\\C20261004-192650\\candidate.md",
+          "sha256": "0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc",
+          "character_count": 3002,
+          "sentence_count": 196,
+          "paragraph_count": 46,
+          "bucket_contract": {
+            "short": "1-8字",
+            "medium": "9-34字",
+            "long": "35字及以上"
+          },
+          "sentence_distribution": {
+            "short": {
+              "count": 59,
+              "rate_pct": 30.102
+            },
+            "medium": {
+              "count": 133,
+              "rate_pct": 67.8571
+            },
+            "long": {
+              "count": 4,
+              "rate_pct": 2.0408
+            }
+          },
+          "sentence_mean_chars": 15.3163,
+          "sentence_median_chars": 14.0,
+          "paragraph_mean_chars": 65.2609,
+          "paragraph_median_chars": 59.0,
+          "sentences_per_paragraph": 4.2609,
+          "instruction": "只报告实测值；这些统计用于定位复核，不是跨题材质量配额。"
+        }
+      },
+      {
+        "name": "outline_copy",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "[PASS] candidate.md: 未发现未登记的细纲连续照搬\n",
+        "stderr": ""
+      },
+      {
+        "name": "accepted_voice_profile",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"not_configured\",\n  \"severity\": \"advisory\",\n  \"candidate\": \"追踪/候选章/第065章/C20261004-192650/candidate.md\",\n  \"message\": \"尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "not_configured",
+          "severity": "advisory",
+          "candidate": "追踪/候选章/第065章/C20261004-192650/candidate.md",
+          "message": "尚无足量已接纳样本；本轮只执行通用语言与去 AI 味门。"
+        }
+      },
+      {
+        "name": "cross_chapter_shape",
+        "status": "pass",
+        "returncode": 0,
+        "stdout": "ker_per_1k\": 0.3333,\n        \"procedure_marker_per_1k\": 3.6667,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"下午一点三十，孙立还没到。镜辞把待修盘转回来，慢表的表蒙仍朝着墙。定金小票的底联在抽屉里，二十块和裴亮的十一块分开。他把工具铺开：洗油、竹签、新油、镊子。铺完又把私人本压在工具左边，上午那行未判朝下。姜霁坐在侧面，文件夹合着。 / “他进门你就修表。”她说，“脸你早上看过一次。今\",\n      \"ending_excerpt\": \"“下午这单结束了。”她说，“他是来取自己父亲留下的表。表好了。你的边界写了。陈屿知道你看了。再有人拿着只写了店名的纸条进来，先查纸条从哪张公示来。不拿下一个人继续试眼睛。” / 镜辞没接话。推荐两个字他没有写进今天的单子。单子上只有孙立，慢，油干，四十五，走时正常。私人本上有脸侧\"\n    },\n    {\n      \"chapter\": 62,\n      \"path\": \"正文/第062章_推荐店.md\",\n      \"sha256\": \"b46fdc09f6f32f0a26655d24c8dd25fe424a8515171f0baf230797b01ada1188\",\n      \"opening_mode\": \"action\",\n      \"ending_mode\": \"action\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 32.6923,\n        \"question_rate_pct\": 9.6154,\n        \"qa_pair_candidates_per_100p\": 5.7692,\n        \"rule_marker_per_1k\": 0.6667,\n        \"procedure_marker_per_1k\": 8.6667,\n        \"explanation_marker_per_1k\": 0.0\n      },\n      \"opening_excerpt\": \"四点过五分，孙立又站在卷帘外。慢表现在戴在他腕上，秒针跟着店里的钟走。他没进后间，先把一张捂潮的纸贴到玻璃上。 / “窗口说修完拿这个回来盖章。号费六块，盖了才退。你们盖不盖？” / 镜辞把卷帘往上送了送。纸的抬头是附近老机械表维修，下面四行店名，最后一行是旧市场钟表行，地址和电\",\n      \"ending_excerpt\": \"“树的事我不管。”老人说，“章别落在外面。”他端着茶回后间，门掩上，镊子没停。 / 镜辞把执照夹推回左抽屉上层。抽屉合上的时候，屏幕还亮着那行字。姜霁把新版公示和受理回执拍给猫眼，只要求再存一份公开页。猫眼回了校验，补了一句：添加人的名字，公开页上没有。 / 镜辞看着这句，呼吸才\"\n    },\n    {\n      \"chapter\": 63,\n      \"path\": \"正文/第063章_别拿她试.md\",\n      \"sha256\": \"59f69af1544f964b661f5d72e7862129efbff1b65764c733f73f8c8b6236894a\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"action\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 41.2698,\n        \"question_rate_pct\": 3.1746,\n        \"qa_pair_candidates_per_100p\": 3.1746,\n        \"rule_marker_per_1k\": 0.333,\n        \"procedure_marker_per_1k\": 3.996,\n        \"explanation_marker_per_1k\": 0.666\n      },\n      \"opening_excerpt\": \"八点四十，公示栏那一行还挂着。撤下要到九点。镜辞把手机翻到备注空着的对话框，指尖在拨号上停了一停，按下去。第二声，她接了。背景里有车轮和站台广播，人在走动。 / “你在车站。”他说。 / “在。票还没买。你先说照片。树我看见了，人我没看见。”\",\n      \"ending_excerpt\": \"姜霁把硬纸仍夹在恒准和恒泰两页中间。“她明天到不到早餐铺，今天还没发生。你别先把一张桌子写成见面。” / 镜辞没接话。钥匙还在抽屉里层。他没拿出来。巷口有人收笼屉，蒸汽散到排水沟就淡了。镜辞听出郭老板催人把汤喝完的嗓子，脚没往那边迈。今天早餐铺没有他的位子。姜霁也没起身。 / 墙\"\n    },\n    {\n      \"chapter\": 64,\n      \"path\": \"正文/第064章_你也一直在验我.md\",\n      \"sha256\": \"05d90768bbde89a7be95f130a6111319d55157f8e889c3144fdee60203c36fcf\",\n      \"opening_mode\": \"exposition\",\n      \"ending_mode\": \"deadline\",\n      \"metrics\": {\n        \"dialogue_rate_pct\": 21.2766,\n        \"question_rate_pct\": 8.5106,\n        \"qa_pair_candidates_per_100p\": 2.1277,\n        \"rule_marker_per_1k\": 1.3316,\n        \"procedure_marker_per_1k\": 0.9987,\n        \"explanation_marker_per_1k\": 0.6658\n      },\n      \"opening_excerpt\": \"七点四十五，镜辞才从钟表行出来。她的消息停在七点四十：到了，人在铺子里，别在门口等。他把手机扣上，扣上的时候指尖还停在拨号旁边，没再拨。姜霁跟到巷口，不跟到那张桌子。钥匙留在抽屉里层，私人本在衣袋里，耳后那一页朝下。 / 七点四十八，旧早餐铺的油锅已经响了。镜辞进门时没在门口停，\",\n      \"ending_excerpt\": \"私人本等到进门才掏出来。他写：早餐铺。汤自己喝了，碗自己转开。我承认三件事写成过一行。称呼未定，备注仍空。那些事，未答。 / 写到未答，笔尖顿住。他想补一个因为，补了两个字又划掉。划掉的墨点留在纸上。姜霁看过这一行，没往文件夹里抄。她把豆浆的三块票根单独夹进自己的口袋，和公司材料\"\n    }\n  ],\n  \"comparisons\": [\n    {\n      \"chapter\": 59,\n      \"similarity\": 0.5691,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 60,\n      \"similarity\": 0.3399,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": true\n    },\n    {\n      \"chapter\": 61,\n      \"similarity\": 0.3455,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 62,\n      \"similarity\": 0.4509,\n      \"same_opening_mode\": true,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 63,\n      \"similarity\": 0.2223,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": false\n    },\n    {\n      \"chapter\": 64,\n      \"similarity\": 0.3842,\n      \"same_opening_mode\": false,\n      \"same_ending_mode\": true\n    }\n  ],\n  \"signals\": [],\n  \"review_questions\": [\n    \"近章是否反复用同一种冲突发动机，而不只是共享题材物件？\",\n    \"配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？\",\n    \"信息是否总通过分栏、列举、公开验证或总结性对白交付？\",\n    \"章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？\",\n    \"候选是否保留人物特有的误解、回避、私心或未解决代价？\"\n  ],\n  \"instruction\": \"结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。\"\n}\n",
+        "stderr": "",
+        "payload": {
+          "status": "semantic_review_required",
+          "severity": "advisory",
+          "chapter": 65,
+          "window": 6,
+          "candidate": {
+            "chapter": 65,
+            "path": "追踪/候选章/第065章/C20261004-192650/candidate.md",
+            "sha256": "0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc",
+            "opening_mode": "action",
+            "ending_mode": "deadline",
+            "metrics": {
+              "dialogue_rate_pct": 19.1489,
+              "question_rate_pct": 0.0,
+              "qa_pair_candidates_per_100p": 0.0,
+              "rule_marker_per_1k": 1.3324,
+              "procedure_marker_per_1k": 13.9907,
+              "explanation_marker_per_1k": 0.0
+            },
+            "opening_excerpt": "下午两点十分，猫眼先把南岸围栏外的公开栏拍来。校验值在图下，人没进栏。栏上 `D4` 那一行仍写着待收尾，旁边新贴了一张复核通知，502的格子从今天上午改到后日。镜辞的指尖在改期两个字上停住，没把这张图当成进门的理由。 / 两点二十，陈屿的工号来了一句：外围，三点。人别进栏。 /",
+            "ending_excerpt": "守钟人在后间把座钟敲准了一次。镜辞没进去问点数。他在私人本最后留了一行：三行未填。链子还在走。后日的两个点都看见了，人今晚留在店里。 / 笔帽盖上的时候，指节还发紧。他没再拨那个工号。薄本子的姓名栏对着灯，灯下仍是空白。 / 灯还开着。卷帘留一条缝，缝外有人收摊，拖着空筐过去，筐"
+          },
+          "history": [
+            {
+              "chapter": 59,
+              "path": "正文/第059章_工单跟着我走.md",
+              "sha256": "0af82ce094f75bb4c2c2204e9bf2543f321ce93244daaafc6509579774755512",
+              "opening_mode": "action",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 22.7273,
+                "question_rate_pct": 2.2727,
+                "qa_pair_candidates_per_100p": 0.0,
+                "rule_marker_per_1k": 0.6667,
+                "procedure_marker_per_1k": 5.6667,
+                "explanation_marker_per_1k": 0.3333
+              },
+              "opening_excerpt": "三点零二分，姜霁用笔帽敲了敲那道横线。开口后的格子还空着。店里只有钟摆，和两点五十八扣上的那只手机。 / “空着等，等的是你还交不交。”她说，“你要停，就写在这页上。通过不写，看不见也不写。人留在店里。南岸、北河、老码头，今天都不去。” / 镜辞的笔尖在纸上顿了一下。他没有打开那",
+              "ending_excerpt": "门外的车铃已经远了。店里的钟走到五点四十。裴亮的八块和三块写在纸上，纸边被指腹蹭毛了一点。镜辞把那一点按平。人留在柜台后面，灯还开着。 / 五点四十五，又有人在卷帘外停了一下，看了眼灯，没进来。镜辞的视线抬到门帘，人影已经过去，是个抱孩子的女人，跟工装无关。孩子的鞋带拖在地上，女"
+            },
+            {
+              "chapter": 60,
+              "path": "正文/第060章_不回答.md",
+              "sha256": "0e64c76b900318c181bc7b39d3255366130f9c586a58c4ae712803a2a57eac3a",
+              "opening_mode": "action",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 26.6667,
+                "question_rate_pct": 4.4444,
+                "qa_pair_candidates_per_100p": 2.2222,
+                "rule_marker_per_1k": 0.333,
+                "procedure_marker_per_1k": 0.999,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "第二天早上九点十分，卷帘拉到一半，陈屿已经站在门槛外。手里托着一只旧机械表，表蒙朝上，没有口袋，也没有纸袋。镜辞认得这个把表放到柜台上的动作。上一次是石英表，腕上摘下来，往玻璃上一搁。这一次他等卷帘完全拉开，才把机械表放进柜台正中，链子绕成一圈。玻璃上立刻起了一小块雾。雾的位置和",
+              "ending_excerpt": "镜辞把私人本合上。合上之前只多了一行：新客孙立，脸侧极浅，几乎贴平。未问。未判。陈屿已离开。抽屉和门的那两下，另记。定金二十在抽屉里。裴亮的十一块仍在昨天的损失页。两笔分开夹。 / 姜霁用手机拍了维修单，不拍孙立的脸。照片里只有姓名、故障和取表时间。她把照片放进一个新的纸袋，纸袋"
+            },
+            {
+              "chapter": 61,
+              "path": "正文/第061章_来修表的人.md",
+              "sha256": "ca3557ed14ab027429b611a7672059d1576f2b7ea0df52dc78d0afad41e638a7",
+              "opening_mode": "action",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 34.1463,
+                "question_rate_pct": 7.3171,
+                "qa_pair_candidates_per_100p": 7.3171,
+                "rule_marker_per_1k": 0.3333,
+                "procedure_marker_per_1k": 3.6667,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "下午一点三十，孙立还没到。镜辞把待修盘转回来，慢表的表蒙仍朝着墙。定金小票的底联在抽屉里，二十块和裴亮的十一块分开。他把工具铺开：洗油、竹签、新油、镊子。铺完又把私人本压在工具左边，上午那行未判朝下。姜霁坐在侧面，文件夹合着。 / “他进门你就修表。”她说，“脸你早上看过一次。今",
+              "ending_excerpt": "“下午这单结束了。”她说，“他是来取自己父亲留下的表。表好了。你的边界写了。陈屿知道你看了。再有人拿着只写了店名的纸条进来，先查纸条从哪张公示来。不拿下一个人继续试眼睛。” / 镜辞没接话。推荐两个字他没有写进今天的单子。单子上只有孙立，慢，油干，四十五，走时正常。私人本上有脸侧"
+            },
+            {
+              "chapter": 62,
+              "path": "正文/第062章_推荐店.md",
+              "sha256": "b46fdc09f6f32f0a26655d24c8dd25fe424a8515171f0baf230797b01ada1188",
+              "opening_mode": "action",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 32.6923,
+                "question_rate_pct": 9.6154,
+                "qa_pair_candidates_per_100p": 5.7692,
+                "rule_marker_per_1k": 0.6667,
+                "procedure_marker_per_1k": 8.6667,
+                "explanation_marker_per_1k": 0.0
+              },
+              "opening_excerpt": "四点过五分，孙立又站在卷帘外。慢表现在戴在他腕上，秒针跟着店里的钟走。他没进后间，先把一张捂潮的纸贴到玻璃上。 / “窗口说修完拿这个回来盖章。号费六块，盖了才退。你们盖不盖？” / 镜辞把卷帘往上送了送。纸的抬头是附近老机械表维修，下面四行店名，最后一行是旧市场钟表行，地址和电",
+              "ending_excerpt": "“树的事我不管。”老人说，“章别落在外面。”他端着茶回后间，门掩上，镊子没停。 / 镜辞把执照夹推回左抽屉上层。抽屉合上的时候，屏幕还亮着那行字。姜霁把新版公示和受理回执拍给猫眼，只要求再存一份公开页。猫眼回了校验，补了一句：添加人的名字，公开页上没有。 / 镜辞看着这句，呼吸才"
+            },
+            {
+              "chapter": 63,
+              "path": "正文/第063章_别拿她试.md",
+              "sha256": "59f69af1544f964b661f5d72e7862129efbff1b65764c733f73f8c8b6236894a",
+              "opening_mode": "exposition",
+              "ending_mode": "action",
+              "metrics": {
+                "dialogue_rate_pct": 41.2698,
+                "question_rate_pct": 3.1746,
+                "qa_pair_candidates_per_100p": 3.1746,
+                "rule_marker_per_1k": 0.333,
+                "procedure_marker_per_1k": 3.996,
+                "explanation_marker_per_1k": 0.666
+              },
+              "opening_excerpt": "八点四十，公示栏那一行还挂着。撤下要到九点。镜辞把手机翻到备注空着的对话框，指尖在拨号上停了一停，按下去。第二声，她接了。背景里有车轮和站台广播，人在走动。 / “你在车站。”他说。 / “在。票还没买。你先说照片。树我看见了，人我没看见。”",
+              "ending_excerpt": "姜霁把硬纸仍夹在恒准和恒泰两页中间。“她明天到不到早餐铺，今天还没发生。你别先把一张桌子写成见面。” / 镜辞没接话。钥匙还在抽屉里层。他没拿出来。巷口有人收笼屉，蒸汽散到排水沟就淡了。镜辞听出郭老板催人把汤喝完的嗓子，脚没往那边迈。今天早餐铺没有他的位子。姜霁也没起身。 / 墙"
+            },
+            {
+              "chapter": 64,
+              "path": "正文/第064章_你也一直在验我.md",
+              "sha256": "05d90768bbde89a7be95f130a6111319d55157f8e889c3144fdee60203c36fcf",
+              "opening_mode": "exposition",
+              "ending_mode": "deadline",
+              "metrics": {
+                "dialogue_rate_pct": 21.2766,
+                "question_rate_pct": 8.5106,
+                "qa_pair_candidates_per_100p": 2.1277,
+                "rule_marker_per_1k": 1.3316,
+                "procedure_marker_per_1k": 0.9987,
+                "explanation_marker_per_1k": 0.6658
+              },
+              "opening_excerpt": "七点四十五，镜辞才从钟表行出来。她的消息停在七点四十：到了，人在铺子里，别在门口等。他把手机扣上，扣上的时候指尖还停在拨号旁边，没再拨。姜霁跟到巷口，不跟到那张桌子。钥匙留在抽屉里层，私人本在衣袋里，耳后那一页朝下。 / 七点四十八，旧早餐铺的油锅已经响了。镜辞进门时没在门口停，",
+              "ending_excerpt": "私人本等到进门才掏出来。他写：早餐铺。汤自己喝了，碗自己转开。我承认三件事写成过一行。称呼未定，备注仍空。那些事，未答。 / 写到未答，笔尖顿住。他想补一个因为，补了两个字又划掉。划掉的墨点留在纸上。姜霁看过这一行，没往文件夹里抄。她把豆浆的三块票根单独夹进自己的口袋，和公司材料"
+            }
+          ],
+          "comparisons": [
+            {
+              "chapter": 59,
+              "similarity": 0.5691,
+              "same_opening_mode": true,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 60,
+              "similarity": 0.3399,
+              "same_opening_mode": true,
+              "same_ending_mode": true
+            },
+            {
+              "chapter": 61,
+              "similarity": 0.3455,
+              "same_opening_mode": true,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 62,
+              "similarity": 0.4509,
+              "same_opening_mode": true,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 63,
+              "similarity": 0.2223,
+              "same_opening_mode": false,
+              "same_ending_mode": false
+            },
+            {
+              "chapter": 64,
+              "similarity": 0.3842,
+              "same_opening_mode": false,
+              "same_ending_mode": true
+            }
+          ],
+          "signals": [],
+          "review_questions": [
+            "近章是否反复用同一种冲突发动机，而不只是共享题材物件？",
+            "配角是否只负责提出下一个规则问题，主角随后给出完整标准答案？",
+            "信息是否总通过分栏、列举、公开验证或总结性对白交付？",
+            "章尾钩子的事件功能是否连续同构，而不只是标点或句长相似？",
+            "候选是否保留人物特有的误解、回避、私心或未解决代价？"
+          ],
+          "instruction": "结构信号只提供证据，不判 AI、不自动改文；功能性仪式、审讯、倒计时和连续案件结构可保留。"
+        }
+      }
+    ],
+    "validated_at": "2026-10-04T13:45:41Z"
+  },
+  "approval": {
+    "approved_at": "2026-10-04T13:45:41Z",
+    "mode": "review",
+    "note": "用户明确回复接受，接纳第065章候选。",
+    "candidate_sha256": "0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc"
+  },
+  "promotion": {
+    "promoted_at": "2026-10-04T13:45:42Z",
+    "target_sha256": "0cdb7e57c60521fe8a47eb177b92130eccf6be5f2657bcc67cea0650f28031cc",
+    "receipt": "追踪/章节提交/第065章.json"
+  },
+  "closed_at": "2026-10-04T13:47:05Z",
+  "state_revision_after": 9
+}

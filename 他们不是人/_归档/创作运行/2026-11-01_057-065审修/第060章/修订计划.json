@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-060-20261101",
+  "summary": "普通维修与验收分离，纠正服装和待修表物件动作",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第060章_不回答.md",
+    "大纲/细纲_第060章.md"
+  ],
+  "affected_entities": [
+    "孙立"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    60
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-059-20261101",
+  "summary": "补齐离开西口后寻找负责人及到店的时间经过",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第059章_工单跟着我走.md",
+    "大纲/细纲_第059章.md"
+  ],
+  "affected_entities": [
+    "裴亮"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    59
+  ]
+}

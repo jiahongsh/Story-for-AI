@@ -1,0 +1,392 @@
+{
+  "52": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第052章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第052章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 14/44 段（31.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (14/44 (31.8%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 51
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 51
+    }
+  },
+  "70": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第070章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第070章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 8/44 段（18.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (8/44 (18.2%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 52
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 52
+    }
+  },
+  "72": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第072章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第072章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/44 段（13.6%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/44 (13.6%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 53
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 53
+    }
+  },
+  "73": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第073章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第073章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/42 段（11.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/42 (11.9%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 54
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 54
+    }
+  },
+  "74": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第074章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第074章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/47 段（12.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/47 (12.8%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 55
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 55
+    }
+  },
+  "75": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第075章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第075章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/43 段（14.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/43 (14.0%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第075章\\candidate.md:87:1: [advisory] long-paragraph: 段落过长（231 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (老秦在门外把空箱叠好，叠了三只。三只箱今天不再打开。他隔着玻璃说六十已经付清，账)\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 56
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 56
+    }
+  },
+  "76": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第076章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第076章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 7/44 段（15.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (7/44 (15.9%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第076章\\candidate.md:31:1: [advisory] quote-emphasis-tic: 引号强调滥用：叙述里 1-4 字短词加引号强调 4 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。 (记得 当前开销 用途另记 晚饭八)\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 57
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 57
+    }
+  },
+  "77": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第077章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第077章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/39 段（12.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/39 (12.8%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 58
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 58
+    }
+  },
+  "78": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第078章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第078章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 7/44 段（15.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (7/44 (15.9%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第078章\\candidate.md:61:1: [advisory] quote-emphasis-tic: 引号强调滥用：叙述里 1-4 字短词加引号强调 3 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。 (不跟踪 必须留下)\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 59
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 59
+    }
+  },
+  "79": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第079章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第079章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/44 段（11.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/44 (11.4%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第079章\\candidate.md:17:1: [advisory] long-paragraph: 段落过长（207 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (手套、草图、灰衬衫进行李布袋。布袋是她用摊上剩下的线头缝的，线不花钱。手套是第三)\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 60
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 60
+    }
+  },
+  "82": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第082章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第082章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 9/39 段（23.1%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (9/39 (23.1%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第082章\\candidate.md:7:1: [advisory] quote-emphasis-tic: 引号强调滥用：叙述里 1-4 字短词加引号强调 3 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。 (在 未知)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第082章\\candidate.md:75:1: [advisory] long-paragraph: 段落过长（219 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (未谈两个字他看了很久。看的时候没把她叫回来。她的路还在北河方向。方向上的平安只有)\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 61
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 61
+    }
+  },
+  "83": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第083章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第083章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 18/61 段（29.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (18/61 (29.5%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 62
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 62
+    }
+  },
+  "96": {
+    "language_gate.js": {
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第096章\\candidate.md\n",
+      "stderr": ""
+    },
+    "check-style-hygiene.js": {
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    "check-ai-patterns.js": {
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第二批连续性修订\\第096章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 2/13 段（15.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (2/13 (15.4%))\n",
+      "stderr": ""
+    },
+    "check-degeneration.js": {
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 63
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 63
+    }
+  }
+}

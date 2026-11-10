@@ -1,0 +1,8 @@
+{
+  "chapter": 66,
+  "state_revision_before": 261,
+  "state_revision_after": 262,
+  "formal_sha256": "af5c885c81d726473eb6bb1b4e693fcdd62139f7ba39710a5ac766c66008b880",
+  "candidate_sha256": "af5c885c81d726473eb6bb1b4e693fcdd62139f7ba39710a5ac766c66008b880",
+  "summary": "压缩重复分栏解释，保持既有分轨与明日复核期限"
+}

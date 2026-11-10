@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-057-20261101",
+  "summary": "区分摊主习惯估算与实际成交",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第057章_同一张脸.md",
+    "大纲/细纲_第057章.md"
+  ],
+  "affected_entities": [
+    "水果摊老板",
+    "七块五"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    57
+  ]
+}

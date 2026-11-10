@@ -1,0 +1,14 @@
+{
+  "run_version": 1,
+  "run_id": "ch098_evidence",
+  "status": "draft",
+  "created_at": "2026-10-27T01:53:23.067985+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27",
+  "source_path": ".story-deslop/runs/ch098_final/source.md",
+  "source_sha256": "f3c53057e3c83fc9cd48dcda9c1d8bc233ac4b13e36460dc9d0b7869a8c40581",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light"
+}

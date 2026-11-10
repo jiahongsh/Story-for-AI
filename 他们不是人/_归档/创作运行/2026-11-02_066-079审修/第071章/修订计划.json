@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-071-20261102",
+  "summary": "收紧远程可见范围，修正猫眼指称并删除无来源的钥匙支段",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第071章_复核日.md",
+    "大纲/细纲_第071章.md"
+  ],
+  "affected_entities": [
+    "宁州陈骁",
+    "猫眼",
+    "备用钥匙"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    71
+  ]
+}

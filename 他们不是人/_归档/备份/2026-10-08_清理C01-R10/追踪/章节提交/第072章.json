@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 72,
+  "target": "正文/第072章_不是为了反着来.md",
+  "accepted_prose_sha256": "44d9397da490d7450ad5f7c4e23fe9a585b71afad4488ca7ea91bb062d6ab31c",
+  "candidate_id": "C20261005-132221",
+  "candidate_manifest": "追踪/候选章/第072章/C20261005-132221/manifest.json",
+  "context_digest": "c6f68ffcb017a90ba8df58f736bd2272216971116335fc7143e1a8a6084e4330",
+  "state_revision_before": 15,
+  "state_revision_after": 232,
+  "accepted_at": "2026-10-05T05:30:34Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第072章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T03:56:46Z",
+      "reason": "用户授权继续修综合方案下一批；时间与实际现金连续性修订",
+      "old_sha256": "9d26b08f9962aa5585f8cefc4785878fe169e003545b5ac2a7a34b9fa9156d30",
+      "new_sha256": "39d97e5bd825e01de8da9d1890d50ca2d52f80a80472c3dc0fd4028192dca277",
+      "state_revision": 63,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-06T05:37:29Z",
+      "reason": "用户授权第四批分轨生活局部修订",
+      "old_sha256": "39d97e5bd825e01de8da9d1890d50ca2d52f80a80472c3dc0fd4028192dca277",
+      "new_sha256": "a19c8682f55c08fc7d9ec9ebb56e059b835430530971f85e87b2e482b8c61caf",
+      "state_revision": 73,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T12:02:31Z",
+      "reason": "冷读清单限定修复，通过语义及四门检查",
+      "old_sha256": "a19c8682f55c08fc7d9ec9ebb56e059b835430530971f85e87b2e482b8c61caf",
+      "new_sha256": "44d9397da490d7450ad5f7c4e23fe9a585b71afad4488ca7ea91bb062d6ab31c",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T05:32:01Z"
+}

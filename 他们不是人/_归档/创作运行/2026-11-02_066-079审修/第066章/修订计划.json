@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-066-20261102",
+  "summary": "压缩重复分栏解释，保持既有分轨与明日复核期限",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第066章_空白页.md",
+    "大纲/细纲_第066章.md"
+  ],
+  "affected_entities": [
+    "北河薄笔记"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    66
+  ]
+}

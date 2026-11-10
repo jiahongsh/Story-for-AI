@@ -1,0 +1,134 @@
+[
+  {
+    "check": "language 第071章_复核日.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第071章_复核日.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第073章_又到两点十七.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第073章_又到两点十七.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第054章_假通过.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第054章_假通过.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第063章_别拿她试.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第063章_别拿她试.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第053章_验收题.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第053章_验收题.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第062章_推荐店.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第062章_推荐店.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第075章_不看也收尾.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第075章_不看也收尾.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第083章_合作条件.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第083章_合作条件.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第059章_工单跟着我走.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第059章_工单跟着我走.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第061章_来修表的人.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第061章_来修表的人.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第072章_不是为了反着来.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第072章_不是为了反着来.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第074章_不是我的履历.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第074章_不是我的履历.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第091章_没有缝.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第091章_没有缝.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第094章_十一份.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第094章_十一份.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第096章_没有缝的人.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第096章_没有缝的人.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第066章_空白页.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第066章_空白页.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "language 第098章_后五年.md",
+    "returncode": 0,
+    "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\正文\\第098章_后五年.md\n",
+    "stderr": ""
+  },
+  {
+    "check": "check-style-hygiene.js",
+    "returncode": 0,
+    "stdout": "PASS: style hygiene clean (17 files)\n",
+    "stderr": ""
+  },
+  {
+    "check": "check-ai-patterns.js",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\正文\\第071章_复核日.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 7/44 段（15.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (7/44 (15.9%))\nD:\\code\\stroy\\他们不是人\\正文\\第073章_又到两点十七.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 4/24 段（16.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (4/24 (16.7%))\nD:\\code\\stroy\\他们不是人\\正文\\第054章_假通过.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/46 段（21.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/46 (21.7%))\nD:\\code\\stroy\\他们不是人\\正文\\第063章_别拿她试.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 26/59 段（44.1%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (26/59 (44.1%))\nD:\\code\\stroy\\他们不是人\\正文\\第053章_验收题.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/38 段（26.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/38 (26.3%))\nD:\\code\\stroy\\他们不是人\\正文\\第062章_推荐店.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/52 段（32.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/52 (32.7%))\nD:\\code\\stroy\\他们不是人\\正文\\第075章_不看也收尾.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/38 段（15.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/38 (15.8%))\nD:\\code\\stroy\\他们不是人\\正文\\第083章_合作条件.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 15/47 段（31.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (15/47 (31.9%))\nD:\\code\\stroy\\他们不是人\\正文\\第059章_工单跟着我走.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/40 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/40 (25.0%))\nD:\\code\\stroy\\他们不是人\\正文\\第061章_来修表的人.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 11/36 段（30.6%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (11/36 (30.6%))\nD:\\code\\stroy\\他们不是人\\正文\\第061章_来修表的人.md:13:1: [advisory] long-paragraph: 段落过长（232 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (孙立把定金小票放在台面上，折角还在。二十块已经收过。他问还要补多少。镜辞说看完再)\nD:\\code\\stroy\\他们不是人\\正文\\第061章_来修表的人.md:31:1: [advisory] long-paragraph: 段落过长（302 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (他没有立刻出门。表戴上之后，他在柜台边又站了半分钟，用墙上的钟核自己的秒针。半分)\nD:\\code\\stroy\\他们不是人\\正文\\第072章_不是为了反着来.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 11/44 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (11/44 (25.0%))\nD:\\code\\stroy\\他们不是人\\正文\\第074章_不是我的履历.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 7/43 段（16.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (7/43 (16.3%))\nD:\\code\\stroy\\他们不是人\\正文\\第091章_没有缝.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 2/16 段（12.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (2/16 (12.5%))\nD:\\code\\stroy\\他们不是人\\正文\\第094章_十一份.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/20 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/20 (25.0%))\nD:\\code\\stroy\\他们不是人\\正文\\第094章_十一份.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 81.9/千字、白话连接 48.2/千字，且≥30字承接句仅 4%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (姜霁看他一眼，像早就料到 | 她说， | 她只让镜辞看处置栏 | 有的人失联，材料不够 | 另有一份写着安平里复核 | 镜辞翻完一圈，喉咙发紧)\nD:\\code\\stroy\\他们不是人\\正文\\第096章_没有缝的人.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 2/13 段（15.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (2/13 (15.4%))\nD:\\code\\stroy\\他们不是人\\正文\\第066章_空白页.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 13/36 段（36.1%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (13/36 (36.1%))\nD:\\code\\stroy\\他们不是人\\正文\\第098章_后五年.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 0/9 段（0.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (0/9 (0.0%))\n",
+    "stderr": ""
+  },
+  {
+    "check": "check-degeneration.js",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "check": "punctuation",
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "check": "tracking",
+    "returncode": 0,
+    "stdout": "{\"last_committed_chapter\": 99, \"state_revision\": 249}\n",
+    "stderr": ""
+  }
+]

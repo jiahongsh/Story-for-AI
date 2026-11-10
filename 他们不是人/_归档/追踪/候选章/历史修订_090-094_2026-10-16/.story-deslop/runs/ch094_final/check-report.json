@@ -1,0 +1,10 @@
+{
+  "status": "pass",
+  "run_id": "ch094_final",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "retention_ratio": 1.0,
+  "changed_span_count": 0,
+  "blocking": [],
+  "advisory": []
+}

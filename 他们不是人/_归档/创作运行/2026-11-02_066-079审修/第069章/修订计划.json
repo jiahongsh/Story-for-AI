@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-069-20261102",
+  "summary": "修正已开水瓶在结尾再次首次开启的动作矛盾",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第069章_她的朋友.md",
+    "大纲/细纲_第069章.md"
+  ],
+  "affected_entities": [
+    "两块的水"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    69
+  ]
+}

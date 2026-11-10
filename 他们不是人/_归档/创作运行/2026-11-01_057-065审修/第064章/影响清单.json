@@ -1,0 +1,52 @@
+{
+  "affected_chapters": [
+    64
+  ],
+  "affected_entities": [
+    "窗边老头",
+    "郭老板"
+  ],
+  "affected_fact_ids": [],
+  "change_id": "revision-064-20261101",
+  "changed_files": [
+    "大纲/细纲_第064章.md",
+    "正文/第064章_你也一直在验我.md"
+  ],
+  "checked_files": [],
+  "conflicts": [],
+  "required_checks": [
+    "大纲/全书卷纲总览.md",
+    "大纲/卷纲_第一卷.md",
+    "大纲/卷纲_第七卷.md",
+    "大纲/卷纲_第三卷.md",
+    "大纲/卷纲_第二卷.md",
+    "大纲/卷纲_第五卷.md",
+    "大纲/卷纲_第八卷.md",
+    "大纲/卷纲_第六卷.md",
+    "大纲/卷纲_第四卷.md",
+    "大纲/大纲.md",
+    "大纲/恐怖节拍与证据升级硬约束.md",
+    "大纲/细纲_第063章.md",
+    "大纲/细纲_第064章.md",
+    "大纲/细纲_第065章.md",
+    "大纲/细纲_第070章.md",
+    "正文/第002章_先喝汤.md",
+    "正文/第063章_别拿她试.md",
+    "正文/第064章_你也一直在验我.md",
+    "正文/第065章_不知道不是通过.md",
+    "正文/第069章_她的朋友.md",
+    "正文/第070章_先喝汤是谁教的.md",
+    "追踪/上下文.md",
+    "追踪/关系清单.md",
+    "追踪/长期事实.md"
+  ],
+  "schema_version": 1,
+  "semantic_change": true,
+  "summary": "普通熟客只问关系，店主按店务回应，转碗者明确",
+  "tracking_action": {
+    "kind": "pending",
+    "reason": "",
+    "state_revision_after": null,
+    "state_revision_before": null
+  }
+}

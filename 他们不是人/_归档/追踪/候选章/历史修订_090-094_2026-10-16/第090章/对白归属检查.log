@@ -1,0 +1,137 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16\\第090章\\第090章_剥开以后.md",
+  "metrics": {
+    "dialogue_turns": 44,
+    "attribution_count": 11,
+    "attribution_density": 0.25,
+    "max_consecutive_tagged_turns": 2,
+    "top_verb": {
+      "value": "说",
+      "count": 9,
+      "ratio": 0.8181818181818182
+    },
+    "top_family": {
+      "value": "说",
+      "count": 9,
+      "ratio": 0.8181818181818182
+    },
+    "baseline_density": 0.02,
+    "recent_density": 0.433
+  },
+  "findings": [],
+  "advisories": [
+    {
+      "severity": "advisory",
+      "code": "verb-family-repeat",
+      "message": "“说”类标记占全部归属标记的 82%"
+    },
+    {
+      "severity": "advisory",
+      "code": "same-verb-repeat",
+      "message": "“说”重复 9 次"
+    }
+  ],
+  "examples": [
+    {
+      "line": 17,
+      "column": 18,
+      "text": "负责人接着说",
+      "subject": "负责人接着",
+      "verb": "说",
+      "family": "说",
+      "context": "“记忆反应也只报出来。”负责人接着说。"
+    },
+    {
+      "line": 33,
+      "column": 20,
+      "text": "老李说",
+      "subject": "老李",
+      "verb": "说",
+      "family": "说",
+      "context": "“她手术那天，走廊的灯坏了一盏。”老李说，“靠门那盏。你们问她，她记得。”"
+    },
+    {
+      "line": 49,
+      "column": 17,
+      "text": "老李说",
+      "subject": "老李",
+      "verb": "说",
+      "family": "说",
+      "context": "“你们要问什么，我都能说。”老李说，“哪年搬的家，她的药放哪里。你问。”"
+    },
+    {
+      "line": 53,
+      "column": 13,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“按他说的次序留。”姜霁说。"
+    },
+    {
+      "line": 67,
+      "column": 11,
+      "text": "镇封者说",
+      "subject": "镇封者",
+      "verb": "说",
+      "family": "说",
+      "context": "“范围在松。”镇封者说。"
+    },
+    {
+      "line": 81,
+      "column": 13,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“没有能确认原人的。”他说。"
+    },
+    {
+      "line": 83,
+      "column": 16,
+      "text": "年长行动员问",
+      "subject": "年长行动员",
+      "verb": "问",
+      "family": "问",
+      "context": "“再往下会不会有？”年长行动员问，“刚才那些事，连着出来了。”"
+    },
+    {
+      "line": 99,
+      "column": 12,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“这句，我不能签。”他说。"
+    },
+    {
+      "line": 137,
+      "column": 10,
+      "text": "回答",
+      "subject": null,
+      "verb": "回答",
+      "family": "答",
+      "context": "姜霁靠着走廊的墙，回答：“不知道。”"
+    },
+    {
+      "line": 151,
+      "column": 9,
+      "text": "说",
+      "subject": null,
+      "verb": "说",
+      "family": "说",
+      "context": "镜辞过了一会儿才说：“听见很多旧事。”"
+    },
+    {
+      "line": 163,
+      "column": 10,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“这份先读。”姜霁说，“读完再决定跟不跟。”"
+    }
+  ],
+  "next_action": "continue_with_semantic_dialogue_review"
+}

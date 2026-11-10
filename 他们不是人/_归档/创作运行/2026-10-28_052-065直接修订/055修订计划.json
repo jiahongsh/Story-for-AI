@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-055-20261101",
+  "summary": "将南栏匿名回复与公开空白页降回各自证据范围，修正055正文、055—056细纲和E055旧断言",
+  "semantic_change": true,
+  "changed_files": ["正文/第055章_没处理过.md", "大纲/细纲_第055章.md", "大纲/细纲_第056章.md"],
+  "affected_entities": ["南栏"],
+  "affected_fact_ids": ["K009"],
+  "affected_chapters": [55, 56]
+}

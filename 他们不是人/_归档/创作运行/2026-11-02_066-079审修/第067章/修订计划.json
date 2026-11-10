@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-067-20261102",
+  "summary": "补清不退小票从手中到窗台的动作，避免遗留物凭空出现",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第067章_证件上的芽.md",
+    "大纲/细纲_第067章.md"
+  ],
+  "affected_entities": [
+    "订金",
+    "十块的小票"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    67
+  ]
+}

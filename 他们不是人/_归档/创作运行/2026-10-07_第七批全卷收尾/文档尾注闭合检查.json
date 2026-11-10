@@ -1,0 +1,28 @@
+{
+  "revision_gate": {
+    "approval_stamp": "D:\\code\\stroy\\他们不是人\\追踪\\修改影响\\active.approved.json",
+    "change_id": "seventh-document-remainder-20261007",
+    "checked_file_count": 227,
+    "conflict_count": 0,
+    "required_check_count": 227,
+    "status": "PASS",
+    "tracking_action": "not_required"
+  },
+  "--freeze": {
+    "output": "source_manifest.json frozen at r219\n"
+  },
+  "--build": {
+    "output": "built r219; 54 chapter bindings; 22 reviewed CORE evidence rows\n"
+  },
+  "--check": {
+    "output": "PASS r219; 54 chapter bindings; 22 reviewed CORE evidence rows\n"
+  },
+  "world_export": {
+    "status": "DERIVED_VIEWS_EXPORTED",
+    "output": "创作运行/派生视图",
+    "files": 116,
+    "state_revision": 219,
+    "limitations": [],
+    "semantic_limit": "派生视图可重建，非第二权威；未知历史保留待核，不晋升候选。"
+  }
+}

@@ -1,0 +1,184 @@
+{
+  "11": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第011章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第011章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 41/100 段（41.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (41/100 (41.0%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第011章\\candidate.md:29:1: [advisory] micro-action-tic: 微动作复读：「了下/了一下」式轻量补语 7 处（6.4/千字）；同一反应模板高密度复现是机械指纹，合并动作 beat、换具体细节，别每个动作都补一个轻反应尾巴。 (了一下 了一圈 了一会 了一声 了一眼)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第011章\\candidate.md:123:16: [advisory] em-dash: 破折号按功能改写：打断→动作 beat/短句，拖长音→省略或动作，插入说明→逗号/冒号；勿一律改句号。 (的和你记得不一样——”)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "56": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第056章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第056章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/44 段（11.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/44 (11.4%))\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "58": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第058章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第058章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/49 段（34.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/49 (34.7%))\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "65": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第065章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第065章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 9/47 段（19.1%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (9/47 (19.1%))\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "77": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第077章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第077章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/39 段（12.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/39 (12.8%))\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "94": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第094章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第094章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/20 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/20 (25.0%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第094章\\candidate.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 82.3/千字、白话连接 48.2/千字，且≥30字承接句仅 4%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (姜霁看他一眼，像早就料到 | 她说， | 她只让镜辞看处置栏 | 有的人失联，材料不够 | 另有一份写着安平里复核 | 镜辞翻完一圈，喉咙发紧)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "95": [
+    {
+      "script": "language_gate.js",
+      "returncode": 0,
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第095章\\candidate.md\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-style-hygiene.js",
+      "returncode": 0,
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-ai-patterns.js",
+      "returncode": 0,
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_P0硬伤修订\\第095章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 3/19 段（15.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (3/19 (15.8%))\n",
+      "stderr": ""
+    },
+    {
+      "script": "check-degeneration.js",
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ]
+}

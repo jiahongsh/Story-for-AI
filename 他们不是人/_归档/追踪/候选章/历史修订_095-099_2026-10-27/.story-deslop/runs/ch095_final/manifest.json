@@ -1,0 +1,16 @@
+{
+  "run_version": 1,
+  "run_id": "ch095_final",
+  "status": "applied",
+  "created_at": "2026-10-27T01:51:38.614911+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_095-099_2026-10-27",
+  "source_path": "第095章/第095章_七天都正常.md",
+  "source_sha256": "3ce089034f6768ceab7d14bf7d064afe0f947626f6cf6930b1a6f8f86cd73b12",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light",
+  "applied_at": "2026-10-27T01:52:12.583096+00:00",
+  "applied_sha256": "f2dc7895e4c1a1009cb6f14d1d5f73a4a639dd6d8ad20cde41c86e863b387434"
+}

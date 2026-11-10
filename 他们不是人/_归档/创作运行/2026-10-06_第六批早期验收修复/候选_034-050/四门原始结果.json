@@ -1,0 +1,405 @@
+[
+  {
+    "script": "language_gate.js",
+    "returncode": 3,
+    "result": {
+      "raw": "",
+      "stderr": "Usage: node language_gate.js [--json] <chapter-file>\n"
+    }
+  },
+  {
+    "script": "check-style-hygiene.js",
+    "returncode": 0,
+    "result": {
+      "status": "passed",
+      "blocking": 0,
+      "advisory": 0,
+      "reports": [
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第036章_两套时间线.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第037章_临江七周.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第038章_宁州九年.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第039章_四年前的锁.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第040章_谁有权进屋.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第041章_不是暗号.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第042章_他今天做的事.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第045章_争议中.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第046章_凌晨又开了.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第047章_告警.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第048章_门链.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第050章_你不是我儿子.md",
+          "profile": "publish-clean",
+          "policy": {
+            "emoji": "forbid",
+            "emoticon": "forbid",
+            "mars": "forbid",
+            "punctuation": "forbid"
+          },
+          "style_file": null,
+          "whitelist_file": null,
+          "findings": []
+        }
+      ],
+      "next_action": "continue_workflow"
+    }
+  },
+  {
+    "script": "check-ai-patterns.js",
+    "returncode": 1,
+    "result": {
+      "findings": [
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 58/164 段（35.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "58/164 (35.4%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+          "line": 3,
+          "column": 1,
+          "type": "overcompressed-prose-tic",
+          "severity": "advisory",
+          "message": "过度精炼短段：叙述段 109 个，其中 84 个≤15字（77%），自然连接 55.3/千字偏少；先通读判断，确有提纲感再补断裂处和必要结构虚词，有意短镜头可留，别机械注水。",
+          "excerpt": "视频接通以后，对面第一句话就是： | 陈启明的脸色一下变了。 | 不是惊讶。 | 是那种熟得不能再熟的烦。 | 不是相似。 | 就是同一张脸。"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+          "line": 9,
+          "column": 1,
+          "type": "not-is-comparison",
+          "severity": "blocking",
+          "message": "高频 AI 对比句式；删掉否定铺垫，直接写后项，或改成动作/细节呈现。",
+          "excerpt": "不是惊讶。 是那种熟得不能再熟的烦"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第035章_另一个陈骁.md",
+          "line": 91,
+          "column": 1,
+          "type": "quote-emphasis-tic",
+          "severity": "advisory",
+          "message": "引号强调滥用：叙述里 1-4 字短词加引号强调 3 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。",
+          "excerpt": "自己是谁 行 别回来"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第036章_两套时间线.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 44/92 段（47.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "44/92 (47.8%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第037章_临江七周.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 47/82 段（57.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "47/82 (57.3%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第038章_宁州九年.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 52/99 段（52.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "52/99 (52.5%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第038章_宁州九年.md",
+          "line": 3,
+          "column": 1,
+          "type": "overcompressed-prose-tic",
+          "severity": "advisory",
+          "message": "过度精炼短段：叙述段 56 个，其中 33 个≤15字（59%），自然连接 50.2/千字偏少；先通读判断，确有提纲感再补断裂处和必要结构虚词，有意短镜头可留，别机械注水。",
+          "excerpt": "姜霁把纸举到视频前，让他再看一遍。 | 他停了停。 | 姜霁把授权时间记进表里。 | 镜辞问。 | 陈骁把脸转开： | 老刘在电话里笑，"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第039章_四年前的锁.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 35/92 段（38.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "35/92 (38.0%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第040章_谁有权进屋.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 41/98 段（41.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "41/98 (41.8%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第041章_不是暗号.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 36/81 段（44.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "36/81 (44.4%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第042章_他今天做的事.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 28/71 段（39.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "28/71 (39.4%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第042章_他今天做的事.md",
+          "line": 93,
+          "column": 1,
+          "type": "quote-emphasis-tic",
+          "severity": "advisory",
+          "message": "引号强调滥用：叙述里 1-4 字短词加引号强调 3 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。",
+          "excerpt": "身份异常 两地来源 那明天呢"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第042章_他今天做的事.md",
+          "line": 109,
+          "column": 6,
+          "type": "em-dash",
+          "severity": "advisory",
+          "message": "破折号按功能改写：打断→动作 beat/短句，拖长音→省略或动作，插入说明→逗号/冒号；勿一律改句号。",
+          "excerpt": "“那我自己——”"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第045章_争议中.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 16/61 段（26.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "16/61 (26.2%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第046章_凌晨又开了.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 16/58 段（27.6%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "16/58 (27.6%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第047章_告警.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 21/51 段（41.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "21/51 (41.2%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第048章_门链.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 41/76 段（53.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "41/76 (53.9%)"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第050章_你不是我儿子.md",
+          "line": 1,
+          "column": 1,
+          "type": "dialogue-density-stat",
+          "severity": "info",
+          "message": "对话密度统计：独立成行对话/字条段 23/60 段（38.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。",
+          "excerpt": "23/60 (38.3%)"
+        }
+      ]
+    }
+  },
+  {
+    "script": "check-degeneration.js",
+    "returncode": 1,
+    "result": {
+      "findings": [
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第045章_争议中.md",
+          "line": 115,
+          "column": 9,
+          "type": "language-leak",
+          "severity": "blocking",
+          "message": "英文专名/短词泄漏：「U」出现在中文正文中；不再默认豁免专名、缩写或短词，应改成中文；确需逐字保留时必须先由用户单独确认并在 .deslop-whitelist 精确登记。",
+          "excerpt": "杜经理找出一只旧U盘，把物业副本锁进值班柜，又"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第046章_凌晨又开了.md",
+          "line": 31,
+          "column": 11,
+          "type": "language-leak",
+          "severity": "blocking",
+          "message": "英文专名/短词泄漏：「U」出现在中文正文中；不再默认豁免专名、缩写或短词，应改成中文；确需逐字保留时必须先由用户单独确认并在 .deslop-whitelist 精确登记。",
+          "excerpt": "杜经理拿出昨晚那只旧U盘：“纸质一份在值班柜，一份"
+        },
+        {
+          "file": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第六批早期验收修复\\候选_034-050\\第046章_凌晨又开了.md",
+          "line": 35,
+          "column": 15,
+          "type": "language-leak",
+          "severity": "blocking",
+          "message": "英文专名/短词泄漏：「U」出现在中文正文中；不再默认豁免专名、缩写或短词，应改成中文；确需逐字保留时必须先由用户单独确认并在 .deslop-whitelist 精确登记。",
+          "excerpt": "天说得对。”杜经理把U盘塞回口袋，“页面会变，挨骂"
+        }
+      ]
+    }
+  }
+]

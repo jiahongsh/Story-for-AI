@@ -1,0 +1,44 @@
+{
+  "status": "READY_TO_CLOSE",
+  "reviewer": "Codex /root solo/direct",
+  "method": "原文与候选差异逐段回读；实际收入支出逐笔核对；直接后章余额回指及前批沈竹普通委托保真",
+  "scope": [
+    52,
+    70,
+    72,
+    73,
+    74,
+    75,
+    76,
+    77,
+    78,
+    79,
+    82,
+    83,
+    96
+  ],
+  "source_bound_prose": {
+    "52": "a4c75468968147daacff54ac147781ae1a165271b934ead768e1e2bf28e3e1ad",
+    "70": "3f37bc7b64a5139854896878105b6a5ac04f4191e9b33fe3c1d3e5b81714ab97",
+    "72": "39d97e5bd825e01de8da9d1890d50ca2d52f80a80472c3dc0fd4028192dca277",
+    "73": "321f03fde6b1fdc8e98a921f3a8907eedd7414aa03e3db85594c8e5f60ce2201",
+    "74": "f6905016071ccfee12fb1af1c3b1f637bc56d22f8e51596f88c2b9a17fa65fde",
+    "75": "24678f890e1e58afa607825281f70fba31691cfa0020fd5d07875e73ee726cfe",
+    "76": "fe74d475714ec2191d5c26fcef5a96b446637566d43903c66bdf09447d4f45be",
+    "77": "54732fbc8162f5529756fa4e62b044db49762f71ffa45b0f3bccf2aee8ec5fc7",
+    "78": "af74206f312da56b90cd32b3041036aa33f1462a7e8456da4dea86c0c8a59618",
+    "79": "e7e055df733c8624a1269b77374e8d074045d3fa053e13dbb9bc2f6e5d2f963d",
+    "82": "9ff82e01e922f6b0e5c9543db373d0fb653dc36381d4a9e38303e6726b206982",
+    "83": "22f43898035f4ef196cff7f8c970187da9d6a4ddb10096d31217a7b3ff10a11a",
+    "96": "f561e67a8b71fea61569d03b173402a2d6ff8228925f0bfc84a3e852b7427754"
+  },
+  "locked_hashes": {
+    "正文/第100章_第一道缝.md": true,
+    "正文/第101章_死人刷了门禁.md": true,
+    "正文/第102章_十一个月从哪来的.md": true,
+    "正文/第103章_他早就在这里.md": true
+  },
+  "current_context_unchanged": true,
+  "seven_gates": "manual_pass",
+  "limits": "不等于全卷结构问题已修；世界门机械集成只用于新长篇候选，本批为手动审查的历史局部修订"
+}

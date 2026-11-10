@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-075-20261102",
+  "summary": "撤去镜辞无来源的侯强损失账，保留工人独立经历和读者认知差",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第075章_不看也收尾.md",
+    "大纲/细纲_第075章.md"
+  ],
+  "affected_entities": [
+    "侯强",
+    "猫眼",
+    "撤走栏"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    75
+  ]
+}

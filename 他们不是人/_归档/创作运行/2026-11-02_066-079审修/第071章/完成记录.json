@@ -1,0 +1,8 @@
+{
+  "chapter": 71,
+  "state_revision_before": 266,
+  "state_revision_after": 267,
+  "formal_sha256": "6f4387f1e33726eb2fa5002a5aebb02f0db79c93d773a0c22c8b1e4d253f2c34",
+  "candidate_sha256": "6f4387f1e33726eb2fa5002a5aebb02f0db79c93d773a0c22c8b1e4d253f2c34",
+  "summary": "收紧远程可见范围，修正猫眼指称并删除无来源的钥匙支段"
+}

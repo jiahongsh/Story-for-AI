@@ -1,0 +1,128 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16\\第092章\\第092章_右肩.md",
+  "metrics": {
+    "dialogue_turns": 31,
+    "attribution_count": 10,
+    "attribution_density": 0.323,
+    "max_consecutive_tagged_turns": 1,
+    "top_verb": {
+      "value": "说",
+      "count": 8,
+      "ratio": 0.8
+    },
+    "top_family": {
+      "value": "说",
+      "count": 8,
+      "ratio": 0.8
+    },
+    "baseline_density": 0.02,
+    "recent_density": 0.43
+  },
+  "findings": [],
+  "advisories": [
+    {
+      "severity": "advisory",
+      "code": "verb-family-repeat",
+      "message": "“说”类标记占全部归属标记的 80%"
+    },
+    {
+      "severity": "advisory",
+      "code": "same-verb-repeat",
+      "message": "“说”重复 8 次"
+    }
+  ],
+  "examples": [
+    {
+      "line": 17,
+      "column": 18,
+      "text": "她说",
+      "subject": "她",
+      "verb": "说",
+      "family": "说",
+      "context": "“还差她自己怎么记得这段日子。”她说。"
+    },
+    {
+      "line": 31,
+      "column": 17,
+      "text": "她说",
+      "subject": "她",
+      "verb": "说",
+      "family": "说",
+      "context": "“拿杯子那个，我还提醒过他。”她说，“后来问得多了，他一伸手，我就先看哪只手。看见左手，又觉得跟我记的不一样。”"
+    },
+    {
+      "line": 45,
+      "column": 30,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“你看到变化，来求助。我们接下来怎么查，是我们的事。”姜霁说，“这次材料能解释主要变化。”"
+    },
+    {
+      "line": 61,
+      "column": 14,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“本次异常调查结束。”姜霁说。"
+    },
+    {
+      "line": 71,
+      "column": 13,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“已收到撤点确认。”姜霁说。"
+    },
+    {
+      "line": 83,
+      "column": 12,
+      "text": "她说",
+      "subject": "她",
+      "verb": "说",
+      "family": "说",
+      "context": "“我本来怕他不对，”她说，“后来你们天天问，我更不敢回家了。”"
+    },
+    {
+      "line": 91,
+      "column": 9,
+      "text": "妻子问",
+      "subject": "妻子",
+      "verb": "问",
+      "family": "问",
+      "context": "“记完呢？”妻子问。"
+    },
+    {
+      "line": 95,
+      "column": 27,
+      "text": "她说",
+      "subject": "她",
+      "verb": "说",
+      "family": "说",
+      "context": "“你说增加了恐惧，这句我不删，也不改成你误会了。”她说。"
+    },
+    {
+      "line": 107,
+      "column": 12,
+      "text": "他问",
+      "subject": "他",
+      "verb": "问",
+      "family": "问",
+      "context": "“以后真出问题呢？”他问。"
+    },
+    {
+      "line": 115,
+      "column": 19,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“以前太多看着没事，后来翻车的。”他说。"
+    }
+  ],
+  "next_action": "continue_with_semantic_dialogue_review"
+}

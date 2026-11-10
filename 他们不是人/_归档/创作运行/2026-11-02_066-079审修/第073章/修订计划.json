@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-073-20261102",
+  "summary": "明确复查承接已参加的补核，送药人只报告本人敲门未应",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第073章_又到两点十七.md",
+    "大纲/细纲_第073章.md"
+  ],
+  "affected_entities": [
+    "门链",
+    "送药的人",
+    "补核"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    73
+  ]
+}

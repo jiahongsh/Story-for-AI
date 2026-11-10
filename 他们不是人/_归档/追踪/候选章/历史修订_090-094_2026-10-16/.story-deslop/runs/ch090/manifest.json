@@ -1,0 +1,14 @@
+{
+  "run_version": 1,
+  "run_id": "ch090",
+  "status": "draft",
+  "created_at": "2026-10-16T07:44:36.617097+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16",
+  "source_path": "第090章/第090章_剥开以后.md",
+  "source_sha256": "057114416ca8b677d5ad6dbd782a775c2bf44a8c103fe9bf3f183a967cccf5a4",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light"
+}

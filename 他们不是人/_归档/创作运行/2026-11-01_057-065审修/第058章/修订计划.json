@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-058-20261101",
+  "summary": "遮挡公共座位上的无关住户信息",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第058章_你为什么不躲.md",
+    "大纲/细纲_第058章.md"
+  ],
+  "affected_entities": [
+    "安平里门口的拦截记录"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    58
+  ]
+}

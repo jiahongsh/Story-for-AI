@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-052-20261028",
+  "summary": "修正宁州陈骁清晨行程与许棠送药日序，不改变双人并账与已发生损失",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第052章_一条时间线.md",
+    "大纲/细纲_第052章.md"
+  ],
+  "affected_entities": [
+    "宁州陈骁",
+    "许棠",
+    "杜经理"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    52
+  ]
+}

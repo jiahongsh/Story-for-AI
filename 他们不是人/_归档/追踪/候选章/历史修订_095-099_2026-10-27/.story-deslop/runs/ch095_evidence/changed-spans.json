@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "spans": [
+    {
+      "kind": "replace",
+      "source_start": 3,
+      "source_end": 3,
+      "candidate_start": 3,
+      "candidate_end": 3,
+      "source_preview": [
+        "镜辞刚给客人的表扣好后盖，手机便接连震了两下。姜霁发来两页七天记录，紧接着打来电话。"
+      ],
+      "candidate_preview": [
+        "镜辞把明早要装的表收进托盘，手机便接连震了两下。姜霁发来两页七天记录，紧接着打来电话。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 39,
+      "source_end": 39,
+      "candidate_start": 39,
+      "candidate_end": 39,
+      "source_preview": [
+        "电话断了以后，镜辞把修好的客表装袋。袋口还没封，猫眼就从半落的卷帘门下弯腰进来，怀里夹着纸袋。她看了眼台面，等他把客表收进格子，才将几页纸放下。"
+      ],
+      "candidate_preview": [
+        "电话断了以后，镜辞把两页记录移到托盘外侧。刚腾出地方，猫眼就从半落的卷帘门下弯腰进来，怀里夹着纸袋。她看了眼台面，等他把托盘推稳，才将几页纸放下。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 89,
+      "source_end": 89,
+      "candidate_start": 89,
+      "candidate_end": 89,
+      "source_preview": [
+        "镜辞回了收到。守钟人出来催他收茶，见他又把工具盒挪到纸上，伸手拎开了。"
+      ],
+      "candidate_preview": [
+        "镜辞回了收到，将两页记录收在一侧，给明早的托盘盖好防尘罩。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 91,
+      "source_end": 91,
+      "candidate_start": 91,
+      "candidate_end": 91,
+      "source_preview": [
+        "“客人的袋子封好。少个零件，纸替你赔？”"
+      ],
+      "candidate_preview": [
+        "次日清晨，镜辞把那只表取出来。守钟人出来摆工具，见他又把记录纸挪到零件旁，伸手拿开了。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 93,
+      "source_end": 93,
+      "candidate_start": 93,
+      "candidate_end": 93,
+      "source_preview": [
+        "他赶紧封袋，在袋口写上取件时点，放进柜台格子。守钟人将茶端走，没再问周衡。"
+      ],
+      "candidate_preview": [
+        "“客人的零件收好。少个小东西，纸替你赔？”"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 95,
+      "source_end": 95,
+      "candidate_start": 95,
+      "candidate_end": 97,
+      "source_preview": [
+        "次日清晨，镜辞先把那只表取出来，核过走时才摆上台面。手机在柜台下面震了一声，还是姜霁：保持联络。"
+      ],
+      "candidate_preview": [
+        "守钟人拎着工具回后间了。",
+        "",
+        "镜辞将纸压到柜台下面，先装好那只表，核过走时才摆上台面。手机震了一声，还是姜霁：保持联络。"
+      ]
+    },
+    {
+      "kind": "replace",
+      "source_start": 103,
+      "source_end": 103,
+      "candidate_start": 105,
+      "candidate_end": 105,
+      "source_preview": [
+        "镜辞手里还捏着取件袋。他看见周衡换了只手提工具，往修鞋摊走过去，便将袋子放回格子，没有起身。"
+      ],
+      "candidate_preview": [
+        "镜辞手里还捏着取件袋。他看见周衡换了只手提工具，往修鞋摊走过去，便将袋子放回格子，没有起身去叫周衡。"
+      ]
+    }
+  ]
+}

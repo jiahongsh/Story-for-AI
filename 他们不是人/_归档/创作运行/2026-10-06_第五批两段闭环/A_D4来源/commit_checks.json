@@ -1,0 +1,122 @@
+{
+  "53": {
+    "language_gate.js": {
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第053章\\candidate.md\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-style-hygiene.js": {
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-ai-patterns.js": {
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第053章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/40 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/40 (25.0%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第053章\\candidate.md:81:1: [advisory] long-paragraph: 段落过长（324 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (镜辞把手机扣上。扣款通知和停单附页仍分在两个信封里。茶凉了，谁也没喝。他把凉茶倒)\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-degeneration.js": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 74
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 74
+    }
+  },
+  "54": {
+    "language_gate.js": {
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第054章\\candidate.md\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-style-hygiene.js": {
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-ai-patterns.js": {
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第054章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 12/50 段（24.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (12/50 (24.0%))\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-degeneration.js": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 75
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 75
+    }
+  },
+  "55": {
+    "language_gate.js": {
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第055章\\candidate.md\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-style-hygiene.js": {
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-ai-patterns.js": {
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第055章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/48 段（20.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/48 (20.8%))\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-degeneration.js": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 76
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 76
+    }
+  },
+  "58": {
+    "language_gate.js": {
+      "stdout": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第058章\\candidate.md\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-style-hygiene.js": {
+      "stdout": "PASS: style hygiene clean (1 file)\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-ai-patterns.js": {
+      "stdout": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-06_第五批两段闭环\\A_D4来源\\第058章\\candidate.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/49 段（34.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/49 (34.7%))\n",
+      "stderr": "",
+      "returncode": 0
+    },
+    "check-degeneration.js": {
+      "stdout": "",
+      "stderr": "",
+      "returncode": 0
+    },
+    "commit": {
+      "last_committed_chapter": 99,
+      "state_revision": 77
+    },
+    "check": {
+      "last_committed_chapter": 99,
+      "state_revision": 77
+    }
+  }
+}

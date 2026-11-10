@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "file": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16\\第091章\\第091章_没有缝.md",
+  "metrics": {
+    "dialogue_turns": 45,
+    "attribution_count": 13,
+    "attribution_density": 0.289,
+    "max_consecutive_tagged_turns": 2,
+    "top_verb": {
+      "value": "说",
+      "count": 7,
+      "ratio": 0.5384615384615384
+    },
+    "top_family": {
+      "value": "说",
+      "count": 7,
+      "ratio": 0.5384615384615384
+    },
+    "baseline_density": 0.02,
+    "recent_density": 0.364
+  },
+  "findings": [],
+  "advisories": [
+    {
+      "severity": "advisory",
+      "code": "same-verb-repeat",
+      "message": "“说”重复 7 次"
+    }
+  ],
+  "examples": [
+    {
+      "line": 7,
+      "column": 18,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“外派半年，回来以后开始变。”姜霁说，“我们观察了两周。排班、住处、夫妻冷战、孩子长高，能解释的先排掉。现在剩的几项，都在右臂怎么使力上。”"
+    },
+    {
+      "line": 25,
+      "column": 12,
+      "text": "他说",
+      "subject": "他",
+      "verb": "说",
+      "family": "说",
+      "context": "“那边买菜又排队。”他说，“你说的那家没开。”"
+    },
+    {
+      "line": 35,
+      "column": 16,
+      "text": "镜辞说",
+      "subject": "镜辞",
+      "verb": "说",
+      "family": "说",
+      "context": "“你愿意说什么就说什么。”镜辞说。"
+    },
+    {
+      "line": 39,
+      "column": 5,
+      "text": "妻子小声说",
+      "subject": "妻子小声",
+      "verb": "说",
+      "family": "说",
+      "context": "妻子小声说：“开关那个已经划了。”"
+    },
+    {
+      "line": 63,
+      "column": 3,
+      "text": "姜霁问",
+      "subject": "姜霁",
+      "verb": "问",
+      "family": "问",
+      "context": "姜霁问：“可以了吗？”"
+    },
+    {
+      "line": 75,
+      "column": 8,
+      "text": "姜霁说",
+      "subject": "姜霁",
+      "verb": "说",
+      "family": "说",
+      "context": "“收到。”姜霁说。"
+    },
+    {
+      "line": 79,
+      "column": 23,
+      "text": "她说",
+      "subject": "她",
+      "verb": "说",
+      "family": "说",
+      "context": "“这次观察结束。还有几项生活变化需要核。”她说。"
+    },
+    {
+      "line": 83,
+      "column": 14,
+      "text": "问",
+      "subject": null,
+      "verb": "问",
+      "family": "问",
+      "context": "妻子看着丈夫提袋的手，忽然问：“会不会还是右肩？他外派时伤过，可一直跟我说早好了。”"
+    },
+    {
+      "line": 93,
+      "column": 3,
+      "text": "姜霁问",
+      "subject": "姜霁",
+      "verb": "问",
+      "family": "问",
+      "context": "姜霁问：“能干活以后，高举和往后伸还有没有不舒服？”"
+    },
+    {
+      "line": 105,
+      "column": 18,
+      "text": "周诚问",
+      "subject": "周诚",
+      "verb": "问",
+      "family": "问",
+      "context": "“这些交了，还要一直跟着问？”周诚问。"
+    },
+    {
+      "line": 131,
+      "column": 14,
+      "text": "说",
+      "subject": null,
+      "verb": "说",
+      "family": "说",
+      "context": "妻子望着左手边的杯子，低声说：“家里原来放右边的。”"
+    },
+    {
+      "line": 133,
+      "column": 8,
+      "text": "周诚问",
+      "subject": "周诚",
+      "verb": "问",
+      "family": "问",
+      "context": "“哪个？”周诚问。"
+    }
+  ],
+  "next_action": "continue_with_semantic_dialogue_review"
+}

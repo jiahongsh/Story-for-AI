@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-065-20261101",
+  "summary": "限定工时见证与维修责任，理清车费及找零归属",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第065章_不知道不是通过.md",
+    "大纲/细纲_第065章.md"
+  ],
+  "affected_entities": [
+    "马甲工",
+    "孙立",
+    "找零"
+  ],
+  "affected_fact_ids": [
+    "K009"
+  ],
+  "affected_chapters": [
+    65
+  ]
+}

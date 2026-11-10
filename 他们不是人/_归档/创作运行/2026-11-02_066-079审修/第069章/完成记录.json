@@ -1,0 +1,8 @@
+{
+  "chapter": 69,
+  "state_revision_before": 264,
+  "state_revision_after": 265,
+  "formal_sha256": "db263ee22559577945056f70a3e2090b83808ef085fc5250a287cc64d922e0ef",
+  "candidate_sha256": "db263ee22559577945056f70a3e2090b83808ef085fc5250a287cc64d922e0ef",
+  "summary": "修正已开水瓶在结尾再次首次开启的动作矛盾"
+}

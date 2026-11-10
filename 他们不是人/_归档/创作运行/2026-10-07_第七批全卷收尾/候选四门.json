@@ -1,0 +1,366 @@
+{
+  "51": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第051章_真的回来了.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第051章_真的回来了.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 45/85 段（52.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (45/85 (52.9%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "53": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第053章_验收题.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第053章_验收题.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/40 段（25.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/40 (25.0%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "55": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第055章_没处理过.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第055章_没处理过.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/48 段（20.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/48 (20.8%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "56": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第056章_清理轨迹.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第056章_清理轨迹.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 5/44 段（11.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (5/44 (11.4%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "57": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第057章_同一张脸.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第057章_同一张脸.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 8/47 段（17.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (8/47 (17.0%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "58": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第058章_你为什么不躲.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第058章_你为什么不躲.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/49 段（34.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/49 (34.7%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "59": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第059章_工单跟着我走.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第059章_工单跟着我走.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/42 段（23.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/42 (23.8%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "60": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第060章_不回答.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第060章_不回答.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 12/45 段（26.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (12/45 (26.7%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第060章_不回答.md:11:1: [advisory] micro-action-tic: 微动作复读：「了下/了一下」式轻量补语 17 处（6.4/千字）；同一反应模板高密度复现是机械指纹，合并动作 beat、换具体细节，别每个动作都补一个轻反应尾巴。 (了一下 了一声 了下 了道 了一眼 了口)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第060章_不回答.md:89:1: [advisory] long-paragraph: 段落过长（251 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (姜霁用手机拍了维修单，不拍孙立的脸。照片里只有姓名、故障和取表时间。她把照片放进)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "62": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第062章_推荐店.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第062章_推荐店.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/54 段（31.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/54 (31.5%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "63": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第063章_别拿她试.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第063章_别拿她试.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 26/63 段（41.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (26/63 (41.3%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "64": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第064章_你也一直在验我.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第064章_你也一直在验我.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/44 段（22.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/44 (22.7%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "65": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第065章_不知道不是通过.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第065章_不知道不是通过.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 9/49 段（18.4%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (9/49 (18.4%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "67": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第067章_证件上的芽.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第067章_证件上的芽.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/33 段（18.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/33 (18.2%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "70": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第070章_先喝汤是谁教的.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第070章_先喝汤是谁教的.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 8/35 段（22.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (8/35 (22.9%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "71": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第071章_复核日.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第071章_复核日.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 7/46 段（15.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (7/46 (15.2%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "73": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第073章_又到两点十七.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第073章_又到两点十七.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 4/29 段（13.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (4/29 (13.8%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "75": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第075章_不看也收尾.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第075章_不看也收尾.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/40 段（15.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/40 (15.0%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "81": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第081章_先把人带出来.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第081章_先把人带出来.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 3/26 段（11.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (3/26 (11.5%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第081章_先把人带出来.md:39:1: [advisory] long-paragraph: 段落过长（207 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (陈平看了看让开的那一边，又看了看弯管。他没有冲警察。他冲的是柜台角。柜台角裂了一)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "82": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第082章_姜霁没说的那部分.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第082章_姜霁没说的那部分.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 10/30 段（33.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (10/30 (33.3%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "83": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第083章_合作条件.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第083章_合作条件.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 15/47 段（31.9%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (15/47 (31.9%))\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "84": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第084章_今晚不回去.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第084章_今晚不回去.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 17/54 段（31.5%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (17/54 (31.5%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第084章_今晚不回去.md:11:1: [advisory] long-paragraph: 段落过长（217 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (他们九点到城南旧小区。张岚带来租约，主租户写她的名字；夫妻共同住在这里，房屋产权)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "85": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第085章_她摔了一下.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第085章_她摔了一下.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 11/42 段（26.2%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (11/42 (26.2%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第085章_她摔了一下.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 97.0/千字、白话连接 61.5/千字，且≥30字承接句仅 6%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (取物约在下午三点 | 门内十分钟 | 超时结束 | 张岚在车里说，嗓子发干， | 镜辞点头 | 协查复印件贴着心跳)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "86": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第086章_知道，和做到.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第086章_知道，和做到.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 6/36 段（16.7%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (6/36 (16.7%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第086章_知道，和做到.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 94.8/千字、白话连接 55.1/千字，且≥30字承接句仅 8%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (她说，嗓子发干， | 姜霁点头 | 镜辞坐在侧面，私人本翻开 | 协查复印件仍在口袋里 | 他先写一行：旧片段核对 | 未见诱导)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "89": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第089章_另一个住处.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第089章_另一个住处.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 4/27 段（14.8%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (4/27 (14.8%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第089章_另一个住处.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 79.8/千字、白话连接 52.3/千字，且≥30字承接句仅 7%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (进去只看，不碰 | 不碰是条款 | 条款写在她夹子第一页 | 墙角小票日期落在最近数月 | 镜辞站在床边，喉咙发紧 | 婚姻进不来这间仓库)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "90": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 3/25 段（12.0%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (3/25 (12.0%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md:3:1: [advisory] low-connective-density-tic: 低连接密度：引号外叙述功能词 87.3/千字、白话连接 57.2/千字，且≥30字承接句仅 8%；容易像提纲/电报体。通读后补必要连接和中长句群，别机械注水。 (受控处置点的灯白得发冷 | 张岚不在场 | 镜辞只看接缝 | 习惯动作互相打架 | 空位里什么都没有 | 没有也挡不住他护)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md:5:1: [advisory] long-paragraph: 段落过长（227 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (承担镇封的行动员站在约束区外，将限制范围保持在目标这一侧。另一名负责定向剥蚀，自)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md:9:1: [advisory] long-paragraph: 段落过长（201 字）：按镜头/新动作/新线索/视线切换断段，别一段到底。 (姜霁站在玻璃外记录关系风险。记录时她听见目标嘴里冒出一串很完整的旧事：张岚手术那)\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第090章_剥开以后.md:11:1: [advisory] quote-emphasis-tic: 引号强调滥用：叙述里 1-4 字短词加引号强调 3 处；只留真正反讽/转述必要的一两处，其余去掉引号直接写，或换成具体动作让读者自己品。 (救出 剥壳人 未见)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  },
+  "92": {
+    "language_gate.js": {
+      "output": "PASS: no foreign letters or forbidden markup in D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第092章_右肩.md\n"
+    },
+    "check-style-hygiene.js": {
+      "output": "PASS: style hygiene clean (1 file)\n"
+    },
+    "check-ai-patterns.js": {
+      "output": "D:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第092章_右肩.md:1:1: [info] dialogue-density-stat: 对话密度统计：独立成行对话/字条段 1/19 段（5.3%）；对标参考区间 40-55%，独角戏/单向命令类场景天然更低，不是硬门槛，仅供节奏判断参考。 (1/19 (5.3%))\nD:\\code\\stroy\\他们不是人\\创作运行\\2026-10-07_第七批全卷收尾\\候选\\第092章_右肩.md:9:53: [advisory] em-dash: 破折号按功能改写：打断→动作 beat/短句，拖长音→省略或动作，插入说明→逗号/冒号；勿一律改句号。 (爸抱。钥匙盘也是——他进门总用左手抓)\n"
+    },
+    "check-degeneration.js": {
+      "output": ""
+    }
+  }
+}

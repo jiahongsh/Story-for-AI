@@ -1,0 +1,14 @@
+{
+  "run_version": 1,
+  "run_id": "ch092_final",
+  "status": "draft",
+  "created_at": "2026-10-16T07:49:49.184098+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\历史修订_090-094_2026-10-16",
+  "source_path": "第092章/第092章_右肩.md",
+  "source_sha256": "e7950a675007141b9219f97d3d1512ec7fcab48db72d7e9d2c0ecab8d5f065be",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light"
+}

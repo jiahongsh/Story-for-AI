@@ -1,0 +1,47 @@
+[
+  {
+    "chapter": 95,
+    "source": "正文\\第095章_七天都正常.md",
+    "source_sha256": "87e7975b478128a0c4160931cc08cfcb13bba608d939c440ada3b93c1d111b23",
+    "candidate": "追踪\\候选章\\历史修订_095-099_2026-10-27\\第095章\\第095章_七天都正常.md",
+    "candidate_sha256": "f2dc7895e4c1a1009cb6f14d1d5f73a4a639dd6d8ad20cde41c86e863b387434",
+    "source_hanzi": 827,
+    "candidate_hanzi": 1650
+  },
+  {
+    "chapter": 96,
+    "source": "正文\\第096章_没有缝的人.md",
+    "source_sha256": "a541b3c87647c559759e6a9e4e2a9d59c04cbe9895f5da07a3e8de16f8d7ff1d",
+    "candidate": "追踪\\候选章\\历史修订_095-099_2026-10-27\\第096章\\第096章_没有缝的人.md",
+    "candidate_sha256": "2961d6d0e2069c7a401320b5dbef5500f310ada8e705126b9431d0790453a105",
+    "source_hanzi": 748,
+    "candidate_hanzi": 1711
+  },
+  {
+    "chapter": 97,
+    "source": "正文\\第097章_前三年.md",
+    "source_sha256": "7a936d3f7b62ea90a5adcff5fa3236b15d1472f708b07f718a718eeead179502",
+    "candidate": "追踪\\候选章\\历史修订_095-099_2026-10-27\\第097章\\第097章_前三年.md",
+    "candidate_sha256": "bf9b55755c8c3f9956a1d98df711dc477b6c589a903a89676b5f831398b08731",
+    "source_hanzi": 790,
+    "candidate_hanzi": 1702
+  },
+  {
+    "chapter": 98,
+    "source": "正文\\第098章_后五年.md",
+    "source_sha256": "e61476eaecf9e4ee5153aec2c10d27053cbf069292bf60232f753b55f47fd1e8",
+    "candidate": "追踪\\候选章\\历史修订_095-099_2026-10-27\\第098章\\第098章_后五年.md",
+    "candidate_sha256": "ed17255f397ca5b3cb8be8492b3f1ccf3c901787613907a2d75ec427c864d49a",
+    "source_hanzi": 786,
+    "candidate_hanzi": 2016
+  },
+  {
+    "chapter": 99,
+    "source": "正文\\第099章_一只真的坏表.md",
+    "source_sha256": "3fa042f97af751045780a9a47bae8dac07e2608f115f983af3af62141e5f7cbb",
+    "candidate": "追踪\\候选章\\历史修订_095-099_2026-10-27\\第099章\\第099章_一只真的坏表.md",
+    "candidate_sha256": "b1eee2d1f653f1217d6e9016dc7e392e03fe79d8b976b6a9da3996bddc0621aa",
+    "source_hanzi": 699,
+    "candidate_hanzi": 1668
+  }
+]

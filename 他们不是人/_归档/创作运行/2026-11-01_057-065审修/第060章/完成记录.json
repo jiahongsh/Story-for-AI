@@ -1,0 +1,8 @@
+{
+  "chapter": 60,
+  "state_revision_before": 257,
+  "state_revision_after": 258,
+  "formal_sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450",
+  "candidate_sha256": "349a75ccfeff5a9440d8aa6ecada8c1d6759e47f28e8d47631ba9b61acfec450",
+  "summary": "普通维修与验收分离，纠正服装和待修表物件动作"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 75,
+  "target": "正文/第075章_不看也收尾.md",
+  "accepted_prose_sha256": "24678f890e1e58afa607825281f70fba31691cfa0020fd5d07875e73ee726cfe",
+  "candidate_id": "C20261005-135718",
+  "candidate_manifest": "追踪/候选章/第075章/C20261005-135718/manifest.json",
+  "context_digest": "e07c8320a4c1716081454218b2fa63b1429d4c56517126acffe7d237eb3ee34c",
+  "state_revision_before": 18,
+  "state_revision_after": 63,
+  "accepted_at": "2026-10-05T06:04:47Z",
+  "approval_mode": "auto",
+  "approval_note": "用户本次明确说自动定稿。第075章按该授权接纳并写入正文。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T03:56:48Z",
+      "reason": "用户授权继续修综合方案下一批；时间与实际现金连续性修订",
+      "old_sha256": "db2233ec06d6403614dd4fbe66dc23b605deb7577c2286f090af466bfc7be66b",
+      "new_sha256": "24678f890e1e58afa607825281f70fba31691cfa0020fd5d07875e73ee726cfe",
+      "state_revision": 63,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-05T06:05:17Z"
+}

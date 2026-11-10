@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "status": "committed",
+  "chapter": 61,
+  "target": "正文/第061章_来修表的人.md",
+  "accepted_prose_sha256": "69fafe501834d5b95e0321bf97663b6e2ce5645afdd32f59561cfbd5d04e592e",
+  "candidate_id": "C20261004-141007",
+  "candidate_manifest": "追踪/候选章/第061章/C20261004-141007/manifest.json",
+  "context_digest": "5a175122367d6398c9579e040cc7bbe4684717cae24132a6eee1780f0d13e032",
+  "state_revision_before": 4,
+  "state_revision_after": 232,
+  "accepted_at": "2026-10-04T06:11:38Z",
+  "approval_mode": "review",
+  "approval_note": "用户明确回复接受，接纳第061章候选。",
+  "sync_history": [
+    {
+      "synced_at": "2026-10-06T04:11:30Z",
+      "reason": "用户授权第三批反调查局部闭环修订",
+      "old_sha256": "ca3557ed14ab027429b611a7672059d1576f2b7ea0df52dc78d0afad41e638a7",
+      "new_sha256": "b96e5752ca74066afa4f3ce263dc986e9b686d880445cf9c2bdd62e0f10a1e8d",
+      "state_revision": 68,
+      "revision_manifest": "追踪/修改影响/active.json"
+    },
+    {
+      "synced_at": "2026-10-07T12:02:34Z",
+      "reason": "冷读清单限定修复，通过语义及四门检查",
+      "old_sha256": "b96e5752ca74066afa4f3ce263dc986e9b686d880445cf9c2bdd62e0f10a1e8d",
+      "new_sha256": "69fafe501834d5b95e0321bf97663b6e2ce5645afdd32f59561cfbd5d04e592e",
+      "state_revision": 232,
+      "revision_manifest": "追踪/修改影响/active.json"
+    }
+  ],
+  "closed_at": "2026-10-04T06:12:55Z"
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "check": "revision_guard",
+    "returncode": 0,
+    "stdout": "{\"approval_stamp\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\修改影响\\\\active.approved.json\", \"change_id\": \"cleanup-c01-r10-20261008\", \"checked_file_count\": 280, \"conflict_count\": 10, \"required_check_count\": 280, \"status\": \"PASS\", \"tracking_action\": \"commit\"}\n",
+    "stderr": ""
+  },
+  {
+    "check": "sync 59",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第059章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 61",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第061章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 62",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第062章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 63",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第063章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 66",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第066章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 71",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第071章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 72",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第072章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 73",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第073章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 74",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第074章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 75",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第075章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 83",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第083章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 91",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第091章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 94",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第094章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 96",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第096章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "sync 98",
+    "returncode": 0,
+    "stdout": "D:\\code\\stroy\\他们不是人\\追踪\\章节提交\\第098章.json\n",
+    "stderr": "Exception in thread Thread-1 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xae in position 64: illegal multibyte sequence\n"
+  },
+  {
+    "check": "voice_profile",
+    "returncode": 0,
+    "stdout": "{\n  \"status\": \"not_configured\",\n  \"message\": \"尚未建立本书声音画像\"\n}\n",
+    "stderr": ""
+  },
+  {
+    "check": "tracking_check",
+    "returncode": 0,
+    "stdout": "{\"last_committed_chapter\": 99, \"state_revision\": 249}\n",
+    "stderr": ""
+  },
+  {
+    "check": "story_doctor",
+    "returncode": 1,
+    "stdout": "",
+    "stderr": "Exception in thread Thread-5 (_readerthread):\nTraceback (most recent call last):\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 1044, in _bootstrap_inner\n    self.run()\n    ~~~~~~~~^^\n  File \"D:\\miniconda3\\Lib\\threading.py\", line 995, in run\n    self._target(*self._args, **self._kwargs)\n    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\miniconda3\\Lib\\subprocess.py\", line 1615, in _readerthread\n    buffer.append(fh.read())\n                  ~~~~~~~^^\nUnicodeDecodeError: 'gbk' codec can't decode byte 0xa3 in position 94: illegal multibyte sequence\nTraceback (most recent call last):\n  File \"D:\\code\\stroy\\skills\\story-long-write\\scripts\\story_doctor.py\", line 376, in <module>\n    raise SystemExit(main())\n                     ~~~~^^\n  File \"D:\\code\\stroy\\skills\\story-long-write\\scripts\\story_doctor.py\", line 369, in main\n    return int(args.func(args))\n               ~~~~~~~~~^^^^^^\n  File \"D:\\code\\stroy\\skills\\story-long-write\\scripts\\story_doctor.py\", line 342, in cmd_check\n    check_voice_profile(project, errors, warnings, checks)\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\code\\stroy\\skills\\story-long-write\\scripts\\story_doctor.py\", line 157, in check_voice_profile\n    result = json.loads(completed.stdout)\n  File \"D:\\miniconda3\\Lib\\json\\__init__.py\", line 345, in loads\n    raise TypeError(f'the JSON object must be str, bytes or bytearray, '\n                    f'not {s.__class__.__name__}')\nTypeError: the JSON object must be str, bytes or bytearray, not NoneType\n"
+  },
+  {
+    "check": "story_doctor_UTF8重验",
+    "returncode": 0,
+    "stdout": "{\"status\": \"pass\", \"project\": \"D:\\\\code\\\\stroy\\\\他们不是人\", \"checks\": [{\"name\": \"tracking_commit\", \"status\": \"pass\"}, {\"name\": \"writing_method\", \"status\": \"pass\", \"details\": {\"status\": \"ready\", \"method_branch\": \"A-standard\", \"implicit_default\": true, \"runtime_strategy\": \"existing-style-recall\", \"read_benchmark_style\": true, \"read_raw_anchor_excerpts\": true}}, {\"name\": \"chapter_candidates\", \"status\": \"pass\", \"open\": 0}, {\"name\": \"accepted_prose_receipts\", \"status\": \"pass\", \"count\": 43}, {\"name\": \"accepted_voice_profile\", \"status\": \"not_configured\"}, {\"name\": \"golden_voice_profile\", \"status\": \"not_configured\"}, {\"name\": \"latest_projection\", \"status\": \"pass\", \"events\": 164}, {\"name\": \"revision_gate\", \"status\": \"pass\"}, {\"name\": \"cold_read\", \"status\": \"not_required\"}], \"errors\": [], \"warnings\": [{\"code\": \"voice-profile-not-configured\", \"message\": \"尚无本书声音画像；不足五章时正常，达到五章后可从接纳回执建立，旧章必须显式批准范围\", \"path\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\文风\"}]}",
+    "stderr": ""
+  },
+  {
+    "check": "story_doctor_UTF8重验",
+    "returncode": 0,
+    "stdout": "{\"status\": \"pass\", \"project\": \"D:\\\\code\\\\stroy\\\\他们不是人\", \"checks\": [{\"name\": \"tracking_commit\", \"status\": \"pass\"}, {\"name\": \"writing_method\", \"status\": \"pass\", \"details\": {\"status\": \"ready\", \"method_branch\": \"A-standard\", \"implicit_default\": true, \"runtime_strategy\": \"existing-style-recall\", \"read_benchmark_style\": true, \"read_raw_anchor_excerpts\": true}}, {\"name\": \"chapter_candidates\", \"status\": \"pass\", \"open\": 0}, {\"name\": \"accepted_prose_receipts\", \"status\": \"pass\", \"count\": 43}, {\"name\": \"accepted_voice_profile\", \"status\": \"not_configured\"}, {\"name\": \"golden_voice_profile\", \"status\": \"not_configured\"}, {\"name\": \"latest_projection\", \"status\": \"pass\", \"events\": 164}, {\"name\": \"revision_gate\", \"status\": \"pass\"}, {\"name\": \"cold_read\", \"status\": \"not_required\"}], \"errors\": [], \"warnings\": [{\"code\": \"voice-profile-not-configured\", \"message\": \"尚无本书声音画像；不足五章时正常，达到五章后可从接纳回执建立，旧章必须显式批准范围\", \"path\": \"D:\\\\code\\\\stroy\\\\他们不是人\\\\追踪\\\\文风\"}]}",
+    "stderr": ""
+  }
+]

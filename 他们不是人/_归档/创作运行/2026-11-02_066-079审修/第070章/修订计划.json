@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-070-20261102",
+  "summary": "压缩重复删回复，将暂未答复落实于唐宁拒约和本人尚未想好",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第070章_先喝汤是谁教的.md",
+    "大纲/细纲_第070章.md"
+  ],
+  "affected_entities": [
+    "唐宁"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    70
+  ]
+}

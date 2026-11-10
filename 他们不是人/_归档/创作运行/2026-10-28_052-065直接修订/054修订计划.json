@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-054-20261101",
+  "summary": "修正南岸口误前后动作、近期栏杆经历用词及试探因果边界，同步053—054的现行正文映射",
+  "semantic_change": true,
+  "changed_files": ["正文/第054章_假通过.md", "大纲/细纲_第054章.md", "大纲/细纲_第053章.md"],
+  "affected_entities": ["南岸", "南栏", "恒准"],
+  "affected_fact_ids": ["K009"],
+  "affected_chapters": [53, 54, 55]
+}

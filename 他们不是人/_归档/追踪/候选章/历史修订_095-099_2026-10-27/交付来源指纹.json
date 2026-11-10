@@ -1,0 +1,71 @@
+{
+  "status": "CANDIDATE_ONLY",
+  "state_revision": 250,
+  "last_committed_chapter": 99,
+  "tracking_sha256": "f23c6c8ecc6bf50949033991f13c3c95c3288b5155dc345a3e289a88647e8793",
+  "role_cards": [
+    "镜辞",
+    "姜霁",
+    "猫眼",
+    "周衡",
+    "守钟人",
+    "观察员",
+    "修鞋摊老板",
+    "赵奶奶",
+    "五金摊老板",
+    "旧同事",
+    "徐师傅"
+  ],
+  "files": [
+    {
+      "chapter": 95,
+      "candidate": "追踪/候选章/历史修订_095-099_2026-10-27/第095章/第095章_七天都正常.md",
+      "sha256": "f2dc7895e4c1a1009cb6f14d1d5f73a4a639dd6d8ad20cde41c86e863b387434",
+      "postcheck": "STRUCTURAL_CHECK_PASS"
+    },
+    {
+      "chapter": 96,
+      "candidate": "追踪/候选章/历史修订_095-099_2026-10-27/第096章/第096章_没有缝的人.md",
+      "sha256": "2961d6d0e2069c7a401320b5dbef5500f310ada8e705126b9431d0790453a105",
+      "postcheck": "STRUCTURAL_CHECK_PASS"
+    },
+    {
+      "chapter": 97,
+      "candidate": "追踪/候选章/历史修订_095-099_2026-10-27/第097章/第097章_前三年.md",
+      "sha256": "bf9b55755c8c3f9956a1d98df711dc477b6c589a903a89676b5f831398b08731",
+      "postcheck": "STRUCTURAL_CHECK_PASS"
+    },
+    {
+      "chapter": 98,
+      "candidate": "追踪/候选章/历史修订_095-099_2026-10-27/第098章/第098章_后五年.md",
+      "sha256": "ed17255f397ca5b3cb8be8492b3f1ccf3c901787613907a2d75ec427c864d49a",
+      "postcheck": "STRUCTURAL_CHECK_PASS"
+    },
+    {
+      "chapter": 99,
+      "candidate": "追踪/候选章/历史修订_095-099_2026-10-27/第099章/第099章_一只真的坏表.md",
+      "sha256": "b1eee2d1f653f1217d6e9016dc7e392e03fe79d8b976b6a9da3996bddc0621aa",
+      "postcheck": "STRUCTURAL_CHECK_PASS"
+    },
+    {
+      "chapter": 100,
+      "readonly_interface": "正文/第100章_第一道缝.md",
+      "sha256": "5b263e0acdbb8edc0d65f86168e1cd5a4b94985e3d58b727ebbe2be0666b401a"
+    },
+    {
+      "chapter": 101,
+      "readonly_interface": "正文/第101章_死人刷了门禁.md",
+      "sha256": "cfbca4be668c6c0301ed8285af950c844dab13d7d9a782a5f7d3d5e2e0bcb85c"
+    },
+    {
+      "chapter": 102,
+      "readonly_interface": "正文/第102章_十一个月从哪来的.md",
+      "sha256": "fefc7096100486664665489312a16d6f8534a4f2e42bc91385ee1b9c1d3f9c25"
+    },
+    {
+      "chapter": 103,
+      "readonly_interface": "正文/第103章_他早就在这里.md",
+      "sha256": "8ee2c83a47c2a509fd57f37810ddffe8d4b96affccdd091e84f05221e2122266"
+    }
+  ]
+}

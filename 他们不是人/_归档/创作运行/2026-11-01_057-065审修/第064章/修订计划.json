@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-064-20261101",
+  "summary": "普通熟客只问关系，店主按店务回应，转碗者明确",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第064章_你也一直在验我.md",
+    "大纲/细纲_第064章.md"
+  ],
+  "affected_entities": [
+    "郭老板",
+    "窗边老头"
+  ],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    64
+  ]
+}

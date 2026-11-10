@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-061-20261101",
+  "summary": "把短信与目击的已证因果降回有限怀疑",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第061章_来修表的人.md",
+    "大纲/细纲_第061章.md"
+  ],
+  "affected_entities": [
+    "孙立"
+  ],
+  "affected_fact_ids": [
+    "K004"
+  ],
+  "affected_chapters": [
+    61
+  ]
+}
