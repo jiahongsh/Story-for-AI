@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-dialogue-friction-20261110",
+  "summary": "001 开场对白伪留白整改（方向A）：两处机锋式闭合改带摩擦的生活化交锋；纯文风层，beat/证据/后果不变",
+  "semantic_change": false,
+  "changed_files": [
+    "正文/第001章_钟表行的客人.md",
+    "大纲/细纲_第001章.md",
+    "大纲/前10章体检表.md"
+  ],
+  "affected_entities": [],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    1
+  ]
+}

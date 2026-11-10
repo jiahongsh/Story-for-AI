@@ -1,0 +1,39 @@
+{
+  "run_id": "对白摩擦力_20261110",
+  "chapter": 1,
+  "phase": "prewrite",
+  "mode": "revision",
+  "status": "已落正文-审批PASS-工具判定无需追踪事务",
+  "fallback": "world-gate formal packet -> manual seven-gates + revision_guard（工具 revision 分支自述『修订批准仍由原流程管理』）",
+  "actors": [
+    {
+      "name": "芽",
+      "knows": "镜辞又在修表不吃饭；螺丝盒被自己按住",
+      "wants": "他先吃，别把早饭拖凉",
+      "fears": "被当成不碰工具的规矩破坏者",
+      "capability": "能按住盒子、能赌气、能把早餐推来推去",
+      "no_plot": "会，家里人催吃饭本来就啰嗦重复",
+      "costs": "争执没赢也没输，话尾散掉",
+      "consequences": "开场交锋不再闭合，读者拿到生活毛边"
+    },
+    {
+      "name": "镜辞",
+      "knows": "那颗米粒螺丝位置要紧",
+      "wants": "先把手上的活收住",
+      "fears": "螺丝滚丢",
+      "capability": "能抬眼、能收镊子；本段未获得新信息",
+      "no_plot": "会，被催吃饭先护工具是职业习惯",
+      "costs": "注意力被扯开",
+      "consequences": "对白不替他做判断，章尾螺丝失踪仍由他自己发现"
+    }
+  ],
+  "semantic_change": false,
+  "note": "纯文风层：beat L1、双证据、读者认知差、现实后果、爽点判定均不变；细纲001五问复核继续有效",
+  "approval": {
+    "check": "PASS",
+    "checked_file_count": 18,
+    "conflict_count": 0,
+    "tracking_action": "not_required",
+    "state_revision": 272
+  }
+}
