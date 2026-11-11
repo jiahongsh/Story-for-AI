@@ -1,0 +1,22 @@
+{
+  "结论": "纯文风层，3 行对白改动不触碰剧情事实、未来约束、相邻章002、跨卷结构与伏笔底层ID",
+  "files": {
+    "大纲/全书卷纲总览.md": "存在=True sha=2386276cdba4",
+    "大纲/卷纲_第一卷.md": "存在=True sha=ea1d3745c293",
+    "大纲/卷纲_第七卷.md": "存在=True sha=e358d2231596",
+    "大纲/卷纲_第三卷.md": "存在=True sha=74de01a02b15",
+    "大纲/卷纲_第二卷.md": "存在=True sha=1e48ddfae6e7",
+    "大纲/卷纲_第五卷.md": "存在=True sha=ef0dfe1b7d88",
+    "大纲/卷纲_第八卷.md": "存在=True sha=db80d7346bf5",
+    "大纲/卷纲_第六卷.md": "存在=True sha=36985876f8ad",
+    "大纲/卷纲_第四卷.md": "存在=True sha=339490a768b1",
+    "大纲/大纲.md": "存在=True sha=88033b0efdb7",
+    "大纲/细纲_第001章.md": "存在=True sha=ce89ca36fe7a",
+    "大纲/细纲_第002章.md": "存在=True sha=83bc97021e43",
+    "正文/第001章_钟表行的客人.md": "存在=True sha=9b6cd93ea519",
+    "正文/第002章_先喝汤.md": "存在=True sha=6911300c4e44",
+    "追踪/上下文.md": "存在=True sha=cb2c1bf0fcbd",
+    "追踪/关系清单.md": "存在=True sha=5113eee72df9",
+    "追踪/长期事实.md": "存在=True sha=bec27c5a36a1"
+  }
+}

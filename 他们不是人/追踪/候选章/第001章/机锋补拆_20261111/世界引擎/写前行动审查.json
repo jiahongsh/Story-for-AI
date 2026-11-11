@@ -1,0 +1,49 @@
+{
+  "run_id": "机锋补拆_20261111",
+  "chapter": 1,
+  "phase": "prewrite",
+  "mode": "revision",
+  "status": "已落正文-审批PASS-工具判定无需追踪事务",
+  "semantic_change": false,
+  "fallback": "world-gate formal packet -> manual seven-gates + revision_guard（工具 revision 分支自述『修订批准仍由原流程管理』）",
+  "actors": [
+    {
+      "name": "镜辞",
+      "knows": "那颗米粒螺丝位置要紧；不知道它会不见",
+      "wants": "先把手上的活收住，别让芽压着盒盖",
+      "fears": "螺丝滚丢",
+      "capability": "能不抬头、能不松镊子、能说一句含糊的提醒；不能预知章尾",
+      "no_plot": "会，修表匠护小零件本来就啰嗦",
+      "costs": "提醒落空，芽没松",
+      "consequences": "对白不再替他赢一回合；章尾螺丝失踪仍由他自己发现"
+    },
+    {
+      "name": "芽",
+      "knows": "镜辞又在修表不吃饭；老陈在门口搭话",
+      "wants": "他先吃；顺手借外人的话压他一句",
+      "fears": "无",
+      "capability": "能压着盒盖不动、能只逮老陈前半句复读、能推早餐；不能知道螺丝会丢",
+      "no_plot": "会，家里人催吃饭本来就只挑对自己有用的半句",
+      "costs": "争执没赢也没输",
+      "consequences": "机锋被冷场，开场交锋不闭合"
+    },
+    {
+      "name": "老陈",
+      "knows": "两人在吵；自己那把钳子还没卖出去",
+      "wants": "收摊前顺口搭一句",
+      "fears": "无",
+      "capability": "能抖一句机锋再自己拆台、能惦记自己的生意；不能知道螺丝或接缝",
+      "no_plot": "会，邻居搭话本来就三句不离自己摊子",
+      "costs": "没人接后半句",
+      "consequences": "路人不再替作者抖包袱；钳子与本章末段十八块形成呼应"
+    }
+  ],
+  "note": "三行均为措辞与对白形状，未新增人物/道具/设定/正式名词；既有事实与后果全部保留",
+  "approval": {
+    "check": "PASS",
+    "checked_file_count": 17,
+    "conflict_count": 0,
+    "tracking_action": "not_required",
+    "state_revision": 275
+  }
+}
