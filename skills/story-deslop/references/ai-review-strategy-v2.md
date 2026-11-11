@@ -115,7 +115,7 @@ Gate H 复核须改用**全部引号对**（`re.findall(r'“([^”]*)”')`）�
 
 ## 6. 权威副本与执行路径（重要）
 
-**执行审查一律用项目版四门**：
+**执行审查一律以项目版为权威**（用户级副本已于 12:29 同步至同一版本，但插件升级可能重置，故仍以项目版为准）：
 
 ```bash
 node skills/story-deslop/scripts/language_gate.js <正文>
@@ -127,11 +127,13 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 | 副本 | 状态 |
 |---|---|
 | `skills/story-deslop/scripts/` 与 `skills/story-review/scripts/` | **项目版，权威**，`check-ai-patterns.js` SHA `17ef45f0…`，两者字节一致 |
-| `C:/Users/jia/.workbuddy/skills/story-deslop/scripts/` | **残缺旧版**：仅 4 个脚本且全部与项目版不同（`21ba950e…` 等），缺 `language_gate.js`、`check-style-hygiene.js`、`voice_profile.py`、`prose_metrics.py` 等 10 个 |
+| `C:/Users/jia/.workbuddy/skills/story-deslop/` | **✅ 已同步（2026-11-11 12:29）**：7 份旧文件按项目版覆盖、21 份缺失文件补齐，现 **28/28 文件 SHA-256 与项目版逐份一致**；用户级 `SKILL.md` 已含 5 个报告必填字段与 v2 策略指针 |
 
-上一轮 `@skill:story-deslop` 用 skill 自带脚本审三章得到「完全零输出」，就是这个残缺副本造成的——**不是文本干净，是尺子没装全**。
+**历史问题回顾**：此前用户级副本仅 7 个文件、与项目版 0 个一致，缺 `language_gate.js`、`check-style-hygiene.js`、`voice_profile.py`、`prose_metrics.py` 等 21 份；`@skill:story-deslop` 用它审三章得到「完全零输出」，**不是文本干净，是尺子没装全**。同步后实测：用户级 `language_gate` PASS、`style-hygiene` PASS、`check-ai-patterns` 正常报 info + 功能性 advisory、`voice_profile.py` 可用（`not_configured` 属正常）。
 
-> 用户级目录属个人插件目录，本次**不擅自覆盖**；如需同步须单独授权。在此之前，任何"用 skill 自带脚本跑过"的结论都无效。
+> **同步留证**：备份在 `C:/Users/jia/.workbuddy/skills-backups/story-deslop_20261111_1229/`（7 份旧文件 + `backup-manifest.json`，逐份 SHA-256 校验一致，按 manifest 的 restore 字段可还原）。按 ≤10 份／批分 3 批执行、逐批校验；**未删除／移动／重命名任何文件**，其他 10 个用户级 skill 文件数不变。
+>
+> **残留风险**：用户级目录由 WorkBuddy 插件管理，**插件升级可能重置本次同步**；若用户级脚本再次零输出，先比指纹再怀疑文本。
 
 ---
 
@@ -166,4 +168,5 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 - **旧策略结论**：0/0 → 「AI 味轻度／不建议做批量去 AI 味改写」（见 `他们不是人/审查报告_黄金三章_2026-11-10.md` 与 11-10 的 deslop 判定）。
 - 这组对照就是换策略的意义：**规则没变笨，是终于有人查了对白层**。Gate I 通过说明 v2 全文重写的叙述层有效，Gate H 失败说明对白层仍待按 `角色声线节奏卡.md` 回炉。
 
-- **未处理**：用户级 skill 副本同步（个人插件目录，等单独授权）。
+- **已处理**：用户级 `story-deslop` 副本同步（12:29，见 §6），28/28 逐份一致，备份与回滚路径已留证。
+- **另一项发现，本轮未动**：其他 6 个用户级 skill 也大面积缺文件（`story-setup` 缺 89、`story-long-write` 缺 52、`story-short-write` 缺 18、`story-review` 缺 11、`story-long-analyze` 缺 1 等）。须各自单独盘点＋备份＋授权后再同步，**不得沿用本次清单批量覆盖**。
