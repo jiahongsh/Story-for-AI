@@ -1,0 +1,8 @@
+{
+  "approved_at": "2026-11-11T03:03:07Z",
+  "change_id": "revision-golden3-full-rewrite-20261111",
+  "manifest_sha256": "fcbcbf829db64a85d529e52b566f2bac6a8dc1c466bfc0cf96c2e19d161f4173",
+  "schema_version": 1,
+  "status": "PASS",
+  "tracking_action": "commit"
+}
