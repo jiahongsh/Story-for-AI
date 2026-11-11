@@ -131,7 +131,7 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 
 **历史问题回顾**：此前用户级副本仅 7 个文件、与项目版 0 个一致，缺 `language_gate.js`、`check-style-hygiene.js`、`voice_profile.py`、`prose_metrics.py` 等 21 份；`@skill:story-deslop` 用它审三章得到「完全零输出」，**不是文本干净，是尺子没装全**。同步后实测：用户级 `language_gate` PASS、`style-hygiene` PASS、`check-ai-patterns` 正常报 info + 功能性 advisory、`voice_profile.py` 可用（`not_configured` 属正常）。
 
-> **同步留证**：备份在 `C:/Users/jia/.workbuddy/skills-backups/story-deslop_20261111_1229/`（7 份旧文件 + `backup-manifest.json`，逐份 SHA-256 校验一致，按 manifest 的 restore 字段可还原）。按 ≤10 份／批分 3 批执行、逐批校验；**未删除／移动／重命名任何文件**，其他 10 个用户级 skill 文件数不变。
+> **同步留证（12:29 那次）**：备份在 `C:/Users/jia/.workbuddy/skills-backups/story-deslop_20261111_1229/`（7 份旧文件 + `backup-manifest.json`，逐份 SHA-256 校验一致，按 manifest 的 restore 字段可还原）。按 ≤10 份／批分 3 批执行、逐批校验；**未删除／移动／重命名任何文件**，当时其他 10 个用户级 skill 文件数不变（**12:34 已全量同步，见 §8**）。
 >
 > **残留风险**：用户级目录由 WorkBuddy 插件管理，**插件升级可能重置本次同步**；若用户级脚本再次零输出，先比指纹再怀疑文本。
 
@@ -168,5 +168,7 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 - **旧策略结论**：0/0 → 「AI 味轻度／不建议做批量去 AI 味改写」（见 `他们不是人/审查报告_黄金三章_2026-11-10.md` 与 11-10 的 deslop 判定）。
 - 这组对照就是换策略的意义：**规则没变笨，是终于有人查了对白层**。Gate I 通过说明 v2 全文重写的叙述层有效，Gate H 失败说明对白层仍待按 `角色声线节奏卡.md` 回炉。
 
-- **已处理**：用户级 `story-deslop` 副本同步（12:29，见 §6），28/28 逐份一致，备份与回滚路径已留证。
-- **另一项发现，本轮未动**：其他 6 个用户级 skill 也大面积缺文件（`story-setup` 缺 89、`story-long-write` 缺 52、`story-short-write` 缺 18、`story-review` 缺 11、`story-long-analyze` 缺 1 等）。须各自单独盘点＋备份＋授权后再同步，**不得沿用本次清单批量覆盖**。
+- **已处理（12:29）**：用户级 `story-deslop` 副本同步，28/28 一致，见 §6。
+- **已处理（12:34，全量）**：用户级 `skills/` 整体对齐项目版 —— 12 个已有目录 **337 覆盖 + 171 新增**、6 个项目独有目录 **86 份新建**，共 **594 份**，按 ≤10 份／批分 60 批逐批校验。最终项目版 **19 目录 / 623 文件**与用户级逐份 SHA-256 一致；2 份用户级独有文件（`story-long-write/references/workflow-chapter.md`、`story-short-write/scripts/check-outline-copy.js`）**原样保留**。
+- 全量同步留证：`C:/Users/jia/.workbuddy/skills-backups/all-skills_20261111_1234/` —— `pre-sync/skills/` 完整快照 370 份 / 4.3 MB（逐份 SHA 校验）、`backup-manifest.json`（含 restore）、`sync-plan.md` 596 行逐路径清单、`sync-plan.json` 机器可读计划。按 manifest 可整体还原。
+- **残留风险（全量）**：用户级目录由 WorkBuddy 插件管理，插件升级可能重置；新建的 6 个目录可能被扫描为新插件；其他项目／会话调用这些 skill 的行为会随项目版改变。执行审查仍以项目版为权威。
