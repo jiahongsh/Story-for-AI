@@ -170,5 +170,8 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 
 - **已处理（12:29）**：用户级 `story-deslop` 副本同步，28/28 一致，见 §6。
 - **已处理（12:34，全量）**：用户级 `skills/` 整体对齐项目版 —— 12 个已有目录 **337 覆盖 + 171 新增**、6 个项目独有目录 **86 份新建**，共 **594 份**，按 ≤10 份／批分 60 批逐批校验。最终项目版 **19 目录 / 623 文件**与用户级逐份 SHA-256 一致；2 份用户级独有文件（`story-long-write/references/workflow-chapter.md`、`story-short-write/scripts/check-outline-copy.js`）**原样保留**。
-- 全量同步留证：`C:/Users/jia/.workbuddy/skills-backups/all-skills_20261111_1234/` —— `pre-sync/skills/` 完整快照 370 份 / 4.3 MB（逐份 SHA 校验）、`backup-manifest.json`（含 restore）、`sync-plan.md` 596 行逐路径清单、`sync-plan.json` 机器可读计划。按 manifest 可整体还原。
+- **补收（13:05）**：`check-outline-copy.js` 经核查是**新版**（241 行 / 10086 字节，比项目版另外两份 270 行 / 9448 字节多出完整头部说明与「复沓锚句」豁免实现），已补进 `skills/story-short-write/scripts/`，SHA-256 `33941ffd…c3b` 与用户级一致，`node --check` 通过，并用「抄细纲两段」构造样本实测能报出 100% 重合、用 091-099 候选与旧 094/097 正文实测均为 0 命中（说明旧稿是改写而非誊抄）。项目版现 **19 目录 / 624 文件**。
+- **不补收（13:05）**：`story-long-write/references/workflow-chapter.md`（27 KB）判定为**旧版重复文档**——`SKILL.md` 第 252 行起已内联「单章写作流程」且更新（含 TRAE `.trae/`、WorkBuddy 项目模式、Codex `.codex/`），而该文件仍停在 `.claude/`＋`.opencode/` 两运行时，且除自身外**无任何引用**。补进仓库等于把已废弃流程与死路径重新入库，故不导入；用户级那份保留不动，作为已知差异项。
+- **待决**：三份 `check-outline-copy.js` 现有两个版本（deslop／long-write 为旧版，short-write 为新版）。旧版缺锚句豁免，遇誓言、系统面板、案卷原话会误报。是否把 deslop／long-write 一并升到新版、让「两侧同一份实现」成真，待用户确认后再动——该脚本是 advisory 轨，不在 blocking 门禁里。
+- 全量同步留证：`C:/Users/jia/.workbuddy/skills-backups/all-skills_20261111_1234/` —— `pre-sync/skills/` 完整快照 370 份 / 4.3 MB（逐份 SHA 校验）、`backup-manifest.json`（含 restore）、`sync-plan.md` 596 行逐路径清单、`sync-plan.json` 机器可读计划。按 manifest 可整体还原。**2026-11-11 13:00 用户已明确表示备份不需要**；沙箱禁用 `Add-Type` 与 COM，无法投入回收站，两个目录（5.4 MB）仍在原处，待手动删除。
 - **残留风险（全量）**：用户级目录由 WorkBuddy 插件管理，插件升级可能重置；新建的 6 个目录可能被扫描为新插件；其他项目／会话调用这些 skill 的行为会随项目版改变。执行审查仍以项目版为权威。
