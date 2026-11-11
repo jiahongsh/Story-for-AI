@@ -1,0 +1,53 @@
+{
+  "run_id": "结构均匀化_20261111",
+  "chapters": [
+    1,
+    2,
+    3
+  ],
+  "phase": "prewrite",
+  "mode": "revision",
+  "status": "已落正文-审批PASS-工具判定无需追踪事务",
+  "semantic_change": false,
+  "fallback": "world-gate formal packet -> manual seven-gates + revision_guard（工具 revision 分支自述『修订批准仍由原流程管理』，不留未填模板当凭证）",
+  "actors": [
+    {
+      "name": "镜辞",
+      "knows": "三章原有全部信息，未获得任何新情报",
+      "wants": "把观察做完但不惊动芽、不给自己招来追问",
+      "fears": "把微小习惯差异变成对芽的指控；被察觉长时间盯人",
+      "capability": "能搁筷子、按灭屏幕、在维修单上写字、拿手指比划；不能让相机拍清那道线",
+      "no_plot": "会，修表匠反复复核、犹豫后不下结论是既有习惯",
+      "costs": "继续淋雨、暴露加深、注意力被占用",
+      "consequences": "动作替代宣告式克制；维修单五字与取件单空格等既有事实不变"
+    },
+    {
+      "name": "老陈",
+      "knows": "镜辞淋雨回来、芽昨天提醒过带伞；不知道东桥巷发生了什么",
+      "wants": "收摊前顺口数落两句",
+      "fears": "无",
+      "capability": "能唠叨、重复对方的话、拉卷帘门；不能知道接缝或芽的异常",
+      "no_plot": "会，邻居收摊前本来就会搭话",
+      "costs": "多说半句",
+      "consequences": "缓冲装置由三连机锋变为一句带毛边的唠叨，功能不变"
+    },
+    {
+      "name": "芽",
+      "knows": "正文原状未改",
+      "wants": "正文原状",
+      "fears": "正文原状",
+      "capability": "正文原状",
+      "no_plot": "正文原状",
+      "costs": "正文原状",
+      "consequences": "本轮未改芽任何台词与行动；001 新增的『芽多半先嫌他闲』是镜辞对她的预判，不是她的行动"
+    }
+  ],
+  "note": "所有改动均为措辞与动作形状，不新增人物、道具、设定、正式名词；不触碰 3f8e477 与 01a8613 已定稿段落的核心事实",
+  "approval": {
+    "check": "PASS",
+    "checked_file_count": 21,
+    "conflict_count": 0,
+    "tracking_action": "not_required",
+    "state_revision": 272
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-structure-uniformity-20261111",
+  "summary": "前三章结构均匀化修复：拆笔尖三连、去宣告式沉默、拆对称不判句模、掺对白毛边、压微动作复读；纯文风层",
+  "semantic_change": false,
+  "changed_files": [
+    "正文/第001章_钟表行的客人.md",
+    "正文/第002章_先喝汤.md",
+    "正文/第003章_光在发抖.md",
+    "大纲/细纲_第001章.md",
+    "大纲/细纲_第002章.md",
+    "大纲/细纲_第003章.md"
+  ],
+  "affected_entities": [],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    1,
+    2,
+    3
+  ]
+}
