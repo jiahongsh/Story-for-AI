@@ -1,6 +1,8 @@
 # 通用网文内容审查 Rubric
 
 > 用途：当用户未指定番茄、起点、知乎盐言等目标平台时，作为 `/story-review` 的默认小说内容评分标准。它评估的是**故事文本质量**，不是 skill/plugin 实现质量。
+>
+> **v2 审查策略（2026-11-11）**：「文字自然度」看反向 Gate I（叙述者在场／内心声音／体感／长短落差）、「对话质量」看反向 Gate H（角色声线差异）；**负面清单 0 命中不等于通过**，advisory 不构成回炉依据。详见 `skills/story-deslop/references/ai-review-strategy-v2.md`。
 
 ## 评分方法
 

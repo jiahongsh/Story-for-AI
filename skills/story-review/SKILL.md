@@ -86,6 +86,7 @@ Rubric Source: file | embedded fallback
 |---|---|
 | 通用质量清单 | `story-review/references/quality-checklist.md` |
 | 通用内容评分 rubric | `story-review/references/quality-rubric.md` |
+| **AI 审查策略 v2（必读）** | `story-deslop/references/ai-review-strategy-v2.md`（正样本校准／反向 Gate H-I／0 命中不等于通过／权威脚本副本） |
 | 去 AI 味方法 | `story-review/references/anti-ai-writing.md` |
 | 剧情循环/高潮公式 | `story-review/references/plot-core-methods.md` |
 | 角色关系/好感度 | `story-review/references/character-relations.md` |

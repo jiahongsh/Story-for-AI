@@ -1,5 +1,7 @@
 # 番茄小说 Quality Rubric
 
+> **v2 审查策略（2026-11-11）**：本表为平台维度，advisory only 不 blocking；AI 味判定须另跑正样本校准与反向 Gate H/I，不得用「禁用词 0 命中」代替文字自然度判断。见 `skills/story-deslop/references/ai-review-strategy-v2.md`。
+
 ## 评分标准
 
 | 指标 | PASS 标准 | FAIL 标准 |

@@ -133,7 +133,7 @@ for PYBIN in python3 python py; do "$PYBIN" -c "" 2>/dev/null && break; done
 
 ### Phase 1：AI味扫描
 
-对用户提交的文本做快速扫描，标记AI味浓重的位置：
+对用户提交的文本做快速扫描，标记AI味浓重的位置。**执行前按 `references/ai-review-strategy-v2.md` 跑正样本校准与反向 Gate H/I；反向 Gate 未过不得给出「轻度／不建议改写」结论，即使负面清单 0 命中。**
 
 ```
 ## AI味检测报告
@@ -143,6 +143,11 @@ for PYBIN in python3 python py; do "$PYBIN" -c "" 2>/dev/null && break; done
 - 改写力度：{minimal/standard/aggressive}
 - 修改范围：{in-place/bounded/structural}
 - 主要问题：{1-3 个关键词}
+- 正样本校准：{外部尺子结果} / {本书画像结果，未配置写 not_configured}
+- 反向 Gate H 声线差异：{通过/不通过，五问逐项}
+- 反向 Gate I 叙述者在场：{通过/不通过，插话/内心/比喻/长短落差}
+- 0 命中说明：{仅表示未踩负面清单，不等于像人写的}
+- 人味判断：{一句话，落到"有没有人在讲"或"谁的嗓子不像谁"}
 
 ### 问题标记
 | 位置 | 类型 | Gate | 原文 | 问题 |
@@ -482,7 +487,7 @@ node scripts/normalize-punctuation.js --pause-mode normalize <正文文件...>
 | 用户贴一段文字说"太AI了" | 执行完整检测 + 润色流程 |
 | 用户说"帮我润色" | 先检测AI味，再润色 |
 | 用户说"检查下有没有AI味" | 只做检测，不做修改 |
-| 用户写作中要求 `仅标注 / 只检测 / 不要改` | 嵌入式提醒模式：执行「AI味扫描」和「证据分层与处置决策」，跳过「逐项清除」「确定性收尾」「输出润色结果」；输出问题标记表（含 Gate 列），不修改原文，不写文件 |
+| 用户写作中要求 `仅标注 / 只检测 / 不要改` | 嵌入式提醒模式：执行「AI味扫描」「证据分层与处置决策」与**反向 Gate H/I**，跳过「逐项清除」「确定性收尾」「输出润色结果」；输出问题标记表（含 Gate 列）与必填校准字段，不修改原文，不写文件 |
 
 ---
 
@@ -492,7 +497,8 @@ node scripts/normalize-punctuation.js --pause-mode normalize <正文文件...>
 
 | 文件 | 何时加载 |
 |------|----------|
-| [references/banned-words.md](references/banned-words.md) | 检测和替换禁用词时 |
+| [references/ai-review-strategy-v2.md](references/ai-review-strategy-v2.md) | **任何 AI 味检测／审查前**：正样本校准、反向 Gate H/I、判定优先级、报告必填字段、权威脚本副本 |
+| [references/banned-words.md](references/banned-words.md) | 检测和替换禁用词时（已降级为语境复核，仅 ★★★★★ 硬禁） |
 | [references/anti-ai-writing.md](references/anti-ai-writing.md) | **去AI味完整指南**：预防+三遍法+范例 |
 | [references/pattern-contracts.json](references/pattern-contracts.json) | 语义模式审计时的机器可读候选契约 |
 | [references/dialogue-craft-moderate.md](references/dialogue-craft-moderate.md) | 重要对白场景的轻量对白卡与生成方法 |

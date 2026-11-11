@@ -161,7 +161,7 @@
 | 核心一致度低 | rewrite | 围绕核心冲突重写相关段落 |
 | 字数超标 | compress | 删减不推动剧情的内容 |
 | 无意义卡点 | compress | 保留卡出的变化，压掉流程 |
-| AI 腔重 | de_ai | 替换禁用词、改写句式 |
+| AI 腔重 | de_ai_v2 | **先跑正样本校准与反向 Gate H/I**（叙述者在场／声线差异／长短落差／体感），再按语境复核处理负面清单命中；`banned-words` 仅 ★★★★★ 硬禁。**不把 0 blocking 当通过**，见 `skills/story-deslop/references/ai-review-strategy-v2.md` |
 | 小问题多 | polish | 打磨语言细节 |
 
 ### 读者契约与终局储备双向审查
