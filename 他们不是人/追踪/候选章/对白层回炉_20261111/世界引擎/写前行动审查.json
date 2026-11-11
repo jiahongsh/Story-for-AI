@@ -1,0 +1,53 @@
+{
+  "run_id": "对白层回炉_20261111",
+  "chapters": [
+    1,
+    2,
+    3
+  ],
+  "phase": "prewrite",
+  "mode": "revision",
+  "status": "已落正文-审批PASS-工具判定无需追踪事务",
+  "semantic_change": false,
+  "fallback": "world-gate formal packet -> manual seven-gates + revision_guard（工具 revision 分支自述『修订批准仍由原流程管理』，不留未填模板当凭证）",
+  "actors": [
+    {
+      "name": "镜辞",
+      "knows": "三章原有全部信息；未获得任何新情报",
+      "wants": "把观察做完、别把小事变成指控",
+      "fears": "被追问出自己在验真",
+      "capability": "能不接话、能截断对方、能停在半句；不能给异常命名",
+      "no_plot": "会，被问到怀表与早饭本来就不愿多说",
+      "costs": "话没说完，关系里多一道别扭",
+      "consequences": "对白不再每句赢一回合；事实与后果不变"
+    },
+    {
+      "name": "芽",
+      "knows": "自己的旧习惯与两人过去；不知道镜辞在测试她",
+      "wants": "正常吃早饭、别被盘问",
+      "fears": "被当成需要验真的对象",
+      "capability": "能带语气词、能跑题、能赌气、能把话咽回去；不能知道接缝",
+      "no_plot": "会，家里人催吃饭本来就啰嗦",
+      "costs": "争执没赢也没输",
+      "consequences": "声线与镜辞拉开；002 摊牌事实台词全部保留"
+    },
+    {
+      "name": "老陈／郭老板／赵奶奶／取钟老人",
+      "knows": "各自的摊子、碗、土豆、油锅、茶；不知道接缝与验真",
+      "wants": "搭句话、顺手做自己的活",
+      "fears": "无",
+      "capability": "能带营生、能说一半、能自顾自走开；不能替作者下结论",
+      "no_plot": "会，市井邻居说话本来就三句不离自己的东西",
+      "costs": "后半句没人接",
+      "consequences": "路人不再替作者抖包袱；003 老人视线动作（L3）与取件单（L4）不变"
+    }
+  ],
+  "note": "13 处均为对白形状与语气词分配；未新增人物、道具、设定、正式名词，未改任何剧情事实、现实后果与伏笔",
+  "approval": {
+    "check": "PASS",
+    "checked_file_count": 21,
+    "conflict_count": 0,
+    "tracking_action": "not_required",
+    "state_revision": 275
+  }
+}
