@@ -4,15 +4,17 @@
 // story_hook_cli.js — Claude Code bash hook 的 node 桥
 // Claude 侧 hook 是 bash（settings.json 挂 bash 脚本），归核逻辑走这里 require 的
 // 共享核 story_hook_core.js——和 OpenCode/ZCode 用的是同一份，由 check-shared-files
-// 保证字节相同。归核（单份实现在 core）的面：正文网/字数（prose-net）、路径抽取
-// （extract-target）、Bash 正文写入前置门（prose-command-guard）、毒句式扫描
-// （prose-toxic）、大纲/追踪阻断判定（prose-block-reason）、git commit 侦测
-// （is-git-commit）、连续性（continuity）。
+// 保证字节相同。归核（单份实现在 core）的面：正文网（prose-net）、路径抽取
+// （extract-target）、Bash 正文写入前置门（prose-command-guard）、git commit 侦测
+// （is-git-commit）、连续性（continuity）、追踪检查点（tracking-checkpoint）。
 // 尚未归核、各端独立实现的面：
-//   - Write/Edit/MultiEdit 的无 Node 兜底：Claude 仍由 guard-outline-before-prose.sh
-//     保留纯 bash 细纲检查；Bash 命令必须先区分真正写入和只读提及，故经本 CLI 复用
-//     共享核，node 缺失时该命令面 fail-open。codex prose_block_reason ↔ core
-//     proseBlockReason 由 scripts/test-prose-net-parity.sh Part E 锁 parity。
+//   - Write/Edit/MultiEdit 的大纲/细纲阻断判定：Claude 走 guard-outline-before-prose.sh
+//     纯 bash。它必须在无 node 的运行时也拦得住（官方推荐的原生二进制装法不带 Node），
+//     所以保留纯 bash 判定。Bash 命令要先区分真正写入和只读提及，故经本 CLI 复用共享核；
+//     node 缺席时该命令面降级放行。追踪检查点同样因要解析 JSON，经 tracking-checkpoint
+//     子命令执行、node 缺席时降级放行。
+//     codex prose_block_reason ↔ core proseBlockReason 由
+//     scripts/test-prose-net-parity.sh Part E 锁 parity。
 //   - staged markdown warnings：Claude 走 validate-story-commit.sh bash grep；codex
 //     staged_markdown_warnings ↔ core stagedMarkdownWarnings 同由 Part E 锁 parity。
 //     匹配语义与文案以 JS core 为准。
@@ -52,119 +54,7 @@ const digCommand = (value) => digString(value, ["command", "cmd", "script"], tru
 const digWorkingDirectory = (value) =>
   digString(value, ["cwd", "working_directory", "workingDirectory"])
 
-const TRACKING_REQUIRED_AGENTS_VERSION = 28
-const MISSING_TRACKING_STATE = "追踪/_tracking-state.json 缺失"
-
-function deployedAgentsVersion(root) {
-  try {
-    const text = fs.readFileSync(path.join(root, ".story-deployed"), "utf8")
-    const line = text.split(/\r?\n/).find((item) => item.startsWith("agents_version:"))
-    if (!line) return null
-    let value = line.slice("agents_version:".length).trim()
-    if (value.length >= 2) {
-      const first = value[0]
-      const last = value[value.length - 1]
-      if ((first === '"' && last === '"') || (first === "'" && last === "'")) {
-        value = value.slice(1, -1)
-      }
-    }
-    if (!/^\d+$/.test(value)) return null
-    const version = Number(value)
-    return Number.isSafeInteger(version) ? version : null
-  } catch {
-    return null
-  }
-}
-
-function longProseTarget(absolute) {
-  const base = path.basename(absolute)
-  if (path.basename(path.dirname(absolute)) !== "正文") return null
-  const match = base.match(/^第0*(\d+)章.*\.md$/)
-  if (!match) return null
-  return {
-    absolute,
-    base,
-    book: path.dirname(path.dirname(absolute)),
-    chapter: Number(match[1]),
-  }
-}
-
-// 严格核在追踪检查点后还有上一章中文语言漂移 / 毒句式欠账门。legacy 项目仅豁免“state
-// 缺失”本身，不能连无状态欠账门一起吞掉；因此在严格核返回缺 state 后，用核导出的
-// languageLeakRecords / toxicPhraseFindings 补跑同一判据。这只是 legacy 兼容支路；state 在场时仍原样走
-// core.proseBlockReason，不在薄壳里重写追踪规则。
-function legacyProseDebtReason(root, target) {
-  if (fs.existsSync(target.absolute) || target.chapter <= 1) return null
-  let prevFile = null
-  try {
-    const candidates = fs.readdirSync(path.dirname(target.absolute))
-      .filter((file) => {
-        const match = file.match(/^第0*(\d+)章.*\.md$/)
-        return match && Number(match[1]) === target.chapter - 1 && !file.includes("_原稿_")
-      })
-      .sort()
-    if (candidates.length) prevFile = path.join(path.dirname(target.absolute), candidates[0])
-  } catch {}
-  if (!prevFile) return null
-
-  let prevText
-  try {
-    prevText = fs.readFileSync(prevFile, "utf8")
-  } catch {
-    return null
-  }
-  const languageHits = core.languageLeakRecords(prevText, core.readDeslopWhitelist(root, prevFile))
-    .filter((record) => record.blocking)
-  if (languageHits.length) {
-    const shown = languageHits.slice(0, 6).map((record) => record.finding)
-    const more = languageHits.length - shown.length
-    let reason = `⛔ 写正文被拦截：上一章（${path.basename(prevFile)}）有 ${languageHits.length} 处未清中文语言漂移欠账，先改成中文再写第 ${target.chapter} 章；确需保留的外语逐项写入项目根 .deslop-whitelist 后重试。\n${shown.join("\n")}`
-    if (more > 0) reason += `\n（另有 ${more} 处，请执行正文确定性扫描查看全部命中）`
-    return reason
-  }
-  // 旧版正文中的 HTML 跳过标记不再生效；语言门和毒句式欠账都必须清零。
-  const hits = core.toxicPhraseFindings(prevText).filter((line) => line.startsWith("第"))
-  if (!hits.length) return null
-  const shown = hits.slice(0, 6)
-  const more = hits.length - shown.length
-  let reason = `⛔ 写正文被拦截：上一章（${path.basename(prevFile)}）有 ${hits.length} 处未清毒句式欠账，先清零再写第 ${target.chapter} 章；毒句式欠账必须改写清零，正文不得添加 HTML 豁免标记。\n${shown.join("\n")}`
-  if (more > 0) reason += `\n（另有 ${more} 处，完整扫描：node <skill>/scripts/check-ai-patterns.js --check 上一章文件）`
-  return reason
-}
-
-function deploymentAwareProseBlockReason(root, absolute) {
-  const target = longProseTarget(absolute)
-  if (!target) return core.proseBlockReason(root, absolute)
-
-  const state = path.join(target.book, "追踪", "_tracking-state.json")
-  if (fs.existsSync(state)) return core.proseBlockReason(root, absolute)
-
-  const version = deployedAgentsVersion(root)
-  if (version !== null && version >= TRACKING_REQUIRED_AGENTS_VERSION) {
-    // v28 起普通长篇写入缺 state 必须硬拦。整条交给严格核，同时保留核定义的
-    // 受控 story-import 窗口（拆文库/{书名} 在场且 state 尚未初始化）。
-    return core.proseBlockReason(root, absolute)
-  }
-
-  const reason = core.proseBlockReason(root, absolute)
-  if (!reason || !reason.includes(MISSING_TRACKING_STATE)) return reason
-  return legacyProseDebtReason(root, target)
-}
-
 const [command, ...args] = process.argv.slice(2)
-
-function emitProseNet(root, absolute) {
-  let text
-  try {
-    text = fs.readFileSync(absolute, "utf8")
-  } catch {
-    return
-  }
-  const out = core.proseNetFindings(text, core.readDeslopWhitelist(root, absolute))
-  const wordcount = core.wordcountFinding(absolute, text)
-  if (wordcount) out.push(wordcount)
-  if (out.length) process.stdout.write(out.join("\n"))
-}
 
 if (command === "extract-target") {
   // PostToolUse 工具输入 JSON → 目标文件路径。无输入/解析失败/无路径都以非零退出，
@@ -202,9 +92,9 @@ if (command === "extract-target") {
       const absolute = core.resolveTarget(root, target, base)
       if (seen.has(absolute)) continue
       seen.add(absolute)
-      const reason = core.revisionBlockReason(root, absolute) || deploymentAwareProseBlockReason(root, absolute)
+      const reason = core.proseBlockReason(root, absolute)
       if (reason) {
-        process.stdout.write(`${reason}（已从 Bash 命令识别到写入目标。）`)
+        process.stdout.write(`${reason}（已从 Bash 命令识别到正文写入目标。）`)
         break
       }
     }
@@ -214,26 +104,20 @@ if (command === "extract-target") {
     process.exit(3)
   }
 } else if (command === "prose-net") {
-  // 轻量确定性网（含毒句式）+ 字数欠账，对齐旧内嵌 python 第二段的 out 列表（net 逐条 +
-  // 可选字数行）。读文件失败静默退出（兜底不反噬流程）。
-  // 新契约：prose-net <root> <absolute>，让 Claude 写后网能从正文向上读取最近的
-  // .deslop-whitelist。保留旧单参数形态，便于已部署脚本滚动升级时 fail-open 而非报错。
-  const root = args.length >= 2 ? args[0] : ""
-  const absolute = args.length >= 2 ? args[1] : args[0]
-  emitProseNet(root, absolute)
-} else if (command === "prose-net-relative") {
-  // Windows Git Bash 不可靠地改写传给原生 node.exe 的多个路径 argv。该窄入口
-  // 固定以 Node 继承的 cwd 为项目根，仅从 stdin 接受项目内相对路径；绝对路径、
-  // `..` 逃逸和 NUL 全部静默拒绝，不放宽 .deslop-whitelist 的项目边界。
-  const rawRelative = readStdin()
-  if (!rawRelative || rawRelative.includes("\0")) process.exit(0)
-  const normalized = rawRelative.replace(/\\/g, "/")
-  if (path.isAbsolute(normalized)) process.exit(0)
-  const root = core.existingDir(process.cwd()) || path.resolve(process.cwd())
-  const absolute = core.resolveTarget(root, normalized, root)
-  const relative = path.relative(root, absolute)
-  if (!relative || relative.startsWith("..") || path.isAbsolute(relative)) process.exit(0)
-  emitProseNet(root, absolute)
+  // 轻量确定性网（含毒句式）。字数只由 storyctl 的公开命令测量，不在 Adapter 内复制。
+  // 书级 .deslop-whitelist 与另四端同口径（core.loadStyleWhitelist 按正文所在书目录找）。
+  // 读文件/白名单失败静默退出（兜底不反噬流程，与 core.proseAfterWrite 的降级一致）。
+  const absolute = args[0]
+  let text
+  let whitelist
+  try {
+    text = fs.readFileSync(absolute, "utf8")
+    whitelist = core.loadStyleWhitelist(absolute)
+  } catch {
+    process.exit(0)
+  }
+  const out = core.proseNetFindings(text, whitelist, core.toxicRescanHint(absolute))
+  if (out.length) process.stdout.write(out.join("\n"))
 } else if (command === "prose-toxic") {
   // 毒句式确定性检测单跑（供 guard 前置门 / 手工复扫调用；prose-net 已含同一组结果）。
   // 契约：stdout 空 = 干净；非空 = findings 行（每行一条，末行为清零要求 + 完整扫描提示）。
@@ -241,35 +125,31 @@ if (command === "extract-target") {
   const absolute = args[0]
   try {
     const text = fs.readFileSync(absolute, "utf8")
-    const out = core.toxicPhraseFindings(text)
+    const out = core.toxicPhraseFindings(text, core.loadStyleWhitelist(absolute), core.toxicRescanHint(absolute))
     if (out.length) process.stdout.write(out.join("\n"))
   } catch {
     process.exit(0)
   }
-} else if (command === "prose-block-reason") {
-  // 写正文前的核心阻断判据，与 OpenCode(plugin.ts) / ZCode(story_zcode_hook.js) /
-  // Codex(prose_block_reason) 调的是同一个 core.proseBlockReason。
-  //
-  // 补这个子命令是为了消掉一处端间不对称：那三端都调核，唯独 Claude Code 的
-  // guard-outline-before-prose.sh 只有纯 bash 的细纲检查，于是「首建第 N+1 章前必须
-  // 先提交第 N 章追踪事务」这条顺序校验在 Claude 端从不触发——跨章连续性守卫因此
-  // 在这一端是开环的（模型不主动跑 tracking_commit.py 就没人拦漂移）。
-  //
-  // 契约：stdout 空 = 放行；非空 = 阻断理由（单行）。异常一律静默放行，兜底不反噬流程。
-  const root = args[0]
-  const absolute = args[1]
+} else if (command === "tracking-checkpoint") {
+  // 追踪检查点门（BLOCKING 面）：guard-outline-before-prose.sh 调本子命令复用共享核
+  // trackingCheckpointIssue，与 codex py / opencode / zcode 同一份判定（issue #305 之前
+  // Claude 侧独缺这道门，同一工程同一次写正文，主力端放行、另三端拦下）。
+  // 用法：tracking-checkpoint <root> <bookDir> <上一章号|->
+  //   首建新章传上一章号，做「上一章事务是否已提交」的顺序校验；
+  //   正文已存在（续写/改稿/回炉）传 `-`，只校验 state 自身的存在/schema/修订一致性。
+  // 契约：stdout 空 = 放行；非空 = 完整拦截文案，与 core.proseBlockReason 逐字一致。
+  // node 缺席时 bash 侧根本不调本子命令（等同放行），故内部异常也一律 exit 0 静默放行，
+  // 与本 CLI 其余子命令的降级哲学一致（兜底不反噬流程）。
+  const [root, book, expectedRaw] = args
   try {
-    const reason = deploymentAwareProseBlockReason(root, absolute)
-    if (reason) process.stdout.write(reason)
-  } catch {
-    process.exit(0)
-  }
-} else if (command === "revision-block-reason") {
-  const root = args[0]
-  const absolute = args[1]
-  try {
-    const reason = core.revisionBlockReason(root, absolute)
-    if (reason) process.stdout.write(reason)
+    // 注意别写成 Number(expectedRaw) 直接判整数：空串会被转成 0，把「续写」误当成
+    // 「首建第 1 章」去校验顺序。先排掉空串/缺省/占位符 `-`。
+    const expected =
+      expectedRaw && expectedRaw !== "-" && Number.isInteger(Number(expectedRaw))
+        ? Number(expectedRaw)
+        : null
+    const issue = core.trackingCheckpointIssue(book, true, expected)
+    if (issue) process.stdout.write(`⛔ 写正文被拦截：${core.safeRelative(root, book)} 的${issue}。`)
   } catch {
     process.exit(0)
   }
@@ -297,6 +177,41 @@ if (command === "extract-target") {
   const root = args[0]
   const out = core.continuityFindings(root)
   if (out.length) process.stdout.write(out.join("\n") + "\n")
+} else if (command === "analysis-input-guard") {
+  // chapter-extractor 的 PreToolUse(Write) 内联守卫：它只许把批次结果写到
+  // {拆文目录}/_analysis_cache/输入-{RAW|REUSE}-{起章}-{止章}.md。拆文目录以存在
+  // chapter_index.csv 或 _progress.md 认定，且必须在项目根内。exit 2 阻断并把原因交回子代理；
+  // 读不到输入视为无从判断，放行（提交脚本仍会完整校验文件内容）。
+  const raw = process.env.HOOK_INPUT || readStdin()
+  let obj
+  try {
+    obj = JSON.parse(raw)
+  } catch {
+    process.exit(0)
+  }
+  const target = digTargetPath(obj)
+  if (!target) process.exit(0)
+  const root = path.resolve(process.env.CLAUDE_PROJECT_DIR || digString(obj, ["cwd"]) || process.cwd())
+  const absolute = path.resolve(root, target)
+  const reasons = []
+  const match = /^输入-(RAW|REUSE)-(\d+)-(\d+)\.md$/.exec(path.basename(absolute))
+  if (!match) reasons.push("文件名必须是 输入-{RAW|REUSE}-{起章}-{止章}.md")
+  else if (Number(match[2]) < 1 || Number(match[3]) < Number(match[2])) reasons.push("批次章号范围无效")
+  const cacheDir = path.dirname(absolute)
+  const bookDir = path.dirname(cacheDir)
+  if (path.basename(cacheDir) !== "_analysis_cache") reasons.push("只能写在拆文目录的 _analysis_cache/ 下")
+  else if (!["chapter_index.csv", "_progress.md"].some((name) => fs.existsSync(path.join(bookDir, name)))) {
+    reasons.push("上级目录不是拆文目录（缺 chapter_index.csv 与 _progress.md）")
+  }
+  const relative = path.relative(root, absolute)
+  if (relative.startsWith("..") || path.isAbsolute(relative)) reasons.push("路径在项目目录之外")
+  if (reasons.length) {
+    process.stderr.write(
+      `⛔ chapter-extractor 写入被拦截：${target}\n${reasons.join("；")}。\n` +
+        "只允许写调用方给的 {拆文目录}/_analysis_cache/输入-{批次ID}.md（批次 ID 如 RAW-4-6），不写其他文件。"
+    )
+    process.exit(2)
+  }
 } else {
   process.exit(2)
 }

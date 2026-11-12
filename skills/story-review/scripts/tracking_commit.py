@@ -3,33 +3,50 @@
 
 The language model supplies compact semantic JSON.  This tool validates and
 merges that input in memory, renders every derived view, then atomically writes
-``_tracking-state.json`` last as the single commit point.  One book project has
-one serial writer; concurrent commits are intentionally unsupported.
+``_tracking-state.json`` last as the single commit point. Per-project locking
+serializes concurrent writers before revision and wordcount checks.
 """
 
 from __future__ import annotations
 
 import argparse
 import copy
+import importlib.util
 import json
 import os
 import re
 import stat
 import sys
 import tempfile
+import time
 import unicodedata
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
 
+_WORDCOUNT_CORE_PATH = Path(__file__).with_name("wordcount_core.py")
+if not _WORDCOUNT_CORE_PATH.is_file():  # pragma: no cover - broken deployment
+    raise RuntimeError("TOOL_UNAVAILABLE: wordcount_core.py")
+_WORDCOUNT_CORE_SPEC = importlib.util.spec_from_file_location(
+    "story_wordcount_core", _WORDCOUNT_CORE_PATH
+)
+if _WORDCOUNT_CORE_SPEC is None or _WORDCOUNT_CORE_SPEC.loader is None:  # pragma: no cover
+    raise RuntimeError("unable to load wordcount core")
+wordcount_core = importlib.util.module_from_spec(_WORDCOUNT_CORE_SPEC)
+_WORDCOUNT_CORE_SPEC.loader.exec_module(wordcount_core)
+
+
 INPUT_SCHEMA_VERSION = 1
-TRACKING_SCHEMA_VERSION = 5
+TRACKING_SCHEMA_VERSION = 4
 DELTA_TARGET_BYTES = 1536
 DELTA_MAX_BYTES = 3072
 CONTEXT_TARGET_BYTES = 8192
 CONTEXT_MAX_BYTES = 12288
 SNAPSHOT_TARGET_BYTES = 4096
 SNAPSHOT_MAX_BYTES = 8192
+# 下一章热上下文里列出的活跃角色，不是核心角色总数；体积仍由 CONTEXT_MAX_BYTES 兜底。
+ACTIVE_CHARACTER_MAX = 20
 
 CONTEXT_HEADINGS = (
     "## 当前位置",
@@ -40,31 +57,35 @@ CONTEXT_HEADINGS = (
     "## 下一章承诺",
     "## 连贯性风险",
 )
-# 跨章连续性守卫字段：这两项一旦被无声改写，就是「上一章住宿舍、下一章骑车从家出发」
-# 「上一章娘摆针线摊、下一章变卖菜摊」这类读者一眼看穿的硬伤。改它们必须报旧值。
-# 位置与持有物进热上下文时按字节截断。两者的 schema 上限分别是 240 和每项 384，
-# 6 个活跃角色原样铺开最坏能给热上下文多加约 6KB，直接把 12288 的硬顶顶穿，
-# 届时作者只会看到「hot context exceeds」而不知道该删哪。热上下文本来就是摘要：
-# 让写作端知道「人在学校宿舍」就够了，精确原文在 角色状态/{名}.md，
-# 而申报 continuity_changes 的 from 要求匹配完整值，正好逼模型去读那份文件。
-CONTEXT_FIELD_BYTES = 60
-GUARDED_SNAPSHOT_FIELDS = ("location", "abilities_resources")
-GUARDED_FIELD_LABEL = {"location": "位置", "abilities_resources": "持有物"}
-
 FORESHADOW_STATUSES = ("已埋", "已回收", "已过期", "放弃")
 FORESHADOW_IMPORTANCE = ("高", "中", "低")
 REVEAL_STATUSES = ("未揭示", "部分揭示", "已揭示")
+# 伏笔与时间线条目里模型常用的同义写法：含义明确的直接改成正式名，不让一次提交为措辞失败。
+ACTION_ALIASES = {
+    "add": "upsert", "new": "upsert", "create": "upsert", "update": "upsert", "plant": "upsert",
+    "advance": "upsert", "resolve": "upsert", "insert": "upsert",
+    "新增": "upsert", "埋设": "upsert", "更新": "upsert", "推进": "upsert", "回收": "upsert",
+    "remove": "delete", "删除": "delete",
+}
+# 带状态含义的伏笔动作词：它们也映射成 upsert，但动作词本身说了伏笔走到哪一步。
+# status 缺省时按动作词补上（意图只有这一个来源，不会猜错）；status 与动作词矛盾时退回，
+# 因为无法判断是动作词用错还是状态写错——静默改任何一边都可能把没回收的伏笔记成已回收。
+FORESHADOW_ACTION_STATUS = {
+    "resolve": "已回收", "回收": "已回收",
+    "advance": "已埋", "推进": "已埋",
+}
+FORESHADOW_KEY_ALIASES = {
+    "planned_chapter": "planned_resolution_chapter", "planned_payoff_chapter": "planned_resolution_chapter",
+    "payoff_chapter": "planned_resolution_chapter", "resolution_chapter": "planned_resolution_chapter",
+    "resolve_chapter": "planned_resolution_chapter", "plant_chapter": "planted_chapter",
+    "planted": "planted_chapter", "description": "summary", "content": "summary",
+}
+TIMELINE_KEY_ALIASES = {"time": "story_time", "fact": "objective_fact", "reveal": "reveal_status"}
 INVALID_FILE_CHARS = re.compile(r"[<>:\"/\\|?*\x00-\x1f]")
 FORESHADOW_ID = re.compile(r"^F\d{3,}$")
+SNAPSHOT_TEXT_FIELDS = ("identity", "location", "goal", "state")
+SNAPSHOT_LIST_FIELDS = ("abilities_resources", "relationships", "knowledge", "open_threads")
 EVENT_ID = re.compile(r"^E\d{3,}$")
-FACT_ID = re.compile(r"^[KR]\d{3,}$")
-FACT_CATEGORIES = (
-    "身份", "血缘", "亲属", "婚姻", "别名", "传承", "从属", "合作", "敌对",
-    "所有权", "规则", "权限", "不可逆状态", "历史因果", "其他",
-)
-RELATION_CATEGORIES = {"血缘", "亲属", "婚姻", "传承", "从属", "合作", "敌对"}
-FACT_CARDINALITIES = ("one", "many")
-FACT_CANON_STATUSES = ("锁定设定", "正文已证")
 WINDOWS_RESERVED_NAMES = {
     "CON",
     "PRN",
@@ -93,6 +114,13 @@ def require(condition: bool, message: str) -> None:
         raise TrackingError(message)
 
 
+def wordcount_value(function: Any, *args: Any, **kwargs: Any) -> Any:
+    try:
+        return function(*args, **kwargs)
+    except wordcount_core.WordcountError as exc:
+        raise TrackingError(str(exc)) from exc
+
+
 def as_mapping(value: object, label: str) -> dict[str, Any]:
     require(isinstance(value, dict), f"{label} must be a JSON object")
     return value
@@ -109,16 +137,56 @@ def as_int(value: object, label: str, *, minimum: int = 0) -> int:
     return value
 
 
+def as_chapter(value: object, label: str, *, minimum: int = 1) -> int:
+    """章号：模型常写成 "22"。纯数字字符串按整数收，语义不变；其余照旧报错。"""
+    if isinstance(value, str) and value.strip().isdecimal():
+        value = int(value.strip())
+    return as_int(value, label, minimum=minimum)
+
+
+def with_aliases(row: dict[str, Any], aliases: dict[str, str]) -> dict[str, Any]:
+    """把含义明确的同义字段名改成正式字段名；正式字段已在时不动，留给未知字段报错。"""
+    row = dict(row)
+    for alias, canonical in aliases.items():
+        if alias in row and canonical not in row:
+            row[canonical] = row.pop(alias)
+    return row
+
+
+def normalize_action(value: object, label: str, *, allow_delete: bool) -> str:
+    action = clean_text(value, label, max_bytes=24)
+    action = ACTION_ALIASES.get(action.lower(), action.lower())
+    allowed = ("upsert", "delete") if allow_delete else ("upsert",)
+    require(action in allowed, f"{label} is invalid: use {' or '.join(allowed)}")
+    return action
+
+
 def require_known_keys(mapping: dict[str, Any], allowed: set[str], label: str) -> None:
     unknown = set(mapping) - allowed
-    require(not unknown, f"{label} contains unsupported fields: {', '.join(sorted(unknown))}")
+    require(not unknown, f"{label} contains unsupported fields: {', '.join(sorted(unknown))}"
+                         f"（只收 {', '.join(sorted(allowed))}）")
+
+
+# 事务校验期间收集全部超长字段，一次报完；None 表示逐条立即报错（初始化、状态读取等路径）。
+_LENGTH_ISSUES: list[str] | None = None
+
+
+def length_hint(label: str, text: str, max_bytes: int) -> str:
+    """把字节上限换算成字数：模型写的是中文，只看得懂「要删几个字」。"""
+    size = len(text.encode("utf-8"))
+    allowed = max(1, max_bytes * len(text) // size)
+    return (f"{label} exceeds {max_bytes} bytes（现 {len(text)} 字，上限约 {allowed} 字，"
+            f"至少删 {len(text) - allowed} 字）")
 
 
 def clean_text(value: object, label: str, *, allow_empty: bool = False, max_bytes: int = 768) -> str:
     require(isinstance(value, str), f"{label} must be a string")
     cleaned = " ".join(value.replace("|", "｜").split())
     require(allow_empty or bool(cleaned), f"{label} must not be empty")
-    require(len(cleaned.encode("utf-8")) <= max_bytes, f"{label} exceeds {max_bytes} bytes")
+    if len(cleaned.encode("utf-8")) > max_bytes:
+        if _LENGTH_ISSUES is None:
+            raise TrackingError(length_hint(label, cleaned, max_bytes))
+        _LENGTH_ISSUES.append(length_hint(label, cleaned, max_bytes))
     return cleaned
 
 
@@ -149,15 +217,6 @@ def portable_name_key(name: str) -> str:
 
 def byte_size(text: str) -> int:
     return len(text.encode("utf-8"))
-
-
-def clip_bytes(text: str, limit: int) -> str:
-    if byte_size(text) <= limit:
-        return text
-    clipped = text
-    while byte_size(clipped) > limit - 3:
-        clipped = clipped[:-1]
-    return clipped + "…"
 
 
 def emit(text: str, *, error: bool = False) -> None:
@@ -216,6 +275,34 @@ def state_path(project: Path) -> Path:
     return tracking_root(project) / "_tracking-state.json"
 
 
+@contextmanager
+def project_write_lock(project: Path, *, timeout_seconds: float = 10.0):
+    tracking = tracking_root(project)
+    tracking.mkdir(parents=True, exist_ok=True)
+    path = tracking / ".tracking-commit.lock"
+    deadline = time.monotonic() + timeout_seconds
+    descriptor: int | None = None
+    while descriptor is None:
+        try:
+            descriptor = os.open(path, os.O_CREAT | os.O_EXCL | os.O_WRONLY, 0o644)
+        except FileExistsError:
+            if time.monotonic() >= deadline:
+                raise TrackingError(
+                    "tracking commit lock is busy or stale; retry, or remove 追踪/.tracking-commit.lock after confirming no commit is running"
+                )
+            time.sleep(0.05)
+    try:
+        os.write(descriptor, f"pid={os.getpid()}\n".encode("ascii"))
+        os.fsync(descriptor)
+        yield
+    finally:
+        os.close(descriptor)
+        try:
+            path.unlink()
+        except FileNotFoundError:
+            pass
+
+
 def delta_path(tracking: Path, chapter: int) -> Path:
     width = max(3, len(str(chapter)))
     return tracking / "逐章记录" / f"第{chapter:0{width}d}章.md"
@@ -255,9 +342,15 @@ def archive_retired_tracking_paths(tracking: Path) -> list[str]:
     return retired
 
 
+def _both_blank(position: dict[str, Any]) -> bool:
+    return all(isinstance(position.get(key), str) and not position[key].strip() for key in ("story_time", "scene"))
+
+
 def validate_position(value: object, label: str = "context.position") -> dict[str, Any]:
     position = as_mapping(value, label)
     require_known_keys(position, {"volume", "volume_start_chapter", "story_time", "scene"}, label)
+    require(not _both_blank(position),
+            f"{label}.story_time and {label}.scene must not be empty: fill where this chapter ends")
     return {
         "volume": safe_file_component(position.get("volume"), f"{label}.volume"),
         "volume_start_chapter": as_int(
@@ -268,8 +361,22 @@ def validate_position(value: object, label: str = "context.position") -> dict[st
     }
 
 
+def joined_text(value: object) -> object:
+    """单句字段写成了字符串列表时按「；」连成一句，内容不丢。"""
+    if isinstance(value, list) and value and all(isinstance(item, str) for item in value):
+        return "；".join(value)
+    return value
+
+
+def as_text_list(value: object) -> object:
+    """列表字段只写了一句时当作一项。"""
+    return [value] if isinstance(value, str) and value.strip() else value
+
+
 def normalize_snapshot(value: object, label: str) -> dict[str, Any]:
     snapshot = as_mapping(value, label)
+    snapshot = {key: joined_text(item) if key in SNAPSHOT_TEXT_FIELDS else as_text_list(item)
+                if key in SNAPSHOT_LIST_FIELDS else item for key, item in snapshot.items()}
     require_known_keys(
         snapshot,
         {"identity", "location", "goal", "state", "abilities_resources", "relationships", "knowledge", "open_threads"},
@@ -336,23 +443,33 @@ def normalize_foreshadow_change(
     allow_delete: bool,
     through_chapter: int,
 ) -> dict[str, Any]:
-    row = as_mapping(value, label)
+    row = with_aliases(as_mapping(value, label), FORESHADOW_KEY_ALIASES)
     require_known_keys(
         row,
         {"action", "id", "summary", "planted_chapter", "planned_resolution_chapter", "status", "importance"},
         label,
     )
-    action = clean_text(row.get("action", "upsert"), f"{label}.action", max_bytes=24)
-    require(action in ({"upsert", "delete"} if allow_delete else {"upsert"}), f"{label}.action is invalid")
+    raw_action = row.get("action", "upsert")
+    action = normalize_action(raw_action, f"{label}.action", allow_delete=allow_delete)
     identifier = clean_text(row.get("id"), f"{label}.id", max_bytes=24)
     require(FORESHADOW_ID.fullmatch(identifier) is not None, f"{label}.id must look like F001")
     if action == "delete":
         return {"action": action, "id": identifier}
-    planted_chapter = as_int(row.get("planted_chapter"), f"{label}.planted_chapter", minimum=1)
+    implied = FORESHADOW_ACTION_STATUS.get(" ".join(str(raw_action).split()).lower())
+    if implied is not None:
+        if row.get("status") in (None, ""):
+            row["status"] = implied
+        right = "回收了就写 status=已回收" if implied == "已回收" else "只是推进、还没回收就写 status=已埋"
+        require(
+            row["status"] == implied,
+            f"{label}.action={raw_action} 与 status={row['status']} 矛盾：{right}；"
+            "不是这个意思就把 action 改成 upsert 并写实际状态",
+        )
+    planted_chapter = as_chapter(row.get("planted_chapter"), f"{label}.planted_chapter")
     require(planted_chapter <= through_chapter, f"{label}.planted_chapter cannot be in the future")
     planned_raw = row.get("planned_resolution_chapter")
     planned_chapter = (
-        None if planned_raw is None else as_int(planned_raw, f"{label}.planned_resolution_chapter", minimum=1)
+        None if planned_raw in (None, "") else as_chapter(planned_raw, f"{label}.planned_resolution_chapter")
     )
     require(
         planned_chapter is None or planned_chapter >= planted_chapter,
@@ -428,14 +545,13 @@ def normalize_timeline_change(
     allow_delete: bool,
     through_chapter: int,
 ) -> dict[str, Any]:
-    event = as_mapping(value, label)
+    event = with_aliases(as_mapping(value, label), TIMELINE_KEY_ALIASES)
     require_known_keys(
         event,
         {"action", "id", "story_time", "objective_fact", "reader_knowledge", "reveal_status", "reveal_chapter", "characters"},
         label,
     )
-    action = clean_text(event.get("action", "upsert"), f"{label}.action", max_bytes=24)
-    require(action in ({"upsert", "delete"} if allow_delete else {"upsert"}), f"{label}.action is invalid")
+    action = normalize_action(event.get("action", "upsert"), f"{label}.action", allow_delete=allow_delete)
     identifier = clean_text(event.get("id"), f"{label}.id", max_bytes=24)
     require(EVENT_ID.fullmatch(identifier) is not None, f"{label}.id must look like E001")
     if action == "delete":
@@ -443,7 +559,7 @@ def normalize_timeline_change(
     reveal_status = clean_text(event.get("reveal_status"), f"{label}.reveal_status", max_bytes=24)
     require(reveal_status in REVEAL_STATUSES, f"{label}.reveal_status must be one of {REVEAL_STATUSES}")
     reveal_raw = event.get("reveal_chapter")
-    reveal_chapter = None if reveal_raw is None else as_int(reveal_raw, f"{label}.reveal_chapter", minimum=1)
+    reveal_chapter = None if reveal_raw in (None, "") else as_chapter(reveal_raw, f"{label}.reveal_chapter")
     if reveal_status == "未揭示":
         require(reveal_chapter is None, f"{label} must not put a future reveal chapter in established timeline facts")
     else:
@@ -530,182 +646,6 @@ def render_timeline_views(events: dict[str, dict[str, Any]], revision: int) -> t
     return "\n".join(author_lines) + "\n", "\n".join(reader_lines) + "\n"
 
 
-def normalize_fact_change(
-    value: object,
-    label: str,
-    *,
-    allow_delete: bool,
-    through_chapter: int,
-) -> dict[str, Any]:
-    fact = as_mapping(value, label)
-    require_known_keys(
-        fact,
-        {
-            "action", "id", "category", "subject", "predicate", "object", "cardinality",
-            "canon_status", "reader_status", "reveal_chapter", "established_chapter",
-            "evidence", "related_entities", "negative_constraints",
-        },
-        label,
-    )
-    action = clean_text(fact.get("action", "upsert"), f"{label}.action", max_bytes=24)
-    require(action in ({"upsert", "delete"} if allow_delete else {"upsert"}), f"{label}.action is invalid")
-    identifier = clean_text(fact.get("id"), f"{label}.id", max_bytes=24)
-    require(FACT_ID.fullmatch(identifier) is not None, f"{label}.id must look like K001 or R001")
-    if action == "delete":
-        return {"action": action, "id": identifier}
-
-    category = clean_text(fact.get("category"), f"{label}.category", max_bytes=24)
-    require(category in FACT_CATEGORIES, f"{label}.category must be one of {FACT_CATEGORIES}")
-    cardinality = clean_text(fact.get("cardinality"), f"{label}.cardinality", max_bytes=16)
-    require(cardinality in FACT_CARDINALITIES, f"{label}.cardinality must be one of {FACT_CARDINALITIES}")
-    canon_status = clean_text(fact.get("canon_status"), f"{label}.canon_status", max_bytes=24)
-    require(canon_status in FACT_CANON_STATUSES, f"{label}.canon_status must be one of {FACT_CANON_STATUSES}")
-    reader_status = clean_text(fact.get("reader_status"), f"{label}.reader_status", max_bytes=24)
-    require(reader_status in REVEAL_STATUSES, f"{label}.reader_status must be one of {REVEAL_STATUSES}")
-    reveal_raw = fact.get("reveal_chapter")
-    reveal_chapter = None if reveal_raw is None else as_int(reveal_raw, f"{label}.reveal_chapter", minimum=1)
-    if reader_status == "未揭示":
-        require(reveal_chapter is None, f"{label} must not put a future reveal chapter in established facts")
-    else:
-        require(reveal_chapter is not None, f"{label}.reveal_chapter is required once revealed")
-        require(reveal_chapter <= through_chapter, f"{label}.reveal_chapter cannot be in the future")
-    established = as_int(fact.get("established_chapter", 0), f"{label}.established_chapter")
-    require(established <= through_chapter, f"{label}.established_chapter cannot be in the future")
-    evidence = clean_string_list(fact.get("evidence", []), f"{label}.evidence", maximum=12, item_max_bytes=480)
-    require(evidence, f"{label}.evidence must contain at least one source reference")
-    related_entities = [
-        safe_file_component(item, f"{label}.related_entities[{index}]")
-        for index, item in enumerate(as_list(fact.get("related_entities", []), f"{label}.related_entities"))
-    ]
-    require(len(related_entities) <= 12, f"{label}.related_entities may contain at most 12 items")
-    require(
-        len({portable_name_key(item) for item in related_entities}) == len(related_entities),
-        f"{label}.related_entities contains duplicates",
-    )
-    if category in RELATION_CATEGORIES:
-        require(related_entities, f"{label}.related_entities is required for relationship facts")
-    return {
-        "action": action,
-        "id": identifier,
-        "category": category,
-        "subject": clean_text(fact.get("subject"), f"{label}.subject", max_bytes=180),
-        "predicate": clean_text(fact.get("predicate"), f"{label}.predicate", max_bytes=180),
-        "object": clean_text(fact.get("object"), f"{label}.object", max_bytes=360),
-        "cardinality": cardinality,
-        "canon_status": canon_status,
-        "reader_status": reader_status,
-        "reveal_chapter": reveal_chapter,
-        "established_chapter": established,
-        "evidence": evidence,
-        "related_entities": related_entities,
-        "negative_constraints": clean_string_list(
-            fact.get("negative_constraints", []), f"{label}.negative_constraints", maximum=8, item_max_bytes=360
-        ),
-    }
-
-
-def fact_slot_key(fact: dict[str, Any]) -> tuple[str, str]:
-    return (portable_name_key(fact["subject"]), portable_name_key(fact["predicate"]))
-
-
-def validate_fact_set(facts: dict[str, dict[str, Any]]) -> None:
-    triples: dict[tuple[str, str, str], str] = {}
-    slots: dict[tuple[str, str], list[tuple[str, dict[str, Any]]]] = {}
-    for identifier, fact in facts.items():
-        triple = (*fact_slot_key(fact), portable_name_key(fact["object"]))
-        previous = triples.get(triple)
-        require(previous is None or previous == identifier, f"fact {identifier} duplicates the same triple as {previous}")
-        triples[triple] = identifier
-        slots.setdefault(fact_slot_key(fact), []).append((identifier, fact))
-    for slot, rows in slots.items():
-        if not any(row["cardinality"] == "one" for _, row in rows):
-            continue
-        objects = {portable_name_key(row["object"]) for _, row in rows}
-        require(
-            len(objects) == 1,
-            f"single-valued canon slot {slot[0]} / {slot[1]} has conflicting objects: "
-            + ", ".join(identifier for identifier, _ in rows),
-        )
-
-
-def normalize_fact_state(value: object, last_chapter: int) -> dict[str, dict[str, Any]]:
-    rows = as_mapping(value, "tracking state.facts")
-    normalized: dict[str, dict[str, Any]] = {}
-    for raw_identifier, raw_fact in rows.items():
-        identifier = clean_text(raw_identifier, "tracking state.facts ID", max_bytes=24)
-        fact = as_mapping(raw_fact, f"tracking state.facts.{identifier}")
-        require_known_keys(
-            fact,
-            {
-                "id", "category", "subject", "predicate", "object", "cardinality", "canon_status",
-                "reader_status", "reveal_chapter", "established_chapter", "evidence", "related_entities",
-                "negative_constraints", "first_recorded_chapter", "updated_chapter",
-            },
-            f"tracking state.facts.{identifier}",
-        )
-        require(fact.get("id") == identifier, f"tracking state.facts.{identifier}.id does not match its key")
-        change = normalize_fact_change(
-            {
-                "action": "upsert",
-                **{
-                    key: item
-                    for key, item in fact.items()
-                    if key not in {"first_recorded_chapter", "updated_chapter"}
-                },
-            },
-            f"tracking state.facts.{identifier}",
-            allow_delete=False,
-            through_chapter=last_chapter,
-        )
-        change.pop("action")
-        first = as_int(fact.get("first_recorded_chapter"), f"tracking state.facts.{identifier}.first_recorded_chapter")
-        updated = as_int(fact.get("updated_chapter"), f"tracking state.facts.{identifier}.updated_chapter")
-        require(first <= last_chapter, f"fact {identifier} starts after current chapter")
-        require(updated <= last_chapter, f"fact {identifier} updates after current chapter")
-        change["first_recorded_chapter"] = first
-        change["updated_chapter"] = updated
-        normalized[identifier] = change
-    validate_fact_set(normalized)
-    return normalized
-
-
-def fact_reveal_label(fact: dict[str, Any]) -> str:
-    if fact["reader_status"] == "未揭示":
-        return "未揭示"
-    return f"{fact['reader_status']}（第{fact['reveal_chapter']}章）"
-
-
-def render_fact_table(title: str, facts: dict[str, dict[str, Any]], revision: int) -> str:
-    lines = [
-        f"# {title}",
-        "",
-        f"> 状态修订：{revision}。由 `_tracking-state.json` 确定性生成，禁止手改。",
-        "",
-        "| ID | 类别 | 主体 | 关系/断言 | 客体/值 | 口径 | 读者状态 | 证据 | 禁止误读 | 最近变更章 |",
-        "|---|---|---|---|---|---|---|---|---|---:|",
-    ]
-    for identifier in sorted(facts):
-        fact = facts[identifier]
-        evidence = "；".join(fact["evidence"])
-        negatives = "；".join(fact["negative_constraints"]) or "—"
-        lines.append(
-            f"| {identifier} | {fact['category']} | {fact['subject']} | {fact['predicate']} | {fact['object']} | "
-            f"{fact['canon_status']}/{fact['cardinality']} | {fact_reveal_label(fact)} | {evidence} | "
-            f"{negatives} | 第{fact['updated_chapter']}章 |"
-        )
-    return "\n".join(lines) + "\n"
-
-
-def render_entity_dossier(entity: str, facts: dict[str, dict[str, Any]], revision: int) -> str:
-    selected = {
-        identifier: fact
-        for identifier, fact in facts.items()
-        if portable_name_key(fact["subject"]) == portable_name_key(entity)
-        or portable_name_key(entity) in {portable_name_key(item) for item in fact["related_entities"]}
-    }
-    return render_fact_table(f"{entity}｜长期事实档案", selected, revision)
-
-
 def validate_context_input(value: object, *, include_initial_fields: bool) -> dict[str, Any]:
     context = as_mapping(value, "context")
     allowed = {"position", "long_term_constraints", "active_character_names", "continuity_risks"}
@@ -725,7 +665,10 @@ def validate_context_input(value: object, *, include_initial_fields: bool) -> di
             context.get("continuity_risks", []), "context.continuity_risks", maximum=5
         ),
     }
-    require(len(normalized["active_character_names"]) <= 6, "context.active_character_names may contain at most 6 names")
+    require(
+        len(normalized["active_character_names"]) <= ACTIVE_CHARACTER_MAX,
+        f"context.active_character_names may contain at most {ACTIVE_CHARACTER_MAX} names",
+    )
     require(
         len({portable_name_key(name) for name in normalized["active_character_names"]})
         == len(normalized["active_character_names"]),
@@ -769,20 +712,11 @@ def render_context(state: dict[str, Any]) -> str:
     current_chapter = (
         "尚未开篇" if state["last_committed_chapter"] == 0 else f"第{state['last_committed_chapter']}章"
     )
-    # 位置与持有物必须进热上下文。它们此前只存在快照文件里，而日更规则是
-    # 「核心复用角色若不在本节，才去读 角色状态/{名}.md」——主角必然在本节，
-    # 那条分支永不触发，于是写下一章时模型看不到人在哪、手里有什么。
-    # 实测后果：上一章写住校宿舍，下一章骑车从家出发；上一章娘摆针线摊，
-    # 下一章变卖菜摊。这两类是跨章连续性最高频的崩法。
-    character_lines = []
-    for name in context["active_character_names"]:
-        snapshot = state["characters"][name]
-        held = "；".join(snapshot["abilities_resources"][:2]) or "无"
-        character_lines.append(
-            f"{name}｜{snapshot['identity']}｜{snapshot['state']}｜"
-            f"位置：{clip_bytes(snapshot['location'], CONTEXT_FIELD_BYTES)}｜"
-            f"持有：{clip_bytes(held, CONTEXT_FIELD_BYTES)}｜目标：{snapshot['goal']}"
-        )
+    character_lines = [
+        f"{name}｜{state['characters'][name]['identity']}｜{state['characters'][name]['state']}｜"
+        f"目标：{state['characters'][name]['goal']}"
+        for name in context["active_character_names"]
+    ]
     sections: list[tuple[str, list[str]]] = [
         (
             "## 当前位置",
@@ -828,25 +762,11 @@ def normalize_delta(
     require_known_keys(
         delta,
         {
-            "result", "character_changes", "foreshadow_changes", "timeline_events", "fact_changes", "constraints",
+            "result", "character_changes", "foreshadow_changes", "timeline_events", "constraints",
             "next_chapter_commitments", "retired_context_items", "retired_characters",
-            "continuity_changes",
         },
         "delta",
     )
-    continuity_changes: list[dict[str, Any]] = []
-    for index, raw in enumerate(as_list(delta.get("continuity_changes", []), "delta.continuity_changes")):
-        item = as_mapping(raw, f"delta.continuity_changes[{index}]")
-        require_known_keys(item, {"name", "field", "from", "to", "reason"}, f"delta.continuity_changes[{index}]")
-        field = clean_text(item.get("field"), f"delta.continuity_changes[{index}].field", max_bytes=32)
-        require(field in GUARDED_SNAPSHOT_FIELDS, f"delta.continuity_changes[{index}].field must be one of {GUARDED_SNAPSHOT_FIELDS}")
-        continuity_changes.append({
-            "name": safe_file_component(item.get("name"), f"delta.continuity_changes[{index}].name"),
-            "field": field,
-            "from": clean_text(item.get("from"), f"delta.continuity_changes[{index}].from", max_bytes=480),
-            "to": clean_text(item.get("to"), f"delta.continuity_changes[{index}].to", max_bytes=480),
-            "reason": clean_text(item.get("reason"), f"delta.continuity_changes[{index}].reason", max_bytes=240),
-        })
     retired_characters = [
         safe_file_component(name, f"delta.retired_characters[{index}]")
         for index, name in enumerate(as_list(delta.get("retired_characters", []), "delta.retired_characters"))
@@ -864,7 +784,8 @@ def normalize_delta(
         # 本章退役的角色记录最后一次变化即可，不必再交一份马上要删的快照。
         require(
             not is_core or name in snapshots or portable_name_key(name) in retiring,
-            f"core character {name} changed but has no current snapshot",
+            f"core character {name} changed but has no current snapshot: 把 draft 输出 current_snapshots 里"
+            f"「{name}」的快照整份改成本章结束时的状态，放进 character_snapshots",
         )
         character_changes.append(
             {"name": name, "change": clean_text(change.get("change"), f"delta.character_changes[{index}].change", max_bytes=360)}
@@ -883,12 +804,6 @@ def normalize_delta(
         )
         for index, raw in enumerate(as_list(delta.get("timeline_events", []), "delta.timeline_events"))
     ]
-    fact_changes = [
-        normalize_fact_change(
-            raw, f"delta.fact_changes[{index}]", allow_delete=True, through_chapter=through_chapter
-        )
-        for index, raw in enumerate(as_list(delta.get("fact_changes", []), "delta.fact_changes"))
-    ]
     require(
         len({item["id"] for item in foreshadow_changes}) == len(foreshadow_changes),
         "delta.foreshadow_changes contains duplicate IDs",
@@ -896,10 +811,6 @@ def normalize_delta(
     require(
         len({item["id"] for item in timeline_events}) == len(timeline_events),
         "delta.timeline_events contains duplicate IDs",
-    )
-    require(
-        len({item["id"] for item in fact_changes}) == len(fact_changes),
-        "delta.fact_changes contains duplicate IDs",
     )
     require(
         set(snapshots).issubset({item["name"] for item in character_changes}),
@@ -910,7 +821,6 @@ def normalize_delta(
         "character_changes": character_changes,
         "foreshadow_changes": foreshadow_changes,
         "timeline_events": timeline_events,
-        "fact_changes": fact_changes,
         "constraints": clean_string_list(delta.get("constraints", []), "delta.constraints", maximum=6),
         "next_chapter_commitments": clean_string_list(
             delta.get("next_chapter_commitments", []), "delta.next_chapter_commitments", maximum=5
@@ -919,15 +829,21 @@ def normalize_delta(
             delta.get("retired_context_items", []), "delta.retired_context_items", maximum=11
         ),
         "retired_characters": retired_characters,
-        "continuity_changes": continuity_changes,
     }
+
+
+def render_commitments(commitments: list[str]) -> list[str]:
+    # 常见情形一行用「；」连写；有承诺原文自带「；」时连写就拆不回来，改成逐条缩进子项。
+    if any("；" in item for item in commitments):
+        return ["- 下一章承诺："] + [f"  - {item}" for item in commitments]
+    return ["- 下一章承诺：" + ("；".join(commitments) or "无")]
 
 
 def render_delta(chapter: int, title: str, delta: dict[str, Any], core_names: set[str]) -> str:
     lines = [
         f"# 第{chapter:03d}章 · {title}",
         f"- 结果：{delta['result']}",
-        "- 下一章承诺：" + ("；".join(delta["next_chapter_commitments"]) or "无"),
+        *render_commitments(delta["next_chapter_commitments"]),
         "",
         "## 角色变化",
     ]
@@ -957,29 +873,10 @@ def render_delta(chapter: int, title: str, delta: dict[str, Any], core_names: se
             )
     if not delta["timeline_events"]:
         lines.append("- 无")
-    lines.extend(["", "## 长期事实变化"])
-    for item in delta["fact_changes"]:
-        if item["action"] == "delete":
-            lines.append(f"- {item['id']}｜删除当前登记")
-        else:
-            lines.append(
-                f"- {item['id']}｜{item['category']}｜{item['subject']} {item['predicate']} {item['object']}｜"
-                f"{item['canon_status']}｜{fact_reveal_label(item)}"
-            )
-    if not delta["fact_changes"]:
-        lines.append("- 无")
     lines.extend(["", "## 连贯性约束"])
     lines.extend(f"- {item}" for item in delta["constraints"])
     if not delta["constraints"]:
         lines.append("- 无")
-    if delta.get("continuity_changes"):
-        # 位置/持有物的改动单列一节：这两项是跨章硬伤高发区，出问题时要能一眼
-        # 翻到是哪一章、从什么改成什么、给的理由是什么。
-        lines.extend(["", "## 跨章连续性变更"])
-        lines.extend(
-            f"- {item['name']}｜{GUARDED_FIELD_LABEL[item['field']]}｜{item['from']} → {item['to']}｜{item['reason']}"
-            for item in delta["continuity_changes"]
-        )
     retired = delta.get("retired_context_items", []) + [
         f"角色状态：{name}" for name in delta.get("retired_characters", [])
     ]
@@ -989,8 +886,26 @@ def render_delta(chapter: int, title: str, delta: dict[str, Any], core_names: se
         lines.extend(f"- {item}" for item in retired)
     payload = "\n".join(lines) + "\n"
     size = byte_size(payload)
-    require(size <= DELTA_MAX_BYTES, f"chapter delta is {size} bytes; hard cap is {DELTA_MAX_BYTES}")
+    if size > DELTA_MAX_BYTES:
+        longest = sorted((line for line in lines if line.startswith("- ")), key=len, reverse=True)[:3]
+        allowed = DELTA_MAX_BYTES * len(payload) // size
+        raise TrackingError(
+            f"chapter delta is {size} bytes; hard cap is {DELTA_MAX_BYTES}（逐章记录现 {len(payload)} 字，"
+            f"上限约 {allowed} 字，至少压缩 {len(payload) - allowed} 字；最长几项："
+            + "；".join(f"{line[2:18]}…（{len(line) - 2} 字）" for line in longest) + "）")
     return payload
+
+
+def normalize_wordcount_records(value: object, last_chapter: int) -> dict[str, dict[str, Any]]:
+    records = as_mapping(value, "tracking state.wordcount_records")
+    normalized: dict[str, dict[str, Any]] = {}
+    for raw_chapter, raw_record in records.items():
+        require(isinstance(raw_chapter, str) and re.fullmatch(r"[1-9]\d*", raw_chapter) is not None,
+                "wordcount record chapter key is invalid")
+        chapter = int(raw_chapter)
+        require(chapter <= last_chapter, "wordcount record exceeds last committed chapter")
+        normalized[raw_chapter] = wordcount_value(wordcount_core.normalize_wordcount_record, raw_record)
+    return normalized
 
 
 def normalize_state(document: object) -> dict[str, Any]:
@@ -999,7 +914,8 @@ def normalize_state(document: object) -> dict[str, Any]:
         root,
         {
             "schema_version", "book_title", "last_committed_chapter", "imported_through_chapter",
-            "state_revision", "context", "characters", "foreshadow", "timeline", "facts",
+            "state_revision", "context", "characters", "foreshadow", "timeline",
+            "wordcount_records",
         },
         "tracking state",
     )
@@ -1021,21 +937,22 @@ def normalize_state(document: object) -> dict[str, Any]:
         require(name in characters, f"active core character {name} has no current snapshot")
     foreshadow = normalize_foreshadow_state(root.get("foreshadow", {}), last_chapter)
     timeline = normalize_timeline_state(root.get("timeline", {}), last_chapter)
-    facts = normalize_fact_state(root.get("facts", {}), last_chapter)
     if last_chapter == 0:
         require(not foreshadow, "a chapter-0 project cannot have planted foreshadow facts")
         require(not timeline, "a chapter-0 project cannot have established timeline facts")
+    state_revision = as_int(root.get("state_revision"), "tracking state.state_revision")
+    wordcount_records = normalize_wordcount_records(root.get("wordcount_records", {}), last_chapter)
     return {
         "schema_version": TRACKING_SCHEMA_VERSION,
         "book_title": clean_text(root.get("book_title"), "tracking state.book_title", max_bytes=240),
         "last_committed_chapter": last_chapter,
         "imported_through_chapter": imported_through,
-        "state_revision": as_int(root.get("state_revision"), "tracking state.state_revision"),
+        "state_revision": state_revision,
         "context": context,
         "characters": characters,
         "foreshadow": foreshadow,
         "timeline": timeline,
-        "facts": facts,
+        "wordcount_records": wordcount_records,
     }
 
 
@@ -1051,7 +968,7 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
         root,
         {
             "schema_version", "book_title", "last_chapter", "context", "character_snapshots",
-            "foreshadow", "timeline_events", "facts",
+            "foreshadow", "timeline_events",
         },
         "init input",
     )
@@ -1078,17 +995,6 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
         event["first_recorded_chapter"] = max(1, last_chapter)
         event["updated_chapter"] = max(1, last_chapter)
         timeline[event["id"]] = event
-    facts: dict[str, dict[str, Any]] = {}
-    for index, raw_fact in enumerate(as_list(root.get("facts", []), "facts")):
-        fact = normalize_fact_change(
-            raw_fact, f"facts[{index}]", allow_delete=False, through_chapter=last_chapter
-        )
-        require(fact["id"] not in facts, f"duplicate fact ID {fact['id']}")
-        fact.pop("action")
-        fact["first_recorded_chapter"] = last_chapter
-        fact["updated_chapter"] = last_chapter
-        facts[fact["id"]] = fact
-    validate_fact_set(facts)
     return normalize_state(
         {
             "schema_version": TRACKING_SCHEMA_VERSION,
@@ -1100,18 +1006,34 @@ def normalize_initial_document(document: object) -> dict[str, Any]:
             "characters": snapshots,
             "foreshadow": foreshadow,
             "timeline": timeline,
-            "facts": facts,
+            "wordcount_records": {},
         }
     )
 
 
-def normalize_transaction(state: dict[str, Any], document: object) -> dict[str, Any]:
+def normalize_transaction(project: Path, state: dict[str, Any], document: object) -> dict[str, Any]:
+    global _LENGTH_ISSUES
+    _LENGTH_ISSUES = []
+    try:
+        transaction = _normalize_transaction(project, state, document)
+    finally:
+        issues, _LENGTH_ISSUES = _LENGTH_ISSUES, None
+    require(not issues, f"{len(issues)} 个字段超长，一次改完再提交：" + "；".join(issues))
+    return transaction
+
+
+# 本文件在 story-long-write / story-review / story-import 三份逐字相同；只有 story-long-write 带 storyctl.py。
+RECOUNT_HINT = ("修订请用 story-long-write 的 storyctl.py chapter commit（带外用 chapter accept-current-length）"
+                "提交同一份事务，它会重新计数并清理本章工作目录")
+
+
+def _normalize_transaction(project: Path, state: dict[str, Any], document: object) -> dict[str, Any]:
     root = as_mapping(document, "transaction")
     require_known_keys(
         root,
         {
             "schema_version", "mode", "chapter", "chapter_title", "expected_state_revision",
-            "delta", "context", "character_snapshots",
+            "delta", "context", "character_snapshots", "wordcount",
         },
         "transaction",
     )
@@ -1120,6 +1042,7 @@ def normalize_transaction(state: dict[str, Any], document: object) -> dict[str, 
     require(mode in {"append", "revision"}, "mode must be append or revision")
     chapter = as_int(root.get("chapter"), "chapter", minimum=1)
     expected_revision = as_int(root.get("expected_state_revision"), "expected_state_revision")
+    wordcount_input = root.get("wordcount")
     require(expected_revision == state["state_revision"], "tracking state changed since this transaction was prepared")
     last = state["last_committed_chapter"]
     if mode == "append":
@@ -1139,6 +1062,21 @@ def normalize_transaction(state: dict[str, Any], document: object) -> dict[str, 
         snapshots=snapshots,
         existing_core_names=existing_names,
     )
+    wordcount = None
+    if wordcount_input is not None:
+        wordcount = wordcount_value(
+            wordcount_core.validate_current_wordcount_record, project, chapter, wordcount_input
+        )
+    elif mode == "revision" and str(chapter) in state["wordcount_records"]:
+        # 已提交字数记录的章节：去味、审稿改过正文或目标后的修订，按现文件重新计数，记录不留旧值。
+        # 只核对记录钉住的正文与目标；细纲事后补的「字数范围」不算过期。
+        previous = state["wordcount_records"][str(chapter)]
+        try:
+            drift = wordcount_core.wordcount_record_drift(project, chapter, previous)
+        except wordcount_core.WordcountError as exc:
+            raise TrackingError(f"第{chapter}章的字数记录无法核对（{exc}）；{RECOUNT_HINT}") from exc
+        if drift:
+            wordcount = recount_revised_chapter(project, chapter, previous, drift)
     return {
         "mode": mode,
         "chapter": chapter,
@@ -1146,7 +1084,24 @@ def normalize_transaction(state: dict[str, Any], document: object) -> dict[str, 
         "delta": delta,
         "context": context,
         "snapshots": snapshots,
+        "wordcount": wordcount,
     }
+
+
+def recount_revised_chapter(project: Path, chapter: int, previous: dict[str, Any], drift: list[str]) -> dict[str, Any]:
+    """改后仍在作者范围内，或作者原先就接受了带外长度且仍在带外：直接按现文件记账。
+    原本在范围内、改后出了范围，才要作者拍板，交给 storyctl 的 accept-current-length。"""
+    resolutions = ["within_user_band"]
+    if previous["resolution"] == "accepted_current_length":
+        resolutions.append("accepted_current_length")
+    for resolution in resolutions:
+        try:
+            return wordcount_core.build_project_wordcount_record(
+                project, chapter, resolution=resolution, author_range=previous.get("author_range"),
+            )
+        except wordcount_core.WordcountError:
+            continue
+    raise TrackingError(f"第{chapter}章{'和'.join(drift)}已改，字数出了作者范围；{RECOUNT_HINT}")
 
 
 def checkpoint_record(
@@ -1159,88 +1114,6 @@ def checkpoint_record(
     return current
 
 
-def guarded_field_value(snapshot: dict[str, Any], field: str) -> str:
-    """人看到的形态：保持存储顺序，与 角色状态/{名}.md 渲染出来的一致。
-
-    申报的 from 要跟这个比对，作者/模型从快照文件里照抄即可。
-    """
-    value = snapshot[field]
-    return "；".join(value) if isinstance(value, list) else value
-
-
-def guarded_field_key(snapshot: dict[str, Any], field: str) -> str:
-    """判「变没变」用的形态：列表排序后再比，顺序不算变化。
-
-    持有物列表重新生成时顺序常会抖动，按原序比会把纯重排判成改动，
-    逼作者为一个没发生的变化写申报——闸口一旦开始误报就会被忽略。
-    """
-    value = snapshot[field]
-    return "；".join(sorted(value)) if isinstance(value, list) else value
-
-
-def brief(text: str, limit: int = 60) -> str:
-    """错误信息里的旧值/新值要截断。
-
-    持有物是列表拼串，正常项目就可能上千字；原样拼进报错会刷屏，作者根本
-    看不到后面那句「该怎么办」。
-    """
-    return text if len(text) <= limit else f"{text[:limit]}…（共 {len(text)} 字）"
-
-
-def enforce_continuity_guard(state: dict[str, Any], transaction: dict[str, Any]) -> None:
-    """位置与持有物改变时，必须逐字报出库内旧值才放行。
-
-    新快照是整份覆盖，工具原先不比对，于是「学校宿舍 302 室」可以被一句
-    「家中（每日骑车走读）」无声顶掉，commit 和 check 全绿。这正是读者最容易
-    一眼看穿的那类硬伤（上一章住校、下一章骑车从家出发；上一章娘摆针线摊、
-    下一章变卖菜摊）。
-
-    要求 from 与库内旧值逐字相同，是这条守卫的关键：模型必须先去读旧值才写得
-    出来，光靠热上下文里那点信息猜不出。写对了说明它确实知道自己在改什么，
-    这时候再改就是有意为之，不是漂移。
-    """
-    acknowledged: dict[tuple[str, str], dict[str, Any]] = {}
-    for item in transaction["delta"]["continuity_changes"]:
-        key = (portable_name_key(item["name"]), item["field"])
-        require(key not in acknowledged, f"delta.continuity_changes 重复申报 {item['name']} 的 {item['field']}")
-        acknowledged[key] = item
-
-    for name, snapshot in transaction["snapshots"].items():
-        previous = state["characters"].get(name)
-        if previous is None:
-            continue
-        for field in GUARDED_SNAPSHOT_FIELDS:
-            before = guarded_field_value(previous, field)
-            after = guarded_field_value(snapshot, field)
-            if guarded_field_key(previous, field) == guarded_field_key(snapshot, field):
-                continue
-            label = GUARDED_FIELD_LABEL[field]
-            item = acknowledged.pop((portable_name_key(name), field), None)
-            require(
-                item is not None,
-                f"{name} 的{label}从「{brief(before)}」改成了「{brief(after)}」，但 delta.continuity_changes 没有申报。"
-                f"跨章连续性硬伤多数是这样无声发生的：先确认这次改动是剧情需要还是忘了上一章的设定，"
-                f"确实要改就补一条 {{name, field={field}, from, to, reason}}，from 必须是库内旧值原文。",
-            )
-            claimed_from = brief(item["from"])
-            claimed_to = brief(item["to"])
-            require(
-                item["from"] == before,
-                f"{name} 的{label}申报的 from 与库内旧值不符：申报「{claimed_from}」，库内是「{brief(before)}」。"
-                f"说明这次改动没有基于上一章的真实状态——先读 追踪/角色状态/{name}.md 再改。",
-            )
-            require(
-                item["to"] == after,
-                f"{name} 的{label}申报的 to 与新快照不符：申报「{claimed_to}」，快照是「{brief(after)}」。",
-            )
-
-    require(
-        not acknowledged,
-        "delta.continuity_changes 申报了并未发生的变更："
-        + "、".join(f"{name}.{field}" for name, field in sorted(acknowledged)),
-    )
-
-
 def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dict[str, Any]:
     next_state = copy.deepcopy(state)
     chapter = transaction["chapter"]
@@ -1248,6 +1121,8 @@ def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dic
         next_state["last_committed_chapter"] = chapter
     next_state["state_revision"] += 1
     next_state["characters"].update(transaction["snapshots"])
+    if transaction["wordcount"] is not None:
+        next_state["wordcount_records"][str(chapter)] = transaction["wordcount"]
 
     next_context = transaction["context"]
     # 退役说的是「从此刻起离开当前状态」，只有 append 的逐章记录代表此刻；
@@ -1277,6 +1152,13 @@ def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dic
         "a revision must resubmit every current context item; retire them in an append transaction instead: "
         + "；".join(sorted(dropped)),
     )
+    kept = set(next_context["long_term_constraints"]) | set(next_context["continuity_risks"])
+    still_listed = sorted(set(transaction["delta"]["retired_context_items"]) & kept)
+    require(
+        not still_listed,
+        "delta.retired_context_items lists items that are still in context; remove them from context: "
+        + "；".join(still_listed),
+    )
     undeclared = sorted(dropped - set(transaction["delta"]["retired_context_items"]))
     require(
         not undeclared,
@@ -1299,14 +1181,6 @@ def merge_transaction(state: dict[str, Any], transaction: dict[str, Any]) -> dic
             next_state["timeline"][change["id"]] = checkpoint_record(
                 change, chapter, next_state["timeline"].get(change["id"]), keep_first_chapter=True
             )
-    for change in transaction["delta"]["fact_changes"]:
-        if change["action"] == "delete":
-            next_state["facts"].pop(change["id"], None)
-        else:
-            next_state["facts"][change["id"]] = checkpoint_record(
-                change, chapter, next_state["facts"].get(change["id"]), keep_first_chapter=True
-            )
-    validate_fact_set(next_state["facts"])
 
     recent_by_chapter = {item["chapter"]: item for item in state["context"]["recent_chapters"]}
     if chapter in recent_by_chapter or transaction["mode"] == "append":
@@ -1331,16 +1205,6 @@ def render_views(state: dict[str, Any]) -> dict[str, str]:
     views = {
         "上下文.md": render_context(state),
         "伏笔.md": render_foreshadow(state["foreshadow"], revision),
-        "长期事实.md": render_fact_table("长期事实索引", state["facts"], revision),
-        "关系清单.md": render_fact_table(
-            "关系清单",
-            {
-                identifier: fact
-                for identifier, fact in state["facts"].items()
-                if fact["category"] in RELATION_CATEGORIES or identifier.startswith("R")
-            },
-            revision,
-        ),
     }
     author, reader = render_timeline_views(state["timeline"], revision)
     views["时间线/作者真相.md"] = author
@@ -1349,19 +1213,6 @@ def render_views(state: dict[str, Any]) -> dict[str, str]:
         views[f"角色状态/{name}.md"] = render_snapshot(
             name, snapshot, state["last_committed_chapter"], revision
         )
-    entities = {
-        entity
-        for fact in state["facts"].values()
-        for entity in [fact["subject"], *fact["related_entities"]]
-    }
-    portable_entities: dict[str, str] = {}
-    for entity in entities:
-        safe = safe_file_component(entity, "fact entity")
-        key = portable_name_key(safe)
-        require(key not in portable_entities or portable_entities[key] == safe, f"facts contain colliding entity names: {safe}")
-        portable_entities[key] = safe
-    for entity in sorted(portable_entities.values(), key=portable_name_key):
-        views[f"事实档案/{entity}.md"] = render_entity_dossier(entity, state["facts"], revision)
     return views
 
 
@@ -1378,14 +1229,6 @@ def write_views(tracking: Path, views: dict[str, str]) -> None:
     character_dir.mkdir(parents=True, exist_ok=True)
     for path in character_dir.glob("*.md"):
         if path.name not in expected_character_files:
-            path.unlink()
-    expected_dossier_files = {
-        Path(relative).name for relative in views if relative.startswith("事实档案/")
-    }
-    dossier_dir = tracking / "事实档案"
-    dossier_dir.mkdir(parents=True, exist_ok=True)
-    for path in dossier_dir.glob("*.md"):
-        if path.name not in expected_dossier_files:
             path.unlink()
 
 
@@ -1409,7 +1252,7 @@ def warn_sizes(views: dict[str, str], delta_payload: str | None = None) -> None:
             )
 
 
-def initialize(project: Path, document: object) -> dict[str, Any]:
+def _initialize_locked(project: Path, document: object) -> dict[str, Any]:
     tracking = tracking_root(project)
     require(not state_path(project).exists(), "tracking state already exists; init never overwrites project state")
     state = normalize_initial_document(document)
@@ -1418,9 +1261,7 @@ def initialize(project: Path, document: object) -> dict[str, Any]:
 
     # 输入全部校验通过后才动用户文件，失败的 init 不会挪走任何东西。
     archived = archive_retired_tracking_paths(tracking)
-    for directory in (
-        tracking / "逐章记录", tracking / "角色状态", tracking / "时间线", tracking / "事实档案"
-    ):
+    for directory in (tracking / "逐章记录", tracking / "角色状态", tracking / "时间线"):
         directory.mkdir(parents=True, exist_ok=True)
     write_views(tracking, views)
     atomic_write_text(state_path(project), state_payload)
@@ -1434,12 +1275,22 @@ def initialize(project: Path, document: object) -> dict[str, Any]:
     return state
 
 
-def apply_transaction(project: Path, document: object) -> dict[str, Any]:
+def initialize(project: Path, document: object) -> dict[str, Any]:
+    with project_write_lock(project):
+        return _initialize_locked(project, document)
+
+
+def _apply_transaction_locked(project: Path, document: object) -> dict[str, Any]:
     tracking = tracking_root(project)
     require_no_retired_tracking_paths(tracking)
     state = load_state(project)
-    transaction = normalize_transaction(state, document)
+    transaction = normalize_transaction(project, state, document)
     next_state = merge_transaction(state, transaction)
+    path = delta_path(tracking, transaction["chapter"])
+    previous_record = parse_chapter_record(path) if transaction["mode"] == "revision" else None
+    if previous_record is not None:
+        # 退役只在 append 发生；修订重写旧章记录时把当初的退役登记原样带过来，不让它随修订消失。
+        transaction["delta"]["retired_context_items"] = previous_record["retired"]
 
     delta_payload = render_delta(
         transaction["chapter"],
@@ -1449,11 +1300,7 @@ def apply_transaction(project: Path, document: object) -> dict[str, Any]:
         set(next_state["characters"]) | set(transaction["delta"]["retired_characters"]),
     )
     views = render_views(next_state)
-    # 放在渲染之后：快照体积超硬上限之类的结构性错误应当先报，
-    # 否则一份又超大又漂移的快照只会看到连续性告警，看不到真正的拦截原因。
-    enforce_continuity_guard(state, transaction)
     next_state_payload = json_payload(next_state)
-    path = delta_path(tracking, transaction["chapter"])
     if transaction["mode"] == "append" and path.exists():
         require(
             path.read_text(encoding="utf-8") == delta_payload,
@@ -1465,7 +1312,24 @@ def apply_transaction(project: Path, document: object) -> dict[str, Any]:
     # 唯一权威文件最后落盘；在此之前失败可用同一事务直接重跑。
     atomic_write_text(state_path(project), next_state_payload)
     warn_sizes(views, delta_payload)
+    if previous_record is not None:
+        warn_emptied_record(transaction["chapter"], previous_record, transaction["delta"])
     return next_state
+
+
+def warn_emptied_record(chapter: int, previous: dict[str, Any], delta: dict[str, Any]) -> None:
+    labels = {"character_changes": "角色变化", "foreshadow_changes": "伏笔变化", "timeline_events": "时间与揭示",
+              "constraints": "连贯性约束", "next_chapter_commitments": "下一章承诺"}
+    emptied = [f"{label}（原有 {len(previous[key])} 项）" for key, label in labels.items()
+               if previous[key] and not delta[key]]
+    if emptied:
+        emit(f"WARNING: 第{chapter}章修订把逐章记录的 " + "、".join(emptied)
+             + " 清空了；修订的 delta 是本章完整记录，不是只写改动。不是有意删除就用 draft 重新预填后再提交。", error=True)
+
+
+def apply_transaction(project: Path, document: object) -> dict[str, Any]:
+    with project_write_lock(project):
+        return _apply_transaction_locked(project, document)
 
 
 def check_project(project: Path) -> dict[str, Any]:
@@ -1497,76 +1361,341 @@ def check_project(project: Path) -> dict[str, Any]:
     }
     actual_character_files = {path.name for path in (tracking / "角色状态").glob("*.md")}
     require(actual_character_files == expected_character_files, "character snapshot files differ from tracking state")
-    expected_dossier_files = {
-        Path(relative).name for relative in expected_views if relative.startswith("事实档案/")
+    return state
+
+
+# 事务草稿里各文本字段的字数上限（按全中文估：UTF-8 每字 3 字节），写进提示，免得模型反复试错。
+DRAFT_LIMITS = {
+    "delta.result": 160, "character_changes[].change": 120, "foreshadow_changes[].summary": 120,
+    "timeline_events[].objective_fact / reader_knowledge": 160, "context.position.story_time / scene": 80,
+    "character_snapshots.*.goal / state": 100, "逐章记录总量": 1024,
+}
+
+
+RECORD_SECTIONS = {"角色变化": "character_changes", "伏笔变化": "foreshadow_changes",
+                   "时间与揭示": "timeline_events", "连贯性约束": "constraints", "本章退役登记": "retired"}
+
+
+def parse_chapter_record(path: Path) -> dict[str, Any] | None:
+    """读回本工具自己渲染的逐章记录（render_delta 的固定格式），供修订草稿预填与修订提交核对。
+    这是对自家确定性输出的逆运算，不是解析手写 Markdown；读不到返回 None。"""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (OSError, UnicodeError):
+        return None
+    record: dict[str, Any] = {"title": "", "result": "", "next_chapter_commitments": [],
+                              **{key: [] for key in RECORD_SECTIONS.values()}}
+    section = None
+    in_commitments = False
+    for line in text.splitlines():
+        heading = re.match(r"^# 第\d+章 · (.+)$", line)
+        if heading and not record["title"]:
+            record["title"] = heading.group(1).strip()
+            continue
+        if line.startswith("## "):
+            section = RECORD_SECTIONS.get(line[3:].strip())
+            in_commitments = False
+            continue
+        if in_commitments and line.startswith("  - "):
+            record["next_chapter_commitments"].append(line[4:])
+            continue
+        in_commitments = False
+        if not line.startswith("- "):
+            continue
+        item = line[2:]
+        if section is None:
+            if item.startswith("结果："):
+                record["result"] = item[len("结果："):]
+            elif item.startswith("下一章承诺："):
+                value = item[len("下一章承诺："):]
+                # 空值 = 逐条子项格式（render_commitments），后面的缩进行逐条读回。
+                in_commitments = value == ""
+                record["next_chapter_commitments"] = [] if value in ("无", "") else value.split("；")
+            continue
+        if item == "无" and section != "retired":
+            continue
+        record[section].append(item)
+    return record
+
+
+def record_prefill(state: dict[str, Any], record: dict[str, Any]) -> tuple[dict[str, Any], dict[str, Any], list[str]]:
+    """把已提交的逐章记录还原成修订 delta：结果、承诺、约束、角色变化按记录原文；伏笔与时间线
+    取受影响 ID 的当前值（修订提交的就是截至最新章的当前值）。另返回记录里核心角色的当前快照。"""
+    notes: list[str] = []
+    changes = []
+    for line in record["character_changes"]:
+        parts = line.split("｜", 2)
+        if len(parts) == 3:
+            changes.append({"name": parts[0], "change": parts[2]})
+    snapshots = {item["name"]: copy.deepcopy(state["characters"][item["name"]])
+                 for item in changes if item["name"] in state["characters"]}
+
+    def rows(lines: list[str], current: dict[str, Any], label: str) -> list[dict[str, Any]]:
+        prefilled = []
+        for line in lines:
+            parts = line.split("｜")
+            identifier = parts[0]
+            if len(parts) > 1 and parts[1] == "删除当前登记":
+                if identifier in current:
+                    notes.append(f"{label} {identifier} 本章删过、后来又登记了，没有预填删除，确需删除自行加回")
+                else:
+                    prefilled.append({"action": "delete", "id": identifier})
+            elif identifier in current:
+                prefilled.append({"action": "upsert", **{key: copy.deepcopy(value) for key, value in current[identifier].items()
+                                                         if key not in ("updated_chapter", "first_recorded_chapter")}})
+            else:
+                notes.append(f"{label} {identifier} 已在后续章节删除，没有预填")
+        return prefilled
+
+    delta = {
+        "result": record["result"],
+        "character_changes": changes,
+        "foreshadow_changes": rows(record["foreshadow_changes"], state["foreshadow"], "伏笔"),
+        "timeline_events": rows(record["timeline_events"], state["timeline"], "时间线事件"),
+        "constraints": list(record["constraints"]),
+        "next_chapter_commitments": list(record["next_chapter_commitments"]),
     }
-    actual_dossier_files = {path.name for path in (tracking / "事实档案").glob("*.md")}
-    require(actual_dossier_files == expected_dossier_files, "fact dossier files differ from tracking state")
-    return state
+    return delta, snapshots, notes
 
 
-def migrate_v4(project: Path, document: object) -> dict[str, Any]:
-    """Upgrade a schema-4 authority in place and optionally seed durable canon facts.
+def entry_shapes(chapter: int) -> dict[str, Any]:
+    """draft 当场给出每类条目的形状：模型填 delta 时手里只有空数组，字段名、整数、枚举都靠猜，
+    首次提交几乎都因此被退回。取值从校验用的同一组常量生成，不另立一套。"""
+    return {
+        "delta.character_changes[]": {"name": "角色名", "change": "一句话：本章起了什么变化"},
+        "delta.foreshadow_changes[]": {
+            "action": "upsert（撤掉整条写 delete，只带 id）", "id": "F007", "summary": "伏笔一句话",
+            "planted_chapter": chapter, "planned_resolution_chapter": "计划回收章的整数，未定写 null",
+            "status": "|".join(FORESHADOW_STATUSES), "importance": "|".join(FORESHADOW_IMPORTANCE),
+        },
+        "delta.timeline_events[]": {
+            "action": "upsert（撤掉整条写 delete，只带 id）", "id": "E012", "story_time": "故事内时间",
+            "objective_fact": "客观发生了什么", "reader_knowledge": "读者此刻知道/以为什么",
+            "reveal_status": "|".join(REVEAL_STATUSES),
+            "reveal_chapter": f"已揭示或部分揭示时写揭示章的整数（不晚于 {chapter}），未揭示写 null",
+            "characters": ["角色名"],
+        },
+        "character_snapshots.{角色名}": {
+            **{key: "一句话" for key in SNAPSHOT_TEXT_FIELDS},
+            **{key: ["一条一句"] for key in SNAPSHOT_LIST_FIELDS},
+        },
+    }
 
-    This is a state migration, not a fictional chapter event: it never creates or
-    rewrites a chapter delta.  All derived views are rebuilt and authority is still
-    written last, so an interrupted migration can be retried from the same input.
-    """
-    tracking = tracking_root(project)
-    require_no_retired_tracking_paths(tracking)
-    raw = as_mapping(read_json(state_path(project)), "tracking state")
-    require(raw.get("schema_version") == 4, "migrate-v4 requires an existing schema_version=4 state")
-    migration = as_mapping(document, "migration input")
-    require_known_keys(migration, {"schema_version", "expected_state_revision", "facts"}, "migration input")
-    require(migration.get("schema_version") == INPUT_SCHEMA_VERSION, "migration input schema_version is unsupported")
-    expected = as_int(migration.get("expected_state_revision"), "expected_state_revision")
-    current_revision = as_int(raw.get("state_revision"), "tracking state.state_revision")
-    require(expected == current_revision, "tracking state changed since this migration was prepared")
-    last_chapter = as_int(raw.get("last_committed_chapter"), "tracking state.last_committed_chapter")
-    facts: dict[str, dict[str, Any]] = {}
-    for index, raw_fact in enumerate(as_list(migration.get("facts", []), "facts")):
-        fact = normalize_fact_change(
-            raw_fact, f"facts[{index}]", allow_delete=False, through_chapter=last_chapter
-        )
-        require(fact["id"] not in facts, f"duplicate fact ID {fact['id']}")
-        fact.pop("action")
-        fact["first_recorded_chapter"] = last_chapter
-        fact["updated_chapter"] = last_chapter
-        facts[fact["id"]] = fact
-    validate_fact_set(facts)
-    candidate = copy.deepcopy(raw)
-    candidate["schema_version"] = TRACKING_SCHEMA_VERSION
-    candidate["state_revision"] = current_revision + 1
-    candidate["facts"] = facts
-    state = normalize_state(candidate)
-    views = render_views(state)
-    write_views(tracking, views)
-    atomic_write_text(state_path(project), json_payload(state))
-    warn_sizes(views)
-    return state
+
+def draft_transaction(project: Path, chapter: int) -> tuple[dict[str, Any], dict[str, Any], dict[str, Any]]:
+    """按当前 state 预填一份逐章事务：修订号、模式、章名和整份提交的上下文当前值都填好。
+    新章（append）调用方只写本章变化；另返回在场核心角色的当前快照，供有变化时整份改写后放进事务。
+    新章的故事时间与场景留空：它们必须是本章结束时的位置，沿用上一章的值能静默提交，
+    所以不预填，上一章的值另行返回作参考。
+    修订（revision）的 delta 是修订后本章的完整记录，所以按已提交的逐章记录预填，调用方在上面改；
+    第三项返回 {"notes": [...], "prefilled": bool}：没能预填的条目，以及逐章记录是否读到。"""
+    state = load_state(project)
+    last = state["last_committed_chapter"]
+    require(1 <= chapter <= last + 1, f"draft chapter must be between 1 and {last + 1}")
+    mode = "append" if chapter == last + 1 else "revision"
+    title = ""
+    for outline in sorted((project / "大纲").glob(f"细纲_第{chapter:03d}章*.md")):
+        match = re.search(rf"^#{{1,4}}\s*第\s*0*{chapter}\s*章\s*[：:]\s*(.+?)\s*$",
+                          outline.read_text(encoding="utf-8"), re.M)
+        if match:
+            title = match.group(1).strip()
+            break
+    context = json.loads(json.dumps(state["context"], ensure_ascii=False))
+    previous_position = {key: context["position"][key] for key in ("story_time", "scene")}
+    delta: dict[str, Any] = {
+        "result": "", "character_changes": [], "foreshadow_changes": [], "timeline_events": [],
+        "constraints": [], "next_chapter_commitments": [],
+    }
+    snapshots_prefill: dict[str, Any] = {}
+    notes: list[str] = []
+    prefilled = False
+    if mode == "append":
+        delta.update({"retired_context_items": [], "retired_characters": []})
+        context["position"].update({"story_time": "", "scene": ""})
+    else:
+        record = parse_chapter_record(delta_path(tracking_root(project), chapter))
+        if record is not None:
+            prefilled = True
+            delta, snapshots_prefill, notes = record_prefill(state, record)
+            title = title or record["title"]
+            if chapter == last:
+                # 最新章的承诺原样在 state 里，比从记录行按「；」拆回更准。
+                delta["next_chapter_commitments"] = list(state["context"]["next_chapter_commitments"])
+    document = {
+        "schema_version": INPUT_SCHEMA_VERSION,
+        "mode": mode,
+        "chapter": chapter,
+        "chapter_title": title,
+        "expected_state_revision": state["state_revision"],
+        "delta": delta,
+        "context": {key: context[key] for key in
+                    ("position", "long_term_constraints", "active_character_names", "continuity_risks")},
+        "character_snapshots": snapshots_prefill,
+    }
+    snapshots = {name: state["characters"][name] for name in context["active_character_names"]
+                 if name in state["characters"]}
+    if mode == "revision":
+        return document, snapshots, {"notes": notes, "prefilled": prefilled}
+    return document, snapshots, previous_position
+
+
+def rebuild_stale_draft(document: dict[str, Any], existing: dict[str, Any], append: bool,
+                        current_characters: Any = ()) -> str:
+    """修订号变了：中间提交过别的事务。以当前状态为底，只自动合并确定安全的部分，其余列给调用方核对。
+
+    新章草稿之间只可能插进修订事务，修订不能删约束与风险条目，所以当前约束与风险覆盖旧底稿：
+    旧草稿多出来的就是本章新增，delta 里声明退役的就是本章删除，可以精确合并。
+    修订草稿之间可能插进新章（新章能退役条目），在场角色名修订也能删，都无法判断谁新：
+    取当前状态，差异列出来；只有本章带了快照的新角色名自动加回。"""
+    def items(value: object) -> list[str]:
+        return [item for item in value if isinstance(item, str)] if isinstance(value, list) else []
+
+    def norm(item: str) -> str:
+        return " ".join(item.replace("|", "｜").split())
+
+    notes = ["修订号已变：context 按当前状态重建，本章已填的 delta" + ("、新增与退役的约束、结尾位置" if append else "")
+             + "已合并"]
+    for key in ("delta", "character_snapshots"):
+        if isinstance(existing.get(key), dict):
+            document[key] = existing[key]
+    if existing.get("chapter_title"):
+        document["chapter_title"] = existing["chapter_title"]
+    old_context = existing.get("context") if isinstance(existing.get("context"), dict) else {}
+    delta = document["delta"] if isinstance(document["delta"], dict) else {}
+    context = document["context"]
+    retired = {norm(item) for item in items(delta.get("retired_context_items"))}
+    left_out: list[str] = []
+    for key in ("long_term_constraints", "continuity_risks"):
+        current = {norm(item) for item in context[key]}
+        extra = []
+        for item in items(old_context.get(key)):
+            if norm(item) not in current:
+                current.add(norm(item))
+                extra.append(item)
+        if append:
+            context[key] = [item for item in context[key] if norm(item) not in retired] + extra
+        else:
+            left_out += extra
+    snapshots = document["character_snapshots"] if isinstance(document["character_snapshots"], dict) else {}
+    names = context["active_character_names"]
+    for name in items(old_context.get("active_character_names")):
+        if name in names:
+            continue
+        if append and name in snapshots:
+            names.append(name)
+        else:
+            left_out.append(f"在场角色 {name}")
+    names[:] = [name for name in names if name not in set(items(delta.get("retired_characters")))]
+    known = set(current_characters)
+    for name in list(snapshots):
+        if name not in known and name not in names:
+            snapshots.pop(name)
+            left_out.append(f"角色快照 {name}")
+    if left_out:
+        notes.append("草稿里有、当前状态没有的条目没有自动带回（可能已被别的提交退役），本章确实需要就加回："
+                     + "；".join(left_out))
+    old_position = old_context.get("position") if isinstance(old_context.get("position"), dict) else {}
+    position = context["position"]
+    if append:
+        for key in ("story_time", "scene"):
+            if isinstance(old_position.get(key), str) and old_position[key].strip():
+                position[key] = old_position[key]
+    differs = [f"{key}：草稿写的是「{old_position[key]}」，当前状态是「{position[key]}」"
+               for key in ("volume", "volume_start_chapter")
+               if key in old_position and old_position[key] != position[key]]
+    if differs:
+        notes.append("卷信息与当前状态不同，已取当前状态，本章确实换卷就改回（" + "；".join(differs) + "）")
+    if snapshots:
+        notes.append("带过来的角色快照（" + "、".join(snapshots) + "）可能被中间的提交改过，逐个对照 current_snapshots 重核")
+    return "；".join(notes)
 
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     subparsers = parser.add_subparsers(dest="command", required=True)
-    for command in ("init", "commit", "migrate-v4"):
+    for command in ("init", "commit"):
         subparser = subparsers.add_parser(command)
         subparser.add_argument("--project", type=Path, required=True, help="book project root containing 追踪/")
         subparser.add_argument("--input", type=Path, required=True, help="UTF-8 JSON input document")
     check_parser = subparsers.add_parser("check")
     check_parser.add_argument("--project", type=Path, required=True, help="book project root containing 追踪/")
+    draft_parser = subparsers.add_parser("draft", help="write a pre-filled chapter transaction to fill in")
+    draft_parser.add_argument("--project", type=Path, required=True, help="book project root containing 追踪/")
+    draft_parser.add_argument("--chapter", type=int, required=True)
+    draft_parser.add_argument("--out", type=Path, help="default: <project>/.story/work/第NNN章/tracking.json")
+    draft_parser.add_argument("--force", action="store_true",
+                              help="discard an existing draft instead of only refreshing its revision")
     return parser
 
 
 def main() -> int:
     args = build_parser().parse_args()
     try:
+        try:
+            args.project = wordcount_core.resolve_book_dir(args.project)
+        except wordcount_core.WordcountError as exc:
+            raise TrackingError(str(exc)) from exc
+        if args.command == "draft":
+            document, snapshots, extra = draft_transaction(args.project, args.chapter)
+            previous_position = extra if document["mode"] == "append" else {}
+            prefill_notes = extra.get("notes", []) if document["mode"] == "revision" else []
+            record_prefilled = bool(extra.get("prefilled")) if document["mode"] == "revision" else False
+            out = args.out or args.project / ".story" / "work" / f"第{args.chapter:03d}章" / "tracking.json"
+            out.parent.mkdir(parents=True, exist_ok=True)
+            refreshed = ""
+            if out.exists() and not args.force:
+                # 重跑 draft 不冲掉已经填好的变化。修订号变了说明中间提交过别的事务：context 按当前
+                # 状态重建（沿用旧 context 会把那次变更整份覆盖回去），只带过本章自己填的部分。
+                existing = read_json(out)
+                require(isinstance(existing, dict) and existing.get("chapter") == document["chapter"]
+                        and existing.get("mode") == document["mode"],
+                        f"{out} already holds a draft for a different chapter or mode; pass --force to replace it")
+                if existing.get("expected_state_revision") == document["expected_state_revision"]:
+                    document, refreshed = existing, "已有草稿且修订号未变，原样保留"
+                else:
+                    refreshed = rebuild_stale_draft(document, existing, bool(previous_position),
+                                                    load_state(args.project)["characters"])
+            out.write_text(json.dumps(document, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+            if document["mode"] == "revision" and not record_prefilled:
+                fill = (f"这是修订，但本章逐章记录缺失或读不了（{delta_path(Path('追踪'), args.chapter).as_posix()}），delta 没有预填："
+                        "按修订后正文把本章完整记录整份写上（结果、承诺、角色变化、伏笔、时间线、约束），没写的项不会进记录。"
+                        "角色快照、伏笔、时间线写截至最新已写章的当前值；context 原样保留全部当前条目（修订不能退役）。"
+                        "正文改过就用 story-long-write 的 storyctl.py chapter commit 提交（重新计数并清理本章工作目录）。"
+                        "不要从脚本源码或 state 文件里另找格式。")
+            elif document["mode"] == "revision":
+                fill = ("这是修订：delta 是修订后本章的完整记录，已按本章现有逐章记录预填（伏笔与时间线取当前值，"
+                        "记录里的核心角色快照已放进 character_snapshots）。对照修订后正文逐项改：仍成立的原样保留，"
+                        "被推翻的删掉或改写，新增的补上；不要清空后只写改动，没写的项会从本章记录里消失。"
+                        "角色快照、伏笔、时间线改成截至最新已写章的当前值；context 原样保留全部当前条目（修订不能退役）。"
+                        "正文改过就用 story-long-write 的 storyctl.py chapter commit 提交（重新计数并清理本章工作目录）。"
+                        "不要从脚本源码或 state 文件里另找格式。")
+                if prefill_notes:
+                    fill += "没能预填：" + "；".join(prefill_notes) + "。"
+            else:
+                fill = ("只填 delta 里本章的变化；context 其余字段已是当前值，要撤下的长期约束或连贯性风险从 context 删掉并把原文放进 "
+                        "delta.retired_context_items（仅 append）；本章有变化的核心角色把下面的当前快照整份改好放进 character_snapshots，"
+                        "并在 character_changes 写一句变化。每类条目照 shapes 的形状写，不要从脚本源码或 state 文件里另找格式。")
+            blank = not (document["context"]["position"].get("story_time") or document["context"]["position"].get("scene"))
+            if previous_position and blank:
+                fill = ("context.position 的 story_time 与 scene 留空，填本章结束时的故事时间与场景（上一章结束时见 "
+                        "previous_position；换卷时连同 volume 与 volume_start_chapter 一起改）。") + fill
+            payload = {
+                "draft": str(out),
+                "mode": document["mode"],
+                "expected_state_revision": document["expected_state_revision"],
+                "fill": (f"{refreshed}；要从头生成加 --force。" if refreshed else "") + fill,
+                "limits_chars": DRAFT_LIMITS,
+                "shapes": entry_shapes(args.chapter),
+                "current_snapshots": snapshots,
+            }
+            if previous_position:
+                payload["previous_position"] = previous_position
+            emit(json.dumps(payload, ensure_ascii=False))
+            return 0
         if args.command == "init":
             result = initialize(args.project, read_json(args.input))
         elif args.command == "commit":
             result = apply_transaction(args.project, read_json(args.input))
-        elif args.command == "migrate-v4":
-            result = migrate_v4(args.project, read_json(args.input))
         else:
             result = check_project(args.project)
     except (TrackingError, OSError, UnicodeError) as exc:

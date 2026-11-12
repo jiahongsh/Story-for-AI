@@ -12,6 +12,7 @@ if (-not (Test-Path $source)) {
 }
 
 $targets = @(
+    (Join-Path $repoRoot ".workbuddy/skills/story-world-engine"),
     (Join-Path $repoRoot ".opencode/skills/story-world-engine"),
     (Join-Path $repoRoot ".claude/skills/story-world-engine"),
     (Join-Path $repoRoot ".codex/skills/story-world-engine"),

@@ -1,6 +1,6 @@
 # {项目名} — 网文写作工具集（通用 Agent / Web AI）
 
-本项目按通用文件方式接入 oh-story skills。若当前平台没有 Claude Code / OpenCode / Codex / ZCode / OpenClaw 的 hooks 或 custom agents，仍可直接让 Agent 读取 `skills/*/SKILL.md` 和 `skills/*/references/` 执行；只是运行时硬拦截和多 agent 自动协作不会自动生效。
+本项目按通用文件方式接入 oh-story skills：读取 `skills/*/SKILL.md` 并按需读取 `skills/*/references/`。无原生 hooks 或 custom agents 时，写作检查由 skill 流程执行，分工走 solo/direct fallback。
 
 ## Skill 路由表
 
@@ -13,16 +13,12 @@
 | 长篇拆文 | story-long-analyze | 长篇小说深度拆解 |
 | 短篇拆文 | story-short-analyze | 短篇小说拆文分析 |
 | 长篇扫榜 | story-long-scan | 长篇小说榜单与市场趋势 |
-| story-data-analyze、数据分析、后台数据 | story-data-analyze | 后台数据归因分析，三层定位读者流失 |
 | 短篇扫榜 | story-short-scan | 短篇小说榜单与情绪风口 |
 | 去 AI 味 | story-deslop | 去除 AI 写作痕迹 |
 | 封面 | story-cover | 生成封面图 |
+| 发布资料 | story-publish | 发布准备：整理并核对平台书籍资料 |
 | 审查 | story-review | 多视角审查；无 custom agents 时降级为单线程审查 |
 | 导入 | story-import | 逆向导入已有小说到项目结构 |
-| 作品查询 | story-explore | 只读查询作品进度、角色、伏笔与设定 |
-| 资料研究 | story-research | 带来源的创作事实查证 |
-| 发布材料 | story-release-package | 整理已审批作品的发布文案与清单 |
-| 平台发布 | story-publish | 通过项目关联适配器预检、存草稿或正式发布 |
 | 网文工具箱 | story | 模糊意图自动分发 |
 | 准备写书 / 部署 | story-setup | 通用项目结构与 skill 使用入口 |
 | 浏览器登录态 / 抓取 | browser-cdp | 浏览器 CDP 工具；需平台允许本地脚本/浏览器控制 |
@@ -35,25 +31,21 @@
 - `{书名}/正文.md` — 短篇小说正文
 - `{书名}/设定/` — 角色设定、世界设定
 - `{书名}/大纲/` — 卷纲、细纲
-- `{书名}/追踪/` — `_tracking-state.json` 唯一结构化权威、固定 7 栏 `上下文.md` 续写状态卡、逐章紧凑记录、核心角色独立派生快照、伏笔当前视图、作者与读者双时间线；全部通过追踪工具生成
+- `{书名}/追踪/` — `_tracking-state.json` 为唯一结构化权威；追踪工具生成固定 7 栏 `上下文.md`、逐章记录、核心角色快照、伏笔视图和作者/读者双时间线
 - `{书名}/对标/` — 对标作品分析
 
 ## 通用使用约定
 
 - 写正文前先有大纲：长篇需要 `大纲/细纲_第N章*.md`，短篇需要 `小节大纲.md`。
-
-## 跨产物修订门禁
-
-修改已提交正文、既有大纲或设定时，暂停日更，按长篇写作 skill 的“跨产物修订与长期事实”协议，先以 `revision-governor phase=plan` 同等规则由主线程做只读影响分析，生成 `追踪/修改影响/active.json`；关联修改完成后按 `phase=verify` 同等规则复核，并通过带摘要审批戳的 `revision_guard.py check` 与 `tracking_commit.py check` 后才恢复续写。
-
-长篇“续写/继续写/日更”默认只授权精确下一章候选稿，按长篇写作 skill 的“章节候选、接纳与投影自检”协议写入 `追踪/候选章/`；这些词不等于接纳。只有用户明确“接受/定稿”，或本次任务事先明确授权自动定稿，才能写入 `正文/`、提交追踪并通过 `story_doctor.py`。卷末进入下一卷前按该 skill 的“顺序冷读”协议完成冷读，S1/S2 未清不得开新卷。
-- **接纳/黄金声音画像**：长篇至少有五章可信接纳样本后，按长篇写作 skill 的 `accepted-voice-profile.md` 建立接纳基线；作者可从其中明确精选至少五章、建议八至十二章建立黄金声线样本。两者只做双向 advisory；任一已配置画像过期时不得继续使用旧数据。
-- **近章结构指纹**：候选章生成近章证据包后，按场景发动机、标准问答、信息交付、章尾功能和人物未解代价五项语义复核；数值接近不等于 AI，也不自动授权改文。
-- 中文长篇/短篇正文全程锁定中文；英文、缩写、型号和剧情代号不得由 Agent 自行豁免。URL、邮箱、代码、路径和文件名只机械保护明确非叙事结构；其他外语只在用户单独确认后精确登记到 `.deslop-whitelist`；HTML 标记不得进入交付正文。英文/海外意图优先路由 `story-globalize`；当前环境没有该 skill 时报告缺失，不进入中文写作流程。
 - 无 hooks 的平台不会自动拦截越权写正文，Agent 必须在执行写作 skill 时自行检查大纲、上下文和追踪文件。
 - 无 custom agents 的平台按 solo/direct 执行；遇到 skill 要求调用 story-architect、narrative-writer 等 agent 时，改由当前 Agent 直接完成，并在结果里说明降级。
-- **去AI味/语言泄漏/文风卫生自锁**（无 hook 平台此条是唯一防线）：先把 `{当前写作 Skill 目录}` 替换为当轮已路由的长篇或短篇写作 Skill 目录。每章正文落盘后，同一轮内首先实际运行 `node "{当前写作 Skill 目录}/scripts/language_gate.js" "{正文文件}"`；返回零后先运行 `node "{当前写作 Skill 目录}/scripts/check-style-hygiene.js" --check --fail-on=blocking "{正文文件}"`，再运行 `node "{当前写作 Skill 目录}/scripts/check-ai-patterns.js" --check --fail-on=blocking "{正文文件}"` 与 `node "{当前写作 Skill 目录}/scripts/check-degeneration.js" --check --language=zh --fail-on=blocking "{正文文件}"`。文风卫生按本书 `设定/文风.md` 的出版级、对白弹性或逐类策略执行。写下一章前先复查上一章无欠账。正文不得写入 HTML 豁免标记；去味跳过不得跳过语言 Gate 或文风卫生门。
-- Compact / 新会话后优先读取 `{书名}/追踪/上下文.md` 恢复当前写作状态。
+- **每章写完先去 AI 味**（没有 hook 替你检查）：正文落盘后同一轮内按写作 skill 的检测器和禁用词表自检、改净；能运行 node 时跑写作 skill 的 `scripts/check-ai-patterns.js --check --fail-on=blocking {章节文件}`。写下一章前先确认上一章已改净。只有作者明确说「这章不去味」时才跳过，并在标题行下加 `<!-- 去味:跳过 -->`。
+
+## 与作者协作
+
+- 回复用作者说话的语言，等后台助手时的进度说明也一样；主体用写书的话说（书、章、大纲、设定），不抛脚本名、字段名或状态名；报错时附原始报错。skill 里标着 `<!-- author-report -->` 的模板块只是格式参考，回复时直接输出其中的文字，不带代码块围栏。
+- 作者要求记住、改掉或忘掉一条写作习惯/偏好时（如「记住：这本书对话用直角引号」），按用户明确类型或当前书类型走 story-long-write / story-short-write 的「作者记忆管理」；无当前书的通用习惯默认交长篇入口，限定本书却无法定位时问哪本书，不要求先建书，写入相应工作区或书目录的 `.story/作者记忆/`；不要存进编程工具自带的记忆。一次性要求直接照做，不记录。
+- 不修改项目里已安装的 skill 文件（`SKILL.md`、`references/`、`scripts/`；story-setup 重新部署时覆盖除外）。skill 脚本报错时停下，把报错和所执行的命令告诉作者，不自行修补绕过。
 
 ## Compact 后恢复上下文
 
@@ -63,16 +55,4 @@
 3. 未完成的伏笔列表
 4. 当前章节的情绪/节奏目标
 
-如果存在 `{书名}/追踪/上下文.md`，compact 后首先读取该文件恢复上下文。
-
-## 分支推演
-
-用户要求“分支推演 / 路线比较 / 推演几个走向”时，使用 `story-long-write` 的分支推演流程。推演产物放在 `大纲/推演/`，未经用户明确选择和另行授权，不得写入正式大纲或追踪状态。
-
-## 中文正文英文零容忍
-
-中文正文和台词中出现未授权拉丁字母词时一律 blocking，包括短词、专名、缩写和中英混合台词。只机械保护 URL、邮箱、文件路径、代码等明确非叙事结构；其他外语只有在用户单独确认并由 `.deslop-whitelist` 精确登记时才豁免。HTML 标记阻断；语言泄漏未清零不得交付。
-
-## 适度对白技巧与验收
-
-重要对白场景由当前写作 Skill 读取其自带的“适度对白技巧”参考，形成轻量对白卡。正文自然混用无标签对白、简单“说/问”、有效动作和叙述反应，不追求零标签或句句潜台词。中文语言 Gate 后运行当前写作 Skill 自带的对白漂移 Gate；明确机械阻断项退回，密度与动词集中预警进入语义审查。机械与语义验收通过前禁止追踪提交和下一章。
+长篇先读 `{书名}/追踪/上下文.md`；短篇先读 `{书名}/设定.md` 和 `{书名}/小节大纲.md`。

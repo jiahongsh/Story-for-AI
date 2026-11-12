@@ -3,17 +3,15 @@
 # 设计原则：无缺口时完全静默，不输出任何内容，避免污染 context
 set -euo pipefail
 
-# source 公共函数库之前就切到字节区域：Windows 中文系统若导出 GBK 区域设置，UTF-8 注释中
-# 恰好落在反斜杠字节上的多字节序列可能吞掉下一行，导致 common.sh 后半段函数未被定义。
-# 后续 awk 解析中文伏笔表 + find/grep 中文路径同样需要 C 区域。Windows 中文系统若导出 GBK 区域设置，
-# gawk 会把 UTF-8 状态值按 GBK 多字节解码失败，trim 和 == 比较全乱、每行误报。强制 C
-# 区域走字节匹配（UTF-8 字面量 vs UTF-8 内容字节相等）才稳定（issue #164 同类）。文末的
-# 连续性扫描内嵌 python，但它以 encoding='utf-8' 显式读文件、用 stdout.buffer 写 UTF-8 字节，
-# 不受 LC_ALL=C 影响，故仍可在顶部 export。
-export LC_ALL=C
-
 # 加载公共函数库（project_root + discover_all_books）
 source "$(dirname "$0")/lib/common.sh"
+
+# 后续 awk 解析中文伏笔表 + find/grep 中文路径。Windows 中文系统若导出 GBK 区域设置，
+# gawk 会把 UTF-8 状态值按 GBK 多字节解码失败，trim 和 == 比较全乱、每行误报。强制 C
+# 区域走字节匹配（UTF-8 字面量 vs UTF-8 内容字节相等）才稳定（issue #164 同类）。文末的
+# 连续性扫描走 node 共享核（story_hook_cli.js），node 按 UTF-8 读文件、写 stdout，
+# 不受 LC_ALL=C 影响，故仍可在顶部 export。
+export LC_ALL=C
 
 ROOT=$(project_root)
 # 报告用真实换行拼接（NL），不用字面 `\n` 占位：输出端必须 printf '%s'，见文末注释。
@@ -65,30 +63,13 @@ for BOOK_DIR in "${BOOK_DIRS[@]}"; do
       # 含全角空格 U+3000：LC_ALL=C 下 [[:space:]] 只认 ASCII 空白，单元格用全角空格补白时
       # 会留在 status 里被误判为异常；用交替补上全角空格（不能进字符组，否则触发跨区域 bug）。
       function trim(s) { gsub(/^([[:space:]]|　)+|([[:space:]]|　)+$/, "", s); return s }
-      # 列号说明：不同项目的伏笔表列数/列序并不一致——协议模板
-      # 「# | 伏笔内容 | 埋设章节 | 预计回收章节 | 状态{...} | 重要度{...}」状态在倒数第二列，
-      # 但实际项目常见「# | 伏笔内容 | 埋设章 | 回收章 | 真实答案 | 状态」状态在最后一列，
-      # 也可能只有「ID | 名称 | 埋下 | 回收 | 状态 | 备注」这类更简的自定义列序。硬编码任一
-      # 固定列号在其他布局下必错（历史 bug：曾写死 $6，后来发现协议模板测试用例列序又不同，
-      # 说明列号本身就不该假设固定），改为运行时从每张表的表头行动态定位"状态"列。
-      # 一个文件可能含多张伏笔子表（如按 A/B/C/D 分类），分隔线行标志上一行是表头，
-      # 每遇到一次分隔线就重新定位一次状态列，不假设全文件只有一张表或列序统一。
-      # 分隔行字符组必须含 `:`，兼容 |:---|:---:|---:| 的 Markdown 对齐写法。
-      $0 ~ /^\|[-:[:space:]|]+$/ {
-        status_col = 0
-        for (i = 1; i <= prev_nf; i++) {
-          if (trim(prev[i]) ~ /^状态/) { status_col = i; break }
-        }
-        next
-      }
-      /^\|/ && status_col > 0 {
-        status = trim($(status_col))
+      # 分隔行字符组必须含 `:`：markdown 对齐写法 |:---|:---:|---:| 也是分隔行，漏掉它会把
+      # 分隔行当数据行、拿 ":---" 当状态值，于是每次 SessionStart 都误报一条伏笔异常。
+      # `:` 是 ASCII，可以直接进字符组（全角字符才不行，见上条注释）。
+      /^\|/ && $0 !~ /^\|[-:[:space:]|]+$/ {
+        status=trim($6)
         if (status == "" || status == "状态" || status ~ /^状态\{/) next
         if (status == "已过期" || (status != "已埋" && status != "已回收" && status != "放弃")) print
-      }
-      /^\|/ {
-        prev_nf = NF
-        for (i = 1; i <= NF; i++) prev[i] = $i
       }
     ' "$BOOK_DIR/追踪/伏笔.md" 2>/dev/null || true)
     if [ -n "$ABNORMAL_FORESHADOW" ]; then
@@ -101,14 +82,9 @@ for BOOK_DIR in "${BOOK_DIRS[@]}"; do
     # 长篇判定：有 追踪/ 视为长篇，要求 大纲/ 目录
     if [ -d "$BOOK_DIR/追踪" ] && [ ! -d "$BOOK_DIR/大纲" ]; then
       BOOK_OUTPUT+="[WARN] ${BOOK_NAME}：已有 正文/ 但缺少 大纲/，建议先搭大纲。${NL}"
-    # 短篇判定：无 追踪/ 视为短篇，要求根目录有一份大纲。
-    # 规范名是 小节大纲.md，但只认这一个名字会误报：作者常把 设定.md 与
-    # 小节大纲.md 并成一份 设定与大纲.md，里面「十节骨架」就是大纲。这条是
-    # advisory，本意是抓「没大纲就动笔」；有大纲还天天被念，作者会学会忽略
-    # 整条告警。改成任一 *大纲*.md 在场即算有。
-    elif [ ! -d "$BOOK_DIR/追踪" ] \
-      && ! find "$BOOK_DIR" -maxdepth 1 -type f -name '*大纲*.md' -print -quit 2>/dev/null | grep -q .; then
-      BOOK_OUTPUT+="[WARN] ${BOOK_NAME}：已有正文但缺少大纲（规范名 小节大纲.md），建议先搭大纲。${NL}"
+    # 短篇判定：无 追踪/ 视为短篇，要求 小节大纲.md 单文件
+    elif [ ! -d "$BOOK_DIR/追踪" ] && [ ! -f "$BOOK_DIR/小节大纲.md" ]; then
+      BOOK_OUTPUT+="[WARN] ${BOOK_NAME}：已有正文但缺少 小节大纲.md，建议先搭大纲。${NL}"
     fi
   fi
 

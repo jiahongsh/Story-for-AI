@@ -2,16 +2,6 @@
 # common.sh — 公共函数库，供各 hook 文件 source
 # 注意：不加 set -euo pipefail，避免 source 时覆盖调用方的 shell options
 
-# TraeCode 可以同时加载项目的 `.trae/hooks.json` 与 Claude Code
-# `.claude/settings*.json` Hooks，并且在运行后者时也会注入
-# TRAE_PROJECT_DIR / CLAUDE_PROJECT_DIR。oh-story 在 TRAE 中以原生 `.trae`
-# runner 为唯一执行源；若不在这里静默退出，SessionStart/Write/Edit
-# 守卫会各跑两次。Claude Code 本身不注入 TRAE_PROJECT_DIR，因此不受影响。
-# 这是 hook 进程专用库；在 source 时 exit 0 是刻意的跨配置去重。
-if [ -n "${TRAE_PROJECT_DIR:-}" ]; then
-  exit 0
-fi
-
 # project_root — 稳定解析项目根目录
 # 优先使用 Claude Code 注入的 CLAUDE_PROJECT_DIR；其次使用 git root；最后退回当前目录。
 # 输出绝对路径，避免 hook 从嵌套 cwd 执行时误读/误写。
@@ -46,7 +36,7 @@ discover_active_book() {
   if [ -f "$root/.active-book" ]; then
     local active
     # LC_ALL=C：书名是中文 UTF-8。Windows 中文系统若导出 GBK 区域设置，trim 的
-    # s/^[[:space:]]*// 会逼 sed 按 GBK 解码整行，短中文书名的
+    # s/^[[:space:]]*// 会逼 sed 按 GBK 解码整行，短书名（如「让你管账号」「修仙传」）的
     # UTF-8 字节是非法 GBK 序列 → BSD sed 报 illegal byte sequence、active 被吞成空 →
     # .active-book 被忽略、误解析到 find 到的第一本书。强制 C 区域走字节处理才稳。
     # 本库被无 export 的 session-*/pre-compact/post-compact 复用，故在此 per-command 兜底，

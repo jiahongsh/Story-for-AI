@@ -20,10 +20,8 @@ const {
   continuityFindings,
   extractProseTargets,
   extractPatchTargets,
-  revisionBlockReason,
   proseBlockReason,
   isProsePath,
-  wordcountFinding,
   duplicateTitleFindings,
   proseAfterWrite,
   shellWords,
@@ -159,7 +157,7 @@ function targetPaths(input) {
 function preToolProseGuard() {
   const root = projectRoot()
   for (const target of targetPaths(hookInput)) {
-    const reason = revisionBlockReason(root, target) || proseBlockReason(root, target)
+    const reason = proseBlockReason(root, target)
     if (reason) {
       emit({
         hookSpecificOutput: {

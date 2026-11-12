@@ -7,13 +7,11 @@ story guardrails to Codex hook stdin/stdout JSON contracts.
 from __future__ import annotations
 
 import json
-import hashlib
 import os
 import re
 import shlex
 import subprocess
 import sys
-import unicodedata
 from pathlib import Path
 from typing import Any
 
@@ -169,14 +167,13 @@ def hook_context(event: str, text: str) -> dict[str, Any]:
     return {"hookSpecificOutput": {"hookEventName": event, "additionalContext": text}}
 
 
-# ── 轻量确定性网（与 templates/hooks/check-prose-after-write.sh 内嵌 python 同实现，保持 parity）──
+# ── 轻量确定性网（与 JS 共享核 story_hook_core.js proseNetFindings 同实现，保持 parity）──
 # 只兜「硬信号」（漏跑最伤、退化模型自己发现不了的）：截断 / 生成拒绝语·AI 自指 /
-# 工程词漏进正文 / 中文语言漂移 / 紧邻整行复读。不依赖 check-degeneration.js，是独立的轻量网。
+# 工程词漏进正文 / 紧邻整行复读。不依赖 check-degeneration.js，是独立的轻量网。
 # 收尾标点集与深扫 oracle check-degeneration.js 的 findTruncation 对齐（[。！？!?…”"』」）)】]）：
-# 】 是章尾系统播报模板的收束符（agent-references/hooks-chapter.md 章尾实战模板一/四），ASCII "
+# 】 是章尾系统播报模板的收束符（agent-references/long-chapter-hooks.md 章尾实战模板一/四），ASCII "
 # 是 normalize-punctuation.js --quote-mode ascii 的合法收引号，两者都不该被判「疑似截断」。
 _NET_TERMINAL = set("。！？…”』」）)!?.~—】\"")
-_NET_QUOTE_OPENERS = ("「", "“", "‘", "『", '"')
 _NET_SOFT_PATTERNS = [
     # 型号后缀（AI语言模型/AI助手/人工智能语言模型/AI模型/AI大模型）必须可选吃掉：否则前视断言
     # 紧跟在「AI」后面看到的是「语」/「助」/「模」，最典型的退化开场整类漏检。
@@ -184,340 +181,10 @@ _NET_SOFT_PATTERNS = [
     (re.compile(r"^(Sure|Certainly|Here'?s|As an AI|I (?:cannot|can't|am unable|apologize))"), "英文 AI 腔"),
     (re.compile(r"我(无法|不能)(继续(写|创作|生成|下去|输出)?|生成(内容|文本|正文)?|创作|续写|写作|完成(这个|本)?(章|篇|创作|请求)?)"), "生成拒绝语"),
 ]
-# 中文正文语言网。与 JS 共享核同构，fixture 逐字 parity 由
-# scripts/test-prose-net-parity.sh 锁定。网只在已被宿主判定为中文正文路径的文件上运行。
-# blocking：纯英文句段、完整英文台词、连续 >=3 普通英文词且字母总数 >=12、
-# 叙述中独立全小写 >=4 词。完整英文台词（包括无句号的“Go”）始终 blocking；
-# 确属专名/引文时必须用精确白名单表达意图。保护区先等长遮罩。
-_LANGUAGE_WORD = re.compile(r"[A-Za-z]+(?:['’][A-Za-z]+)?")
-_LANGUAGE_SEQUENCE = re.compile(r"[A-Za-z]+(?:['’][A-Za-z]+)?(?:[ \t]+[A-Za-z]+(?:['’][A-Za-z]+)?){2,}")
-_LANGUAGE_SENTENCE = re.compile(r"[^。！？!?;；\n]+[。！？!?;；]?")
-_LANGUAGE_CJK = re.compile(r"[\u3400-\u9fff]")
-_LANGUAGE_QUOTE_PAIRS = (("「", "」"), ("『", "』"), ("“", "”"), ("‘", "’"), ('"', '"'), ("'", "'"))
-_LANGUAGE_OUTER_QUOTES = re.compile(r"^[\s「」『』“”‘’\"']+|[\s「」『』“”‘’\"']+$")
-_LANGUAGE_TRAILING_PUNCT = re.compile(r"[。.！？!?,，；;：:…]+$")
-
-
-def _normalized_language_phrase(value: str) -> str:
-    text = _LANGUAGE_OUTER_QUOTES.sub("", str(value or "").strip()).strip()
-    text = _LANGUAGE_TRAILING_PUNCT.sub("", text).strip()
-    return re.sub(r"[ \t\r\n　]+", " ", text)
-
-
-def parse_deslop_whitelist(text: str) -> list[str]:
-    entries: list[str] = []
-    for raw in str(text or "").splitlines():
-        if re.match(r"^\s*#", raw):
-            continue
-        value = re.sub(r"\s+#.*$", "", raw).strip()
-        if value:
-            entries.append(value)
-    return entries
-
-
-def read_deslop_whitelist(root: Path, abs_path: Path | None = None) -> list[str]:
-    try:
-        boundary = root.resolve()
-        current = abs_path.resolve().parent if abs_path is not None else boundary
-        try:
-            current.relative_to(boundary)
-        except ValueError:
-            current = boundary
-        while True:
-            candidate = current / ".deslop-whitelist"
-            try:
-                return parse_deslop_whitelist(candidate.read_text(encoding="utf-8", errors="replace"))
-            except OSError:
-                pass
-            if current == boundary:
-                break
-            parent = current.parent
-            try:
-                parent.relative_to(boundary)
-            except ValueError:
-                break
-            if parent == current:
-                break
-            current = parent
-    except OSError:
-        pass
-    return []
-
-
-def _language_whitelisted(entries: list[str], candidate: str, single_token: bool = False) -> bool:
-    raw = str(candidate or "").strip()
-    if not raw:
-        return False
-    if single_token:
-        return any(entry == raw for entry in entries)
-    normalized = _normalized_language_phrase(raw)
-    return any(_normalized_language_phrase(entry) == normalized for entry in entries)
-
-
-def _language_is_han(char: str) -> bool:
-    point = ord(char)
-    return (
-        0x3400 <= point <= 0x4DBF
-        or 0x4E00 <= point <= 0x9FFF
-        or 0xF900 <= point <= 0xFAFF
-        or 0x20000 <= point <= 0x323AF
-    )
-
-
-def _language_is_foreign_letter(value: str) -> bool:
-    return any(
-        unicodedata.category(unit).startswith("L") and not _language_is_han(unit)
-        for unit in unicodedata.normalize("NFKC", str(value or ""))
-    )
-
-
-def _language_whitelist_boundary_at(text: str, index: int) -> bool:
-    if index < 0 or index >= len(text):
-        return False
-    char = text[index]
-    return _language_is_foreign_letter(char) or re.fullmatch(r"[0-9_.+/#-]", char) is not None
-
-
-def _mask_language_whitelist(line: str, masked: str, entries: list[str]) -> str:
-    chars = list(masked)
-    for entry in entries:
-        if not entry:
-            continue
-        offset = 0
-        while offset <= len(line) - len(entry):
-            start = line.find(entry, offset)
-            if start < 0:
-                break
-            end = start + len(entry)
-            whitespace_match = re.match(r"\s+", line[end:])
-            whitespace = whitespace_match.group(0) if whitespace_match else ""
-            followed_by_foreign_word = bool(
-                whitespace
-                and end + len(whitespace) < len(line)
-                and _language_is_foreign_letter(line[end + len(whitespace)])
-            )
-            if (
-                not _language_whitelist_boundary_at(line, start - 1)
-                and not _language_whitelist_boundary_at(line, end)
-                and not followed_by_foreign_word
-            ):
-                chars[start:end] = [" "] * len(entry)
-            offset = start + max(len(entry), 1)
-    return "".join(chars)
-
-
-def _mask_language_markup_protected(text: str) -> str:
-    source = str(text)
-    chars = list(source)
-    for pattern in (re.compile(r"```[\s\S]*?```|~~~[\s\S]*?~~~"), re.compile(r"`+[^`\n]*`+")):
-        for match in pattern.finditer(source):
-            chars[match.start():match.end()] = [" "] * (match.end() - match.start())
-    return "".join(chars)
-
-
-def _mask_language_protected(line: str) -> str:
-    chars = list(line)
-
-    def mask(start: int, end: int) -> None:
-        chars[start:end] = [" "] * (end - start)
-
-    def apply(rx: re.Pattern[str], range_fn: Any = None) -> None:
-        for match in rx.finditer(line):
-            start, end = range_fn(match) if range_fn else match.span()
-            mask(start, end)
-
-    apply(re.compile(r"\x60+[^\x60\n]*\x60+"))
-    apply(re.compile(r"(?<![A-Za-z0-9_])(?:https?://|ftp://|www\.)[^\s<>\"‘’'「」『』“”（）()]+", re.IGNORECASE))
-    apply(re.compile(r"(?<![A-Za-z0-9_])[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}(?![A-Za-z0-9_])"))
-
-    def markdown_target(match: re.Match[str]) -> tuple[int, int]:
-        opened = match.group(0).find("(")
-        return (match.start() + opened + 1, match.end() - 1)
-
-    apply(re.compile(r"\]\(\s*(?:<[^>\r\n]+>|[^)\s\r\n]+)(?:\s+[\"'][^\"'\r\n]*[\"'])?\s*\)"), markdown_target)
-
-    def markdown_reference_id(match: re.Match[str]) -> tuple[int, int]:
-        offset = match.group(0).rfind(match.group(1))
-        return (match.start() + offset, match.start() + offset + len(match.group(1)))
-
-    apply(re.compile(r"\]\s*\[([A-Za-z0-9_.-]+)\]"), markdown_reference_id)
-    path_part = r"[^\s/\\<>\"'“”‘’「」『』【】()（）,，。；;：:!！?？、]+"
-    apply(re.compile(rf"(?:[A-Za-z]:[\\/]|\.{{1,2}}[\\/]|/)(?:{path_part}[\\/])*{path_part}"))
-    apply(re.compile(rf"(?<![A-Za-z0-9])(?:{path_part}[\\/])+{path_part}(?![A-Za-z0-9])"))
-    apply(re.compile(r"(?<![A-Za-z0-9])(?:[A-Za-z0-9_-]+\.)+[A-Za-z][A-Za-z0-9]{0,11}(?![A-Za-z0-9])"))
-    apply(re.compile(r"(?<![A-Za-z0-9])\.[A-Za-z][A-Za-z0-9]{0,11}(?![A-Za-z0-9])"))
-    return "".join(chars)
-
-
-def _language_quote_spans(line: str) -> list[tuple[int, int, int, int]]:
-    spans: list[tuple[int, int, int, int]] = []
-    for opened, closed in _LANGUAGE_QUOTE_PAIRS:
-        cursor = 0
-        while cursor < len(line):
-            start = line.find(opened, cursor)
-            if start < 0:
-                break
-            end = line.find(closed, start + len(opened))
-            if end < 0:
-                break
-            spans.append((start, end + len(closed), start + len(opened), end))
-            cursor = end + len(closed)
-    return sorted(spans, key=lambda span: (span[0], span[1]))
-
-
-def _language_containing_quote(spans: list[tuple[int, int, int, int]], start: int, end: int) -> tuple[int, int, int, int] | None:
-    return next((span for span in spans if start >= span[2] and end <= span[3]), None)
-
-
-def _language_only(value: str) -> bool:
-    without_words = _LANGUAGE_WORD.sub("", value)
-    residue = re.sub(r"[\s\d　「」『』“”‘’\"'()\[\]{}（）【】<>。.！？!?,，；;：:…—~*_=+\-]", "", without_words)
-    return _LANGUAGE_CJK.search(value) is None and re.search(r"[A-Za-z]", without_words) is None and not residue
-
-
-def _language_excerpt(value: str) -> str:
-    return _normalized_language_phrase(value)[:40]
-
-
-def _language_record(line_no: int, start: int, end: int, finding_type: str, excerpt: str, blocking: bool) -> dict[str, Any]:
-    advice = (
-        "中文正文应改成中文；确需逐字保留时，必须经用户单独确认后写入 .deslop-whitelist 精确登记。"
-        if blocking else
-        "请核对是否为设定中的专名/短词；非有意保留就改成中文，保留则写入 .deslop-whitelist 精确登记。"
-    )
-    return {
-        "line": line_no,
-        "start": start,
-        "end": end,
-        "blocking": blocking,
-        "finding": f"第{line_no}行 {finding_type}：「{excerpt}」——{advice}",
-    }
-
-
-def language_leak_records(text: str, whitelist_entries: list[str] | None = None) -> list[dict[str, Any]]:
-    entries = whitelist_entries if isinstance(whitelist_entries, list) else []
-    records: list[dict[str, Any]] = []
-    markup_re = re.compile(r"<!--[\s\S]*?-->|</?[A-Za-z][^>]*>|<![A-Za-z][^>]*>|&(?:[A-Za-z][A-Za-z0-9]+|#\d+|#x[0-9A-Fa-f]+);")
-    markup_visible = _mask_language_markup_protected(str(text))
-    for match in markup_re.finditer(markup_visible):
-        line_no = str(text)[:match.start()].count("\n") + 1
-        excerpt = re.sub(r"\s+", " ", match.group(0))[:40]
-        records.append({
-            "line": line_no,
-            "start": match.start(),
-            "end": match.end(),
-            "blocking": True,
-            "finding": f"第{line_no}行 HTML 标记泄漏：「{excerpt}」——HTML 标签、注释和实体不得进入交付正文。",
-        })
-    fence_char = ""
-    fence_length = 0
-    for line_no, raw in enumerate(str(text).split("\n"), 1):
-        trimmed = raw.strip()
-        fence = re.match(r"^(`{3,}|~{3,})", trimmed)
-        if fence:
-            marker = fence.group(1)
-            if not fence_char:
-                fence_char = marker[0]
-                fence_length = len(marker)
-            elif marker[0] == fence_char and len(marker) >= fence_length and re.fullmatch(re.escape(fence_char) + "{" + str(fence_length) + r",}[ \t]*", trimmed):
-                fence_char = ""
-                fence_length = 0
-            continue
-        if fence_char or _net_is_skippable(trimmed):
-            continue
-        if re.match(r"^\s{0,3}\[[^\]\n]+\]:\s*(?:<[^>\n]+>|\S+)", raw):
-            continue
-        masked = _mask_language_whitelist(raw, _mask_language_protected(raw), entries)
-        quotes = _language_quote_spans(raw)
-        occupied: list[tuple[int, int]] = []
-
-        def overlaps(start: int, end: int) -> bool:
-            return any(start < right and end > left for left, right in occupied)
-
-        def add(record: dict[str, Any]) -> None:
-            records.append(record)
-            occupied.append((record["start"], record["end"]))
-
-        for span in quotes:
-            visible = masked[span[2]:span[3]]
-            words = list(_LANGUAGE_WORD.finditer(visible))
-            if not words or not _language_only(visible):
-                continue
-            candidate = raw[span[2]:span[3]]
-            if _language_whitelisted(entries, candidate, False):
-                continue
-            add(_language_record(line_no, span[2], span[3], "完整英文台词泄漏", _language_excerpt(candidate), True))
-
-        for sentence in _LANGUAGE_SENTENCE.finditer(masked):
-            start, end = sentence.span()
-            if overlaps(start, end):
-                continue
-            words = list(_LANGUAGE_WORD.finditer(sentence.group(0)))
-            if not words or not _language_only(sentence.group(0)):
-                continue
-            candidate = raw[start:end]
-            if _language_whitelisted(entries, candidate, len(words) == 1):
-                continue
-            single_sentence = len(words) == 1 and re.search(r"[。！？.!?][ \t]*$", candidate) is not None
-            if len(words) >= 2 or single_sentence or re.fullmatch(r"[a-z]{4,}", words[0].group(0)):
-                finding_type = "纯英文句段泄漏" if len(words) >= 2 or single_sentence else "裸英文词泄漏"
-                add(_language_record(line_no, start, end, finding_type, _language_excerpt(candidate), True))
-            else:
-                add(_language_record(line_no, start, end, "裸外文字母泄漏", _language_excerpt(candidate), True))
-
-        for sequence in _LANGUAGE_SEQUENCE.finditer(masked):
-            start, end = sequence.span()
-            if overlaps(start, end):
-                continue
-            if len(re.findall(r"[A-Za-z]", sequence.group(0))) < 12 or _language_whitelisted(entries, sequence.group(0), False):
-                continue
-            add(_language_record(line_no, start, end, "连续英文短语泄漏", _language_excerpt(sequence.group(0)), True))
-
-        for word in _LANGUAGE_WORD.finditer(masked):
-            start, end = word.span()
-            token = word.group(0)
-            if overlaps(start, end) or _language_whitelisted(entries, token, True):
-                continue
-            quote = _language_containing_quote(quotes, start, end)
-            add(_language_record(line_no, start, end, "台词外文字母泄漏" if quote else "裸外文字母泄漏", token, True))
-
-        cursor = 0
-        while cursor < len(masked):
-            char = masked[cursor]
-            if re.fullmatch(r"[A-Za-z]", char) or not _language_is_foreign_letter(char):
-                cursor += 1
-                continue
-            start = cursor
-            end = cursor + 1
-            while end < len(masked):
-                next_char = masked[end]
-                if not _language_is_foreign_letter(next_char) and not (
-                    unicodedata.category(next_char).startswith("M")
-                    or unicodedata.category(next_char).startswith("N")
-                    or next_char in "_'’.-"
-                ):
-                    break
-                end += 1
-            if not overlaps(start, end):
-                candidate = raw[start:end]
-                if not _language_whitelisted(entries, candidate, True):
-                    add(_language_record(line_no, start, end, "Unicode 外文字母泄漏", candidate, True))
-            cursor = end
-    return records
-
-
-def language_leak_findings(text: str, whitelist_entries: list[str] | None = None) -> list[str]:
-    return [record["finding"] for record in language_leak_records(text, whitelist_entries)]
-
-
 _NET_HARD_PATTERNS = [
     (re.compile(r"[（(](此处|以下|这里|下文|后续)?[^）)]{0,10}(省略|略去|略过)[^）)]{0,10}[）)]"), "占位符（括号省略）"),
     (re.compile(r"(TODO|占位符|placeholder|待补充|此处待填|此处待补)"), "占位符"),
     (re.compile(r"(细纲|情节点|卷纲|功能标签|目标情绪|字数目标|章首钩子|章尾钩子|任务描述)"), "工程词泄漏"),
-    (re.compile(r"(内容概括|情节安排|预算合计|结尾设定|阶段位置|结构公式|压力级|爽点类型|章节定位|\bV\d+-U\d+\b|\b[FE]\d{3,}\b|(?:追踪|大纲|设定|拆文库)/[^\s，。）】」]+\.md)"), "工程词泄漏"),
-    # 章号引用的英文缩写：ch13 / Ch.13 / CH 13 / chapter 13。中文工程词表收不到它，
-    # 实测有整段「她在 ch13 便学乖了」漏进正文。与 js 核 META_CHAPTER_REF_RE 逐字对应。
-    (re.compile(r"\b(?:ch|chap|chapter)\.?\s?\d{1,4}\b", re.IGNORECASE), "章号引用泄漏"),
     (re.compile("�"), "乱码（替换字符）"),
 ]
 
@@ -539,9 +206,10 @@ def _net_is_skippable(stripped: str) -> bool:
 # advisory 检测归 check-ai-patterns.js 深扫。全部正则线性扫描、量词有界。台词/弹幕/
 # 系统播报不算：逐行把成对引号段等长问号占位（见 _toxic_mask_quoted 为何用问号而不是句号），
 # 占位后仍残留引号字符（跨行对话/未闭合）的行整行跳过。
-# js↔py 由 scripts/check-hook-regex-sync.sh（规范串逐字锁）与
+# js↔py 由 scripts/check-hook-regex-sync.sh（常量表逐字锁）与
 # scripts/test-prose-net-parity.sh（fixture 逐字 diff）锁 parity。
-_TOXIC_QUOTE_SPANS = [re.compile(r"「[^」]*」"), re.compile(r"『[^』]*』"), re.compile(r"【[^】]*】"), re.compile(r"“[^”]*”"), re.compile(r"‘[^’]*’"), re.compile(r'"[^"]*"'), re.compile(r"'[^']*'")]
+# 单引号须成对；词内撇号（don't、O’Connor）不作为开闭引号。
+_TOXIC_QUOTE_SPANS = [re.compile(r"「[^」]*」"), re.compile(r"『[^』]*』"), re.compile(r"【[^】]*】"), re.compile(r"“[^”]*”"), re.compile(r"(?<![A-Za-z0-9_])‘(?:[^’]|(?<=[A-Za-z0-9_])’(?=[A-Za-z0-9_]))*(?!(?<=[A-Za-z0-9_])’[A-Za-z0-9_])’"), re.compile(r'"[^"]*"'), re.compile(r"(?<![A-Za-z0-9_])'(?:[^']|(?<=[A-Za-z0-9_])'(?=[A-Za-z0-9_]))*(?!(?<=[A-Za-z0-9_])'[A-Za-z0-9_])'")]
 _TOXIC_QUOTE_CHARS = set("「」『』【】“”‘’\"'")
 # 分句起点边界（前一字符属于它才认「是A，不是B」的分句首「是」）；同时用作确认语的右边界。
 _TOXIC_CLAUSE_BOUNDARY = set("，,。.！!？?；;：:、…—~ \t　")
@@ -550,6 +218,8 @@ _TOXIC_CLAUSE_BOUNDARY = set("，,。.！!？?；;：:、…—~ \t　")
 _TOXIC_TAG_PARTICLES = ("吗", "吧", "嘛")
 _TOXIC_AFFIRM_PARTICLES = ("的", "啊", "呀", "呢")
 _TOXIC_TRAILER_WINDOW = 600
+# 不收 em-dash 是有意的（与 JS 核同）：破折号是标点，由 chapter check --fix-punctuation /
+# normalize-punctuation.js 确定性整理；这张网只推回需要模型动笔改写的句式。
 _TOXIC_SENTENCE_PATTERNS = [
     (re.compile(r"声音(?:并)?不[大高响亮][^。！？!?\n]{0,16}[却但偏]"), "voice-contrast", "删「不X…却Y」反差腔，直接写具体效果或动作。"),
     (re.compile(r"(?:没有[^。！？!?\n，,]{1,12}[，,]){2}"), "negation-parade", "「没有…，没有…」排比删到只剩一个或全删，改写正面在场的细节。"),
@@ -625,14 +295,80 @@ def _toxic_match_sentence(line: str) -> tuple[str, str, str] | None:
     return None
 
 
-def toxic_phrase_findings(text: str) -> list[str]:
+def load_style_whitelist(file: Path) -> list[str]:
+    parent = file.resolve().parent
+    book = parent.parent if parent.name == "正文" else parent
+    try:
+        lines = (book / ".deslop-whitelist").read_text(encoding="utf-8").splitlines()
+    except FileNotFoundError:
+        return []
+    return sorted((line.strip() for line in lines if line.strip() and not line.strip().startswith("#")), key=len, reverse=True)
+
+
+def mask_style_text(text: str, whitelist: list[str]) -> str:
+    chars = list(text)
+    for literal in whitelist:
+        at = text.find(literal)
+        while at != -1:
+            chars[at:at + len(literal)] = ["？"] * len(literal)
+            at = text.find(literal, at + 1)
+    return "".join(chars)
+
+
+def toxic_rescan_hint(abs_path: Path | None = None) -> str:
+    """毒句式末行的完整复扫指引（与 JS core toxicRescanHint 同文案）：长篇分章正文指 storyctl
+    chapter check，其余（短篇 正文.md、调用方没给路径）指 check-ai-patterns.js。"""
+    if abs_path is not None and abs_path.parent.name == "正文":
+        m = re.match(r"^第0*(\d+)章.*\.md$", abs_path.name)
+        if m:
+            return f"完整检查：{{PYTHON}} <story-long-write>/scripts/storyctl.py chapter check --project <书目录> --chapter {m.group(1)}"
+    return "完整扫描：node <skill>/scripts/check-ai-patterns.js --check <正文文件>"
+
+
+def _mask_html_comment_lines(lines: list[str]) -> list[str]:
+    """HTML 注释是元信息不是正文（与 JS core maskHtmlCommentLines、check-ai-patterns.js scanDocument
+    同规则）：注释段换成等长空格，可跨行；到文末都没闭合的 `<!--` 只抹掉这四个字符，后面照常当正文。"""
+    unclosed: set[tuple[int, int]] = set()
+    while True:
+        out: list[str] = []
+        is_open = False
+        opened_at = None
+        for index, line in enumerate(lines):
+            text = ""
+            cursor = 0
+            while cursor < len(line):
+                if is_open:
+                    close = line.find("-->", cursor)
+                    end = len(line) if close == -1 else close + 3
+                    text += " " * (end - cursor)
+                    cursor = end
+                    if close != -1:
+                        is_open = False
+                    continue
+                start = line.find("<!--", cursor)
+                if start == -1:
+                    text += line[cursor:]
+                    break
+                text += line[cursor:start] + "    "
+                cursor = start + 4
+                if (index, start) in unclosed:
+                    continue
+                is_open = True
+                opened_at = (index, start)
+            out.append(text)
+        if not (is_open and opened_at is not None):
+            return out
+        unclosed.add(opened_at)
+
+
+def toxic_phrase_findings(text: str, whitelist=(), rescan: str | None = None) -> list[str]:
     findings: list[str] = []
     content: list[tuple[int, str]] = []
-    for i, raw in enumerate(text.split("\n"), 1):
+    for i, raw in enumerate(_mask_html_comment_lines(text.split("\n")), 1):
         s = raw.strip()
         if _net_is_skippable(s):
             continue
-        masked = _toxic_mask_quoted(s)
+        masked = _toxic_mask_quoted(mask_style_text(s, whitelist))
         if any(ch in _TOXIC_QUOTE_CHARS for ch in masked):
             continue
         content.append((i, masked))
@@ -652,13 +388,22 @@ def toxic_phrase_findings(text: str) -> list[str]:
             findings.append(f"第{line_no}行 毒句式[trailer-ending]：『{m.group(0)[:20]}』——删章尾预告腔，用正在发生的动作或画面收章。")
         ms = _TOXIC_TRAILER_SUMMARY.search(masked)
         if ms:
-            findings.append(f"第{line_no}行 毒句式[trailer-summary]：『{ms.group(0)[:20]}』——删章尾状态总结句，收束状态是细纲的规划口径，正文落到具体动作、画面或台词上。")
+            findings.append(f"第{line_no}行 毒句式[trailer-summary]：『{ms.group(0)[:20]}』——删章尾状态总结句，细纲的结尾设定要落成最后的具体动作、画面或台词。")
     if findings:
-        findings.append("毒句式是确定性 AI 指纹：本章须清零后再继续。完整扫描：node <skill>/scripts/check-ai-patterns.js --check <正文文件>")
+        findings.append("毒句式是确定性 AI 指纹：本章须清零后再继续。" + (rescan if rescan is not None else toxic_rescan_hint()))
     return findings
 
 
-def prose_net_findings(text: str, whitelist_entries: list[str] | None = None) -> list[str]:
+# 「去味:跳过」豁免标记：文件首 6 行内的 `<!-- 去味:跳过 -->`，冒号全角半角都认，注释内可有
+# 空格/Tab；裸写不在注释里的不算。与 JS core DESLOP_SKIP_MARKER、bash guard、storyctl DESLOP_SKIP 同一语法。
+_DESLOP_SKIP_MARKER = re.compile(r"<!--[ \t]*去味[ \t]*(：|:)[ \t]*跳过[ \t]*-->")
+
+
+def _has_deslop_skip_marker(text: str) -> bool:
+    return bool(_DESLOP_SKIP_MARKER.search("\n".join(re.split(r"\r?\n", text)[:6])))
+
+
+def prose_net_findings(text: str, whitelist=(), rescan: str | None = None) -> list[str]:
     findings: list[str] = []
     content: list[tuple[int, str]] = []
     for i, raw in enumerate(text.split("\n"), 1):
@@ -666,25 +411,22 @@ def prose_net_findings(text: str, whitelist_entries: list[str] | None = None) ->
         if _net_is_skippable(s):
             continue
         content.append((i, s))
-        is_dialogue = s[0] in _NET_QUOTE_OPENERS
         hit = False
-        if not is_dialogue:
-            for rx, label in _NET_SOFT_PATTERNS:
-                m = rx.search(s)
-                if m:
-                    findings.append(f"第{i}行 元信息泄漏（{label}）：「{m.group(0)[:20]}」")
-                    hit = True
-                    break
+        # 只豁免成对引号内的内容，继续检查引号外叙述。
+        outside_quotes = _toxic_mask_quoted(s)
+        for rx, label in _NET_SOFT_PATTERNS:
+            m = rx.search(outside_quotes)
+            if m:
+                findings.append(f"第{i}行 元信息泄漏（{label}）：「{m.group(0)[:20]}」")
+                hit = True
+                break
         if hit:
             continue
         for rx, label in _NET_HARD_PATTERNS:
             m = rx.search(s)
             if m:
                 findings.append(f"第{i}行 {label}：「{m.group(0)[:20]}」")
-                hit = True
                 break
-        if hit:
-            continue
     for (la, sa), (lb, sb) in zip(content, content[1:]):
         if sa == sb and len(sa) >= 8:
             findings.append(f"第{lb}行 紧邻复读：整行与上一行完全相同「{sa[:20]}」")
@@ -692,9 +434,11 @@ def prose_net_findings(text: str, whitelist_entries: list[str] | None = None) ->
         ln, last = content[-1]
         if last and last[-1] not in _NET_TERMINAL:
             findings.append(f"第{ln}行 疑似截断：结尾「…{last[-12:]}」未以标点收束")
-    # 正文内不使用 HTML 跳过标记；风格跳过也不改变 Hook 的语言与标记检查。
-    findings.extend(toxic_phrase_findings(text))
-    findings.extend(language_leak_findings(text, whitelist_entries))
+    # 「去味:跳过」豁免与欠账门同判据（文件首 6 行）：标记在场时跳过毒句式推回，
+    # 其余网（元信息/占位/复读/截断）照常——否则按拦截提示加标记的那次 Edit 会把
+    # 已豁免的毒句式再次当硬信号推回。
+    if not _has_deslop_skip_marker(text):
+        findings.extend(toxic_phrase_findings(text, whitelist, rescan))
     return findings
 
 
@@ -746,38 +490,6 @@ def find_changed_prose_files(root: Path) -> list[Path]:
     return out
 
 
-def _wordcount_finding(abs_path: Path, text: str) -> str | None:
-    """字数欠账（仅长篇分章正文）：从 大纲/细纲_第N章*.md 读「字数目标」，实际 < 90% 提示。
-    与 check-prose-after-write.sh 内嵌 python / opencode wordcountFinding 同实现。"""
-    base = abs_path.name
-    if abs_path.parent.name != "正文":
-        return None
-    m = re.match(r"^第0*(\d+)章", base)
-    if not m:
-        return None
-    num = m.group(1)
-    target = None
-    for f in (abs_path.parent.parent / "大纲").glob("细纲_第*章*.md"):
-        fm = re.search(r"细纲_第0*(\d+)章", f.name)
-        if not fm or fm.group(1) != num:
-            continue
-        try:
-            txt = f.read_text(encoding="utf-8")
-        except Exception:
-            continue
-        tm = re.search(r"字数目标[^0-9]{0,6}(\d{3,6})", txt)
-        if tm:
-            target = int(tm.group(1))
-        break
-    if not target:
-        return None
-    actual = len(text)
-    if actual < target * 0.9:
-        return (f"字数：第{num}章 实际 {actual} 字 < 目标 {target} 的 90%（{int(target*0.9)}）。"
-                f"对照细纲字数预算定位欠账的密点、一次性重写到配额，别挤牙膏回炉。")
-    return None
-
-
 def _discover_all_books(root: Path) -> list[Path]:
     books: list[Path] = []
     seen: set[str] = set()
@@ -818,10 +530,8 @@ def tracking_checkpoint_issue(
         document = json.loads(state.read_text(encoding="utf-8"))
     except (OSError, UnicodeError, json.JSONDecodeError):
         return "追踪/_tracking-state.json 无法解析；停止写正文并重新 /story-import，不能猜测或手补状态"
-    if isinstance(document, dict) and document.get("schema_version") == 4:
-        return "追踪/_tracking-state.json 仍是 schema_version=4；停止写正文，用 tracking_commit.py migrate-v4 升级并植入长期事实后再 check"
-    if not isinstance(document, dict) or document.get("schema_version") != 5:
-        return "追踪/_tracking-state.json 不是当前 schema_version=5；停止写正文并重新 /story-import，不保留旧结构兼容路径"
+    if not isinstance(document, dict) or document.get("schema_version") != 4:
+        return "追踪/_tracking-state.json 不是当前 schema_version=4；停止写正文并重新 /story-import，不保留旧结构兼容路径"
     revision = document.get("state_revision")
     if type(revision) is not int:
         return "追踪/_tracking-state.json 缺少整数 state_revision；停止写正文并重新 /story-import"
@@ -1332,7 +1042,8 @@ def _command_substitutions(command: str) -> list[str]:
     return substitutions
 
 
-def _redirect_targets(command: str) -> list[str]:
+def _redirect_targets(command: str, keep_all: bool = False) -> list[str]:
+    # keep_all：与 JS 核 redirectTargets 同构，有 cd 时先取全部目标，接上 cd 目录后再判正文。
     targets: list[str] = []
     quote = ""
     escaped = False
@@ -1365,7 +1076,7 @@ def _redirect_targets(command: str) -> list[str]:
         while command[cursor:cursor + 1] in (" ", "\t"):
             cursor += 1
         target, cursor = _read_shell_word(command, cursor)
-        if "正文" in target:
+        if keep_all or "正文" in target:
             targets.append(target)
         index = max(index + 1, cursor)
     return targets
@@ -1410,10 +1121,6 @@ def _command_basename(value: str) -> str:
 def _join_posix(directory: str, name: str) -> str:
     """目录形态目标一律用 "/" 拼：Path 在 Windows 产出反斜杠，会破坏三端 parity 的逐字比较。"""
     return re.sub(r"[\\/]+$", "", directory) + "/" + name
-
-
-def _is_story_source_target(value: str) -> bool:
-    return re.search(r"(?:^|/)(?:正文|大纲|设定)(?:/|$)", value.replace("\\", "/")) is not None
 
 
 def _copy_like_targets(command: str, args: list[str]) -> list[str]:
@@ -1468,30 +1175,55 @@ def extract_prose_targets_from_command(command: str, depth: int = 0) -> list[str
     if depth < 8:
         for nested in _command_substitutions(scannable):
             targets.extend(extract_prose_targets_from_command(nested, depth + 1))
-    targets.extend(_redirect_targets(scannable))
-    # cp/mv: the write destination is the last positional arg of the segment. Parse it (regex can't
-    # tell a 正文 source from a 正文 dest, and a trailing 2>/dev/null / >log / || breaks end-anchoring).
-    for raw_segment in _shell_segments(scannable):
-        seg = _before_shell_redirection(raw_segment)
+    # 与 JS 核同构：`cd 书目录 && cat > 正文/...` 的相对写入目标接在 cd 之后的目录上；
+    # 命令里没有 cd 时保持整条命令扫描重定向的原行为。
+    parsed = []
+    # `>|`、`>&file`、`&>` 是重定向，不是管道或后台符；先统一成 `>`，免得切段时把目标切丢。
+    segment_source = re.sub(r">&(?!\d)", ">", scannable.replace("&>", " >").replace(">|", ">"))
+    for raw_segment in _shell_segments(segment_source):
         # 引号感知分词（同 JS 核 shellWords）：str.split() 会按 U+3000 和引号内空格切碎目标，
         # 末位取到 book/正文/第1章.md —— 判到另一本书上（那本有细纲就直接放行）。
-        words = _shell_words(seg)
+        words = _shell_words(_before_shell_redirection(raw_segment))
         command_index = _command_word_index(words)
-        command_name = _command_basename(words[command_index]) if command_index < len(words) else ""
-        command_args = words[command_index + 1:]
+        name = _command_basename(words[command_index]) if command_index < len(words) else ""
+        parsed.append((raw_segment, name, words[command_index + 1:]))
+    has_cd = any(name == "cd" for _, name, _ in parsed)
+    if not has_cd:
+        targets.extend(_redirect_targets(scannable))
+    cwd = ""
+
+    def is_absolute(value: str) -> bool:
+        return bool(re.match(r"^([\\/~]|[A-Za-z]:[\\/])", value))
+
+    def under_cwd(value: str) -> str:
+        return f"{cwd.rstrip('/')}/{value}" if cwd and not is_absolute(value) else value
+
+    for raw_segment, command_name, command_args in parsed:
+        if command_name == "cd":
+            directory = next((arg for arg in command_args if not arg.startswith("-")), None)
+            if directory:
+                cwd = directory if is_absolute(directory) or not cwd else under_cwd(directory)
+            continue
+        if has_cd:
+            targets.extend(
+                resolved for resolved in (under_cwd(target) for target in _redirect_targets(raw_segment, True))
+                if "正文" in resolved
+            )
         if command_name in ("sh", "bash", "dash", "ksh", "zsh"):
             nested = _nested_shell_command(command_args)
             if nested:
                 targets.extend(extract_prose_targets_from_command(nested, depth + 1))
         if command_name in ("tee", "touch"):
             targets.extend(
-                destination for destination in _write_operands(command_name, command_args)
-                if _is_story_source_target(destination)
+                destination
+                for destination in map(under_cwd, _write_operands(command_name, command_args))
+                if "正文" in destination
             )
         if command_name in ("cp", "mv", "install"):
             targets.extend(
-                destination for destination in _copy_like_targets(command_name, command_args)
-                if _is_story_source_target(destination)
+                destination
+                for destination in map(under_cwd, _copy_like_targets(command_name, command_args))
+                if "正文" in destination
             )
     return list(dict.fromkeys(target for target in targets if target))
 
@@ -1557,105 +1289,24 @@ def target_paths_from_hook(obj: dict[str, Any]) -> list[Path]:
     return [resolve_target(root, t, base) for t in raw_targets if t]
 
 
-def revision_source_info(root: Path, abs_path: Path) -> dict[str, Any] | None:
-    target = abs_path.resolve()
-    try:
-        relative = target.relative_to(root.resolve())
-    except ValueError:
-        return None
-    parts = relative.parts
-    source_index = next((i for i, part in enumerate(parts) if part in ("正文", "大纲", "设定")), -1)
-    if source_index < 1 or len(parts) <= source_index + 1 or not parts[-1].endswith(".md"):
-        return None
-    if any(
-        "备份" in part or part in ("归档", "archive", "archives") or part.startswith(".")
-        for part in parts[source_index + 1:-1]
-    ):
-        return None
-    book_dir = root.resolve().joinpath(*parts[:source_index])
-    state_path = book_dir / "追踪" / "_tracking-state.json"
-    if not state_path.is_file():
-        return None
-    try:
-        state = json.loads(state_path.read_text(encoding="utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError):
-        return None
-    last_committed = state.get("last_committed_chapter")
-    if not isinstance(last_committed, int) or isinstance(last_committed, bool):
-        last_committed = None
-    chapter: int | None = None
-    if parts[source_index] == "正文":
-        match = re.match(r"^第0*(\d+)章", parts[-1])
-        if match:
-            chapter = int(match.group(1))
-    elif parts[source_index] == "大纲":
-        match = re.match(r"^细纲_第0*(\d+)章", parts[-1])
-        if match:
-            chapter = int(match.group(1))
-    prior_canon = chapter <= last_committed if chapter is not None and last_committed is not None else target.exists()
-    return {
-        "target": target,
-        "book": book_dir,
-        "active_relative": Path(*parts[source_index:]).as_posix(),
-        "prior_canon": prior_canon,
-    }
+# 未展开的 shell 变量：$VAR / ${VAR} / $(cmd)。与 JS core UNEXPANDED_SHELL_VAR 同式。
+UNEXPANDED_SHELL_VAR = re.compile(r"\$(\{[A-Za-z_][A-Za-z0-9_]*\}|[A-Za-z_][A-Za-z0-9_]*|\()")
+
+# 细纲「实质为空」：与 JS core outlineIsEmpty 同口径（去 BOM 与每行行首的 Markdown 标题标记后，
+# 标题文字照算，非空白字符——ASCII 空白 + 全角空格之外——不足 _OUTLINE_MIN_CHARS 个码点）。只量写没写东西，
+# 不查 v0.8 细纲字段；读不了或不是合法 UTF-8 按非空放行。py↔js 由 test-prose-net-parity.sh C 段锁 parity。
+_OUTLINE_MIN_CHARS = 30
 
 
-def revision_block_reason(root: Path, abs_path: Path) -> str | None:
-    info = revision_source_info(root, abs_path)
-    if info is None:
-        return None
-    manifest_path = info["book"] / "追踪" / "修改影响" / "active.json"
-    if not manifest_path.is_file():
-        if not info["prior_canon"]:
-            return None
-        return (
-            f"⛔ 修改旧内容被拦截：{safe_rel(root, info['target'])} 属于已提交内容或既有权威源。"
-            f"先调用 revision-governor（phase=plan），再用 revision_guard.py plan 生成 "
-            f"{safe_rel(root, manifest_path)}；不得只改单章而跳过关联项检查。"
-        )
+def _outline_is_empty(file: Path) -> bool:
     try:
-        manifest_bytes = manifest_path.read_bytes()
-        manifest = json.loads(manifest_bytes.decode("utf-8"))
-    except (OSError, UnicodeError, json.JSONDecodeError):
-        return f"⛔ 修改事务被拦截：{safe_rel(root, manifest_path)} 无法解析。修复或重新生成活动修改清单后再写。"
-    if (
-        not isinstance(manifest, dict)
-        or manifest.get("schema_version") != 1
-        or not isinstance(manifest.get("change_id"), str)
-        or not isinstance(manifest.get("changed_files"), list)
-    ):
-        return (
-            f"⛔ 修改事务被拦截：{safe_rel(root, manifest_path)} 缺少有效 "
-            "schema_version/change_id/changed_files；请重新运行 revision_guard.py plan。"
-        )
-    approved = False
-    stamp_path = manifest_path.parent / "active.approved.json"
-    try:
-        stamp = json.loads(stamp_path.read_text(encoding="utf-8"))
-        approved = (
-            isinstance(stamp, dict)
-            and stamp.get("schema_version") == 1
-            and stamp.get("status") == "PASS"
-            and stamp.get("change_id") == manifest.get("change_id")
-            and stamp.get("manifest_sha256") == hashlib.sha256(manifest_bytes).hexdigest()
-        )
-    except (OSError, UnicodeError, json.JSONDecodeError):
-        approved = False
-    if approved:
-        if not info["prior_canon"]:
-            return None
-        return (
-            f"⛔ 修改旧内容被拦截：活动事务 {manifest['change_id']} 已验收关闭，不能复用旧批准继续改 "
-            f"{info['active_relative']}。请重新调用 revision-governor（phase=plan）并生成新的 active.json。"
-        )
-    if info["active_relative"] not in manifest["changed_files"]:
-        return (
-            f"⛔ 计划外修改被拦截：{info['active_relative']} 不在活动事务 {manifest['change_id']} 的 "
-            "changed_files 中。先让 revision-governor 重算影响链并重新生成 active.json；"
-            "事务未关闭前也不得穿插正常续写。"
-        )
-    return None
+        text = file.read_bytes().decode("utf-8")
+    except (OSError, UnicodeDecodeError):
+        return False
+    if text.startswith("\ufeff"):
+        text = text[1:]
+    body = "".join(re.sub(r"^[ \t]*#+", "", line) for line in text.split("\n"))
+    return len(re.sub(r"[ \t\r\n\f\v\u3000]", "", body)) < _OUTLINE_MIN_CHARS
 
 
 def prose_block_reason(root: Path, abs_path: Path) -> str | None:
@@ -1693,14 +1344,26 @@ def prose_block_reason(root: Path, abs_path: Path) -> str | None:
     outline_dir = book_dir / "大纲"
     found = False
     if not exists:
+        outlines: list[Path] = []
         if outline_dir.is_dir():
-            for candidate in outline_dir.iterdir():
-                fm = re.match(r"^细纲_第0*(\d+)章.*\.md$", candidate.name)
-                if fm and fm.group(1) == num:
-                    found = True
-                    break
+            outlines = sorted(
+                (c for c in outline_dir.iterdir()
+                 if (fm := re.match(r"^细纲_第0*(\d+)章.*\.md$", c.name)) and fm.group(1) == num),
+                key=lambda c: c.name,
+            )
+        found = bool(outlines)
+        # 同章有多份细纲（补零差异/带标题）时任一份写了内容就放行（文案与 JS core 逐字一致）。
+        if found and all(_outline_is_empty(c) for c in outlines):
+            return (
+                f"⛔ 写正文被拦截：第 {num} 章的细纲（{safe_rel(root, outlines[0])}）是空的"
+                f"（不计 # 号和空白不到 {_OUTLINE_MIN_CHARS} 字）。先按 story-long-write 单章流程把细纲写完整"
+                "（这章发生什么、主角做什么选择），再写正文。"
+            )
         if not found:
-            return f"⛔ 写正文被拦截：第 {num} 章缺少细纲（{safe_rel(root, outline_dir)}/细纲_第{num}章.md）。先按 story-long-write 单章流程补建细纲再写正文。"
+            # 文案与 JS core 逐字一致：shell 变量展不开时仍拦，但如实说路径没解析出来。
+            if UNEXPANDED_SHELL_VAR.search(safe_rel(root, abs_path)) and not book_dir.exists():
+                return f"⛔ 写正文被拦截：写入路径含未展开的 shell 变量（{safe_rel(root, abs_path)}），守卫无法确认对应细纲。改用字面项目路径（如 书名/正文/第{int(num):03d}章_标题.md）重新写入。"
+            return f"⛔ 写正文被拦截：第 {num} 章缺少细纲（{safe_rel(root, outline_dir)}/细纲_第{int(num):03d}章.md）。先按 story-long-write 单章流程补建细纲再写正文。"
     checkpoint_issue = tracking_checkpoint_issue(
         book_dir,
         require_state=True,
@@ -1710,7 +1373,7 @@ def prose_block_reason(root: Path, abs_path: Path) -> str | None:
         return f"⛔ 写正文被拦截：{safe_rel(root, book_dir)} 的{checkpoint_issue}。"
     if exists:
         return None
-    # 欠账门（无状态）：写第 N 章（首建）前，上一章有未清毒句式时先清再写。
+    # 欠账门（无状态）：写第 N 章（首建）前，上一章有未清毒句式且未标「去味:跳过」豁免时先清再写。
     # 判据现算自上一章文件本身，不落任何状态文件；找不到上一章/读取失败一律放行（宁可漏拦不可误伤）。
     # js↔py 文案由 check-hook-regex-sync.sh 锁同步，判定由 test-prose-net-parity.sh Part E 锁 parity。
     prev_num = int(num) - 1
@@ -1735,36 +1398,18 @@ def prose_block_reason(root: Path, abs_path: Path) -> str | None:
                 prev_text = prev_file.read_text(encoding="utf-8", errors="replace")
             except OSError:
                 prev_text = None
-            if prev_text is not None:
-                # 中文语言漂移不是去 AI 味风格取舍；去味跳过标记不得豁免，确需保留只走精确白名单。
-                language_hits = [
-                    record for record in language_leak_records(
-                        prev_text, read_deslop_whitelist(root, prev_file)
-                    ) if record["blocking"]
-                ]
-                if language_hits:
-                    shown = [record["finding"] for record in language_hits[:6]]
-                    more = len(language_hits) - len(shown)
-                    reason = (
-                        f"⛔ 写正文被拦截：上一章（{prev_file.name}）有 {len(language_hits)} 处未清中文语言漂移欠账，"
-                        f"先改成中文再写第 {num} 章；确需保留的外语逐项写入项目根 .deslop-whitelist 后重试。\n"
-                        + "\n".join(shown)
-                    )
-                    if more > 0:
-                        reason += f"\n（另有 {more} 处，请执行正文确定性扫描查看全部命中）"
-                    return reason
-            if prev_text is not None:
-                hits = [ln for ln in toxic_phrase_findings(prev_text) if ln.startswith("第")]
+            if prev_text is not None and not _has_deslop_skip_marker(prev_text):
+                hits = [ln for ln in toxic_phrase_findings(prev_text, load_style_whitelist(prev_file)) if ln.startswith("第")]
                 if hits:
                     shown = hits[:6]
                     more = len(hits) - len(shown)
                     reason = (
                         f"⛔ 写正文被拦截：上一章（{prev_file.name}）有 {len(hits)} 处未清毒句式欠账，"
-                        f"先清零再写第 {num} 章；毒句式欠账必须改写清零，正文不得添加 HTML 豁免标记。\n"
+                        f"先清零再写第 {num} 章；用户显式豁免时在上一章标题行下加 <!-- 去味:跳过 --> 后重试。\n"
                         + "\n".join(shown)
                     )
                     if more > 0:
-                        reason += f"\n（另有 {more} 处，完整扫描：node <skill>/scripts/check-ai-patterns.js --check 上一章文件）"
+                        reason += f"\n（另有 {more} 处，{toxic_rescan_hint(prev_file)}）"
                     return reason
     return None
 
@@ -1772,7 +1417,7 @@ def prose_block_reason(root: Path, abs_path: Path) -> str | None:
 def pre_tool_prose_guard(obj: dict[str, Any]) -> None:
     root = project_root()
     for path in target_paths_from_hook(obj):
-        reason = revision_block_reason(root, path) or prose_block_reason(root, path)
+        reason = prose_block_reason(root, path)
         if reason:
             emit({
                 "hookSpecificOutput": {
@@ -1989,7 +1634,7 @@ def compact_summary(event: str) -> None:
 
 def stop_event() -> None:
     # Codex 无 PostToolUse，正文内容网在回合结束的 Stop 事件兜底：对本回合 git 改动过的正文
-    # 复扫硬信号（截断/拒绝语/工程词/中文语言漂移/复读）。非阻塞、无发现静默；解析失败一律 {continue:True}。
+    # 复扫硬信号（截断/拒绝语/工程词/复读）。非阻塞、无发现静默；解析失败一律 {continue:True}。
     # Stop hooks require JSON on stdout.
     try:
         root = project_root()
@@ -1999,10 +1644,7 @@ def stop_event() -> None:
                 text = abs_path.read_text(encoding="utf-8")
             except Exception:
                 continue
-            findings = prose_net_findings(text, read_deslop_whitelist(root, abs_path))
-            wc = _wordcount_finding(abs_path, text)
-            if wc:
-                findings.append(wc)
+            findings = prose_net_findings(text, load_style_whitelist(abs_path), toxic_rescan_hint(abs_path))
             if findings:
                 blocks.append(f"=== {safe_rel(root, abs_path)} ===\n" + "\n".join(findings))
         if blocks:

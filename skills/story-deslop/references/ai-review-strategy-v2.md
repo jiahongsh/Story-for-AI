@@ -1,6 +1,8 @@
 # AI 审查策略 v2｜正样本校准 + 反向 Gate
 
-> **v2｜2026-11-11｜权威副本：项目内 `skills/story-deslop/`**，用户级 skill 副本见 §6。
+> **v2｜2026-11-11｜权威副本：项目内 `skills/story-deslop/references/`**，用户级 skill 副本见 §6。
+>
+> **v2.1｜2026-11-11 16:00｜本副本已按 oh-story v0.10.3 重新整合**（当日技能包升级曾覆盖上午的 v2 挂接，现全部重挂）。与 v0.9 旧版的差异：`language_gate.js`、`check-style-hygiene.js` 已被上游退役，确定性硬门只剩 `check-ai-patterns.js`（6 类高置信句式不变）+ `check-degeneration.js`；`banned-words.md` 上游已改为「词句信号索引」（语境复核制），无需再降级；`quality-checklist.md` 已退役，`de_ai_v2` 精神并入 `story-review/references/quality-rubric.md`。
 >
 > **适用范围**：`/story-deslop` 检测与润色、`/story-review` 的文字自然度／对话质量判定、以及任何以「AI 味」为名的正文回炉。
 >
@@ -115,19 +117,23 @@ Gate H 复核须改用**全部引号对**（`re.findall(r'“([^”]*)”')`）�
 
 ## 6. 权威副本与执行路径（重要）
 
-**执行审查一律以项目版为权威**（用户级副本已于 12:29 同步至同一版本，但插件升级可能重置，故仍以项目版为准）：
+**执行审查一律以项目版为权威**（用户级副本已于 12:29 同步至同一版本，但插件升级可能重置，故仍以项目版为准）。v0.10.3 起的执行路径（从本 skill 目录执行，正文参数用绝对路径）：
 
 ```bash
-node skills/story-deslop/scripts/language_gate.js <正文>
-node skills/story-deslop/scripts/check-style-hygiene.js --check --fail-on=blocking <正文>
-node skills/story-deslop/scripts/check-ai-patterns.js --check --fail-on=blocking <正文>
-node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --fail-on=blocking <正文>
+node scripts/check-ai-patterns.js --check --fail-on=blocking <正文>
+node scripts/check-degeneration.js --check --language=zh --fail-on=blocking <正文>
+node scripts/normalize-punctuation.js <正文>   # 仅整份文件完整去味的确定性标点收尾
+python scripts/prose_metrics.py <正文>          # 句长/节奏实测（供 Gate I 长短落差）
+python scripts/voice_profile.py <正文>          # 内部声音画像（accepted-voice-profile 协议）
 ```
+
+> `language_gate.js` 与 `check-style-hygiene.js`（表情/颜文字/标点堆砌/不可见字符拦截）已随上游 v0.10.0 精简退役；其防线由 `check-degeneration.js` 的工程词泄漏检测与 `normalize-punctuation.js` 承接，语义层靠 Gate H/I 人工复读。若在旧副本里看到这两个脚本名，那是 v0.9 残留。
 
 | 副本 | 状态 |
 |---|---|
-| `skills/story-deslop/scripts/` 与 `skills/story-review/scripts/` | **项目版，权威**，`check-ai-patterns.js` SHA `17ef45f0…`，两者字节一致 |
-| `C:/Users/jia/.workbuddy/skills/story-deslop/` | **✅ 已同步（2026-11-11 12:29）**：7 份旧文件按项目版覆盖、21 份缺失文件补齐，现 **28/28 文件 SHA-256 与项目版逐份一致**；用户级 `SKILL.md` 已含 5 个报告必填字段与 v2 策略指针 |
+| `skills/story-deslop/`（项目版） | **权威**。脚本为上游 v0.10.3 版（`check-ai-patterns.js` SHA `fac1d826…`，6 类硬门句式与 17ef45f0 一致）；`accepted-voice-profile.md`、`pattern-governance.md`、`voice_profile.py`、`prose_metrics.py` 为本策略专属，自 v0.9 项目版原样保留 |
+| `.workbuddy/skills/story-deslop/`（WorkBuddy 项目级镜像） | 随项目版同步（2026-11-11 16:00） |
+| `C:/Users/jia/.workbuddy/skills/story-deslop/` | 用户级副本，WorkBuddy 插件管理，升级可能重置；以项目版为准 |
 
 **历史问题回顾**：此前用户级副本仅 7 个文件、与项目版 0 个一致，缺 `language_gate.js`、`check-style-hygiene.js`、`voice_profile.py`、`prose_metrics.py` 等 21 份；`@skill:story-deslop` 用它审三章得到「完全零输出」，**不是文本干净，是尺子没装全**。同步后实测：用户级 `language_gate` PASS、`style-hygiene` PASS、`check-ai-patterns` 正常报 info + 功能性 advisory、`voice_profile.py` 可用（`not_configured` 属正常）。
 
@@ -137,23 +143,25 @@ node skills/story-deslop/scripts/check-degeneration.js --check --language=zh --f
 
 ---
 
-## 7. 与既有文件的关系
+## 7. 与既有文件的关系（v0.10.3 版）
 
 | 文件 | 关系 |
 |---|---|
 | `references/pattern-governance.md` | 三类规则、误杀边界、模式晋级门**继续有效**；v2 把"命中≠AI"提为执行顺序 |
 | `references/accepted-voice-profile.md` | 内部画像协议继续有效；外部尺子不得混入 |
-| `references/banned-words.md` | 已降级为语境复核，仅 ★★★★★ 硬禁 |
-| `SKILL.md` Phase 1/2、使用场景 | 已按 §5 加必填字段与"只检测也输出反向 Gate" |
-| `skills/story-review/references/quality-checklist.md` | `de_ai` 策略已改为 `de_ai_v2`（不再"替换禁用词、改写句式"） |
-| `skills/story-review/references/quality-rubric.md`、`rubrics/fanqie.md` | 加 v2 指针；评分维度不变 |
+| `references/banned-words.md`（v0.10.3 改名「AI 味词句信号索引」） | 上游已整体改为语境复核制信号表，v2 降级原则已被吸收；`not-is-comparison`（即「不是A而是B」）仍是脚本唯一对应的 6 类硬门句式 |
+| `story-deslop/SKILL.md` Phase 1/2 | 已挂正样本校准、反向 Gate H/I 与报告必填字段；只检测模式同样输出 Gate 结果 |
+| `skills/story-review/references/quality-rubric.md` | 「对话质量」看 Gate H、「文字自然度」看 Gate I；评分维度不变 |
+| `skills/story-review/references/rubrics/fanqie.md` | 平台表 advisory only，AI 味判定须另跑校准与 Gate |
+| 旧 `quality-checklist.md` 的 `de_ai_v2` 行 | 该文件 v0.10.3 已退役，精神并入 quality-rubric 与本文件 §3 判定优先级 |
+| 旧 `language_gate.js` / `check-style-hygiene.js` | v0.10.0 起退役，见 §6 |
 | `他们不是人/设定/角色声线节奏卡.md` / `都市异能正文风格卡.md` v2 | Gate H/I 的判定依据；项目内挂接见风格卡 §九 |
 
 ---
 
 ## 8. 验收（本策略落盘时）
 
-- 校准数据见 §0，可复现口径见各列定义；**本轮不改任何正文、不改脚本 blocking 规则**。
+- **v2.1 重整合验收（2026-11-11 16:00）**：技能包升级到上游 v0.10.3（agents_version 42）时上午的 v2 挂接被覆盖；现已在 v0.10.3 上全部重挂——`ai-review-strategy-v2.md`（本文件）、deslop SKILL.md Phase 1/2 挂接、quality-rubric.md 与 fanqie.md 指针、4 份 v2 专属文件（accepted-voice-profile / pattern-governance / voice_profile.py / prose_metrics.py）恢复，并镜像至 `.workbuddy/skills/`。`check-ai-patterns.js` 采用上游 v0.10.3 版（SHA `fac1d826…`），6 类硬门句式与旧版一致，blocking 口径不变。校准数据见 §0，可复现口径见各列定义；**本轮不改任何正文、不改脚本 blocking 规则**。
 - 不改 `state_revision`（仍 275）；100-103 锁定区不动。
 - 挂接四处 + 项目侧一处指针：`story-deslop/SKILL.md`、`story-review/quality-checklist.md`、`quality-rubric.md`、`rubrics/fanqie.md`、`设定/都市异能正文风格卡.md` §九。
 ### 示范重判（001-003，证明结论会变）
