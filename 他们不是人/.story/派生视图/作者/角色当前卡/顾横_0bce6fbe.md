@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 29,
-  "last_committed_chapter": 23,
+  "state_revision": 31,
+  "last_committed_chapter": 25,
   "range": [
     1,
-    23
+    25
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "6d0df64ccb610dcd353777527b33730ed0f1ccb1666582f74fb5a70672035400"
+      "sha256": "555d1ad36694e864a1fafa6bbef7c46e62cfdc6e65574a9a1b623b65574cdc1e"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -112,6 +112,14 @@
       "sha256": "83a067507028d533a88d73ec50b60ea80fd90d592238c4c8cfc7b66293299110"
     },
     {
+      "path": "正文/第024章_好一对四阶电弧_正好点火.md",
+      "sha256": "34ffce18e7e8ba5554c5ced06731e84d927369cbd3fd722ef38ec557bf26aa68"
+    },
+    {
+      "path": "正文/第025章_挖空巨钟的人_泥印还没干.md",
+      "sha256": "1f7bc61d145d1d7ea40607acea0b223ebbab2def6296c8f7a99cbe6f2afc667c"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -202,22 +210,30 @@
     {
       "path": "追踪/逐章记录/第023章.md",
       "sha256": "44905f6b265f06907820cd352fe0d1754f3aff9293f918473ca5d5933832fccb"
+    },
+    {
+      "path": "追踪/逐章记录/第024章.md",
+      "sha256": "1fc1ff975bb040cd4b69bd2bddd060a1c046268d688b949938a8d47dbccf022b"
+    },
+    {
+      "path": "追踪/逐章记录/第025章.md",
+      "sha256": "a5155e3455eea050da7d02d6eeb05946d62a50ec829cbf84d1982fa0c57329ee"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第23章状态）
+# 顾横 当前卡（第25章状态）
 
 - identity：剥壳人第二行动组队长，姜霁老搭档兼暗线盟友
-- location：城北保密站及二组外围通讯位
-- goal：护死老陈老郭徐正安全口供，同时提醒姜霁提防今晚白塔高阶机械清理合围与身边「户籍空白」的可疑小子
-- state：安全接走证人却发现西区全路已被白塔封死，因在暗网及二十年户籍底册里翻遍查无「镜辞」而厉声警告姜霁小心
-- abilities_resources：双管重霰弹枪；剥壳人第二行动组兵权；安全站保人权限与加密电台主控
-- relationships：全力保护老搭档姜霁，但同样受第3格户籍清零影响对镜辞视若无源幽灵
-- knowledge：白塔调出高阶机械清理序列抢今夜清平东巷，东巷表铺七年来官方名下只有失踪的沈竹
-- open_threads：在外围压住老陈老郭徐正证词链，防备第二卷大风暴降临
+- location：城北二组外围通讯观测点
+- goal：利用有限兵权竭力外围拖延或接应东巷百姓，并急唤姜霁立刻带人杀回来破局
+- state：眼见白塔机械纵队三点突袭封锁东巷南北口且铺内瞎老人拼命堵门，顶着抗命风险狂砸军绿加密电台呼叫姜霁回救
+- abilities_resources：双管重霰弹枪；剥壳人第二行动组外围兵权与加密通讯台
+- relationships：拼死护下属姜霁与东巷老街坊；仍受第3格效应影响将镜辞视作「无户籍小子」
+- knowledge：下午三点白塔重甲已强围封死东巷南北口强攻钟表行
+- open_threads：第26至30章协助东巷突围及撤民防线
 
 ## 固定性格、声线与历史
 

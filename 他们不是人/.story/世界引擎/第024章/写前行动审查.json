@@ -1,0 +1,801 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 24,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "6d0df64ccb610dcd353777527b33730ed0f1ccb1666582f74fb5a70672035400",
+      "state_revision": 29,
+      "last_committed_chapter": 23
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第024章.md",
+      "sha256": "efc4971ecc361ef125b1b85d8ddb309c72463268c66cacd575924880c71a52bd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "74a216c945692db04bf985af078231d7af54371937975291852bb89931a97fc8",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "399937a24ea85178288004741c2872d7252d1ad051ac7847c785d7e0c1aee8ad",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "943b5a8a22c6139948da799fbe0e8b46c51aa9f0c7b12c637a8f17277dcd9c64",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/陈屿.md",
+      "sha256": "f531c57c05f14596e244c9056cd63585274bef24414358eaea2c6940ba53669d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/世界观/金手指.md",
+      "sha256": "38c7f928fbe4aa5f79abf3b256aad0646ac74a46610d2bcb163267f54a27ab4b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "e969aa95ecbb63b7a40758b9f5a81df2733cc7240d2475d58a8ef89e77056fd1",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/世界观/外物体系.md",
+      "sha256": "518e40bd534230a4fc9bd5ba0be2992c76a2cd2957c574314be8bc083ad0e6d2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "设定/世界观/地理.md",
+      "sha256": "a7c6dbcd0951c1e6c24e3c39a9aff602a5c124a4e4bb833de31af6872cd32ddc",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC10",
+      "path": "设定/势力/壳巢与恒泰设施.md",
+      "sha256": "10440e40576ee6aedd6247a862323f5cbe5b6ff6027dfb06404404c7686f0c20",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC11",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC12",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "d700d9302492f7b1e802a3eee82ae18435fdccd85cf4e1159a6a0a9a0bc66a8d",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_CY",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "借一对强接上肩的四阶锯齿机械电弧铜臂在三尺无栏铁桥上劈碎三人雪耻，被拆双臂后拉响巨钟手动暗阀并亮出直连母钟金线拖东巷陪葬",
+      "without_protagonist": "既已生吃死士并靠胸前共生金线暗挂巨钟副核，也会独据外井基座清点收获、筹备今晚22:17并网清盘",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC12",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "直面换臂陈屿与沈竹断字壳盖兼湿印的双重高潮对撞。"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "死死顶死三尺窄桥正面抗住蓝电劈斩，用守钟人老火药饼迎着敌方电弧炸崩陈屿肩窝黑金线缝线替后排撕出胜机",
+      "without_protagonist": "哪怕独自遭遇换臂陈屿照样拿实心断钢配老火药饼往老裁缝肩缝里同归于尽狠砸",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "自己浑身是血躲在黑暗里替旧街挡刀"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "严守左翼石柱射界精确省打四十发银芯穿甲弹专盯陈屿肩窝黑金线软缝与悬垂残臂，配合镜辞一举扯废对方四阶新臂",
+      "without_protagonist": "以一己之力卡住窄桥左侧石柱盲区照样专点机械缝线接头与阀杆掩护退路",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC12",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "读者见姜霁看清抹除八次实录彻底站回镜辞背后"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "绝不拧动仅余三格的旧怀表保住东巷最后两人记忆，靠表蒙与余火反光三秒照缝抓住右肩液压死角，以淬火钢倒钩硬扯陈屿四阶铜臂并紧追压上巨钟基座",
+      "without_protagonist": "孤身面对换臂陈屿亦会趁火光与水洼反光拆找接缝滞隙、拎加焊钢钩重锤抢近身拆肩",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC12",
+          "start_line": 29,
+          "end_line": 29,
+          "quote": "直面换臂陈屿与沈竹断字壳盖兼湿印的双重高潮对撞。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "零号母表外井独木铁桥西端桥面及石柱左翼",
+      "story_time": {
+        "label": "第四日午后两点四十五分至五十分",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_CY",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "挥动一对爆闪蓝白消磁电弧的四阶锯齿铜刃踏上窄桥暴劈压顶，强行利用无栏杆三尺狭窄桥面封死三人闪避余地",
+          "gates": {
+            "knows": "手中刚接上的白塔四阶机械电弧铜臂自带大面积防弹护壳与高圧锯刃电流，窄桥容不下双人并肩躲闪",
+            "wants": "靠正面重火力兼高频电弧瞬间砸垮前排芽与镜辞格挡，顺势横推清光三人",
+            "fears": "被后方那名熟悉外勤战术的女人反复拿穿甲弹点烂尚未长熟的双肩黑金线缝口",
+            "capability": "四阶机械电弧臂爆发力远胜肉身且刚缝通供能线路，前臂护板能磕飞正面常轨弹头",
+            "no_plot": "断爪逃命多时后终于靠死士装备拼回绝强正面对砍资本，占着高空独木桥一寸宽地利不可能缩在后头挨枪",
+            "costs": "双肩刚缝上去的新肉承受重刃震荡不断崩血渗黑油，每次爆出满载蓝色电弧都会剧烈抽搐",
+            "consequences": "蓝白高压电火砸上铁桥震麻前排芽并率先抢出凶险死战格局"
+          },
+          "capacity": {
+            "resources": [
+              "白塔四阶机械电弧铜臂（一对锯齿刃）",
+              "消磁高频电弧护甲"
+            ],
+            "permission": "窄桥正面重火力抢攻手",
+            "limits": "刚以粗黑金线强接不久，双肩接口嫩肉防弹极弱且电弧高频外泄无法收放细微",
+            "evidence_refs": [
+              "SRC5",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "一照面压跨前排格挡逼退三人坠桥",
+            "success_guaranteed": false,
+            "failure_path": "频闪外泄的电弧同时会变成极不稳定明火引信并暴露肩缝软点",
+            "opposition": "前排芽拼死格挡与左侧姜霁精准点射牵制"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "反手把剥自死士的**一对白塔四阶制式机械电弧铜臂**（小臂外缘带尺半长锯齿铜刃，可爆闪淡蓝消磁电弧）强行用粗黑金线接回血肉肩窝，在三十米零号外井底座独木铁桥正中堵截三人展开决死拼杀。",
+              "access": "memory",
+              "available_chapter": 23,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第22至23章亲自截杀先遣死士剥臂缝合于身并已劈步扑过窄桥中央",
+              "boundary": "自恃四阶重臂碾压土工具与轻武器，毫不知芽兜里藏着干燥硫磺老火药饼"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JJ",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "从石柱左翼稳定点射四发银芯穿甲弹先擦破盾壳后直咬陈屿右肩肿胀黑金线接头，耗至余约三十六发后瞬缩柱后避开反扫锯风",
+          "gates": {
+            "knows": "第22章刚见过黑金线缝死吊尸肩窝的切口，手头只有约四十发银芯穿甲弹必须省打在最嫩的缝肉线上",
+            "wants": "一轮点射炸烂陈屿右肩新缝线并打乱他双刃合围节奏，掩护芽免遭电弧连续重压",
+            "fears": "前排窄桥失守让陈屿扑到三米内把三人堵进石台死角",
+            "capability": "手握约四十发银芯弹及精准近距半自动速射手法，背靠巨大石柱可缩身避跳弹与电弧风压",
+            "no_plot": "作为刚重归信任的一线老牌特勤枪手，看到敌手左臂右臂全是护甲而唯独肩窝流着黑血缝金线，不拿精准短点打肩窝才是业余",
+            "costs": "实弹打掉四发（余约三十六发），同时枪火位置彻底暴露引来陈屿斜刃扫击石柱",
+            "consequences": "实打实撕裂陈屿右侧黑金线软肉逼出油血并制造左刃急挡空当"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪（40发银芯穿甲弹，本轮消耗4发后余约36发）",
+              "左翼岩柱掩体"
+            ],
+            "permission": "左翼自由瞄准压制火力位",
+            "limits": "四阶机械铜护盾可挡斜飞弹头，必须抢肩缝侧角",
+            "evidence_refs": [
+              "SRC3",
+              "SRC12"
+            ]
+          },
+          "outcome": {
+            "intent": "先伤其新缝肩接口以解前排窒息压迫",
+            "success_guaranteed": false,
+            "failure_path": "四阶臂格挡反应极快可能遮住半个肩口且引发横向反扑",
+            "opposition": "厚重四阶机械臂护盾与高频消磁闪光干扰"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "彻底放下疑忌重新把左翼枪线与后背完整交回镜辞（当前消音手枪余约四十发银芯穿甲弹）",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "见A1陈屿双刃劈向窄桥西端瞬间瞄清之前锁死的黑金线肩口直接点射",
+              "boundary": "清楚子弹只能破肩部接缝难正面轰断四阶主铜臂，须待芽与镜辞制造更大破甲缺口"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_YA",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "用实心断钢硬架住第一记锯刃、任蓝电震麻焦焦左肩渗血不退半寸，随即抓出一整块守钟人陈年硫磺老火药饼双手搓碎迎着陈屿挥来的左臂电弧狠撒引爆",
+          "gates": {
+            "knows": "第21章兜里装了守钟人两块极其干燥的硫磺老火药饼，刚才已用微小碎粉验过通道里干湿度足够起燃，眼前这老狗挥刀时四阶电弧火星噼啪四溅正是现成打火机",
+            "wants": "绝不在三尺铁桥上跟两副铁臂拼蛮力消耗，当面用他最得意的电弧替自己点爆那块老火药饼炸开左肩缝口",
+            "fears": "自己左肩电弧烧伤兼死锁阵痛若再多挨两刀就要撑不住跌桥，更决不允许逼镜辞摸口袋掉到第 1 格",
+            "capability": "手攥近两整块守钟人硫磺火药饼（当场耗去整 1 块，仍留近 1 整块），紧贴面前的近身距离确保药粉铺满对方左臂风口",
+            "no_plot": "一个狠辣到自己伤透都要抢死前手、怀里正好揣着爆破药饼而对面正拿滋滋冒电花的铁爪子朝脸砍过来的战斗狂，不往电花堆里糊火药才叫降智",
+            "costs": "爆炸热浪擦脸掀退自己兼震裂左肩灼泡，彻底消耗掉一块老火药饼且自己也会短瞬耳鸣眼花",
+            "consequences": "猛烈橙白火光与硫磺气浪正面炸烂陈屿左肩黑金线缝线，逼他整条左四阶臂垂垮冒烟失灵，并造出耀眼火光反光场"
+          },
+          "capacity": {
+            "resources": [
+              "守钟人老硫磺火药饼（两整块略缺一角，此击用掉一整块）",
+              "实心断钢条"
+            ],
+            "permission": "零距离前锋诱弧爆破位置",
+            "limits": "爆点距离极近自己同样扛冲击热浪，必须瞬伏护头才不被反震下井",
+            "evidence_refs": [
+              "SRC4",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "以敌之电弧点爆火药饼废其左臂并彻底炸开破甲反击口",
+            "success_guaranteed": false,
+            "failure_path": "潮湿井气或略减部分爆速但狭窄钢桥聚能仍可掀爆肩线缝肉",
+            "opposition": "高频电弧震麻与窄桥无退路的空间反冲"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A1硬接陈屿第一击电弧震得手臂发麻确认电火密集度极高后顺势捏粉迎弧撒出",
+              "boundary": "只图炸碎老狗肩窝新线替镜辞造出贴身窗，未知右侧液压具体藏着零点一秒滞隙"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "余火未熄的三尺独木铁桥西段",
+      "story_time": {
+        "label": "第四日午后两点五十分至两点五十八分",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ",
+        "C_CY"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A4",
+          "actor_id": "C_JC",
+          "order": 4,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "一格怀表不拧、反手拖下发烫芽免受余焰扑伤同时翻出抛光纯银表盘贴近桥板余火与湿铁水洼反光，硬避过陈屿失明般乱劈的两记右锯刃盯满三秒「照缝」看破右肩液压插销0.1秒咬合滞隙",
+          "gates": {
+            "knows": "怀表只有最后三格若拧动卡齿两格便立刻跌进第 1 格连芽与瞎老头一并抹陌路，而一式「照缝」靠表蒙或湿面普通反光盯满三秒就能抓死角且不扣此刻关键卡齿耗格",
+            "wants": "死保最后三格稳稳留在口袋底不花半格，抢着爆炸余火闪亮的三秒窗期内揪出陈屿最后这条完好右四阶铜臂的机械插销死角",
+            "fears": "稍慢一步让嚎叫缓过神来的陈屿单靠右四阶刃死封窄桥逼出不得不拧表冠的下策",
+            "capability": "手持抛光纯银表盘加上地面湿泥火光形成双折射面，多年镇钟秘艺让他在高速闪劈下仍能盯死三秒",
+            "no_plot": "第22章刚借油桶火光三秒不耗格干掉三阶半机械官，手里正握着纯银反光面而面前大爆炸火光闪亮三秒，顺势照缝抓死角是最纯熟不过的老手艺",
+            "costs": "贴地急闪右锯刃时震崩右肋白纱溢血染红前襟，必须极险卡在尺宽边沿扛住气浪",
+            "consequences": "死前残影闪出一具白塔死士惨死喉碎旧影，精准锁定右肩机械臂高圧液压套环 0.1 秒卡死滞隙"
+          },
+          "capacity": {
+            "resources": [
+              "抛光纯银表盘与玻璃表蒙",
+              "第3格旧怀表（严格零消耗不动表冠）",
+              "爆炸余火及铁桥积水反光"
+            ],
+            "permission": "第一式照缝（借镜窥死）零耗格精准侦破权限",
+            "limits": "必须在高危乱劈下硬凑足三秒视线锁定，少半息都不能成像",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "零消耗摸穿四阶机械臂与半壳肩骨间那零点一秒机械死角",
+            "success_guaranteed": false,
+            "failure_path": "若火光灭得过快或被烟尘遮挡反光只能靠姜霁照明弹补光再测",
+            "opposition": "暴怒盲砍的右四阶电弧铜刃风压与滚滚硫磺浓烟"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "通过表蒙、寸镜、玻璃或水面反光盯住接缝满3秒，可强行照出壳吞噬原主时的死前执念残影，并看穿皮囊与核心之间 0.1 秒咬合死角",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "趁A3炸开陈屿左肩瞬间亮起的黄白余火映照铁桥积水与银盘盯满三秒完成照缝",
+              "boundary": "抓死右肩机械插销零点一秒卡滞死角，尚未拔开右臂拆离"
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_JJ",
+          "order": 5,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "紧接镜辞报出的右肩死角信号连补三发银芯穿甲弹，一发打残他吊着乱晃的左肘电路箱两发死锁他右脚铁桥重心（此战合耗约七发余约三十三发），替镜辞清净近身一息",
+          "gates": {
+            "knows": "镜辞三秒照缝眼神定住瞬间就知道他摸到切口了，面前敌手左臂刚炸废右刃还在盲劈，用少量精准点射定住他的下盘与余臂走位就能让近战一击必中",
+            "wants": "拿最小三发代价钉死陈屿变招闪避脚踝与左肘余电干扰，保证镜辞那把带钩重铜锤稳咬插销",
+            "fears": "在烟尘里打偏误伤窄桥上前冲的镜辞或芽，或者让陈屿顺势跳退回巨钟底座逃脱卸臂",
+            "capability": "余约三十六发银芯弹扣发前冷静微调射界，三枪连压耗掉约3发（累计本战约7发，余约33发）",
+            "no_plot": "王牌一线枪手看见近战搭档收起银盘准备硬插死角，不提前拿枪点死对面膝踝与余电肘节岂能叫生死左翼",
+            "costs": "银芯穿甲弹库存清晰削薄至约三十三发，越往后越没有浪射本钱",
+            "consequences": "陈屿下盘膝盖与废肘吃痛一歪，右肩液压关节被迫外掀露在钢钩正前方"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪（再耗3发后余约33发银芯弹）",
+              "烟雾中听声辨位狙击精度"
+            ],
+            "permission": "左翼绝杀前点锁死掩护射击权",
+            "limits": "窄桥仅有三尺宽，射角极苛刻不可连发扫射",
+            "evidence_refs": [
+              "SRC3",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "定死陈屿一刹重心以便镜辞钩拆右机械重臂",
+            "success_guaranteed": false,
+            "failure_path": "烟气若阻碍弹着仍至少能逼陈屿格挡露腋",
+            "opposition": "爆炸余烟遮蔽与桥身铁索摇晃干扰"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 4,
+              "producer_action_id": "A4",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "看见A4镜辞收表翻锤踏步信号后立刻连续三记短点封锁陈屿变向",
+              "boundary": "锁住其膝与左肘位置，实际拆断右臂必须靠镜辞近身硬钩"
+            }
+          ]
+        },
+        {
+          "id": "A6",
+          "actor_id": "C_CY",
+          "order": 6,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "左臂彻底垂瘫起火仍狂嚎挥动仅剩的右四阶电弧铜刃斜切封死桥面，被点歪下盘一息拼着硬吃一锤也要连桥拖人下井",
+          "gates": {
+            "knows": "左肩黑金线已经炸崩报废，脚踝中弹半跪桥板，眼前那个修表小杂种趁零点一秒滞隙贴进了两步内",
+            "wants": "靠四阶铜臂最后一记沉重反劈横扫整段三尺铁桥，就算拆不动也把面前人砍碎或者撞落深井",
+            "fears": "刚抢到手的神装双臂再度让人拆成秃肩变成任人宰割的案板死肉",
+            "capability": "右臂四阶锯刃仍在爆闪蓝白高频弧且重达百斤横扫极猛",
+            "no_plot": "走投无路的凶残疯子哪怕废掉一臂中了腿枪，看到死对头扑进怀里肯定甩尽最后蛮力劈刀",
+            "costs": "反劈落空瞬间彻底把右肩液压咬合空当敞死在镜辞倒钩底下",
+            "consequences": "成全镜辞正面强钩扯臂名场面并沦为双臂全失的彻底败犬"
+          },
+          "capacity": {
+            "resources": [
+              "右四阶电弧机械铜臂",
+              "窄桥背水一战绝望劈斩"
+            ],
+            "permission": "垂死近身狂劈抵抗权",
+            "limits": "左半身失衡兼液压有零点一秒滞空死角，招式已老且无后手变化",
+            "evidence_refs": [
+              "SRC5",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "劈退或同归于尽重创冲近的镜辞",
+            "success_guaranteed": false,
+            "failure_path": "空门大露将被钢倒钩生生拽掉整条右机械铜臂",
+            "opposition": "自身液压滞角被抓破与镜辞清晨新锻的三寸钢倒钩"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 9,
+              "end_line": 9,
+              "quote": "被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 5,
+              "producer_action_id": "A5",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A5吃痛失衡瞬间凭多年搏杀疯狂本能急甩右铜臂横劈桥面拦杀",
+              "boundary": "不知道自己右臂每次满载劈斩交合处有零点一秒液压解锁盲区"
+            }
+          ]
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_JC",
+          "order": 7,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "侧首紧压锯刃腥风抢入一步，倒转八角重铜锤让清晨刚淬火焊好的三寸淬火钢倒钩精确扣死那道0.1秒右肩液压锁口狠拽扯断，轰然甩飞整条四阶机械铜臂坠入三十米黑水深井",
+          "gates": {
+            "knows": "第21章后间拉风箱加焊那截淬火钢倒钩本就是专门用来勾掀白塔机械咬合扣榫，此刻右肩液压正逢 0.1 秒卡顿露缝",
+            "wants": "趁死角闪现一口气扯飞这狗贼第二条抢来的胳膊，让他在绝望破防里彻底失去依仗",
+            "fears": "迟零点一息液压重锁合拢，钢倒钩夹不进卡口反而要跟重臂正面硬拼震断腕骨",
+            "capability": "加焊三寸淬火钢倒钩重铜锤、全身拧腰背发力加上刚抓清的 0.1 秒滞隙定位",
+            "no_plot": "抓住了对方装甲最致命的卡榫插销位置，手里恰好挂着一枚三寸倒钩重锤，任哪位熟手修表匠都不会拿锤面去傻敲铜壳而是一钩扯掉发条轴",
+            "costs": "肩肋崩出血雾且双掌震得皮开肉裂，却完全兑现了后炉锻造手艺的价值",
+            "consequences": "陈屿右四阶电弧机械臂连带残皮金线齐根拽断摔落三十米暗水砸起巨大水柱，彻底沦为光杆残废"
+          },
+          "capacity": {
+            "resources": [
+              "淬火回火八角重铜锤（三寸钢倒钩）",
+              "零点一秒滞角精准目视捕捉"
+            ],
+            "permission": "零距离一击扯臂破防主攻手",
+            "limits": "依赖极窄零点一秒瞬间时机，用全身冲力后拽后重心有一瞬空挡让败犬逃向后桥",
+            "evidence_refs": [
+              "SRC2",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "一钩扯断右机械臂彻底废掉陈屿战力",
+            "success_guaranteed": false,
+            "failure_path": "仅撬歪卡榫仍足够废掉电弧供能并令陈屿惨败失械",
+            "opposition": "四阶机械肩座残留金属韧性与陈屿垂死挣扎冲撞"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 18,
+              "end_line": 18,
+              "quote": "镜辞将第19章弯折三十度的八角重铜锤铁柄烧红回火敲直，并在锤尾加焊一截淬冷油淬火钢倒钩，专用于勾裂高阶半机械铜甲散热缝与传动铜筋",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 6,
+              "producer_action_id": "A6",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "避开A6盲劈弧刃直抢贴身扣进刚由A4锁定的液压滞角一把倒拽卸臂",
+              "boundary": "成功掀翻右铜臂，尚未想到陈屿胸膛里居然还连着一条巨钟暗线"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "location": "漆黑青铜巨钟底座及手动齿轮拉杆台",
+      "story_time": {
+        "label": "第四日午后两点五十八分至三点零两分",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_JC",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A8",
+          "actor_id": "C_CY",
+          "order": 8,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "双臂尽废连滚带爬退死巨钟底座，嘶狂撕烂胸前黑软甲露出直连进巨钟暗槽的一根搏动黑金共生丝，一肩狠狠撞拉死沉的巨钟手动青铜阀门半格企图提前抽干东巷老瞎子陪葬",
+          "gates": {
+            "knows": "自己跌进零号底层靠吞先遣兵之余，早已把胸心最后半条续命暗丝直接接挂在巨钟副槽暗路上；旁边那根手动青铜闸连着顶上两条通往东巷参号的粗铜吸管，只要扯动半格就能强提前引爆今夜22:17并网清盘把这帮杂碎连守钟人一块活抽死",
+            "wants": "死也不让镜辞一伙顺心好过，哪怕拼着自己全身血脉跟着过载撕裂也要先把东巷老头与参号胎拖进提前吸干的死局",
+            "fears": "在无臂惨败后就这么憋屈死在泥油里而镜辞完好无损拿走战果",
+            "capability": "残存腿脚腰肩冲力配合半壳直接挂接在巨钟暗槽里的共生金线传导权",
+            "no_plot": "第18章就能拿胸口焊进分体铜核拼命的怨毒疯子，双臂又被当面硬扯下井眼看必死时，扑过去抓着自己最熟的巨钟总闸拉死陪葬完全符合他暴戾不择手段的本性",
+            "costs": "胸口挂着的共生金线剧烈绷紧泵血甚至随时拉撕自身内脏，且彻底暴露自己拿胸丝偷搭巨钟的死穴与唯一位置",
+            "consequences": "手动阀门卡响移开半格，井心巨钟震颤抽雾兼顶棚双粗铜管骤结冰霜抖鸣，瞬间切入东巷危急倒计时"
+          },
+          "capacity": {
+            "resources": [
+              "巨钟底座手动青铜齿轮拉杆",
+              "胸口直连巨钟暗槽之黑金共生线",
+              "半壳疯狂陪葬拼死力气"
+            ],
+            "permission": "靠长期接管巨钟结构掌握的底层手动阀门位置",
+            "limits": "只撞开半格便卡住巨重青铜棘轮，且丧失双臂后已无力正面抵御任何近身封杀",
+            "evidence_refs": [
+              "SRC5",
+              "SRC10",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "抢前强启东巷抽吸提前引爆东巷和三人灭亡",
+            "success_guaranteed": false,
+            "failure_path": "手动阀门仅开半格留下一息抢救时间，下章将被三人迅速卡齿截断斩杀",
+            "opposition": "背后步步紧追而至的镜辞与姜霁枪线"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC10",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "定于今夜 22:17 将参号外接残端并入零号主洗",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A7被扯落右机械臂跌撞回底座刹那本能扑向最熟悉的手动总阀并以胸丝共振强拉半格",
+              "boundary": "拼死拉动半格泄压提早触发东巷异响，其实自己早已知道巨钟内芯残破靠外管维持却死守不吐直到下章咽气"
+            }
+          ]
+        },
+        {
+          "id": "A9",
+          "actor_id": "C_JC",
+          "order": 9,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "按稳仍纹丝未动第3格怀表疾冲上铁桥直追巨钟底座，猛盯住陈屿胸膛下正搏动抽向巨钟暗槽的那条粗黑金线急刹半步防其拉垮东巷气脉，挥出捉影镊兼重铜锤锁定致命截断位",
+          "gates": {
+            "knows": "刚才进门前终端明写「参号母表外接残端未灭，今夜22:17并入零号主洗」，头顶两条结霜粗铜管猛然抖响说明老狗扯下的半格阀门正在强行提前拉吸东巷瞎老头死守的参号空胎，更看清陈屿胸前那根正往大钟腹腔剧烈泵气的黑色共生金线！",
+            "wants": "绝对不能乱砍乱炸惹动那根还连着东巷抽气线的黑金总丝反震老瞎子，必须贴上去摸准卡榫一并切断陈屿狗命与关闭阀门",
+            "fears": "这一锤直接把连着巨钟暗槽的人体泵砸炸反冲，顺着粗铜管顺流震碎几公里外后间那座本来就缺了摆轮的参号残胎",
+            "capability": "左手银钢捉影镊专剪三阶半壳金线、腰袋三寸淬火钢针兼加焊倒钩重铜锤，且老怀表仍稳保第 3 格零耗损",
+            "no_plot": "一个修了七年老表、深知机械共振传导规矩的镇钟人，眼睁睁看见疯狗胸口连着全城最大铜钟泵血管、头顶通往家里老铺的粗管正嘎嘎狂吸，必然紧急抢追过去卡死节点而非一枪瞎蒙乱爆",
+            "costs": "强忍伤肋冲过无护栏二十余步狂抖铁桥，瞬间面临陈屿借巨钟齿轮逼命的反扑胁迫",
+            "consequences": "将斩杀大结局及拆破巨钟隐秘高悬在全章最扣人心弦的生死瞬间"
+          },
+          "capacity": {
+            "resources": [
+              "银钢捉影镊",
+              "八角重铜锤",
+              "第3格旧怀表（依然不动）"
+            ],
+            "permission": "主攻追击兼镇钟人机械共振判别权",
+            "limits": "刚从三尺桥急奔近底座且巨钟黑水翻起刺骨白雾，绝杀落手必须留在下一瞬（第25章）",
+            "evidence_refs": [
+              "SRC2",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "看破胸线真相后贴身先截断黑金丝再碎核毙敌关闸",
+            "success_guaranteed": false,
+            "failure_path": "陈屿若在最后一瞬拼命撞向转动铜齿轮仍会给止阀造成极高风险",
+            "opposition": "震天巨钟齿轮运转威胁与黑水升腾的浓烈冷白雾遮障"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "银灰旧怀表（11格，第9章末剩5格，第19章退至第3格）",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 8,
+              "producer_action_id": "A8",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "随着A8陈屿扑撞拉杆扯出胸口搏动金线、顶管骤鸣刹那高速冲桥赶抵底座边缘亲眼识破连线险局",
+              "boundary": "看清陈屿拿自己胸口共生金线挂钩巨钟提前抽东巷，尚不知里面十层铜壳背后究竟早被挖空成什么样子"
+            }
+          ]
+        },
+        {
+          "id": "A10",
+          "actor_id": "C_JJ",
+          "order": 10,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "跨出岩柱阴影抢至桥头平端消音手枪稳压余约三十三发银芯弹，枪口牢牢套准正死压阀杆不松手的陈屿腕肘与青铜棘轮只等镜辞避让即扣机击毁",
+          "gates": {
+            "knows": "镜辞急冲上去没立即落锤说明那根连进巨钟暗槽的金丝碰乱了可能牵动东巷老瞎子，强行扫射可能打坏陈屿身旁的阀门反而卡死在开启位",
+            "wants": "死锁住阀门棘轮与陈屿残腿膝关节，防备对方发疯进一步扳到底一格",
+            "fears": "在冷白浓雾弥漫过来前未能控制住底座局势导致全盘抢拆东巷",
+            "capability": "余约三十三发特制银芯穿甲弹在二十来步距可准确穿透阀门铸铜制动 pawl",
+            "no_plot": "作为一名沉着到极点的枪手，见搭档骤停防共振而敌人在扳阀杆，必然举枪稳压等待最佳射角而不盲目抢射坏事",
+            "costs": "在无遮拦铁桥西侧紧追踩上摇晃桥面直接暴露于升起白雾之中",
+            "consequences": "形成第25章一开篇双枪锁棘轮破腿、断钢卡齿、银镊断丝彻底了结陈屿的蓄势杀机"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪（约33发银芯穿甲弹）",
+              "稳定射界跟进"
+            ],
+            "permission": "左翼同步火力锁敌位",
+            "limits": "雾起震剧须压稳呼吸才不致脱靶震损重要机械结构",
+            "evidence_refs": [
+              "SRC3",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "配合镜辞避开共生反噬一枪拆断陈屿拉闸行动力",
+            "success_guaranteed": false,
+            "failure_path": "巨钟齿轮震动加剧会使铁桥产生高频颤抖",
+            "opposition": "剧烈摇晃的铁桥基面与弥散升腾的井底冷白雾"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC10",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "定于今夜 22:17 将参号外接残端并入零号主洗",
+              "access": "planned-earlier-action",
+              "available_chapter": 24,
+              "available_order": 8,
+              "producer_action_id": "A8",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "见证A8陈屿狂笑拉响阀门及顶管结霜暴鸣后立刻明白对方企图提前触发22:17并网杀机，立即押枪上桥锁定",
+              "boundary": "锁定陈屿与阀门制动位置，静候镜辞信号配合开枪收割"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "全章三大战场推进囊括所有在场角色（陈屿、芽、姜霁、镜辞）全部关键决策与交锋变招，精准核算姜霁40->36->33发银芯弹消耗与芽2整块略缺角火药饼用掉1块库存，坚守第3格怀表零耗红线，无漏检任何决定性行动。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "逐场比对第23章桥头石缝悬崖、第24章细纲情节点、角色声线与金手指「照缝」零耗及物证库存账本",
+    "basis": "S1精准写活芽借敌人炫耀的四阶消磁电弧当火种点爆老火药饼炸瘫左肩黑金线；S2严守怀表不掉格红线靠爆炸余火与银盘反光三秒照缝撬断右四阶机械重臂；S3陈屿穷途狂扑巨钟拉动半格手动阀并露出胸前直连暗槽的搏动共生金线，既让爽感爆炸又瞬间转入更揪心的东巷提前危机。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}
