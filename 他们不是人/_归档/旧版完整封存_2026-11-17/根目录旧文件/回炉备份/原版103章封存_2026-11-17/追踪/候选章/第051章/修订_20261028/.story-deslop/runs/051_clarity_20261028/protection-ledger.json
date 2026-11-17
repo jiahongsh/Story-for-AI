@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "auto": {
+    "numbers": [
+      "051章",
+      "502",
+      "302"
+    ],
+    "titled_terms": [],
+    "inline_code": [
+      "502那个，现在还看得见吗？"
+    ]
+  },
+  "manual": {
+    "protected_literals": [],
+    "entities": [
+      "宁州陈骁",
+      "镜辞",
+      "姜霁",
+      "杜经理",
+      "许棠",
+      "陈启明"
+    ],
+    "timeline_facts": [
+      "050当晚宁州陈骁抵达楼下，父亲仍不允许入户。"
+    ],
+    "knowledge_boundaries": [
+      "不认定是谁触发门禁，未见接缝不证明身份。"
+    ],
+    "clues": [
+      "短信来源与两套身份生活均待核。"
+    ],
+    "voice_markers": [
+      "宁州陈骁直接决定去活动室，镜辞不替他决定。"
+    ],
+    "intentional_roughness": [
+      "保留父子冲突与当事人选择的短句。"
+    ]
+  },
+  "allowed_changes": []
+}

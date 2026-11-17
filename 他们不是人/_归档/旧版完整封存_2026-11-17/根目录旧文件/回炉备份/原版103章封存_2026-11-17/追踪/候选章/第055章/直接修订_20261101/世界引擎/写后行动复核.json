@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 55,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "3a5712263487d6d165b76223b2ef837faee2e861da95d270f3e081471c5454eb",
+      "state_revision": 253,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第055章_没处理过.md",
+      "sha256": "d8bb1f3d597c9513d7b4b32975a47b61a4b7d9b1b362ac1743bfa21bca3791b7",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第054章_假通过.md",
+      "sha256": "8979a6d3f32c14967490c0fee4937e849dcd7f91e70a0f5cc8242a8ad0286c04",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "创作运行/2026-10-28_052-065直接修订/准备_054-056/五问_七关与细纲建议.md",
+      "sha256": "dd87f050b184334fe30c35e816eb98239a46cb513ca843bdd67a9a6d57ab963d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "大纲/细纲_第055章.md",
+      "sha256": "57d22c29a48fc90f712e8c9395715bf1c734b5efb3620863d80b02c6af42f5d1",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "大纲/细纲_第056章.md",
+      "sha256": "e0eb590411c68a45a48b67befe76e396b2ea6d41541dc4b54035998be5612416",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "想知道自己的试探有没有回应，保留与公开页分开的来源。",
+      "without_protagonist": "即使没有主线任务，也会查看自己主动发出询问后的回应，而不是销毁记录。",
+      "voice_refs": [
+        {
+          "start_line": 63,
+          "end_line": 63,
+          "quote": "“咨询单留着。那是恒准的单，南岸这摊你们不用管。”",
+          "source_id": "SRC2"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 63,
+          "end_line": 63,
+          "quote": "“咨询单留着。那是恒准的单，南岸这摊你们不用管。”",
+          "source_id": "SRC2"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "想保存能交叉核对的材料，避免把一句自称扩大成全局目标图。",
+      "without_protagonist": "可以随同伴猜测，但过往更正责任使她仍会先说清来源和未知范围。",
+      "voice_refs": [
+        {
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "姜霁用铅笔在照片背面点了一下，点在护栏南段，没点在金属箱上。“就叫南栏。零三那个点的南栏，单子上没有。你要是告诉他们这里残余还在，之后再看有没有新的记录。要是有，也不能光凭时间就说是你的话招来的；要是没有，也不能证明他们手里有没有图。”",
+          "source_id": "SRC2"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "姜霁用铅笔在照片背面点了一下，点在护栏南段，没点在金属箱上。“就叫南栏。零三那个点的南栏，单子上没有。你要是告诉他们这里残余还在，之后再看有没有新的记录。要是有，也不能光凭时间就说是你的话招来的；要是没有，也不能证明他们手里有没有图。”",
+          "source_id": "SRC2"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "次晨六点二十一后查看来信",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "查看次晨收到的匿名回复并对照此前发送记录",
+          "gates": {
+            "knows": "已经准备并发出了南栏试探，收到回复之前不知道对方会答什么，不能预知现场。",
+            "wants": "想知道自己的试探有没有回应，保留与公开页分开的来源。",
+            "fears": "怕一句假话进入未知流程后给别人带来真实后果。",
+            "capability": "能够查看本人手机和既有公开页，不能查询上游内部调度。",
+            "no_plot": "即使没有主线任务，也会查看自己主动发出询问后的回应，而不是销毁记录。",
+            "costs": "等待回复已消耗一夜，不能要求对方解释，更不能由短信补齐未知现场。",
+            "consequences": "回复者只给一句自称未处理，姜霁仍可质疑其含义，商户照常自行营业。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 83,
+              "end_line": 83,
+              "quote": "镜辞打开短信。输入框里打上一行，`03南栏，残余明显。` 拇指停在发送键上方，手心潮了，跟中午按过那次一样。他僵住，没有按下去。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 54,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "原有输入框和试探意图由本人持有；收信动作先取得匿名回复，后续仅据已读原话判断。",
+              "boundary": "已经准备并发出了南栏试探，收到回复之前不知道对方会答什么，不能预知现场。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人手机、打印页及公开存档"
+            ],
+            "permission": "能够查看本人手机和既有公开页，不能查询上游内部调度。",
+            "limits": "等待回复已消耗一夜，不能要求对方解释，更不能由短信补齐未知现场。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "想知道自己的试探有没有回应，保留与公开页分开的来源。",
+            "success_guaranteed": false,
+            "failure_path": "对方不作解释，公开页仍可能遗漏现场变化，推断无法证实。",
+            "opposition": "回复者只给一句自称未处理，姜霁仍可质疑其含义，商户照常自行营业。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "查看来信及昨晚打印页后",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "姜霁",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "将匿名回复、昨晚公开空白页与尚未复查的现场分开陈述",
+          "gates": {
+            "knows": "已看到镜辞读出的回复与昨晚打印页，只知对方用过南栏这个称呼。",
+            "wants": "想保存能交叉核对的材料，避免把一句自称扩大成全局目标图。",
+            "fears": "怕自己的解释再次让未证实推断进入正式记录并误伤他人。",
+            "capability": "可以分类材料和提出限制，没有进入现场或后台确认施工的能力。",
+            "no_plot": "可以随同伴猜测，但过往更正责任使她仍会先说清来源和未知范围。",
+            "costs": "仍需等待更多来源，无法立刻给试探判成成功，亦不能替商户判断实际损失。",
+            "consequences": "镜辞可保留自己的猜想，猫眼只交公开存档，不因她一句话提供内部名册。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 47,
+              "end_line": 47,
+              "quote": "`南栏没处理过。`",
+              "source_id": "SRC1",
+              "access": "planned-earlier-action",
+              "available_chapter": 55,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "原有输入框和试探意图由本人持有；收信动作先取得匿名回复，后续仅据已读原话判断。",
+              "boundary": "已看到镜辞读出的回复与昨晚打印页，只知对方用过南栏这个称呼。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人手机、打印页及公开存档"
+            ],
+            "permission": "可以分类材料和提出限制，没有进入现场或后台确认施工的能力。",
+            "limits": "仍需等待更多来源，无法立刻给试探判成成功，亦不能替商户判断实际损失。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "想保存能交叉核对的材料，避免把一句自称扩大成全局目标图。",
+            "success_guaranteed": false,
+            "failure_path": "对方不作解释，公开页仍可能遗漏现场变化，推断无法证实。",
+            "opposition": "镜辞可保留自己的猜想，猫眼只交公开存档，不因她一句话提供内部名册。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "story_time": {
+        "label": "同次对照后写私人判断",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "镜辞",
+          "order": 3,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "在私人本记录对方可能有安排，不把目标图和现场状态写成已确认",
+          "gates": {
+            "knows": "只掌握匿名原话、昨晚页面和商户门口照片，三者时点不同且均非现场全貌。",
+            "wants": "想继续检验自己的调查是否被利用，同时保全尚未被覆盖的独立来源。",
+            "fears": "怕把一次回应当胜利，反而替未知安排提供错误认证。",
+            "capability": "能记录假设、保存照片和暂不回现场，不能替陌生人制定或查明全部目标。",
+            "no_plot": "可把推断写满，但已有错误反馈代价使他愿意留下暂时无法确认的空白。",
+            "costs": "接受不确定和停止定时打印带来的渠道收缩，不拿空白页抵偿别人的钱。",
+            "consequences": "打印店自行停止定时盯页，猫眼继续只提供公开证据，两家公司仍不能被合并。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 47,
+              "end_line": 47,
+              "quote": "`南栏没处理过。`",
+              "source_id": "SRC1",
+              "access": "planned-earlier-action",
+              "available_chapter": 55,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "原有输入框和试探意图由本人持有；收信动作先取得匿名回复，后续仅据已读原话判断。",
+              "boundary": "只掌握匿名原话、昨晚页面和商户门口照片，三者时点不同且均非现场全貌。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "本人手机、打印页及公开存档"
+            ],
+            "permission": "能记录假设、保存照片和暂不回现场，不能替陌生人制定或查明全部目标。",
+            "limits": "接受不确定和停止定时打印带来的渠道收缩，不拿空白页抵偿别人的钱。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "想继续检验自己的调查是否被利用，同时保全尚未被覆盖的独立来源。",
+            "success_guaranteed": false,
+            "failure_path": "对方不作解释，公开页仍可能遗漏现场变化，推断无法证实。",
+            "opposition": "打印店自行停止定时盯页，猫眼继续只提供公开证据，两家公司仍不能被合并。"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "只重评本次收信后两位判断者的知识范围及表达，未改匿名回复、商户拒绝或猫眼交付，不补造未知回复者的后台选择。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读054已修正文、055差异与056已有未知边界，区分收到的原话和作者结论。",
+    "basis": "匿名回复只证明对方说过，空页只对应其时间和来源；无法证明现场不派人或完整目标图。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第055章/直接修订_20261101/世界引擎/写前行动审查.json",
+      "sha256": "bd6dba1c4e7af30b4e3733b5891fe87729622c876c8a74cffea9ede05f1fb70b"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第055章/直接修订_20261101/candidate.md",
+      "sha256": "84ff584613934211c343e56f210346a246b9d278a60b5619b6bce41f46c35027"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "镜辞读到并保存匿名原话，没有取得工单号或现场说明。",
+        "evidence": [
+          {
+            "start_line": 49,
+            "end_line": 49,
+            "quote": "没有第二句。没有工单号，也没有问他在哪看见的。镜辞把这六个字念出来，姜霁已经在对打印店的最后一页。页还是空的。五金店老板早上发来一张店门照片，卷帘拉到一半，门口没有箱子，照片时间六点零五。"
+          }
+        ],
+        "world_followups": [
+          "现场及真实调度仍未查明，打印店与猫眼各自的权限不因推断扩大。"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "action_ids": [
+          "A2"
+        ],
+        "actual_result": "姜霁将匿名回复与公开页分开，明确现场未复看。",
+        "evidence": [
+          {
+            "start_line": 53,
+            "end_line": 53,
+            "quote": "“回复里用了南栏这个叫法。”姜霁把短信和空白页订在一起。“他只说没处理过。最后一张公开页还是昨晚的空白，现场有没有动，我们没去看。”"
+          }
+        ],
+        "world_followups": [
+          "现场及真实调度仍未查明，打印店与猫眼各自的权限不因推断扩大。"
+        ]
+      },
+      {
+        "scene_id": "S3",
+        "action_ids": [
+          "A3"
+        ],
+        "actual_result": "镜辞只记可能的安排，不再认证完整目标图或自己是验收样本。",
+        "evidence": [
+          {
+            "start_line": 55,
+            "end_line": 55,
+            "quote": "镜辞在私人本上写下：对方可能有自己的安排。他写到一半，笔停住，把“验收”两个字划掉，改成“对照已有记录”。划掉的字还看得见。安排是什么，短信没说；他也不能拿那两个字给自己定身份。"
+          }
+        ],
+        "world_followups": [
+          "现场及真实调度仍未查明，打印店与猫眼各自的权限不因推断扩大。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "F005当前权威已限定未知，此次将正文和旧事件摘要校正到该边界，不新增回收。",
+        "evidence": [
+          {
+            "start_line": 53,
+            "end_line": 53,
+            "quote": "“回复里用了南栏这个叫法。”姜霁把短信和空白页订在一起。“他只说没处理过。最后一张公开页还是昨晚的空白，现场有没有动，我们没去看。”"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "逐句核对改动、冻结行动及F005当前值，检查后续056仍保留未知。",
+      "basis": "只改变推断的确信程度，不改回复原文、发送时刻、公开照片、打印店拒绝及实际费用。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

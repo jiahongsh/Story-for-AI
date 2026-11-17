@@ -1,0 +1,16 @@
+{
+  "run_version": 1,
+  "run_id": "051_clarity_20261028",
+  "status": "applied",
+  "created_at": "2026-10-28T02:27:19.329774+00:00",
+  "project_root": "D:\\code\\stroy\\他们不是人\\追踪\\候选章\\第051章\\修订_20261028",
+  "source_path": "candidate.md",
+  "source_sha256": "20e56e63299c5bc9264c96f4263b5897ddaf6968e81546e50328fc35dfe90f16",
+  "snapshot_file": "source.md",
+  "candidate_file": "candidate.md",
+  "edit_scope": "bounded",
+  "rewrite_intensity": "standard",
+  "issue_density": "light",
+  "applied_at": "2026-10-28T02:27:26.939958+00:00",
+  "applied_sha256": "1c47d5035d76eb38d76565b2d0050af652e3cdf13f0778b77f42477a74cab6ed"
+}

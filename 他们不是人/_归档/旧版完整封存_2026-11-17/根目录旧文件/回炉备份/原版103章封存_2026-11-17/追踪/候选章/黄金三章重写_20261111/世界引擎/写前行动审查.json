@@ -1,0 +1,73 @@
+{
+  "run_id": "黄金三章重写_20261111",
+  "chapters": [
+    1,
+    2,
+    3
+  ],
+  "phase": "prewrite",
+  "mode": "revision",
+  "status": "已落正文-审批PASS-三笔事务已提交",
+  "semantic_change": true,
+  "fallback": "world-gate formal packet -> manual seven-gates + revision_guard（工具 revision 分支自述『修订批准仍由原流程管理』，不留未填模板当凭证）",
+  "actors": [
+    {
+      "name": "镜辞",
+      "knows": "三章原有全部信息；未获得任何新情报",
+      "wants": "先确认自己有没有记错，不给芽扣帽子",
+      "fears": "把习惯差异变成指控；被察觉在观察",
+      "capability": "能翻旧视频、借缺口碗、换角度观察、在维修单写字；不能让相机拍清那道线、不能给异常命名",
+      "no_plot": "会，修表匠对微小错位反复复核是职业习惯",
+      "costs": "疑虑占用注意力；雨天被路人看清位置",
+      "consequences": "维修单五行与取件单签字成为不可撤销记录；观察首次带出被察觉的风险"
+    },
+    {
+      "name": "芽",
+      "knows": "自己的旧习惯与两人过去；不知道镜辞在测试她",
+      "wants": "正常吃早饭、别被盘问",
+      "fears": "被当成需要验真的对象",
+      "capability": "能转碗、能反呛、能结账走人；不能知道接缝或镜辞看见了什么",
+      "no_plot": "会，被反复试探本来就会生气",
+      "costs": "关系里多了一道说不清的别扭",
+      "consequences": "察觉测试后明确『下次想试什么，直接问』，废掉重复习惯测试这条捷径"
+    },
+    {
+      "name": "老陈",
+      "knows": "两人又吵、镜辞淋雨回来、芽提醒过带伞；不知道东桥巷的事",
+      "wants": "收摊前顺口搭两句",
+      "fears": "无",
+      "capability": "能插科打诨、能拉卷帘门；不能知道接缝",
+      "no_plot": "会，旧市场邻居本来就爱搭话",
+      "costs": "多说半句",
+      "consequences": "001/003 各形成一次日常见证，不改变事实"
+    },
+    {
+      "name": "取钟老人",
+      "knows": "楼上小伙子取走挂钟、落下螺丝刀盒、淋雨仰头看对面",
+      "wants": "还东西、顺口问一句",
+      "fears": "无",
+      "capability": "能下楼撑伞递物；不知道二楼有什么",
+      "no_plot": "会，邻居掉工具本来就会送下来",
+      "costs": "淋一点雨",
+      "consequences": "形成 L3 第三方目击证词，无超自然认知"
+    },
+    {
+      "name": "郭老板",
+      "knows": "镜辞一早来翻碗堆、两人吵过",
+      "wants": "做生意图个清净",
+      "fears": "账没人付",
+      "capability": "能递崩边碗、能隔帘子喊话；不知道缺口碗的用途",
+      "no_plot": "会，早餐铺老板本来就嘴碎",
+      "costs": "无",
+      "consequences": "002 提供一次外部打断，功能不变"
+    }
+  ],
+  "note": "三章全文重写仅为文字层；人物知情边界、能力上限、代价与后果均沿用既有正史，未新增人物、道具、设定或正式名词",
+  "approval": {
+    "check": "PASS",
+    "checked_file_count": 21,
+    "conflict_count": 0,
+    "tracking_action": "commit",
+    "state_revision": 275
+  }
+}

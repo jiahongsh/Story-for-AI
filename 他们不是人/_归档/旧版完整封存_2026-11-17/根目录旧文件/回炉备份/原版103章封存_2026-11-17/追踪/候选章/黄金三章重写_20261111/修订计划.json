@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-golden3-full-rewrite-20261111",
+  "summary": "黄金三章按风格卡 v2 与彭湃原著语言质地全文重写；事实骨架/伏笔/beat/现实后果不变，但台词与叙述层全面变更，需按现文重登记逐章记录",
+  "semantic_change": true,
+  "changed_files": [
+    "正文/第001章_钟表行的客人.md",
+    "正文/第002章_先喝汤.md",
+    "正文/第003章_光在发抖.md",
+    "大纲/细纲_第001章.md",
+    "大纲/细纲_第002章.md",
+    "大纲/细纲_第003章.md"
+  ],
+  "affected_entities": [],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    1,
+    2,
+    3
+  ]
+}

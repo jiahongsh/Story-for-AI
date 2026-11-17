@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 58,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "b946b49f20eb9cb6afa578e3f3cbd46d89590d3c7fb3830613d947a0ec34ffcf",
+      "state_revision": 255,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第058章_你为什么不躲.md",
+      "sha256": "d35eeb11ba6137310f110a47c91c535065e6f6f7714520fe844b969ba9ead834",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第057章_同一张脸.md",
+      "sha256": "971b666e42562fb9671ec691e0413bbfb3e443b10f986d5c140e4738563c881a",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第058章.md",
+      "sha256": "936db24bfc87358d50fa4da918af3baeef90b863bd87a0c2d70fb88d2be5052d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-01_057-065审修/第058章/写前依据.md",
+      "sha256": "7f5be372f3e48587c9c9dd6157bbaea804fc9f4d76c7995e1f1066035691e977",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "把谈话约束在现有交接和拦截，不替他人公开个人资料。",
+      "without_protagonist": "即使没有调查，也会在街面摆放私人文件时盖住无关信息。",
+      "voice_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "镜辞的指尖在筐沿上顿住，侧开半步。姜霁把四十和七块五又对了一遍，数字不改，人先去占靠墙那张桌子。她点了美式，十二块，只喝一口，文件夹压在杯垫上。镜辞坐靠街的一张，私人本扣着，写过未见的那一页朝里。掌心还留着上午铁扶手的硌印。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "镜辞的指尖在筐沿上顿住，侧开半步。姜霁把四十和七块五又对了一遍，数字不改，人先去占靠墙那张桌子。她点了美式，十二块，只喝一口，文件夹压在杯垫上。镜辞坐靠街的一张，私人本扣着，写过未见的那一页朝里。掌心还留着上午铁扶手的硌印。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "东口下午两点的公开谈话",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "姜霁",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "用文件夹遮住姓名等内容，只露两份材料标题",
+          "gates": {
+            "knows": "已持有旧件和门禁记录，知道现场是开放桌面，陈屿与无关客人都可能看到纸页。",
+            "wants": "把谈话约束在现有交接和拦截，不替他人公开个人资料。",
+            "fears": "怕路人读到与此问询无关的住户姓名和记录。",
+            "capability": "可以遮挡自己持有的文件，不能强迫陈屿补全身份解释。",
+            "no_plot": "即使没有调查，也会在街面摆放私人文件时盖住无关信息。",
+            "costs": "对方只能看到标题，无法用整页资料逼其认账，问题仍可能遭拒答。",
+            "consequences": "陈屿可继续拒答；他原有的502知情不因遮挡被抹去，路人继续自己的活动。"
+          },
+          "capacity": {
+            "resources": [
+              "本人文件夹、已获准材料、现金和手机"
+            ],
+            "permission": "可以遮挡自己持有的文件，不能强迫陈屿补全身份解释。",
+            "limits": "对方只能看到标题，无法用整页资料逼其认账，问题仍可能遭拒答。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "把谈话约束在现有交接和拦截，不替他人公开个人资料。",
+            "success_guaranteed": false,
+            "failure_path": "对方只能看到标题，无法用整页资料逼其认账，问题仍可能遭拒答。",
+            "opposition": "陈屿可继续拒答；他原有的502知情不因遮挡被抹去，路人继续自己的活动。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 91,
+              "end_line": 91,
+              "quote": "姜霁把签到表的边角拍下来。迟到栏裴亮，十五块，陈屿的签名在上面。她把照片放进恒泰那一袋，恒准的外包夹子仍单独搁着，硬纸还隔在中间。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 57,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已持有旧件和门禁记录，知道现场是开放桌面，陈屿与无关客人都可能看到纸页。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "遮挡公共座位上的无关住户信息；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第058章/直接修订_20261101/世界引擎/写前行动审查.json",
+      "sha256": "a2db14fd697ca48fa56198ca7d6ecd62f9a6de567cbfb84a75f20c1103ec8f16"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第058章/直接修订_20261101/candidate.md",
+      "sha256": "73b5ab2eefc257a114dc9f956627fd62920c9d63ebc4cbdda494f0a5dc4f73fa"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "姜霁实际完成的选择由下列正文原句限定：姜霁把椅子挪近半步，仍坐在自己那张桌上。她从文件夹里抽出两页，一页是南岸旧件的交接联，一页是安平里门口的拦截记录。她用文件夹盖住姓名和其他内容，只露出两页的标题，压在自己的杯垫旁边，没有递到陈屿手里。",
+        "evidence": [
+          {
+            "start_line": 47,
+            "end_line": 47,
+            "quote": "姜霁把椅子挪近半步，仍坐在自己那张桌上。她从文件夹里抽出两页，一页是南岸旧件的交接联，一页是安平里门口的拦截记录。她用文件夹盖住姓名和其他内容，只露出两页的标题，压在自己的杯垫旁边，没有递到陈屿手里。"
+          }
+        ],
+        "world_followups": [
+          "陈屿可继续拒答；他原有的502知情不因遮挡被抹去，路人继续自己的活动。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 47,
+            "end_line": 47,
+            "quote": "姜霁把椅子挪近半步，仍坐在自己那张桌上。她从文件夹里抽出两页，一页是南岸旧件的交接联，一页是安平里门口的拦截记录。她用文件夹盖住姓名和其他内容，只露出两页的标题，压在自己的杯垫旁边，没有递到陈屿手里。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "遮挡公共座位上的无关住户信息。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

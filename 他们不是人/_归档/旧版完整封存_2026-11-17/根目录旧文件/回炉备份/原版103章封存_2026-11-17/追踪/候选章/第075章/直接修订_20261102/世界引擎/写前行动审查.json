@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 75,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "eaeac51b09833797e0475112ed9e2fa566d421ead1ca99978776a85c715c295c",
+      "state_revision": 268,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第075章_不看也收尾.md",
+      "sha256": "7d51c9903ebcbaf1e74580d83dab38608f788b669eafbba6592f4971f8b132fc",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第074章_不是我的履历.md",
+      "sha256": "1fb5621342abd5a2c9fbdbf028c132e99a7dad1c7dfc5f34be1a56f0be52ce32",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第075章.md",
+      "sha256": "40693c8e5cb550cc93d53b253a28b65a4c2dac6d0d6631303eff5466acfb8a35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第075章/写前依据.md",
+      "sha256": "b8cbf73ceb9c56a4ec33f0c61d9299208d101c155cce0932663c38f13b8fe376",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第056章_清理轨迹.md",
+      "sha256": "382869cf7572392a51afcda718c36aa17d820b0a8be036fb8bba97d5fc521777",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "保存维护在无人提供验收时仍继续的事实，同时正常营业。",
+      "without_protagonist": "可以走近问工人，但目前没有接触且不去验收，仍只留实际见到的事，不为凑完整账找人。",
+      "voice_refs": [
+        {
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "“分。”镜辞说，“那是你的活。东口不用你去。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "“分。”镜辞说，“那是你的活。东口不用你去。”",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "早晨公示传来后至晚间保存各自结果",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "仅记录自己见到的收尾及孙立本人告知的退费",
+          "gates": {
+            "knows": "已有公开记录保存方法，今天只在巷口见吊车和收尾照片；侯强未向他提供工钱或车票，不能取得其46元。",
+            "wants": "保存维护在无人提供验收时仍继续的事实，同时正常营业。",
+            "fears": "怕再次被当通过工具，也怕把未取得信息写成事实伤害别人。",
+            "capability": "可观察公开现场和看获准公示，可收孙立本人消息，不能知道陌生工人的私人开销。",
+            "no_plot": "可以走近问工人，但目前没有接触且不去验收，仍只留实际见到的事，不为凑完整账找人。",
+            "costs": "接受不知道全场人的损失，不把自己的维修收入当项目损害的抵销。",
+            "consequences": "侯强独立争补签、付车费及吃饭；这些只向读者展示，不因镜辞没知道就不存在。"
+          },
+          "capacity": {
+            "resources": [
+              "本人手机及私人本、维修工具、店内账款"
+            ],
+            "permission": "可观察公开现场和看获准公示，可收孙立本人消息，不能知道陌生工人的私人开销。",
+            "limits": "接受不知道全场人的损失，不把自己的维修收入当项目损害的抵销。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "保存维护在无人提供验收时仍继续的事实，同时正常营业。",
+            "success_guaranteed": false,
+            "failure_path": "接受不知道全场人的损失，不把自己的维修收入当项目损害的抵销。",
+            "opposition": "侯强独立争补签、付车费及吃饭；这些只向读者展示，不因镜辞没知道就不存在。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 23,
+              "end_line": 23,
+              "quote": "镜辞喉头紧了一下，还是把决定写进私人本。以后先让别人把页面存下来，他再决定出不出门。猫眼留公开页，打印店留纸，他自己不再一发现点就骑过去。写完他把车钥匙又往抽屉里推了推，钥匙本来就没拿出来。",
+              "source_id": "SRC5",
+              "access": "memory",
+              "available_chapter": 56,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "已有公开记录保存方法，今天只在巷口见吊车和收尾照片；侯强未向他提供工钱或车票，不能取得其46元。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "撤去镜辞无来源的侯强损失账，保留工人独立经历和读者认知差；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 54,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "f67225fdc043af05b6d6ab0ee26576d4e71ca883eb02f39d2885c4f84a9598c4",
+      "state_revision": 252,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第054章_假通过.md",
+      "sha256": "b3a54c8615b98aa9da0efdd34ed049523e5f84e9c2e1cf7845bb13070fdac469",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "创作运行/2026-10-28_052-065直接修订/准备_054-056/五问_七关与细纲建议.md",
+      "sha256": "dd87f050b184334fe30c35e816eb98239a46cb513ca843bdd67a9a6d57ab963d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第054章.md",
+      "sha256": "98c6d818b1d4c6e2ee466f784cf41016789be252f624de310a5ff2c540f35bfe",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "镜辞",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "想保住旧咨询线索，又想避免把两套来源混合后泄露调查。",
+      "without_protagonist": "可以只答保留，但急着划清两家关系反而失言，符合紧张时的解释冲动。",
+      "voice_refs": [
+        {
+          "start_line": 63,
+          "end_line": 63,
+          "quote": "“咨询单留着。那是恒准的单，南岸这摊你们不用管。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 63,
+          "end_line": 63,
+          "quote": "“咨询单留着。那是恒准的单，南岸这摊你们不用管。”",
+          "source_id": "SRC1"
+        }
+      ]
+    },
+    {
+      "id": "姜霁",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "想比较虚假反馈后有没有可核的新记录，避免同伴给出新认证。",
+      "without_protagonist": "可以直接猜测目标图，但既有左手误判使她更愿意保留可证与不可证的区别。",
+      "voice_refs": [
+        {
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "姜霁用铅笔在照片背面点了一下，点在护栏南段，没点在金属箱上。“就叫南栏。零三那个点的南栏，单子上没有。你要是告诉他们这里残余还在，他们连夜过去，就是拿你的话去开新的点。他们要是不动，就是自己有图，不靠你的眼睛找活。”",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 81,
+          "end_line": 81,
+          "quote": "姜霁用铅笔在照片背面点了一下，点在护栏南段，没点在金属箱上。“就叫南栏。零三那个点的南栏，单子上没有。你要是告诉他们这里残余还在，他们连夜过去，就是拿你的话去开新的点。他们要是不动，就是自己有图，不靠你的眼睛找活。”",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "恒准售后电话",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "镜辞"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "镜辞",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "接听售后回访时试图只保留咨询单，却失言说出南岸",
+          "gates": {
+            "knows": "只知道来电自称恒准售后，未证实与恒泰同源，手边有两套不同材料。",
+            "wants": "想保住旧咨询线索，又想避免把两套来源混合后泄露调查。",
+            "fears": "怕咨询线索被撤销以及南岸地点被录入不明渠道。",
+            "capability": "能选择自己说什么，不能控制客服记录及对方后续如何行动。",
+            "no_plot": "可以只答保留，但急着划清两家关系反而失言，符合紧张时的解释冲动。",
+            "costs": "南岸已被客服听见，无法把话收回；不知道地点会不会被转交。",
+            "consequences": "客服有自己的回访流程并追问南岸；姜霁可指出口误，不因此确认组织同源。"
+          },
+          "capacity": {
+            "resources": [
+              "本人电话、旧照片和已取得的公开页"
+            ],
+            "permission": "能选择自己说什么，不能控制客服记录及对方后续如何行动。",
+            "limits": "南岸已被客服听见，无法把话收回；不知道地点会不会被转交。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "intent": "想保住旧咨询线索，又想避免把两套来源混合后泄露调查。",
+            "success_guaranteed": false,
+            "failure_path": "对方可拒绝回应，也可能正常更新页面，不能从等待直接推断成功。",
+            "opposition": "客服有自己的回访流程并追问南岸；姜霁可指出口误，不因此确认组织同源。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 63,
+              "end_line": 63,
+              "quote": "“咨询单留着。那是恒准的单，南岸这摊你们不用管。”",
+              "source_id": "SRC1",
+              "access": "observation",
+              "available_chapter": 54,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本章原已接纳场景中本人参与交接和对话；此次只重评受修订影响的选择。",
+              "boundary": "只知道来电自称恒准售后，未证实与恒泰同源，手边有两套不同材料。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "电话后对照照片并讨论未发送试探",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "姜霁"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A2",
+          "actor_id": "姜霁",
+          "order": 2,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "提出向已见工单未覆盖的位置试探，并要求两种结果都保留原因未证",
+          "gates": {
+            "knows": "掌握旧照片、已见工单和公开页面，不知道现场状态及对方完整安排。",
+            "wants": "想比较虚假反馈后有没有可核的新记录，避免同伴给出新认证。",
+            "fears": "怕误把时间先后写成因果，亦怕一次叠加多个变量污染判断。",
+            "capability": "能提出建议、保留页面与约定隔夜观察，没有调度施工的权限。",
+            "no_plot": "可以直接猜测目标图，但既有左手误判使她更愿意保留可证与不可证的区别。",
+            "costs": "等待会错过即时现场信息，假反馈也可能被利用，不能把试验看成必胜。",
+            "consequences": "镜辞仍自主决定发不发，对方与公开流程可能不理会；有无新行均不能单独证明原因。"
+          },
+          "capacity": {
+            "resources": [
+              "本人电话、旧照片和已取得的公开页"
+            ],
+            "permission": "能提出建议、保留页面与约定隔夜观察，没有调度施工的权限。",
+            "limits": "等待会错过即时现场信息，假反馈也可能被利用，不能把试验看成必胜。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "intent": "想比较虚假反馈后有没有可核的新记录，避免同伴给出新认证。",
+            "success_guaranteed": false,
+            "failure_path": "对方可拒绝回应，也可能正常更新页面，不能从等待直接推断成功。",
+            "opposition": "镜辞仍自主决定发不发，对方与公开流程可能不理会；有无新行均不能单独证明原因。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 81,
+              "end_line": 81,
+              "quote": "姜霁用铅笔在照片背面点了一下，点在护栏南段，没点在金属箱上。“就叫南栏。零三那个点的南栏，单子上没有。你要是告诉他们这里残余还在，他们连夜过去，就是拿你的话去开新的点。他们要是不动，就是自己有图，不靠你的眼睛找活。”",
+              "source_id": "SRC1",
+              "access": "observation",
+              "available_chapter": 54,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "本章原已接纳场景中本人参与交接和对话；此次只重评受修订影响的选择。",
+              "boundary": "掌握旧照片、已见工单和公开页面，不知道现场状态及对方完整安排。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "按修订范围只重评镜辞失言和姜霁限定试探解释；客服原有追问及他人未改动行为仍依据原接纳正文，不伪造旧章写前证明。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读054原文、候选差异、053交界和逐章行动依据。",
+    "basis": "客服已经听见南岸，口误必须留下；无论公开页后来有无动作都不能证明完整目标图或施工因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

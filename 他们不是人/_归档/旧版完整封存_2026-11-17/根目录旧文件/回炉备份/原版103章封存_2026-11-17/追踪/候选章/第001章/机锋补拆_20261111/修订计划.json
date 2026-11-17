@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "change_id": "revision-dialogue-punchline-20261111",
+  "summary": "001 开场三处机锋式闭合补拆（方向A续）：拆松手句、老陈自我拆台、芽只逮前半句；纯文风层",
+  "semantic_change": false,
+  "changed_files": [
+    "正文/第001章_钟表行的客人.md",
+    "大纲/细纲_第001章.md"
+  ],
+  "affected_entities": [],
+  "affected_fact_ids": [],
+  "affected_chapters": [
+    1
+  ]
+}

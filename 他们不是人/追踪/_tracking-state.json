@@ -1,219 +1,169 @@
 {
   "book_title": "他们不是人",
   "characters": {
-    "周衡": {
+    "周谨": {
       "abilities_resources": [
-        "维修工具",
-        "旧货市场摊主往来",
-        "邻里可访关系"
+        "三阶半壳视觉记忆残像",
+        "受损白塔剔骨刀",
+        "余下两头二阶猎犬"
       ],
-      "goal": "明日取表。公开生活照常",
-      "identity": "公开生活连续的维修工，长期观察目标，身份结论未知",
+      "goal": "拿下或击杀突入的三人，保住恒泰地下三层核心秘密不被泄露",
+      "identity": "白塔督察科银边修正官",
       "knowledge": [
-        "公开履历连续",
-        "知道钟表摊与徐师傅"
+        "惊怒于镜辞仅凭反光便看破自己的记忆残像并炸断绞盘"
       ],
-      "location": "租住与工作区域",
+      "location": "城南恒泰设施地下三层零号祭池旁",
       "open_threads": [
-        "回填与本人关系未知",
-        "是否存在接缝",
-        "明日取表"
+        "生死大战即将爆发"
       ],
       "relationships": [
-        "被叫周师傅周哥",
-        "与摊主长期往来",
-        "已还徐师傅管钳"
+        "左衡心腹，与陈屿暂处同一战线"
       ],
-      "state": "已近距接单。接缝未被确认。表留店"
+      "state": "剔骨刀被捉影镊崩口，视觉残像被反光破除，面临三人联手反扑"
     },
     "姜霁": {
       "abilities_resources": [
-        "停车场陈屿文件夹",
-        "更正过的左手旧伤记录",
-        "硬纸隔开的两份公司材料",
-        "临时协查模板",
-        "现场联络",
-        "门锁暂停回执",
-        "评估单",
-        "公开标准污染清单",
-        "周诚医疗调取申请"
+        "痊愈左手与近身格斗术",
+        "战术刀",
+        "空弹匣手枪"
       ],
-      "goal": "外围守线。未见就写未见",
-      "identity": "与镜辞外部协查合作的调查者，同时连接处理身份异常的行动网络",
+      "goal": "配合镜辞与突然现身的异常女孩击杀周谨，带出人证捣毁恒泰黑巢",
+      "identity": "前剥壳人第三行动组组长（叛逃状态）",
       "knowledge": [
-        "近距首触未见缝",
-        "表已接修"
+        "亲眼见证周谨的三阶视觉残像被镜辞纯银表盘破掉"
       ],
-      "location": "旧市场钟表行",
+      "location": "城南恒泰设施地下三层零号祭池边",
       "open_threads": [
-        "取表时再核",
-        "老李案未结"
+        "协同镜辞与芽合围周谨"
       ],
       "relationships": [
-        "制约镜辞越权",
-        "与猫眼分源记录",
-        "与行动组协同处置"
+        "虽不记得昨晚，但经历今夜血战已彻底将镜辞视作生死搭档"
       ],
-      "state": "已要求镜辞写接缝没有"
+      "state": "银芯弹打空、持战术刀守在镜辞身前，见芽破顶撕碎猎犬颇为震惊"
     },
     "守钟人": {
       "abilities_resources": [
-        "座钟",
-        "柜台铁盒"
+        "对壳与怀表代价的渊博认知"
       ],
-      "goal": "血别进后间。表别拿去入伙",
-      "identity": "钟表行老人，修钟，不参与判人",
+      "goal": "点醒镜辞怀表代价，将台前交锋留给镜辞自己应对",
+      "identity": "钟表行后间修座钟的瞎眼老人，沈竹旧识",
       "knowledge": [
-        "灰衬衫来过店",
-        "假话已经发出去就会被拿去办事",
-        "空白姓名不能乱填"
+        "知道怀表退格会先让畜生认不出镜辞"
       ],
-      "location": "旧市场钟表行后间",
+      "location": "旧货市场钟表行后间",
       "open_threads": [
-        "沈竹的事他仍然不说"
+        "沈竹留下的后手"
       ],
       "relationships": [
-        "允许镜辞和姜霁在店里对材料",
-        "拒绝把耳朵当标准答案"
+        "镜辞的引路长辈"
       ],
-      "state": "人在店。怀表仍在盘里"
+      "state": "烧毁老张头空皮后退回后间"
     },
-    "张岚": {
+    "芽": {
       "abilities_resources": [
-        "钥匙",
-        "姐家住处",
-        "胃药",
-        "银行卡",
-        "门锁暂停回执",
-        "换洗衣物",
-        "身份证复印件",
-        "旧片段优盘"
+        "强悍近身撕杀战力",
+        "原芽记忆与沈竹死锁反噬警觉"
       ],
-      "goal": "门先停着。要丈夫下落",
-      "identity": "城南旧小区住户，丈夫失联后归来",
+      "goal": "保住镜辞性命，趁陈屿断臂残废当场彻底清算这个裁缝",
+      "identity": "顶替青梅芽皮囊的异端存在，体内被钉下沈竹死锁",
       "knowledge": [
-        "危险受控",
-        "身份错位成立",
-        "原丈夫状态未知"
+        "顺着北河与城南壳巢运输线摸进了恒泰地下通风总管"
       ],
-      "location": "姐姐家",
+      "location": "城南恒泰设施地下三层零号祭池边",
       "open_threads": [
-        "丈夫现在如何"
+        "当场手撕断臂陈屿并迎战周谨"
       ],
       "relationships": [
-        "求助于姜霁",
-        "对老李拒绝共住"
+        "舍命顺通风管赶来替镜辞挡刀解围",
+        "与陈屿死仇对立"
       ],
-      "state": "只得不知道。危险已受控"
-    },
-    "老李": {
-      "abilities_resources": [
-        "自家钥匙",
-        "关系知识",
-        "部分共同账户权限",
-        "住宅进入已暂停",
-        "收音机零件已扣押",
-        "家庭身份外观失稳"
-      ],
-      "goal": "仍要回家。外观已不稳",
-      "identity": "张岚丈夫，身份争议未决对象",
-      "knowledge": [
-        "门已停",
-        "仓库线已单建"
-      ],
-      "location": "临时受控处置点",
-      "open_threads": [
-        "原主状态未知",
-        "身份未决"
-      ],
-      "relationships": [
-        "与张岚权限冲突加剧",
-        "与行动组对峙"
-      ],
-      "state": "卷内字段已拆。原主状态未知"
+      "state": "浑身缠满染血绷带破开通风管空降，单手撕碎猎犬站在镜辞身前两步"
     },
     "镜辞": {
       "abilities_resources": [
-        "第一式看见接缝",
-        "私人观察本",
-        "市场监控拷贝",
-        "南岸旧铝牌照片",
-        "协查复印件",
-        "临时联络号码",
-        "四年前五零二旧锁芯",
-        "周衡旧机械表（维修中）"
+        "照缝",
+        "卡齿",
+        "锁簧术",
+        "银钢捉影镊",
+        "抛光纯银表盘",
+        "八角重铜锤",
+        "旧怀表（仍余5格）"
       ],
-      "goal": "先修好表。明日普通取表",
-      "identity": "二十一岁修表学徒，外部协查观察者，能看见接缝，不用接缝判决身份",
+      "goal": "联合芽与姜霁斩杀周谨、清算陈屿，带瘦老李等失踪摊主杀出地下三层",
+      "identity": "二十一岁旧货市场钟表行修表匠，沈竹养子，掌握镜返前两式与锁簧术",
       "knowledge": [
-        "表故障成立",
-        "近距未见稳定接缝",
-        "双事实并立",
-        "D4口径校正：旧风险条目的极淡残余只指024回收司机极浅接缝旧记录，当前未复看；不是场地残余或空间扫描。",
-        "周衡同意60以内清灰校时及小齿轮；大件或超额先问。"
+        "周谨视觉残像在镜面反光下无效",
+        "零号母表外环祭池02:17靠吸取活人透明影子运转"
       ],
-      "location": "旧市场钟表行",
+      "location": "城南恒泰设施地下三层零号祭池边",
       "open_threads": [
-        "明日取表",
-        "回填实施者",
-        "老李原主状态未知"
+        "联手斩杀周谨与陈屿，救出车内全部街坊"
       ],
       "relationships": [
-        "与姜霁互限合作",
-        "对周衡按普通客",
-        "守钟人拒绝替他判人"
+        "与姜霁死战到底",
+        "与破顶而降的芽正式汇合联手"
       ],
-      "state": "近距首触接缝未立。坏表在修。双事实仍并立"
+      "state": "右肋受创嘴角溢血，未耗怀表最后五格刻度，迎来芽破顶救场"
+    },
+    "陈屿": {
+      "abilities_resources": [
+        "第二支母巢骨笛",
+        "监控室备用逃生暗道"
+      ],
+      "goal": "活命逃离或借周谨拖住三人强行保住性命",
+      "identity": "代号裁缝的高阶半壳修复师",
+      "knowledge": [
+        "惊恐发现芽居然直接摸进了地下三层核心区"
+      ],
+      "location": "恒泰地下三层二楼监控室破窗后",
+      "open_threads": [
+        "生死危在旦夕"
+      ],
+      "relationships": [
+        "被芽与镜辞双双锁定为必杀目标"
+      ],
+      "state": "面对砸碎玻璃墙的猎犬残颅与空降现身的芽脸色剧变"
     }
   },
   "context": {
     "active_character_names": [
       "镜辞",
       "姜霁",
-      "张岚",
-      "老李",
-      "守钟人",
-      "周衡"
+      "芽",
+      "周谨",
+      "陈屿"
     ],
     "continuity_risks": [
-      "旧追踪曾把001-100写成已全部重写。活动正文以001-099加锁定的100-103为准。",
-      "左眉浅疤和弯曲小指是055对照市场监控才写下的，009正文没有这两句。",
-      "安平里活动室复核已做，页面在两点十七改回正常。502门链仍在，陈启明未改口。两个陈骁未被认证。",
-      "南栏假异常已被拒绝。D4私人本仍写极淡残余，公共口径是看不见。",
-      "03南栏只是老码头03点从未进工单的那段旧护栏，不是新地点。"
+      "怀表刻度从十一格递减，不可逆转回升",
+      "当前存在（芽）体内被原芽与沈竹遗物钉下死锁，属于背叛壳巢的异端"
     ],
     "long_term_constraints": [
-      "恒准是第019章问过并回访的公司；恒泰设施是工单和公示上的名字。两家不能写成同一家。",
-      "不认证原主，不给当前存在起名，不解释02:17的来源。",
-      "接缝只证明身份错位。未见接缝不可反向认证。",
-      "100-103是锁定活动正文。104继续冻结。不以新稿覆盖锁定的100-103。",
-      "057再看未见且不可反用。十五点零二起不再提供通过或看不见。看的动作会被读到。送到店里修表的人只修表，不写通过或不通过。",
-      "时间挨着不等于因果。发现点位后先让别人留公开页面，再决定是否亲自到场。"
+      "镜返第一式·照缝需借镜面/表蒙/玻璃反光盯住接缝满三秒方可窥见死前执念残影",
+      "镜返第二式·卡齿逆拧银灰旧怀表表冠，可令三米内带接缝怪物强制停摆两秒，每次消耗两格刻度",
+      "沈竹遗留银灰旧怀表共十一道刻度，每退一格，镜辞与熟人的人世联系便松脱一分",
+      "壳吞噬原主记忆碎片却无法复刻肌肉空间本能；若获得活人明知真假仍付出的真心，可生出活人锚点"
     ],
     "next_chapter_commitments": [
-      "明日按普通取表流程。",
-      "接缝确认交给锁定第100章正文。",
-      "回填与接缝分尺。",
-      "老李案继续分置。"
+      "镜辞、芽、姜霁铁三角联手围攻三阶修正官周谨并杀上二楼清算断臂陈屿"
     ],
     "position": {
-      "scene": "旧市场钟表行",
-      "story_time": "接修后当日午前",
-      "volume": "第一卷",
+      "scene": "城南恒泰设施地下三层零号祭池边",
+      "story_time": "第四日凌晨两点二十分",
+      "volume": "第一卷·青梅的皮囊",
       "volume_start_chapter": 1
     },
     "recent_chapters": [
       {
-        "chapter": 97,
-        "summary": "早年三年逐条清单与两件原始纸本当场封存编号，物理证据固定，周衡卡挂「关联证据保全中」红标随卡流转不自动清除。代价：封存责任人签姜霁，外头多两处可翻地方。"
+        "chapter": 10,
+        "summary": "姜霁因遗忘拔枪抵住镜辞，镜辞用私人加密名片与虎口双钩针孔铁证重新稳住其信任；两人赶赴城南恒泰外围时，白塔督察科发来就地击毙镜辞的密令，姜霁拔枪抓柄。"
       },
       {
-        "chapter": 98,
-        "summary": "近五年关系后果核成并单独成卷，回填与后五年真实关系分卷并立不许互删，旧锁芯入盒且便签写死「不指向任何人的身份」。代价：徐师傅「往后也不提他了」，失去自然消息渠道。"
+        "chapter": 11,
+        "summary": "姜霁砸碎白塔密令终端力挺镜辞，两人潜入恒泰地下三层撞见装满旧市场失踪摊主的货车；镜辞首秀银钢捉影镊配合姜霁连斩两头三阶缝合守卫，警报落锁，断臂陈屿与白塔修正官周谨现身倒计时七分钟喂表。"
       },
       {
-        "chapter": 99,
-        "summary": "接修周衡真实坏表（60以内清灰校时及小齿轮），回绝「借取表排近距」，将明日取表从观察排期划掉，正式落「近距离首次接触：未确认接缝。」。代价：当夜交第三份书面说明。"
+        "chapter": 12,
+        "summary": "周谨下场施展视觉记忆残像并与六头猎犬围杀镜辞姜霁，凌晨两点十七分开启零号祭池悬吊活人；镜辞硬挨一膝借银表盘反光破残像，砸爆液氮罐冻断传动轴救下瘦老李等摊主；危急之际芽破通风管空降撕犬护驾，当众向断臂陈屿讨要另一条胳膊。"
       }
     ]
   },
@@ -222,2020 +172,445 @@
       "id": "F001",
       "importance": "高",
       "planned_resolution_chapter": null,
-      "planted_chapter": 32,
+      "planted_chapter": 1,
       "status": "已埋",
-      "summary": "本案将家庭关系和住宅进入分栏并换机械锁芯；02:17关系同步后，本地住宅通行未恢复。只是本案临时措施，上游及身份仍未知。",
-      "updated_chapter": 88
+      "summary": "沈竹失踪七年留下的银灰旧怀表共十一道刻度，随镜辞窥见接缝开始逐格倒退",
+      "updated_chapter": 1
     },
     "F002": {
       "id": "F002",
       "importance": "高",
       "planned_resolution_chapter": null,
-      "planted_chapter": 21,
+      "planted_chapter": 1,
       "status": "已埋",
-      "summary": "021施工贴纸编号异于恒准而格式相近；至056恒准外包记录和恒泰设施公示分别保存，关联未证。",
-      "updated_chapter": 56
+      "summary": "顶替芽的当前存在为何保留全部记忆却失去肌肉本能，真芽下落如何",
+      "updated_chapter": 1
     },
     "F003": {
       "id": "F003",
       "importance": "高",
-      "planned_resolution_chapter": null,
-      "planted_chapter": 9,
-      "status": "已埋",
-      "summary": "009灰衬衫沿用周远取表身份；055五年前合影中的陈屿外貌与他对上，056公示再现陈屿名并见极浅接缝；主体连续性与取表身份原因未证。",
-      "updated_chapter": 56
+      "planned_resolution_chapter": 3,
+      "planted_chapter": 2,
+      "status": "已回收",
+      "summary": "真芽七天前在北河桥洞暴雨中塞进桥墩砖缝的半枚带血铜齿轮藏着什么秘密",
+      "updated_chapter": 3
     },
     "F004": {
       "id": "F004",
-      "importance": "中",
-      "planned_resolution_chapter": null,
-      "planted_chapter": 53,
-      "status": "已埋",
-      "summary": "D4旧观察来自024回收司机瞬时极浅接缝，之后未复看；053看不见为试探，不能认现场清理完成",
-      "updated_chapter": 56
+      "importance": "高",
+      "planned_resolution_chapter": 9,
+      "planted_chapter": 3,
+      "status": "已回收",
+      "summary": "半枚黄铜齿轮背面刻着沈字与安平里502，指向沈竹当年留下的半座母钟",
+      "updated_chapter": 9
     },
     "F005": {
       "id": "F005",
       "importance": "中",
-      "planned_resolution_chapter": null,
-      "planted_chapter": 55,
-      "status": "已埋",
-      "summary": "匿名答复声称南栏没处理过；截至观察时公开页未见新行。现场状态、对方完整目标图及是否以镜辞回复驱动均未证。",
-      "updated_chapter": 56
+      "planned_resolution_chapter": 7,
+      "planted_chapter": 4,
+      "status": "已回收",
+      "summary": "姜霁左手虎口两寸刀疤下藏着阴雨天作痛的二阶裂隙侵蚀暗伤",
+      "updated_chapter": 7
     },
     "F006": {
       "id": "F006",
       "importance": "高",
-      "planned_resolution_chapter": 57,
-      "planted_chapter": 56,
-      "status": "已回收",
-      "summary": "057在西口左后方再看耳后，未见且写明不可反用，056那一次看见没有涂掉",
-      "updated_chapter": 57
+      "planned_resolution_chapter": null,
+      "planted_chapter": 5,
+      "status": "已埋",
+      "summary": "城市背后的系统正在从普通街坊脑海里强行抹除异端芽存在过的记忆",
+      "updated_chapter": 5
     },
     "F007": {
       "id": "F007",
       "importance": "高",
-      "planned_resolution_chapter": 58,
-      "planted_chapter": 57,
+      "planned_resolution_chapter": 8,
+      "planted_chapter": 6,
       "status": "已回收",
-      "summary": "两点东口窗边已经谈过，镜辞未提供D4与502，双方没有进入封闭处",
-      "updated_chapter": 58
+      "summary": "芽在帆布包夹层留字条警告今晚十二点整安平里502室别信开门人",
+      "updated_chapter": 8
     },
     "F008": {
       "id": "F008",
       "importance": "高",
-      "planned_resolution_chapter": 59,
-      "planted_chapter": 58,
-      "status": "已回收",
-      "summary": "裴亮因待复核空跑，扣工时八块加单车三块，本人不知道接缝",
-      "updated_chapter": 59
+      "planned_resolution_chapter": null,
+      "planted_chapter": 9,
+      "status": "已埋",
+      "summary": "沈竹血书指明城南恒泰地下三层每晚两点十七分用活人喂养零号母表，且警告别信白塔",
+      "updated_chapter": 9
     },
     "F009": {
       "id": "F009",
       "importance": "高",
-      "planned_resolution_chapter": 60,
-      "planted_chapter": 59,
-      "status": "已回收",
-      "summary": "陈屿已到过钟表行柜台，问了南岸和502，镜辞未回答",
-      "updated_chapter": 60
+      "planned_resolution_chapter": null,
+      "planted_chapter": 9,
+      "status": "已埋",
+      "summary": "怀表退至第五格后，核心盟友姜霁遗忘与镜辞初见起因，靠虎口双针孔与名片重锚战友信任",
+      "updated_chapter": 10
     },
     "F010": {
       "id": "F010",
       "importance": "高",
-      "planned_resolution_chapter": 61,
-      "planted_chapter": 60,
-      "status": "已回收",
-      "summary": "孙立取回修好的表，陈屿随后发来没看出来；信息路径未核，镜辞不作身份通过结论",
-      "updated_chapter": 61
+      "planned_resolution_chapter": null,
+      "planted_chapter": 10,
+      "status": "已埋",
+      "summary": "白塔督察科连夜发来就地击毙镜辞密令，印证沈竹「别信白塔」的血书警告",
+      "updated_chapter": 10
     },
     "F011": {
       "id": "F011",
       "importance": "高",
-      "planned_resolution_chapter": 62,
-      "planted_chapter": 61,
-      "status": "已回收",
-      "summary": "名单来自公示栏，钟表行于八点二十被加入。异议已受理，明日九点撤。北河照片已到，人未入画",
-      "updated_chapter": 62
+      "planned_resolution_chapter": null,
+      "planted_chapter": 11,
+      "status": "已埋",
+      "summary": "恒泰地下三层走廊挂满上千只指针停在凌晨两点十七分的染血旧钟表，每只刻着失踪活人姓名日期",
+      "updated_chapter": 11
     },
     "F012": {
       "id": "F012",
       "importance": "高",
-      "planned_resolution_chapter": 63,
-      "planted_chapter": 62,
-      "status": "已回收",
-      "summary": "电话已打。人能自己走。已回复别拿人给我做验收。她指出先喝汤、缺口碗和耳后，并自己买了明早的票",
-      "updated_chapter": 63
-    },
-    "F013": {
-      "id": "F013",
-      "importance": "高",
-      "planned_resolution_chapter": 64,
-      "planted_chapter": 63,
-      "status": "已回收",
-      "summary": "早餐铺已见面。先喝汤和缺口碗不再验真。郭老板打断过。那些事未答，称呼未定",
-      "updated_chapter": 64
-    },
-    "F014": {
-      "id": "F014",
-      "importance": "高",
-      "planned_resolution_chapter": 65,
-      "planted_chapter": 64,
-      "status": "已回收",
-      "summary": "栏外三行已拒绝填写。薄笔记已留下，姓名栏空白，从不知道开始。后日两个点都看见了，人未跟去",
-      "updated_chapter": 65
-    },
-    "F015": {
-      "id": "F015",
-      "importance": "高",
-      "planned_resolution_chapter": 66,
-      "planted_chapter": 65,
-      "status": "已回收",
-      "summary": "薄笔记已分成我记得的和我做过的。证件出示过仍是芽，姓名栏继续空白，窗口尚未发生",
-      "updated_chapter": 66
-    },
-    "F016": {
-      "id": "F016",
-      "importance": "高",
-      "planned_resolution_chapter": 67,
-      "planted_chapter": 66,
-      "status": "已回收",
-      "summary": "窗口已经卡住。票面是芽，亏了十八块。帮忙修门锁已从收据背面提取，人尚未去客栈",
-      "updated_chapter": 67
-    },
-    "F017": {
-      "id": "F017",
-      "importance": "高",
-      "planned_resolution_chapter": 68,
-      "planted_chapter": 67,
-      "status": "已回收",
-      "summary": "老板娘已当面认出修锁的小姑娘。她说当时可以不管。书面仍是芽，能力来源未判",
-      "updated_chapter": 68
-    },
-    "F018": {
-      "id": "F018",
-      "importance": "高",
-      "planned_resolution_chapter": 69,
-      "planted_chapter": 68,
-      "status": "已回收",
-      "summary": "唐宁已追问失联；她未继承旧友位置，唐宁拒当前亲近和再约，后可限定说旧事，关系仍未和解",
-      "updated_chapter": 69
-    },
-    "F019": {
-      "id": "F019",
-      "importance": "高",
-      "planned_resolution_chapter": 70,
-      "planted_chapter": 69,
-      "status": "已回收",
-      "summary": "先喝汤已在一顿早餐里拆开。两口只因胃疼，不当身份证明。唐宁的初一留言没回",
-      "updated_chapter": 70
-    },
-    "F020": {
-      "id": "F020",
-      "importance": "高",
-      "planned_resolution_chapter": 71,
-      "planted_chapter": 70,
-      "status": "已回收",
-      "summary": "活动室复核已做。两点十七把页面改回正常，纸质签字还在。门链未摘",
-      "updated_chapter": 71
-    },
-    "F021": {
-      "id": "F021",
-      "importance": "高",
-      "planned_resolution_chapter": 72,
-      "planted_chapter": 71,
-      "status": "已回收",
-      "summary": "她已接下零件摊。账上是钟表行带来的人，没有新名字。熟练的来源未判",
-      "updated_chapter": 72
-    },
-    "F022": {
-      "id": "F022",
-      "importance": "高",
-      "planned_resolution_chapter": 73,
-      "planted_chapter": 72,
-      "status": "已回收",
-      "summary": "纸和屏已对照。公示上又有恒泰设施。门链仍在。人是被叫去看的",
-      "updated_chapter": 73
-    },
-    "F023": {
-      "id": "F023",
-      "importance": "中",
-      "planned_resolution_chapter": 74,
-      "planted_chapter": 73,
-      "status": "已回收",
-      "summary": "方远已讲完退学那次。功劳留在原芽一栏。她没接应该的",
-      "updated_chapter": 74
-    },
-    "F024": {
-      "id": "F024",
-      "importance": "高",
-      "planned_resolution_chapter": 75,
-      "planted_chapter": 74,
-      "status": "已回收",
-      "summary": "东口收尾已看见，镜辞没递答案。醒后做过的事有没有进别人的日子，仍没答",
-      "updated_chapter": 75
-    },
-    "F025": {
-      "id": "F025",
-      "importance": "高",
-      "planned_resolution_chapter": 76,
-      "planted_chapter": 75,
-      "status": "已回收",
-      "summary": "她已承认模仿旧动作的具体伤害并道歉，答应不再诱导；镜辞未原谅，旧可靠的关系后果仍需亲历核对",
-      "updated_chapter": 76
-    },
-    "F026": {
-      "id": "F026",
-      "importance": "高",
-      "planned_resolution_chapter": 77,
-      "planted_chapter": 76,
-      "status": "已回收",
-      "summary": "唐宁已独立讲出发烧和先别告诉镜辞。他把副作用写下。长期去留还没走成",
-      "updated_chapter": 77
-    },
-    "F027": {
-      "id": "F027",
-      "importance": "高",
-      "planned_resolution_chapter": 78,
-      "planted_chapter": 77,
-      "status": "已回收",
-      "summary": "回北河的票已买。人今晚还在店。旧物箱未分，他没有跟随",
-      "updated_chapter": 78
-    },
-    "F028": {
-      "id": "F028",
-      "importance": "高",
-      "planned_resolution_chapter": 79,
-      "planted_chapter": 78,
-      "status": "已回收",
-      "summary": "旧物与当前物品已经分箱。外套仍先借着穿。人已去赶车",
-      "updated_chapter": 79
-    },
-    "F029": {
-      "id": "F029",
-      "importance": "高",
-      "planned_resolution_chapter": 80,
-      "planted_chapter": 79,
-      "status": "已回收",
-      "summary": "陌生人说明能力缺口后，西口已经有人受伤。号码留下。人还没被带出来",
-      "updated_chapter": 80
-    },
-    "F030": {
-      "id": "F030",
-      "importance": "高",
-      "planned_resolution_chapter": 81,
-      "planted_chapter": 80,
-      "status": "已回收",
-      "summary": "吴老板已送医。陈平暂时限制在警察处。现场进入公共记录",
-      "updated_chapter": 81
-    },
-    "F031": {
-      "id": "F031",
-      "importance": "高",
-      "planned_resolution_chapter": 82,
-      "planted_chapter": 81,
-      "status": "已回收",
-      "summary": "姜霁已说出剥壳人。镜辞没有证件和权限。临时协查说明上的条件还没谈",
-      "updated_chapter": 82
-    },
-    "F032": {
-      "id": "F032",
-      "importance": "高",
-      "planned_resolution_chapter": 83,
-      "planted_chapter": 82,
-      "status": "已回收",
-      "summary": "临时协查说明已签。镜辞为外部协查观察者，非成员",
-      "updated_chapter": 83
-    },
-    "F033": {
-      "id": "F033",
-      "importance": "高",
-      "planned_resolution_chapter": 84,
-      "planted_chapter": 83,
-      "status": "已回收",
-      "summary": "张岚暂离与门锁暂停已落地。镜辞见耳后接缝仍未知",
-      "updated_chapter": 84
-    },
-    "F034": {
-      "id": "F034",
-      "importance": "高",
-      "planned_resolution_chapter": 85,
-      "planted_chapter": 84,
-      "status": "已回收",
-      "summary": "取物已发生。知识正确与行动优先级冲突已暴露，如何继续验证未决",
-      "updated_chapter": 85
-    },
-    "F035": {
-      "id": "F035",
-      "importance": "高",
-      "planned_resolution_chapter": 86,
-      "planted_chapter": 85,
-      "status": "已回收",
-      "summary": "高风险争议已立。当面不教动作。若其自行学习将冲击行为证据",
-      "updated_chapter": 86
-    },
-    "F036": {
-      "id": "F036",
-      "importance": "高",
-      "planned_resolution_chapter": 87,
-      "planted_chapter": 86,
-      "status": "已回收",
-      "summary": "公开标准已污染。下一步停私人授权，不启动强制处置",
-      "updated_chapter": 87
-    },
-    "F037": {
-      "id": "F037",
-      "importance": "高",
-      "planned_resolution_chapter": 88,
-      "planted_chapter": 87,
-      "status": "已回收",
-      "summary": "本案家庭关系同步回正常，但拆开的住宅进入字段及更换的机械通道未恢复；局部挡住放行，不注销婚姻或长期居住主张。",
-      "updated_chapter": 88
-    },
-    "F038": {
-      "id": "F038",
-      "importance": "高",
-      "planned_resolution_chapter": 89,
-      "planted_chapter": 88,
-      "status": "已回收",
-      "summary": "旧仓库独立生活痕迹已记录；临时控制由现场破坏和异常力量风险触发，不因另有住处抓人。",
-      "updated_chapter": 89
-    },
-    "F039": {
-      "id": "F039",
-      "importance": "高",
-      "planned_resolution_chapter": 90,
-      "planted_chapter": 89,
-      "status": "已回收",
-      "summary": "短介入降低现实危险，却未确认原主体连续存在；强记忆残留不作救出证明，现场决定停止加深。",
-      "updated_chapter": 90
-    },
-    "F040": {
-      "id": "F040",
-      "importance": "高",
-      "planned_resolution_chapter": 91,
-      "planted_chapter": 90,
-      "status": "已回收",
-      "summary": "周诚近距未见，仍不认证；右肩伤转述使普通解释优先，异常观察暂缓，限定申请伤情资料。",
-      "updated_chapter": 91
-    },
-    "F041": {
-      "id": "F041",
-      "importance": "中",
-      "planned_resolution_chapter": 92,
-      "planted_chapter": 91,
-      "status": "已回收",
-      "summary": "肩伤与家庭适应解释主要动作差异，周诚撤案、撤点；只回收本案解释任务，不建立全体异常刻度。",
-      "updated_chapter": 92
-    },
-    "F042": {
-      "id": "F042",
-      "importance": "高",
-      "planned_resolution_chapter": 93,
-      "planted_chapter": 92,
-      "status": "已回收",
-      "summary": "旧行动员署名更正留存；老李旧字段拆为信息残余、当前主体连续性及原主未知三栏，旧案曾救人记录保留。",
-      "updated_chapter": 93
-    },
-    "F043": {
-      "id": "F043",
-      "importance": "高",
-      "planned_resolution_chapter": 94,
-      "planted_chapter": 93,
-      "status": "已回收",
-      "summary": "十一份状态分类获准查阅，周衡暂不高风险；镜辞选择低干扰跟查，不开放全库或围猎。",
-      "updated_chapter": 94
-    },
-    "F044": {
-      "id": "F044",
-      "importance": "高",
-      "planned_resolution_chapter": 95,
-      "planted_chapter": 94,
-      "status": "已回收",
-      "summary": "七天生活记录及公开市场照片核过，首次生活场面观察开始；不逼异常，回填嫌疑另由旧版本核对。",
-      "updated_chapter": 95
-    },
-    "F045": {
-      "id": "F045",
-      "importance": "高",
-      "planned_resolution_chapter": 96,
-      "planted_chapter": 95,
-      "status": "已回收",
-      "summary": "八年纸档到店，回填嫌疑进入分段核验；只兑现材料引入，实施者及近距接缝仍未定。",
-      "updated_chapter": 96
-    },
-    "F046": {
-      "id": "F046",
-      "importance": "高",
-      "planned_resolution_chapter": 97,
-      "planted_chapter": 96,
-      "status": "已回收",
-      "summary": "前三年后期改写或回填由独立版本冲突支持；实施者及当年事实未明，不指认周衡亲手操作。",
-      "updated_chapter": 97
-    },
-    "F047": {
-      "id": "F047",
-      "importance": "高",
-      "planned_resolution_chapter": 98,
-      "planted_chapter": 97,
-      "status": "已回收",
-      "summary": "后五年有分散系统外关系后果，和早期回填并列保存；不据此直接认证当前主体。",
-      "updated_chapter": 98
-    },
-    "F048": {
-      "id": "F048",
-      "importance": "高",
-      "planned_resolution_chapter": 99,
-      "planted_chapter": 98,
-      "status": "已回收",
-      "summary": "周衡已持真的故障表到店，近距接单未确认接缝；明日取表，首缝期待移交F049。",
-      "updated_chapter": 99
-    },
-    "F049": {
-      "id": "F049",
-      "importance": "高",
-      "planned_resolution_chapter": 100,
-      "planted_chapter": 99,
-      "status": "已埋",
-      "summary": "周衡明日取表。高隐蔽目标第一次接缝确认待来章",
-      "updated_chapter": 99
-    },
-    "F050": {
-      "id": "F050",
-      "importance": "中",
-      "planned_resolution_chapter": 75,
-      "planted_chapter": 61,
-      "status": "已回收",
-      "summary": "075客户原维修票经窗口核验退号费6，客户留原票、窗口留副本；只兑现保票与办理，不证身份或幕后",
-      "updated_chapter": 75
-    },
-    "F051": {
-      "id": "F051",
-      "importance": "高",
       "planned_resolution_chapter": null,
-      "planted_chapter": 11,
+      "planted_chapter": 12,
       "status": "已埋",
-      "summary": "旧物留存、外套暂借；当前物品与责任页带走。她去赶车，镜辞未尾随；命名、原主及旧物归属仍未判。",
-      "updated_chapter": 79
-    },
-    "F052": {
-      "id": "F052",
-      "importance": "高",
-      "planned_resolution_chapter": null,
-      "planted_chapter": 17,
-      "status": "已埋",
-      "summary": "猫眼及镜辞把旧冲突页与近五年的独立关系材料分开保存，不让一个版本吞掉另一版。保存版本不等于认证来源或身份；正式强化仍待后文。",
-      "updated_chapter": 98
+      "summary": "凌晨两点十七分零号母表外环祭池开启时，被悬吊活人皮肤下浮现出正被吸出的透明影子",
+      "updated_chapter": 12
     }
   },
-  "imported_through_chapter": 56,
-  "last_committed_chapter": 99,
+  "imported_through_chapter": 0,
+  "last_committed_chapter": 12,
   "schema_version": 4,
-  "state_revision": 292,
+  "state_revision": 12,
   "timeline": {
     "E001": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "芽",
+        "老陈"
       ],
       "first_recorded_chapter": 1,
       "id": "E001",
-      "objective_fact": "熟人早餐成立；两个细小动作与印象不符。他没有当场定罪，却停下修表找旧影像，疑虑开始占用工作注意力。",
-      "reader_knowledge": "知道眼下动作不同；还不知道是习惯变化、自己记错或其他原因。主动核对来源先于解释。",
+      "objective_fact": "顶替芽的壳送早饭露出两处肌肉本能破绽，在门外死角拧正脑袋抹平耳后细缝被镜辞寸镜反光看穿；沈竹旧怀表退至第十格",
+      "reader_knowledge": "读者与镜辞同步确认眼前的芽耳后有惨白接缝，且停死七年的旧怀表倒退了一格",
       "reveal_chapter": 1,
       "reveal_status": "已揭示",
-      "story_time": "早餐后钟表行",
+      "story_time": "第一日清晨",
       "updated_chapter": 1
     },
     "E002": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "芽",
+        "老郭"
       ],
       "first_recorded_chapter": 2,
       "id": "E002",
-      "objective_fact": "旧视频中的十四岁镜辞证明缺口碗旧习惯；镜辞重演测试，当前存在看出试探并生气。",
-      "reader_knowledge": "旧习惯可核，当前试探被识破；一次动作仍不能认证身份。",
+      "objective_fact": "镜辞在老郭早餐铺借纯银怀表表蒙反光窥见七天前北河桥洞真芽塞入带血铜齿轮，假芽当面挑破他在看她耳后接缝",
+      "reader_knowledge": "读者得知真芽七天前在北河桥洞遇险藏下铜齿轮，且假芽已当面撕破伪装",
       "reveal_chapter": 2,
       "reveal_status": "已揭示",
-      "story_time": "次日早餐铺",
+      "story_time": "第二日清晨",
       "updated_chapter": 2
     },
     "E003": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "芽",
+        "守钟人",
+        "老郭"
       ],
       "first_recorded_chapter": 3,
       "id": "E003",
-      "objective_fact": "普通取钟途中见到结构错位；换角度、遮灯仍在，相机却不能提供清楚图像。对方转向窗外后，他撤离，观察首次带出被察觉的风险。",
-      "reader_knowledge": "知道自己看见不寻常错位；不知它是什么、她在找谁。最后仍本能扫别人的耳后。",
+      "objective_fact": "假芽警告镜辞别碰北河与灰衬衫；镜辞从北河桥洞取出刻有沈与安平里502的半枚铜齿轮，当晚刺死角锤碎登门索命的剥皮壳老张头，假芽在巷口击杀追猎猎犬",
+      "reader_knowledge": "读者看到镜辞首杀剥皮壳、拿到安平里502铜齿轮，且假芽在巷口暗中替他断后",
       "reveal_chapter": 3,
       "reveal_status": "已揭示",
-      "story_time": "第三天下午东桥巷",
+      "story_time": "第二日白天至夜里十点",
       "updated_chapter": 3
     },
     "E004": {
       "characters": [
         "镜辞",
-        "周远",
-        "守钟人"
+        "守钟人",
+        "姜霁"
       ],
       "first_recorded_chapter": 4,
       "id": "E004",
-      "objective_fact": "先排除头盔二次反光，再遇灰衬衫的第二个真实异常样本；求助老人却遇到其信息边界，只取得有限警告。",
-      "reader_knowledge": "知道会误判、部分对象会察觉被看；仍追问名称与沈竹关联。老人并未交出组织答案。",
+      "objective_fact": "守钟人烧毁老张头空皮；镜辞收下暗红碎核，出门倒灰遭喂了三年的黑狗小煤球狂吠陌路；凌晨剥壳人姜霁持枪上门逼问沈竹手艺传人",
+      "reader_knowledge": "读者清楚看到怀表退三格后连喂了三年的狗都认不出镜辞，且剥壳人姜霁已找上门",
       "reveal_chapter": 4,
       "reveal_status": "已揭示",
-      "story_time": "灰衬衫到钟表行当日",
+      "story_time": "第二日深夜至次日凌晨一点",
       "updated_chapter": 4
     },
     "E005": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "姜霁",
+        "老陈",
+        "陈屿"
       ],
       "first_recorded_chapter": 5,
       "id": "E005",
-      "objective_fact": "当前存在补回先喝汤，又从店与市场消息推知镜辞行程；当日准备取件单，006同日下午取表。",
-      "reader_knowledge": "她也在观察镜辞的行程与视线；镜辞不知她全部知情来源。",
+      "objective_fact": "镜辞替姜霁挑出虎口浅层侵蚀丝换取裁缝陈屿与安平里502双陈骁情报；清晨老陈忘掉芽；陈屿拎着芽的染血帆布包登门试探",
+      "reader_knowledge": "读者得知灰衬衫真名陈屿（代号裁缝）、502室有两个陈骁、老陈已忘掉芽，且陈屿正拎着芽的包站在工作台前",
       "reveal_chapter": 5,
       "reveal_status": "已揭示",
-      "story_time": "次日早上钟表行",
+      "story_time": "第三日凌晨至清晨七点",
       "updated_chapter": 5
     },
     "E006": {
       "characters": [
         "镜辞",
-        "周远"
+        "陈屿",
+        "姜霁",
+        "守钟人"
       ],
       "first_recorded_chapter": 6,
       "id": "E006",
-      "objective_fact": "15:09宁州周远来电、约15:19转视频、15:24结束；临江灰衬衫已取表，两地同脸与维修来源并列，身份未决。",
-      "reader_knowledge": "两地周远的实时来源同时存在，尚无法裁定原主。",
+      "objective_fact": "镜辞识破陈屿蚀液与芽抛包真相，觉醒卡齿令三怪停摆两秒并砸断陈屿右臂，姜霁射杀双犬，镜辞取出502室字条，怀表退至第六格",
+      "reader_knowledge": "读者确认芽未死，看到镜辞觉醒卡齿重创陈屿并拿到指向午夜502室的字条",
       "reveal_chapter": 6,
       "reveal_status": "已揭示",
-      "story_time": "取表当日15:09—15:24",
+      "story_time": "第三日清晨七点十五分",
       "updated_chapter": 6
     },
     "E007": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "姜霁"
       ],
       "first_recorded_chapter": 7,
       "id": "E007",
-      "objective_fact": "她承认不是共同长大的芽；镜辞拒绝未知即交付处置，却仍想同行、提高联络频率。她以查自己的记忆为目标订票，他接受有限协商。",
-      "reader_knowledge": "知道她的自述与知情上限；不知道原芽去向。善意先说出，接管风险的冲动仍在；不是已能稳定接受未知。",
+      "objective_fact": "镜辞拔除姜霁左腕三寸侵蚀主虫；午夜两人抵安平里502室，门外真陈骁无接缝却持毒刀，屋内假陈骁有接缝却护老人，镜辞按住姜霁枪口",
+      "reader_knowledge": "读者看到姜霁左腕痊愈，502门口真假陈骁对峙，没缝的真儿子菜刀却涂有剧毒",
       "reveal_chapter": 7,
       "reveal_status": "已揭示",
-      "story_time": "晚饭摊牌时",
+      "story_time": "第三日傍晚至午夜十二点整",
       "updated_chapter": 7
     },
     "E008": {
       "characters": [
         "镜辞",
-        "当前存在"
+        "姜霁",
+        "陈屿"
       ],
       "first_recorded_chapter": 8,
       "id": "E008",
-      "objective_fact": "火锅记忆争执被第三方旧语音拆成两人各记一部分；共同记忆题失效。她仍用原芽证件出发，现实入口与当前选择并立。",
-      "reader_knowledge": "镜辞仍本能把记忆差异当异常题；认下的是记忆会偏，不是认定她等于原芽。",
+      "objective_fact": "镜辞揭穿真陈骁欠三十万赌债拿毒刀弑父、假陈骁被老人反向锚定；真陈骁劫持老父，陈屿吹骨笛催爆假陈骁，假陈骁自刺锁骨钉在门框求死",
+      "reader_knowledge": "读者震撼于真儿子畜生不如、假怪物宁死护父的反差，心悬于假陈骁三秒后爆体危机",
       "reveal_chapter": 8,
       "reveal_status": "已揭示",
-      "story_time": "赴北河前",
+      "story_time": "第三日午夜十二点零五分",
       "updated_chapter": 8
     },
     "E009": {
       "characters": [
         "镜辞",
+        "姜霁",
         "陈屿"
       ],
       "first_recorded_chapter": 9,
       "id": "E009",
-      "objective_fact": "灰衬衫报出006通话的15:09、15:19、15:24准确时点威胁镜辞；镜辞把冲突移到旧市场公共见证下，未得其知时来源。",
-      "reader_knowledge": "灰衬衫准确报出通话时点，取得途径和身份仍未知。",
+      "objective_fact": "镜辞断线救假陈骁并反噬重创陈屿，假陈骁生出活人锚点新肉；母钟开启获捉影镊与血书（恒泰地下三层02:17零号母表）；怀表退至第五格，姜霁忘掉初见记忆",
+      "reader_knowledge": "读者见证活人锚点诞生、获得恒泰地下三层核心秘密，同时揪心于姜霁开始遗忘镜辞",
       "reveal_chapter": 9,
       "reveal_status": "已揭示",
-      "story_time": "灰衬衫再次到店时",
+      "story_time": "第四日凌晨零点十分至一点半",
       "updated_chapter": 9
     },
     "E010": {
       "characters": [
         "镜辞",
-        "老陈",
-        "水果摊老板",
-        "赵奶奶",
-        "守钟人"
+        "姜霁"
       ],
       "first_recorded_chapter": 10,
       "id": "E010",
-      "objective_fact": "老陈、水果摊、赵奶奶对灰衬衫的衣服、帽子和离开方向给出不同版本；镜辞让老陈按昨晚位置重走一遍，老陈从东口改口西口，自己也说不准。监控固定灰衬衫与西口，但拍不到耳后接缝。",
-      "reader_knowledge": "读者看到同一人在提示下当场改口；机器稳定不等于完整，接缝仍只在镜辞眼里。",
+      "objective_fact": "姜霁拔枪质疑记忆断片，镜辞以加密名片与虎口双针孔重锚信任；两人潜至城南恒泰外围，凌晨一点五十五分白塔督察科发来就地击毙镜辞密令",
+      "reader_knowledge": "读者看到姜霁凭物理铁证重新站队镜辞，随即目睹白塔连夜下达击毙密令",
       "reveal_chapter": 10,
       "reveal_status": "已揭示",
-      "story_time": "灰衬衫离店后",
+      "story_time": "第四日凌晨一点半至一点五十五分",
       "updated_chapter": 10
     },
     "E011": {
       "characters": [
-        "镜辞"
+        "镜辞",
+        "姜霁",
+        "陈屿",
+        "周谨"
       ],
       "first_recorded_chapter": 11,
       "id": "E011",
-      "objective_fact": "镜辞核七年维修单，最长连续走时十一天；留存表壳、指针和维修单影像后开后盖。",
-      "reader_knowledge": "怀表反复停走；镜辞改变拆检方法，停表原因尚未揭开。",
+      "objective_fact": "姜霁砸碎白塔密令终端随镜辞潜入恒泰地下三层，见满墙停在02:17的血表与装满旧市场失踪活人的货车；两人秒杀两名三阶缝合守卫后触发落锁警报，周谨与陈屿放六道兽闸倒计时七分钟",
+      "reader_knowledge": "读者看到姜霁彻底站队镜辞、首秀捉影镊秒杀三阶守卫，也看到白塔修正官周谨与陈屿合力封锁地下三层",
       "reveal_chapter": 11,
       "reveal_status": "已揭示",
-      "story_time": "北河之行期间，中午十二点十六",
+      "story_time": "第四日凌晨两点零三分至两点十分",
       "updated_chapter": 11
     },
     "E012": {
       "characters": [
         "镜辞",
-        "守钟人"
+        "姜霁",
+        "周谨",
+        "陈屿",
+        "芽"
       ],
       "first_recorded_chapter": 12,
       "id": "E012",
-      "objective_fact": "原厂图和七年旧照交叉，非原厂钢片不再只是老表故障；停接一笔生意专注拆检，发现压在下面的纸纤维，老人阻止立刻抽取。",
-      "reader_knowledge": "知道钢片长期在位、可能干扰走时；不知道纸写什么，也未证明钢片由沈竹安装。工具痕关联不应再扩成沈竹生死或当年全部目的。",
+      "objective_fact": "镜辞与姜霁迎战六头猎犬；02:17零号祭池开启悬吊活人，镜辞用纯银表盘破周谨视觉残像、砸爆液氮罐冻裂青铜绞盘救下瘦老李等；被逼至井沿时芽破通风管空降撕犬救场",
+      "reader_knowledge": "读者见证零号祭池02:17吸食活人仪式被破坏，且看到镜辞、姜霁与浑身浴血的芽正式同台汇合",
       "reveal_chapter": 12,
       "reveal_status": "已揭示",
-      "story_time": "店内拆检怀表时",
+      "story_time": "第四日凌晨两点十分至两点二十分",
       "updated_chapter": 12
-    },
-    "E013": {
-      "characters": [
-        "当前存在"
-      ],
-      "first_recorded_chapter": 13,
-      "id": "E013",
-      "objective_fact": "记忆的河道和树部分吻合、裂石缺失；她自行停下挖取以保留原位置，又被工具车拍摄。询问路人没有得到万能旧史。",
-      "reader_knowledge": "知道记忆可部分成立、来源仍未知；不知车是谁。她选择先留车迹而不查车，风险判断不由镜辞替做。",
-      "reveal_chapter": 13,
-      "reveal_status": "已揭示",
-      "story_time": "北河首次实地查访",
-      "updated_chapter": 13
-    },
-    "E014": {
-      "characters": [
-        "当前存在",
-        "镜辞"
-      ],
-      "first_recorded_chapter": 14,
-      "id": "E014",
-      "objective_fact": "金属17获得全景位置绑定；白车回返、现场刷泥、试撬、补油漆被录像，不再只是历史地点。她避让而不跟车，保存两份原视频。",
-      "reader_knowledge": "知道当天有人处理具体点位；不知单位及目的。镜辞又想命她先回，仍未完全放手。",
-      "reveal_chapter": 14,
-      "reveal_status": "已揭示",
-      "story_time": "北河17号再访",
-      "updated_chapter": 14
-    },
-    "E015": {
-      "characters": [
-        "镜辞",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 15,
-      "id": "E015",
-      "objective_fact": "沈竹怀表纸条在玻璃片上拍照后装入夹层袋，原件留店；纸上的17号与北河当日现场照片交叉，镜辞夜赴北河。",
-      "reader_knowledge": "沈竹旧纸与北河当日照片相合；沈竹去向和现场维护目的未证。",
-      "reveal_chapter": 15,
-      "reveal_status": "已揭示",
-      "story_time": "当晚怀表取信后",
-      "updated_chapter": 15
-    },
-    "E016": {
-      "characters": [
-        "镜辞",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 16,
-      "id": "E016",
-      "objective_fact": "北河机械腕表在17号附近局部走慢，手机未见同步偏差；第一、二次有限影像只证局部接触，第三次未拍到施工，镜辞因被反看而撤离。",
-      "reader_knowledge": "腕表局部偏差与可疑人物线成立；第二轮材料和第三轮施工动作未证。",
-      "reveal_chapter": 16,
-      "reveal_status": "已揭示",
-      "story_time": "北河夜间限时复现",
-      "updated_chapter": 16
-    },
-    "E017": {
-      "characters": [
-        "镜辞",
-        "猫眼",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 17,
-      "id": "E017",
-      "objective_fact": "猫眼按交易只查可核编号历史，离线抢存变化中的公开页面；016未拍到维护者侧脸，现场维护目的仍待核。",
-      "reader_knowledge": "公开页版本正变化；猫眼和镜辞没有维护者侧脸影像，也不知谁改两处。",
-      "reveal_chapter": 17,
-      "reveal_status": "已揭示",
-      "story_time": "回临江后查维护编号",
-      "updated_chapter": 17
-    },
-    "E018": {
-      "characters": [
-        "镜辞",
-        "猫眼"
-      ],
-      "first_recorded_chapter": 18,
-      "id": "E018",
-      "objective_fact": "镜辞带沈竹走时记录的复印件到老码头03复做读数；原件留店，包装标签与现场照片分存。",
-      "reader_knowledge": "沈竹旧记录能指导一次复做；手写原件未离店，偏差原因未证。",
-      "reveal_chapter": 18,
-      "reveal_status": "已揭示",
-      "story_time": "老码头03现场复做",
-      "updated_chapter": 18
-    },
-    "E019": {
-      "characters": [
-        "镜辞",
-        "猫眼"
-      ],
-      "first_recorded_chapter": 19,
-      "id": "E019",
-      "objective_fact": "废料标签落到恒准；普通前台确认03为退役保留维护点，拒绝客户信息；回访反问来源与北河。回店发现周远字段正在减少。",
-      "reader_knowledge": "镜辞借配件业务试探，对方可按普通权限关页，不能把关页写成恶意已证。猫眼拒陪客户跑售后、号码查询下一笔。恒准不等于恒泰。",
-      "reveal_chapter": 19,
-      "reveal_status": "已揭示",
-      "story_time": "城西产业园走访时",
-      "updated_chapter": 19
-    },
-    "E020": {
-      "characters": [
-        "镜辞",
-        "猫眼",
-        "周远"
-      ],
-      "first_recorded_chapter": 20,
-      "id": "E020",
-      "objective_fact": "周远店内电子字段变化，宁州周远交付原邮件；猫眼公开采购索引只证品名批次，03/17实际出库时点未得原件、待核。",
-      "reader_knowledge": "宁州原邮件与店内版本可比，采购索引无出库时间原件。",
-      "reveal_chapter": 20,
-      "reveal_status": "已揭示",
-      "story_time": "周远店内记录变化时",
-      "updated_chapter": 20
-    },
-    "E021": {
-      "characters": [
-        "镜辞",
-        "猫眼"
-      ],
-      "first_recorded_chapter": 21,
-      "id": "E021",
-      "objective_fact": "先核陌生人提问，再沿普通渡口台账到泵站；见车逃离仍选择拍拆件空位、留铝牌与贴纸，不赌追车。",
-      "reader_knowledge": "镜辞想追沈竹；猫眼看穿泄露测试并索价，未无条件协助。台账电话尾号只是母亲去过的有限关联；D4与旧照片形状对上仍不认同一项目。",
-      "reveal_chapter": 21,
-      "reveal_status": "已揭示",
-      "story_time": "渡口走访当日",
-      "updated_chapter": 21
-    },
-    "E022": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 22,
-      "id": "E022",
-      "objective_fact": "分开问三位摊主，丢弃不可靠脸描；投三条无害假线，河西值班回电证明一条消息路在动，未给水果老板定内鬼。",
-      "reader_knowledge": "镜辞开始设计有限实验，不控制整条维护链；摊主自愿按便签回答，守钟人嫌麻烦并提醒别编精彩。姜只问前一个人动作，行为目的暂不同。",
-      "reveal_chapter": 22,
-      "reveal_status": "已揭示",
-      "story_time": "陌生人问店后",
-      "updated_chapter": 22
-    },
-    "E023": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿"
-      ],
-      "first_recorded_chapter": 23,
-      "id": "E023",
-      "objective_fact": "镜辞与姜霁停车场失配而丢陈屿；D4车牌只有后三位，不能据此认定与姜所记车辆同车队。",
-      "reader_knowledge": "两人失配的代价是目标离开；后三位车牌不足认同车队。",
-      "reveal_chapter": 23,
-      "reveal_status": "已揭示",
-      "story_time": "停车场初遇姜霁时",
-      "updated_chapter": 23
-    },
-    "E024": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 24,
-      "id": "E024",
-      "objective_fact": "D4交接联原件归还领班，姜霁把获准拍摄的照片传镜辞；回收司机短暂极浅接缝是镜辞亲见，车源与身份仍待核。",
-      "reader_knowledge": "D4交接原件归领班，镜辞持照片；旧司机缝是瞬时观察。",
-      "reveal_chapter": 24,
-      "reveal_status": "已揭示",
-      "story_time": "D4现场核交接时",
-      "updated_chapter": 24
-    },
-    "E025": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 25,
-      "id": "E025",
-      "objective_fact": "来客指向顺记真地址却催镜辞走侧门；镜辞核旧收据与D4照片后拒绝当晚进门，私店半年物流无已证入口。",
-      "reader_knowledge": "顺记地址经多源对到，不代表女人当晚邀约可信；半年物流仍待核。",
-      "reveal_chapter": 25,
-      "reveal_status": "已揭示",
-      "story_time": "女人到钟表行当日",
-      "updated_chapter": 25
-    },
-    "E026": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 26,
-      "id": "E026",
-      "objective_fact": "镜辞与姜霁在顺记门外观察持钥匙者、快递和五金店代收；六个月电费曲线无已证取得入口，暂不写入。",
-      "reader_knowledge": "现场可见代收和持钥匙进入，六个月用电情况未获可核来源。",
-      "reveal_chapter": 26,
-      "reveal_status": "已揭示",
-      "story_time": "次日下午顺记门外",
-      "updated_chapter": 26
-    },
-    "E027": {
-      "characters": [
-        "镜辞",
-        "老韩"
-      ],
-      "first_recorded_chapter": 27,
-      "id": "E027",
-      "objective_fact": "先帮老韩救其私人箱子，再看异常投递工作册；旧规则跨注销仍延续，近期在途件成为可等目标。",
-      "reader_knowledge": "老人想保旧物，不替主角认人；承认当年可能写错。沈竹签名只能证“当时如此记”，镜辞明确“查，但不是现在”，包裹优先。",
-      "reveal_chapter": 27,
-      "reveal_status": "已揭示",
-      "story_time": "老韩旧册走访时",
-      "updated_chapter": 27
-    },
-    "E028": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 28,
-      "id": "E028",
-      "objective_fact": "顺记旧物流路径有人使用；返店门缝出现沈竹相关复印件，投放者和原件来源未核。",
-      "reader_knowledge": "有人继续使用顺记旧路，门缝纸的原始来源与投放者未知。",
-      "reveal_chapter": 28,
-      "reveal_status": "已揭示",
-      "story_time": "顺记再次到件当日",
-      "updated_chapter": 28
-    },
-    "E029": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 29,
-      "id": "E029",
-      "objective_fact": "老人承认旧观察线、顺记修改代收、母亲用过渠道，拒答旧事且承认无全套答案；产权家庭确认未授权现在使用，建立次日入场流程。",
-      "reader_knowledge": "守钟人有限知情/保护退路，而非全知工具。镜辞想免五金老板受询，最终为取产权人签字答“查”，付外部关系债。",
-      "reveal_chapter": 29,
-      "reveal_status": "已揭示",
-      "story_time": "产权授权沟通时",
-      "updated_chapter": 29
-    },
-    "E030": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 30,
-      "id": "E030",
-      "objective_fact": "顺记夜间亮灯和用电变化已记，对方是否知合法开门仍待核；当天原纸与零件现场封存，两人获准只持照片外查。",
-      "reader_knowledge": "夜间亮灯不能证明对方已知合法开门；现场原件与外查照片分开。",
-      "reveal_chapter": 30,
-      "reveal_status": "已揭示",
-      "story_time": "顺记合法开门当日09:58起",
-      "updated_chapter": 30
-    },
-    "E031": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理"
-      ],
-      "first_recorded_chapter": 31,
-      "id": "E031",
-      "objective_fact": "姜霁带顺记安平里工作单的现场照片到6号楼，向物业有限出示供应编号；顺记原件仍在原铺封存。",
-      "reader_knowledge": "安平里工作单仅为获准保留的顺记现场照片，不能当作原件。",
-      "reveal_chapter": 31,
-      "reveal_status": "已揭示",
-      "story_time": "顺记之后到安平里时",
-      "updated_chapter": 31
-    },
-    "E032": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "许棠"
-      ],
-      "first_recorded_chapter": 32,
-      "id": "E032",
-      "objective_fact": "许棠因楼门新规则被挡，许德昌下楼开门，众人上302；物业修正后许棠下楼试卡，次晨又被02:17覆盖。",
-      "reader_knowledge": "楼门和302屋门是两个入口；人工修正次晨被02:17覆盖。",
-      "reveal_chapter": 32,
-      "reveal_status": "已揭示",
-      "story_time": "安平里302门禁核验时",
-      "updated_chapter": 32
-    },
-    "E033": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理"
-      ],
-      "first_recorded_chapter": 33,
-      "id": "E033",
-      "objective_fact": "授权调日志，02:17同步04秒、覆盖06秒、重算09秒。11:00及12:40原凭证停用；12:40门禁服务正常，15:18:07另签新凭证，来人进楼不等于认证。",
-      "reader_knowledge": "镜辞忍住“有人修关系”的全因果，仍不知规则/触发者/裂缝关系；父亲拒讲吵架原由，不配合也成立。双陈骁尚是后续债，来人有权限不等于人已认证。",
-      "reveal_chapter": 33,
-      "reveal_status": "已揭示",
-      "story_time": "次晨02:17覆盖核验时",
-      "updated_chapter": 33
-    },
-    "E034": {
-      "characters": [
-        "镜辞",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 34,
-      "id": "E034",
-      "objective_fact": "本地陈骁真实到门，首见极浅接缝；本人同意再次停凭证。",
-      "reader_knowledge": "镜辞已不立即判人，仍容易把关系节奏读成对象异常；没有完整来历答案。",
-      "reveal_chapter": 34,
-      "reveal_status": "已揭示",
-      "story_time": "本地陈骁到502门前时",
-      "updated_chapter": 34
-    },
-    "E035": {
-      "characters": [
-        "镜辞",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 35,
-      "id": "E035",
-      "objective_fact": "宁州真人实时在岗；未确认恢复通知；两条来源首次并列。",
-      "reader_knowledge": "“关系链更强”已有，但陈启明要的是认亲，镜辞解释不能使他接受。",
-      "reveal_chapter": 35,
-      "reveal_status": "已揭示",
-      "story_time": "宁州陈骁实时视频时",
-      "updated_chapter": 35
-    },
-    "E036": {
-      "characters": [
-        "镜辞",
-        "陈骁",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 36,
-      "id": "E036",
-      "objective_fact": "本地陈骁七周租住、工作、急诊垫款和后续排班有独立后果；配送站小赵在本场介绍，未存在前日借钱视频。",
-      "reader_knowledge": "本地陈骁在七周内确有工作与人情后果；没有此前借钱视频。",
-      "reveal_chapter": 36,
-      "reveal_status": "已揭示",
-      "story_time": "次日配送站核查时",
-      "updated_chapter": 36
-    },
-    "E037": {
-      "characters": [
-        "镜辞",
-        "陈骁",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 37,
-      "id": "E037",
-      "objective_fact": "本地陈骁为配送班换胎、复验并承担迟到与换班；他只知道自己被另眼看，不知道镜辞接缝术语。",
-      "reader_knowledge": "陈骁察觉受查而维护工作，尚不知道接缝术语。",
-      "reveal_chapter": 37,
-      "reveal_status": "已揭示",
-      "story_time": "随后配送日",
-      "updated_chapter": 37
-    },
-    "E038": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁"
-      ],
-      "first_recorded_chapter": 38,
-      "id": "E038",
-      "objective_fact": "九年不是完美档案：欠租、返修争执、婚宴重联都有别人承担的后果；旧/新版叙述不同。",
-      "reader_knowledge": "镜辞会笑穷境、想劝父子；姜霁不把不体面的关系修成样板。",
-      "reveal_chapter": 38,
-      "reveal_status": "已揭示",
-      "story_time": "宁州九年材料复核时",
-      "updated_chapter": 38
-    },
-    "E039": {
-      "characters": [
-        "镜辞",
-        "徐师傅",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 39,
-      "id": "E039",
-      "objective_fact": "徐师傅进入；四年前维修成立，现住宅门与移动楼栋门分开。",
-      "reader_knowledge": "镜辞还问“这一趟解决什么”；想从机械痕迹得到身份答案，徐只给活的边界。",
-      "reveal_chapter": 39,
-      "reveal_status": "已揭示",
-      "story_time": "南街锁匠核旧锁时",
-      "updated_chapter": 39
-    },
-    "E040": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 40,
-      "id": "E040",
-      "objective_fact": "住户签字、主管许可后，物业临停相关账户楼栋自动通行与重签24小时；到期须复核，无新安全依据即恢复，502屋门由住户决定。",
-      "reader_knowledge": "二十四小时临停有主管许可和到期条件，只管相关楼栋通行。",
-      "reveal_chapter": 40,
-      "reveal_status": "已揭示",
-      "story_time": "临时限权当日16:06",
-      "updated_chapter": 40
-    },
-    "E041": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 41,
-      "id": "E041",
-      "objective_fact": "三点会面未和解，也没有新增推门威胁；16:06临停到期，杜经理恢复楼栋相关自动通行，父亲对502住宅的拒绝仍有效。",
-      "reader_knowledge": "临停到期恢复楼栋通行，502屋门仍受父亲拒绝；争议材料继续人工审核。",
-      "reveal_chapter": 41,
-      "reveal_status": "已揭示",
-      "story_time": "次日下午15:00—16:06",
-      "updated_chapter": 41
-    },
-    "E042": {
-      "characters": [
-        "镜辞",
-        "当前存在",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 42,
-      "id": "E042",
-      "objective_fact": "当前存在拒借旧同学群帐号查原芽照片，并退出旧称呼下预留的聚餐座位；约饭者取消留位，镜辞删借号草稿。陈骁当下修车、借伞和失班后果另立栏。",
-      "reader_knowledge": "她自己退出旧群留位并拒借帐号，旧关系机会已损失；原芽照片来源仍待核。",
-      "reveal_chapter": 42,
-      "reveal_status": "已揭示",
-      "story_time": "会面次日安平里及钟表行",
-      "updated_chapter": 42
-    },
-    "E043": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁",
-        "杜经理"
-      ],
-      "first_recorded_chapter": 43,
-      "id": "E043",
-      "objective_fact": "群聊普通推断与后台无来源改文分链；许棠拒被当对照；左手疑点进入有限核查。",
-      "reader_knowledge": "镜辞不拿接缝给普通差异加权；姜霁仍把差异过早写成风险，后退待查。",
-      "reveal_chapter": 43,
-      "reveal_status": "已揭示",
-      "story_time": "门禁争议消息扩散时",
-      "updated_chapter": 43
-    },
-    "E044": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁",
-        "杜经理"
-      ],
-      "first_recorded_chapter": 44,
-      "id": "E044",
-      "objective_fact": "右腕普通伤因交叉成立；错误提示与所有申诉摘要引用撤销；开启重大争议入口。",
-      "reader_knowledge": "姜承认倾向过早并道歉，不把专业谨慎写成无错；镜辞不借她犯错给能力加分。",
-      "reveal_chapter": 44,
-      "reveal_status": "已揭示",
-      "story_time": "右腕误判撤回当日",
-      "updated_chapter": 44
-    },
-    "E045": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理",
-        "陈骁"
-      ],
-      "first_recorded_chapter": 45,
-      "id": "E045",
-      "objective_fact": "两地来源与住户拒绝进入重大争议；暂停六号楼入口关联自动通行，人工联系保留，502机械门与门链仍由住户控制。杜分存纸件、存储盘和操作编号。",
-      "reader_knowledge": "黄色重大争议新建，区别于已到期的二十四小时临停。",
-      "reveal_chapter": 45,
-      "reveal_status": "已揭示",
-      "story_time": "重大争议签入当日16:19",
-      "updated_chapter": 45
-    },
-    "E046": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "杜经理",
-        "陈骁"
-      ],
-      "first_recorded_chapter": 46,
-      "id": "E046",
-      "objective_fact": "次晨02:17上游覆盖黄色争议与门禁限制；本地纸件、日志与住户住宅拒绝仍保留，不能把系统恢复当本人同意。",
-      "reader_knowledge": "上游覆盖黄色状态，独立副本与住户拒绝没有因此消失。",
-      "reveal_chapter": 46,
-      "reveal_status": "已揭示",
-      "story_time": "次晨02:17覆盖后",
-      "updated_chapter": 46
-    },
-    "E047": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 47,
-      "id": "E047",
-      "objective_fact": "楼栋告警后物业与辖区建立独立公共安全事件单；本地陈骁凭恢复通知入楼却未入502，父亲仍拒住宅进入。",
-      "reader_knowledge": "本地陈骁正常刷入楼栋仍不能入502；公共安全事件单另存。",
-      "reveal_chapter": 47,
-      "reveal_status": "已揭示",
-      "story_time": "覆盖后告警现场",
-      "updated_chapter": 47
-    },
-    "E048": {
-      "characters": [
-        "镜辞",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 48,
-      "id": "E048",
-      "objective_fact": "本地陈骁提交的是空药盒；父亲只让物业拍盒上药名和有效期印字，盒仍暂存，未出现盒内药片。",
-      "reader_knowledge": "药盒为空，父亲只核盒上印字；来源与归属仍未获承认。",
-      "reveal_chapter": 48,
-      "reveal_status": "已揭示",
-      "story_time": "门链现场继续核住户拒绝时",
-      "updated_chapter": 48
-    },
-    "E049": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁"
-      ],
-      "first_recorded_chapter": 49,
-      "id": "E049",
-      "objective_fact": "两地真人、有效同号证件同场；工作交接/转单；金融同名问题进入跨地核查。",
-      "reader_knowledge": "两陈都想守名字，但宁州拒把对方先写骗子；镜辞仍只能认所见条件，不能填成身份归属。",
-      "reveal_chapter": 49,
-      "reveal_status": "已揭示",
-      "story_time": "两陈实时同场时",
-      "updated_chapter": 49
-    },
-    "E050": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈骁",
-        "陈启明"
-      ],
-      "first_recorded_chapter": 50,
-      "id": "E050",
-      "objective_fact": "家庭公开拒续旧关系；保住宅不取消七周；独立保护单与七日复核；多地02:17/恒泰共同项。",
-      "reader_knowledge": "镜辞不再把所见变公开判决；仍无起源/发起方；姜“毕业句”略把实践压成口号。",
-      "reveal_chapter": 50,
-      "reveal_status": "已揭示",
-      "story_time": "同场后家庭处置结论时",
-      "updated_chapter": 50
-    },
-    "E051": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "宁州陈骁",
-        "本地陈骁",
-        "陈启明",
-        "杜经理",
-        "许棠"
-      ],
-      "first_recorded_chapter": 51,
-      "id": "E051",
-      "objective_fact": "宁州陈骁到楼下拒用绿灯进门；杜经理19:12依住宅保护工单拦截并留记录，陈启明视频拒开502。姜霁留同账户跨城16:20互斥原页。镜辞本次未见接缝且未认证。许棠卡未修，邻居代送药晚约20分钟。夜里未知号码问502是否还能看见，未回。",
-      "reader_knowledge": "系统绿灯未使502对任何一方开放；同账户出现跨城互斥来源。未见接缝只属一次观察，短信来源和身份真伪仍未知。",
-      "reveal_chapter": 51,
-      "reveal_status": "已揭示",
-      "story_time": "承050当晚；末班车18:51到站，19:12拦截门禁，夜里钟表行收短信",
-      "updated_chapter": 51
-    },
-    "E052": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼",
-        "宁州陈骁",
-        "本地陈骁",
-        "杜经理"
-      ],
-      "first_recorded_chapter": 52,
-      "id": "E052",
-      "objective_fact": "同账户并账致宁州陈骁扣186元、本地陈骁停单少43元且药晚到6分钟。镜辞留存马负责人附页签字原件及杜经理抄件，杜拒点确认。下午后台现21小时自动合账倒计时。",
-      "reader_knowledge": "两地来源各自成立但账户并账；镜辞只见证事件，不认证身份。晚送消息在发生后取得。 宁州陈骁的位置是本人陈述，短信和物业新字段是否有关未证实。",
-      "reveal_chapter": 52,
-      "reveal_status": "已揭示",
-      "story_time": "并账次日早上七点四十至十一点零六之后",
-      "updated_chapter": 52
-    },
-    "E053": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "本地陈骁"
-      ],
-      "first_recorded_chapter": 53,
-      "id": "E053",
-      "objective_fact": "镜辞12:01向陌生号发「D4，看不见」作限定试验，私本未改。杜经理挂断询问电话。19:00东里巷五金店来电催签D4退件，八点前不签将扣司机三十元。",
-      "reader_knowledge": "反馈是试探，不是当前能力观察；D4地点无空间残余被确认。对方会否利用短信尚未知。",
-      "reveal_chapter": 53,
-      "reveal_status": "已揭示",
-      "story_time": "配送恢复半趟当日11点至午后",
-      "updated_chapter": 53
-    },
-    "E054": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼"
-      ],
-      "first_recorded_chapter": 56,
-      "id": "E054",
-      "objective_fact": "镜辞付18元签收D4退件，保住留存联与6元回执底单。16:40公示南岸待收尾且设备往城南（恒泰）。恒准售后回访否认系统有南岸。暂留「03南栏，残余明显」未发。",
-      "reader_knowledge": "读者看到基座仍留到次日，也看到两家公司被分开记下。 镜辞实际向恒准售后提到南岸；后续有无公开新行都不能单独证明反馈作用或幕后目标图。",
-      "reveal_chapter": 54,
-      "reveal_status": "已揭示",
-      "story_time": "假反馈次日晚上",
-      "updated_chapter": 56
-    },
-    "E055": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼",
-        "陈屿",
-        "打印店老板"
-      ],
-      "first_recorded_chapter": 56,
-      "id": "E055",
-      "objective_fact": "05:17基座划掉；07:52发03南栏假异常，打印店收6+9元后停定时拉页；次晨回「南栏没处理过」。恒泰5年合影对上陈屿（左眉疤、小指弯），守钟人认出其来过并知铁盒挪两寸。",
-      "reader_knowledge": "匿名回复只证明对方说过，公开页只证明截至其时间未见新行；现场及完整目标图未知。名字早就有，新的只是脸与公开合影对上。",
-      "reveal_chapter": 55,
-      "reveal_status": "已揭示",
-      "story_time": "基座复核之后的那个清晨到对脸当日",
-      "updated_chapter": 56
-    },
-    "E056": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿"
-      ],
-      "first_recorded_chapter": 56,
-      "id": "E056",
-      "objective_fact": "旧点未回现场。南栏公开页无新行，匿名声称没处理过，现场及对方目标图未知。西口公示陈屿次日负责恒泰巡检；街对面极浅接缝一次，未追看。",
-      "reader_knowledge": "旧图只证明过去，当前现场未复查；南栏无公开新行与匿名说法不是现场证实。陈屿一次极浅缝不授目标图。",
-      "reveal_chapter": 56,
-      "reveal_status": "已揭示",
-      "story_time": "对脸次日，西口公示贴出之后",
-      "updated_chapter": 56
-    },
-    "E057": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "裴亮"
-      ],
-      "first_recorded_chapter": 57,
-      "id": "E057",
-      "objective_fact": "裴亮按陈屿旧习惯提前放接头件，迟到九分钟被扣十五块。镜辞换角度再看耳后未见。陈屿约下午两点在东口窗边谈。 摊主以熟客往常买三把估计七块五，明确当日未成交。",
-      "reader_knowledge": "读者看到工友把他当长期同事用，也看到这次没确认接缝，056那一次没有被改成看错。 摊主七块五为按熟客往常购买量所作估算，未成交；不与裴亮的工钱并账。",
-      "reveal_chapter": 57,
-      "reveal_status": "已揭示",
-      "story_time": "西口公示当天上午八点到十点",
-      "updated_chapter": 57
-    },
-    "E058": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿"
-      ],
-      "first_recorded_chapter": 58,
-      "id": "E058",
-      "objective_fact": "公开窗边，镜辞用临江取表记录与宁州同分钟公司会议追问陈屿。陈屿不填周远，口头称样本、栏不止一格。镜辞拒供D4与502。D4只保留旧司机接缝记录，当前未复看。 姜霁仅露两页标题，遮住无关姓名和内容，未向陈屿递交材料。",
-      "reader_knowledge": "读者知道这次谈话在公开座位，样本不是职务，周远的结论栏仍空，新的可见性结果没有交出。",
-      "reveal_chapter": 58,
-      "reveal_status": "已揭示",
-      "story_time": "西口公示当天下午两点到三点",
-      "updated_chapter": 58
-    },
-    "E059": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "裴亮"
-      ],
-      "first_recorded_chapter": 59,
-      "id": "E059",
-      "objective_fact": "15:02停供，公开栏15:36待复核。裴亮15:10出仓，预付页截屏15:39定位西口；自述等到15:50，骑行29加等待11共40分钟扣8，西口单车3，共11；到店及返程另计。陈屿群里说人别来店。 裴亮另述15:50后在市场找陈工、拨电话未接通，16:30后推车到店；这段不在40分钟派工扣款内。",
-      "reader_knowledge": "读者看到停供写在本子上，裴亮的十一块是当天发生的，陈屿没有进店。挨着没有被写成已经证明的因果。 裴亮另述15:50后寻陈工、拨电话无果，16:30后推车到店；额外行程不并入29加11分钟的空跑账。",
-      "reveal_chapter": 59,
-      "reveal_status": "已揭示",
-      "story_time": "西口公示当天下午三点到五点四十五",
-      "updated_chapter": 59
-    },
-    "E060": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "孙立"
-      ],
-      "first_recorded_chapter": 60,
-      "id": "E060",
-      "objective_fact": "陈屿把机械表放上柜台，问南岸和502。镜辞不说话，但看了抽屉和门。孙立送来走慢的表，脸侧有几乎贴平的线，镜辞未判。 姜霁明确下午只完成普通维修，不重新邀请镜辞对顾客验人。",
-      "reader_knowledge": "读者看到沉默仍会漏出视线，孙立只被写成来修表的人，下午才取。守钟人没有受伤。",
-      "reveal_chapter": 60,
-      "reveal_status": "已揭示",
-      "story_time": "停供次日上午九点到十点",
-      "updated_chapter": 60
-    },
-    "E061": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "孙立",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 61,
-      "id": "E061",
-      "objective_fact": "孙立油干慢表修好，补25、共45；签名原票孙立留、底联店留。脸侧再闪仍未判。14:18陈屿问没看出来，消息来源未核。公开页显示孙立三天前在东口服务部核证件，该部见于恒泰下游采购，恒准页分存。 14:12离店与14:18问话仅有先后，短信与那次目击的因果未证。",
-      "reader_knowledge": "修表与付款真实；陈屿随后问话只使镜辞怀疑消息泄露，取得路径未知。证件核对不证明谁派孙立来。 14:12离店与14:18短信仅构成先后，镜辞担忧自然目击被利用，未查明消息是否与那一眼有关。",
-      "reveal_chapter": 61,
-      "reveal_status": "已揭示",
-      "story_time": "停供次日下午一点五十到两点四十",
-      "updated_chapter": 61
-    },
-    "E062": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "孙立",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 62,
-      "id": "E062",
-      "objective_fact": "孙立带推荐名单争号费6；镜辞只盖维修票。两版公开页显示本店08:20被新增。推荐异议工本2、明日9点撤下。蓝拖鞋依名单到店，店付公交2、未看脸。17:12陈屿发北河老树与17金属空景，镜辞对旧图、不打电话。",
-      "reader_knowledge": "读者看到名单是普通公示更新，撤下要到明天九点。照片对上老树和十七号，画面里没有人，今晚没有打电话。守钟人没有受伤。",
-      "reveal_chapter": 62,
-      "reveal_status": "已揭示",
-      "story_time": "停供次日下午四点到五点二十",
-      "updated_chapter": 62
-    },
-    "E063": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 63,
-      "id": "E063",
-      "objective_fact": "镜辞打电话。她在县城车站，能自己走，三天里两次远观都没靠近，换车多花六块。他转告陈屿两句原话，发出别拿人给我做验收，不替她决定回不回。她指出先喝汤、缺口碗和耳后，自己买四十六块的票，明早七点四十到，先去早餐铺，不进店，不给他看耳朵。九点公开页上钟表行那一行已撤。蓝拖鞋的表修好，十五块，未看脸，口头说的十块迟到并未扣到。",
-      "reader_knowledge": "读者知道她人能走，票是自己买的，明早先去早餐铺。陈屿那句拒绝已经发出。守钟人没有受伤。见面还没发生。",
-      "reveal_chapter": 63,
-      "reveal_status": "已揭示",
-      "story_time": "异议生效日上午八点四十到九点五十五",
-      "updated_chapter": 63
-    },
-    "E064": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "郭老板"
-      ],
-      "first_recorded_chapter": 64,
-      "id": "E064",
-      "objective_fact": "早餐铺见面，汤与碗不再验真；她承认模仿，镜辞承认混淆找人、丢人和判断。老头问为何生分、挪凳挡路，郭侧身碰落油条，自认炭钱2并仍叫芽、转开缺口碗。她要求暂不默认叫芽；问北河所做是否算自己的，未获答。照片未留、备注空，她未跟回店。",
-      "reader_knowledge": "读者看到当面承认和未答的问题。郭老板不懂接缝，炭钱他自己认。守钟人没有受伤。北河笔记还没留下。",
-      "reveal_chapter": 64,
-      "reveal_status": "已揭示",
-      "story_time": "到达日上午七点四十五到八点二十",
-      "updated_chapter": 64
-    },
-    "E065": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "陈屿",
-        "守钟人",
-        "当前存在",
-        "孙立"
-      ],
-      "first_recorded_chapter": 65,
-      "id": "E065",
-      "objective_fact": "陈屿栏外列502、北河、孙立，镜辞拒填。马甲工空签到，晨间到场仅自述、15元待队上认；镜辞只见下午。孙立自留维修原票、自己争退费。薄本姓名空，住宅工单改期后日18点，镜辞留店。两人往返车费8从修表格出；姜霁自付打印1.5、取回找零0.5。",
-      "reader_knowledge": "拒填不让复核停止；薄本空名。工人15元待队上认，3元已花；镜辞不证未见的晨间工时。两人往返车费8和姜霁打印1.5分账，找零归她。安平里尚未去，守钟人无伤。",
-      "reveal_chapter": 65,
-      "reveal_status": "已揭示",
-      "story_time": "到达日下午两点十分到五点差十分",
-      "updated_chapter": 65
-    },
-    "E066": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 66,
-      "id": "E066",
-      "objective_fact": "沿011两页分开记得与亲做并纠正北河日期；柜台丢12电池单，拒蛋3。旧证在她手里，她自行离店。承065次晨，约定为明日18点，没有再次顺延。",
-      "reader_knowledge": "读者看到账拆开了，名字仍空，证件还是芽。窗口今天没发生。守钟人没有受伤。怀表没有新线索。",
-      "reveal_chapter": 66,
-      "reveal_status": "已揭示",
-      "story_time": "到达次日上午八点十分到九点四十",
-      "updated_chapter": 66
-    },
-    "E067": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 67,
-      "id": "E067",
-      "objective_fact": "短途误8:40，定金10不退，改10:20票26，多8，损失共18；回程18。用旧证取寄存客栈收据，房费40与修锁备注带回。18点复核仍未到场，明日由她带路，不提前认老板娘作证。",
-      "reader_knowledge": "读者看到票已经落在芽名下，亏了十八块。门锁那七个字被摘下来，人还没去客栈。守钟人没有受伤。",
-      "reveal_chapter": 67,
-      "reveal_status": "已揭示",
-      "story_time": "复核日上午八点三十二到下午五点十分",
-      "updated_chapter": 67
-    },
-    "E068": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "北河客栈老板娘"
-      ],
-      "first_recorded_chapter": 68,
-      "id": "E068",
-      "objective_fact": "老板娘先认出修锁者，门锁好用、房费40少收20、书面仍芽。她自愿给客栈现用号码，只答应先联系，未承诺到场免费；姜霁不拍号。唐宁便条原件仍在客栈，她抄号未拨。路费44，复核十八点仍未到场。",
-      "reader_knowledge": "修锁产生具体售后请求，她可有限答应；旧证件与书面芽仍在，不证明已脱离身份脚手架。唐宁尚未见。",
-      "reveal_chapter": 68,
-      "reveal_status": "已揭示",
-      "story_time": "复核次日早上到傍晚五点二十",
-      "updated_chapter": 68
-    },
-    "E069": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "唐宁"
-      ],
-      "first_recorded_chapter": 69,
-      "id": "E069",
-      "objective_fact": "08:10自行拨约，08:40换电池12、09:20表带15；午后奶茶店见唐宁。她未领旧友位置，唐宁拒代擦袖口及再约、代劝。镜辞只远见抽手，回店听本人转述。旧照未删、移出置顶；18点到家消息未回复，先喝汤留次晨。",
-      "reader_knowledge": "拒承旧位置会失去当下亲近，讲清不自动免责。暂停接触不等于永远绝交；镜辞并未听到场外对白。",
-      "reveal_chapter": 69,
-      "reveal_status": "已揭示",
-      "story_time": "客栈归来次日早上八点十分到晚上六点",
-      "updated_chapter": 69
-    },
-    "E070": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 70,
-      "id": "E070",
-      "objective_fact": "唐宁说初一无先喝汤习惯。她胃疼喝两口，汤4、白开1，镜辞油条2。原约定缺席逾期保留，杜当天通知补核，带工单去活动室不进502；两人各投2，她留铺未续旧话。",
-      "reader_knowledge": "读者看到先喝汤退出验人。复核还没开始。两点十七在队列上，来源没有被解释。",
-      "reveal_chapter": 70,
-      "reveal_status": "已揭示",
-      "story_time": "次日早上七点四十到八点二十以后",
-      "updated_chapter": 70
-    },
-    "E071": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼",
-        "守钟人",
-        "本地陈骁"
-      ],
-      "first_recorded_chapter": 71,
-      "id": "E071",
-      "objective_fact": "当天补核四项，不要求改口；留守至次日02:17亲见页面覆正常，楼下绿、502门链状态由交接核对。杜留纸签日志；临江18+15跨夜共33，宁州车补40不发无新186；许棠红卡。03:05后出租18镜10姜8回店。",
-      "reader_knowledge": "读者看到拒绝验收没有停住两点十七。纸和屏幕分开留着。两个陈骁都还在自己的班上。",
-      "reveal_chapter": 71,
-      "reveal_status": "已揭示",
-      "story_time": "补核当日08:46至次日凌晨03:05后",
-      "updated_chapter": 71
-    },
-    "E072": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "老秦",
-        "隔壁借镊子的摊主"
-      ],
-      "first_recorded_chapter": 72,
-      "id": "E072",
-      "objective_fact": "凌晨回店后的同一早晨接三日分类活：每日60错箱扣10。爱齐整被催快；报废表把只分当日20分钟、不带回加班，老秦同意无追加。首日扣饭2实领58、还10余48。明日08:30，迟到扣5。",
-      "reader_knowledge": "工作能带来喜好、高兴和议价，不必每件当身份验证。熟练来源未判；工资与三天约定均未增加。",
-      "reveal_chapter": 72,
-      "reveal_status": "已揭示",
-      "story_time": "补核次日早上09:00至晚上20:00（首个工日）",
-      "updated_chapter": 72
-    },
-    "E073": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼",
-        "守钟人",
-        "本地陈骁",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 73,
-      "id": "E073",
-      "objective_fact": "第二工日杜叫核前次02:17日志、纸副本与持续正常页，不新增同步。许棠半日扣40拒签，临江今早12改派与前次33分记，宁州车补40不发。502药暂存12门未开；她在摊，镜姜各往返4。",
-      "reader_knowledge": "读者看到链在没有镜辞验收的情况下又多了一行名字。纸还在。502仍是陈启明的门。",
-      "reveal_chapter": 73,
-      "reveal_status": "已揭示",
-      "story_time": "首个工日后次晨08:10至09:40（第二工日）",
-      "updated_chapter": 73
-    },
-    "E074": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "方远",
-        "方远学徒",
-        "老秦"
-      ],
-      "first_recorded_chapter": 74,
-      "id": "E074",
-      "objective_fact": "原芽交申请后老师、同学和母亲接住方远，影响其带徒先问想走还是撑不住。她不领功仍问现场调轮工序，方远边做边答未懂身份。学徒现场继续干，未事后发短信。往返8后首日余40、次日工资60另存。回店问醒后事是否进别人生活，未答。",
-      "reader_knowledge": "旧关系影响不因记忆转移；不领功不意味着不能旁听和学手艺。学徒留岗为亲见，未新增超常能力。末问尚未回答。",
-      "reveal_chapter": 74,
-      "reveal_status": "已揭示",
-      "story_time": "当天下午三点到晚上",
-      "updated_chapter": 74
-    },
-    "E075": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "猫眼",
-        "陈屿",
-        "当前存在",
-        "孙立"
-      ],
-      "first_recorded_chapter": 75,
-      "id": "E075",
-      "objective_fact": "东口7:40断电、8:05撤柜，恒泰工单；镜辞未过街；侯强自损46，镜姜未知。她第三日工钱60买手套8后余52，前两日余40和60。孙立回述窗口核维修项目与店章退号费6、留副本；原票自留、未加签其他资料。三天工期实到期，明日没有箱子，不自动长期雇佣。",
-      "reader_knowledge": "读者看到拒绝验收之后工程仍能收尾。一个不认识镜辞的人白跑了。芽的收据没被拿来讨论。",
-      "reveal_chapter": 75,
-      "reveal_status": "已揭示",
-      "story_time": "次日早上七点五十到晚上",
-      "updated_chapter": 75
-    },
-    "E076": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 76,
-      "id": "E076",
-      "objective_fact": "工钱剩152；她把旧证依赖与模仿旧动作伤害分开，承认想留店而诱导镜辞误认，当面道歉，答应不再这样做。镜辞要求别再做，未说算了；面8后144。本人要先问唐宁愿否说高二，未代原谅。",
-      "reader_knowledge": "道歉和止住再诱导的承诺已经发生，原谅未发生；旧证使用是现实依赖，不与模仿伤害混成罪。工钱不抵责任。",
-      "reveal_chapter": 76,
-      "reveal_status": "已揭示",
-      "story_time": "当天晚上七点以后",
-      "updated_chapter": 76
-    },
-    "E077": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在",
-        "唐宁"
-      ],
-      "first_recorded_chapter": 77,
-      "id": "E077",
-      "objective_fact": "唐宁先短信答应只说高二、九点来，限定讲发烧三十九度五与13费用，普通客送表及婚礼表按时交。当前她只074到场后知学徒想走。镜辞新一次停12电池活，她要求先问想让他做什么；饼2后142，长期住会否被天天看，他未保证不会。",
-      "reader_knowledge": "读者看到他最顺的那一天，另一边有人在打针。她的隐瞒不全部算成芽的习惯。离开还没发生。她出发前未知学徒状况，怕镜辞揽事是本人判断，不证明他现场实际接管修车。",
-      "reveal_chapter": 77,
-      "reveal_status": "已揭示",
-      "story_time": "次日早上八点到晚上",
-      "updated_chapter": 77
-    },
-    "E078": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 78,
-      "id": "E078",
-      "objective_fact": "她决定回北河，不报当前未定住址，双方接四项有限建议与不跟不请人跟。她独买次日8:40票18、回公交2后122；镜辞留店做完后盖，不代选票。空袋不先装，旧物留天亮分。",
-      "reader_knowledge": "读者看到离开不是他的恩典。票已经买上。哪些东西跟着走，还停在箱盖上。",
-      "reveal_chapter": 78,
-      "reveal_status": "已揭示",
-      "story_time": "次日早上七点半到夜里",
-      "updated_chapter": 78
-    },
-    "E079": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人",
-        "当前存在"
-      ],
-      "first_recorded_chapter": 79,
-      "id": "E079",
-      "objective_fact": "旧赠物留店托管未分权，当前手套图衣本带走，外套暂借。携122和08:40票离开，镜辞不追。陌生男有限问话后退到入口让路并等待未答问题，无姓名组织；镜辞不催平安，回店修后盖。",
-      "reader_knowledge": "读者看到行李不再是整箱芽的东西。陌生人没有追她。镜辞还没说出她是什么。",
-      "reveal_chapter": 79,
-      "reveal_status": "已揭示",
-      "story_time": "次日06:40至08:00出门及回店",
-      "updated_chapter": 79
-    },
-    "E080": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "当前存在",
-        "吴老板",
-        "刘成",
-        "市场管理员",
-        "陈平",
-        "陌生男人"
-      ],
-      "first_recorded_chapter": 80,
-      "id": "E080",
-      "objective_fact": "陌生男仍在入口等问话，现实伤人打断对话。吴记暴力现场，灰外套要离开而强力伤吴。镜辞看耳后明显线慢半步，伸手抓伤者落空、被撞掉湿本，灰外套察觉凝视；姜拉退、吴告知后门锁与钥匙。陌生男首次抓未稳，救援仍卡门。08:39平安只一个在，未请她折返。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；观察暴露与伸手救援失败清楚呈现；不在流血时多轮算钱，费用延后082。灰外套想离开，强力伤人，未知归属。后门钥匙由吴亲说；平安不自动证明具体车次与位置。",
-      "reveal_chapter": 80,
-      "reveal_status": "已揭示",
-      "story_time": "当天八点十分到八点四十二",
-      "updated_chapter": 80
-    },
-    "E081": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "吴老板",
-        "刘成",
-        "市场管理员",
-        "陈平",
-        "陌生男人"
-      ],
-      "first_recorded_chapter": 81,
-      "id": "E081",
-      "objective_fact": "镜辞按管理员指派传已知出口、搬筐守担架窄路，门槛仍由帮手抬、医护止血；伤者经清路到市场口。陌生男用坏灭火器杠、帮手限制陈平，警方普通口令拘捕。刘成腕伤停工20，公物充装30；姜随后愿说背景。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；镜辞按管理员指派搬筐、守已确认窄路，担架过门槛后能直达市场口；不打、不指挥处置，记录放伤者出去以后。普通人/救援/警察各自主动作。",
-      "reveal_chapter": 81,
-      "reveal_status": "已揭示",
-      "story_time": "当天八点四十二以后",
-      "updated_chapter": 81
-    },
-    "E082": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 82,
-      "id": "E082",
-      "objective_fact": "现场后姜公开连接剥壳人行动网络与分工，不授名册。陌生号码只待核联系人，不证明无限救援。镜辞将临时说明与号码分存、尚未签，冷饼2与现场刘20公物30分别记，不召她回来。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；只介绍称呼与分工，不提前会员；陌生号码未核，不宣称能直达救援。费用在现场之后核，不重复组织与空白纸尾声。",
-      "reveal_chapter": 82,
-      "reveal_status": "已揭示",
-      "story_time": "当天中午到晚上，人已回钟表行",
-      "updated_chapter": 82
-    },
-    "E083": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "守钟人"
-      ],
-      "first_recorded_chapter": 83,
-      "id": "E083",
-      "objective_fact": "镜姜签有限协查五项限制，镜要求原句保留、空白不作身份认证，姜签接受；整库不开。张岚求不回共居处，姜核姐姐可住、约有人取物。镜辞不追窗边影，身份未判；090原句条件实际兑现。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；五项限制准确，保原始观察条件，安全处置不能靠空白记录认证。原话在090实际保留，异议与停手有负责人承担。",
-      "reveal_chapter": 83,
-      "reveal_status": "已揭示",
-      "story_time": "当天夜里，条款已签，张岚去姐家",
-      "updated_chapter": 83
-    },
-    "E084": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李"
-      ],
-      "first_recorded_chapter": 84,
-      "id": "E084",
-      "objective_fact": "张岚租约主租户，夫妻共同住、房产属出租方；本人账号暂停远程共享，机械钥匙尚未处理。公共区老李送药卡，镜近距见耳缝未判；张岚仍住姐家，明日自然取物，不先上楼验。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；租赁共同住所，租约主租户张岚，084仅暂停本人账号远程共享；机械钥匙尚未处置，088通过本案程序再落实本地限制。无共有产权裁决。",
-      "reveal_chapter": 84,
-      "reveal_status": "已揭示",
-      "story_time": "次日上午到傍晚，城南旧小区公共区",
-      "updated_chapter": 84
-    },
-    "E085": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李"
-      ],
-      "first_recorded_chapter": 85,
-      "id": "E085",
-      "objective_fact": "自然取物十分钟，她绊箱自站稳，老李先扶花瓶再扶她，后说左膝。镜见短时线深只记，不令抓；物取齐、无送医，拒设计再摔。分住未恢复。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；张岚自选自然取物，未故意令她摔；老李说左膝的主语明确，镜辞不以线深指挥。保她自站稳、十分钟取物，不重复多轮复述。",
-      "reveal_chapter": 85,
-      "reveal_status": "已揭示",
-      "story_time": "次日下午取物，门内十分钟",
-      "updated_chapter": 85
-    },
-    "E086": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李"
-      ],
-      "first_recorded_chapter": 86,
-      "id": "E086",
-      "objective_fact": "本人给自选自然旧片，普通解释并核；失联后关系顺序同向变只高风险，转评估非强制。老李想改动作，姜不教学；她也不替当事人越权，训练不必然使接缝淡。分住继续。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；不教动作，不预测训练必使接缝变淡；姜霁也不得替当事人越权。旧视频限本人挑的自然片段，当前变化只高风险。",
-      "reveal_chapter": 86,
-      "reveal_status": "已揭示",
-      "story_time": "取物次日，片段核对与分居签字",
-      "updated_chapter": 86
-    },
-    "E087": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李"
-      ],
-      "first_recorded_chapter": 87,
-      "id": "E087",
-      "objective_fact": "老李依据旧关系知识与已听的花瓶评价补动作，镜见线更淡只记相关。公开标准和他已知的顺序不可当盲证据，未假称录像标准已泄漏。张岚仍不共住，88先核法律物业及机械钥匙措施。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；老李咳时先水来自其已有旧关系知识，不凭空听到086未泄漏的视频；已公开的花瓶评价与来源未核的其他标准分开。学得像与线淡仅相关。",
-      "reveal_chapter": 87,
-      "reveal_status": "已揭示",
-      "story_time": "分居签字后数日公开接触",
-      "updated_chapter": 87
-    },
-    "E088": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李"
-      ],
-      "first_recorded_chapter": 88,
-      "id": "E088",
-      "objective_fact": "本案核租约与本人账号、临时分住程序；老李接当夜替住钥匙仍求审长期回家。技术员换应急芯新钥匙交张岚，将家庭字段与本地通行隔开。02:17夫妻正常没恢复门，身份财产不裁；老李未去登记处，仓库新址另许可。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；补租约、本人账号、临时分住程序及替代住处当夜接收；本地授权与应急机械旁路一起限定，婚姻财产身份未裁。02:17家庭正常未恢复门，局部胜利有实物结果。",
-      "reveal_chapter": 88,
-      "reveal_status": "已揭示",
-      "story_time": "停私人授权当日夜至次晨",
-      "updated_chapter": 88
-    },
-    "E089": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "老李"
-      ],
-      "first_recorded_chapter": 89,
-      "id": "E089",
-      "objective_fact": "按场地与程序许可看仓库旧生活、收音机单存；老李压薄钢、冲门引力量风险才受控。镜报亲见不发处置令，生活线另档，不因另有住处抓人。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；仓库程序与独立生活保留，因薄钢破坏、冲门风险控制，非仅住仓库抓人。观察者报风险不发令；衣服与收音机证物分存。",
-      "reveal_chapter": 89,
-      "reveal_status": "已揭示",
-      "story_time": "停门次日傍晚至夜",
-      "updated_chapter": 89
-    },
-    "E090": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "张岚",
-        "老李",
-        "镇封行动员",
-        "定向剥蚀行动员",
-        "年长行动员"
-      ],
-      "first_recorded_chapter": 90,
-      "id": "E090",
-      "objective_fact": "镇封员单体维持、专业剥蚀员核伪装层一次短介入，声形不稳、旧记忆与仓库生活并出。镇封手抖承载降、无新增证据，负责人停新剥蚀保约束并换班。镜要求原记录不改成原人获救，姜留原句并签，年长不甘但改未知；张岚得危险受控原人未知。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；已有镇封维持单体、专业剥蚀短介入，承载下降及无新增收益时负责人停手；镜辞只报接缝不找弱点。原观察句保留，旧人未知，风险下降不解除所有约束。",
-      "reveal_chapter": 90,
-      "reveal_status": "已揭示",
-      "story_time": "受控处置次日前后",
-      "updated_chapter": 90
-    },
-    "E091": {
-      "characters": [
-        "镜辞",
-        "姜霁"
-      ],
-      "first_recorded_chapter": 91,
-      "id": "E091",
-      "objective_fact": "镜辞顶回「孩子换边抱」异常项并促成申请范围划小，周诚家其余就医史永久不入本案卷；协作备注记「替目标划范围」，须次晨九点交书面说明。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；近距未见不认真人，伤情普通解释优先；别让三轮盯看制造满足感，资料来源本次周诚授权。",
-      "reveal_chapter": 91,
-      "reveal_status": "已揭示",
-      "story_time": "剥壳后次日公共观察",
-      "updated_chapter": 91
-    },
-    "E092": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周诚",
-        "周诚妻子",
-        "观察员"
-      ],
-      "first_recorded_chapter": 92,
-      "id": "E092",
-      "objective_fact": "撤案回告写入「已解释动作不得复用」并将复写联交当事人留存；091说明并入协作备注并正式记入个人档案。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；五天材料到齐，五天前观察不称昨天；撤名单与门外观察实际执行，当事人指出调查亦添恐惧。停止留孩子动作视频，不保证永久无风险。",
-      "reveal_chapter": 92,
-      "reveal_status": "已揭示",
-      "story_time": "周诚医疗材料齐备当日",
-      "updated_chapter": 92
-    },
-    "E093": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "老李",
-        "年长行动员"
-      ],
-      "first_recorded_chapter": 93,
-      "id": "E093",
-      "objective_fact": "谈下署名更正并推动旧字段在系统模板层拆为三行，历史结案件生成自动复核队列、薄卡改「待重填」；复核压力转至姜霁。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；救过人的经验仍有效于原案例，年長者不愿废过去但接受此次未知并签更正；不是姜独自说改表。三字段分拆及十一份问号继承。",
-      "reveal_chapter": 93,
-      "reveal_status": "已揭示",
-      "story_time": "周诚结案后复盘夜",
-      "updated_chapter": 93
-    },
-    "E094": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 94,
-      "id": "E094",
-      "objective_fact": "安平里未收口旧账独立冻结并立编号「未收口·不得并入在管目标」（提出人签字），禁止并入周衡弱相关；猫眼重跑校验且拒绝背书。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；十一份分类不当待抓，弱相关不够高风险；不凭一项权限预先带全库，不急认周衡。",
-      "reveal_chapter": 94,
-      "reveal_status": "已揭示",
-      "story_time": "拆字段次日",
-      "updated_chapter": 94
-    },
-    "E095": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 95,
-      "id": "E095",
-      "objective_fact": "糊照片撤出观察材料并立「不具备观察条件·不得复用」独立编号；观察员提出质疑，姜霁签批背责并限十二点前交替代口径。",
-      "reader_knowledge": "本章实际结果依正文，不由观察认证原人；静态照片只能核市场布局，不能写第一式图像远扫未见；明确夜间讨论转次日清晨，周衡仍未近距确认，接096。",
-      "reveal_chapter": 95,
-      "reveal_status": "已揭示",
-      "story_time": "低干扰观察启动当日晨",
-      "updated_chapter": 95
-    },
-    "E096": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 96,
-      "id": "E096",
-      "objective_fact": "镜辞以带限定条件的「未见」表挡住撤点与上门接触（撤点顺延一日、上门划出当日排期）；四页观察方法说明入组织可调阅档案，暴露不可逆。",
-      "reader_knowledge": "看不见不能自动排除。风险也不能逼出接缝。早年太齐成新异常入口。",
-      "reveal_chapter": 96,
-      "reveal_status": "已揭示",
-      "story_time": "低干扰观察当日",
-      "updated_chapter": 96
-    },
-    "E097": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 97,
-      "id": "E097",
-      "objective_fact": "三年清单与两件原始纸本封存编号，周衡卡挂「关联证据保全中」红标且不自动清除；封存责任人签姜霁，外部多两处可翻点。",
-      "reader_knowledge": "回填成立不等于周衡实施或非人。近年更实成新调查方向。",
-      "reveal_chapter": 97,
-      "reveal_status": "已揭示",
-      "story_time": "近距未见后次日",
-      "updated_chapter": 97
-    },
-    "E098": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 98,
-      "id": "E098",
-      "objective_fact": "后五年关系后果独立成卷且与回填并立，旧锁芯入盒并写死「不指向任何人的身份」；徐师傅不再提周衡，失去自然消息渠道。",
-      "reader_knowledge": "起源可疑与这些年真的活过可同时成立。旧锁芯不解释周衡。明日或来修表。",
-      "reveal_chapter": 98,
-      "reveal_status": "已揭示",
-      "story_time": "关系后果核完当夜",
-      "updated_chapter": 98
-    },
-    "E099": {
-      "characters": [
-        "镜辞",
-        "姜霁",
-        "周衡"
-      ],
-      "first_recorded_chapter": 99,
-      "id": "E099",
-      "objective_fact": "接修周衡坏表（60以内），回绝借取表排近距并将明日取表划出观察排期，落「近距离首次接触：未确认接缝。」；当夜交第三份书面说明。",
-      "reader_knowledge": "表是真坏。近距首触不能确认接缝。明日取表接口已立。",
-      "reveal_chapter": 99,
-      "reveal_status": "已揭示",
-      "story_time": "关系后果核完次日午前",
-      "updated_chapter": 99
     }
   },
-  "wordcount_records": {}
+  "wordcount_records": {
+    "1": {
+      "actual": 3454,
+      "author_range": {
+        "max": 3500,
+        "min": 2000
+      },
+      "body_sha256": "639ccf6dfe4781fa0bda403d296f183403d7ca38c1b03b534d3c6606d1e24d56",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2600
+    },
+    "10": {
+      "actual": 3123,
+      "author_range": {
+        "max": 3400,
+        "min": 2200
+      },
+      "body_sha256": "73960640007777ec9fd877650923c9b53741e324c6cf5a0aa5bdbaee4bf0c9ac",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2700
+    },
+    "11": {
+      "actual": 2938,
+      "author_range": {
+        "max": 3400,
+        "min": 2200
+      },
+      "body_sha256": "23f4e87059ac1e9917322d6d1f6d56a0aa8820e6382323df65a9454a4e916347",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2800
+    },
+    "12": {
+      "actual": 2942,
+      "author_range": {
+        "max": 3500,
+        "min": 2200
+      },
+      "body_sha256": "5b4be970d9e2dfdfa0f08afb11962b807903c6affdbc96626d373292b44a9ffb",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2900
+    },
+    "2": {
+      "actual": 3034,
+      "author_range": {
+        "max": 3500,
+        "min": 2000
+      },
+      "body_sha256": "d06bdf61bfe16573f421ca8d75c0e7569d687f2483c7ebb66da5f67a5c7ea961",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2600
+    },
+    "3": {
+      "actual": 4016,
+      "author_range": {
+        "max": 4200,
+        "min": 2000
+      },
+      "body_sha256": "60b0fb97113b72abaeb7727fda8df145cda1faa1a5dc72583b8be52ba4a38d09",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 3200
+    },
+    "4": {
+      "actual": 2622,
+      "author_range": {
+        "max": 3200,
+        "min": 1900
+      },
+      "body_sha256": "d8b64ca64c4dc71d44b963222b1832d4c7401a1788b97d163b6515b06e554495",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2400
+    },
+    "5": {
+      "actual": 2863,
+      "author_range": {
+        "max": 3500,
+        "min": 2000
+      },
+      "body_sha256": "aece65746aff4476a98cc9e9f05786f73d8d8ddce3633121c17787f43d985265",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2600
+    },
+    "6": {
+      "actual": 3097,
+      "author_range": {
+        "max": 4200,
+        "min": 2000
+      },
+      "body_sha256": "557f9161ea3bf96e26229d532b3a2fe6cafa2fbeb1151fc373c8fde5f95f7cc1",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2900
+    },
+    "7": {
+      "actual": 3281,
+      "author_range": {
+        "max": 3500,
+        "min": 2000
+      },
+      "body_sha256": "7e1f428e748ec94690147156887f84a32b3bfa32d560ef129747229469eeecad",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2600
+    },
+    "8": {
+      "actual": 3011,
+      "author_range": {
+        "max": 3500,
+        "min": 2000
+      },
+      "body_sha256": "e4870f03d8a9a572fc5bf3b3fbb8845413ba47d0ff91e9adb9c2d457101e8dce",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2700
+    },
+    "9": {
+      "actual": 3804,
+      "author_range": {
+        "max": 4200,
+        "min": 2000
+      },
+      "body_sha256": "e0ac16f0071a0b23796ff3114e8594c266ed1fc477f1d02e4be5f4e1f3b3f9f7",
+      "metric": "visible_chars_v1",
+      "resolution": "within_user_band",
+      "status": "internal_pass",
+      "target": 2900
+    }
+  }
 }

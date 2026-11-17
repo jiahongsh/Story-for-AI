@@ -1,0 +1,183 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 67,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "dcd0f4d4e66263deb5dd9804ef1b9f4930ddf82e7efa44a29c59d0adf5b1bf12",
+      "state_revision": 262,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第067章_证件上的芽.md",
+      "sha256": "895fe1f45d79d517b33938032bc7b07b527d7b9745b20bb2bcd5e3061ae790c3",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第066章_空白页.md",
+      "sha256": "af5c885c81d726473eb6bb1b4e693fcdd62139f7ba39710a5ac766c66008b880",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第067章.md",
+      "sha256": "b5436605e0220c97cac2b6e7f8b954011c2b31ead250b29f7cdc8f0037f7e33b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第067章/写前依据.md",
+      "sha256": "bc5b1c3284b604d06ca90bb5a3e9a94a11935e685c005103ee9ae5cec0571185",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "当前存在",
+      "name": "当前存在",
+      "protagonist": false,
+      "own_goal": "收好票证并喝水，继续由自己选择乘车。",
+      "without_protagonist": "可以一直捏着纸，但两手拿着物品时会临时借窗台腾手，这是普通生活选择。",
+      "voice_refs": [
+        {
+          "start_line": 25,
+          "end_line": 25,
+          "quote": "下面她又补了几个字，字更小：这行只记用途。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 25,
+          "end_line": 25,
+          "quote": "下面她又补了几个字，字更小：这行只记用途。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "候车时接水并收整票据",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "当前存在"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "当前存在",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "接过水后暂放不退小票，腾手打开水瓶",
+          "gates": {
+            "knows": "知道旧证已经用于新票，十块订金不退；候车时间还长，小票正在自己手里。",
+            "wants": "收好票证并喝水，继续由自己选择乘车。",
+            "fears": "怕再次误车和多付钱，不愿把现实办事变成身份考试。",
+            "capability": "能放下小票开瓶，不能让窗口改变实名或退款结果。",
+            "no_plot": "可以一直捏着纸，但两手拿着物品时会临时借窗台腾手，这是普通生活选择。",
+            "costs": "临时放置有漏拿风险，不能预知之后镜辞会捡回。",
+            "consequences": "她检票上车未取回小票；镜辞只能保存实际遗落的票，不能据此替她认身份。"
+          },
+          "capacity": {
+            "resources": [
+              "本人票证、包和水瓶"
+            ],
+            "permission": "能放下小票开瓶，不能让窗口改变实名或退款结果。",
+            "limits": "临时放置有漏拿风险，不能预知之后镜辞会捡回。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "收好票证并喝水，继续由自己选择乘车。",
+            "success_guaranteed": false,
+            "failure_path": "临时放置有漏拿风险，不能预知之后镜辞会捡回。",
+            "opposition": "她检票上车未取回小票；镜辞只能保存实际遗落的票，不能据此替她认身份。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 67,
+              "end_line": 67,
+              "quote": "“证件我自己带。明天去取那份收据，窗口要怎么填，到那里再说。”她把本子收进包，只留做过那一页的副本。",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 66,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "知道旧证已经用于新票，十块订金不退；候车时间还长，小票正在自己手里。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "补清不退小票从手中到窗台的动作，避免遗留物凭空出现；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

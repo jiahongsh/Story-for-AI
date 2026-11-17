@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "enabled": true,
+  "skill": "story-world-engine",
+  "seven_gates": [
+    "知道什么与取得来源",
+    "想要什么与独立目标",
+    "怕失去什么",
+    "能力资源权限是否允许",
+    "没有剧情需要仍会否这样选择",
+    "愿付代价与现实约束",
+    "后果与他人的独立回应"
+  ],
+  "canon_authority": "追踪/_tracking-state.json",
+  "activation_scope": "今后创作与修订；不伪造历史七关记录"
+}

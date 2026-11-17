@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 70,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "46e985036e5755c2c5d23c13a032af584d481ee54e16716c43528c1050e5ed2e",
+      "state_revision": 265,
+      "last_committed_chapter": 99
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "7ddc25a4b3c38e17bd08f7c1a68c37622f05493f23321844504c0dde481c41fa"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "正文/第070章_先喝汤是谁教的.md",
+      "sha256": "cbfff3b04e9e3e2b45f37f0ae1951aff97f5ec06dc420ac12f9b99e2b89ca471",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "正文/第069章_她的朋友.md",
+      "sha256": "db263ee22559577945056f70a3e2090b83808ef085fc5250a287cc64d922e0ef",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "大纲/细纲_第070章.md",
+      "sha256": "12fb5009c48cecb7f05443acfb3d0c440e279d55ec0e801c016c39ecf6dc23c0",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "创作运行/2026-11-02_066-079审修/第070章/写前依据.md",
+      "sha256": "bf1c18057e2667b7b126e2d7d4f733e645e8990190962a68cbfc4d6a59df0a74",
+      "scope": "planned"
+    }
+  ],
+  "actors": [
+    {
+      "id": "当前存在",
+      "name": "当前存在",
+      "protagonist": false,
+      "own_goal": "尊重暂停见面的要求，又不想用熟话假装解决争执。",
+      "without_protagonist": "可简短道谢，但尚未想好如何回应争执，暂缓有自身顾虑，不因发字必然约见。",
+      "voice_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上七点四十，她已经坐在旧早餐铺靠窗的位子上。胃从醒来就发紧，她把手机扣在碗边，屏幕亮着唐宁凌晨的一行字：初一的时候，那个人还不先喝汤。她看完，没回。镜辞七点四十五进门，左手没去碰那只缺口碗。姜霁停在门口，豆浆没买，文件夹抱在胸前。",
+          "source_id": "SRC1"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "第二天早上七点四十，她已经坐在旧早餐铺靠窗的位子上。胃从醒来就发紧，她把手机扣在碗边，屏幕亮着唐宁凌晨的一行字：初一的时候，那个人还不先喝汤。她看完，没回。镜辞七点四十五进门，左手没去碰那只缺口碗。姜霁停在门口，豆浆没买，文件夹抱在胸前。",
+          "source_id": "SRC1"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "早餐七点四十后收到初一习惯补充",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "当前存在"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "当前存在",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "暂缓回复习惯补充，不擅自约唐宁来解释",
+          "gates": {
+            "knows": "昨日亲听唐宁先别约，晚间消息未回；今晨读到初一无先喝汤习惯的补充。",
+            "wants": "尊重暂停见面的要求，又不想用熟话假装解决争执。",
+            "fears": "怕匆忙解释继续伤人，也怕失去联系。",
+            "capability": "可用本人手机回信或暂缓，不知对方全部感受。",
+            "no_plot": "可简短道谢，但尚未想好如何回应争执，暂缓有自身顾虑，不因发字必然约见。",
+            "costs": "承担对话悬着，不能靠不回复宣称负责；两口汤和白开1保留。",
+            "consequences": "唐宁可继续发信或拒见；镜辞不代回，补核与早餐分开。"
+          },
+          "capacity": {
+            "resources": [
+              "本人票证、包和水瓶"
+            ],
+            "permission": "可用本人手机回信或暂缓，不知对方全部感受。",
+            "limits": "承担对话悬着，不能靠不回复宣称负责；两口汤和白开1保留。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "尊重暂停见面的要求，又不想用熟话假装解决争执。",
+            "success_guaranteed": false,
+            "failure_path": "承担对话悬着，不能靠不回复宣称负责；两口汤和白开1保留。",
+            "opposition": "唐宁可继续发信或拒见；镜辞不代回，补核与早餐分开。"
+          },
+          "knowledge_refs": [
+            {
+              "start_line": 103,
+              "end_line": 103,
+              "quote": "“她说先别约，也不想让你去劝。”她把杯套揉进纸篓，“我以为讲清楚就会轻一点。她问我是不是觉得自己很负责，我没答。”",
+              "source_id": "SRC2",
+              "access": "memory",
+              "available_chapter": 69,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "既有材料或自身经营、生活经历在选择前已具备；本章对方新说的话只在其先行动发生后使用。新增背景明确为本轮规划，不冒充旧章记录。",
+              "boundary": "昨日亲听唐宁先别约，晚间消息未回；今晨读到初一无先喝汤习惯的补充。"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "仅重评本轮明确修订的受影响选择，按正文、准备稿差异与相邻接口核查；未改动的旧章行动不另造当年的七关，未增加幕后角色决定。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Codex主线程",
+    "method": "对读现行章、相邻章节和隔离候选差异，逐项校验七关、资金及物件归属、有限知识和声线。",
+    "basis": "压缩重复删回复，将暂未答复落实于唐宁拒约和本人尚未想好；新生活细节和当场信息均写明来路，不以未见认证身份，不将时序作为因果。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "追踪/候选章/第070章/直接修订_20261102/世界引擎/写前行动审查.json",
+      "sha256": "303bc5acb6b456f39301fa48909c073d30a0d88892065e31a78cb7689cea090b"
+    },
+    "candidate": {
+      "path": "追踪/候选章/第070章/直接修订_20261102/candidate.md",
+      "sha256": "09ae217d41ce41d458684f17bad4c6b051bd7242992421085fc4d5285cdbf111"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "action_ids": [
+          "A1"
+        ],
+        "actual_result": "当前存在实际完成的选择由下列正文原句限定：油锅又响了一次，溅出一滴，落在她手背上。皮肤发烫。她没叫。郭老板扔来一块湿布，她按了按，红了一小点。这一小点不进任何工单。唐宁的对话框不再跳。昨晚那句让她自己想清楚的话还在上面，她看了两分钟，不知道该先答哪一句。唐宁说过先别约。她把手机扣上，没请人来铺子。",
+        "evidence": [
+          {
+            "start_line": 25,
+            "end_line": 25,
+            "quote": "油锅又响了一次，溅出一滴，落在她手背上。皮肤发烫。她没叫。郭老板扔来一块湿布，她按了按，红了一小点。这一小点不进任何工单。唐宁的对话框不再跳。昨晚那句让她自己想清楚的话还在上面，她看了两分钟，不知道该先答哪一句。唐宁说过先别约。她把手机扣上，没请人来铺子。"
+          }
+        ],
+        "world_followups": [
+          "唐宁可继续发信或拒见；镜辞不代回，补核与早餐分开。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "NO_CHANGE",
+        "operation": "none",
+        "description": "本轮不新埋或回收伏笔，原ID当前状态保持；时序、个人选择及账目修正写入同章事件。",
+        "evidence": [
+          {
+            "start_line": 25,
+            "end_line": 25,
+            "quote": "油锅又响了一次，溅出一滴，落在她手背上。皮肤发烫。她没叫。郭老板扔来一块湿布，她按了按，红了一小点。这一小点不进任何工单。唐宁的对话框不再跳。昨晚那句让她自己想清楚的话还在上面，她看了两分钟，不知道该先答哪一句。唐宁说过先别约。她把手机扣上，没请人来铺子。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Codex主线程",
+      "method": "以候选实际句逐项对照冻结前包、原文及相邻章；四语言门均运行通过后登记。",
+      "basis": "压缩重复删回复，将暂未答复落实于唐宁拒约和本人尚未想好。保护故障、报价、来源限制和未决身份，不将新增的普通过渡冒充历史证据。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}
