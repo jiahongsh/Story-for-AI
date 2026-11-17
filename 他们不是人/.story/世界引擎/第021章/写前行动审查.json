@@ -1,0 +1,805 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 21,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "60623292030c62fd11d8460e5e0e4aedf767b23c19149df6f62ebee12bf36126",
+      "state_revision": 26,
+      "last_committed_chapter": 20
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第021章.md",
+      "sha256": "49122d60f3442a2f30756359130b5fb4a977ce7f956d8010ebe659b8be319c1f",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "74a216c945692db04bf985af078231d7af54371937975291852bb89931a97fc8",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "2545eb0ab4ce7fcd1a376bdc5f596399ac7d67ed135c72c04a76a09edd55d8ca",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "943b5a8a22c6139948da799fbe0e8b46c51aa9f0c7b12c637a8f17277dcd9c64",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/守钟人.md",
+      "sha256": "b9a2dc9b87976c391b722ea0517be7eee9fda1b51d3af1e781d3d4ab14337349",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/角色/严彻.md",
+      "sha256": "d4c130f584be8849d896b97f47ec71d47034979690fc31d34ebad45fd5b3276f",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/世界观/外物体系.md",
+      "sha256": "d35c6504ed9834beb699b9e1bc6d805cf40a24354f9e7fe9520c603b5a70c0de",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/世界观/地理.md",
+      "sha256": "a7c6dbcd0951c1e6c24e3c39a9aff602a5c124a4e4bb833de31af6872cd32ddc",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "e969aa95ecbb63b7a40758b9f5a81df2733cc7240d2475d58a8ef89e77056fd1",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC10",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC11",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "26e085e4108999f9d600790f3bc39deed23c830e0247d3c7c0485e44c741fa7c",
+      "scope": "reader"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_SZ",
+      "name": "守钟人",
+      "protagonist": false,
+      "own_goal": "借后间锻炉老手艺替镜辞赶在出征前敲直改硬家伙并守住东巷后方根本",
+      "without_protagonist": "哪怕孤身守着老屋也会照常封炉盯死参号残胎直抗白塔今夜来犯",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "沙哑干瘪、惜字如金、每句都带老一辈镇钟人的江湖规矩与冷幽默"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "第19–20章虽熬过吸气截断危局保住东巷，却因怀表跌入第3格余震而骤然记混十四岁初收镜辞时的旧袄细节"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "赶在白塔今夜合围前修整兵器并顺钢牌冷僻暗井再入零号深层清算陈屿、夺取反制白塔的筹码",
+      "without_protagonist": "独守旧店炉边敲直重锤护住老盲翁与参号，不靠旁人也照样迎杀强敌",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "紧接迎向今夜零号深井总决战"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "以仅剩两匣银弹和顾横加密电台查实白塔除名黑箱的真正来历，绝不被蒙在鼓里当作棋子",
+      "without_protagonist": "按自己多年三组外勤渠道独自潜伏恒泰周边侦查白塔机械先遣队调动",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "记忆被剥离后客气而警惕，带着职业调查官的疏离"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "读者看镜辞凭物证稳住失忆战友却被十年街坊当外人问姓、官档除名"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "寸步不离守死已经被全世遗忘的镜辞，亲自潜到下面拆烂陈屿剩下的所有退路",
+      "without_protagonist": "孤身踩着老厂废管道切下井底寻找残留半壳追杀线索",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "自己浑身是血躲在黑暗里替旧街挡刀"
+        }
+      ]
+    },
+    {
+      "id": "C_YC",
+      "name": "严彻",
+      "protagonist": false,
+      "own_goal": "抢在大清盘之前按白塔工单彻底焊封西北变电废井口并下撤接应清场零号外井，不留一丝隐患",
+      "without_protagonist": "即便老巷无人潜来也会准点完成五分钟爆封焊接并携三犬转入底层清场",
+      "voice_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "公事公办、冰冷平板的工单清理腔，像在宣读一份等待格式化销毁的损坏文件目录"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "受命抢在天黑大围剿之前带队直下恒泰西北废弃变电暗井焊死泄压通道、清除零号井底失控残留与目击活口"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "旧货市场东巷钟表行后间",
+      "story_time": {
+        "label": "第四日清晨七点十分至八点",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_SZ",
+        "C_JC",
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_SZ",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "强扛吐血伤势和脑海起雾，拉开后间炼核烧尸炉风箱端出淬冷黑油助镜辞回火重锻重锤",
+          "gates": {
+            "knows": "亲感镜辞重铜锤铁柄被废核掰弯三十度，白塔高阶机械部队天黑前便会扑进老巷和深井",
+            "wants": "替最后残脉传人把趁手兵器磨成能拆白塔硬铁甲的家伙什",
+            "fears": "哪怕手里脑里发糊也绝不让小子拿着半残弯锤往白塔机械兵堆里送死",
+            "capability": "多年熟操炼核铁皮炉与祖传镇钟淬冷油工艺",
+            "no_plot": "老铁匠见徒弟家伙弯了又要赴死地，第一件事就是拉风箱递淬火油帮他打直",
+            "costs": "耗损刚刚稳住的伤气且不得不承认自己必须留后无法随行",
+            "consequences": "提供高温锻火与淬冷介质，直接促成重锤加钩蜕变"
+          },
+          "capacity": {
+            "resources": [
+              "后间焚炉风箱",
+              "镇钟淬冷油",
+              "老式铁砧"
+            ],
+            "permission": "店铺老人与兵器传承师傅",
+            "limits": "重伤虚弱无力跟入地下，只能靠后方锻打与给药包支撑",
+            "evidence_refs": [
+              "SRC5",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "敲顺锤柄并交给三人保命老法子",
+            "success_guaranteed": false,
+            "failure_path": "若老眼糊涂或火候拿不准需镜辞自己动手下锤把握分寸",
+            "opposition": "体内耗血虚脱及记忆裂缝带来的晕眩"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "平时像个聋瞎怪老头坐在后间喝凉茶，关键时刻直接抡火钳、抛八角重铜锤，比谁都护犊子",
+              "access": "memory",
+              "available_chapter": 20,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年镇钟人锻炉手艺与昨晚目击弯锤听音确认锤柄受损",
+              "boundary": "熟知淬火诀窍与陈年火药饼配方，未知白塔究竟已先遣下井到了哪一步"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JC",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "烧红锤柄敲直淬火并在锤尾加焊淬火钢倒钩，随后用捉影镊撬开焦黑钢牌背面锡层露出西北废弃变电暗井路线图",
+          "gates": {
+            "knows": "清楚三号总渠后段已塌、顾横告警西区地面出口已被白塔封死，唯一抢回的情报就是这枚压了双层焊层的「今夜清盘」工作焦牌",
+            "wants": "拿到一把能破重甲的新兵器并找出白塔公路网外另一条直接切进零号深井的路线",
+            "fears": "等晚上十点半白塔清场大部队合围下来，不仅零号救不出，守钟人连店都要被挖空",
+            "capability": "具备过硬手工修械锻打水准，且手中持有刚自同步核座撬回的双层铸铁钢牌",
+            "no_plot": "修表匠拿到带夹层的老工作金属牌本能就会用镊尖测厚翘边，加上弯锤加焊倒钩恰好克制带铜甲或铰链的机械体",
+            "costs": "消耗清晨最后一段宝贵休整时间、右肋伤口仍隐隐作痛且怀表绝对紧守三格不动",
+            "consequences": "锤具升级为破甲钩锤、成功取得「恒泰西北废弃变电室三十米检修暗井」实线"
+          },
+          "capacity": {
+            "resources": [
+              "烧红后炉与淬冷油",
+              "银钢捉影镊",
+              "弯柄重铜锤",
+              "「零号今夜清盘」工作焦牌"
+            ],
+            "permission": "手持物品与老店锻造权限",
+            "limits": "不靠怀表只靠冷铁硬造，钢钩承重亦有上限不能生扛整吨机械门",
+            "evidence_refs": [
+              "SRC2",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "敲妥武器并拆明牌背隐藏冷僻地底路径",
+            "success_guaranteed": false,
+            "failure_path": "若背面只剩被烤糊半边标号，仍需借废铁轨实地探找变电井口",
+            "opposition": "焦牌表面高温烧蚀残留带来的辨识模糊"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "第20章镜辞自崩毁的恒泰分体同步核底槽撬出",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A1炉火起焰后趁热以捉影镊试探焦牌边缘翘起的焊锡夹层",
+              "boundary": "亲见背面阴刻冷僻变电井与米数，尚不知白塔严彻团队已抢先在此处埋设封井雷"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_JJ",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "清点仅余两匣银芯备弹并当场冷硬划定战友界线，确认「查清白塔除名与地下黑账前暂不离队，谁露壳缝立刻枪毙」后随行",
+          "gates": {
+            "knows": "顾横亲口告知白塔已封锁西线今晚连井带巷铲平、同时自己户籍底册查不到身边男人；可自己手头干净虎口与二匣余弹都是真实战场成果",
+            "wants": "搞明白白塔高层和陈屿在零号深井底到底藏了什么必须灭口的东西，以及凭什么连内网都能删空一个活人",
+            "fears": "最恨被白塔高层当成蠢货蒙在鼓里清理、同样严防死守再出现像两年前老队长那样的身边异化诈欺",
+            "capability": "手持两匣银芯穿甲弹消音手枪、熟悉老城区铁路沿线哨卡盲区",
+            "no_plot": "不带感情记忆的铁血调查官绝不可能突然热情配合，必须先清点所剩火力并当面划下冷酷开枪底线才符合她的自保与职业逻辑",
+            "costs": "只剩最后两匣高阶弹，一旦打空就没有补给且必须和没有历史身份的人赌这一趟",
+            "consequences": "立稳三人当前脆弱却高效的冷血契约"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪及两匣银芯备弹",
+              "顾横军绿电台（待避屏蔽）",
+              "剥壳人侦查经验"
+            ],
+            "permission": "独立决定去留与交火界线的武装队长",
+            "limits": "记忆空白使她对镜辞与芽均留三分杀机警戒",
+            "evidence_refs": [
+              "SRC3",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "压着极度警惕先打进井底摸到实证",
+            "success_guaranteed": false,
+            "failure_path": "若潜入后遇白塔大队正面死封而无证据自圆，随时可能脱离自保",
+            "opposition": "仅剩两匣有限银芯弹以及自身断片记忆造成的疑虑"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 2,
+              "producer_action_id": "A2",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "看着A2镜辞敲锤挑出真实路线图，结合自己余弹和虎口光滑疤迅速拍板表态",
+              "boundary": "知晓白塔今夜要清平东巷且内网查无镜辞，不知白塔先遣队长严彻已被调至西北暗井口"
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_YA",
+          "order": 4,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "冷笑接住姜霁放出的狠话并从守钟人手里接过旧火药饼塞进兜里，抓紧断钢表态寸步不让陪镜辞下井",
+          "gates": {
+            "knows": "清楚眼下店里只有她和发糊的守钟人还真切记得镜辞存在，姜霁全靠冰冷理智吊着一根线随时可能翻脸",
+            "wants": "护住镜辞顺便抢先盯死这个失忆枪手别在背后放黑枪，更重要的是下井把没死透的陈屿彻底撕烂",
+            "fears": "放镜辞一人跟着随时翻脸的猎手下去，一旦怀表第三格真切出意外镜辞连后背都没人替他挡",
+            "capability": "贴身携带断钢条、手里收下老盲翁留的老派硫磺火药饼备险",
+            "no_plot": "护短嘴毒且对陈屿积怨极深的异端根本不可能坐在店里等消息",
+            "costs": "双手血痂刚结又要在阴暗铁井攀爬撕裂",
+            "consequences": "牢牢钉住铁三角后翼，避免姜霁独走或镜辞孤军深入"
+          },
+          "capacity": {
+            "resources": [
+              "实心断钢条",
+              "守钟人老火药饼",
+              "耳后愈合死锁与超常近战机动力"
+            ],
+            "permission": "店中参战核心同伴",
+            "limits": "耳后疤痕仍怕高强度母巢或声波冲击",
+            "evidence_refs": [
+              "SRC4",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "既呛回姜霁挑衅又实实在在补满携带物资上路",
+            "success_guaranteed": false,
+            "failure_path": "行军途经老厂边缘可能需率先攀爬高处探路",
+            "opposition": "姜霁随时可能怀疑她耳后那道藏着白纱布的细缝"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "自己浑身是血躲在黑暗里替旧街挡刀",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听见A3姜霁冷冷甩出开枪底线后立刻冷笑抢话接招并顺手拿药饼准备出发",
+              "boundary": "明知姜霁会死盯自己和镜辞破绽，不知严彻随身带着专门克制听觉声波的短杖"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "西环废铁轨及恒泰西北废弃变电室三十米竖井",
+      "story_time": {
+        "label": "第四日中午十二点半至一点",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A5",
+          "actor_id": "C_JC",
+          "order": 5,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "借西环荒废铁轨排水槽绕开白塔公路关卡，撬开恒泰西北废弃变电室锁死铁门顺三十米垂直检修梯潜降",
+          "gates": {
+            "knows": "依据钢牌背图标明的坐标尺数与上午公路封锁形势，唯独废旧货场南向老铁轨支线排水明渠可贴着铁丝网死角摸到西北变电房",
+            "wants": "零交火绕过外围装甲巡逻卡，趁白塔主力未合拢前直插零号外围层",
+            "fears": "白天强行穿越大马路会瞬间撞死在白塔正规防暴装甲哨卡火力下",
+            "capability": "手持钢钩铜锤与银钢捉影镊可在两息内静音绞挑开老式铜挂锁",
+            "no_plot": "拥有精确冷僻线路图却面对大路重兵卡口，走废铁轨阴影悄悄开锁进竖井是最基本求生路线",
+            "costs": "耗费半天体能贴地泥行并在三十米生锈垂直铁梯上磨损伤手",
+            "consequences": "全员毫无声息绕过地上重封防线直达地下三十米临界门区"
+          },
+          "capacity": {
+            "resources": [
+              "焦牌背图精确位置",
+              "银钢捉影镊无声开锁",
+              "回火铜锤"
+            ],
+            "permission": "路线图唯一判读人与先导开锁手",
+            "limits": "三十米垂直管道极窄极暗，遭遇下方封堵毫无迂回空间",
+            "evidence_refs": [
+              "SRC7",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "静音穿插贴近零号排废走廊边缘",
+            "success_guaranteed": false,
+            "failure_path": "变电门后若已被白塔先设感应雷则须退回另寻通风管",
+            "opposition": "锈死门栓、湿滑三十米竖梯与随时冒头的白塔地面巡哨"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "位于焦黑工作钢牌背面标注的冷僻检修暗阶尽头，避开已经塌毁的三号总渠主洞，可垂直下切三十米直抵零号排废层中段走廊",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 2,
+              "producer_action_id": "A2",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "凭借A2拆开的焦牌冷僻标注实地核对荒废铁轨排水槽与荒变电房坐标",
+              "boundary": "确认废变电室表面没人盯守，尚未知下端三十米铁门处已有先遣焊封队正在作业"
+            }
+          ]
+        },
+        {
+          "id": "A6",
+          "actor_id": "C_YA",
+          "order": 6,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "踩烂围栏提前翻进废变电室高窗摸排死角绊线，敲三下门框示意无地面哨卡后放两人撬锁下行",
+          "gates": {
+            "knows": "刚刚顺铁轨明渠潜行到荒废变电房外墙，深知这种连向禁地的废房最容易暗藏外围拉发绊线或伏兵",
+            "wants": "抢先在正门撬锁前排除屋内埋伏，免得镜辞或失忆警惕的姜霁一头撞死在门口",
+            "fears": "怕变电房里早就坐着白塔暗哨等着抓盲钻进来的猎物",
+            "capability": "具备极佳夜视与无声高窗攀越能力，几息间可查清十来米空房死角",
+            "no_plot": "以前习惯在暗处替人探路挡刀的芽到了陌生废厂房前，必然先翻窗扫一眼屋里有没有埋伏再让正门动锁",
+            "costs": "磨开生锈铁窗划伤旧袖缠布且提前耗费半截体力",
+            "consequences": "确认地面废变电室无人盯守且打通垂直井梯通路"
+          },
+          "capacity": {
+            "resources": [
+              "高空无声攀援力",
+              "断钢条探线",
+              "极快昏暗视物感官"
+            ],
+            "permission": "小组贴身前哨探路手",
+            "limits": "三十米竖井深处声光隔绝，从高窗只能扫清地面变电室不能看透井底",
+            "evidence_refs": [
+              "SRC4",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "确保地上空房安全并引导镜辞与姜霁顺梯垂直切下",
+            "success_guaranteed": false,
+            "failure_path": "若屋里藏有暗哨需当场无声扼杀后再开门放行",
+            "opposition": "锈腐窗户杂物以及上方风口可能漏下的动静"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "自己浑身是血躲在黑暗里替旧街挡刀",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 5,
+              "producer_action_id": "A5",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "跟随A5镜辞沿着荒废铁轨明渠到达变电房围墙阴影下准备开锁前先行探点",
+              "boundary": "查实地面空屋确实无哨兵与绊线，仍无法预知井底三十米下严彻已率犬焊封"
+            }
+          ]
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_JJ",
+          "order": 7,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "进门断后抹除门锁撬痕与泥脚印，听见井底传出轻微焊枪滋响瞬间示意全员灭灯静默摸近",
+          "gates": {
+            "knows": "具备一线特种剥壳外勤反追踪意识，在进门前已留意周围铁轨积泥并率先听见下方三十米深处极其轻微的乙炔电焊滋滋声",
+            "wants": "保住三人侧后退路不被上方发现，同时第一时间卡死下方未知灯光的威胁等级",
+            "fears": "刚爬到半截井梯却被下方突然照射强光当靶子打，或上面巡逻车循着撬门痕迹包抄下来",
+            "capability": "多年潜行实战本能、手枪压稳准星和极快压光掩踪手法",
+            "no_plot": "老牌战术组长钻冷井前必抹进门泥印、听见井底不正常电焊声本能就会按掉手电压人静默",
+            "costs": "黑暗中仅凭脚底摸梯易踩滑生锈铁蹬，心理高压翻倍",
+            "consequences": "抢占绝对先手潜伏视野，完美避开白塔哨眼暴露"
+          },
+          "capacity": {
+            "resources": [
+              "单手微光战术手电",
+              "老牌外勤反侦查警觉与手枪"
+            ],
+            "permission": "小组战术断后警戒责权",
+            "limits": "黑暗三十米垂直通道内无法直接开枪交火，必须贴近平台才能借射界",
+            "evidence_refs": [
+              "SRC3",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "静默靠拢井口铁梁摸清下面究竟是什么人在动电焊",
+            "success_guaranteed": false,
+            "failure_path": "若对方配有热感探测，静默靠近仍可能在十米内暴露",
+            "opposition": "垂直黑暗竖井中的回音扩散风险"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "加消音器的制式手枪、特制银芯弹、战术刀",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 6,
+              "producer_action_id": "A6",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A6示意安全进入后顺井口抹去脚印并听见三十米底端隐约焊枪滋响",
+              "boundary": "判断下方绝对有人提前动用了工业焊枪作业，尚不知人数、阶位与是否携带机械犬"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "location": "零号外围排废层检修铁闸上方十米铁梁",
+      "story_time": {
+        "label": "第四日午后一点零五分",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_YA",
+        "C_YC",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A8",
+          "actor_id": "C_YA",
+          "order": 8,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "借助暗影壁虎般伏上铁闸上空十米横梁无声锁死下面焊点兵力，手势按停队友摸清对方配置与高爆雷位置",
+          "gates": {
+            "knows": "刚才随A7灭灯下行，此刻借下方刺目电焊蓝火反照将下方门框前的兵力看得一清二楚",
+            "wants": "替众人摸透下面那名半机械重装与三头铜牙机械犬站位，以及闸门边缘已焊死的炸药位置避免误爆塌井",
+            "fears": "鲁莽开枪打爆门上还没接妥的高爆封井雷，把三人活活埋在三十米竖梯里面",
+            "capability": "夜视犀利、轻身攀梁近乎无声且动作极其沉稳",
+            "no_plot": "曾经摸透恒泰二楼伏击的芽最擅长高处伏窥测敌，遇到焊爆破物的敌人没看清雷线绝不妄动",
+            "costs": "紧绷爬过生锈水渍横梁时不慎摩擦出一道细微积水血痕，潜伏位置随时有滴漏曝光风险",
+            "consequences": "让镜辞和姜霁完整看清高爆雷、护胸铜甲与机械犬位置却意外埋下血水滴落暴露的一线危机"
+          },
+          "capacity": {
+            "resources": [
+              "敏捷高空攀梁身法",
+              "绝佳昏暗夜视力"
+            ],
+            "permission": "小组高处前哨侦察职责",
+            "limits": "手头缠血纱布与梁面湿滑水锈导致隐蔽极难完美维持",
+            "evidence_refs": [
+              "SRC4",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "把下面人员装备和爆破进度摸透再下令伏击",
+            "success_guaranteed": false,
+            "failure_path": "身上或梁上水滴提前落到下方敌兵身上暴露位置",
+            "opposition": "湿滑锈梁与下面三头听力敏锐的机械改造猎犬"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "可垂直下切三十米直抵零号排废层中段走廊，正对白塔先遣清道封焊点",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A7全员静默后率先溜上横梁俯瞰正下方电弧焊火下的白塔兵力",
+              "boundary": "亲眼看见一名穿黄铜胸甲的官员和三头铜牙犬正焊门，尚不知对方短杖的声波威能"
+            }
+          ]
+        },
+        {
+          "id": "A9",
+          "actor_id": "C_YC",
+          "order": 9,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "指挥工兵往铁闸死焊高爆封井雷并通过腰间便携核验终端下达五分钟爆封撤往零号外井指令，突觉滴水砸中胸甲愕然抬头",
+          "gates": {
+            "knows": "接白塔今早紧急加急工单，恒泰上层同步站在清晨失联塌毁后，必须抢在大清盘之前用高爆封井雷封死所有西北外围老厂废弃冷通道并把残部合拢至零号井内清场",
+            "wants": "五分钟内精准封门收工下去领清场尾款、避免拖延耽误总进度",
+            "fears": "上头督察追责封井漏口，或是底下第一批先遣兵失联太久引发上面怀疑",
+            "capability": "身披白塔特制左半身黄铜减震胸甲、手握版本号核验终端与版本消磁短杖，带两工兵与三头改造机械犬",
+            "no_plot": "严彻眼里底下全是待格式化的损坏文件，照流程干完封门报备然后下去清井再自然不过；而头顶铁梁突然滴下一滴微热暗红泥血水砸在发亮铜甲上，任何警戒老兵都会本能停止键盘敲击抬头查看",
+            "costs": "提前暴露自身注意力焦点，正把正前方喉颈最弱死缝短暂仰面向着梁上杀星",
+            "consequences": "全章停在五分钟爆破倒计时开启且双方正式发现照面的极高张力临界点"
+          },
+          "capacity": {
+            "resources": [
+              "左半身黄铜减震甲",
+              "版本消磁短杖",
+              "便携核验终端",
+              "三头铜牙改造机械犬与高爆封井雷"
+            ],
+            "permission": "白塔外勤先遣队长现场处置全权",
+            "limits": "以为地上出口已被白塔重兵锁绝且三号暗渠塌死，全然料不到竟真有敌手循废弃电房老井从正上方摸下来",
+            "evidence_refs": [
+              "SRC6",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "查明头上漏水原因并决定是否直接放犬清梁",
+            "success_guaranteed": false,
+            "failure_path": "抬头瞬间正对三名高阶突袭者先手倾泻压制",
+            "opposition": "梁上早已架稳枪线与倒钩重锤的三名杀气逼人的潜入者"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "受命抢在天黑大围剿之前带队直下恒泰西北废弃变电暗井焊死泄压通道、清除零号井底失控残留与目击活口",
+              "access": "memory",
+              "available_chapter": 20,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "清晨白塔督察急调指令赋予的先遣任务与现场终端实时连线信息",
+              "boundary": "清楚上面已经封死公路、底下先行下去了第一批先遣重兵，浑然不知第一批人已经遭井底陈屿残杀且头顶正伏着镜辞一行"
+            }
+          ]
+        },
+        {
+          "id": "A10",
+          "actor_id": "C_JC",
+          "order": 10,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "被滴血惊动暴露之际反手摁死仅余三格怀表绝不动表冠，拎稳带钢倒钩重铜锤锁定严彻颈甲连接缝准备伏扑",
+          "gates": {
+            "knows": "亲耳听清严彻终端宣布「五分钟后爆封并全部下撤零号外井」，同时看透对手身上装着白塔抗银弹黄铜胸甲与不知名高频短杖，绝对是一场不能轻动最后三格怀表的硬仗",
+            "wants": "趁严彻仰头一瞬先发制人砸进战场，保住这扇唯一通向零号层的门别被五分钟后高爆雷焊死炸塌",
+            "fears": "门一旦炸封便彻底丧失下切路线；而手一松按下去第 3 格若再掉，守钟人和姜霁仅存的那丁点牵连也要彻彻底底清零",
+            "capability": "手持刚在后间炉火回火加装淬火钢倒钩的八角重铜锤与捉影镊，距地面不过十米且居高临下蓄势",
+            "no_plot": "已经摸到门口被滴水露馅且对方就在焊爆破门，修表匠按住兜里的表紧握新锻钢钩锤往下扑是唯一没得退的选择",
+            "costs": "不拧卡齿硬撼三阶半机械体与三头改造犬，必受高频声波和机械利爪正面迎击，极度凶险",
+            "consequences": "死战爆发，迫使镜辞在下章完全依靠环境油桶反光与手艺默契破解严彻重甲"
+          },
+          "capacity": {
+            "resources": [
+              "淬火回火加焊钢钩八角重铜锤",
+              "银钢捉影镊",
+              "绝不动用的第3格怀表克制底线"
+            ],
+            "permission": "梁上居高临下先手起跳突击位置",
+            "limits": "十米垂直扑击若无法一击破坏短杖必遭高频反制震荡",
+            "evidence_refs": [
+              "SRC2",
+              "SRC7",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "抢在严彻彻底张口放警报与引爆前打乱其站位、拿下进门生路",
+            "success_guaranteed": false,
+            "failure_path": "严彻身上半机械警觉极快，若第一时间反手将消磁短杖拍地必掀起绝命困斗",
+            "opposition": "三阶半机械队长自带的减震胸甲与三头随时腾跃扑咬的改造犬"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 18,
+              "end_line": 18,
+              "quote": "镜辞将第19章弯折三十度的八角重铜锤铁柄烧红回火敲直，并在锤尾加焊一截淬冷油淬火钢倒钩",
+              "access": "planned-earlier-action",
+              "available_chapter": 21,
+              "available_order": 9,
+              "producer_action_id": "A9",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "A9严彻仰头一刻电焊余光照亮对方胸甲接缝与腰间便携终端及五分钟倒计时",
+              "boundary": "亲眼看见严彻胸甲厚实及手持长柄短杖，尚不知道短杖击地会发出版本消磁震波"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "完整覆核第21章三场戏中全部作实质选择或发号者：守钟人（拉炉起油定调）、镜辞（锻锤加钩、撬牌找路、压表蓄扑）、姜霁（定下两匣弹合作界线并井道断后掩护）、芽（接药饼护人兼先上横梁察敌）、严彻（执行五分钟封井清道并惊觉抬头），无遗漏任何决定性角色。",
+    "background_only": [
+      {
+        "name": "随行两工兵与三头铜牙机械犬",
+        "reason": "在严彻现场指令下机械执行乙炔焊接并充当随队巡防傀儡兵器，本章尚无独立决断动作，均受C_YC统一调度"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "逐场比对第20章末冷炉收尾、第21章细纲六个情节点、各角色声线卡、两匣弹药存量与第3格保密红线",
+    "basis": "A1-A4把后间锻锤、剥出冷僻变电井与姜霁基于实利与反黑幕重新划定合作底线融为一戏；A5-A6从荒废铁轨渗下三十米老井规避正面封锁线；A7-A9顺血水滴落铜甲制造极具电影张力的先遣对撞悬崖，且严守怀表维持第3格不轻耗、严彻只知白塔工单不知井底异变的真实信息界线。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  }
+}

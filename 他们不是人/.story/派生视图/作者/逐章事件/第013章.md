@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 26,
-  "last_committed_chapter": 20,
+  "state_revision": 29,
+  "last_committed_chapter": 23,
   "range": [
     1,
-    20
+    23
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "60623292030c62fd11d8460e5e0e4aedf767b23c19149df6f62ebee12bf36126"
+      "sha256": "6d0df64ccb610dcd353777527b33730ed0f1ccb1666582f74fb5a70672035400"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -100,6 +100,18 @@
       "sha256": "8b7a236fe02ec364b3fd6eed4a07adff4ac505f68ca2496383ed6cda9147ba1e"
     },
     {
+      "path": "正文/第021章_白塔的清道夫_比他们先到了.md",
+      "sha256": "c65cfedb3c967c623ac8bf0683d5234daa1db45fc03061ab00ed1639d87e9c4f"
+    },
+    {
+      "path": "正文/第022章_多谢白塔_这两条胳膊很顺手.md",
+      "sha256": "976b1752a9b44799d5b9992645867b3862d70c033861f68385d21f4af823c8ed"
+    },
+    {
+      "path": "正文/第023章_破终端亮起_他已被抹除八次.md",
+      "sha256": "83a067507028d533a88d73ec50b60ea80fd90d592238c4c8cfc7b66293299110"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -178,6 +190,18 @@
     {
       "path": "追踪/逐章记录/第020章.md",
       "sha256": "997ea9bd691357c92a44c149a76146cbc4e4b3877995cc16b8cdcf8c7134bb43"
+    },
+    {
+      "path": "追踪/逐章记录/第021章.md",
+      "sha256": "7da10ec725624cb1b498f260335dbf9f74facab8ce9095e295457fb6b62e2c3d"
+    },
+    {
+      "path": "追踪/逐章记录/第022章.md",
+      "sha256": "b50ade4c4f27a34168133bf0387291b47e004c27682ee052f5887aed08f58c10"
+    },
+    {
+      "path": "追踪/逐章记录/第023章.md",
+      "sha256": "44905f6b265f06907820cd352fe0d1754f3aff9293f918473ca5d5933832fccb"
     }
   ],
   "limitations": []
