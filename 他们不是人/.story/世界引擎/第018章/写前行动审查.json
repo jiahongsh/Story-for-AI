@@ -1,0 +1,1155 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 18,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "c9be29f16d2006006c9bb77fe2f0b037cdf1060742629c9486f238c5ceb074c9",
+      "state_revision": 17,
+      "last_committed_chapter": 17
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第018章.md",
+      "sha256": "3ae0f5228e500cd0ce7052259c278de18264992d433feb5c463d8c8c4989b665",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "ad83dcb562ee09843153e4e951a5bd420a314406c843c512ea9ee9aa8d6683b2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "e5d03d965703cda5f2c289a9c18da51c37089b888553acd22bbc45e919d097c5",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "943b5a8a22c6139948da799fbe0e8b46c51aa9f0c7b12c637a8f17277dcd9c64",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/守钟人.md",
+      "sha256": "8d76859999c2038d351a7509bbd5bcc933130f598d024463e57b531fc17a2db2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/角色/顾横.md",
+      "sha256": "33c069c2ad2d323c7d88c1d62e832be5591e9a0b3b6ead6e4e73e7c9493c5f38",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/角色/陈屿.md",
+      "sha256": "055f1b991505a5df649a8cedd1d7bd3e9113610a4e41c562a560a7e2e211b89e",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/角色/徐正.md",
+      "sha256": "8277a49e87f794c97dc92df994c131796600748f1dfe119c2abe18e91f582381",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC10",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "0f4461fcac19a620bdcf642b55633bbbbec4e7a526fdf06da58c39c3bc0da429",
+      "scope": "reader"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_SZ",
+      "name": "守钟人",
+      "protagonist": false,
+      "own_goal": "死死压住钟表行后间砖缝逆吸，替镜辞一行撑足十二小时直捣恒泰底站",
+      "without_protagonist": "即便只剩老头自己守店，遇到地底偷抽参号母表也会拎铜锤拍煤炉硬顶到底",
+      "voice_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "关键时刻直接丢铜锤或亮炉火，不讲大道理，帮理不帮亲"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 5,
+          "end_line": 6,
+          "quote": "七年前与沈竹一起杀入源裂缝拆碎三只母表，瞎了一双眼睛后隐居旧货市场"
+        }
+      ]
+    },
+    {
+      "id": "C_GU",
+      "name": "顾横",
+      "protagonist": false,
+      "own_goal": "趁黎明前迅速派心腹替东巷洗地掩护，把平民和关键线人徐正安全藏离白塔视线",
+      "without_protagonist": "收到姜霁紧急加密传呼得知有平民和工程线人遭伏击，老兵必派二组出面兜底",
+      "voice_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "粗中有细、极护手下与平民"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "读者收获顾横倒戈护短与当众打脸督导的痛快"
+        }
+      ]
+    },
+    {
+      "id": "C_XZ",
+      "name": "徐正",
+      "protagonist": false,
+      "own_goal": "用全部测绘专业参数交代清主渠走法与竖井位置，随后随安全队活下来作证扳倒恒泰",
+      "without_protagonist": "被绑三天拼死保住的工程图交出来后，手无缚鸡之力的老工程师自会求正规护卫带走躲藏",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "说话带着老工程匠精确报米数、管径和闸门编号的职业语癖"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "三天前因试图调取老城施工旧档被陈屿与白塔清道队秘密绑架"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "顺三号废弃总渠抢在参号彻底抽死前捣毁恒泰深层同步主站，并在绝境前死护吐血的芽",
+      "without_protagonist": "修表匠见参号表被陈屿顺地底线偷抽危及全巷，纵无外人协助也必抄镊拎锤抄暗道杀上门",
+      "voice_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "得知参号母表及瞎眼守钟人均身陷明晚旧市场灭门杀局"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "托老顾兜好东巷与线人退路，随后带满弹匣潜入地下三层深站把陈屿和铜甲卫彻底轰碎",
+      "without_protagonist": "刚雪洗老队长两年旧恨的王牌猎手拿到地底通道与满弹药，必然直插恒泰地下老巢彻底扫黑",
+      "voice_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "读者看到姜霁彻底站队镜辞、首秀捉影镊秒杀三阶守卫"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "从垂直通风井空降与镜辞前后夹击砸翻同步大厅，哪怕死锁剧痛跪地也死撑在陈屿眼前讨命",
+      "without_protagonist": "誓讨断腕陈屿狗命的野生异端本来就会追进恒泰深处通风道一路砸下去",
+      "voice_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 18,
+          "end_line": 18,
+          "quote": "看到镜辞、姜霁与浑身浴血的芽正式同台汇合"
+        }
+      ]
+    },
+    {
+      "id": "C_CY",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "双爪既废后在深层核心同步站借参号逆吸与机械义肢、铜甲缝合屠夫翻盘保命并虐杀三人",
+      "without_protagonist": "第14章滚进粪管大难不死后，疯狂的裁缝必然逃回地下核心站拼接黄铜爪与催动备用母巢线抽老街参号自救",
+      "voice_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "双手俱废之际撞开排污废料斜道滚动逃命，暂伏恒泰深处等待第一卷后段彻底清算"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第四日凌晨五点十五分",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_SZ",
+        "C_XZ",
+        "C_JC",
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [
+        "C_GU"
+      ],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_SZ",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "守钟人强咽心头血，抡大铜锤震碎砖缝边缘并自咬舌尖逼出一口精血拍在铜印上死死镇住参号母表逆吸，严令三人别守店快去拆恒泰底下",
+          "gates": {
+            "knows": "刚刚亲自感受参号倒转吸力，清楚仅靠店里残胎守不住超过十二小时，唯一活路是镜辞直接端掉下面暗渠接线的陈屿",
+            "wants": "用自己七十岁瞎眼老命与铁炉死死压住白雾不扩散，让徒孙放开手脚下地底拔掉根子",
+            "fears": "怕镜辞顾念他老骨头不敢下地底，结果天亮整条街连着老店全让抽成空壳",
+            "capability": "铜锤镇砖缝加老一辈镇钟人精血铜印暂缓倒吸速率十二小时",
+            "no_plot": "老镇钟人护短且最分轻重缓急，自家小辈既已拿到暗渠直插图，他必拿老命兜住后路撵人去掀老窝",
+            "costs": "咳伤加剧精血大损，接下来的十二小时几乎是以命压表",
+            "consequences": "暂时止住砖缝白雾暴涌，替镜辞三人抢出下地底强攻的时间窗口"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "关键时刻直接抡火钳、抛八角重铜锤，比谁都护犊子",
+              "access": "observation",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第17章末亲自用铜锤试探砖缝寒雾并判断最多再顶十二小时",
+              "boundary": "清楚店里顶多撑半天，只能靠徒孙下去斩断下面那根线"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "大铜锤",
+              "镇钟铜印",
+              "煤膛火气"
+            ],
+            "permission": "店中主事长辈以性命承担留守押阵",
+            "limits": "双目已盲且伤及内腑，仅能守店无法随行突击",
+            "evidence_refs": [
+              "SRC5",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "压住参号母表十二小时等待地底斩草除根",
+            "success_guaranteed": false,
+            "failure_path": "若十二小时内没能拆掉下面主站，参号仍会彻底崩溃",
+            "opposition": "地下暗线持续不断的恐怖吸力"
+          }
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_GU",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "顾横收到姜霁经加密军绿电台发来的东巷急讯后，暗调二组亲信车队趁天蒙蒙亮进驻东巷外围，借追缴不明匪徒名义接管韩铭尸体现场并秘密收拢护送老陈老郭徐正前往安全站",
+          "gates": {
+            "knows": "手握昨晚厂门口实打实抓到督导曹严把柄的底气，天亮前听到姜霁通报韩铭带非法黑施工队屠巷反被击毙且手里有个懂恒泰黑工程的老工程师证人",
+            "wants": "既把活人老百姓和关键工程证人保进自己严密掌控的安全据点，又在公文上把韩铭死因包装成混战被不明暴徒击毙以免白塔督察科立刻翻脸大规模洗地",
+            "fears": "东巷枪响尸体一旦拖到天大亮被白塔旁系收尸，全街包括瞎老头和徐正立刻全灭",
+            "capability": "行动组长官方扫尾权限加上昨晚留下的二组绝对心腹小队",
+            "no_plot": "原本就替姜霁兜底并狠护平民和证据链的铁汉老兵，听见旧部求援且对方手里有关键工程证人必亲自按稳后院",
+            "costs": "二组又多扛了一桩糊涂枪战报告压力，全靠顾横一人硬顶上方问责",
+            "consequences": "彻底扫清东巷街头尸体与平民牵挂，保下徐正并放行镜辞三人专心打地下"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "粗中有细、极护手下与平民",
+              "access": "testimony",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第17章结尾姜霁已经拧亮干净电台发出呼叫，顾横经加密频段得悉东巷交火与关键证人徐正存在",
+              "boundary": "了解东巷地面已清理需接走平民掩护，无法直接派大队人马钻进非法暗渠助战"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "二组精锐掩护车队",
+              "保密安全站收容权"
+            ],
+            "permission": "行动组队长管辖市内突发枪战清理封控",
+            "limits": "无法公开背叛白塔秩序带大部队强拆恒泰地底，仅能护后方周全",
+            "evidence_refs": [
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "无缝接收保护老陈老郭徐正与替镜辞三人掩盖地面行踪",
+            "success_guaranteed": false,
+            "failure_path": "若东巷撤离车迟到可能撞上白天城建巡查",
+            "opposition": "白塔内部督察线追查压力与黎明逼近"
+          }
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_XZ",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "徐正伏在柜台上拿着铅笔在防水油纸图补清三号总渠进恒泰地下南侧二号检修竖井的具体米数、水闸开合向与一条垂直废通风井位，再跟着二组掩护车撤向安全站",
+          "gates": {
+            "knows": "全城没人比当年亲自盯着开挖和拒签验收单的他更熟悉那条一米二管径废渠与恒泰地下三层错层盲道",
+            "wants": "把能抄进恒泰地下最深处心腹地带的那几道铁门编号和距离死死交代清楚，自己活着进安全站作证彻底掀翻这伙黑手",
+            "fears": "怕年轻人钻进盲水渠找不到四百米外那个生锈阀门被淹死或闷死在臭泥管道里",
+            "capability": "精确给出检修门间距、水闸顺逆拧向以及另一口直落机械大厅上方的老通风竖井位置",
+            "no_plot": "老工程匠职业素养加上恨透绑匪，临走必把路线米数标清才放心随队躲避",
+            "costs": "把全部核心测绘底细毫无保留托付出去并跟随陌生军绿队暂离",
+            "consequences": "直接赋能镜辞姜霁走下水总渠、芽走上垂直竖井的完美前后夹击"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 3,
+              "end_line": 5,
+              "quote": "说话带着老工程匠精确报米数、管径和闸门编号的职业语癖",
+              "access": "memory",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年管网工程测绘记忆及自备防水蓝图原档",
+              "boundary": "精准提供地下管网与恒泰扩建通道坐标，不知深站里陈屿此刻手头已有新装配机械爪与铜甲屠夫"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "老城排水及恒泰违建冷僻暗渠精确坐标与蓝图"
+            ],
+            "permission": "获救专业线人向救命恩人完整交底",
+            "limits": "年过半百且刚遭绑架折磨，无体力跟随下井潜行",
+            "evidence_refs": [
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "引导三人精准插入同步大厅上下死角并随二组安全撤离",
+            "success_guaranteed": false,
+            "failure_path": "若陈屿临时焊死了南侧二号检修阀只能改用硬拆或由芽单面切入",
+            "opposition": "老旧管网淤泥积水与暗改机关阻拦"
+          }
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_JC",
+          "order": 4,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "镜辞收好徐正标定好的蓝图并记牢守钟人十二小时死限，趁天刚灰蒙亮立刻掀开东巷拐角下水检修井铁盖钻入三号废弃总渠顺水向南摸进恒泰腹地",
+          "gates": {
+            "knows": "第17章已确信参号母表最多顶十二小时，陈屿躲在老渠连往的恒泰深站偷抽气息，而地面交火痕迹已有顾横接盘兜住",
+            "wants": "直接绕开恒泰已经封死的地面冷库大门与外围死门，走无人看防的废弃臭水渠从南侧肚子底下一举捅穿陈屿同步站",
+            "fears": "守钟人独自在店里硬压白雾撑不了太久，慢一步老街全灭",
+            "capability": "徐正蓝图配合捉影镊、八角重铜锤与纯银表盘，右肋左臂伤势咬牙硬抗",
+            "no_plot": "既然地面门口早被周谨触发的防爆钢闸压死且老头最多顶半天，抄工程暗渠近道反杀正是当下唯一生路",
+            "costs": "带伤泡进齐膝深腥臭刺骨污水长途匍匐潜行",
+            "consequences": "与姜霁成功从水下绕进恒泰核心同步大厅下层侧翼死角"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 38,
+              "end_line": 39,
+              "quote": "镜辞与姜霁手持徐正急绘的老城暗渠捷径图，踩着齐膝冰臭污水直插恒泰地下三层深处",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "当面听取徐正报清阀门编号与竖井米数并核对守钟人镇表十二小时时限",
+              "boundary": "知晓三号废弃总渠直插恒泰地下三层核心区南缘，不知里面藏着陈屿改造后的机械义肢与铜甲缝合屠夫"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "徐正蓝图指引",
+              "捉影镊",
+              "重铜锤",
+              "旧怀表（仍余5格）"
+            ],
+            "permission": "直捣敌巢核心解除老街危机",
+            "limits": "怀表剩余五格未动用，涉水环境不便举火照明仅靠手电弱光摸行",
+            "evidence_refs": [
+              "SRC2",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "神不知鬼不觉切近恒泰深层同步主站背腹展开突袭",
+            "success_guaranteed": false,
+            "failure_path": "若总渠内已布满猎犬或水位过深只能硬闯",
+            "opposition": "冰寒污水与未知地下防线"
+          }
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_JJ",
+          "order": 5,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "姜霁确认二组前哨已经进巷接稳老陈与徐正后，果断挂紧配枪与四匣银芯备弹紧随镜辞下入臭水总渠",
+          "gates": {
+            "knows": "顾横人手已在东巷外围接管，自己手上握着顾横暗助的四匣半银芯穿甲弹和干净电台，且陈屿未死正是大患",
+            "wants": "趁热追杀藏在恒泰深层的裁缝余孽并彻底炸停这座吸食老城生机的黑站",
+            "fears": "放任陈屿在底下继续乱搞迟早还会卷土重来祸害全城平民",
+            "capability": "充足特制银芯穿甲火力、战术刀与老练水下潜行协同动作",
+            "no_plot": "心魔既除又获弹药充足补给，王牌行动组长岂会躲回地面看戏而不跟着把敌巢彻底掀平",
+            "costs": "带伤伴着污水恶臭长距离涉水潜伏，彻底断了白塔方面最后回转余地",
+            "consequences": "与镜辞构成地下核心站正下翼的强劲破门火力"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 6,
+              "end_line": 8,
+              "quote": "成为镜辞把后背放心交出去的过命拍档",
+              "access": "observation",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第17章已由顾横电台确认接应安排且亲历过银芯弹穿透三阶膝甲威效",
+              "boundary": "了解二组接管地上及管道走向，未知地下深站真正规模"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 39,
+              "end_line": 39,
+              "quote": "持徐正急绘的老城暗渠捷径图，踩着齐膝冰臭污水直插恒泰地下三层深处",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听见徐正标清路线并亲眼见到顾横车队接稳后方平民",
+              "boundary": "护翼镜辞自水渠方向潜入核心站"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "满弹匣消音手枪与四匣半银芯弹",
+              "战术刀"
+            ],
+            "permission": "战友协同突袭地下非法壳巢",
+            "limits": "涉水行进须小心枪管护水以免哑火",
+            "evidence_refs": [
+              "SRC3",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "以满配银芯弹火力掩护镜辞切开同步站侧防",
+            "success_guaranteed": false,
+            "failure_path": "若铁栅焊死或遭遇大量水下杂兵则强攻破口",
+            "opposition": "暗渠未知陷阱与三阶守卫装甲"
+          }
+        },
+        {
+          "id": "A6",
+          "actor_id": "C_YA",
+          "order": 6,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "芽顺着徐正标记的另一条通向恒泰散热顶井的老矿渣垂直井盖纵身滑下，单独走上层管道与镜辞姜霁分兵两路",
+          "gates": {
+            "knows": "清楚水渠下面路滑狭长不够三个人齐头冲阵，且自己对母巢丝线的异样震动最敏锐、又擅长垂直铜管飞降突袭（第12章刚从通风管空降撕犬）",
+            "wants": "直接绕到陈屿这缩头乌龟的头顶死角，等水下镜辞一响枪便居高砸穿天桥断他全部后路",
+            "fears": "两人都挤在狭小排水井里万一被迎头堵死谁也展开不了身手",
+            "capability": "极强垂直铜管攀降机动力与单兵破顶砸落冲击力",
+            "no_plot": "既能踩穿第12章同样的通风井降落把陈屿吓死，又能回避水下泥臭且扩大包抄面，完全贴合她独狼清道脾气",
+            "costs": "独自一人钻入直通敌巢心脏上空的孤立竖井，风险全压自己肩上",
+            "consequences": "构建下一场完美的上天桥、下排水井南北夹击阵型"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "芽自顶部散热铜井暴烈砸落天桥，与下方破墙而出的镜辞姜霁完成前后夹击",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听见徐正点明恒泰上空另有垂直老通风散热井位置并决定单独抄顶路",
+              "boundary": "凭经验知晓垂直管可直通机械顶盖，未知陈屿在核心站布置了牵引死锁的高频共振轴"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "垂直攀壁与破顶爆发力",
+              "敏锐震动嗅觉"
+            ],
+            "permission": "战术分兵独立包抄",
+            "limits": "孤军深入顶井一旦落入共振陷阱极难独自脱身",
+            "evidence_refs": [
+              "SRC4",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "摸到核心大厅正上方等待地面破门动静凌空压顶突击",
+            "success_guaranteed": false,
+            "failure_path": "若井口焊死则直接蛮力撕铁盖切入",
+            "opposition": "垂直铜管锈蚀危险及顶棚守备力量"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "第四日凌晨五点四十分",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_JC",
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A7",
+          "actor_id": "C_CY",
+          "order": 7,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "躲在恒泰地下三层深处巨型齿轮同步大厅里的陈屿将双臂断口狠狠缝上两具三寸黄铜机械钩爪，指使两具三阶铜甲护卫守死钢桥并催动分体铜核顺主渠猛抽参号母表补伤",
+          "gates": {
+            "knows": "第14章滚下废料管道大难不死逃回外围外侧下方这座秘建的核心同步站，清楚自己双爪废尽再不靠母巢分体铜核强抽旧街那只缺轮母表填命，天亮便会溃烂而死",
+            "wants": "趁先遣队韩铭跟拆迁黑工在东巷拖住镜辞姜霁那群人的功夫，抢先在天亮前靠两具护站铜甲卫保驾完成自救并孵化出拼缝杀器屠夫",
+            "fears": "被镜辞那个狠毒小修表匠摸进自己最后躲藏的底站顺手捏断脖子",
+            "capability": "三阶半壳裁缝金线技术配临时强焊在双腕截口的黄铜机械骨刺棘爪、两具重甲三阶护卫与同步大厅全套设施",
+            "no_plot": "双臂皆断又挨过两次反噬濒死的变态疯子逃回老巢后第一反应必定拿机械爪强续肢体并狂抽能救命的参号表气息",
+            "costs": "强行将黄铜棘爪缝入肩臂肉筋痛苦万状、躯体已完全不成人形",
+            "consequences": "筑好深层同步大厅铜墙防线并持续威胁钟表行守钟人，却压根没防住水渠铁栅后与头顶竖井同时杀到的前后奇兵"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 6,
+              "end_line": 7,
+              "quote": "用金线缝合自己的半壳躯体",
+              "access": "memory",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第14章沿废料管道逃回恒泰地下深层同步站后凭多年金线外科手术底子替自身紧急接装机械爪并开核接渠",
+              "boundary": "以为韩铭与地面清拆队正在东巷困死镜辞三人，全然不知韩铭已毙命且暗渠图已落入敌手"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "双臂黄铜机械骨刺棘爪义肢",
+              "两具三阶铜甲壳护卫",
+              "百尺齿轮同步主站与分体铜核"
+            ],
+            "permission": "恒泰地下同步主站核心技师掌控底牌权限",
+            "limits": "刚受重创双臂换爪并不利索，严重依赖两具重装护卫挡架正面突击",
+            "evidence_refs": [
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "守在中央天桥催熟底牌并吸干东巷参号母表填补本源",
+            "success_guaranteed": false,
+            "failure_path": "若护卫遭绕后瞬杀自身将被迫以命接轴鱼死网破",
+            "opposition": "正在水流暗栅与顶部竖井双路杀到的铁三角"
+          }
+        },
+        {
+          "id": "A8",
+          "actor_id": "C_JJ",
+          "order": 8,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "姜霁借水流掩护悄悄撬开同步大厅下翼铁栅，刚见陈屿站在中央天桥催核，果断抬枪连发四颗银芯穿甲弹同时打爆左翼铜甲护卫膝轴并射熄附近强探照灯",
+          "gates": {
+            "knows": "清楚同步大厅宽阔百尺，先废重甲守卫机动并打暗聚光照明最利己方潜杀、也能给头顶蓄势的芽打出开打信号",
+            "wants": "第一波火力打瘫左侧三米重甲壳脚踝让其失去护主可能，并牵扯大厅全部注意吸引向南侧栅口",
+            "fears": "若不趁奇袭第一秒抢先把重甲卫放倒，被两具铜甲合围在窄铁栅门口极其被动",
+            "capability": "顾横补给的四匣半特制银芯穿甲弹在近中距具备直接撕开三阶铜甲节点机械关节之威",
+            "no_plot": "老练突击队长潜入宽阔敌人老巢的第一枪必然挑最关键照明和护卫下盘关节开火打破阵型",
+            "costs": "耗掉第一半匣宝贵银芯穿甲弹并彻底打响正面对决",
+            "consequences": "左翼铜甲卫跪砸钢板，迫使陈屿注意力全数被吸引至下方南口"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "姜霁银芯穿甲弹轰烂左卫膝甲",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 5,
+              "producer_action_id": "A5",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "潜抵检修栅口亲眼看见左翼铜甲护卫膝部活动关节缝隙果断开枪",
+              "boundary": "精确瞄准肉眼可见的膝甲接缝节点发动强攻"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "满弹匣特制银芯穿甲弹手枪"
+            ],
+            "permission": "战友既达预定突击点即刻抢先开火夺势",
+            "limits": "铜甲厚重躯干难直接一枪毙命，必须配合镜辞近身断筋与芽破顶收割",
+            "evidence_refs": [
+              "SRC3",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "瘫痪左翼守卫牵制全场视听",
+            "success_guaranteed": false,
+            "failure_path": "若重甲过厚只能继续扫射头盔接缝牵制",
+            "opposition": "三阶铜甲卫沉重铜板护甲"
+          }
+        },
+        {
+          "id": "A9",
+          "actor_id": "C_YA",
+          "order": 9,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "听见地下枪声爆响一瞬，芽当场踹飞头顶散热井锈铁板如石块般直坠中央天桥，双脚踏碎残余灯架直接撞向扑援而来的左翼残废铜甲卫头颅将其踩裂颈椎",
+          "gates": {
+            "knows": "一直在顶棚通风口伏低等下面姜霁镜辞枪响开打，一眼俯瞰清下面半跪的左翼铜甲卫背脊露着巨大空当",
+            "wants": "趁乱用恐怖空降动能先手碾毙已被姜霁废膝的左卫，紧接着从高台背翼扑杀断腕陈屿",
+            "fears": "怕陈屿见机溜进旁边暗门又像第14章那样钻阴沟溜走",
+            "capability": "十米垂降冲击力叠加半异端撕裂拳脚直接碾断已瘫痪护卫脊骨",
+            "no_plot": "原本就专门顺上空通风管爬来包抄断后路的猛兽型战力，听见下方枪响踩碎瘫痪敌人首当其冲合情合理",
+            "costs": "冲击力砸震伤脚腕旧绷带渗出血沫仍不停步继续压上天桥",
+            "consequences": "彻底截断陈屿背后天桥逃路并直接完成首杀"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "芽自顶部散热铜井暴烈砸落天桥，与下方破墙而出的镜辞姜霁完成前后夹击",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 8,
+              "producer_action_id": "A8",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "自顶井俯瞰并听见姜霁第一轮银芯枪响击瘫左卫膝部，即刻破顶空降补刀踩杀",
+              "boundary": "果断执行预定前后夹击方案击碎左卫并卡死陈屿退路"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "高空坠落势能与撕骨重击拳脚"
+            ],
+            "permission": "独立包抄配合下方枪手收割护卫",
+            "limits": "落地后身处中央同步核心高辐射近旁，易遭母巢丝线牵引反噬",
+            "evidence_refs": [
+              "SRC4",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "瞬杀左卫锁死高台天桥形成两面夹击杀局",
+            "success_guaranteed": false,
+            "failure_path": "若没一次踩透便反手拧脖子补碎",
+            "opposition": "铜甲卫残余反抽手臂与滑腻钢桥面"
+          }
+        },
+        {
+          "id": "A10",
+          "actor_id": "C_JC",
+          "order": 10,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "镜辞趁姜霁开枪与芽破顶天降吸引大厅全部火力的三秒空隙贴着铜齿轮阴影飞扑右侧重甲护卫，以表盘借火光一晃定死颈甲错缝，银钢捉影镊刺穿铜缝一扭扯断其喉间主筋将其秒杀",
+          "gates": {
+            "knows": "右侧护卫转头仰望天桥空降的一刹那正好暴露铜甲领圈底下零点一秒咬合死角，手头陨铁捉影镊足够一击剪碎三阶内线",
+            "wants": "三秒内干净利落解决最后一具保镖让陈屿赤裸裸变成光杆司令直面三人围杀",
+            "fears": "只要稍微缠斗半分钟让陈屿腾出手去拉核心闸门就麻烦大了",
+            "capability": "照缝锁定零点一秒死角配陨铁银钢捉影镊专克三阶以下金线与铜壳接口",
+            "no_plot": "抓住前后夹击黄金破绽抢杀最后一具挡路护卫正是镜辞一贯冷绝高效的出手风格",
+            "costs": "扑身拧腕再度牵裂右肋旧伤吐出一丝血线",
+            "consequences": "两具三阶护卫在照面之间全灭，逼得走投无路的陈屿直接疯狂亮出最狠底牌"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "银钢捉影镊",
+              "access": "observation",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "手中熟握陨铁捉影镊并熟悉此前连挑三阶缝合守卫主筋经验",
+              "boundary": "针对铜甲护卫颈圈露出金属缝一线发力即可一镊夺命"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "镜辞银钢捉影镊一镊断筋灭掉右卫，秒杀双护卫",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 9,
+              "producer_action_id": "A9",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "眼见左卫遭废杀且右卫被头顶芽动静吸引扭头刹那暴露领圈死缝",
+              "boundary": "顺死缝零秒介入破筋灭杀右卫"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "银钢捉影镊",
+              "照缝死角锁定能力"
+            ],
+            "permission": "正面歼灭敌方武装护卫",
+            "limits": "全神突杀右卫，暂未及阻拦几步外正扑向同步核心的疯癫陈屿",
+            "evidence_refs": [
+              "SRC2",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "彻底扫清护卫直取孤家寡人陈屿性命",
+            "success_guaranteed": false,
+            "failure_path": "若镊尖滑脱立即改用八角重铜锤砸脖",
+            "opposition": "右卫回身斩劈的沉重金属臂刃"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "story_time": {
+        "label": "第四日凌晨五点四十五分",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_YA",
+        "C_JJ",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A11",
+          "actor_id": "C_CY",
+          "order": 11,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "两具护卫转眼覆灭且头尾退路全被封死，陷入绝境的陈屿歇斯底里狂笑着撕开衬衫将胸腔外翻搏动的金线主束狠狠捅进中央高速旋转分体铜核，爆裂巨型玻璃缸放出三米高的「铜甲缝合屠夫」同时催发高频母巢共振丝狠抽芽体内死锁",
+          "gates": {
+            "knows": "清楚双臂虽换机械骨爪也绝拼不过这群连周谨韩铭都能剥死的人，唯有借着半条命强插进中央同步核心换来共振控场与放出未全稳的三阶终极拼缝肉盾才能把全员拖死在这座大厅",
+            "wants": "先拿高频母巢波狠狠压跪那个一直拿断腕逼自己的疯丫头芽，再借三米屠夫和机械骨爪活剥了镜辞报双臂俱废之仇",
+            "fears": "不拼命真就要像只被拔了牙的老鼠死在这堆自己缝出来的铜齿轮里",
+            "capability": "半壳核心本体金线直联同步大厅铜轴，瞬间引爆高台底巨型玻璃槽放出一具三米缝合屠夫兼激发全大厅共振丝波",
+            "no_plot": "连着断掉双臂、又被堵死老窝最后一寸生路的疯狂艺术家到死局时以身饲阵放出压箱底怪物完全符合其毁灭执念",
+            "costs": "胸膛血肉撕裂惨状凄绝、相当于把自己整个人钉死在核心旋轴当成活体肉发条再难活剥退走",
+            "consequences": "整个大厅齿轮发狂轰鸣，屠夫挥斧杀出且母巢共振丝瞬间把芽死锁刺到吐血"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 6,
+              "end_line": 7,
+              "quote": "擅长炼制裂隙蚀液与吹奏母巢死人骨笛远程引爆下线",
+              "access": "memory",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "深谙母巢共振丝牵引与核心大厅拼缝屠夫唤醒开关机理",
+              "boundary": "以为高频母巢波足以先废掉异端芽再杀镜辞，不知镜辞手里正按着逆摆停摆的底牌怀表"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 41,
+              "end_line": 42,
+              "quote": "双臂截口插满狰狞黄铜机械棘爪的陈屿彻底疯狂，嘶喊着扑向悬浮同步铜核，一把将自身胸腔外翻的金线主束捅进高速旋轴强行以身饲阵",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 10,
+              "producer_action_id": "A10",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "亲眼见两名铜甲护卫眨眼被芽和镜辞联手全灭，自身已无可调守备只能孤注一掷以身接轴",
+              "boundary": "彻底放弃保全人形只求靠铜核同归于尽或反杀三人"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "胸腔半壳金线",
+              "中央分体同步铜核",
+              "三阶铜甲缝合屠夫"
+            ],
+            "permission": "核心技师自毁性解锁站底最高防卫底牌",
+            "limits": "以身接轴后自己被钉在中心核心无法灵活奔跑闪避，只能靠机械棘爪与屠夫阻敌",
+            "evidence_refs": [
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "凭共振死锁先瘫痪芽再放三米铜甲屠夫辗杀镜辞姜霁",
+            "success_guaranteed": false,
+            "failure_path": "若镜辞狠下心强开卡齿停摆两秒或者破掉同步铜核便会反遭毁灭性反噬",
+            "opposition": "铁三角拼死反制与镜辞手中的五格怀表"
+          }
+        },
+        {
+          "id": "A12",
+          "actor_id": "C_YA",
+          "order": 12,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "高频母巢共振丝猛然缠绕刺进耳后细缝死锁，芽耳根喷出一道暗红黑血惨哼一声单膝砸地跪在钢桥板上，却死咬牙关拿左指撑死栏杆绝不倒下去",
+          "gates": {
+            "knows": "早有防备自己体内这颗沈竹死锁天性抵触母巢共振波，可陈屿拿半条命直接接上同步总轴爆发出的高阶牵引痛楚远超以往百倍",
+            "wants": "死死压住那股几乎要将脑浆掀翻、引诱她撕掉人性化作傀儡的撕裂痛楚，决不能向那个断臂残废低一寸头",
+            "fears": "怕死锁万一当场撑不住失控彻底连累眼前扑上来保护自己的镜辞",
+            "capability": "仅能靠半异端硬骨头咬碎牙血扛死原地不动以免误伤队友",
+            "no_plot": "设定早已明确她体内被原芽与沈竹遗物钉下死锁且死锁发痛时微皱眉硬扛绝不撒娇示弱，高阶母巢共振轰脸正是真实代价反应",
+            "costs": "口吐黑血耳后崩裂几乎丧失此刻瞬时战力",
+            "consequences": "直接把三米扑上来的屠夫利斧破风空档露给挡上身前的镜辞，触发怀表五格极致抉择"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "第三卷在顾横牺牲、死锁崩碎的血战后，她当众斩断壳王招安",
+              "access": "memory",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "自七天前被钉下死锁至今始终背负母巢共振撕裂痛感",
+              "boundary": "忍受死锁与高频共振撕扯剧痛，靠意志硬撑不动"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 42,
+              "end_line": 42,
+              "quote": "高频母巢共振波同步狠抽芽耳后死锁令其单膝吐黑血跪地",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 11,
+              "producer_action_id": "A11",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "遭到中央同步铜核激活后直灌大厅的高频母巢共振丝反噬撕扯耳后死锁",
+              "boundary": "强忍剧痛撑地拒不屈服也不求助示弱"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "铁柱栏杆支点",
+              "异端死锁硬抗意志"
+            ],
+            "permission": "受重创下死扛守住自身意识清白",
+            "limits": "当前一两秒内被共振死锁锁住肌肉难以起身挡住重斧",
+            "evidence_refs": [
+              "SRC4",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "咬牙扛过首波共振痛潮伺机再起",
+            "success_guaranteed": false,
+            "failure_path": "若三米屠夫巨斧先一步劈到面前必须全靠同伴阻挡",
+            "opposition": "高阶同步铜轴连续不断地撕扯死锁波"
+          }
+        },
+        {
+          "id": "A13",
+          "actor_id": "C_JJ",
+          "order": 13,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "姜霁一边顶着耳膜嗡鸣爆震快速换上第二匣满银芯弹，连开三枪狙击三米高铜甲缝合屠夫握着斩骨巨斧的右臂腕甲与面部眼缝，硬生生拖慢对方劈砍势头半秒",
+          "gates": {
+            "knows": "三米高屠夫披满厚实青铜残片且一斧足以把天桥和跪地的芽劈成两半，此时自己在下面通道无法一秒冲上高台挡刀，唯一办法是用穿甲银弹强阻对方挥斧腕甲",
+            "wants": "竭尽全力用穿透弹道压慢屠夫出斧势头，替天桥上的镜辞抢出保命抢招空隙",
+            "fears": "哪怕迟了半秒，镜辞和芽都要被那口门板大铜斧剁翻在钢桥上",
+            "capability": "精准快射点杀三米移动靶关节缝隙与换匣手速",
+            "no_plot": "见队友高台遇险而自身尚在下方栅梯边，王牌枪手本能就是甩出最高精准连续点射狙击挥斧手腕给搭档抢半秒",
+            "costs": "刚换的新弹匣迅速倾泻过半，耳鼻因共振噪音渗出一丝血痕",
+            "consequences": "略微荡偏巨斧落点却仍压不住这头三阶畸变屠夫踏碎钢板狂扑而来的毁灭势头"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 6,
+              "end_line": 8,
+              "quote": "成为镜辞把后背放心交出去的过命拍档",
+              "access": "observation",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "手中装有四匣特制银芯弹与实战高速点射习惯",
+              "boundary": "在下方廊道点射阻碍高台怪物挥斧速度，看清芽跪地与屠夫狂扑局面"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 42,
+              "end_line": 45,
+              "quote": "三米高的铜甲缝合屠夫提着斩骨巨斧踩碎钢板狂扑而来",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 11,
+              "producer_action_id": "A11",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "亲眼见玻璃槽爆裂放出三米高屠夫朝天桥上吐血的芽跟镜辞劈斩过来",
+              "boundary": "开枪阻滞其腕部速度却难一枪击杀"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "特制银芯穿甲弹手枪"
+            ],
+            "permission": "全力开火替天桥同伴掩护抢时间",
+            "limits": "下层距离与重铜甲厚度限制单靠手枪难以立毙三米屠夫",
+            "evidence_refs": [
+              "SRC3",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "强行偏移巨斧出招节奏保护天桥上的镜辞和芽",
+            "success_guaranteed": false,
+            "failure_path": "屠夫顶着弹孔继续猛扑过来把重担全压向镜辞怀表",
+            "opposition": "三米屠夫厚铜叠甲与疯狂冲势"
+          }
+        },
+        {
+          "id": "A14",
+          "actor_id": "C_JC",
+          "order": 14,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "镜辞反手踏前一步稳稳挡在单膝呕血硬扛的芽身前，左手倒握银钢捉影镊压低蓄力，右手拇指缓缓扣死贴身内袋里那只仅剩最后五格刻度的银灰旧怀表表冠",
+          "gates": {
+            "knows": "深知银灰旧怀表总共只剩最后五格刻度，一旦在此刻动用第二式卡齿令三米内所有铜甲屠夫与共振核心强制停摆两秒，便会立时倒退至第三格——按表盘阶梯规律，届时旧货市场所有街坊乃至并肩战斗的战友都将把自己忘成一个彻头彻尾的陌生修表匠；可眼下芽受死锁重创跪在身后，三米巨斧已劈落近前",
+            "wants": "无论付出什么人世彻底被遗忘的代价，也要卡住这零点几秒把身后的芽从斧刃底下保住并撕开屠夫与同步核心防线",
+            "fears": "既怕再退两格回到旧货市场时连老陈老郭都冷漠叫自己「修表小师傅」，却更绝不可能让身后的芽死在陈屿手里",
+            "capability": "具备随时逆拧表冠发动卡齿的决定权以及左手捉影镊瞬间补杀抓缝时机",
+            "no_plot": "镜辞宁可押上自己全部人世痕迹去修好或保住他在乎的人，面对吐血跪地的芽与扑面巨斧，压上怀表表冠进入二格消耗悬崖正是他骨子里的必然选择",
+            "costs": "拇指已经压实随时可能耗掉两格不可逆人世刻度的银灰表冠",
+            "consequences": "全章高潮正好定格在即将扭冠开卡齿的第5→3格人世宿命阈值，硬钩紧锁下一章强拆深站爆发"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 6,
+              "end_line": 7,
+              "quote": "哪怕明知怀表刻度不可逆下跌、每次强开都在把自己从熟人记忆里抹掉，仍毫不犹豫地押上自己全部人世痕迹去救人",
+              "access": "memory",
+              "available_chapter": 17,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第4、6、9章亲身付出过狗、街坊与姜霁遗忘初见的怀表退格代价",
+              "boundary": "清楚再拧一次卡齿会跌进第三格陌生区，尚未真正拧落所以第18章末停在扣冠蓄势一刻"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 42,
+              "end_line": 46,
+              "quote": "镜辞半步挡在她身前，右手拇指死死压住仅剩五格的银灰旧怀表表冠",
+              "access": "planned-earlier-action",
+              "available_chapter": 18,
+              "available_order": 12,
+              "producer_action_id": "A12",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "回头瞥见芽耳后黑血顺脖淌下并正迎着三米铜甲屠夫扑来的致命大斧",
+              "boundary": "决定站死前排并以拇指扣紧表冠准备卡齿破局"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "仅余5格的银灰旧怀表（卡齿二式随时待发）",
+              "银钢捉影镊"
+            ],
+            "permission": "主角当场承担全部人世代价做出保人抉择",
+            "limits": "逆拧卡齿一次必须跌2格直落第3格危险深水区，不可撤回",
+            "evidence_refs": [
+              "SRC2",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "挡在芽身前准备强停三米屠夫与同步核心或觅得一线逆杀时机",
+            "success_guaranteed": false,
+            "failure_path": "若表冠卡齿未能同时震断共振线则仍须肉搏死扛",
+            "opposition": "三米高铜甲缝合屠夫狂劈巨斧与核心疯狂共振"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "完整覆盖第18章细纲三场全部决策者：后间押阵的守钟人、远调兜底的顾横、交图撤离的徐正、兵分两路水渠与垂井的镜辞姜霁芽，以及核心同步大厅以身接轴的陈屿，无一遗漏。",
+    "background_only": [
+      {
+        "name": "老陈与老郭",
+        "reason": "随徐正同上顾横派来的保密车队转移安全站躲避，未对地下奇袭行动做出新选择"
+      },
+      {
+        "name": "二组收尾老兵",
+        "reason": "服从顾横暗号封管东巷现场并护走平民，属于既有指令执行者"
+      },
+      {
+        "name": "两具铜甲壳护卫及三阶铜甲缝合屠夫",
+        "reason": "受陈屿机械与母巢丝直接驱动的死士防卫傀儡，行动全源于陈屿命令与核心激活，不具有独立人格意志"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "比对细纲_第018章与陈屿、徐正、守钟人、顾横、镜辞、姜霁、芽角色设定及时间线，核验前后夹击路线来源及第18章末怀表扣冠边界",
+    "basis": "陈屿自第14章逃入排污暗渠后经数小时返回地下核心站焊装机械爪与接管反抽合情合理，并不知道韩铭已在东巷毙命；镜辞一行严格按徐正所给一米二管径三号总渠与垂直井图执行分兵；陈屿绝境自插核心触发高频共振反噬芽体内死锁，将镜辞逼入拇指扣死最后五格表冠的强抉择点而未提前偷跑耗格。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

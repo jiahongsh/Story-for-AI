@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 15,
-  "last_committed_chapter": 15,
+  "state_revision": 18,
+  "last_committed_chapter": 18,
   "range": [
     1,
-    15
+    18
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "5af4000b9933da0a9efb2617e2b8feec4900f6a961a7ad90d751677d7c8de81a"
+      "sha256": "7e11a03e2d4b4535c6802c017dc74e53227570a6a27084d366f040bfaffa191b"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -80,6 +80,18 @@
       "sha256": "b293267fc8a3da193aa4168192e419ade0d5c7223e05c7384349f9d66aa01bf4"
     },
     {
+      "path": "正文/第016章_黑封铁皮锁老巷，盲翁火钳揭参号.md",
+      "sha256": "2c47523d4a05fa3c69be9859a55cfce9aec3e8d8f7f0e257d9e74738929ee256"
+    },
+    {
+      "path": "正文/第017章_照缝惊揭旧队长，银镊封喉救徐工.md",
+      "sha256": "53395b4724544117df174e7d98611b94712f2d04c98833281c6e602742e51965"
+    },
+    {
+      "path": "正文/第018章_暗渠双翼扑同步，残腕裁缝祭铜傀.md",
+      "sha256": "2db9f5212fc372097a1e2c39d41f69b91458d7dc0580ccec90cbfcad79a81e41"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -138,22 +150,34 @@
     {
       "path": "追踪/逐章记录/第015章.md",
       "sha256": "2521e4d6bf930085839100eac6e8ebb74c386de97a64bbbb9df420df48a85a23"
+    },
+    {
+      "path": "追踪/逐章记录/第016章.md",
+      "sha256": "78b1ba6b397ea8126bdd3a7696c6663809e000eb3ff9a47c99299956b3c31a9a"
+    },
+    {
+      "path": "追踪/逐章记录/第017章.md",
+      "sha256": "a576b516c57618030f746a7dbffe0d8cdf4c2bfc4836ecb1096973781f846d82"
+    },
+    {
+      "path": "追踪/逐章记录/第018章.md",
+      "sha256": "411210b570cd806f36d4bd85958afb15cd2947125f758bbbe8fef69475447be3"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第15章状态）
+# 顾横 当前卡（第18章状态）
 
 - identity：剥壳人第二行动组队长，姜霁老搭档兼暗线盟友
-- location：城南恒泰设施暴雨厂区门口
-- goal：以扣押涉嫌失控的曹严为名保住二组清白与身份，暗中替姜霁与镜辞扫清消息遮掩
-- state：一枪震碎曹严手中发射器并将其踩泥扣押，暗助弹药电台放行货车后鸣枪掩饰
+- location：旧货市场东巷外围保密接应线
+- goal：死死捂住东巷韩铭与护卫伏诛消息并将老陈老郭徐正护进绝对安全站
+- state：已借干净频段调二组封锁现场收殓尸体、秘密运走东巷街坊与关键线人徐正，暗中帮姜霁扫清白塔视线
 - abilities_resources：双管重霰弹枪；剥壳人第二行动组兵权；干净加密联络频段
-- relationships：公开演戏放跑姜霁，实则全力站队保护平民与昔日老搭档
-- knowledge：亲眼看到十二名脖子插孔的活人摊主及盖好明日公章的火化单，彻底确认白塔督察科在做活人献祭
-- open_threads：回队压住曹严口供并为后续二卷保住关键证据链埋下暗手
+- relationships：全面站在镜辞姜霁身后承担地面收尾与情报屏蔽
+- knowledge：东巷与恒泰外池的死局背后白塔高层密令极脏，正利用时间差遮盖三人底细
+- open_threads：兜住东巷撤离人手并压住白塔对地面战损的倒查追责
 
 ## 固定性格、声线与历史
 

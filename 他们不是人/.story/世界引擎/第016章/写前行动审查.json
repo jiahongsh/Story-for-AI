@@ -1,0 +1,1185 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 16,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "5af4000b9933da0a9efb2617e2b8feec4900f6a961a7ad90d751677d7c8de81a",
+      "state_revision": 15,
+      "last_committed_chapter": 15
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第016章.md",
+      "sha256": "d0e1eff94d585721ba55ad448ff6119ac7f395a943e9fa7781273671c8a96594",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "ad83dcb562ee09843153e4e951a5bd420a314406c843c512ea9ee9aa8d6683b2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "e5d03d965703cda5f2c289a9c18da51c37089b888553acd22bbc45e919d097c5",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "943b5a8a22c6139948da799fbe0e8b46c51aa9f0c7b12c637a8f17277dcd9c64",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/守钟人.md",
+      "sha256": "8d76859999c2038d351a7509bbd5bcc933130f598d024463e57b531fc17a2db2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/角色/顾横.md",
+      "sha256": "33c069c2ad2d323c7d88c1d62e832be5591e9a0b3b6ead6e4e73e7c9493c5f38",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/角色/韩铭.md",
+      "sha256": "7ce68c7e528affce35e2256c9a5c8eb21116085a714457fba89c917b1c78c7d7",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "50f3e5f1295d56a5af35027857f698d47b9fdd3e841786c69dfcc3b20f41ca31",
+      "scope": "reader"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "赶在明晚十点半前保住老街并核实七年前师父沈竹与守钟人碎表的秘密",
+      "without_protagonist": "二十一岁修表匠平时在旧货市场守店修表，但只要家店和街坊遭害便必拎锤亮针查到底",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "随镜辞得知参号母表及瞎眼守钟人均身陷明晚旧市场灭门杀局"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "安置好十二名民间活人证人，查清白塔内部勾结黑手并守住底线",
+      "without_protagonist": "哪怕没有镜辞，这名已撕碎终端叛逃的王牌猎手也会依托顾横二组暗线转移证人并追查白塔内鬼",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "读者收获顾横倒戈护短与当众打脸督导的痛快"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "盯死夜里开往老城区的无牌清拆车并护住老街不遭毁灭",
+      "without_protagonist": "即便镜辞不回旧巷，这具体内钉着死锁的异端也会凭对壳巢动向的警觉暗中清杀扑向旧街的怪物",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "表面泼辣鲜活、爱踹门拌嘴；撕破脸后语速快而狠、带着拼死护短的决绝"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "获救街坊全员忘掉芽的诛心一幕"
+        }
+      ]
+    },
+    {
+      "id": "C_GU",
+      "name": "顾横",
+      "protagonist": false,
+      "own_goal": "在不暴露二组掩护身份的前提下秘密接走十二名活人证人保命取证",
+      "without_protagonist": "老兵为护住手下与平民证人本就会暗中调车转移收容，不让白塔灭口",
+      "voice_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "读者收获顾横倒戈护短与当众打脸督导的痛快"
+        }
+      ]
+    },
+    {
+      "id": "C_LI",
+      "name": "瘦老李",
+      "protagonist": false,
+      "own_goal": "带着伤逃进安全去处保住老命，凑钱感谢救了自己的镜老板与女长官",
+      "without_protagonist": "死里逃生的小摊贩只想尽快被正规长官护走活命，继续照着旧街惯性念叨老熟人",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "表现出真实迷茫与生分，一句话戳穿主角的孤独"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "获救街坊全员忘掉芽的诛心一幕"
+        }
+      ]
+    },
+    {
+      "id": "C_SZ",
+      "name": "守钟人",
+      "protagonist": false,
+      "own_goal": "看守好老座钟下的参号母表残胎与后间铁炉，在危机彻底逼近时给镜辞指明实话",
+      "without_protagonist": "瞎眼老人七年来独自守着半座母表与煤炉，遇到撬门清拆照样拎火钳拼老命护街",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "沙哑干瘪、惜字如金、每句都带老一辈镇钟人的江湖规矩与冷幽默"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "剥壳人姜霁已找上门"
+        }
+      ]
+    },
+    {
+      "id": "C_CHEN",
+      "name": "老陈",
+      "protagonist": false,
+      "own_goal": "护住自己守了半辈子的旧货杂货铺不被半夜强拆赶走，喊钟表行大伙提防",
+      "without_protagonist": "天不亮遇到无牌黑皮施工队封巷敲门，护店心切的老街坊本来就会大嗓门拦门呼救",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "市井大嗓门、爱开玩笑拆台、满口柴米油盐算计"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 11,
+          "end_line": 11,
+          "quote": "老陈已忘掉芽"
+        }
+      ]
+    },
+    {
+      "id": "C_HM",
+      "name": "韩铭",
+      "protagonist": false,
+      "own_goal": "借着四年老副手交情骗开钟表行铁门，拿走老表与抓捕姜霁镜辞向白塔立功",
+      "without_protagonist": "奉白塔督察派命令提前封巷抓人并清点母表线索，就算姜霁不在店里他也会带壳卫逼迫拆门",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "平时温柔熟稔带战友情面；伪装撕破后冷硬傲慢，满嘴白塔「唯一干净答案」与上级秩序论。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 3,
+          "end_line": 3,
+          "quote": "原剥壳人第三行动组副手，跟随姜霁共事四年"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "story_time": {
+        "label": "第四日凌晨三点三十分",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_JJ",
+        "C_JC",
+        "C_YA",
+        "C_LI"
+      ],
+      "actors_offstage": [
+        "C_GU"
+      ],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_GU",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "顾横按先前塞给姜霁的加密电台频段暗中派出二组心腹隐蔽车队赴西环货场接应平民",
+          "gates": {
+            "knows": "亲眼见到十二名颈带血孔的摊主和明日火化单，知道车人绝不能落进督察科手里",
+            "wants": "既把平民证人安顿进安全医疗点保命取证，又不暴露自己仍留二组当内应的位置",
+            "fears": "怕证人留在姜霁手里拖累突围被灭口，也怕派出去的车队走漏风声连累全组兄弟",
+            "capability": "手握二组实权与未登记保密通道车辆，可在黎明前悄悄把人带出西环货场",
+            "no_plot": "老兵极护平民与自己旧搭档，不忍看十二条人命半夜死在外头",
+            "costs": "只派摘掉牌照的几名心腹兵开卡车收人，严令不得问明去处更不能当面暴露自身",
+            "consequences": "卸掉镜辞一行携带平民的沉重包袱，让十二份活口证据留入二组秘密保护链"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "暗中塞进四匣银芯弹、军用止血箱与干净加密电台掩护姜霁和镜辞撞破西门突围",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第15章在恒泰厂门口亲眼看清满车街坊并亲手丢进军绿药箱与加密电台",
+              "boundary": "知道姜霁会在天亮前用干净电台联系自己，尚不知韩铭已经投敌扑往东巷"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "剥壳人二组心腹接应车队",
+              "干净加密电台频段"
+            ],
+            "permission": "行动组队长有权秘密调度保密医疗转运车辆，无权公开调动全城守备",
+            "limits": "顾横本人在队部周旋曹严口供不能亲自到场，接应必须赶在天亮前静悄悄完成",
+            "evidence_refs": [
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "秘密稳妥收走十二名证人并让姜霁镜辞腾出手脚行动",
+            "success_guaranteed": false,
+            "failure_path": "若西环外围遇盘查或车队迟到，众人只能连夜另躲偏僻处",
+            "opposition": "督察科外勤全城搜捕压力与黎明逼近时间窗"
+          }
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JJ",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "姜霁用顾横赠与的加密电台接通西环铁路货场接应车队，将头号箱式货车连人交接后换乘旧面包车返城",
+          "gates": {
+            "knows": "手头有顾横亲手塞给的干净电台与四匣银芯弹，知道刚撞破西门的箱式货车太扎眼不能开回老城区",
+            "wants": "先把十二条普通百姓性命托付给老前辈稳妥藏好，再陪镜辞轻装杀回旧货市场护人抢表",
+            "fears": "带着十二名虚弱伤患闯进清拆封锁网全军覆没，也怕暴露顾横这根宝贵暗线",
+            "capability": "手持有效加密电台与满弹药枪械，具备侦察车驾乘与隐蔽交接专业素养",
+            "no_plot": "作为老牌一线行动组长，她本能会先剥离平民伤员与扎眼载具再进危险区",
+            "costs": "交出唯一熟悉顺手的大货车并押上顾横保密信道风险，换来无牵挂疾速回援",
+            "consequences": "彻底安顿好人证退路，使三人小队得以轻装潜回东巷"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "暗中塞进四匣银芯弹、军用止血箱与干净加密电台",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第15章在恒泰厂门口亲手从顾横手里接过药箱、备弹和加密电台",
+              "boundary": "知道可凭此台安全接通顾横，尚不知顾横手下究竟能保多久及韩铭已经赶去东巷"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "干净加密电台",
+              "满弹匣手枪与四匣银芯弹",
+              "换乘旧面包车"
+            ],
+            "permission": "可联络顾横保密频段移交证人，无权再走官方正式指挥系统",
+            "limits": "右侧手臂与左肩带伤，夜雨赶路只能挑偏僻小道",
+            "evidence_refs": [
+              "SRC3",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "十五分钟内完成人证脱身并迅速掉头扑往旧货市场",
+            "success_guaranteed": false,
+            "failure_path": "若二组接应车辆晚点或路卡盘查，只能在货场外围硬闯",
+            "opposition": "黎明前严密搜查风险与伤员动作迟缓"
+          }
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_LI",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "瘦老李临上二组卡车前死死拉着镜辞道谢嘱咐保重，转头隔空礼貌却彻底陌生地向芽点了点头便转身上车",
+          "gates": {
+            "knows": "亲眼见镜辞砸液氮救人并踢开车门喝退拦路兵，心里记着镜老板是旧货市场修表青年，却对芽全无任何熟人印象",
+            "wants": "抓紧提醒小镜老板小心别回东巷送死，赶紧随军爷去医院包扎顺便留个记账凑钱谢恩",
+            "fears": "害怕回去东巷的恩人遇害，同时本能忌惮一旁满身黑血、冷脸少言的陌生打手姑娘",
+            "capability": "仅能拉袖口叮嘱与上车避难，年老体弱且颈后受创毫无战斗与抵御抹除能力",
+            "no_plot": "死里逃生的市井老摊贩对熟悉老板拼命叮嘱、对不认识的冷面打手客套生分全属正常人情",
+            "costs": "再次当着镜辞与芽的面无意间坐实遗忘，自身只能带着惊魂与糊涂退入后方",
+            "consequences": "让镜辞更切身看清系统抹除芽存在的不可逆冷酷，坚定必须毁掉恒泰同步源头的决心"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC9",
+              "start_line": 20,
+              "end_line": 20,
+              "quote": "获救街坊全员忘掉芽的诛心一幕",
+              "access": "observation",
+              "available_chapter": 14,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第14章在货车厢内亲历救命过程，脑海中关于芽的记忆已被系统抹清",
+              "boundary": "只记得小镜老板与带枪女长官，不知芽曾与自己在东巷认识多年"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "市井人情嘱咐与自身证词"
+            ],
+            "permission": "仅能选择上车避险与开口道谢",
+            "limits": "年老体衰且刚被抽过精气，无力查觉自己记忆被人为掏空",
+            "evidence_refs": [
+              "SRC8",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "跟十二名街坊随二组安全撤离并劝住恩人",
+            "success_guaranteed": false,
+            "failure_path": "镜辞不可能听劝退缩，只能目送他转身走向更凶险的旧街",
+            "opposition": "彼此认知残缺带来的冷场隔阂"
+          }
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_JC",
+          "order": 4,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "镜辞听完瘦老李嘱托却没多解释半句，只摸了摸怀里剩五格的旧表和七年前铜表，催促众人立刻上面包车赶往东巷",
+          "gates": {
+            "knows": "周谨密令写明今晚十点半强拆东巷并把钟表行留守全员充池，七年前铜表又指明参号母表在旧巷、守钟人为护表盲了双眼",
+            "wants": "趁黎明前拆迁清道队尚未彻底动刀，抢先回到东巷护住守钟人与老陈老郭并核对参号表下落",
+            "fears": "怕赶回迟了看到钟表行成一片废墟，也心口发沉看着所有人一次次当面忘光芽却只能往肚里咽",
+            "capability": "手持七年前铜表、红印密令、银钢捉影镊与重铜锤，右肋与左肩有新旧伤仍能行动",
+            "no_plot": "家里唯独盲眼老头和一条街熟人还蒙在鼓里等死，他绝不可能丢下守钟人躲去城外",
+            "costs": "放弃随证人车队安全避风头，带伤连夜扑进白塔早已锁定的老城区伏击圈",
+            "consequences": "全队直插旧货市场东巷，正好撞见提前封巷的工程围挡"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC9",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "随镜辞得知参号母表及瞎眼守钟人均身陷明晚旧市场灭门杀局",
+              "access": "document",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第15章在废修车棚亲手挑开七年前铜表底盖并拆阅周谨风衣血令",
+              "boundary": "知道十点半有全街清拆令及桥上有黑车北上，尚不知三组内鬼韩铭已先一步抵达巷口"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "捉影镊",
+              "铜锤",
+              "七年前双环铜表与密令",
+              "旧怀表（仍余5格）"
+            ],
+            "permission": "自主决定回街救人与对守钟人摊牌",
+            "limits": "肋肩负伤且怀表再不可轻耗两格，否则旧街坊立刻彻底忘记自己",
+            "evidence_refs": [
+              "SRC2",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "天亮前赶进东巷与守钟人碰头做好布防",
+            "success_guaranteed": false,
+            "failure_path": "若东巷已被彻底焊死或敌人提前破店，只能硬闯救人",
+            "opposition": "提前开赴东巷的黑封条施工清拆队与白塔眼线"
+          }
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_YA",
+          "order": 5,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "芽无视瘦老李等人陌生的客套点头，自己反手扯紧染血绑带一言不发钻进破面包车后座跟着回老街",
+          "gates": {
+            "knows": "早已从昨夜桥洞与高架桥无牌工程车看出白塔与壳巢要清洗旧市场，更早看透全街街坊记忆里正在把自己干净擦掉",
+            "wants": "趁着白塔走狗刚封街立足未稳，替镜辞和那座破老店先拔几颗钉子并守死退路",
+            "fears": "不愿对镜辞示弱掉眼泪，但耳后死锁隐痛提醒她老街一旦陷落自己也将失去最后安身坐标",
+            "capability": "具备极强夜战与攀越墙檐机动能力，左臂绷带未愈仍可出战",
+            "no_plot": "既然全城正把她当不存在抹掉，唯一真信过她的修表匠回老巢拼命，她本能就会冷着脸跟上去厮杀",
+            "costs": "带伤硬扛系统彻底抹除带来的孤独刺痛，默默咽下全部委屈继续当清道尖刀",
+            "consequences": "凭借敏锐夜行身手在下一场领着两人绕开正巷封锁翻墙潜入"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC9",
+              "start_line": 20,
+              "end_line": 21,
+              "quote": "获救街坊全员忘掉芽的诛心一幕",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第14–15章亲身听到瘦老李等询问自己是不是保镖，并目睹高架桥无牌工程车奔旧市场而去",
+              "boundary": "明确感到老街街坊已忘光自己且北方有工程车逼近，未知具体带队内鬼姓名"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "近战搏杀与攀跃暗巷本领",
+              "熟悉旧货市场房檐小道地形"
+            ],
+            "permission": "行动不受人类公权拘束，但体内死锁仍畏惧高阶母巢共振",
+            "limits": "连续夜战绷带渗血未换，正面人数过多会被拖死",
+            "evidence_refs": [
+              "SRC4",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "贴身护卫镜辞切入旧货市场东巷核心老店",
+            "success_guaranteed": false,
+            "failure_path": "若耳后细缝剧痛加剧只能改走暗角偷袭",
+            "opposition": "系统抹除造成的孤立与黑夜围挡哨兵"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "story_time": {
+        "label": "第四日凌晨四点三十分",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_SZ",
+        "C_YA",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A6",
+          "actor_id": "C_YA",
+          "order": 6,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "见东巷两头已被无牌施工车连夜立起两米铁皮围挡且穿雨衣大汉逐户敲门，芽带头领众人摸进后墙死水沟檐角翻入钟表行后院",
+          "gates": {
+            "knows": "从小在旧货市场爬墙掏鸟长大，清清楚楚记得钟表行后院矮煤棚和排水檐角最便于隐蔽潜入，且正街施工队来者不善",
+            "wants": "避开巷口那群戴安全帽的不明壮汉和封条铁皮，神不知鬼不觉进店和瞎眼老头汇合",
+            "fears": "正面在铁皮死胡同里开枪响动太大，把整队白塔暗手一口气全招来围死老店",
+            "capability": "敏捷攀越矮棚并替负伤的镜辞和姜霁搭把手落院",
+            "no_plot": "老街熟门熟路的黑夜潜行者本就绝不会傻站到大铁皮围挡正面找盘问",
+            "costs": "踩过湿滑长满青苔的老瓦片再度扯疼伤臂，暂时放弃正巷直接观测外头人马规模",
+            "consequences": "全员安全绕开外部封锁悄无声息降临钟表行后间"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 3,
+              "end_line": 3,
+              "quote": "旧货市场长大的女孩，镜辞从小一起长大的青梅",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年在旧货市场长大并随镜辞出入钟表行熟悉全部后院瓦檐路线",
+              "boundary": "只知东巷外面正被铁皮封路敲门，尚不知店里老头早做好硬拼准备"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "旧货市场熟地势记忆与夜间翻墙能力"
+            ],
+            "permission": "进入自小长大的后巷屋檐无需许可",
+            "limits": "需替负伤镜辞控制落地声响防备隔壁听见",
+            "evidence_refs": [
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "intent": "潜进钟表行后间见守钟人并查看安全现状",
+            "success_guaranteed": false,
+            "failure_path": "若后院也有壳卫埋伏只能当场拧脖子硬杀",
+            "opposition": "屋檐湿滑雨渍与外巷不断逼近的敲门队伍"
+          }
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_JC",
+          "order": 7,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "镜辞落地进后间把七年前双环断角锤旧铜表与周谨红印清拆密令一同拍在守钟人工作台上直接摊牌",
+          "gates": {
+            "knows": "铜盖内明确刻着老沈与守钟人七年前共碎三表致双目毁盲，参号留旧巷，且周谨密令指定十点半血洗整条东巷连带钟表行人员全部充池",
+            "wants": "立刻撬开瞎眼老头捂了七年的老底，问清第三只母表到底藏在钟表行哪里以及还剩多少能动用的底牌",
+            "fears": "盲眼老人还在拿老规矩敷衍遮掩，白白错失最后保住老陈老郭和老店的黄金窗口",
+            "capability": "手握两份无法抵赖的物证直接对峙，迫使老人不再装哑",
+            "no_plot": "换作任何被瞒了七年、刚拎着亲师父旧印死表死里逃生回来却发现全街要被灭门的徒孙辈，一进门必当面甩证摊牌",
+            "costs": "彻底掀开老店七年平静表面，迫使一直装盲聋的老前辈下场扛事",
+            "consequences": "迫出守钟人亮出压箱底的参号母表残胎真相"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC9",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "随镜辞得知参号母表及瞎眼守钟人均身陷明晚旧市场灭门杀局",
+              "access": "document",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第14–15章自恒泰血表墙角扯下铜表并在废修车棚撬开底盖读到全部钢针字迹及红印密令",
+              "boundary": "明确老沈与守钟人碎了三表且参号在旧巷，完全不知沈竹进裂缝后究竟是生是死"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "七年前双环断角锤铜表",
+              "周谨红印清拆密令"
+            ],
+            "permission": "镇钟人残脉唯一后辈与现任店主直面掌炉老人摊牌",
+            "limits": "不能迫使盲眼老人交出自己也不知晓的沈竹裂缝深处结局",
+            "evidence_refs": [
+              "SRC2",
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "intent": "迫使守钟人立刻说出参号母表确切藏处及应对法",
+            "success_guaranteed": false,
+            "failure_path": "若老人仍坚持只让他逃命，镜辞也必须自己砸开座钟找表",
+            "opposition": "守钟人七年来护犊藏拙不想让徒孙卷太深的执念"
+          }
+        },
+        {
+          "id": "A8",
+          "actor_id": "C_SZ",
+          "order": 8,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "守钟人听见铜表摔在木台上的分量不再遮掩，抄起炉边烧红铁火钳一击撬开老座钟底座暗板，亮出半座寒雾微渗的参号母表残胎",
+          "gates": {
+            "knows": "七年前亲手随沈竹砸碎三只母表致双眼毁盲，知道镜辞既然连七年前的印记铜表都从恒泰取回，更已被白塔划进灭口清单，再瞒等于送死",
+            "wants": "正式把看守七年的半座参号母表亮给镜辞看清虚实，说明它核心调速轮早被沈竹带走、眼下全靠半座空胎硬压着老街缝隙",
+            "fears": "一旦老座钟泄出寒气被外头白塔狗鼻嗅到或参号遭夺，全东巷老百姓当场失守，更怕镜辞把压箱底怀表彻底拼光",
+            "capability": "精通后间机关构造，手握烧得通红的二尺重铁火钳与早打好插销的防盗铁栓",
+            "no_plot": "平时帮理不帮亲、护犊子护到骨子里的老辈镇钟人，面对已经亮出师门老物件还被下死令的后辈，必直接亮家伙掀底牌",
+            "costs": "暴露老座钟秘密并提前架上铁炉火钳准备拼老命，不再能当装聋作哑的糟老头",
+            "consequences": "让镜辞一行亲眼看到参号母表真实位置与半残状态，为接下来保店决死战立下实感"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 5,
+              "end_line": 6,
+              "quote": "七年前与沈竹一起杀入源裂缝拆碎三只母表，瞎了一双眼睛后隐居旧货市场",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "七年前亲历拆表藏表始末并贴身看守老座钟底座整整七年",
+              "boundary": "清楚参号半座位置、沈竹抽走调速轮之事，对外头刚带队砸门的韩铭其人尚不认识"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "镜辞亮出七年前双环铜表与清拆密令",
+              "access": "planned-earlier-action",
+              "available_chapter": 16,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听见镜辞把双环旧铜表拍在木桌并听完十点半红印清拆令",
+              "boundary": "知晓白塔十点半封巷计划及对方已找上门的紧迫程度"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "后间煤炉与烧红二尺铁火钳",
+              "老座钟底座油布包藏的半座参号母表"
+            ],
+            "permission": "秘密看守者有权决定何时向关门徒孙启封交底",
+            "limits": "双目已瞎仅凭听风嗅味辩位，参号缺失核心无法自行修复",
+            "evidence_refs": [
+              "SRC5",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "交出参号母表虚实让镜辞早拿主意保命或死拼",
+            "success_guaranteed": false,
+            "failure_path": "外头突然爆出砸门声直接打断后续细谈",
+            "opposition": "外巷提早动手的清拆施工队伍"
+          }
+        },
+        {
+          "id": "A9",
+          "actor_id": "C_JJ",
+          "order": 9,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "姜霁一边警觉前门外动静一边检查手枪膛线并替大伙把住后间过道口",
+          "gates": {
+            "knows": "虽然顾横车队走得稳当，但半夜围死整条老巷的无牌黑施工队显然冲着这间小铺来，绝非普通市政修路",
+            "wants": "趁屋里两人看表说话，靠在门框内侧盯牢前门风吹草动准备随时开火掩护",
+            "fears": "前门卷闸铁皮年久失修挡不住重锤撞门，老街平民挡在前头不好下狠枪",
+            "capability": "满弹匣特制银芯消音手枪、四匣备用弹与王牌猎手警觉力",
+            "no_plot": "老练猎手在陌生危险屋里天然承担警戒门窗放哨职责",
+            "costs": "精神始终绷在警戒线上几乎顾不上歇一口气",
+            "consequences": "使她成为下一刻第一个扑到临街窗缝往外张望的人"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "加消音器的制式手枪、特制银芯弹、战术刀",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年外勤训练本能及第15章刚刚领到顾横所塞银芯弹箱",
+              "boundary": "警惕外头清拆工程队，此时仍绝未想到前来的领头人会是自己四年副手韩铭"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "满匣银芯弹手枪",
+              "战术警戒敏锐度"
+            ],
+            "permission": "战时同行武装警戒自由行动",
+            "limits": "未拆看门口外面是谁之前不能贸然穿门胡乱开枪伤及无辜老街坊",
+            "evidence_refs": [
+              "SRC3",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "确保后间三人看表时不遭前街破门突袭",
+            "success_guaranteed": false,
+            "failure_path": "门口若出现熟面孔容易令人防线产生瞬间松动",
+            "opposition": "即将砸门逼近的伪装熟人"
+          }
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "story_time": {
+        "label": "第四日凌晨四点四十分",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_CHEN",
+        "C_HM",
+        "C_JJ",
+        "C_JC",
+        "C_YA",
+        "C_SZ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A10",
+          "actor_id": "C_CHEN",
+          "order": 10,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "老陈扯着嗓子隔门拦住硬闯的戴安全帽壮汉，拍打钟表行卷闸门喊镜辞老头千万别乱签危房腾退单",
+          "gates": {
+            "knows": "只知外环凌晨突然冲来一群没有正规城建手续、硬封东巷两头还说要立刻腾空钟表行与早点铺的凶神恶煞，完全不记得曾经认识芽",
+            "wants": "靠老街坊聚众嚷嚷把邻里全叫醒别吃闷亏，死活护住自己守半辈子的小铺子",
+            "fears": "怕大半夜被人连铺带表砸个稀烂还一分赔款拿不到",
+            "capability": "只有老巷做生意练出来的大嗓门与一身干瘦老骨头，全无对抗超凡势力本领",
+            "no_plot": "老陈本就是市井护食大嗓门街坊，遇半夜莫名强拆肯定拍门喊隔壁老熟人作伴撑腰",
+            "costs": "冒着被工头壮汉随手推搡拿住的风险冲在铺面前面喊人",
+            "consequences": "敲响前门替店里三人预警，却也把自己暴露在韩铭伸手可抓的人质距离内"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "市井大嗓门、爱开玩笑拆台、满口柴米油盐算计",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年旧巷住户日常并在凌晨亲眼见到铁皮围挡强行封巷砸铺",
+              "boundary": "以为只是黑心开发商半夜违法强拆，压根不知白塔与怪物真相，也不记得芽"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "市井大嗓门呼喊告警"
+            ],
+            "permission": "普通商户门口吆喝呼救",
+            "limits": "毫无格斗能力，一旦对方亮刀撕皮根本毫无反抗之力",
+            "evidence_refs": [
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "叫醒镜辞与守钟人紧闭大门别吃强拆亏",
+            "success_guaranteed": false,
+            "failure_path": "极易被门口撕破脸皮的韩铭拿来当人质要挟",
+            "opposition": "韩铭与伪装成工程工头的三阶接缝护卫"
+          }
+        },
+        {
+          "id": "A11",
+          "actor_id": "C_HM",
+          "order": 11,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "韩铭穿着三组旧黑雨衣走到卷闸门前，笑着给老陈递烟稳住老街坊，对着门缝亲昵喊出姜霁并劝开门把人和旧表交给自己带走避险",
+          "gates": {
+            "knows": "奉白塔督察科急令封死东巷找寻周谨遗失密令与钟表行残余母表，并利用老同事交情知道姜霁极看重旧部跟顾横安危，却不知镜辞手里抓着银钢捉影镊且就在屋里正盯紧玻璃反光",
+            "wants": "凭四年旧副手这张熟脸骗姜霁主动拉开门栓卸下戒心，趁近身瞬间一举夺回参号表并活捉或秒杀两人向白塔请赏",
+            "fears": "直接拿普通拆迁队硬攻会引来大声枪战惊动二组或折损手下，反倒漏了自家两年前早已缝皮换主的秘密",
+            "capability": "携带两头伪装成施工工头的三阶接缝壳打手，自身具备伪善话术与领后掩盖的三阶金线躯体",
+            "no_plot": "深谙人心弱点的老牌内鬼有熟脸牌不打才是蠢货，递烟喊小名低成本撬大门完全符合其算计本性",
+            "costs": "亲自走到钟表行门外亮灯处与人对话，将脖颈死角暴露在店窗玻璃反光射程内",
+            "consequences": "成功骗得姜霁第一眼卸下防御扑到门栓前，却同时被一旁的镜辞从老玻璃反光里锁定领口后接缝"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 3,
+              "end_line": 6,
+              "quote": "跟随姜霁共事四年、在两年前替已半壳化的老队长老赵操办收尸与战后报告的亲信；暗中早投靠白塔督察派",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "四年与姜霁共事掌握其性格习惯，并在督察科渠道得知姜霁已撕毁终端叛逃及顾横曾拦截厂门",
+              "boundary": "知道白塔悬赏追杀姜霁和东巷有钟表行目标，未知周谨已被镜辞锤死、也未知镜辞握有破缝神兵"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "三组旧制服熟人身份牌",
+              "两名三阶伪装工头打手",
+              "体内隐藏的三阶缝合能力"
+            ],
+            "permission": "受白塔督察派暗授权限带清道组封闭东巷",
+            "limits": "衣领下方陈年暗金接缝在物理镜面强反光下会被镜返照缝盯破",
+            "evidence_refs": [
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "诱使姜霁放下戒心亲手拉开反锁门栓",
+            "success_guaranteed": false,
+            "failure_path": "若屋里姜霁起疑拒不拉栓，便只能改靠暴徒抓人质强拆",
+            "opposition": "屋里始终拿反光盯缝的镇钟人传人镜辞"
+          }
+        },
+        {
+          "id": "A12",
+          "actor_id": "C_JJ",
+          "order": 12,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "姜霁透过窗缝认出雨幕里正是共事四年的亲信副手韩铭，心头一热刚伸手摸向铁门插销却被镜辞急停手腕",
+          "gates": {
+            "knows": "记忆里韩铭跟着自己跑过四年最凶险的外勤、两年前自己被迫击毙老赵时更是韩铭在身后扛了一切文书压力，目前尚无任何怀疑韩铭背叛的证据",
+            "wants": "先弄明白顾横是不是真被白塔押了才派韩铭连夜冒死来报信，看老陈在外面危险也想拉进店里避一避",
+            "fears": "怕昔日带出来的得力小兄弟也被自己叛逃牵连，更怕老陈当街出事",
+            "capability": "手握弹匣满枪但未拉门栓，刚因意外见到熟悉老部下而在一瞬之间戒心放低半寸",
+            "no_plot": "连着被白塔追杀又经历半夜血战后突然看见自己一手带出来的心腹熟人站在门外劝撤，任何人都会先伸手靠窗听一耳朵",
+            "costs": "差点一步踏进老熟人精心铺好的致命陷阱里",
+            "consequences": "手指停在门栓前半寸被镜辞按死，迫使她瞬间重拾猎手警觉并看清窗玻璃里的异样反光"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 5,
+              "end_line": 7,
+              "quote": "冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "四年与副手韩铭共事经历",
+              "boundary": "知晓韩铭过去是忠实下属，此时还完全不知道韩铭两年前就背叛自己暗害了老赵"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 41,
+              "end_line": 41,
+              "quote": "欣喜认出穿三组雨衣带队的竟是昔日副手韩铭",
+              "access": "planned-earlier-action",
+              "available_chapter": 16,
+              "available_order": 11,
+              "producer_action_id": "A11",
+              "author_only": false,
+              "certainty": "belief",
+              "acquisition": "隔着前店玻璃缝亲眼看见韩铭穿着旧三组雨衣站在门口喊自己名字并给老陈递烟",
+              "boundary": "只信眼前看见的老熟面孔与熟悉称呼，未及借助物理反光检验领口死角"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "配枪、门前视野判断力"
+            ],
+            "permission": "有能力拉门放人也有权利听信镜辞立即撤手扣枪",
+            "limits": "缺乏一眼看穿高阶金线接缝的照缝瞳术，单靠肉眼看不透韩铭衣领后背",
+            "evidence_refs": [
+              "SRC3",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "靠近门窗确认来人并决定要不要放韩铭与老陈进来",
+            "success_guaranteed": false,
+            "failure_path": "若没镜辞扯住，一拉门就会遭门外三名高阶半壳贴脸斩首",
+            "opposition": "韩铭的四年老情分伪装与身后两头壮汉"
+          }
+        },
+        {
+          "id": "A13",
+          "actor_id": "C_JC",
+          "order": 13,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "镜辞一把扣住姜霁抓门栓的手腕熄灭手电，利用店前斜射街灯投上老玻璃窗的清晰物理反光对韩铭后颈发紫暗金针脚盯紧启动照缝",
+          "gates": {
+            "knows": "从不在没验过反光的情况下信任何大半夜跟施工队混在一起的白塔熟人，且第一式照缝无需消耗怀表刻度即可借老玻璃反光窥看三秒查实底细",
+            "wants": "按住冲动的姜霁别把鬼请进门，同时借最后两秒照缝反光死死揪出韩铭后颈缝线到底从哪天起长在皮下的",
+            "fears": "只要晚拉回姜霁零点五秒，外头三个怪物就会顺着门缝把屠刀捅进怀里毁掉参号表",
+            "capability": "左手死按姜霁手腕、右手亮开老玻璃斜角照缝聚焦并随时准备抽镊开打，怀表保持五格不耗一分",
+            "no_plot": "修表匠吃过五零二假货敲门的亏，遇半夜莫名凑在黑拆迁队里的熟人必先用镜面反光验接缝",
+            "costs": "在门外伪装者眼皮底下静屏呼吸死盯三秒风险极大，一旦照出真相马上就要硬碰门外围杀",
+            "consequences": "截停了开锁险情并令章节悬停在照缝即将满三秒揭晓韩铭陈年秘辛的极强反转悬崖"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "掌握镜返一式照缝（借镜窥死）",
+              "access": "memory",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年镇钟秘术修习并在此前多次实战验证过玻璃及银盘反光必照接缝",
+              "boundary": "照缝刚盯上韩铭领口下泛紫的陈年旧缝，要满三秒才能完整窥出旧案残影，此刻尚未知晓两年前老赵真相细节"
+            },
+            {
+              "source_id": "SRC1",
+              "start_line": 42,
+              "end_line": 42,
+              "quote": "指尖点向老玻璃窗反光",
+              "access": "planned-earlier-action",
+              "available_chapter": 16,
+              "available_order": 11,
+              "producer_action_id": "A11",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听见韩铭站在门外街灯角度下递烟招呼，借钟表行临街老玻璃窗物理反光立刻看到后颈跳动的陈年暗金线",
+              "boundary": "亲眼见接缝颜色发紫暗沉绝非新缝，正盯住等三秒窥死残影显现"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "照缝反光眼力",
+              "钟表行老玻璃窗面",
+              "随身捉影镊与重铜锤"
+            ],
+            "permission": "店主人当场制止开门并先用独门手艺验门外人虚实",
+            "limits": "照缝需盯满三秒方能撬出死前或植入执念残影，过程中不敢开强光打草惊蛇",
+            "evidence_refs": [
+              "SRC2",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "稳住姜霁同时盯满三秒撕开韩铭真正来历",
+            "success_guaranteed": false,
+            "failure_path": "若韩铭提前发觉玻璃有人偷窥立刻挥锤硬砸大门",
+            "opposition": "韩铭极深的城府与门外两名三阶打手"
+          }
+        },
+        {
+          "id": "A14",
+          "actor_id": "C_YA",
+          "order": 14,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "芽悄无声息顺着木柜台侧边贴近门缝阴影，五指抠进砖墙裂缝蓄力随时准备砸碎前窗暴起扑杀",
+          "gates": {
+            "knows": "听不见姜霁跟那副手的具体旧事，却闻得见门外三个人浑身冒着和恒泰地下护卫一样的腐铁尸蜡腥味",
+            "wants": "一旦镜辞验明来人带缝且不怀好意，抢先把靠老陈最近那头大块头撞飞保下巷口活口",
+            "fears": "不愿再看见任何一个无辜街坊像在北河或地下一样先丢了性命，也不允许镜辞吃暗亏",
+            "capability": "极强贴地伏击与窗框破袭爆发力，可随时越窗撕杀",
+            "no_plot": "闻到门外跟恒泰护卫同样臭味的野生异端本能就会伏低身子进入狩猎扑杀态",
+            "costs": "绷紧伤躯蓄力等待指令，暂不动手以免干扰镜辞三秒照缝",
+            "consequences": "做好与守钟人、镜辞、姜霁在下章瞬间掀翻门口埋伏的全部前置准备"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "手底下却敢在暴雨夜独自拧断壳巢猎犬的脖子",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "多年同壳类厮杀练出的臭味辨识力与第16章刚随两人守在门后",
+              "boundary": "凭臭味和动作直觉判断门外三人都带假皮，不知韩铭姓名与两年往事"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "近身伏击爆发力与耳后嗅觉敏锐度"
+            ],
+            "permission": "店中同盟成员自由进入备战迎敌状态",
+            "limits": "须等镜辞三秒照缝结束先摸清对方到底带了什么后手",
+            "evidence_refs": [
+              "SRC4",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "一旦开门或撕破脸立刻第一时间撞出去撕掉敌方护卫",
+            "success_guaranteed": false,
+            "failure_path": "若对方先抡重锤把砖墙砸塌只能被动格挡",
+            "opposition": "两名伪装三阶壳工头的重型体魄"
+          }
+        },
+        {
+          "id": "A15",
+          "actor_id": "C_SZ",
+          "order": 15,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "守钟人先把参号母表油布包牢压回老座钟底座铁格，独自拎着烧得半红的二尺重铁火钳缓步走到前店柜台背后压阵",
+          "gates": {
+            "knows": "虽然双目瞎了看不见窗外长相，却听出了外面不止一个人的沉重脚步呼吸——脚步落地比正常活人沉了三成且发涩",
+            "wants": "把老店最值钱的参号母表藏稳不露光，拿趁手铁火钳站前间替小兔崽子顶第一波砸门",
+            "fears": "半夜强拆鬼头顺手伤了躲在门口喊人的老陈或冲垮这间护了七年的破门脸",
+            "capability": "烧热重铁火钳与老一辈镇钟人极稳听风功夫，虽瞎眼却敢抡火钳硬别三阶怪脖子",
+            "no_plot": "关键时刻不讲废话直接拎烧红家伙站前头的老辈护短性格，岂会让小辈独撑门面",
+            "costs": "重新站到毫无遮挡的前间迎敌位，准备以七旬瞎眼之躯迎撞高阶外壳",
+            "consequences": "牢牢封住后间参号母表同时替下章瞎老头抡火钳破窗救老陈打下精准站位"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "关键时刻直接抡火钳、抛八角重铜锤，比谁都护犊子",
+              "access": "observation",
+              "available_chapter": 15,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "瞎眼七年练就极敏锐听声辩步能力，并在刚才听见老陈拍门与门外几双沉重鞋底声",
+              "boundary": "听出外头起码三个非活人重手跟着装熟人，未知具体身份却先抄上铁火钳护门"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "烧红二尺铁炉火钳",
+              "听声辩位老辣经验"
+            ],
+            "permission": "钟表行老长辈护店拿主意无需向外请示",
+            "limits": "年老双目尽瞎不适合长途追击，只宜守窗门死角偷袭夹制",
+            "evidence_refs": [
+              "SRC5",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "确保后间母表稳妥藏住并做好抢出老陈、拦截首波冲门的准备",
+            "success_guaranteed": false,
+            "failure_path": "若对方从两翼砖墙同时破开重锤攻击则孤木难支",
+            "opposition": "门口手持工程重锤的三阶壳护卫"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "逐一核对第16章细纲出场顺序与三场戏台前幕后全部决策者，确保西环货场移交证人的顾横/姜霁/瘦老李/镜辞/芽，后间交接参号表的守钟人，以及门前真假熟人冲突中的老陈/韩铭尽数入审七关。",
+    "background_only": [
+      {
+        "name": "二组接应小队兵士",
+        "reason": "按顾横提前划定路线静音接运证人，未对剧情做出独立改变决策"
+      },
+      {
+        "name": "其余十一名获救摊主（小马、胖张嫂等）",
+        "reason": "与瘦老李同一立场上车撤离，未产生单独影响行动的新选择"
+      },
+      {
+        "name": "老郭",
+        "reason": "与老陈同守巷口旁铺挡门帮腔呼救，本章仅作同立场街坊呼应未单独作出改变局势的决定"
+      },
+      {
+        "name": "两名伪装清拆工头跟班",
+        "reason": "本章末尾仅随韩铭站在门外充当沉默压迫跟班，尚未独自出手"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "逐项对照大纲细纲_第016章、相关人物卡（含新建韩铭卡前四行基线）及读者已知时间线核对各场行动者权限、知识来源与声线差异",
+    "basis": "全章所有行动均严格受限于第15章结束时已获取证据（周谨密令、七年前双环铜表、顾横密箱电台）与当场物理感知（玻璃反光、听声辩步）；姜霁因四年战友情本能伸手摸门栓却被吃过假货亏的镜辞即时按住并启照缝验证，全章无人泄出下章两年前旧案注射真相或全卷禁用底牌。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}
