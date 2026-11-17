@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 24,
-  "last_committed_chapter": 18,
+  "state_revision": 26,
+  "last_committed_chapter": 20,
   "range": [
     1,
-    18
+    20
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "ca18bdb8119f4ca6fc587c14fcf95a5e4ade413aa7619fb9cf5599cddd5bbeb7"
+      "sha256": "60623292030c62fd11d8460e5e0e4aedf767b23c19149df6f62ebee12bf36126"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -92,6 +92,14 @@
       "sha256": "6233537b9c5094040d61ec6366a6e4d6ef6524cc8e458dd49661622605df3e50"
     },
     {
+      "path": "正文/第019章_表冠一拧_这两秒归我算账.md",
+      "sha256": "2346c74015ea064fb5351ac06e97b8837fdd6056081460b4842e02b9d38e2676"
+    },
+    {
+      "path": "正文/第020章_当整条老巷_客气地问他找谁.md",
+      "sha256": "8b7a236fe02ec364b3fd6eed4a07adff4ac505f68ca2496383ed6cda9147ba1e"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -162,22 +170,30 @@
     {
       "path": "追踪/逐章记录/第018章.md",
       "sha256": "497bfa721d8676a6a418bef83b3fdcea76c6600052c0e48d18d338474e1a878a"
+    },
+    {
+      "path": "追踪/逐章记录/第019章.md",
+      "sha256": "d35b3d063c2b51faa93af17e82b5a4dc253a938920f424254d9ca2766218ca24"
+    },
+    {
+      "path": "追踪/逐章记录/第020章.md",
+      "sha256": "997ea9bd691357c92a44c149a76146cbc4e4b3877995cc16b8cdcf8c7134bb43"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第18章状态）
+# 顾横 当前卡（第20章状态）
 
 - identity：剥壳人第二行动组队长，姜霁老搭档兼暗线盟友
-- location：旧货市场东巷外围保密接应线
-- goal：死死捂住东巷韩铭与护卫伏诛消息并将老陈老郭徐正护进绝对安全站
-- state：已借干净频段调二组封锁现场收殓尸体、秘密运走东巷街坊与关键线人徐正，暗中帮姜霁扫清白塔视线
-- abilities_resources：双管重霰弹枪；剥壳人第二行动组兵权；干净加密联络频段
-- relationships：全面站在镜辞姜霁身后承担地面收尾与情报屏蔽
-- knowledge：东巷与恒泰外池的死局背后白塔高层密令极脏，正利用时间差遮盖三人底细
-- open_threads：兜住东巷撤离人手并压住白塔对地面战损的倒查追责
+- location：城北保密站及二组外围通讯位
+- goal：护死老陈老郭徐正安全口供，同时提醒姜霁提防今晚白塔高阶机械清理合围与身边「户籍空白」的可疑小子
+- state：安全接走证人却发现西区全路已被白塔封死，因在暗网及二十年户籍底册里翻遍查无「镜辞」而厉声警告姜霁小心
+- abilities_resources：双管重霰弹枪；剥壳人第二行动组兵权；安全站保人权限与加密电台主控
+- relationships：全力保护老搭档姜霁，但同样受第3格户籍清零影响对镜辞视若无源幽灵
+- knowledge：白塔调出高阶机械清理序列抢今夜清平东巷，东巷表铺七年来官方名下只有失踪的沈竹
+- open_threads：在外围压住老陈老郭徐正证词链，防备第二卷大风暴降临
 
 ## 固定性格、声线与历史
 
