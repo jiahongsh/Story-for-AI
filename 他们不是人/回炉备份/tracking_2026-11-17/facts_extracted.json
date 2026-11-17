@@ -1,0 +1,361 @@
+{
+  "K001": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "规则",
+    "established_chapter": 43,
+    "evidence": [
+      "正文/第043章｜镜辞不拿接缝给普通行为材料加权",
+      "正文/第056章_清理轨迹.md｜看见一次后拒绝追看加码"
+    ],
+    "first_recorded_chapter": 56,
+    "id": "K001",
+    "negative_constraints": [
+      "未见接缝不得写成真人认证",
+      "一次看见不得写成已经确认是壳"
+    ],
+    "object": "只证明身份错位，不证明原主生死、善恶或主体连续",
+    "predicate": "证明范围",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "镜辞"
+    ],
+    "reveal_chapter": 43,
+    "subject": "接缝",
+    "updated_chapter": 56
+  },
+  "K002": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "规则",
+    "established_chapter": 50,
+    "evidence": [
+      "正文/第019章_修得太正常.md｜恒准售后回访",
+      "正文/第050章_你不是我儿子.md｜工单出现恒泰设施",
+      "正文/第054章_假通过.md｜两家名字同日出现且不画等号"
+    ],
+    "first_recorded_chapter": 56,
+    "id": "K002",
+    "negative_constraints": [
+      "不得把恒准售后改名成恒泰",
+      "不得写成已经证实是同一家公司"
+    ],
+    "object": "恒泰设施",
+    "predicate": "与之并列但未合并的名称",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "恒泰设施",
+      "镜辞"
+    ],
+    "reveal_chapter": 54,
+    "subject": "临江恒准设备维护有限公司",
+    "updated_chapter": 56
+  },
+  "K003": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "规则",
+    "established_chapter": 32,
+    "evidence": [
+      "正文/第032章｜人工修正在凌晨被上游覆盖",
+      "正文/第046章｜争议状态被压回正常"
+    ],
+    "first_recorded_chapter": 56,
+    "id": "K003",
+    "negative_constraints": [
+      "不得在当前正文解释这个时刻的来源"
+    ],
+    "object": "把人工争议或权限状态覆盖回正常，发起来源未知",
+    "predicate": "目前已知的作用",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "镜辞"
+    ],
+    "reveal_chapter": 46,
+    "subject": "上游同步窗口",
+    "updated_chapter": 56
+  },
+  "K004": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 61,
+    "evidence": [
+      "正文/第061章_来修表的人.md｜东口公示对上证件信息核对与恒泰下游"
+    ],
+    "first_recorded_chapter": 61,
+    "id": "K004",
+    "negative_constraints": [
+      "不得据此写成谁派他来试镜辞",
+      "不得把恒准并进这一栏",
+      "不得写成他拿表是为了害人"
+    ],
+    "object": "临江东口便民服务部的证件信息核对；该部见于恒泰设施下游服务采购名录",
+    "predicate": "三天前在公开名单上完成",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "恒泰设施",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 61,
+    "subject": "孙立",
+    "updated_chapter": 61
+  },
+  "K005": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 62,
+    "evidence": [
+      "正文/第062章_推荐店.md｜两版公开页与异议回执"
+    ],
+    "first_recorded_chapter": 62,
+    "id": "K005",
+    "negative_constraints": [
+      "不得把添加人写成已经查到的幕后",
+      "不得把恒准并进推荐页落款",
+      "不得把撤下写成已经即时生效"
+    ],
+    "object": "今天八点二十的新版最后一行；本店未申请，异议已受理，明日九点撤下",
+    "predicate": "被写入公开维修推荐的时间",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "恒泰设施",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 62,
+    "subject": "旧市场钟表行",
+    "updated_chapter": 63
+  },
+  "K006": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 1,
+    "evidence": [
+      "正文/第001章_钟表行的客人.md｜七年反复维修，最长十一天",
+      "正文/第011章_两页名字.md｜旧维修单与拆检"
+    ],
+    "first_recorded_chapter": 11,
+    "id": "K006",
+    "negative_constraints": [
+      "不是半个月或两个月；不据此推断沈竹生死",
+      "只约束已经写出的维修历史，不新增超自然走时规律"
+    ],
+    "object": "十一天",
+    "predicate": "取信前七年维修中的最长连续走时",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "怀表",
+      "沈竹",
+      "镜辞"
+    ],
+    "reveal_chapter": 1,
+    "subject": "沈竹遗留怀表",
+    "updated_chapter": 11
+  },
+  "K007": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 1,
+    "evidence": [
+      "正文/第001章_钟表行的客人.md｜失踪七年",
+      "设定/角色/沈竹.md｜失踪时镜辞十四岁",
+      "正文/第077章_别告诉镜辞.md｜高二委托改为普通客人"
+    ],
+    "first_recorded_chapter": 77,
+    "id": "K007",
+    "negative_constraints": [
+      "不能因高二底账写成沈竹仍在送取表；不认证生死"
+    ],
+    "object": "十四岁；第一卷现时二十一岁，失踪已七年",
+    "predicate": "失踪时镜辞年龄",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "沈竹",
+      "镜辞"
+    ],
+    "reveal_chapter": 1,
+    "subject": "沈竹",
+    "updated_chapter": 77
+  },
+  "K008": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 18,
+    "evidence": [
+      "正文/第014章_十七.md｜北河17全景与油漆记号",
+      "正文/第018章_临江03.md｜老码头03金属箱与废料筐",
+      "正文/第056章_清理轨迹.md｜旧存档分存"
+    ],
+    "first_recorded_chapter": 56,
+    "id": "K008",
+    "negative_constraints": [
+      "两点不得合并；旧照片不能证明今天现场仍未清理"
+    ],
+    "object": "北河17为老树旁外露金属、泥痕与基座油漆；临江老码头03为金属箱焊疤及废料筐",
+    "predicate": "独立地点及旧照片归属",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "十七号",
+      "零三",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 18,
+    "subject": "十七号与零三",
+    "updated_chapter": 56
+  },
+  "K009": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 55,
+    "evidence": [
+      "正文/第054章_假通过.md｜输入框尚未发送",
+      "正文/第055章_没处理过.md｜发送及次晨回复",
+      "正文/第065章_不知道不是通过.md｜保存已发原话，拒给认证"
+    ],
+    "first_recorded_chapter": 65,
+    "id": "K009",
+    "negative_constraints": [
+      "不把54尚未发延用到55之后；不对调发送者与回复者",
+      "假异常不证明现场残余明显；未给认证不等于没发短信"
+    ],
+    "object": "镜辞七点五十二发送“03南栏，残余明显。”；次晨六点二十一对方回复“南栏没处理过。”；未给通过",
+    "predicate": "发送、回复与认证边界",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "南栏",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 55,
+    "subject": "南栏对照短信",
+    "updated_chapter": 65
+  },
+  "K010": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "历史因果",
+    "established_chapter": 79,
+    "evidence": [
+      "正文/第072章_不是为了反着来.md｜本人实领及实际支付",
+      "正文/第074章_不是我的履历.md｜本人实领及实际支付",
+      "正文/第075章_不看也收尾.md｜本人实领及实际支付",
+      "正文/第076章_也算我的.md｜本人实领及实际支付",
+      "正文/第077章_别告诉镜辞.md｜本人实领及实际支付",
+      "正文/第078章_我要走.md｜本人实领及实际支付",
+      "正文/第079章_哪些是我的.md｜本人实领及实际支付"
+    ],
+    "first_recorded_chapter": 79,
+    "id": "K010",
+    "negative_constraints": [
+      "不能把180毛工资或170漏扣余额当现金；手套不得重复扣款",
+      "122只约束079离店时，镜辞不知道她离开后实际余额",
+      "早先票证和原芽旧账不从三天工钱逆造支付来源"
+    ],
+    "object": "工资180；午饭2、还垫款10、往返8、手套8后余152；076晚饭后144，077饼后142，078买票及回店后122，079带走122",
+    "predicate": "三日工钱及离店前已写支出",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "当前存在",
+      "老秦",
+      "镜辞",
+      "手套"
+    ],
+    "reveal_chapter": 79,
+    "subject": "当前存在",
+    "updated_chapter": 79
+  },
+  "K011": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "所有权",
+    "established_chapter": 61,
+    "evidence": [
+      "正文/第061章_来修表的人.md｜限定维修票、本人留原件及退费",
+      "正文/第062章_推荐店.md｜限定维修票、本人留原件及退费",
+      "正文/第065章_不知道不是通过.md｜限定维修票、本人留原件及退费",
+      "正文/第075章_不看也收尾.md｜限定维修票、本人留原件及退费"
+    ],
+    "first_recorded_chapter": 75,
+    "id": "K011",
+    "negative_constraints": [
+      "六元退费只证明该次按票受理，不能证明窗口全局承认边界或孙立是真人",
+      "原票可作独立反驳来源，不写成不会被篡改的魔法物件",
+      "不得把孙立写成镜辞安排的调查员或已知幕后执行者"
+    ],
+    "object": "孙立自留原票，钟表行留底联，退费窗口留副本；店章及镜辞签名只证油干处理、走时正常、工钱45，不作身份或其他项目通过",
+    "predicate": "持有与签字证明范围",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "孙立",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 75,
+    "subject": "孙立维修票",
+    "updated_chapter": 75
+  },
+  "K012": {
+    "canon_status": "正文已证",
+    "cardinality": "one",
+    "category": "权限",
+    "established_chapter": 84,
+    "evidence": [
+      "正文/第084章_今晚不回去.md｜本人交租约与账号",
+      "正文/第088章_先停下来.md｜本案临时安排、机械与电子入口"
+    ],
+    "first_recorded_chapter": 88,
+    "id": "K012",
+    "negative_constraints": [
+      "不是已判定张岚有权剥夺任何共同产权人的永久居住",
+      "夫妻关系同步不自动改本地临时通行；实际替住程序不能省略",
+      "旧机械钥匙在手不等于还能绕过本次更换后的应急芯"
+    ],
+    "object": "租赁共同住所，租约主租户张岚、产权属出租方；本人账号远程共享及本地临时通行按本案程序暂停，应急芯更换新钥匙交张岚；老李当夜接替住钥匙仍求审长期居住，婚姻财产身份不裁",
+    "predicate": "本次临时暂停依据与范围",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "张岚",
+      "老李",
+      "姜霁"
+    ],
+    "reveal_chapter": 88,
+    "subject": "张岚住宅门禁",
+    "updated_chapter": 88
+  },
+  "R001": {
+    "canon_status": "正文已证",
+    "cardinality": "many",
+    "category": "从属",
+    "established_chapter": 55,
+    "evidence": [
+      "正文/第023章_姜霁.md｜姜霁说出陈屿是恒准外包",
+      "正文/第055章_没处理过.md｜五年合影胸牌与灰衬衫对脸"
+    ],
+    "first_recorded_chapter": 56,
+    "id": "R001",
+    "negative_constraints": [
+      "不因此把两家公司并成一家",
+      "不解释他为何使用周远身份",
+      "工友称陈工也不升级成恒准在编"
+    ],
+    "object": "恒准外包记录与恒泰设施项目胸牌同时存在",
+    "predicate": "已核对的公开履历",
+    "reader_status": "已揭示",
+    "related_entities": [
+      "恒泰设施",
+      "镜辞",
+      "姜霁"
+    ],
+    "reveal_chapter": 55,
+    "subject": "陈屿",
+    "updated_chapter": 56
+  }
+}
