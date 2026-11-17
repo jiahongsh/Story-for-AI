@@ -7,13 +7,13 @@
 --project 为书目录，不是整个工具仓库。来源、包、正文使用书目录内相对路径；原追踪校验器允许在项目外。
 
 ~~~powershell
-python scripts/world_gate.py init --project D:/code/stroy/他们不是人 --chapter 100 --mode continuation --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py --source 大纲/细纲_第100章.md --source 设定/角色/镜辞.md --packet 创作运行/审查包/第100章_写前.json
-python scripts/world_gate.py check --project D:/code/stroy/他们不是人 --packet 追踪/候选章/第100章/run-id/世界引擎/写前行动审查.json --phase prewrite --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
-python scripts/world_gate.py check --project D:/code/stroy/他们不是人 --packet 追踪/候选章/第100章/run-id/世界引擎/写后行动复核.json --phase postwrite --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
-python scripts/world_gate.py export --project D:/code/stroy/他们不是人 --start 1 --end 99 --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
+python scripts/world_gate.py init --project D:/code/stroy/他们不是人 --chapter 16 --mode continuation --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py --source 大纲/细纲_第016章.md --source 设定/角色/镜辞.md --packet .story/世界引擎/第016章/写前行动审查.json
+python scripts/world_gate.py check --project D:/code/stroy/他们不是人 --packet .story/世界引擎/第016章/写前行动审查.json --phase prewrite --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
+python scripts/world_gate.py check --project D:/code/stroy/他们不是人 --packet .story/世界引擎/第016章/写后行动复核.json --phase postwrite --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
+python scripts/world_gate.py export --project D:/code/stroy/他们不是人 --start 1 --end 15 --output .story/派生视图 --tracking-tool D:/code/stroy/skills/story-long-write/scripts/tracking_commit.py
 ~~~
 
-示例角色/细纲路径须替换为实际存在文件。init 可直接写候选运行目录内的附属 JSON；不覆盖已有包。改变计划创建新包、重新审查，不能覆盖已经冻结的写前包。
+示例角色/细纲路径须替换为实际存在文件。init 可直接写 `.story/世界引擎/`、`.story/work/`、`创作运行/` 或 `追踪/候选章/` 内的附属 JSON（禁止写入 `.story/作者记忆/`、`.story/排纲笔记/`、正文、大纲、设定或追踪权威）；不覆盖已有包。改变计划创建新包、重新审查，不能覆盖已经冻结的写前包。
 
 - init 成功：退出 0，TEMPLATE_CREATED_UNREVIEWED；字段空、审查未通过，**不是写作通行证**。
 - check 成功：退出 0，JSON status=STRUCTURAL_CHECK_PASS、phase、packet_sha256、errors=[]、semantic_limit。
@@ -21,9 +21,9 @@ python scripts/world_gate.py export --project D:/code/stroy/他们不是人 --st
 - 校验或路径错误：退出 2，status=FAIL，errors 给原因；命令行用法错误由 argparse 返回 2。
 - mode=planning 允许未初始化追踪的新书规划，不冒充正史；存在 tracking 则必须校验。continuation 仅精确下一章；revision 仅已提交章，仍服从原修订批准流程。
 
-正式续写/修订/export 只读调用原 tracking_commit.py.check_project，检查 schema 5 权威与原派生视图同步。旧模式、坏 JSON、缺合法 authority、原工具不可用均失败。工具不迁移、不补写 tracking，不另设 world-state。
+正式续写/修订/export 只读调用原 tracking_commit.py.check_project，支持 schema 4（当前 story-long-write 权威）与 schema 5 权威及派生视图同步。坏 JSON、缺合法 authority、原工具不可用均失败。工具不迁移、不补写 tracking，不另设 world-state。
 
-工具发现优先显式 --tracking-tool，其次书目录/祖先工具仓库中的原工具，然后已安装技能（同级、用户 .agents/skills 和 .codex/skills）。前包 init 和 candidate 流程必须选同一个原工具路径，不能通过换校验器偷偷更换冻结基线。
+工具发现优先显式 --tracking-tool，其次书目录/祖先工具仓库中的 `skills/story-long-write/scripts/tracking_commit.py` 或 `.workbuddy/skills/story-long-write/...`，然后已安装技能（同级、用户 .agents/skills、.codex/skills 与 .workbuddy/skills）。前包 init 和后续流程必须选同一个原工具路径，不能通过换校验器偷偷更换冻结基线。
 
 ## 冻结基线与来源
 
@@ -204,10 +204,10 @@ export 读取原合法权威、原逐章增量和唯一章正文的SHA256：
 - 作者/逐章事件：原增量引用；缺原记录不从当前快照反造。
 - 作者/伏笔历史：仅逐章伏笔变化；当前状态另页引用，不伪造首埋/回收过程。
 - 作者/卷回看：start/end 真实逐章结果、人物、伏笔变化。
-- 作者/世界时间线与读者/已揭示时间线分离 objective_fact/reader_knowledge；读者页仅已揭示且 reveal_chapter<=end 的 reader_knowledge。
+- 作者/世界时间线与读者/已揭示时间线分离 objective_fact/reader_knowledge；读者页仅已揭示或部分揭示且 reveal_chapter<=end 的 reader_knowledge。
 
 每文件带生成标记、修订、范围和来源hash，可删除重建，不是第二 authority。人物当前卡始终最新正史，不伪装指定旧卷尾状态。迁移书缺早期逐章增量明确留空；正文hash可定位证据，但不代表自动可靠推断缺失结构事实。
 
 若时间线条目的 updated_chapter 大于指定 end，当前摘要可能含后续认识，作者/读者历史页均标待核而不复制这段摘要；原逐章增量仍可引用。检查也在完成前复核所有 hash，来源、前包、正文或权威在检查期间改变会使结果失败。
 
-仅导出到创作运行/目录，默认创作运行/派生视图，不覆盖既有非生成文件。不同版本用不同目录，避免历史混用。短篇无原合法 authority 时 export 失败；可规划角色/时间卡，但正式记忆必须由原写作追踪初始化或合法迁移，不冒充长篇已提交历史。
+仅导出到 `创作运行/` 或 `.story/` 非权威工作目录（默认 `创作运行/派生视图`，推荐 `.story/派生视图`），不覆盖既有非生成文件；`postwrite.candidate` 除候选工作区文件外，也兼容续写流程中尚未入账的当章 `正文/第NNN章*.md`。不同版本用不同目录，避免历史混用。短篇无原合法 authority 时 export 失败；可规划角色/时间卡，但正式记忆必须由原写作追踪初始化或合法迁移，不冒充长篇已提交历史。

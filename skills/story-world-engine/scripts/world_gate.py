@@ -19,6 +19,9 @@ CORE_FIELDS = ("schema_version", "mode", "chapter", "binding", "sources", "actor
 LIMIT = "结构与引用检查通过不证明人物心理真实；语义判断由具名审查者承担，候选仍不是正史。"
 MARKER = "<!-- story-world-engine: generated; rebuild instead of editing -->"
 PLACEHOLDER = re.compile(r"^(?:todo|tbd|unknown|n/?a|待填|待补|待确认|未知|未审|无|不详|占位|\[.*\]|<.*>)$", re.I)
+SUPPORTED_TRACKING_SCHEMAS = (4, 5)
+FORBIDDEN_DOT_STORY_SUBDIRS = ("作者记忆", "排纲笔记")
+DIRECT_CHAPTER_BODY_PATTERN = re.compile(r"^正文/第(\d+)章[^/]*\.md$")
 
 class GateError(ValueError):
     pass
@@ -60,12 +63,37 @@ def inside(project: Path, raw: Any, *, exists: bool = True) -> Path:
 def relative(project: Path, path: Path) -> str:
     return path.relative_to(project).as_posix()
 
+def is_dot_story_work_path(parts: tuple[str, ...]) -> bool:
+    return parts[0] == ".story" and len(parts) >= 2 and parts[1] not in FORBIDDEN_DOT_STORY_SUBDIRS
+
+
 def noncanonical_output(project: Path, raw: Any) -> Path:
     path = inside(project, raw, exists=False)
     parts = path.relative_to(project).parts
-    allowed = parts[0] == "创作运行" or (len(parts) >= 3 and parts[:2] == ("追踪", "候选章"))
-    need(allowed, "输出仅允许创作运行/或追踪/候选章/；正文、大纲、设定、追踪权威不可覆盖")
+    allowed = (
+        parts[0] == "创作运行"
+        or (len(parts) >= 3 and parts[:2] == ("追踪", "候选章"))
+        or is_dot_story_work_path(parts)
+    )
+    need(allowed, "输出仅允许创作运行/、.story/工作目录或追踪/候选章/；正文、大纲、设定、作者记忆、排纲笔记及追踪权威不可覆盖")
     return path
+
+
+def validate_candidate_body(project: Path, raw: Any, *, chapter: int, mode: str, base_chapter: int) -> Path:
+    body = inside(project, raw)
+    try:
+        noncanonical_output(project, raw)
+        return body
+    except GateError:
+        rel = relative(project, body)
+        match = DIRECT_CHAPTER_BODY_PATTERN.fullmatch(rel)
+        is_uncommitted_draft = (
+            match is not None
+            and int(match.group(1)) == chapter
+            and ((mode == "continuation" and chapter == base_chapter + 1) or (mode == "planning" and base_chapter == 0))
+        )
+        need(is_uncommitted_draft, "候选正文仅允许放在创作运行/、.story/工作目录、追踪/候选章/，或当章未入账的续写正文/第N章*.md")
+        return body
 
 def atomic_write(path: Path, content: str, *, generated: bool = False) -> None:
     if path.exists():
@@ -90,10 +118,12 @@ def find_tracking_tool(project: Path, supplied: Any = None) -> Path:
     candidates = []
     for parent in (project, *project.parents):
         candidates.append(parent / "skills" / "story-long-write" / "scripts" / "tracking_commit.py")
+        candidates.append(parent / ".workbuddy" / "skills" / "story-long-write" / "scripts" / "tracking_commit.py")
     candidates.extend([
         Path(__file__).resolve().parents[2] / "story-long-write" / "scripts" / "tracking_commit.py",
         Path.home() / ".agents" / "skills" / "story-long-write" / "scripts" / "tracking_commit.py",
         Path.home() / ".codex" / "skills" / "story-long-write" / "scripts" / "tracking_commit.py",
+        Path.home() / ".workbuddy" / "skills" / "story-long-write" / "scripts" / "tracking_commit.py",
     ])
     for candidate in candidates:
         if candidate.is_file():
@@ -103,7 +133,9 @@ def find_tracking_tool(project: Path, supplied: Any = None) -> Path:
 def validate_authority(project: Path, tool_path: Path) -> dict[str, Any]:
     state_path = project / "追踪" / "_tracking-state.json"
     state = load_json(state_path)
-    need(state.get("schema_version") == 5, "追踪模式不支持；只读助手要求现有schema_version=5")
+    schema_version = state.get("schema_version")
+    need(type(schema_version) is int and schema_version in SUPPORTED_TRACKING_SCHEMAS,
+         f"追踪模式不支持；只读助手要求schema_version为{SUPPORTED_TRACKING_SCHEMAS}")
     integer(state.get("state_revision"), "tracking.state_revision")
     integer(state.get("last_committed_chapter"), "tracking.last_committed_chapter")
     before = digest(state_path)
@@ -337,8 +369,7 @@ def inspect_packet(project: Path, packet_path: Path, phase: str, supplied_tool: 
              "写后包与冻结写前包核心计划不一致；重新审查，不覆盖冻结包")
         candidate = post.get("candidate")
         need(isinstance(candidate, dict), "postwrite.candidate缺失")
-        body = inside(project, candidate.get("path"))
-        noncanonical_output(project, candidate.get("path"))
+        body = validate_candidate_body(project, candidate.get("path"), chapter=chapter, mode=mode, base_chapter=base_chapter)
         need(digest(body) == candidate.get("sha256"), "候选正文SHA256已变；写后复核失效")
         rows = post.get("scene_results")
         need(isinstance(rows, list) and rows, "实际场景结果未登记")
@@ -445,7 +476,9 @@ def export_views(args: argparse.Namespace, project: Path) -> dict[str, Any]:
     start, end = args.start, args.end
     need(1 <= start <= end <= state["last_committed_chapter"], "卷回看范围超出已提交正史")
     output = noncanonical_output(project, args.output)
-    need(relative(project, output).startswith("创作运行/"), "派生记忆仅允许创作运行/中的非权威目录")
+    out_parts = output.relative_to(project).parts
+    need(out_parts[0] == "创作运行" or is_dot_story_work_path(out_parts),
+         "派生记忆仅允许创作运行/或.story/中的非权威工作目录")
     sources = [{"path": "追踪/_tracking-state.json", "sha256": digest(project / "追踪" / "_tracking-state.json")},
                {"path": str(tool), "sha256": digest(tool), "external_validator": True}]
     source_map: dict[str, str] = {}
@@ -482,7 +515,7 @@ def export_views(args: argparse.Namespace, project: Path) -> dict[str, Any]:
             else:
                 author_events.append(f"- {eid}｜待核：当前汇总在第{updated}章更新，不能充作第{end}章时的历史版本；回读原逐章增量。")
         reveal = event.get("reveal_chapter")
-        if event.get("reveal_status") == "已揭示" and type(reveal) is int and reveal <= end:
+        if event.get("reveal_status") in ("已揭示", "部分揭示") and type(reveal) is int and reveal <= end:
             if updated <= end:
                 reader_events.append(f"- {eid}｜第{reveal}章读者已知：{event.get('reader_knowledge', '待核：无读者摘要')}。")
             else:
@@ -495,7 +528,11 @@ def export_views(args: argparse.Namespace, project: Path) -> dict[str, Any]:
         files[f"作者/角色当前卡/{safe_name(name)}.md"] = meta + f"# {name} 当前卡（第{state['last_committed_chapter']}章状态）\n\n" + "\n".join(entries)
         history: list[str] = []
         for chapter, (record_path, sections) in records.items():
-            for line in sections.get("角色变化", []) + sections.get("跨章连续性变更", []):
+            for line in (
+                sections.get("角色变化", [])
+                + sections.get("跨章连续性变更", [])
+                + sections.get("连贯性约束", [])
+            ):
                 if line.startswith(f"- {name}｜"):
                     history.append(f"- 第{chapter:03d}章｜{line[2:]}｜来源：{relative(project, record_path)}")
         for eid, event in timeline.items():

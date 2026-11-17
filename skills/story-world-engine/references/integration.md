@@ -18,19 +18,18 @@
 
 当前书可启用这一写作政策，不改变任何既有剧情。缺政策的旧项目保留原程序行为，Agent仍按用户/项目规则使用七关；坏政策不应静默视为关闭。不要为过门私自设false。
 
-## 长篇候选硬门
+## 长篇闭环接入
 
-已经集成的 `story-long-write/scripts/chapter_candidate.py`在原正文门后调用世界写前/写后检查。approve/promote重新验证，不能用之前一张报告跳过新稿。语言门仍先行。
+当前仓库的 `story-long-write` 采用 `storyctl.py` + `tracking_commit.py`（`schema_version=4`，无独立 `chapter_candidate.py`），工作文件落在 `{书目录}/.story/work/第NNN章/`，语言检查直接校验 `正文/第NNN章_*.md` 后串行入账。建议顺序：
 
-建议顺序：
+1. 召回卡与权威；在 `.story/世界引擎/第NNN章/写前行动审查.json`（或 `.story/work/第NNN章/世界引擎/` / `创作运行/审查包/`）填写写前审查包，通过 `world_gate.py check --phase prewrite` 冻结基线。
+2. 写作正文落盘到 `正文/第NNN章_{章名}.md`（或独立候选草稿），先跑 `storyctl.py chapter check --fix-punctuation --plain`。
+3. 复制冻结前包生成 `.story/世界引擎/第NNN章/写后行动复核.json`，`candidate.path` 直接绑定当章未入账的 `正文/第NNN章_{章名}.md`（`mode=continuation` 且精确匹配下一章），过 `world_gate.py check --phase postwrite`。
+4. 再跑 `tracking_commit.py draft` 与 `storyctl.py chapter commit` 串行提交权威；按需 `world_gate.py export --output .story/派生视图`。
 
-1. 召回卡与权威；在非权威工作区填写写前审查包，通过prewrite。
-2. 冻结该包，将工作区冻结前包路径及人物卡、势力卡等作为原candidate init的 `--base`来源。原工具先创建精确下一章候选。包先存于 `创作运行/审查包/`，无需在候选目录创建前预猜run-id。
-3. 向候选目录的 `世界引擎/写前行动审查.json`复制冻结前包，保持字节完全一致。工作区原包继续保留为manifest绑定来源；不手改manifest摘要。后包引用候选目录中的复制件。
-4. 写实际candidate.md；语言门后完成写后审查，存 `世界引擎/写后行动复核.json`。后包引用候选目录中的冻结前包及实际候选路径/哈希。
-5. 运行候选check；依原接纳授权执行approve/promote、tracking commit/check、close，再export世界视图。
+（若在带独立 `chapter_candidate.py` 与 `追踪/候选章/` 的旧版宿主运行，工具同样兼容 `创作运行/审查包/` 与 `追踪/候选章/第N章/{run-id}/世界引擎/`。）
 
-init产生空审查模板，不准以未填包进入正文。写作中多了一项重要决定，先修改工作计划、重过prewrite并按候选协议建立新运行来冻结新基线，不能滚动覆盖旧前包或只给写后包添加“通过”。
+init产生空审查模板，不准以未填包进入正文。写作中多了一项重要决定，先修改工作计划、重过prewrite建立新前包，不能滚动覆盖旧前包或只给写后包添加“通过”。
 
 同名文件在另一候选目录也不能套用。候选门核对前包/后包路径、实际正文哈希、追踪基线、章号与helper结果。
 
@@ -48,11 +47,11 @@ init产生空审查模板，不准以未填包进入正文。写作中多了一�
 
 调用机器写后门时，新小节文本先放该工作包的 `candidate.md`，后包绑定此实际文本；机器禁止把正式 `正文.md`作为候选输出路径。过七关、原语言检查和写后复核后，按本次已经存在的短篇交付/接受授权合入 `正文.md`。这是中间写作文件，不建立长篇manifest、approve/promote或额外用户审批。若前包引用上一版本的正式正文，该版本在本次复核结束前不得改变；合入后旧包自然过期，下一小节恢复并重新冻结。
 
-若短篇原本没有结构化追踪，而作者要求长期可恢复记忆：使用原 `tracking_commit.py`的合法初始化与事务，把小节序号映射为追踪单元、把全篇作为一个卷。角色/事件/facts/foreshadow接口可以复用；长篇candidate和doctor路径不冒用。原追踪的章号在适配器里明确就是小节单元，不给正文改文件名。
+若短篇原本没有结构化追踪，而作者要求长期可恢复记忆：使用原 `tracking_commit.py`的合法初始化与事务，把小节序号映射为追踪单元、把全篇作为一个卷。角色/timeline_events/foreshadow/constraints接口可以复用；长篇章节校验路径不冒用。原追踪的章号在适配器里明确就是小节单元，不给正文改文件名。
 
 旧短篇先导入已接纳小节范围，不伪造逐章日更记录。尚未交付/接受的小节只在工作包记拟增量；最终授权边界到达后才正式提交。全篇结束进行篇级回看，无需强迫短篇建八卷规划。
 
-如有另一已验证权威适配，保持单一权威，不再写第二份world-state。当前export只直接支持现有oh-story schema5；无适配时明确未支持，不能假装持久化成功。
+如有另一已验证权威适配，保持单一权威，不再写第二份world-state。当前export直接支持现有oh-story schema 4与schema 5；无适配时明确未支持，不能假装持久化成功。
 
 ## 分支与多agent
 

@@ -71,14 +71,15 @@ Python 3.10+ 标准库；机器字段以 `references/packet-contract.md` 为准�
 # 先探测解释器：python3 / python / py 任一可用即可
 python "{SKILL}/scripts/world_gate.py" init --project "{书根}" --chapter N --mode continuation \
   --tracking-tool "{原工具}" --source "大纲/细纲_第N章.md" --source "设定/角色/某人.md" \
-  --packet "追踪/候选章/第N章/{run-id}/世界引擎/写前行动审查.json"
+  --packet ".story/世界引擎/第NNN章/写前行动审查.json"
 python "{SKILL}/scripts/world_gate.py" check --project "{书根}" --packet "{写前包}" --phase prewrite --tracking-tool "{原工具}"
 python "{SKILL}/scripts/world_gate.py" check --project "{书根}" --packet "{写后包}" --phase postwrite --tracking-tool "{原工具}"
-python "{SKILL}/scripts/world_gate.py" export --project "{书根}" --start 1 --end 99 --tracking-tool "{原工具}"
+python "{SKILL}/scripts/world_gate.py" export --project "{书根}" --start 1 --end 99 --output ".story/派生视图" --tracking-tool "{原工具}"
 ```
 
 - `init` 产生未填、未审模板（`TEMPLATE_CREATED_UNREVIEWED`），**不是 PASS**。写后包复制冻结前包，另填实际正文、结果和复核，不修改已绑定的前包。
-- 写前包、写后包必须放在候选 run 目录内（`追踪/候选章/第N章/{run-id}/世界引擎/`），否则写后包无法递归复验、候选接纳门对不上。
+- 写前包、写后包可放在 `.story/世界引擎/第NNN章/`、`.story/work/第NNN章/世界引擎/`、或 `追踪/候选章/第N章/{run-id}/世界引擎/` / `创作运行/审查包/`（兼容旧版候选流；注意 `storyctl.py chapter commit` 会在入账后清理 `.story/work/第NNN章/`，需留档的审查包放 `.story/世界引擎/`）。
+- 兼容 `story-long-write` 现行 `schema_version=4` 与旧版 `schema_version=5` 权威；无 `chapter_candidate.py` 的直接续写流里，写后 `candidate.path` 可直接绑定未入账的当章 `正文/第NNN章*.md`（已入账历史章仍不可冒充候选）。
 - `init`/`check`/`export` 必须传同一个 `--tracking-tool`；不能换校验器更换冻结基线。退出 0 = `STRUCTURAL_CHECK_PASS` / `TEMPLATE_CREATED_UNREVIEWED` / `DERIVED_VIEWS_EXPORTED`；退出 2 = `FAIL`，`errors` 给原因。
 - `world_gate.py` 只做检查/导出，不写正文、不写追踪、不接纳正史；追踪提交只走 `tracking_commit.py`。
 
@@ -90,7 +91,7 @@ python "{SKILL}/scripts/world_gate.py" export --project "{书根}" --start 1 --e
 | Codex（`allow_implicit_invocation: true`） | 宿主按相关度自动调用；不保证每次触发，写作者仍需自查 |
 | Web AI / 通用端（无 hooks） | 不会自动执行；靠 `AGENTS.md` 与写作入口路由，写作者手动遵守 |
 
-- 启用 `设定/世界运行契约.json`（`enabled: true`）后，已集成的长篇 `chapter_candidate.py` 会在检查、批准、晋升前调用两阶段门；缺包、换稿套包、来源过期或未通过均阻断该候选。启用字段与位置由项目负责人维护。
+- 启用 `设定/世界运行契约.json`（`enabled: true`）后，写作者应在写前审查、正文检查及入账前完成两阶段 `world_gate.py` 校验（若使用旧版带 `chapter_candidate.py` 的宿主，则由候选门自动调用）；缺包、改稿未更新哈希或未通过均不予入账。启用字段与位置由项目负责人维护。
 - 短篇不冒用长篇接纳工具，按 `references/integration.md` 适配。
 - 技能发现遵循平台刷新/新会话机制；项目已有 `AGENTS.md` 文件路由。
 

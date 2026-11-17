@@ -129,11 +129,10 @@ class WorldGateTests(unittest.TestCase):
                  "reader_knowledge": "阿禾在库房清点工具", "reveal_status": "已揭示", "reveal_chapter": 2,
                  "characters": ["阿禾"]}
             ],
-            "facts": []
         }
         tracking.initialize(self.project, doc)
         record = self.project / "追踪" / "逐章记录" / "第002章.md"
-        record.write_text("# 第002章\n- 结果：清点工具。\n\n## 角色变化\n- 阿禾｜核心｜清点自家工具\n\n## 伏笔变化\n- 无\n", encoding="utf-8")
+        record.write_text("# 第002章\n- 结果：清点工具。\n\n## 角色变化\n- 阿禾｜核心｜清点自家工具\n\n## 伏笔变化\n- 无\n\n## 连贯性约束\n- 无\n", encoding="utf-8")
         prose = self.project / "正文" / "第002章_清点.md"
         prose.parent.mkdir()
         prose.write_text("阿禾在库房清点工具。\n", encoding="utf-8")
@@ -364,9 +363,58 @@ class WorldGateTests(unittest.TestCase):
             world.inspect_packet(self.project, path, "postwrite")
 
     def test_paths_cannot_escape_or_overwrite_canon(self):
-        for raw in ("../escape.json", "正文/章节.md", "设定/角色.md", "追踪/_tracking-state.json"):
+        for raw in (
+            "../escape.json",
+            "正文/章节.md",
+            "设定/角色.md",
+            "追踪/_tracking-state.json",
+            ".story/作者记忆/state.json",
+            ".story/排纲笔记/L1.md",
+        ):
             with self.subTest(path=raw), self.assertRaises(world.GateError):
                 world.noncanonical_output(self.project, raw)
+
+    def test_dot_story_paths_and_direct_chapter_postwrite_work_for_v4(self):
+        packet = self.continuation_packet()
+        pre_path = self.project / ".story" / "世界引擎" / "第003章" / "写前行动审查.json"
+        self.write(pre_path, packet)
+        world.inspect_packet(self.project, pre_path, "prewrite")
+        draft = self.project / "正文" / "第003章_清点后.md"
+        draft.write_text("阿禾打开自己库房，工具尚在。他给熟客打电话说晚半小时开店。\n", encoding="utf-8")
+        evidence = {"start_line": 1, "end_line": 1, "quote": "阿禾打开自己库房，工具尚在"}
+        post = copy.deepcopy(packet)
+        post["postwrite"] = {
+            "prewrite_packet": {"path": world.relative(self.project, pre_path), "sha256": world.digest(pre_path)},
+            "candidate": {"path": world.relative(self.project, draft), "sha256": world.digest(draft)},
+            "scene_results": [{
+                "scene_id": "S1", "actual_result": "工具还在，阿禾仅通知熟客延迟营业",
+                "action_ids": ["A1"], "evidence": [evidence],
+                "world_followups": ["熟客获知取货延迟，但开柜来者仍未获确认"]
+            }],
+            "foreshadow_deltas": [{
+                "id": "NO_CHANGE", "operation": "none",
+                "description": "柜门来者仍未得到答案，此章不声称回收伏笔", "evidence": [evidence]
+            }],
+            "manual_review": self.semantic_review(world.POST_CHECKS)
+        }
+        post_path = self.project / ".story" / "世界引擎" / "第003章" / "写后行动复核.json"
+        self.write(post_path, post)
+        world.inspect_packet(self.project, post_path, "postwrite")
+        # Already-committed chapter file cannot be used as an uncommitted postwrite candidate
+        committed = self.project / "正文" / "第002章_清点.md"
+        post["postwrite"]["candidate"] = {"path": world.relative(self.project, committed), "sha256": world.digest(committed)}
+        self.write(post_path, post)
+        with self.assertRaises(world.GateError):
+            world.inspect_packet(self.project, post_path, "postwrite")
+
+    def test_export_supports_dot_story_output_directory(self):
+        self.init_authority()
+        result = world.export_views(
+            argparse.Namespace(start=1, end=2, output=".story/派生视图", tracking_tool=str(TOOL)),
+            self.project,
+        )
+        self.assertEqual(result["status"], "DERIVED_VIEWS_EXPORTED")
+        self.assertTrue((self.project / ".story" / "派生视图" / "作者" / "世界时间线.md").is_file())
 
     def test_export_preserves_authority_and_historical_ignorance(self):
         self.init_authority()

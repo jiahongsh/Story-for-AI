@@ -14,6 +14,7 @@
 4. **格式与质量同轮清零（P0-4）**：正文严格遵守 `skills/story-long-write/references/long-format.md`（相邻段落单换行 `\n`、无加粗/斜体/分隔线、无工程词泄漏）。正文落盘后同轮内必须运行 `python skills/story-long-write/scripts/storyctl.py chapter check --project 他们不是人 --chapter {N} --fix-punctuation --plain`，保证 AI 句式 0 blocking、退化检测 0、细纲照搬核验通过；字数越界按作者流程处置。
 5. **串行提交追踪与设定补登（P0-5）**：每写完一章，必须紧接通过 `tracking_commit.py draft` 填妥事务并用 `storyctl.py chapter commit`（或修订 `mode=revision`）串行提交入账，确保 `追踪/上下文.md`、逐章记录、核心角色快照、伏笔与双时间线即时同步；正文中新出现或升级的重要人物、势力、能力、器物与规则，同轮必须按「新增物三级」补登进 `他们不是人/设定/` 与 `他们不是人/大纲/`。
 6. **主笔版权威基准（P0-6）**：《他们不是人》已按主笔重写版全面重构，现行唯一权威为 `他们不是人/大纲/` 与 `他们不是人/设定/` 下的新版文档（旧版全量规则、103 章正细纲与历史记录已统一归档至 `他们不是人/_归档/`，仅供追溯，不再约束新稿写作）。
+7. **同轮收尾提交（P0-7）**：每次完成《他们不是人》细纲编写、正文写作或相关设定/追踪更新并完成全套质量与账本校验后，必须在汇报收尾前主动执行 `git` 提交，确保本轮全部正文、细纲、设定、追踪文件与配套改动完整入库可回溯。
 
 <!-- oh-story:generic 开始：重新部署时整块替换，自己的内容写在块外 -->
 # stroy — 网文写作工具集（通用 Agent / Web AI）
@@ -88,15 +89,15 @@
 **每章最小流程**
 1. **恢复**：读 `{书名}/追踪/上下文.md` + 上一已接纳章 + 本章细纲；用原追踪工具校验 `_tracking-state.json` 与派生视图同步，不同步先重建。
 2. **七关**：列出全部行动者，逐项填写 packet 字段 `knows/wants/fears/capability/no_plot/costs/consequences`。阻断条件只有一条：作者答不上原因；合理未知/待核写清边界后可过。
-3. **写前包**：`python skills/story-world-engine/scripts/world_gate.py init ... --tracking-tool <原tracking_commit.py路径> --packet 追踪/候选章/第N章/{run-id}/世界引擎/写前行动审查.json`，填完跑 `check --phase prewrite`。
-4. **写正文**：与 story-long-write 联用；七关表不进正文或台词。
-5. **写后包**：复制冻结前包填 postwrite，跑 `check --phase postwrite`；先过原写作语言门，再按 `seven-gates.md §6` 七问复读。
-6. **记忆闭环**：`python skills/story-long-write/scripts/tracking_commit.py` 串行提交；复检派生视图。
+3. **写前包**：`python skills/story-world-engine/scripts/world_gate.py init ... --tracking-tool skills/story-long-write/scripts/tracking_commit.py --packet .story/世界引擎/第NNN章/写前行动审查.json`（亦兼容 `追踪/候选章/` 与 `创作运行/`），填完跑 `check --phase prewrite`（支持现行 `schema_version=4` 与旧版 `schema_version=5`）。
+4. **写正文**：与 story-long-write 联用，直接落盘 `正文/第NNN章_{章名}.md` 并过语言门；七关表不进正文或台词。
+5. **写后包**：复制冻结前包到 `.story/世界引擎/第NNN章/写后行动复核.json`，`postwrite.candidate` 绑定当章未入账的 `正文/第NNN章_{章名}.md`（或工作区草稿）并填 `postwrite`，跑 `check --phase postwrite`；按 `seven-gates.md §6` 七问复读。
+6. **记忆闭环**：`python skills/story-long-write/scripts/tracking_commit.py draft` + `storyctl.py chapter commit` 串行提交；按需用 `world_gate.py export --output .story/派生视图` 重建派生视图。
 7. **卷末**：核对事件、得失、人物、计划、伏笔账、未履约承诺、下卷继承。
 
 **关键边界**
 - `world_gate.py` 只做检查/导出，不写正文、不写追踪、不接纳正史；追踪只走 `tracking_commit.py`。
 - `init/check/export` 必须传同一个 `--tracking-tool`。
-- 写前包/写后包必须放在候选 run 目录内，不能放 `创作运行/审查包/`。
+- 写前包/写后包及派生视图须放在 `.story/世界引擎/`、`.story/work/`、`追踪/候选章/` 或 `创作运行/` 等非权威工作目录，不得写入 `.story/作者记忆/`、`.story/排纲笔记/`、正文、大纲、设定或覆盖冻结前包。
 - 无 python 或脚本缺失时降级人工并声明 `Fallback: story-world-engine tool unavailable -> manual`。
 - 无 hooks 平台不会自动拦截，写作者必须自查（见上）。
