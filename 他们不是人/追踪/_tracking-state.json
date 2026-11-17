@@ -349,7 +349,7 @@
   "imported_through_chapter": 0,
   "last_committed_chapter": 18,
   "schema_version": 4,
-  "state_revision": 18,
+  "state_revision": 24,
   "timeline": {
     "E001": {
       "characters": [
@@ -696,7 +696,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "5f1eafd8c7adedbc86c3bf11a399da9f64282e9f6b994e78928b744812f8f540",
+      "body_sha256": "5b0e9ce35c6dc67c9671642c35357a7713b91e8b46aa7f70069088cb82f8f945",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -708,7 +708,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "64ce4e7d315d8037190e1290e4cca3bfbee97729c3ef2f1dbe732bcc6f723de8",
+      "body_sha256": "c2e2960afa27c53e3aab6bd2a4fd577febbe9eb9849b3336b2f83c28d163c932",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -720,7 +720,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "b293267fc8a3da193aa4168192e419ade0d5c7223e05c7384349f9d66aa01bf4",
+      "body_sha256": "759f44fc39f5cb170e415d65b44881fc6332de732fd0091a94ec5a47b90fa2d1",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -732,7 +732,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "2c47523d4a05fa3c69be9859a55cfce9aec3e8d8f7f0e257d9e74738929ee256",
+      "body_sha256": "4341dc63a4e74baab85f3e70439c447b4bd4464b80e6d2a3be7e5ce9cbbaaad0",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -744,7 +744,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "53395b4724544117df174e7d98611b94712f2d04c98833281c6e602742e51965",
+      "body_sha256": "56cfae5db5aebb7ba1f53207ecd130f7e88eb46a7f58f91a1e9bd79cca0681ce",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -756,7 +756,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "2db9f5212fc372097a1e2c39d41f69b91458d7dc0580ccec90cbfcad79a81e41",
+      "body_sha256": "6233537b9c5094040d61ec6366a6e4d6ef6524cc8e458dd49661622605df3e50",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
