@@ -1,0 +1,697 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 26,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "555d1ad36694e864a1fafa6bbef7c46e62cfdc6e65574a9a1b623b65574cdc1e",
+      "state_revision": 31,
+      "last_committed_chapter": 25
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第026章.md",
+      "sha256": "690c8eb0896322a9de98344367674f2727d03868e08ea76231ea377dae9b6bc2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "74a216c945692db04bf985af078231d7af54371937975291852bb89931a97fc8",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "b69c8de48fef99e520a3d9d8ae2fdf0adef6841cf4dc612e5b28368b5bbb9276",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "cc09686290b75c3ee28b937a6b5c6d0e521353b432ada2041ca4ae6bcbac44ca",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/顾横.md",
+      "sha256": "33c069c2ad2d323c7d88c1d62e832be5591e9a0b3b6ead6e4e73e7c9493c5f38",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/世界观/金手指.md",
+      "sha256": "38c7f928fbe4aa5f79abf3b256aad0646ac74a46610d2bcb163267f54a27ab4b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "e969aa95ecbb63b7a40758b9f5a81df2733cc7240d2475d58a8ef89e77056fd1",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/世界观/外物体系.md",
+      "sha256": "0d202632f9938028e24b8d221fceba3e4b7705f3a144d338d2749f7f00824bf6",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "设定/世界观/地理.md",
+      "sha256": "843b8c6c16b909b1c05a0243576853ddfa98ca754d6dad94f8759dea80bfc788",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC10",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC11",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "fd0fa14dd02101aaec1b19dd4aa4a8bc51ad1766df2bca056502f6ed7659623f",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "护住两人后背射灭封井高压电网及下方爬梯裂隙壳潮，赶回东巷阻止白塔提前抢拆",
+      "without_protagonist": "独身被堵进竖井也会借弹药与地形打烂电网箱抢出变电室去保顾横和市民",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "随即被巨钟暴走及白塔提前强拆东巷的生死危局拽回旧街战场。"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "引爆最后整块略缺角老火药饼轰裂焊死井盖兼硬抗第1格抹除暴血反噬死记住镜辞，绝不拖累两人退向东巷",
+      "without_protagonist": "遇井口封死照旧会拿手中最后火药饼同归于尽炸井冲天去剁白塔清拆官",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "自己浑身是血躲在黑暗里替旧街挡刀"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "反手拽住跌坠的芽、不惜重拧表冠压制暴走裂缝白雾并撞穿焊死井盖冲回暴雨地面救东巷",
+      "without_protagonist": "哪怕无人并肩陷死井内也会拧表卡齿两秒破焊盖拼死赶回家护下老人和老巷",
+      "voice_refs": [
+        {
+          "source_id": "SRC10",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 31,
+          "end_line": 31,
+          "quote": "随即被巨钟暴走及白塔提前强拆东巷的生死危局拽回旧街战场。"
+        }
+      ]
+    },
+    {
+      "id": "C_GH",
+      "name": "顾横",
+      "protagonist": false,
+      "own_goal": "在城北外围压住场面拖住白塔运人重卡，并再急呼姜霁火速奔赴快顶不住的东巷北口",
+      "without_protagonist": "不认得镜辞也照旧孤身凭重霰弹抢在白塔押运车前挡百姓并狂呼下属回来搭救瞎老人",
+      "voice_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "粗中有细、极护手下与平民"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "暗中塞进四匣银芯弹、军用止血箱与干净加密电台掩护姜霁和镜辞撞破西门突围"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "三十米垂直变电暗井铁梯上下夹击死地",
+      "story_time": {
+        "label": "第四日午后三点三十分至三十八分",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_JJ",
+        "C_YA"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_JJ",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "吊在半空竖梯借着下方雾光连开六发银芯穿甲弹（耗减至余约二十三发），打碎井顶高压电网接线盒并轰掉两条爬梯无皮裂缝空壳脑袋",
+          "gates": {
+            "knows": "第25章刚听见东巷被封且身后暴走白雾正顺井口狂追而来，头顶刚电焊封死的铁盖下还垂着高压电网与巡兵火光，手头剩约29发银芯弹",
+            "wants": "尽快打掉上头高压电网障碍并清理先扑近梯脚的无皮裂缝壳，打开脱身通道",
+            "fears": "被下面暴走裂缝吸下去或者全队硬撞高压电网活活电焦在半空",
+            "capability": "手握约二十九发银芯穿甲弹及极高的单手挂梯急射准头（消耗约6发余约23发）",
+            "no_plot": "前后堵死时特勤枪手先打掉上方电网接线盒解去上方触电危局并清掉爬脸怪物是最本能的破拆",
+            "costs": "弹药库存再减六发跌破二十五发安全线，枪管过热灼痛掌心",
+            "consequences": "断掉上方高压电网电流同时清理首批爬脸空壳，却发现上盖已实打实焊死铁栓"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪（消耗6发后余约23发银芯穿甲弹）",
+              "竖梯单臂借力点"
+            ],
+            "permission": "竖梯上下双向清除火力手",
+            "limits": "手里子弹射不穿厚铸铁焊板盖，需近身强爆轰开焊口",
+            "evidence_refs": [
+              "SRC3",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "废掉电网障碍并止住下方空壳扑咬节奏",
+            "success_guaranteed": false,
+            "failure_path": "电网虽灭但焊死铁盖依然死死压头顶，下方暴走冷雾仍加速膨胀上来",
+            "opposition": "持续涌出雾潮的无皮空壳与三十米狭窄竖井极陡空间"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "左手虎口藏着被二阶高阶壳留下的必死裂隙侵蚀主虫，原本活不过入冬；第7章被镜辞用暗红碎核与双钩针连根拔除，战力重回巅峰",
+              "access": "memory",
+              "available_chapter": 25,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第25章奔抵变电竖井抬头撞见焊盖电网与背后追涌壳潮瞬间开火清障",
+              "boundary": "清楚电网拆了顶盖仍焊着、下方火光有限，必须依靠近顶炸药和后招脱身"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_YA",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "攀至顶段忍着耳后死锁撕裂剧痛掏出仅余的那整块略缺角老火药饼迎着冒花电网线搓爆轰松焊死井盖一角，却因爆浪反推和下方壳爪抓拽踩滑梯档坠落半米",
+          "gates": {
+            "knows": "兜里还余守钟人给的一整块略缺一角干燥老火药饼（第24章用过第一块），而姜霁刚才打断的电盒断线正噼啪冒着残留火星，下面空壳马上咬穿底部梯架",
+            "wants": "拼命把封死顶盖轰开一角抢出生路，绝对不逼镜辞拿口袋最后三格怀表去填井窟",
+            "fears": "顶盖不开三个人连同瞎老头一块全闷死在地下废变电室井里",
+            "capability": "手里最后一整块略缺角老火药饼（用完彻底清零），带弯钢的狠近战攀爬力",
+            "no_plot": "一个向来宁可拿命炸开缺口护人先跑、兜里刚好捏着最后一块干火药饼的狠人，见铁盖焊死在眼前自然狠搓粉扑爆开路",
+            "costs": "消耗尽全部火药饼（余 0 块）且在狭窄竖井遭受反冲气浪轰晕肩伤撕裂，踩断的锈梯档脱手往下方白雾坠去",
+            "consequences": "生生轰松厚铸铁盖一侧焊缝，却把自己甩入即将被底下暴走白雾与空壳群吞没的致命下坠"
+          },
+          "capacity": {
+            "resources": [
+              "守钟人老火药饼（耗尽最后1整块略缺角，此后余0）",
+              "略弯实心断钢"
+            ],
+            "permission": "顶井强行爆破开道先锋",
+            "limits": "极窄空间反冲气浪加上锈梯受震断折，炸完瞬间无着力点往下栽滑",
+            "evidence_refs": [
+              "SRC4",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "intent": "轰开顶盖逃生口，替大家铺平撞门上岸前途",
+            "success_guaranteed": false,
+            "failure_path": "反冲断梯直接把芽掀跌进沸腾扑上的暴走裂缝雾口",
+            "opposition": "加厚铸铁焊板阻力兼下层疯爬的无皮空壳拉拽"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "目前芽内兜尚余一整块略缺一角备用",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "见A1姜霁打裂顶部电网接线盒产生明火花且焊盖难靠手锤撬开瞬间立刻捏碎最后一块老火药饼炸开井盖焊缝",
+              "boundary": "只炸松焊缝一角尚未顶出井盖，随后因锈梯断裂陷入致命下坠"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "三十米暗井顶部轰松铁盖边缘与坍塌暴走雾口",
+      "story_time": {
+        "label": "第四日午后三点三十八分至四十二分",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_YA",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "C_JC",
+          "order": 3,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "半空伸出左手狠拽住下坠芽的腕口，明知表退一格将危及最后两人记忆，仍咬牙探指狠狠逆拧旧怀表表冠发动「卡齿」（3 格跌至 1 格），瞬停暴走白雾空壳两秒并甩锤砸开井盖救全员冲出暴雨荒场",
+          "gates": {
+            "knows": "表只余最后三格，逆拧表冠发动「卡齿」必消耗两格退至仅余孤零零第 1 格危险区、几乎肯定会把最后两名直接接触者之一乃至全部刮成陌生人；但眼下芽正在两米外跌往喷发的暴走裂隙雾口，白塔增援和东巷瞎老头等不到重挖出口",
+            "wants": "死拽住眼前这条陪他搏过二十五章命的同伴不坠雾口、强行压平正顺着竖井往上井喷的暴走裂隙并掀飞焊盖冲上地面",
+            "fears": "眼睁睁看着芽在半步开外被暴走裂缝撕成碎片，且全队困死井底任由白塔在东巷屠光街坊与瞎老头",
+            "capability": "左手极快抓力、怀表满足消耗两格发动卡齿（3 -> 1 格）条件及加焊淬火钢钩重锤破盖冲击力",
+            "no_plot": "宁可押上自己被全世界抹掉的代价也要把身前活人从死门关拉回来的狠角色性格，见芽坠向裂隙嘴角哪怕明知必付第 1 格惨痛代价也不会放手",
+            "costs": "怀表刻度无可逆转地直跌至 **第 1 格**（几乎贴近归零边缘），极高风险抹除最后亲近长辈记性；全身气血震伤兼砸穿顶板时擦伤肩背",
+            "consequences": "二式卡齿震波生生定住疯狂涌上的暴走白雾与七八头无皮壳两秒并震陷喷口，三人成功砸翻压惊退封口焊兵冲出地面且反手崩碎井壁半掩口子"
+          },
+          "capacity": {
+            "resources": [
+              "银灰旧怀表（由3格跌消耗2格降至1格）",
+              "淬火加钩八角重铜锤"
+            ],
+            "permission": "第二式卡齿强停三米内暴走物及压制喷口权限",
+            "limits": "只有短短两秒强制停摆时间且此后只余 1 格（绝对不可再发卡齿免致直接归零）",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "强开镜返压制暴走井口并将全员拖出地面冲向东巷",
+            "success_guaranteed": false,
+            "failure_path": "若顶盖焊死过于牢固哪怕停摆两秒仍需倾尽死力一钩掰断残栓",
+            "opposition": "井底直扑而上的暴走裂隙膨胀冲击波与半焊铸铁重盖"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "令方圆三米内所有带接缝的壳强制停摆 2 秒；配合「锁簧术」拍入异种碎核可斩断母巢共振丝",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 2,
+              "producer_action_id": "A2",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "亲见A2爆炸崩断梯档致使芽往白雾深渊跌坠兼缝隙仅崩开半边瞬间果断伸手抓腕兼逆拧怀表",
+              "boundary": "清楚这拧完必跌进第 1 格可能剥光最后两人记性，未知具体会由谁先忘记谁勉力扛住"
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_YA",
+          "order": 4,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "急喊住别拧那破表却晚了半瞬，被猛拉出停摆雾口之际抡弯断钢砸翻试图封井的地面两名散兵跟着三人滚入冷雨",
+          "gates": {
+            "knows": "镜辞表只余三格、拧了就只剩最后一格甚至直接把瞎老头跟自己也洗白，自己宁可砸掉这条命也不要他再付那刀",
+            "wants": "趁那停摆两秒死拼拉起手臂甩断钢敲晕上头守井兵护住大家破屋逃生",
+            "fears": "一旦跌去第 1 格自己就算拼着死锁震痛也忘掉这小子到底是什么人",
+            "capability": "略弯实心断钢与瞬间反应借力上跃狠劲",
+            "no_plot": "最痛恨他拿自己存在换别人性命的姑娘，急喝阻拦不成后本能就会在停摆瞬间拼死砸掉上面拦路兵把人拖出来",
+            "costs": "双膝撞碎泥砾擦血，同时预感到那股即将扑向自己脑壳的系统冷抹除风暴",
+            "consequences": "清理地面井口最后阻挠，随众人在坍塌封口瞬间抢出废变电室"
+          },
+          "capacity": {
+            "resources": [
+              "略弯实心断钢",
+              "残存敏捷格斗爆发力"
+            ],
+            "permission": "破井冲出时的前冲护翼清道位",
+            "limits": "刚经爆震坠跌加上怀表退格前兆头疼欲裂",
+            "evidence_refs": [
+              "SRC4",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "清掉门面阻挡助全员抢出一线天日",
+            "success_guaranteed": false,
+            "failure_path": "井口守兵若未击倒可能鸣枪引来外围增援",
+            "opposition": "地面雨滑荒砖地及瞬间压来的第 1 格脑震抹除痛"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC10",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "受A3抓腕兼卡齿两秒停摆拉起时本能挥断钢协同砸倒守井兵逃出变电房",
+              "boundary": "逃出井口瞬间便感受到第 1 格抹除风暴直冲脑海死锁"
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_JJ",
+          "order": 5,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "抓住停摆两秒抢攀上地面井台一脚踢塌井口砖架连同废铁皮狠砸掩住下井暴走涌洞，顺手拔出残匣压好剩余二十三发银弹警惕外围防线",
+          "gates": {
+            "knows": "镜辞强开两秒停摆压住了地下白雾，但只有两秒之后裂缝随时重新上窜且上头可能有白塔外线增援",
+            "wants": "死死拿废变电室塌下的砖石铁架掩死暗井口防暴走外泄兼切断追兵视线，随时备战赶回东巷",
+            "fears": "一旦暴走冷雾沿着井口反喷出来整片城南和东巷百姓都会直接完蛋",
+            "capability": "一线外勤快速封口掩蔽处置经验加上剩余二十三发银芯弹",
+            "no_plot": "断后的枪手见同伴撞开地面焊盖逃出且下面随时再喷白雾，必然顺脚踹塌破砖墙盖死出口掩痕迹再跟着冲进雨幕",
+            "costs": "暴露于暴雨中衣裤湿透寒冷刺骨，余弹依然只剩二十三发必须精打细算",
+            "consequences": "临时掩死暴走竖井出口防止追雾漫出，为回援东巷稳住大后方"
+          },
+          "capacity": {
+            "resources": [
+              "战术靴及废砖垮墙体",
+              "消音手枪（约23发银芯弹）"
+            ],
+            "permission": "殿后封堵井口兼收拢撤退防线权",
+            "limits": "临时压掩砖堆挡不住太久，必须速战速决回救东巷",
+            "evidence_refs": [
+              "SRC3",
+              "SRC9"
+            ]
+          },
+          "outcome": {
+            "intent": "物理压堵井口并护队抢出变电室进入西环暗道",
+            "success_guaranteed": false,
+            "failure_path": "暴走热震隐隐仍在砖石底下低沉闷响",
+            "opposition": "井底蠢蠢欲动的白雾高压推力"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "从此养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "见证A3强开两秒停摆冲破井盖并听到下面压塌闷响后顺手崩塌堵掩井口退入荒地",
+              "boundary": "尚不知怀表这次一拧已经从第 3 格跌入最惨的第 1 格危险区"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "location": "废弃变电室外倾盆暴雨荒铁轨泥地",
+      "story_time": {
+        "label": "第四日午后三点四十二分至四十五分",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_YA",
+        "C_JC"
+      ],
+      "actors_offstage": [
+        "C_GH"
+      ],
+      "actions": [
+        {
+          "id": "A6",
+          "actor_id": "C_YA",
+          "order": 6,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "淋着大雨摔坐在废墙下骤然遭第1格系统抹除风暴反噬，耳后死锁轰地溅出大量黑血剧痛眩晕，五指抠死黑泥浑身发抖强撑几息才终于咬牙认回并哑声吐出「……镜……辞？」二字",
+          "gates": {
+            "knows": "第23章端末明明写着只剩最后两个还记得他的人，此刻镜辞刚拧掉最后两格，全城脑海擦除风暴如刀劈下正要把她这副壳体脑里「镜辞」整片刮走",
+            "wants": "用命死死扛住脑子里像被刀生刮肉般的清空抹除，死锁哪怕撕碎半张脸也绝不顺从那个世界系统去忘记眼前这个男人",
+            "fears": "一眨眼之后自己也像张婶、姜霁一样客气陌生地反问眼前这个浑身泥血却刚救了她命的家伙「你谁啊」",
+            "capability": "原芽用沈竹遗物钉下的「死锁」对抹除规则带有拼命对冲抗性，兼自身狠烈异端意志硬扛反噬",
+            "no_plot": "作为背叛壳巢甘愿挡刀且最不服系统抹除命数的异端姑娘，当无形擦除刀真正往她脑仁刮下镜辞那两年所有细节时，哪怕呕黑血挖碎泥地也要嘶声把那两个字硬抢回来",
+            "costs": "耳后死锁严重崩血撕痛、几乎短暂失焦休克两息，留下极重的伤势与随时代价隐患",
+            "consequences": "用惨烈黑血强行顶住了第 1 格抹除（证明异端死锁与真人锚点可抗擦除），却坐实了另一边无死锁护身的普通人和守钟人恐怕在劫难逃"
+          },
+          "capacity": {
+            "resources": [
+              "沈竹遗留死锁剧痛硬抗力",
+              "异端狂烈执念"
+            ],
+            "permission": "第1格抹除风暴下凭死锁与真心记忆硬扛权",
+            "limits": "过程极其痛苦差点真的丢失名字，无法完全替其他没有死锁的人挡掉抹除",
+            "evidence_refs": [
+              "SRC4",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "咬血守住对镜辞的真实记忆，不肯沦为被白塔系统修平的白纸",
+            "success_guaranteed": false,
+            "failure_path": "大脑依然阵阵刺痛、细节偶有晃动但死死咬定名字没松",
+            "opposition": "第 1 格版本抹除规则降维级强行清零洗脑风潮"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "所有旧日街坊、战友将他完全视作一个从未深交的陌生修表匠，乃至官方户籍与组织底档同步擦空",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 3,
+              "producer_action_id": "A3",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "承受A3怀表跌落第1格引发的同步规则清零冲击，靠耳后死锁飙血死撑叫回名字",
+              "boundary": "亲身证明抹除痛彻心扉到连带死锁差点记不清他，绝不敢想象东巷那个盲老头现在变成了什么样"
+            }
+          ]
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_GH",
+          "order": 7,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "在城北外围停卡处突然摸到自己加密笔记上原先记过的那个模糊同行代号字迹凭空缺白，暗骂一声见鬼后立刻再抓起军绿电台狂喊姜霁「东巷北门铁闸撑不住了、瞎老头快让人拆门砸死了」",
+          "gates": {
+            "knows": "第25章刚通过电台唤人回救，眼下大雨里刚过去七八分钟白塔机械拆队正加力猛攻钟表行大门而自己被双卡在巷南口难以靠一人一枪突破北围，刚才一低头发现手台夹页原本随手画的那个「帮过老巷修表小伙代号」莫名泛空发糊（正是怀表跌1格远端余波！）",
+            "wants": "不管手上便签为啥缺了个角先把老搭档姜霁和她带来的战力赶回巷北口顶住门里快死的瞎老头",
+            "fears": "再拖五分钟北门破开不光守钟人当场遇害、整条旧市场街坊都会遭殃",
+            "capability": "二组外围通讯直频及南巷口重霰弹封车拉锯现况通报",
+            "no_plot": "老兵看见北巷火光冲门自己手里本子突然空白一角只觉得是淋雨看糊了眼或者信号鬼邪，性命关头只会更快拍电台急骂催救人",
+            "costs": "越过所有二组纪律边界死拖南口押运卡车，随时准备先开霰弹打人",
+            "consequences": "用顾横备忘再度缺失侧面印证第 1 格现实擦除范围之恐怖，并精准将三人引向下一章东巷门前死战"
+          },
+          "capacity": {
+            "resources": [
+              "城北外围通讯监控视野",
+              "军绿加密电台强呼频道"
+            ],
+            "permission": "外围实时危情二度通报权",
+            "limits": "远在巷南外端牵制运人黑车无法分身去北口堵死程晦",
+            "evidence_refs": [
+              "SRC5",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "给姜霁指出东巷北口急迫危机逼她们全力抢突防线",
+            "success_guaranteed": false,
+            "failure_path": "雨雷杂波下通完紧要两句电台信号再次陡降",
+            "opposition": "第 1 格对现实墨迹记忆的诡异擦除兼暴雨无线噪点"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民",
+              "access": "memory",
+              "available_chapter": 25,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第25章起已守死南口外线盯着钟表行方向，今午三点四十三分见南口黑卡车启动抢人且北口巨响急忙二度呼叫姜霁",
+              "boundary": "受第1格冲击更彻底察觉不到同行小子是谁，只按搭档救援直觉拼命抢人命"
+            }
+          ]
+        },
+        {
+          "id": "A8",
+          "actor_id": "C_JC",
+          "order": 8,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "雨水冲过惨白手背看死掌中仅余孤零零第 1 格刻度的旧怀表，沉默收表入湿兜并一把拽起呕血苦撑的芽，冷硬盯死冒出白烟的旧货市场东巷方向全速扑进大雨",
+          "gates": {
+            "knows": "怀表此时只剩最后生死一格再不能乱拧免致第 0 格连芽也彻彻底底擦干净；刚才芽那声撕心裂肺又差半拍断音的「镜辞」加上顾横电台莫名其妙遗落代号，明明白白告诉他第 1 格正把东巷那个守了他七年的瞎老头推入彻底忘净边缘",
+            "wants": "哪怕这世上马上连最后那个瞎老头都不再认得自己是谁，也要赶在城北那扇门塌死前杀进东巷把人拖出鬼门关",
+            "fears": "回去晚了三分钟看见一地尸体与碎掉的参号空胎，或者自己被迫再拧那最后一格变成彻底无根孤魂",
+            "capability": "加焊钢钩重铜锤、银钢捉影镊、沈竹旧壳盖残片在怀，配合紧跟左右的姜霁与强撑的芽全速突进",
+            "no_plot": "一个宁可背上被所有人忘掉重担也要护人到底的修表匠，亲眼看表落第 1 格、又听巷里老头马上没命，自然收表扯人拎锤狂奔回街救火",
+            "costs": "怀表死锁在绝不可退的 **第 1 格**，满身泥血痛伤硬闯最后一线防线",
+            "consequences": "全章在高能动作压制、最痛第 1 格记忆刀刺与冲刺救老瞎子的强烈牵引力中冷冽收束"
+          },
+          "capacity": {
+            "resources": [
+              "旧怀表（仅余第1格，严禁再拧）",
+              "加焊钢钩八角重铜锤",
+              "怀中沈竹表壳盖残片"
+            ],
+            "permission": "决死归返东巷领队行动位",
+            "limits": "体力损伤严重且只剩孤立第1格压底，绝不能再靠卡齿耍赖",
+            "evidence_refs": [
+              "SRC2",
+              "SRC7",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "冲回东巷北门救下守钟人并直面第 1 格人间冷酷现实",
+            "success_guaranteed": false,
+            "failure_path": "即便救出守钟人也极难保证瞎眼老前辈还记不记得他这个关门徒弟",
+            "opposition": "狂暴冷雨、白塔重甲铁桶合围以及越来越冰冷的无情遗忘法则"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "过度执念于「修好一切坏掉的东西」，哪怕明知怀表刻度不可逆下跌、每次强开都在把自己从熟人记忆里抹掉，仍毫不犹豫地押上自己全部人世痕迹去救人。",
+              "access": "planned-earlier-action",
+              "available_chapter": 26,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "低头看死跌到第 1 格的怀表、听见A6芽咳血叫出名字和A7顾横电台催命后拽起芽直冲东巷",
+              "boundary": "明知表已跌进第 1 格大危险区，唯有亲手扑进东巷大门才能确认守钟人是否还能叫出自己的名字"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "全面审查第26章三场生死撤逃戏全部台上行动者（姜霁、芽、镜辞）及电台介入推进的顾横（A7），精准对接第25章29发余弹->23发、1整块略缺角火药饼->0块及怀表3格->1格剧痛代价链，无一遗漏。",
+    "background_only": [
+      {
+        "name": "暴走白雾涌出的七八头无皮裂缝空壳与井顶封井兵",
+        "reason": "受井底失衡爆走与严彻失联惯性指令驱动之环境障碍敌手，无个人情节转折抉择权"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "逐项对照第25章逃向竖梯末端、第26章细纲五点、怀表第3->1格跌落逻辑、姜霁弹药与火药库存扣减账本核检",
+    "basis": "S1精准写清弹药6发（余23）+最后一块火药饼引爆耗尽后绝境踩滑坠井；S2迫使镜辞为救芽和防止暴走喷出地面而硬拧怀表跌进第1格强开卡齿两秒，既满足卷纲「强开镜返压制暴走裂缝」硬需求又绝无强行装逼感；S3芽死锁飙血死记住「镜辞」名字配顾横电台便签模糊，把第1格抹除的撕裂孤独与下章东巷惨况悬念拉至顶点。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

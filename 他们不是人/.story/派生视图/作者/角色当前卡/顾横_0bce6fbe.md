@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 31,
-  "last_committed_chapter": 25,
+  "state_revision": 34,
+  "last_committed_chapter": 28,
   "range": [
     1,
-    25
+    28
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "555d1ad36694e864a1fafa6bbef7c46e62cfdc6e65574a9a1b623b65574cdc1e"
+      "sha256": "c7fa22de0e70be6c28a38fe6ad5ea388bb03b5cb0a4b14cc625a19f2a638ccfb"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -120,6 +120,18 @@
       "sha256": "1f7bc61d145d1d7ea40607acea0b223ebbab2def6296c8f7a99cbe6f2afc667c"
     },
     {
+      "path": "正文/第026章_再拧这一回_谁还记得他.md",
+      "sha256": "a46ddf4fc7726da4749dafc520f5b74fc307a8e39e7f26d7e49e33efaf7e8e1f"
+    },
+    {
+      "path": "正文/第027章_门后那声贵姓_比铁甲更冷.md",
+      "sha256": "6788b4a21745fb8059c49e51c48b9093d24aa17f5c51f74e6802da88cf881146"
+    },
+    {
+      "path": "正文/第028章_四阶铁甲刚倒_地砖裂开了.md",
+      "sha256": "84ff6e6b0602964f224b206e29e4483a701439639f81465c54f3b3fd626f15c7"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -218,22 +230,34 @@
     {
       "path": "追踪/逐章记录/第025章.md",
       "sha256": "a5155e3455eea050da7d02d6eeb05946d62a50ec829cbf84d1982fa0c57329ee"
+    },
+    {
+      "path": "追踪/逐章记录/第026章.md",
+      "sha256": "c383dae751c67fba2dd2584dd1a3f2b1015fe519e4d30c8273cfcb70a4cc8a65"
+    },
+    {
+      "path": "追踪/逐章记录/第027章.md",
+      "sha256": "1cb050503b6d3e94af300b88e7e087704c90b99f592cb67cfb6761fc05242cce"
+    },
+    {
+      "path": "追踪/逐章记录/第028章.md",
+      "sha256": "72a308e92ae9a0a4ab1f9feaeaf48e01d0aba3a1686b1f6b3f3dcc443c5fb270"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第25章状态）
+# 顾横 当前卡（第28章状态）
 
-- identity：剥壳人第二行动组队长，姜霁老搭档兼暗线盟友
-- location：城北二组外围通讯观测点
-- goal：利用有限兵权竭力外围拖延或接应东巷百姓，并急唤姜霁立刻带人杀回来破局
-- state：眼见白塔机械纵队三点突袭封锁东巷南北口且铺内瞎老人拼命堵门，顶着抗命风险狂砸军绿加密电台呼叫姜霁回救
-- abilities_resources：双管重霰弹枪；剥壳人第二行动组外围兵权与加密通讯台
-- relationships：拼死护下属姜霁与东巷老街坊；仍受第3格效应影响将镜辞视作「无户籍小子」
-- knowledge：下午三点白塔重甲已强围封死东巷南北口强攻钟表行
-- open_threads：第26至30章协助东巷突围及撤民防线
+- identity：剥壳人第二行动组队长，姜霁老搭档
+- location：旧货市场南口货仓铁门外侧
+- goal：安抚受惊邻里摊贩并稳住南口外围不再受溃逃白塔余孽滋扰
+- state：双管重霰弹连鸣彻底逐出程晦残部，按住吓呆的老陈却对提锤年轻人毫不知情
+- abilities_resources：双管重霰弹枪；二组外围警哨；加密电台
+- relationships：完全视镜辞为路过野生高手而保持戒备，全力护紧姜霁与市场平民
+- knowledge：东巷强拆官长被打残逃出，但铺里地底忽然传出裂石喷雾异象
+- open_threads：卷末风波后如何留在南门与姜霁、市场民众彻底交割
 
 ## 固定性格、声线与历史
 
