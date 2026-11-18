@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 51,
-  "last_committed_chapter": 30,
+  "state_revision": 52,
+  "last_committed_chapter": 31,
   "range": [
     1,
-    30
+    31
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "df72aa6856ec879f0a02224f26ae5b84e7cdaae4524bceea6a49b6bb6e1853bf"
+      "sha256": "c2d175f0ccaacf2fb157980cf7281a1e9e790fb05ec66caa7b27765c46e53086"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -78,6 +78,10 @@
     {
       "path": "正文/第027章_门后那声贵姓_比铁甲更冷.md",
       "sha256": "6788b4a21745fb8059c49e51c48b9093d24aa17f5c51f74e6802da88cf881146"
+    },
+    {
+      "path": "正文/第031章_火化十一个月，他拎包回家了.md",
+      "sha256": "621f7699000e89a75d6d201f8fcef82c2ae24706a15acd4de94614e58676f1ca"
     },
     {
       "path": "追踪/逐章记录/第001章.md",
@@ -198,6 +202,10 @@
     {
       "path": "追踪/逐章记录/第030章.md",
       "sha256": "e9c7f63d5aae7c8c42fd4a1010fdce40d1cf50b8c80ba8cc747fbe389808de71"
+    },
+    {
+      "path": "追踪/逐章记录/第031章.md",
+      "sha256": "fbaa7b9fa0a6d7bb69bca0148522f2010e8c109d8dafa97d9dbb030d28771130"
     }
   ],
   "limitations": [
