@@ -1,0 +1,806 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 30,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "7373d4327e128bc6ddf5c5cdbaa303da02d181b789332086d64abc535e36000f",
+      "state_revision": 50,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第030章.md",
+      "sha256": "c0d450ffd789b244c97c0bb811684cc0a8248e1058c6459d155276a2eb015eea",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "8f1a459506ad43d3e003a077e433b3e5d76bdb3fcb6b2ae8127d0c51aca9cf08",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/守钟人.md",
+      "sha256": "6e6ca627d064135d2da26ca65b59d122f984df57d04fe568bf0c0f73d821c749",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/角色/顾横.md",
+      "sha256": "584d50dd9d666feb420d2ab4bc5e075758fc6e344789429e74416b8347f71333",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "cc42b4141c4f67f7bb8d4d2f3242374f2a9770a5cd5c0b1796b273334c2abedd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/世界观/外物体系.md",
+      "sha256": "5759b10207d637d3ecd78a7de6e6ac8867e7d55398730ba2d8ec4a470c1de86e",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "设定/世界观/地理.md",
+      "sha256": "9812795f0a1289bfe34219a130bc8353daacbea3ab518b6d328ce25b78c5c0f2",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC10",
+      "path": "设定/势力/钟表行.md",
+      "sha256": "a674be397df8337a8e44305ff59ec21c2327507feceefc3ce5b7c11c32a453db",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC11",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC12",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "7182fd6e0d5962c51a3f73c109310aa03b5725d5f579ec2c79169d54f81bf1b3",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "修好破损钟表行门面、安顿伤重老前辈，接下全街遗忘自己变成陌生外乡修表匠的沉重代价，怀揣城南医院续档黑令备战第二卷",
+      "without_protagonist": "老巷若无人顶住前堂门面且接住这局外人身份，便无法守着守钟人与残胎继续暗查零号真芯跟城南续档网",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC12",
+          "start_line": 35,
+          "end_line": 35,
+          "quote": "紧盯天亮回街的熟人老陈将如何面对这个被彻底忘光的人。"
+        }
+      ]
+    },
+    {
+      "id": "C_GH",
+      "name": "顾横",
+      "protagonist": false,
+      "own_goal": "撤离东巷前确认徐正安全落点，向搭档与拼命助阵的陌生年轻修表匠作干脆交代后退守外线防巡查",
+      "without_protagonist": "即便不识镜辞过往也必定在清晨把徐正安全线和白塔巡查风险交清给姜霁后稳妥撤哨",
+      "voice_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "第27–29章在南口轰爆白塔黑车前胎护下老陈等摊贩、驱逐溃逃的程晦残兵并拦阻群众逼近冻雾口；"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "点清余下十一发银弹并按黑令所指部署追查城南医院殡仪续档线，补充弹药后同眼下信重的新伙伴会合再战",
+      "without_protagonist": "向来只信弹匣和现场铁证的女组长就算失去旧情也会第一时间顺着「城南医院续档」硬线查到底",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC3",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "至第30章清晨仅余最后约**11发**银芯穿甲弹；"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "带伤替镜辞换包掌心并严防怀表被拧入第0格，陪这个被整条老街抹清名字的男人站完第一卷最冷这一早",
+      "without_protagonist": "一旦决定誓死护短这名唯有自己记住的男人，再痛的伤也不会令这姑娘退后哪怕半寸",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "后单臂撑住门柱防线护镜辞焊封参号地缝、救出昏厥守钟人并暗自核查怀表未落零后恶声替镜辞裹紧手伤；"
+        }
+      ]
+    },
+    {
+      "id": "C_LG",
+      "name": "老郭",
+      "protagonist": false,
+      "own_goal": "雨停了照常推车出来炸油条煮豆浆赚钱谋生，顺眼礼貌招呼隔壁钟表行新面孔小师傅",
+      "without_protagonist": "早点摊老板灾后天晴第一要务就是恢复早点摊生意养家糊口，照常跟街口生人招呼一声",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "被系统抹除记忆时表现出真实迷茫与生分，一句话戳穿主角的孤独"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 11,
+          "end_line": 11,
+          "quote": "巷口黑狗、老陈、老郭、张婶、顾横乃至相依为命七年的守钟人，已全部忘掉「镜辞」的名字与过往，官方二十年户籍底册查无此人；"
+        }
+      ]
+    },
+    {
+      "id": "C_LC",
+      "name": "老陈",
+      "protagonist": false,
+      "own_goal": "抱竹筐赶早晒湿辣椒谋生，经过修妥的老钟表行大门真心佩服这位路过帮手修门的陌生年轻人并随口感叹沈竹旧事",
+      "without_protagonist": "热心老实的摊贩在第1格洗刷下完全把铺里新面孔当成好手艺生人，嘴上絮叨两句过去女掌柜无儿无女顺理成章",
+      "voice_refs": [
+        {
+          "source_id": "SRC11",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "被系统抹除记忆时表现出真实迷茫与生分，一句话戳穿主角的孤独"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 11,
+          "end_line": 11,
+          "quote": "巷口黑狗、老陈、老郭、张婶、顾横乃至相依为命七年的守钟人，已全部忘掉「镜辞」的名字与过往，官方二十年户籍底册查无此人；"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "天明雨停后的东巷钟表行半修复大门外阶",
+      "story_time": {
+        "label": "第五日清晨六点三十分至七点十分",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_GH",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_JC",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "踩着渐散水雾用硬木楔和钉锤把昨夜撞碎的左扇黑木门大致修整卡实、擦净灰泥将钟表行旧木匾重新挂回檐下，眼见黑狗小煤球摇尾溜过脚边头都不偏地跑向对面菜摊也不作声追喊",
+          "gates": {
+            "knows": "早在第4章起黑狗小煤球就不认自己了，此刻表停第1格更不可能指望畜生或旁人想起他；后堂守钟人呼吸已平但需休养静谧，门面必须尽快拾掇像样，别让清晨街坊或白塔暗哨看出昨夜差点漏了底的青砖窟窿",
+            "wants": "把老屋残破体面尽快补稳撑住、替昏睡的老人安顿好门户掩护并静待姜霁顾横收尾交接",
+            "fears": "门框敞着招引白塔早巡车直接盯死店里刚焊封的青砖铁钳痕",
+            "capability": "修表匠精微木铁拼接手艺、虽然左掌裹布仍足够单右手稳稳楔钉木隼",
+            "no_plot": "修好一切坏掉的东西本就是他的老骨头执念——大钟封好以后天亮头件事就是默不作声把砸坏的门修好",
+            "costs": "拉动钉锤反复牵扯缠布左掌渗出血红点痕与左肩余痛",
+            "consequences": "重新挂亮了旧货市场钟表行招牌，为后续老陈路过顺口寒暄立起最讽刺却又温暖的背景布景"
+          },
+          "capacity": {
+            "resources": [
+              "店中木楔钉锤工具",
+              "钟表行旧黑木招牌"
+            ],
+            "permission": "天明前重修老店门面护掩位",
+            "limits": "右门尚有拼接缝且手掌受伤，表仍死悬第1格未触",
+            "evidence_refs": [
+              "SRC2",
+              "SRC9",
+              "SRC10"
+            ]
+          },
+          "outcome": {
+            "intent": "修整受损门楼兼重挂招牌遮掩后堂异常",
+            "success_guaranteed": false,
+            "failure_path": "招牌重新亮出来却再没有一个老邻里知道这店铺还挂着二十一岁养子",
+            "opposition": "左掌伤痛、破木裂茬与清晨即将上街的失忆人群"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "过度执念于「修好一切坏掉的东西」，哪怕明知怀表刻度不可逆下跌、每次强开都在把自己从熟人记忆里抹掉，仍毫不犹豫地押上自己全部人世痕迹去救人。",
+              "access": "memory",
+              "available_chapter": 29,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第29章天微白拿着掉落的钟表行招牌立于门下后着手修门挂牌",
+              "boundary": "严禁拧动最后1格表冠，明白眼前畜生街坊不识自己是既成常态"
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_GH",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "扛枪绕回店前看一眼重整完好的门板，捏了捏兜里仍然缺白一片的手台便签通知姜霁证人徐正已在安全屋安置稳妥、外围弹壳已清光，转脸客气爽朗冲忙着钉门销的陌生青年抱拳谢过昨夜硬锤相助便先撤出南线",
+          "gates": {
+            "knows": "虽然系统早把自己对同行代号的记忆彻底删了个干净、便签那一行像被擦纸水抹白，但自己昨夜亲眼见这年轻人单锤放翻四阶铁甲保下市场百姓；同时昨晚抢运护送出来的关键老工程师徐正已经在二组手里平安落脚，他天亮必须带哨兵散回外围防白塔顺藤查抄",
+            "wants": "把徐正安全和南线隐患给姜霁交底，对救下街坊的外来年轻人尽到老兵地道谢意然后体面稳妥退开风口",
+            "fears": "大队人员天大亮还滞留东巷给督察科抓着把柄顺便把徐正安全线连窝端",
+            "capability": "老兵外勤统筹调度与干净隐蔽撤线经验",
+            "no_plot": "既护手下又讲义气的老顾头不会无声不响走掉，肯定跟老搭档交代清楚关键证人徐正安危、顺嘴谢完陌生外地强援才走",
+            "costs": "只能退居更远外线暗哨暗中掩护，暂时退出下一波城南正面调查",
+            "consequences": "彻底安稳交割了第一卷徐正与剥壳二组护街暗线，再次用老顾坦荡却完全陌生的抱拳谢意衬出第1格隔膜"
+          },
+          "capacity": {
+            "resources": [
+              "二组外线隐蔽联络网络",
+              "已被妥善安置之证人徐正档案渠道"
+            ],
+            "permission": "外围撤哨并向姜霁交底证人安全位",
+            "limits": "同样完全失忆，不认得镜辞曾与自己在恒泰门口出生入死过",
+            "evidence_refs": [
+              "SRC6",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "intent": "确认徐正稳妥与外线无痕撤退，顺带谢别陌生年轻匠人",
+            "success_guaranteed": false,
+            "failure_path": "退回暗线避过早间巡查，后续卷再接暗援线",
+            "opposition": "白塔清晨巡查高压与第1格导致的记忆空缺"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC6",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民。",
+              "access": "memory",
+              "available_chapter": 29,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第29章末清理南口弹壳与确认第17章交手托付的证人徐正已在安全点稳当",
+              "boundary": "手台纸条缺白如故，客套视镜辞为一夜相助却毫不认识的好手"
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_JJ",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "等顾横走远后低声向镜辞清点自身弹匣仅剩最后十一发银芯穿甲弹必须回据点补弹换装，亮出昨晚记牢的城南医院殡仪续档总库批号约定自己先去摸清城南运尸暗线、随时用加密电台呼应破门",
+          "gates": {
+            "knows": "手枪只余约十一发银芯穿甲弹（第28章十五发到第29章四枪毙兽消耗）远远不够杀进白塔明晚清调活人的城南医院暗线；但那张黑令背后的城南医院与殡仪续档总库恰属她在剥壳人体系与医疗档案线最熟摸的路数，分开先取弹补给兼踩点是当下效率最高的方案",
+            "wants": "最快速度补齐实弹武器并先一步盯死城南医院殡仪续档通道，等准备就绪再与这位足以交托后背的伙伴并肩拆掉这窝黑产",
+            "fears": "白塔在东巷失手后狗急跳墙加快城南医院活口清洗，自己手头无弹错失拦截窗口",
+            "capability": "军绿加密电台单线联络、十余年老刑侦摸排医疗殡仪暗线本领与极度克制的战友情义",
+            "no_plot": "干练精明的女组长弹尽粮绝兼握新线后，必然立刻分头补给兼各自暗查一线，不会呆坐在破修表铺里干聊",
+            "costs": "短暂与镜辞分头行事，留下仅余十发余弹独自面对城南暗探风险",
+            "consequences": "明确锚定第二卷《死人续档》双线查案启动格局，让读者看清铁三角下一步各自奔赴的狠活路线"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪（余约11发银芯穿甲弹）",
+              "顾横所赠军绿加密电台",
+              "铭牌所载城南医院殡仪续档总库批号记录"
+            ],
+            "permission": "战后分工兼第二卷主线对接确认位",
+            "limits": "当前弹药见底且尚未恢复第9章前记忆，仅凭现世绝杀信任结约",
+            "evidence_refs": [
+              "SRC3",
+              "SRC8",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "约好城南医院续档调查联动并先行补弹",
+            "success_guaranteed": false,
+            "failure_path": "虽有现世铁杆默契，却要在下一卷面对更大的白塔医疗体系阴谋",
+            "opposition": "十一发剩弹底线与白塔次日续档时间紧迫"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去",
+              "access": "memory",
+              "available_chapter": 29,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第29章亲手擦净黑令见城南医院续档批号并清点十一发余弹后与A2顾横交代完毕随即与镜辞定约",
+              "boundary": "知晓城南医院殡仪续档但不知幕后任何更高层名讳，对镜辞只认当下过命信任"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "重开早市的东巷石板路与修妥大门的钟表行柜前",
+      "story_time": {
+        "label": "第五日清晨七点十分至五十分",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "C_YA",
+        "C_LG",
+        "C_LC",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A4",
+          "actor_id": "C_YA",
+          "order": 4,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "强忍着简陋吊固定住的骨裂左肩坐到破门石阶边，单手撕开药棉加细布给镜辞浸透淤血的左手重新裹严缠死，压低哑声凶巴巴叮嘱谁再管外面老头老太装糊涂、哪怕死也不许他把怀里那最后第1格拧到零",
+          "gates": {
+            "knows": "昨晚顾横跟姜霁走后外面老郭老陈马上就要上街摆摊；第1格擦除的刀子已经悬在了半空——这街上人等会见了面只会把镜辞当空气或者外乡生客！唯有自己脑后死锁着红血痕还清清楚楚记得「镜辞」整个人，所以最怕他心一寒或下回被逼狠真去拧成第0格",
+            "wants": "替这人把烫裂手掌缠利落好随时握锤，用最凶的口吻死守住这人间最后一格没全断干净的联系线",
+            "fears": "只要那表再掉那最后唯一一牙刻度，整个世界就真再没有任何活物叫得出他从前二十一年的名了",
+            "capability": "单手裹伤行动利落劲、死锁抗抹除牢记记忆",
+            "no_plot": "绝不撒娇哭泣、行动比嘴更狠的姑娘，嘴上嫌他手伤笨脚还顺带恶声命令绝不能碰怀表归零，最地道地写出她死守「唯一记名者」的霸道护短",
+            "costs": "右掌拧紧布结抻痛左肩断裂骨处渗血丝，嘴里血铁味硬咽回腹中",
+            "consequences": "牢牢钉住两人共同守护第1格的秘密同盟温度，直直衬出随后走过来的街头人群有多冰凉无情"
+          },
+          "capacity": {
+            "resources": [
+              "干爽药棉布条",
+              "耳后死锁护持的「镜辞」全名记忆（0块火药饼）"
+            ],
+            "permission": "战后换药兼定死不归零红线位",
+            "limits": "左肩重创须吊固定休养；面对第1格无力改变其他街坊失忆现状",
+            "evidence_refs": [
+              "SRC4",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "包好镜辞左手兼以硬话死锁他最后第1格防线",
+            "success_guaranteed": false,
+            "failure_path": "外头巷口老街坊脚步已逼近，谁也挡不住即将劈下来的那一刀生疏寒暄",
+            "opposition": "左肩裂伤剧痛与即将在众人眼中展开的彻底陌生化"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠",
+              "access": "memory",
+              "available_chapter": 29,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第29章撕衣裹伤并确认怀表停在第1格后坐定石阶替镜辞换药",
+              "boundary": "知道门外即将归街的老郭老陈都不再认识镜辞，但不知道老陈会恰巧开口提到「沈竹」哪句话"
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_LG",
+          "order": 5,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "拉出刷干净泥渍的三轮早点车停稳街角掀开蒸锅盖子，顺道隔着两丈油烟向新修好的钟表行门口年轻人点头笑问道早、问屋里瞎老师傅可好些了，口气里全是对新顶铺陌生小伙的街坊礼貌客套",
+          "gates": {
+            "knows": "被怀表第1格全面抹除了对镜辞过往七年一起插科打诨、赊账喝热汤的所有共同记忆之后，早晨重开早点铺的老郭眼里这钟表行只剩个独居昏迷老瞎子加上昨晚才看见帮忙看铺搭手的新面孔小师傅",
+            "wants": "天灾人祸过去恢复日常营生，顺便照街头做生意的礼数跟新开张守门的年轻同行客气打个早招呼",
+            "fears": "昨夜白塔闹这么一出不知道日后生意好不好跑，只想赶紧抢出清晨这一波热豆浆熟客",
+            "capability": "老街坊自然市井社交礼数与早点摊活泛口吻",
+            "no_plot": "平时大嗓门爱拌嘴拆台的老郭一被抹净记忆、见面反而恭敬礼貌喊陌生早安，这种温差不用一句煽情旁白就能直接透死人心凉",
+            "costs": "寻常街口一句「新来的小师傅早」狠狠先划开第一道陌生日常口子",
+            "consequences": "生动还原清晨市井回温的错位真相，替紧随其后抱着干辣椒过来的老陈彻底搭好残酷气氛"
+          },
+          "capacity": {
+            "resources": [
+              "热油早点车",
+              "第1格洗白后的正常早市礼貌"
+            ],
+            "permission": "早市首位陌生邻里招呼位",
+            "limits": "彻底失去了和镜辞开玩笑拆台的昔日记忆，只能礼貌套近乎",
+            "evidence_refs": [
+              "SRC7",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "恢复出摊营生并礼貌招呼门面新小伙",
+            "success_guaranteed": false,
+            "failure_path": "一句稀松平常问早把镜辞彻底固定进路人伙计定位里",
+            "opposition": "无，纯粹怀表第1格下平凡善意的冰冷"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "被系统抹除记忆时表现出真实迷茫与生分，一句话戳穿主角的孤独",
+              "access": "planned-earlier-action",
+              "available_chapter": 30,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "推车出来见到A1刚修好门板重新挂回招牌的年轻陌生伙计",
+              "boundary": "完完全全忘记镜辞从前天天清晨来摊子拌嘴蹭热豆浆的所有日常"
+            }
+          ]
+        },
+        {
+          "id": "A6",
+          "actor_id": "C_LC",
+          "order": 6,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "怀捧整竹筐昨天淋潮的干辣椒走过重新钉实的黑木大门，笑着停步称赞门口忙着沏茶的青年手脚利索齐整，随后浑然无意地叹气唏嘘道出这家老店原先老板娘叫沈竹、可惜没留下一儿半女、就剩瞎老头一人守铺的过往",
+          "gates": {
+            "knows": "昨夜幸亏顾横与这个陌路猛铁匠帮忙才捡回命保住辣椒摊，今早上路看铺面收拾得齐整干爽，一个嘴碎热心的老买卖人本能停下夸几句客气话、顺便向明显看着没待过几天的外乡接手伙计科普一下这座老铺子从前的善心老东家",
+            "wants": "感激帮街救险的年轻新手艺人并闲谈几句老店来历、叮嘱别被里头怪脾气瞎老头闷着",
+            "fears": "只是随口怕这个看着孤冷外地年轻人不懂这铺子原本老规矩才好意多唠叨两句前老板娘旧话",
+            "capability": "毫无城府的老街摊贩絮叨本性、对七年前失踪女掌柜沈竹仍存清晰记忆（唯独镜辞二十一年彻底被第1格剃净）",
+            "no_plot": "怀表规则抹除的只是「镜辞」这个人存在于他人的痕迹——而沈竹在老陈心里依然鲜活！一个记得沈竹却偏偏完全忘掉被沈竹抚养十来年的少年就在眼前喝茶的老伯，随口一句「可惜没留下一儿半女」是百分百逻辑自洽的剧痛巧合",
+            "costs": "一句毫无恶意的赞叹兼闲叹直接成了全卷最残忍锋利的人情冷刀",
+            "consequences": "彻底落定第一卷核心人世剥离大结局：整条街记得沈竹、记得老屋、记得昨晚有人救了街口，独独彻底擦空了「镜辞」"
+          },
+          "capacity": {
+            "resources": [
+              "竹筐干辣椒",
+              "被第1格洗去镜辞痕迹却独独保留沈竹记忆之完整普通人脑记忆"
+            ],
+            "permission": "第1格全城遗忘大结局落锤对话位",
+            "limits": "毫无恶意更毫无半点知情觉察，绝不露沈竹裂缝后真实去向半字",
+            "evidence_refs": [
+              "SRC1",
+              "SRC7",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "夸奖新手艺人修好大门顺带热心闲聊沈竹当年旧事后去晒辣椒",
+            "success_guaranteed": false,
+            "failure_path": "说完便安心哼调子忙自己营生，留下最冷彻人骨的寂静在门堂里回响",
+            "opposition": "系统怀表抹除规则造成的人间错位"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC7",
+              "start_line": 11,
+              "end_line": 11,
+              "quote": "巷口黑狗、老陈、老郭、张婶、顾横乃至相依为命七年的守钟人，已全部忘掉「镜辞」的名字与过往，官方二十年户籍底册查无此人；",
+              "access": "planned-earlier-action",
+              "available_chapter": 30,
+              "available_order": 1,
+              "producer_action_id": "A1",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "经过A1重修齐整且重新挂出招牌的钟表行大门驻足同陌生青年寒暄",
+              "boundary": "完完全全记得「以前老板娘叫沈竹，七年前走了、没留一儿半女」，但关于从小就在店里跟着长大的镜辞本人已被彻底清空"
+            }
+          ]
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_JC",
+          "order": 7,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "隔着滚热粗茶白气平静望进老陈真切唏嘘又陌生浑浊的眼睛，既半个字没反驳也没抖出旧事、只客气温和微笑点头应承往后帮着老前辈看稳前堂、顺便催老伯趁太阳出来快去晒好干辣椒",
+          "gates": {
+            "knows": "老陈刚才话里的沈竹就是亲手把他捡回来养大教手艺的女人——而如今老陈连带着这二十一年全从脑子里洗平了，觉得老板娘「没留下一儿半女」真好真清净；他只需要递上一把旧铜表或说一句小时候被沈竹拎去偷糖的趣事就能撕碎老陈此刻安稳的平淡日子——但那除了把无辜老人卷回白塔档案猎杀外毫无意义",
+            "wants": "让老陈老郭这帮好不容易活着从昨晚死坑爬出来的百姓真真切切踩回平静太阳下过日子，自己咽下这声「外乡人」把老屋和这片摊子的平静守下去",
+            "fears": "强行冲撞解释反而引发老邻里脑海认知错乱甚至把白塔版本收敛灾厄再招回这群普通人身上",
+            "capability": "极高心理克制力、用修表匠看破机芯错位后的冷淡温和从容演完这出路人对手戏",
+            "no_plot": "押上自己二十一年人世痕迹去救全街人的人，真看到百姓活着出来晒辣椒时，绝不会拿真相再去添乱哭委屈，只会替人家端茶微笑道一句快去晒辣椒",
+            "costs": "活生生咽下与养母沈竹之间被人彻底否认拭除的最后一层人间关系证明，独自成为站在店里的无根影子",
+            "consequences": "让老陈放心踩着阳光满意离开，在日常与暖阳里把第一卷「旧市场再无熟人」的悲壮张力顶到圆满绝顶"
+          },
+          "capacity": {
+            "resources": [
+              "桌上粗糙瓷茶碗",
+              "藏稳内兜的沈竹残壳盖与第1格旧怀表"
+            ],
+            "permission": "成全街坊烟火安静咽下遗忘之决定位",
+            "limits": "不可拧动第1格表冠，也不可向老陈揭破沈竹去向或自己身份",
+            "evidence_refs": [
+              "SRC2",
+              "SRC7",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "成全老陈平凡日光生活，独自受下彻底陌生化归宿",
+            "success_guaranteed": false,
+            "failure_path": "老陈安心离去，唯余门口暗影里咬破唇瓣拼死死记他一人的姑娘",
+            "opposition": "亲耳听闻养母「没留下一儿半女」的荒谬刺痛"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 8,
+              "end_line": 8,
+              "quote": "过度执念于「修好一切坏掉的东西」，哪怕明知怀表刻度不可逆下跌、每次强开都在把自己从熟人记忆里抹掉，仍毫不犹豫地押上自己全部人世痕迹去救人。",
+              "access": "planned-earlier-action",
+              "available_chapter": 30,
+              "available_order": 6,
+              "producer_action_id": "A6",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "听进A6老陈毫无恶意随口叹出「以前老板娘叫沈竹，可惜没留下一儿半女」一瞬作出平静不破之回应",
+              "boundary": "心如明镜看清怀表代价结清至此，绝不掀破表象，安静把目光收向下一步"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S3",
+      "order": 3,
+      "location": "晨雾散去后微凉寂静的钟表行大堂及通向城南的门廊视线",
+      "story_time": {
+        "label": "第五日清晨七点五十分至八点整",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "C_YA",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A8",
+          "actor_id": "C_YA",
+          "order": 8,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "等老陈哼着调子远去街尾才狠咽下咬破口腔的一丝血味，默默撤回大堂布帘边挨住镜辞右侧站直，右手牢牢攥死那根伴她杀穿暗井与四阶铁甲的实心弯曲钢条不曾退开半分",
+          "gates": {
+            "knows": "全东巷连守钟人连老郭连老陈真真切切谁都不认识他了——可只要这根实心钢条还在她手里抓着、耳后这枚滚烫死锁还在痛，眼前这个被擦净名字的修表匠就至少在这个人间还有最后一个喘气知道他名字的搭档",
+            "wants": "不发空口安慰也不撒娇，就这么握紧钢条站在他半步之后，等他下一步拔步往城南去",
+            "fears": "万一下一卷里自己哪天也被白塔或怀表清得干干净净，这人真变成孤魂野鬼谁来替他记账",
+            "capability": "带伤静立陪守之决意与紧抓实心钢条在手",
+            "no_plot": "绝不废话煽情的倔强丫头目睹全街失忆一刀劈在男人身上后，默默拎棍站到男人右侧本身就是最硬的回答",
+            "costs": "带伤僵立迎着清晨冷堂气忍住咬破嘴角钝痛",
+            "consequences": "以无声双影并立画面落稳第一卷唯一活人记名羁绊，为后续卷「+1锚点」奠基"
+          },
+          "capacity": {
+            "resources": [
+              "弯曲实心钢条（0火药饼）",
+              "唯余一人未忘「镜辞」全名的带血死锁"
+            ],
+            "permission": "无声站定主角身侧跨卷锚点立桩位",
+            "limits": "左肩骨裂仍需数日缓复",
+            "evidence_refs": [
+              "SRC4",
+              "SRC11"
+            ]
+          },
+          "outcome": {
+            "intent": "以实际贴身同行无声抗衡整条街彻底陌生化带来的孤绝",
+            "success_guaranteed": false,
+            "failure_path": "静待镜辞收拢桌面物件迈向第二卷新战场",
+            "opposition": "左肩痛伤与前路未卜的城南医院深潭"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC11",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠",
+              "access": "planned-earlier-action",
+              "available_chapter": 30,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "看着A7镜辞平静送别完全失忆的老陈转身回屋，即刻提棍无声并肩贴靠",
+              "boundary": "知晓全街彻底擦空却严守不泄原芽生死与沈竹去向"
+            }
+          ]
+        },
+        {
+          "id": "A9",
+          "actor_id": "C_JC",
+          "order": 9,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "听着帘后木榻上守钟人平稳均匀的浅呼吸回头望过焊死火钳的青砖地缝，从容在修表台摊放停死于最后第 1 格且背面已张出银钢蓄能齿位的银灰怀表、沈竹残壳盖与城南医院黑令，与左肩吊兜的芽无声并立望向城南",
+          "gates": {
+            "knows": "旧货市场全活下来了，但自己在这张街头版图上已成再没来处的二十一岁外乡生人；后榻守钟人吊住了老命暂时不用忧心，而桌面上三样铁实物件摆出下一卷唯二答案——第1格只剩这一条命的底线、沈竹未写完的那半截零号真芯所在，以及明天就可能在城南医院和殡仪馆动刀填池的白塔续档总库",
+            "wants": "盘清这一整卷九死一生保下的全盘筹码，收拾冷冽心气盯准城南医院方向开启下一场复仇与讨债",
+            "fears": "若不趁势直捣城南续档线反手查穿零号真相，下次连最后这一格都要撑不住滑进彻底虚无",
+            "capability": "修表匠冷静复盘整理手头核心物证与不回头直视深渊之决绝",
+            "no_plot": "每一场大修收桌时修表匠都会把关键零件收好放进兜、抬眼看看下块待修的坏表在哪里——收起这三样铁器望向城南就是全卷自然而然的冷峻落幕",
+            "costs": "带伤迎向彻底陌生化的人间继续涉险孤征",
+            "consequences": "以极具画面感与宿命张力的「第1格旧怀表 × 沈竹半句残盖 × 城南医院续档黑令」收定第一卷《青梅的皮囊》，顺滑牵动第二卷《死人续档》"
+          },
+          "capacity": {
+            "resources": [
+              "死停最后第1格银灰旧怀表",
+              "沈竹「双环断角锤」旧银钢表壳盖残片",
+              "白塔总库东巷清拆黑令残牌（带城南医院殡仪续档印）",
+              "修表全套神兵工具"
+            ],
+            "permission": "盘整卷末三宝并眺望城南收束第一卷终章位",
+            "limits": "严守全卷三大禁区不破一丝一毫；怀表牢停第1格绝不提前掉零",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2",
+              "SRC8",
+              "SRC12"
+            ]
+          },
+          "outcome": {
+            "intent": "完成第一卷最后清点收兜并冷峻拉开第二卷序幕",
+            "success_guaranteed": false,
+            "failure_path": "前路即第二卷城南医院死人续档诡局，暂无退路可言",
+            "opposition": "全城第1格彻底遗忘状态与尚未揭底的三大终极秘密"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC12",
+              "start_line": 35,
+              "end_line": 35,
+              "quote": "读者震撼于主角纯手艺零耗强封母表并摸清城南医院新黑产线，紧盯天亮回街的熟人老陈将如何面对这个被彻底忘光的人。",
+              "access": "planned-earlier-action",
+              "available_chapter": 30,
+              "available_order": 7,
+              "producer_action_id": "A7",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "送走老陈并在A8芽无声陪伴下回到工作台旁收拢三件核心线索眺向城南",
+              "boundary": "怀表死停第1格、守钟人存活静养、沈竹/原芽/左衡三大悬念丝毫不漏，圆满收官第一卷"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第30章S1-S3全章登场行动者（镜辞、顾横、姜霁、芽、老郭、老陈）共9项关键决定逐项过七关：老郭老陈顾横全按第1格遗忘演出毫无恶意却刺透人心之陌生礼貌，老陈亲口说出「以前老板娘叫沈竹，可惜没留下一儿半女」落地收刀；姜霁11发银弹对接第二卷城南医院殡仪续档，芽死锁护手定死第1格底线，守钟人昏睡后榻保命未登台。",
+    "background_only": [
+      {
+        "name": "完全无视镜辞径直跑开讨食的黑狗小煤球及清晨各自卸门扫水的东巷其余无名小贩、后堂帘后昏睡喘气平稳的守钟人",
+        "reason": "黑狗与散贩仅承担第1格日常冷漠环境对照（无剧情抉择）；守钟人于上章末力竭重伤陷入昏卧休养未觉醒，不作主动决策"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "对照卷纲L1-04收卷节拍、怀表机制第1格规范、细纲_第030章五点及全卷三大禁区铁律审查行动包",
+    "basis": "S1补门挂牌、黑狗无视、顾横带徐正安全退哨、姜霁余11发定城南医院续档线，清爽收清全卷配角支线；S2用老郭礼貌早安+芽带伤裹手守死最后1格引爆老陈抱干辣椒过门「以前老板娘叫沈竹，可惜没留下一儿半女」千钧一刀，而镜辞一句不辨含笑送别成全民间烟火；S3无任何说教鸡汤，纯粹以第1格旧怀表+沈竹半句残盖+城南医院黑令三件实物并列收兜望向城南冷冽落幕，圆满结束《青梅的皮囊》。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

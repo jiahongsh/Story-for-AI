@@ -1,0 +1,666 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 15,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "35c7f372486f093fb80db4c9ee074010855a62411d0d386e3aff77b889b5cea9",
+      "state_revision": 45,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第015章.md",
+      "sha256": "3896e2c867e439025f0c82eca14e191a75c58109aabd8ddda70f4d4142851d82",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/顾横.md",
+      "sha256": "584d50dd9d666feb420d2ab4bc5e075758fc6e344789429e74416b8347f71333",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/势力/白塔.md",
+      "sha256": "9fba3e0af240d172d9c26818a512a95561cc3ba07a77c6d3620cd1cb89d8e6af",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/势力/剥壳人.md",
+      "sha256": "e9489efd8cc1be69fab5ef06551ed77e66e54ba8b93b24a2a028659175d1d2df",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "bb9d8fd0e39cf501801c4fac064cbb8c28bb39d99e82b4b4c86f4ed39d101461",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "先下车与老队长顾横当面讲清实情避免误杀平民，拿到补给后开车冲出西侧缺口",
+      "without_protagonist": "哪怕独自突围也绝不忍见十二名旧街平民被白塔督导当众烧死",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "| **姜霁** | 干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去 | 左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离 | 毫无主见的背景板花瓶 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "| E014 | 读者目睹周谨伏诛、陈屿双臂皆废逃亡与获救街坊全员忘掉芽的诛心一幕，随即撞上老兵顾横率队持枪封门的紧绷对峙 | 第14章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_GH",
+      "name": "顾横",
+      "protagonist": false,
+      "own_goal": "压住曹严免得二组滥杀平民并保下姜霁与一车证人，借总局战地条例把曹严扣押回队",
+      "without_protagonist": "铁血护民老队长见到货车里真群众和明日火化单，绝不听任白塔文官烧死活口",
+      "voice_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "- **性格与定位**：浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民。第一卷第14–15章奉命率二组堵截恒泰厂门，扣押企图灭口的曹严并暗塞银芯弹箱与加密电台掩护突围；第26–30章怀表跌进第1格后其手台夹层纸上的同行代号彻彻底底抹成空白，第27–29章在南口轰爆白塔黑车前胎护下老陈等摊贩、驱逐溃逃的程晦残兵并拦阻群众逼近冻雾口；第30章天亮前率二组清光现场弹壳痕迹、确认关键证人徐正安稳转入城东安全点后，客气拍肩谢别这位素昧平生的猛铁匠暂撤外线。第二至五卷持续暗助姜霁与镜辞；第六卷「沉没的旧江心洲」百人会战中，为锁死江底泄洪闸护住平民船队并保住镜辞与南芽的生路，独自焊死退路壮烈断后，是全书最重的第一枚催泪勋章。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "- **核心成员**：姜霁（第三行动组组长）、顾横（二队长，第 6 卷旧江心洲会战为护平民撤离壮烈断后）。"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "踹开尾门甩出周谨徽章与火化单破局突围，在修车棚撬开七年前铜表与十二时辰司丑时司密令查清东巷危机",
+      "without_protagonist": "没有镜辞带出周谨徽章和破铜表、看破密令暗印，二组未必能立刻下狠手扣下督导，也无人发觉东巷十点半杀局",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "| **镜辞** | 平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害 | 越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局 | 优柔寡断、满嘴“先留证再说”的文书员 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "| E014 | 读者目睹周谨伏诛、陈屿双臂皆废逃亡与获救街坊全员忘掉芽的诛心一幕，随即撞上老兵顾横率队持枪封门的紧绷对峙 | 第14章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "车尾护住街坊并盯紧外环高架桥异常工程车动向，第一时间提醒镜辞老城区遇险",
+      "without_protagonist": "经历刚才全车街坊彻底忘掉她之后依然死忠警戒后方护住老街生路",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "| **芽 / 南芽** | 表面泼辣鲜活、爱踹门拌嘴；撕破脸后语速快而狠、带着拼死护短的决绝 | 体内死锁发痛时微皱眉硬扛，绝不向镜辞撒娇示弱，行动比嘴更狠 | 只会站着等主角猜身份的哑巴谜题 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "| E014 | 读者目睹周谨伏诛、陈屿双臂皆废逃亡与获救街坊全员忘掉芽的诛心一幕，随即撞上老兵顾横率队持枪封门的紧绷对峙 | 第14章 |"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "恒泰厂区铁门暴雨空地",
+      "story_time": {
+        "label": "第四日凌晨两点半至两点四十五分",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C_JJ",
+        "C_GH",
+        "C_JC"
+      ],
+      "actors_offstage": [
+        "C_YA"
+      ],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_JJ",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "只身走下驾驶室拦在二十多支枪口前，先声喝明车内全是平民阻止二组老兵盲射",
+          "gates": {
+            "knows": "门外拦路的是多年老搭档顾横，但背后跟着白塔督察特派员曹严",
+            "wants": "抢在误射或燃烧弹砸过来前用老情分和铁事实刹住老顾的手",
+            "fears": "一厢乱枪打穿车厢杀死瘦老李等十二名无辜街坊",
+            "capability": "三组长身份与现场近距喊话控制力",
+            "no_plot": "绝不可能拿旧街百姓和自家二组兄弟火并，下车先喊明平民真相是最理性的选择",
+            "costs": "暴露自己完全处在一线枪口靶位下",
+            "consequences": "逼出顾横与曹严当面翻脸拉锯，给镜辞踹门亮证据抢出空间"
+          },
+          "capacity": {
+            "resources": [
+              "配枪",
+              "多年二三组战友情分"
+            ],
+            "permission": "前线行动组长临危沟通权",
+            "limits": "手头背着叛逃密令无法单靠口头命令叫停曹严",
+            "evidence_refs": [
+              "SRC3",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "让老顾压住枪口给自己留出亮铁证的时间",
+            "failure_path": "若曹严狗急跳墙抢射可能逼使全队卷入火并",
+            "opposition": "曹严扯高爆燃烧器不断催杀"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "- **性格与定位**：浑身硝烟味与老式打火机油味的重火力老兵，粗中有细、极护手下与平民。第一卷第14–15章奉命率二组堵截恒泰厂门，扣押企图灭口的曹严并暗塞银芯弹箱与加密电台掩护突围；第26–30章怀表跌进第1格后其手台夹层纸上的同行代号彻彻底底抹成空白，第27–29章在南口轰爆白塔黑车前胎护下老陈等摊贩、驱逐溃逃的程晦残兵并拦阻群众逼近冻雾口；第30章天亮前率二组清光现场弹壳痕迹、确认关键证人徐正安稳转入城东安全点后，客气拍肩谢别这位素昧平生的猛铁匠暂撤外线。第二至五卷持续暗助姜霁与镜辞；第六卷「沉没的旧江心洲」百人会战中，为锁死江底泄洪闸护住平民船队并保住镜辞与南芽的生路，独自焊死退路壮烈断后，是全书最重的第一枚催泪勋章。",
+              "access": "memory",
+              "acquisition": "多年在剥壳人总局与二组顾横并肩作战的了解",
+              "boundary": "不知道老顾今日手里握有多大回旋余地",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JC",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "一脚踹飞货车卷帘尾门大开顶灯露出十二名平民，凌空砸出周谨染血徽章与明日火化证明",
+          "gates": {
+            "knows": "第14章从二号货车搜出全套明日盖章火化单与周谨银边徽章，且车厢瘦老李等人最能直接戳破怪物谎言",
+            "wants": "一口气揭穿曹严借白塔高令烧死活人灭口的毒计并逼二组老兵放下枪",
+            "fears": "迟两秒燃烧弹炸进车厢谁都活不了",
+            "capability": "二阶绷弦腿力一脚踹飞金属卷帘、敏锐战局时机抓捕",
+            "no_plot": "与其躲在车厢里等死，不如掀门亮底牌让二十名有良心的一线老兵自己看真货",
+            "costs": "当众暴露自己全身黑血涉案修表匠面目",
+            "consequences": "直接震住二组全体老兵压低枪口，引出顾横怒轰曹严反手送弹放行"
+          },
+          "capacity": {
+            "resources": [
+              "周谨徽章",
+              "明日火化单",
+              "十二名获救街坊"
+            ],
+            "permission": "危局自救与人证公开权",
+            "limits": "无法靠一己之力硬撼装甲二组火力",
+            "evidence_refs": [
+              "SRC2",
+              "SRC8"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "当众用铁证与活口击溃白塔督导的清场谎言",
+            "failure_path": "若二组彻底黑化不认人则只剩拼命死战",
+            "opposition": "曹严疯狂拿燃烧发射器对准瘦老李"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 39,
+              "end_line": 39,
+              "quote": "| 2 | 镜辞冷笑着拉响货厢顶灯一脚踹飞后门，满车脖颈扎血窟窿的旧市场摊主颤巍巍跌坐出来，周谨血徽章与明日替死火化单甩在顾横皮靴前 | 打脸 |",
+              "access": "observation",
+              "acquisition": "第14章亲手杀周谨剥徽章并抢下二号车全套火化名单",
+              "boundary": "尚未预知顾横会用总局十二外勤战地条例反扣曹严",
+              "certainty": "known",
+              "available_chapter": 14,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_GH",
+          "order": 3,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "见十二活人与明日火化单且曹严竟还要开火杀民，果断一枪轰碎其燃烧发射器并援引总局十二外勤战地条例第一条将其反扣，暗塞四匣银芯弹箱与电台放行",
+          "gates": {
+            "knows": "老张头到瘦老李确系活生生老百姓、纸上公然印着明日火化假账，而曹严真敢往平民扣扳机",
+            "wants": "保住十二条活口人命、护住姜霁与小队继续查出黑手，顺便拿住曹严做队部审查证据",
+            "fears": "二组老兵违背良心沾上屠杀平民血债，且真正白塔幕后蛀虫瞒天过海",
+            "capability": "老式双管重霰弹枪与剥壳人总局二队长战场统御权",
+            "no_plot": "两年前已经看透白塔政客把一线当炮灰的铁血老兵，眼睁睁见人敢当自己面烧死老街坊，必先开枪废器拿人",
+            "costs": "当众抗拒白塔特派督导、彻底站到白塔对立面担责",
+            "consequences": "拿住曹严、塞出银弹电台帮姜霁与镜辞撞开西侧缺口冲出重围"
+          },
+          "capacity": {
+            "resources": [
+              "双管重霰弹枪",
+              "四匣银芯弹",
+              "加密电台",
+              "二组战地执行力"
+            ],
+            "permission": "剥壳人总局十二外勤序列二队长现地处断权",
+            "limits": "为免连累二组二十号兄弟必须假装开空包弹追击演戏",
+            "evidence_refs": [
+              "SRC4",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "扣下坏胚督导、保住证人与姜霁战力查明真相",
+            "failure_path": "若以后总局高层被白塔全面架空，顾横自身亦将遭清算压力",
+            "opposition": "曹严企图以白塔压迫二组强行开火"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "| 3 | 二组十多名老兵纷纷震惊垂枪，顾横怒极反笑一枪轰碎狂叫的曹严手里信号枪，借口专员疑似污染失控当场扣押，同时朝姜霁掷出重型备弹箱放行西侧缺口 | 高潮 |",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A2",
+              "acquisition": "当场看到A2踹飞车门露出的十二名街头老人与落到靴前的周谨血徽及明日火化证明",
+              "boundary": "尚未细看周谨内衬纸令内容，但已足够断定白塔内部出恶鬼",
+              "certainty": "known",
+              "available_chapter": 15,
+              "available_order": 2,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_YA",
+          "order": 4,
+          "story_tick": 1,
+          "kind": "inaction",
+          "choice": "退守车尾暗处不现身惹起顾横兵哨开火误判，默默护稳满车失忆街坊等大货车冲出西侧铁栅",
+          "gates": {
+            "knows": "方才第14章全车街坊已彻底忘掉自己，且外面二十名官方剥壳人绝不会留情面给带接缝异端",
+            "wants": "保住刚救出的十二名街坊平安出厂，顺手替镜辞盯死车尾死角",
+            "fears": "自己突然露脸激化门口火并导致平民溅血",
+            "capability": "隐蔽压息身法与高敏觉察力",
+            "no_plot": "被所有人遗忘后的异端女孩最明白何时该把舞台让给活人证词与官方老兵",
+            "costs": "独自吞下彻底隐身退居车尾的苦涩",
+            "consequences": "保全突围大局并在下幕雨夜先一步捕捉高架异常动向"
+          },
+          "capacity": {
+            "resources": [
+              "车尾阴影死角掩护"
+            ],
+            "permission": "自由异端随行护卫",
+            "limits": "不能被二组大灯正照发现耳后死锁接缝",
+            "evidence_refs": [
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "平稳度过大门排查顺利随车脱困",
+            "failure_path": "一旦被探照灯照出异端特征必然触发无差别点杀",
+            "opposition": "二组探照灯与警戒老兵视野"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 20,
+              "end_line": 20,
+              "quote": "| E014 | 读者目睹周谨伏诛、陈屿双臂皆废逃亡与获救街坊全员忘掉芽的诛心一幕，随即撞上老兵顾横率队持枪封门的紧绷对峙 | 第14章 |",
+              "access": "observation",
+              "acquisition": "第14章经历救出全车街坊却当面被所有人当空气忘掉",
+              "boundary": "尚不知车队另一端正扑向旧货市场",
+              "certainty": "known",
+              "available_chapter": 14,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "城南郊外废弃水泥修车棚",
+      "story_time": {
+        "label": "第四日凌晨三点整",
+        "tick": 2
+      },
+      "actors_onstage": [
+        "C_JJ",
+        "C_YA",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A4B",
+          "actor_id": "C_JJ",
+          "order": 5,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "守在废修车棚门口拆箱清点顾横暗送的四匣银芯弹、止血纱布与干净加密电台，替伤者清点弹药警戒退路",
+          "gates": {
+            "knows": "顾横冒险趁乱塞进车厢的四匣银芯弹与电台是团队能否继续抗衡追捕的底气",
+            "wants": "迅速清点弹药医疗物资安抚受惊百姓，并建立和老顾二组的不留痕联系",
+            "fears": "白塔外勤车队顺血迹摸进外环修车棚围歼十二位证人",
+            "capability": "三组长后勤清点兼警戒素质、手头新弹匣",
+            "no_plot": "突围脱险后的第一件事对职业猎手来说永远是检查枪弹药品与安全哨位",
+            "costs": "暂时无暇顾及旧货市场老街那边动向",
+            "consequences": "全队弹药补足并保下证人，紧接着从镜辞与芽口中惊闻东巷危机"
+          },
+          "capacity": {
+            "resources": [
+              "顾横所赠银弹药箱",
+              "加密电台",
+              "医用绷带"
+            ],
+            "permission": "前线小队火线补给整备职责",
+            "limits": "手下暂无重武器且车辆随时要继续转移",
+            "evidence_refs": [
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "确保火力与证人救护到位随时再出发",
+            "failure_path": "若弹药受损或证人失血休克就会彻底断送铁证",
+            "opposition": "暴雨追兵未散及受伤街坊失温风险"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 40,
+              "end_line": 40,
+              "quote": "| 3 | 二组十多名老兵纷纷震惊垂枪，顾横怒极反笑一枪轰碎狂叫的曹严手里信号枪，借口专员疑似污染失控当场扣押，同时朝姜霁掷出重型备弹箱放行西侧缺口 | 高潮 |",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A3",
+              "acquisition": "刚从A3门口接下顾横扔上副驾的军绿药箱与加密电台",
+              "boundary": "尚未看清周谨密令背面所写的东巷明晚十点半灭门日期",
+              "certainty": "known",
+              "available_chapter": 15,
+              "available_order": 3,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_YA",
+          "order": 6,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "耳后细缝跳动察觉异常，在高架雨夜发现无牌清拆车队全速直扑老城区北侧立即开口预警镜辞",
+          "gates": {
+            "knows": "自己长期混在旧货市场熟知老城方位，且对带清拆气息的无牌半挂车队格外警觉",
+            "wants": "第一时间警醒镜辞看守钟表行的守钟人与街坊正迎向大麻烦",
+            "fears": "陈屿或白塔抄后路血洗钟表行东巷老巢",
+            "capability": "异端高敏听觉视觉感知力",
+            "no_plot": "盯着百米高架看到成排黑封条无牌清拆车直扑自家老巷方向，任谁都会立刻开口报信",
+            "costs": "再次牵动死锁发痛警戒",
+            "consequences": "直接引出镜辞拆看七年前铜表底盖与周谨密令揭晓东巷明晚清拆阴谋"
+          },
+          "capacity": {
+            "resources": [
+              "高架夜视警戒视线"
+            ],
+            "permission": "小队哨位预警职责",
+            "limits": "距离过远无法隔空拦停工程车队",
+            "evidence_refs": [
+              "SRC1"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "拉响东巷危机警报令镜辞核实敌情",
+            "failure_path": "若镜辞沉迷追查恒泰外围而漏看车队方向则会丢掉钟表行老窝",
+            "opposition": "倾盆暴雨夜幕遮蔽车牌与车身特征"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 41,
+              "end_line": 41,
+              "quote": "| 4 | 货车冲出厂区拐入城郊废弃修车棚暂避追兵，芽坐在车尾擦拭手血却在车门反光里发现街头巡逻车灯正大批扑向旧货市场方向 | 铺垫 |",
+              "access": "planned-earlier-action",
+              "acquisition": "刚在废弃修车棚车尾望见外环高架呼啸驰过无牌市政工程车队",
+              "boundary": "不知道车队具体清拆时间点与守钟人七年前旧事",
+              "certainty": "known",
+              "available_chapter": 15,
+              "available_order": 4,
+              "author_only": false,
+              "producer_action_id": "A4"
+            }
+          ]
+        },
+        {
+          "id": "A6",
+          "actor_id": "C_JC",
+          "order": 7,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "撬开七年前双环铜表底盖并拆阅带白塔十二时辰修正司丑时印的周谨密令，惊悉守钟人瞎眼秘辛与明晚十点半东巷屠街令",
+          "gates": {
+            "knows": "方才从地下血表墙角扯回的双环铜表与周谨风衣夹层密令都带在手边",
+            "wants": "摸清七年前沈竹留下的线索与白塔下一步灭口动作",
+            "fears": "守钟人、老陈、老郭守着参号母表被白塔半夜推平填池",
+            "capability": "修表工具拆表底盖眼力与阅览密令判断力",
+            "no_plot": "听芽预警工程车奔向老城，握着刚缴获的周谨贴身密令与铜表必定第一时间撬盖拆信核实",
+            "costs": "瞬间背负不足二十小时救出整条东巷兼保参号母表的极限倒计时压力",
+            "consequences": "精准承接第16章转移街坊并杀回东巷对峙韩铭"
+          },
+          "capacity": {
+            "resources": [
+              "七年前双环铜表",
+              "周谨丑时司暗红密令"
+            ],
+            "permission": "现场战利品主导清点权",
+            "limits": "右肋重伤在身且明晚十点半仅剩不到二十小时",
+            "evidence_refs": [
+              "SRC2",
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "看穿七年前三表分配与明晚清拆东巷毒计及时回防",
+            "failure_path": "若不知参号正压在东巷，明晚全街街坊及瞎老头必遭全灭充池",
+            "opposition": "十二时辰司丑时密令强拆时间极紧"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 42,
+              "end_line": 42,
+              "quote": "| 5 | 镜辞挑开从周谨身上搜出的加密调令与七年前旧表盖，表盖内侧赫然刻着师父与守钟人的双环暗号以及「七年前两点十七分初启」，而周谨密令末端白纸黑字写着「明晚整点清扫旧货市场钟表行全街补入零号祭池」 | 反转 |",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A5",
+              "acquisition": "顺着芽A5预警目光回头查验刚抢出的七年前铜表及周谨内衬密令",
+              "boundary": "看清十二时辰修正司丑时令印与明晚十点半时间，仍不知内鬼韩铭明日将亲自带队上门",
+              "certainty": "known",
+              "available_chapter": 15,
+              "available_order": 6,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第15章修订涵盖恒泰厂区大门对峙突围与废弃修车棚查验战利品密令全部两幕四名核心行动者，曹严、二组老兵与瘦老李等十二名受困街坊作功能反应及背景群像登记。",
+    "background_only": [
+      {
+        "name": "白塔督导曹严与二组二十名老兵、十二名获救街坊",
+        "reason": "曹严企图烧车被顾横扣押退场，老兵服从顾横整队命令，街坊惊恐呼救求生"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "对照第14章逃出地下及第15章细纲校验顾横倒戈、十二外勤与丑时司暗印合乎全书结构",
+    "basis": "A3援引剥壳人总局十二外勤战地条例、A6明晰周谨密令来自白塔十二时辰修正司丑时调令，使第一卷地网暗线与第二卷城南丑时司严丝合缝闭环。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": ".story/世界引擎/第015章_修订/写前行动审查.json",
+      "sha256": "edc42991fb8c81fba46782bde2056601f136dce1807bcc62e2870e5d779738e3"
+    },
+    "candidate": {
+      "path": ".story/世界引擎/第015章_修订/候选正文.md",
+      "sha256": "d566998c50295d8bbf08452753d74bb890d465f968aa6a7685e98e84981dff5f"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "actual_result": "镜辞踹开货车尾门暴露十二名平民与火化单，顾横援引剥壳人总局十二外勤战地条例扣押曹严并私塞四匣银弹放行",
+        "action_ids": [
+          "A1",
+          "A2",
+          "A3",
+          "A4"
+        ],
+        "evidence": [
+          {
+            "start_line": 17,
+            "end_line": 20,
+            "quote": "镜辞只穿着一身沾满黑血的旧棉衣站在货厢出口边缘，手里攥着那枚刚从周谨尸体剥下来的银边督察徽章。他压根没正眼看躲在盾牌后头大叫的曹严，手腕一扬，将染血徽章连同厚厚一沓从二号货车抓来的红章纸张凌空砸飞出去！"
+          },
+          {
+            "start_line": 34,
+            "end_line": 38,
+            "quote": "老兵一边踩死疼得直抽搐的曹严，一边眼神沉沉扫过旁边死死压住枪口的二十多名过命手下：“按剥壳人总局十二外勤战地紧急条例第一条，立即将嫌疑人曹严当场缴械押回队部审查，优先救护所有受惊平民！”"
+          }
+        ],
+        "world_followups": [
+          "剥壳人总局十二支外勤体系自然坐实，顾横与镜辞建立实质同盟"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "actual_result": "修车棚里芽预警北向清拆工程车，镜辞撬开七年前铜表底盖并看清押有白塔十二时辰修正司丑时司批印的屠街密令",
+        "action_ids": [
+          "A4B",
+          "A5",
+          "A6"
+        ],
+        "evidence": [
+          {
+            "start_line": 52,
+            "end_line": 52,
+            "quote": "七年前零号初启夜，随老沈共碎三表，毁双目守旧街，二归白塔底座，参隐老巷。"
+          },
+          {
+            "start_line": 56,
+            "end_line": 57,
+            "quote": "信纸最上方印着白塔十二时辰修正司最高级暗红印章，边角还多押了一方阴冷的丑时司外勤批印，前面几行全是对恒泰地下三层今晚零号祭池补给缺口的计算清单。可当镜辞视线一寸寸滑到密令最后一行加粗批注时，脊背瞬间窜上一股刺骨冷意！"
+          }
+        ],
+        "world_followups": [
+          "白塔十二时辰司及丑时司印记提前于第一卷中段伏下暗钉，直连第28-30章与第二卷"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "operation": "plant",
+        "id": "F014",
+        "description": "周谨丑时司密令批注明晚十点半强拆旧货市场东巷全段",
+        "evidence": [
+          {
+            "start_line": 57,
+            "end_line": 57,
+            "quote": "「若恒泰外围池供体损毁或惊动活人，即刻启动次日应急预案：明晚十点半起，以老城改造名义清拆旧货市场东巷全段，凡钟表行及周边所有熟知往日旧档留守人员，全部就地扣押充入零号深池补足配额！」"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "main-agent-solo",
+      "method": "校验第15章修订正文与总局十二外勤、白塔十二时辰司伏笔衔接",
+      "basis": "两处关键势力锚点嵌入自然且不破坏原有快节奏突围张力。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

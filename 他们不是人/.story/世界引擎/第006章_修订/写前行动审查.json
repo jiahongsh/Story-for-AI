@@ -1,0 +1,361 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 6,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "86d6f821b21a7a395cf2d82ef4b68611e36f06f53dca947e2217a807f77f9c5a",
+      "state_revision": 43,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第006章.md",
+      "sha256": "1b6f56475af621eba06a1107db4f8b91526e59bc4f9c14782f9dba9f97dbb8bd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/陈屿.md",
+      "sha256": "5c6182be2448a561a237f1b63d4e8fc715a2c5947c47d3d88a61b3c7e603cb5b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "cc42b4141c4f67f7bb8d4d2f3242374f2a9770a5cd5c0b1796b273334c2abedd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/世界观/力量体系.md",
+      "sha256": "30c33ba885709aef147e4cbd03d8ed59b8c24d6964a6d96e959d2de20a500a47",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "093f52de5d198367fbd5a2584fda4dd05eaf90e8c7106cc53ccfec55466e134a",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_CY",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "借换电池之名将指腹裂隙蚀液抹向镜辞右手脉门废其手艺，联合门外两头猎犬将其生擒剥皮",
+      "without_protagonist": "三阶半壳裁缝为掩盖老张头与北河线索失误必果断袭杀知情平民店铺",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "| **陈屿** | 斯文温和、推金丝眼镜带笑意，骨子里透着病态艺术家的优雅残忍 | 被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段 | 纯粹发通知书的外包客服 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC3",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "借表蒙照缝看破芽脱身真相并防住蚀液毒表，危急关头逆拧怀表觉醒卡齿反杀陈屿夺回字条",
+      "without_protagonist": "无替代主角；门外重兵堵门且守钟人远在后间，只有镜辞近身迎战三怪合围",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "| **镜辞** | 平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害 | 越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局 | 优柔寡断、满嘴“先留证再说”的文书员 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 11,
+          "end_line": 11,
+          "quote": "| E005 | 读者得知灰衬衫真名陈屿（代号裁缝）、502室有两个陈骁、老陈已忘掉芽，且陈屿正拎着芽的包站在工作台前 | 第5章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "闻警赶赴旧货市场协助拦截逃窜的三阶裁缝与堵门二阶猎犬",
+      "without_protagonist": "早已在凌晨预判陈屿今早必摸进旧市场（第5章承诺），按约定二十分钟内带枪奔赴支援",
+      "voice_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "| **姜霁** | 干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去 | 左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离 | 毫无主见的背景板花瓶 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **身份**：剥壳人第三行动组组长，一线王牌猎手；后成为剥壳人内部反抗白塔腐朽高层的改革派核心。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "旧货市场钟表行大堂及后窗",
+      "story_time": {
+        "label": "第三日清晨七点零五分至七点十五分",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_JC",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_CY",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "指腹藏剧毒裂隙蚀液递出旧石英表，召门外两头二阶猎犬堵门准备废手抓人",
+          "gates": {
+            "knows": "老张头死在本店、自己拿了芽的帆布包且已派两头猎犬伪装成菜贩守死大门",
+            "wants": "三分钟废掉镜辞双手活捉审出北河铜齿轮和怀表秘密",
+            "fears": "迟则剥壳人三组赶到坏事、以及上面缝皮宗师追责灭口",
+            "capability": "三阶半壳裁缝毒手与驱使二阶猎犬权限",
+            "no_plot": "狡诈狠毒的三阶裁缝占着外强中干修表学徒便宜时，最顺手就是借修表递物抹毒偷袭",
+            "costs": "白天破门暴露自己半壳接缝身法",
+            "consequences": "逼得镜辞看穿其耳后金线并与之彻底撕破脸"
+          },
+          "capacity": {
+            "resources": [
+              "高浓度裂隙蚀液",
+              "两头二阶猎犬壳"
+            ],
+            "permission": "壳巢三阶外围裁缝带队围杀权",
+            "limits": "面对精密机械震荡频率与0.1秒滞隙缺乏反制",
+            "evidence_refs": [
+              "SRC3",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "无声腐烂镜辞双手再拖回黑巢剥皮",
+            "failure_path": "若被对方借反光提前防备并打断节拍就会惨败重伤",
+            "opposition": "镜辞藏在工作台的纯银表蒙与怀表底牌"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。",
+              "access": "observation",
+              "acquisition": "昨夜获芽帆布包与收据摸清旧货市场门面布局",
+              "boundary": "以为镜辞只是普通修表学徒，不知怀表拥有卡齿停摆之威",
+              "certainty": "known",
+              "available_chapter": 5,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JC",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "借纯银表蒙三秒照缝确认陈屿是三阶半壳裁缝且芽未死，危急间连拧两格怀表觉醒卡齿砸断其右臂",
+          "gates": {
+            "knows": "桌心抛光纯银表蒙已照出陈屿耳后金线接缝与昨夜北河芦苇荡芽抛包脱身真相",
+            "wants": "砍掉毒手、干翻三怪活命，并查清芽留在帆布包里的暗号",
+            "fears": "三头怪物同扑窄屋无路可退，守钟人远在帘后救不及",
+            "capability": "二阶绷弦体魄、刀片、八角重铜锤及沈竹旧怀表逆拧两格（8退6）触发卡齿",
+            "no_plot": "既确定芽安全无虞又陷入三怪合围必死局，护短狠辣的修表匠当场必逆拧表冠拼命反杀",
+            "costs": "不可逆烧掉怀表第8与第7格刻度（跌至第6格），剧烈反噬晕眩",
+            "consequences": "砸断陈屿右臂、划崩其半张脸金线，震定双犬助姜霁毙敌并取出502室字条"
+          },
+          "capacity": {
+            "resources": [
+              "纯银表蒙",
+              "修表刀片",
+              "银灰旧怀表（8→6格）",
+              "八角重铜锤",
+              "淬火钢针"
+            ],
+            "permission": "危急自卫与反杀执掌",
+            "limits": "卡齿只停两秒且耗2格凡尘刻度后遗症大",
+            "evidence_refs": [
+              "SRC2",
+              "SRC5",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "两秒定格期内击溃最强三阶裁缝打穿围杀局",
+            "failure_path": "两秒内若只伤皮毛未能废臂就会在解冻后遭三怪反扑撕碎",
+            "opposition": "三阶半壳裁缝陈屿与双犬合围扑杀"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC8",
+              "start_line": 11,
+              "end_line": 11,
+              "quote": "| E005 | 读者得知灰衬衫真名陈屿（代号裁缝）、502室有两个陈骁、老陈已忘掉芽，且陈屿正拎着芽的包站在工作台前 | 第5章 |",
+              "access": "observation",
+              "acquisition": "第5章确认陈屿身份且刚用表蒙完成三秒照缝看见北河脱身残影",
+              "boundary": "尚未预知陈屿逃走后会在502室吹响骨笛偷袭",
+              "certainty": "known",
+              "available_chapter": 5,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_JJ",
+          "order": 3,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "依约驰援旧货市场门槛，两发银芯弹顺卡齿裂开的接缝射爆两头二阶猎犬",
+          "gates": {
+            "knows": "第5章己预判陈屿今早必来旧市场报复，且到场听见奇异钟表卡壳震荡及惨叫",
+            "wants": "击毙堵门二阶猎犬壳救下盟友并力争留住陈屿活口",
+            "fears": "赶晚一步让唯一能治自己腕伤的修表匠死在陈屿手下",
+            "capability": "三阶外勤组长枪法与特制银芯弹",
+            "no_plot": "既已收加密名片结盟且对方牵系自身性命救治，清早巡线驰援发现门口双犬必果断开火",
+            "costs": "进一步绑死与民间镇钟人战线并见证卡齿异象",
+            "consequences": "配合清除双犬残敌，确立与镜辞联手夜赴502室的互信"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪",
+              "特制银芯弹"
+            ],
+            "permission": "剥壳人三组现地清剿授权",
+            "limits": "陈屿借早市混乱撞破后窗遁走，追射未中",
+            "evidence_refs": [
+              "SRC4"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "清灭堵门猎犬保住镜辞与街市平民安全",
+            "failure_path": "若晚到三秒镜辞可能遭醒转的双犬偷袭背心",
+            "opposition": "早市人潮掩护了断臂逃窜的陈屿"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 16,
+              "end_line": 16,
+              "quote": "- 高潮：高频擒纵轮铮鸣令三头怪物强制卡死两秒，镜辞一锤砸折陈屿右臂、一针划断其耳后三根金线，姜霁赶到点爆两头猎犬",
+              "access": "observation",
+              "acquisition": "冲进巷口亲耳听见卡壳异响并见双犬耳后炸裂停滞两秒",
+              "boundary": "尚不知怀表确切机制，只看到两秒僵死神迹",
+              "certainty": "known",
+              "available_chapter": 5,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第6章修订涵盖陈屿毒表试探、镜辞觉醒第二式卡齿砸断陈屿右臂及姜霁点爆双犬全部战局，旁观老陈与堵门炮灰猎犬作背景登记。",
+    "background_only": [
+      {
+        "name": "两头二阶猎犬壳与隔壁老陈",
+        "reason": "猎犬受陈屿驱使执行堵门扑杀，老陈隔墙询问一声未入战局"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "核对第5章衔接、大长篇战力体系与第6章细纲七关行动",
+    "basis": "精确校准陈屿为「三阶半壳裁缝」避免出现早期「高阶半壳」混淆后期五至九阶战力上限，清除5处叙述短引号并严格走完觉醒卡齿（8→6格）与取出502字条因果链。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

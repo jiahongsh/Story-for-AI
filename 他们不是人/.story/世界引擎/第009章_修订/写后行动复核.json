@@ -1,0 +1,713 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 9,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "3700481181aff3bc00cdb4e41dcc4feab6345bb28be67643b47533ec4757c9c2",
+      "state_revision": 44,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第009章.md",
+      "sha256": "9f3cfbaee536cc337159cd05f0d8a23118bf5f7b26bfae3fb9f939c1af87cc1f",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/陈屿.md",
+      "sha256": "5c6182be2448a561a237f1b63d4e8fc715a2c5947c47d3d88a61b3c7e603cb5b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/角色/陈启明与假陈骁.md",
+      "sha256": "ba0297e258ea0e927918091370499f1d47a5b96dcd1d3df9565f566aa9dd280d",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "cc42b4141c4f67f7bb8d4d2f3242374f2a9770a5cd5c0b1796b273334c2abedd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/势力/壳巢与恒泰设施.md",
+      "sha256": "e6ee331f53b2c01d8a7f60574787d4b653eb64e5e352739853cc1087bcc5e836",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "5ad148ed2d354006e4706b2f1b2a3de192ef0128a5bde1754e52fa9b7400b8f0",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "趁卡齿两秒把异种碎核拍入假陈骁主筋崩断母巢共振丝，反噬陈屿并合开陈启明灵位黄铜母钟",
+      "without_protagonist": "没有镜辞跨前开表与锁簧拍核，假陈骁三秒后必自爆毁掉502全员及母钟暗格",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "| **镜辞** | 平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害 | 越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局 | 优柔寡断、满嘴“先留证再说”的文书员 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 14,
+          "end_line": 14,
+          "quote": "| E008 | 读者震撼于真儿子畜生不如、假怪物宁死护父的反差，心悬于假陈骁三秒后爆体危机 | 第8章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "先依裂隙核过载危局劝撤，见镜辞救定后铐走真陈骁并安排转移老人父子，随后承受第5格记忆断片",
+      "without_protagonist": "三组长遇自爆危机必定先保全同行撤离，事后依法拿人并在怀表退至第5格后生出遗忘怀疑",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "| **姜霁** | 干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去 | 左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离 | 毫无主见的背景板花瓶 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC3",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "  - 两年前在城南行动中曾被一头长死接缝的高阶壳欺骗，亲手开枪打死过已经半壳化的老队长，从此养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派。"
+        }
+      ]
+    },
+    {
+      "id": "C_CY",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "吹骨笛远程催爆527号剥皮壳拉人陪葬并借机抢回母钟，遭母巢丝崩断反噬七窍飙血逃遁",
+      "without_protagonist": "外围三阶裁缝失手被断臂后最惯于躲在暗处吹骨笛催爆下线销毁人证",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "| **陈屿** | 斯文温和、推金丝眼镜带笑意，骨子里透着病态艺术家的优雅残忍 | 被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段 | 纯粹发通知书的外包客服 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。"
+        }
+      ]
+    },
+    {
+      "id": "C_QM",
+      "name": "陈启明",
+      "protagonist": false,
+      "own_goal": "不顾毒刀架颈誓保把亲情托给自己的假儿子，痛哭流泪交出替沈竹保管七年的半座黄铜母钟",
+      "without_protagonist": "孤苦盲老人宁死维护真正照料自己两个月的干儿子，且早就受沈竹所托等着对口令交匣",
+      "voice_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **陈启明**：七十岁退休国营钟表三厂老师傅（沈竹旧识），双目因白内障近乎失明，独自守着老伴灵位底座下沈竹寄存七年的半座黄铜母钟。眼瞎心明，宁可被亲生儿子拿毒刀架脖子也不屈服，用一句「谁拿我当爹，谁就是我亲儿子」与滚烫眼泪，亲手让假陈骁长出了人类新肉。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **陈启明**：七十岁退休国营钟表三厂老师傅（沈竹旧识），双目因白内障近乎失明，独自守着老伴灵位底座下沈竹寄存七年的半座黄铜母钟。眼瞎心明，宁可被亲生儿子拿毒刀架脖子也不屈服，用一句「谁拿我当爹，谁就是我亲儿子」与滚烫眼泪，亲手让假陈骁长出了人类新肉。"
+        }
+      ]
+    },
+    {
+      "id": "C_JCX",
+      "name": "假陈骁",
+      "protagonist": false,
+      "own_goal": "死撑等镜辞断线，获救后拧断毒菜刀一巴掌扇飞真畜生并用老人滚泪生出活人锚点新肉",
+      "without_protagonist": "已被老人父爱深度锚定的异端壳获救第一件事必清算企图弑父的真陈骁",
+      "voice_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "- **假陈骁（原五二七号剥皮壳）**：原本奉陈屿之命潜入502室窃取母钟的低阶壳，却在两个月熬药洗脚的日常里被陈启明塞止痛片的父爱彻底感化。第8章宁可刺穿左锁骨将自己钉死在铁门框上也不愿伤老人一分一毫；第9章被镜辞用锁簧术救活并生出「活人锚点」新肉，从此成为守护老街平民后方的重要盟友。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 6,
+          "end_line": 6,
+          "quote": "- **假陈骁（原五二七号剥皮壳）**：原本奉陈屿之命潜入502室窃取母钟的低阶壳，却在两个月熬药洗脚的日常里被陈启明塞止痛片的父爱彻底感化。第8章宁可刺穿左锁骨将自己钉死在铁门框上也不愿伤老人一分一毫；第9章被镜辞用锁簧术救活并生出「活人锚点」新肉，从此成为守护老街平民后方的重要盟友。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "安平里六号楼502室门口及楼下配电井",
+      "story_time": {
+        "label": "第四日凌晨零点零六分至零点十分",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ",
+        "C_CY",
+        "C_QM",
+        "C_JCX"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_JJ",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "见假陈骁喉间肉瘤只差两秒爆开，依战斗经验第一时间拽住镜辞胳膊急劝撤退避险",
+          "gates": {
+            "knows": "裂隙核过载必爆剧毒浓浆，在狭窄楼道内硬抗几乎十死无生",
+            "wants": "保住镜辞与自身性命再回头补救或清场",
+            "fears": "刚替自己治好左腕的唯一人才死于近距自爆",
+            "capability": "三组长战场撤离判断与臂力拽人",
+            "no_plot": "老练外勤见核爆倒数两秒拉住同伴下撤完全符合实战铁律",
+            "costs": "暴露投鼠忌器下暂无法靠枪法解套",
+            "consequences": "更衬出镜辞不肯放弃假芽同类的狠劲出手"
+          },
+          "capacity": {
+            "resources": [
+              "现场撤退判断力"
+            ],
+            "permission": "剥壳人三组长现地紧急避险与指挥权限",
+            "limits": "不掌握锁簧术，无法直接压停过载核",
+            "evidence_refs": [
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "抢在自爆前把镜辞带出五楼杀伤区",
+            "failure_path": "镜辞甩开手强攻将迫使全员共担爆核风险",
+            "opposition": "陈屿远程骨笛催爆迫在眉睫"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 9,
+              "end_line": 9,
+              "quote": "- 章首钩子：假陈骁喉间肉瘤鼓胀如鸡蛋只差两秒爆开，姜霁拽镜辞撤退，轮椅上的半瞎老人却不顾脖子上毒刀哭喊求救",
+              "access": "observation",
+              "acquisition": "亲眼看见门框假陈骁颈核急剧红亮膨大至鸡蛋大小",
+              "boundary": "尚不知镜辞会使用异种碎核行锁簧截丝之法",
+              "certainty": "known",
+              "available_chapter": 8,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JC",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "想到在挣扎的假芽而断然拒撤，拧开卡齿退至第5格并用铜锤拍入老张头碎核崩断母巢共振丝",
+          "gates": {
+            "knows": "手头留有老张头暗红碎核，寸镜早照出核上方直连骨笛的母巢共振丝，且知道不能让重情的假壳白死",
+            "wants": "强卡两秒塞入止逆棘爪断掉陈屿共振线，反噬对方并救下护老人的假陈骁",
+            "fears": "如果假陈骁爆死，正带死锁在黑夜逃命的假芽将来也无生路",
+            "capability": "卡齿两秒停摆（6→5格）、三寸淬火钢针、八角重铜锤与老张头暗红碎核",
+            "no_plot": "怀着对假芽生路执念且最信修表手艺的镜辞，眼前明明看到棘爪死穴，决不甘心扭头逃跑",
+            "costs": "怀表退至第5格触发核心盟友初见失忆代价，耗光手中唯一暗红碎核",
+            "consequences": "截断控制丝反伤陈屿，假陈骁得以保全神智反杀真陈骁"
+          },
+          "capacity": {
+            "resources": [
+              "银灰旧怀表（6→5格）",
+              "淬火钢针",
+              "八角重铜锤",
+              "暗红碎核"
+            ],
+            "permission": "修表匠近身锁簧术与自卫出手决断",
+            "limits": "只剩两秒窗口且仅余这一枚碎核",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "一锤卡死飞轮救人并反向崩伤陈屿",
+            "failure_path": "偏差一毫米便会连人带壳当场炸成烂泥",
+            "opposition": "高频骨笛持续震爆催死"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC2",
+              "start_line": 9,
+              "end_line": 9,
+              "quote": "- **核心武器与能力**：十倍修表寸镜、三寸淬火钢针、加焊三寸淬冷油淬火钢倒钩的八角重铜锤、神兵「银钢捉影镊」、银灰旧怀表（第一重凡尘止逆盘 11 格，第9章末剩5格，第19章退至第3格，第26章竖井救芽强开卡齿跌入死悬**第1格**后严禁动冠防归零，第27–30章全程零耗保持第1格）；从小拉风箱抡铜锤锻出镇钟武道一阶「校眼」、二阶「绷弦」底子，掌握镜返一式照缝（含水面/霜镜反光零耗3秒定穴）、二式卡齿（停摆两秒）、锁簧术；第28–29章击瘫程晦夺获「白塔总库东巷清拆黑令残牌」（带丑时司批印，背面露出「城南医院 · 殡仪续档总库」红印）并借沈竹「双环断角锤」旧银钢表壳盖残片合卯血契铜印、二尺重铁火钳焊封东巷参号地缝，焊缝瞬间怀表背面双环底盖震开一线「银钢蓄能暗槽」；第30章修门重挂招牌迎对全街遗忘后携表与黑令望向城南。",
+              "access": "observation",
+              "acquisition": "第4章拾起老张头暗红碎核，第6-8章目睹骨笛与假陈骁自刺求生",
+              "boundary": "预料怀表退格会付出代价，未料这一次竟会立刻擦走姜霁初见记忆",
+              "certainty": "known",
+              "available_chapter": 8,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A3",
+          "actor_id": "C_CY",
+          "order": 3,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "在配电井旁遭母巢共振丝崩断反噬七窍飙血、骨笛炸粉，震惊自己摸到缝皮宗师外门三阶门槛竟栽在学徒手里而狼狈逃命",
+          "gates": {
+            "knows": "共鸣丝突然在最得意一瞬遭同源异种核逆向卡死崩裂反震回来",
+            "wants": "保命逃离六号楼防被剥壳人围捕",
+            "fears": "骨笛炸毁、七窍失血且行踪暴露在楼下随时可能遭姜霁堵死",
+            "capability": "三阶半壳外围裁缝强撑血气跳车逃窜",
+            "no_plot": "素来惜命自私的小裁缝受创重伤又丢控制法器，此刻除了上车跑路再无可能正面迎战",
+            "costs": "彻底暴露三阶半壳仅是宗师外门水准，重创败退",
+            "consequences": "退回恒泰地下黑巢抱团告状与合谋报复"
+          },
+          "capacity": {
+            "resources": [
+              "停在暗巷的接应黑车"
+            ],
+            "permission": "壳巢外围三阶半壳裁缝暗线逃遁自保",
+            "limits": "共振反噬重伤失血、骨笛尽碎",
+            "evidence_refs": [
+              "SRC4",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "连滚带爬钻进黑车逃回城南据点养伤伺机反扑",
+            "failure_path": "慢半拍会被姜霁带人摸进院子堵死在配电井",
+            "opposition": "镜辞反噬一击余劲极狠"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。",
+              "access": "observation",
+              "acquisition": "自己正是七大缝皮宗师外围出身的三阶半壳裁缝，亲历母巢丝反炸",
+              "boundary": "完全理解不了镇钟人如何敢用异种碎核卡死母巢共振线",
+              "certainty": "known",
+              "available_chapter": 8,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_JCX",
+          "order": 4,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "趁控制丝断裂重掌己身，徒手拧断毒菜刀一耳光扇飞真陈骁下楼，跪地痛哭获老人眼泪生出活人锚点新肉",
+          "gates": {
+            "knows": "真陈骁刚拿着陈屿的毒菜刀差点抹杀陈启明，自己此刻不再受骨笛迫害",
+            "wants": "彻底废掉那头亲手逼爹死的家伙并向老人请罪",
+            "fears": "自己刚挣扎露出灰黑肉丝的可怖模样会吓坏瞎老人",
+            "capability": "剥皮壳远超常人的体魄握力",
+            "no_plot": "两个月熬药洗脚攒下的真心早压过本能，救回自由第一时间必反杀真畜生并羞惭退缩",
+            "costs": "左锁骨伤痛兼直面自己是怪物的不堪真相",
+            "consequences": "在老人真心眼泪下在耳后接缝长出带体温的新真肉，成为全书首个活人锚点"
+          },
+          "capacity": {
+            "resources": [
+              "远超凡人躯体怪力"
+            ],
+            "permission": "安平里502室守护干爹出手的家门护卫",
+            "limits": "自卑心结致其原已准备束手被抓",
+            "evidence_refs": [
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "除恶护爹后准备坦然承受处置",
+            "failure_path": "幸好陈启明一把抱住腰哭留才打破自暴自弃",
+            "opposition": "真陈骁挥毒刀乱劈及自身怪物自卑感"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "- **假陈骁（原五二七号剥皮壳）**：原本奉陈屿之命潜入502室窃取母钟的低阶壳，却在两个月熬药洗脚的日常里被陈启明塞止痛片的父爱彻底感化。第8章宁可刺穿左锁骨将自己钉死在铁门框上也不愿伤老人一分一毫；第9章被镜辞用锁簧术救活并生出「活人锚点」新肉，从此成为守护老街平民后方的重要盟友。",
+              "access": "observation",
+              "acquisition": "亲耳听真陈骁勾结陈屿威逼杀爹，且感受到自己刚恢复自由神智",
+              "boundary": "不知老人眼泪竟能让接缝生出人类血肉",
+              "certainty": "known",
+              "available_chapter": 8,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_QM",
+          "order": 5,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "死抱住假陈骁哭喊谁拿我当爹谁就是我亲儿子，随后辨出镜辞是沈竹弟子并交出守了七年的黄铜母钟匣",
+          "gates": {
+            "knows": "亲儿子九年不顾死活回来拿毒刀夺房，唯有假陈骁日日熬药端尿；且七年前沈竹留约十二点携半枚沈字齿轮上门者便是传人",
+            "wants": "护下孝顺儿子活命并把沈竹托付七年的木匣完整交给镜辞完成老约定",
+            "fears": "剥壳人女长官把救命的假儿子抓走处决",
+            "capability": "资深钟表匠耳力记性、灵位底座藏匿的黄铜母钟木匣",
+            "no_plot": "孤苦老匠人早把真相全听在耳朵里，经历死里逃生立刻认亲加交匣严丝合缝",
+            "costs": "放弃亲生孽障儿子、揭开沈竹托孤旧约",
+            "consequences": "老人的眼泪直接促成活人锚点奇迹，助镜辞开钟得捉影镊与恒泰血书"
+          },
+          "capacity": {
+            "resources": [
+              "半座黄铜母钟",
+              "沈竹七年前暗约口令"
+            ],
+            "permission": "沈竹黄铜母钟七年托管老匠人",
+            "limits": "双目失明靠听声辨手认人",
+            "evidence_refs": [
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "留住干儿子性命、圆满交还沈竹遗物",
+            "failure_path": "若来者不是沈竹弟子则宁可守口如瓶",
+            "opposition": "惊魂未定与脖颈刀痕伤痛"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "- **陈启明**：七十岁退休国营钟表三厂老师傅（沈竹旧识），双目因白内障近乎失明，独自守着老伴灵位底座下沈竹寄存七年的半座黄铜母钟。眼瞎心明，宁可被亲生儿子拿毒刀架脖子也不屈服，用一句「谁拿我当爹，谁就是我亲儿子」与滚烫眼泪，亲手让假陈骁长出了人类新肉。",
+              "access": "memory",
+              "acquisition": "七年前深夜亲自收下沈竹浑身是血托付的黄铜母钟匣",
+              "boundary": "不知道沈竹入裂缝后真实状况，只知守好匣子等齿轮上门",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "安平里六号楼单元院内积水路灯下",
+      "story_time": {
+        "label": "第四日凌晨一点半",
+        "tick": 2
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A6",
+          "actor_id": "C_JC",
+          "order": 6,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "拼合两半齿轮开钟取得银钢捉影镊与恒泰血书后带姜霁下楼，询问对方天亮前能否调出恒泰地下三层图",
+          "gates": {
+            "knows": "胶片血书直指城南恒泰设施地下三层每晚凌晨两点十七分用活人喂养零号母表",
+            "wants": "趁热打铁借剥壳人权限拿图纸直奔城南救人",
+            "fears": "迟去一步真芽或失踪街坊再惨遭喂表",
+            "capability": "刚入袋的银钢捉影镊与姜霁临时战友协定",
+            "no_plot": "拿了明确时间地点的血书线索自然立刻找官方战友调图纸筹备突袭",
+            "costs": "未及细察第五格退格已当场咬向姜霁的记忆线",
+            "consequences": "直接触发现场姜霁突然忘掉初见起因拔枪翻脸的冰冷尾钩"
+          },
+          "capacity": {
+            "resources": [
+              "银钢捉影镊",
+              "微缩胶片血书"
+            ],
+            "permission": "沈竹母钟继承者与同盟主力查案",
+            "limits": "手头怀表已退至第5格，缺乏白塔内部结构图纸",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "调出恒泰地下结构图直捣黑巢",
+            "failure_path": "刚问出口便发现姜霁眼底露出陌生寒意",
+            "opposition": "第5格人世剥离代价当场发作"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 34,
+              "end_line": 34,
+              "quote": "| 3 | 陈启明交出灵位后的黄铜母钟，镜辞双齿合一开出银钢捉影镊与沈竹血书胶片，锁定城南恒泰地下三层与凌晨两点十七分 | 信息揭示 |",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A5",
+              "acquisition": "刚在S1从陈启明老汉手中接过母钟拼齿轮开出沈竹微缩血书",
+              "boundary": "尚未预知第5格已从姜霁脑里削走昨晚初见记忆",
+              "certainty": "known",
+              "available_chapter": 9,
+              "available_order": 5,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A7",
+          "actor_id": "C_JJ",
+          "order": 7,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "交付嫌疑人与转移父子后下楼走到路灯下，因怀表第5格彻底擦除昨晚初见记忆而停步客气审视镜辞身份",
+          "gates": {
+            "knows": "手头确实与他刚查过恒泰血书，但昨晚为何在钟表行相遇、为何带这名青年上楼全成了空白",
+            "wants": "搞清眼前的年轻修表匠怎么混进自己的高危专案行动里",
+            "fears": "两年前曾见过二阶壳的精神修改手段，怀疑自己又遭精神干扰",
+            "capability": "多年养成的高警惕职业直觉",
+            "no_plot": "多疑冷血的女组长一旦发现近身搭档来源在记忆里彻底空白，必然瞬间立起警觉盘问",
+            "costs": "当面割伤并肩死战后的脆弱信任",
+            "consequences": "逼出第10章镜辞用私人名片与虎口双针孔物理铁证重新立信"
+          },
+          "capacity": {
+            "resources": [
+              "随身配枪",
+              "职业审讯警觉"
+            ],
+            "permission": "剥壳人总局三组长当面核验身份与记忆边界",
+            "limits": "昨晚初见与挑虫记忆已被第5格抹平",
+            "evidence_refs": [
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "当面核查身边这名来路突兀青年的真实底细",
+            "failure_path": "若镜辞解释不清下一秒便要拔枪顶胸",
+            "opposition": "记忆断层带来的强烈违和感"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "  - 两年前在城南行动中曾被一头长死接缝的高阶壳欺骗，亲手开枪打死过已经半壳化的老队长，从此养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派。",
+              "access": "memory",
+              "acquisition": "两年前亲历队友异变惨剧烙下的职业多疑本能",
+              "boundary": "完全丢失了昨晚第4-5章初见与挑虫原因的记忆",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第9章修订涵盖502室跨前断丝、陈屿配电井反噬惨嚎、假陈骁长肉与开母钟及下楼第5格失忆全部三场戏及全五名行动者；真陈骁被一巴掌扇晕铐走、姜霁外围专员作背景处理。",
+    "background_only": [
+      {
+        "name": "真陈骁与两名前来押人的外围专员",
+        "reason": "真陈骁丧失反抗能力遭扇晕逮捕；两名专员只奉姜霁号令押犯转移证人"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "对照第8章末尾自刺求救与第9章细纲、大长篇九阶体系校准七关行为",
+    "basis": "全章所有冲突推进自然，明确陈屿仅「摸着缝皮宗师外门的三阶门槛」强化战力梯队厚度，清除9处多余叙述引号，严格维持第5格退格失忆与沈竹血书信息边界。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": ".story/世界引擎/第009章_修订/写前行动审查.json",
+      "sha256": "a8c64523356f19045c001c11a2cf5d0cce764d5b907c0fbccf63e241df56a810"
+    },
+    "candidate": {
+      "path": ".story/世界引擎/第009章_修订/候选正文.md",
+      "sha256": "1f3585d5e5be62e177d1ca270f85254f92ca0856e73417db4e812c09bcf91834"
+    },
+    "scene_results": [
+      {
+        "scene_id": "S1",
+        "actual_result": "镜辞卡齿停摆并拍入碎核断丝反伤三阶外围裁缝陈屿，陈启明眼泪令假陈骁长出真肉，合开黄铜母钟获得捉影镊与恒泰血书",
+        "action_ids": [
+          "A1",
+          "A2",
+          "A3",
+          "A4",
+          "A5"
+        ],
+        "evidence": [
+          {
+            "start_line": 24,
+            "end_line": 27,
+            "quote": "镜辞右手三根淬火钢针闪电般刺入假陈骁左耳根的三处传动大穴，左手从兜里摸出昨晚从老张头灰烬里留下的那枚绿豆大小的暗红碎核，对准假陈骁左锁骨下方那道水果刀划开的血口，用八角重铜锤的平头锤面，狠狠一锤将那枚异种碎核拍进了他的主筋节点里！"
+          },
+          {
+            "start_line": 31,
+            "end_line": 31,
+            "quote": "陈屿捂着狂喷黑血的口鼻，一屁股跌坐在泥水里，看着五楼那扇亮着灯的窗户，眼底第一次露出了见鬼般的恐惧，“我好歹摸着缝皮宗师外门的三阶门槛……他一个刚上道的修表学徒，怎么可能用异种碎核截断我的控制线？！”"
+          },
+          {
+            "start_line": 54,
+            "end_line": 55,
+            "quote": "假陈骁左耳根后面那道原本因为失去母巢供给而永远无法愈合的接缝，在老人滚烫的眼泪滴落上去的瞬间，竟然自己生出了一层淡粉色的、带着真正人类体温的新肉，将那道裂缝彻底弥合了一半！"
+          }
+        ],
+        "world_followups": [
+          "陈屿惊吼明确点出自己属缝皮宗师外门三阶定位，活人锚点诞生且获得银钢捉影镊"
+        ]
+      },
+      {
+        "scene_id": "S2",
+        "actual_result": "怀表退至第5格，下楼时姜霁突生断片遗忘昨夜初见缘由并疏离质问",
+        "action_ids": [
+          "A6",
+          "A7"
+        ],
+        "evidence": [
+          {
+            "start_line": 79,
+            "end_line": 79,
+            "quote": "刚踏上满地积水的院子，镜辞脑海里突然又掠过一阵熟悉的空茫感。他下意识摸了摸胸口内袋里那只银灰旧怀表：刚才在五楼强开「卡齿」救人，秒针已经退到了第五道细痕上。"
+          },
+          {
+            "start_line": 88,
+            "end_line": 88,
+            "quote": "“你是陈启明老爷子请来的钟表匠对吧？我们昨晚……是不是在什么地方见过？我怎么突然想不起来，我今天晚上为什么会带你一起来安平里办案了？”"
+          }
+        ],
+        "world_followups": [
+          "紧接第10章姜霁拔枪审问并靠物证重锚信任"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "operation": "resolve",
+        "id": "F004",
+        "description": "两半铜齿轮拼合开启灵位黄铜母钟取出银钢捉影镊",
+        "evidence": [
+          {
+            "start_line": 68,
+            "end_line": 70,
+            "quote": "紧接着，母钟底部啪地弹开一道暗格！"
+          }
+        ]
+      },
+      {
+        "operation": "plant",
+        "id": "F008",
+        "description": "血书胶片指明城南恒泰地下三层每晚02:17以活人喂养零号母表并警告别去白塔报案",
+        "evidence": [
+          {
+            "start_line": 71,
+            "end_line": 71,
+            "quote": "【小辞，当你看到这行字时，这柄‘捉影镊’归你了，它能挑断三阶以下所有壳的接缝。记住：千万别去白塔报案！城南恒泰设施地下三层，每天凌晨两点十七分，它们都在用失踪的活人喂养‘零号母表’！芽的命格特殊，一旦她出事，去两点十七分的裂缝里找我！】"
+          }
+        ]
+      },
+      {
+        "operation": "plant",
+        "id": "F009",
+        "description": "怀表退至第5格令核心盟友姜霁开始遗忘初见起因",
+        "evidence": [
+          {
+            "start_line": 88,
+            "end_line": 88,
+            "quote": "“你是陈启明老爷子请来的钟表匠对吧？我们昨晚……是不是在什么地方见过？我怎么突然想不起来，我今天晚上为什么会带你一起来安平里办案了？”"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "main-agent-solo",
+      "method": "对照正文落实七关行为、清除短引号并核对长篇战力界定",
+      "basis": "陈屿声口调整与全章去引号均已完成，S1/S2因果及F004/F008/F009伏笔精确对应。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

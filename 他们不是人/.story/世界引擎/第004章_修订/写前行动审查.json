@@ -1,0 +1,480 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 4,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "874f3afe8c999bf56f2e8bda22f76003c376fe6abdebaacc0a4c51cf8c63e54b",
+      "state_revision": 41,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第004章.md",
+      "sha256": "2a6508bf0854de99058a37eaefd5b83d36e62b35b5dd4ca1dc8f1df3e75211c8",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/守钟人.md",
+      "sha256": "6e6ca627d064135d2da26ca65b59d122f984df57d04fe568bf0c0f73d821c749",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/世界观/怀表机制.md",
+      "sha256": "cc42b4141c4f67f7bb8d4d2f3242374f2a9770a5cd5c0b1796b273334c2abedd",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/世界观/力量体系.md",
+      "sha256": "30c33ba885709aef147e4cbd03d8ed59b8c24d6964a6d96e959d2de20a500a47",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/势力/剥壳人.md",
+      "sha256": "e9489efd8cc1be69fab5ef06551ed77e66e54ba8b93b24a2a028659175d1d2df",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "6b9d1b089c16cf8d6dd7591b4520657b50425dc133edb62b970bff3af207c977",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_SZ",
+      "name": "守钟人",
+      "protagonist": false,
+      "own_goal": "烧毁老张头剥皮壳残皮断绝后患，告诫镜辞壳之长缝规律、怀表双层机芯隐秘与镇钟武道底子",
+      "without_protagonist": "照旧用铁火钳烧毁侵入旧街的残皮，独守钟表行后间暗藏的三母钟线索",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 8,
+          "end_line": 8,
+          "quote": "| **守钟人** | 沙哑干瘪、惜字如金、每句都带老一辈镇钟人的江湖规矩与冷幽默 | 关键时刻直接丢铜锤或亮炉火，不讲大道理，帮理不帮亲 | 谜语人老头 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "| E003 | 读者看到镜辞首杀剥皮壳、拿到安平里502铜齿轮，且假芽在巷口暗中替他断后 | 第3章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "弄清剥皮壳规律与沈竹怀表隐藏机理，处理残骸灰烬并直面凌晨寻踪而至的剥壳人姜霁",
+      "without_protagonist": "无替代主角；小煤球遇怀表退格必然陌路狂吠，凌晨也必须独立接下姜霁持枪盘问",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "| **镜辞** | 平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害 | 越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局 | 优柔寡断、满嘴“先留证再说”的文书员 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "| E003 | 读者看到镜辞首杀剥皮壳、拿到安平里502铜齿轮，且假芽在巷口暗中替他断后 | 第3章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "顺东桥巷12号灵车与泥水印追踪逃窜低阶剥皮壳至此，查明谁使用沈竹独门钢针重锤绝活",
+      "without_protagonist": "作为剥壳人总局十二外勤序列三组组长，凡追查到同源裂隙臭味与沈竹手法现场必持枪盘查",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "| **姜霁** | 干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去 | 左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离 | 毫无主见的背景板花瓶 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC7",
+          "start_line": 4,
+          "end_line": 4,
+          "quote": "- **核心成员**：姜霁（第三行动组组长）、顾横（二队长，第 6 卷旧江心洲会战为护平民撤离壮烈断后）。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "旧货市场钟表行前间与后间铁炉",
+      "story_time": {
+        "label": "第二日深夜",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C_SZ",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_SZ",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "焚烧老张头空皮，点破七日长缝规则、镜辞校眼与绷弦武道底子及怀表十一格止逆锁后的表底副槽隐秘",
+          "gates": {
+            "knows": "七年前随沈竹拆碎三座母表，熟知沈竹改造怀表内外双层机芯的底细及镇钟武道修行阶段",
+            "wants": "及时替徒孙毁尸灭迹，同时点醒镜辞别轻耗那十一格人世刻度，除非逼入绝境震开表底副槽",
+            "fears": "镜辞仗着首杀得意忘形随便动表，过早断光人间牵绊沦为孤魂",
+            "capability": "老一辈镇钟人阅历与后间烧尸铁皮炉",
+            "no_plot": "老人护短又刚见证镜辞用一阶校眼二阶绷弦底子首杀剥皮壳，按师门规矩此刻必敲打交代怀表真相",
+            "costs": "提前泄出一丝怀表背面藏暗槽的秘密增加年轻人孤注一掷风险",
+            "consequences": "镜辞收起暗红碎核并初次得知镇钟武道与怀表背面尚有第二层副槽"
+          },
+          "capacity": {
+            "resources": [
+              "铁火钳",
+              "铁皮炉",
+              "七年前镇钟秘闻"
+            ],
+            "permission": "店中长辈兼引路前辈",
+            "limits": "双目失明不直接出面迎客",
+            "evidence_refs": [
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "毁掉尸皮隐患并警戒镜辞护住人世刻度和暗红碎核",
+            "failure_path": "若灰烬不及时冲走可能留下裂隙焦味招来后续巡查",
+            "opposition": "死人壳残留恶臭与怀表退格不可逆法则"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 4,
+              "end_line": 5,
+              "quote": "- **器物全称**：沈竹七年前失踪前留给镜辞的**「银灰双环旧怀表」**。",
+              "access": "memory",
+              "acquisition": "七年前随沈竹共碎三母表并见证怀表改造",
+              "boundary": "知晓十一格止逆锁与背面藏副槽，不提前透露第三卷后母钟完整位置",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JC",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "强忍反胃收起暗红碎核，听完守钟人点拨后铲灰出门倒进雨水井",
+          "gates": {
+            "knows": "刚用三寸钢针与八角重铜锤击毙剥皮壳老张头，怀表已自动退至第八格",
+            "wants": "清理店里死尸黑灰，保住有用战利品碎核并弄清沈竹去向",
+            "fears": "黑灰留味招来第二只怪物，或怀表再退下去让自己彻底变成陌路人",
+            "capability": "一阶校眼二阶绷弦基础体魄、铁锹铁簸箕",
+            "no_plot": "哪怕没有后续剧情，半夜刚在店铺砸死怪物也必须清走焦灰、留下碎核保命",
+            "costs": "怀表退三格导致与街坊生灵气机疏离",
+            "consequences": "携带碎核下街倒灰，随即在巷口触发小煤球狂吠陌路的代价验证"
+          },
+          "capacity": {
+            "resources": [
+              "铁锹",
+              "铁簸箕",
+              "八角重铜锤"
+            ],
+            "permission": "钟表行实际守夜掌柜",
+            "limits": "疲惫震手且对怀表背面机制尚只知皮毛",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "毁灭交手痕迹、留存碎核继续追查假芽与沈竹线",
+            "failure_path": "门口泥印已暴露在夜雨街道，无法瞒过随后赶到的专业猎手",
+            "opposition": "浓烈裂隙核焦臭难以彻底遮盖"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC9",
+              "start_line": 9,
+              "end_line": 9,
+              "quote": "| E003 | 读者看到镜辞首杀剥皮壳、拿到安平里502铜齿轮，且假芽在巷口暗中替他断后 | 第3章 |",
+              "access": "observation",
+              "acquisition": "第3章亲手完成老张头首杀并取出北河铜齿轮",
+              "boundary": "仅知怀表退格掉亲近感与碎核出自壳体，尚未见过三阶以上或白塔人",
+              "certainty": "known",
+              "available_chapter": 3,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "雨后旧货市场巷口与钟表行门口",
+      "story_time": {
+        "label": "第二日深夜至凌晨一点",
+        "tick": 2
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ"
+      ],
+      "actors_offstage": [
+        "C_SZ"
+      ],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "C_JC",
+          "order": 3,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "遭小煤球陌路狂吠后稳住心神回店收拾卷帘门，冷静接下姜霁持枪夜访审问",
+          "gates": {
+            "knows": "守钟人刚才已预警退三格会让人世线松脱，而门外持枪女子来自剥壳人总局三组",
+            "wants": "弄清对方底细并借店里灯光和寸镜反制持枪逼问",
+            "fears": "对方不讲道理直接开枪或强行带走怀表与沈竹线索",
+            "capability": "八角重铜锤与淬火钢针在手边，且具备镇钟校眼观察力",
+            "no_plot": "突遭陌生持枪人踢门逼问沈竹手法，冷硬护短性格决定他不会跪地求饶而会先抓破绽反制",
+            "costs": "暴露钟表行与沈竹手法关联",
+            "consequences": "为下一章看穿姜霁虎口暗伤达成交易做好铺垫"
+          },
+          "capacity": {
+            "resources": [
+              "寸镜",
+              "工作台工具"
+            ],
+            "permission": "旧货市场钟表行实际守夜店主",
+            "limits": "面对消音手枪近距离锁定不能盲目暴起",
+            "evidence_refs": [
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "摸清剥壳人来意并保住手中铜锤与怀表",
+            "failure_path": "若言语刺激过度可能逼使高度戒备的姜霁当场击发试探",
+            "opposition": "姜霁消音手枪随时可激发"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 4,
+              "end_line": 4,
+              "quote": "- 核心事件：守钟人焚烧剥皮壳残皮并道出壳靠顶替活人长死接缝的规则；镜辞出门倒灰水时被喂了三年的黑狗小煤球炸毛狂吠，具象化怀表退格的人世剥离代价；凌晨剥壳人姜霁持枪夜访。",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A1",
+              "acquisition": "方才守钟人在炉边点破怀表退格人世剥离代价",
+              "boundary": "不知姜霁手腕旧伤实情，直到下章亮寸镜",
+              "certainty": "known",
+              "available_chapter": 4,
+              "available_order": 1,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_SZ",
+          "order": 4,
+          "story_tick": 2,
+          "kind": "inaction",
+          "choice": "退回后间帘后听声不露面，留给镜辞与剥壳人当面周旋试探",
+          "gates": {
+            "knows": "剥壳人追着沈竹绝活而来，绝非普通街道治安员",
+            "wants": "考验镜辞面对官方猎手能否靠自己眼力站稳脚跟",
+            "fears": "自己露面直接暴露七年前碎表残脉",
+            "capability": "年迈盲眼但听风辨位极敏，藏在后间布帘后拎铁火钳随时兜底",
+            "no_plot": "老狐狸守钟人向来深居简出，能不动就不替年轻人挡嘴炮",
+            "costs": "让镜辞独自承受第一轮枪口压迫",
+            "consequences": "逼出镜辞下一章主动看穿姜霁虎口虫患翻盘"
+          },
+          "capacity": {
+            "resources": [
+              "后间布帘与盲感听觉"
+            ],
+            "permission": "幕后老掌柜与镇钟人长辈",
+            "limits": "年老盲眼不便正面枪战",
+            "evidence_refs": [
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "让镜辞独立应付盘查并在必不得已时才后方保底",
+            "failure_path": "若真擦枪走火仍需拎锤强援",
+            "opposition": "姜霁是剥壳人总局资深三组长，枪口锁定极死且嗅觉极其警觉"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC3",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "  - 七年前与沈竹一起杀入源裂缝拆碎三只母表，瞎了一双眼睛后隐居旧货市场，替沈竹看护十四岁的镜辞与店里的铁炉子整整七年。",
+              "access": "memory",
+              "acquisition": "多年隐居旧市场回避官面追踪的习惯",
+              "boundary": "不知姜霁虎口内伤与个人过往",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A5",
+          "actor_id": "C_JJ",
+          "order": 5,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "持消音手枪拍出监控截图与碎军表，自报剥壳人总局十二外勤序列三组身份逼问沈竹传人",
+          "gates": {
+            "knows": "东桥巷12号跟丢低阶剥皮壳后泥印通向此店，且现场弥漫裂隙核焦臭、工具符合沈竹手法",
+            "wants": "追查漏网剥皮壳下落并查明沈竹是否尚在人间",
+            "fears": "剥皮壳混入闹市再度杀人，或者老派镇钟人与壳巢暗中勾结",
+            "capability": "三阶行动组长权限、制式消音手枪、现场侦查力",
+            "no_plot": "两年前曾因错信而亲手击毙半壳化老队长，职责和创伤都会逼她直接拔枪锁人",
+            "costs": "暴露自身虎口旧伤握枪不稳的破绽给极擅长细微观察的修表匠",
+            "consequences": "亮明总局十二外勤序列背景，触发下章镜辞挑虫换情报结盟"
+          },
+          "capacity": {
+            "resources": [
+              "消音手枪",
+              "东桥巷监控截图",
+              "碎军表"
+            ],
+            "permission": "剥壳人总局第三行动组组长",
+            "limits": "虎口主虫暗痛导致无名指慢半拍",
+            "evidence_refs": [
+              "SRC4",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "强行镇住嫌疑人撬出沈竹与剥皮壳真相",
+            "failure_path": "对方若实打实站在人类阵营，只靠枪口压不住深藏不露的修表绝活",
+            "opposition": "钟表行年轻人眼神沉冷且手边重锤钢针顺手"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 7,
+              "end_line": 7,
+              "quote": "  - 两年前在城南行动中曾被一头长死接缝的高阶壳欺骗，亲手开枪打死过已经半壳化的老队长，从此养成了冷硬多疑、不信眼泪、只信弹匣和现场证据的铁血做派。",
+              "access": "observation",
+              "acquisition": "追踪泥水印与嗅闻现场烧焦裂隙核臭味、辨认三寸钢针与重锤印",
+              "boundary": "尚不知镜辞拥有寸镜与怀表能力，也不知他将看穿自己虎口暗伤",
+              "certainty": "known",
+              "available_chapter": 3,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第4章修订涉及焚尸明律、小煤球翻脸与姜霁夜访全部三幕及三名核心人物（守钟人、镜辞、姜霁）与动物布景小煤球。",
+    "background_only": [
+      {
+        "name": "小煤球",
+        "reason": "流浪黑狗受怀表气机变化刺激本能狂吠，无语言策略抉择"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "对照第3章首杀完结、细纲_第004章、怀表机制与力量体系扩容设定做七关语义核查",
+    "basis": "守钟人烧毁残皮后点出镇钟武道校眼绷弦底子及怀表内外双层机芯（凡尘止逆锁与背面银钢副槽），完全契合其老牌镇钟人与七年前碎表见证者身份；小煤球陌生狂吠与姜霁亮明剥壳人总局三组长身份接续严密，不提前泄第二卷拆核细节。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}

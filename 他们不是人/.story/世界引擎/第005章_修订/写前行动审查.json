@@ -1,0 +1,437 @@
+{
+  "schema_version": 1,
+  "mode": "revision",
+  "chapter": 5,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "fc559a371b16b7f360616dce5cecc767ddd3ebc5d3726bd17398e989a5b2383b",
+      "state_revision": 42,
+      "last_committed_chapter": 30
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第005章.md",
+      "sha256": "39b7783ef0cbd127fea76bf40aeb14df2d73cd642fff9e8ecbb1b598593ae5ec",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "1810212d855ecfb0c97a1dc47728f26f23c5862a2391725734f246bf985dfd35",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6352ef245941eb0b6a6f39d8be1a646c1cdbb70ec2bf897633adb86039be7097",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/陈屿.md",
+      "sha256": "5c6182be2448a561a237f1b63d4e8fc715a2c5947c47d3d88a61b3c7e603cb5b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "设定/势力/白塔.md",
+      "sha256": "9fba3e0af240d172d9c26818a512a95561cc3ba07a77c6d3620cd1cb89d8e6af",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC6",
+      "path": "设定/势力/剥壳人.md",
+      "sha256": "e9489efd8cc1be69fab5ef06551ed77e66e54ba8b93b24a2a028659175d1d2df",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC7",
+      "path": "设定/势力/壳巢与恒泰设施.md",
+      "sha256": "e6ee331f53b2c01d8a7f60574787d4b653eb64e5e352739853cc1087bcc5e836",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC8",
+      "path": "设定/角色声线节奏卡.md",
+      "sha256": "f9b87dc92bcafb012d7e002260a905cc87c2f049d790a643b4356dbcd750cd9b",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC9",
+      "path": "追踪/时间线/读者已知.md",
+      "sha256": "0d1915bfbc143e04b98cbfe88cb31dfa7b9d5f61ab895002f8fdf84c74598a4f",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "C_JC",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "凭寸镜拆穿姜霁左腕隐疾换取东桥巷灰衬衫与安平里502线索，并在晨间冷硬接下陈屿登门试探",
+      "without_protagonist": "没有镜辞镇钟校眼与淬火钢针手艺，姜霁腕间二阶侵蚀丝无解，也无人敢接陈屿上门挑衅",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "| **镜辞** | 平时懒散毒舌、爱跟老街坊斗嘴；动起手来字少音冷、刀刀直指要害 | 越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠，直接用行动破局 | 优柔寡断、满嘴“先留证再说”的文书员 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "| E004 | 读者清楚看到怀表退三格后连喂了三年的狗都认不出镜辞，且剥壳人姜霁已找上门 | 第4章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_JJ",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "压下试探确认对方救命本事后交换陈屿及安平里502情报，借外手清除十二时辰司医官断言无解的虎口侵蚀虫",
+      "without_protagonist": "哪怕没有镜辞，她也在全力追查七大缝皮宗师外围裁缝陈屿与502室异常协查通报",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 7,
+          "end_line": 7,
+          "quote": "| **姜霁** | 干练利落、指令精准、不讲废话；对信任的人会把后背毫无保留交出去 | 左手虎口旧伤痛时咬牙硬忍；记忆被剥离后客气而警惕，带着职业调查官的疏离 | 毫无主见的背景板花瓶 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC9",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "| E004 | 读者清楚看到怀表退三格后连喂了三年的狗都认不出镜辞，且剥壳人姜霁已找上门 | 第4章 |"
+        }
+      ]
+    },
+    {
+      "id": "C_CY",
+      "name": "陈屿",
+      "protagonist": false,
+      "own_goal": "顺北河与老张头死线摸到钟表行，拎芽染血帆布包登门试探修表匠虚实并伺机毁手灭口",
+      "without_protagonist": "作为七大缝皮宗师外围三阶小裁缝，凡手下剥皮壳折损且北河砖缝被抠必顺线清算收尾",
+      "voice_refs": [
+        {
+          "source_id": "SRC8",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "| **陈屿** | 斯文温和、推金丝眼镜带笑意，骨子里透着病态艺术家的优雅残忍 | 被拆穿或吃亏后瞬间撕破斯文，暴戾怨毒、不择手段 | 纯粹发通知书的外包客服 |"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 5,
+          "end_line": 5,
+          "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S1",
+      "order": 1,
+      "location": "钟表行工作台前",
+      "story_time": {
+        "label": "第三日凌晨一点十分",
+        "tick": 1
+      },
+      "actors_onstage": [
+        "C_JC",
+        "C_JJ"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A1",
+          "actor_id": "C_JC",
+          "order": 1,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "点破姜霁虎口腕骨深处白塔十二时辰司医官也挑不净的侵蚀丝，开出先交情报后拔浅虫的账单",
+          "gates": {
+            "knows": "第4章末尾己见姜霁左腕异常、且靠十倍寸镜可透视皮下死结与侵蚀细线",
+            "wants": "摆脱枪口压迫并摸清东桥巷灰衬衫以及502室与铜齿轮之间的关联",
+            "fears": "被动挨枪子或放任敌人抢先收走502室另一半线索",
+            "capability": "十倍单眼寸镜、三寸淬火钢针与七年修表稳腕功底",
+            "no_plot": "市井毒舌又狠辣的修表匠被外人拿枪指着鼻子，肯定先抓对方最致命软肋反客为主讲价码",
+            "costs": "暴露自己手艺深浅并招来官方剥壳人持续捆绑",
+            "consequences": "逼得姜霁关枪交底换取挑除浅层侵蚀虫"
+          },
+          "capacity": {
+            "resources": [
+              "十倍修表寸镜",
+              "淬火钢针",
+              "酒精灯"
+            ],
+            "permission": "钟表行现场主人与唯一能治侵蚀者",
+            "limits": "深层主虫缠住腕骨神经，今晚缺碎核与工具只够先挑浅层",
+            "evidence_refs": [
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "反手压住枪口拿到陈屿与502情报并建立暂盟",
+            "failure_path": "若挑针失手刺破桡动脉，姜霁可能翻脸当场扣扳机",
+            "opposition": "姜霁极深职业警惕与腕骨顽固黑丝"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 9,
+              "end_line": 9,
+              "quote": "- 章首钩子：面对姜霁黑洞洞的消音枪口，镜辞眼皮都没抬，直接点破她左手虎口旧伤让她在拔枪时无名指慢了零点二秒",
+              "access": "observation",
+              "acquisition": "方才第4章近距对峙时借白炽灯瞥见姜霁左腕握枪滞涩与旧刀疤",
+              "boundary": "尚未看破陈屿真名与502室具体案情，只待对方开口交换",
+              "certainty": "known",
+              "available_chapter": 4,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "actor_id": "C_JJ",
+          "order": 2,
+          "story_tick": 1,
+          "kind": "action",
+          "choice": "收枪拍手掌上台面，交代陈屿系七大缝皮宗师外围三阶小裁缝与安平里502双儿子协查情报换取救治",
+          "gates": {
+            "knows": "总局黑名单记有陈屿底细（七大缝皮宗师外围跑腿的三阶裁缝）及昨日502室协查警情",
+            "wants": "保住自己再撑不过入冬的左手臂并追查东桥巷剥皮壳幕后操盘者",
+            "fears": "虎口侵蚀虫入心脉被白塔十二时辰司医官强制处置甚至毙命",
+            "capability": "三组长情报权限与亲自到场承担风险的魄力",
+            "no_plot": "铁血猎手绝不甘心坐等废手，既然眼前人一眼报准病灶且沈竹路数吻合，当场用黑名单换治手最划算",
+            "costs": "泄出总局内部黑名单情报并留下私人加密名片担责",
+            "consequences": "左臂浅层黑丝拔除，镜辞获知陈屿与502关键底牌"
+          },
+          "capacity": {
+            "resources": [
+              "三组协查情报名录",
+              "私人加密频段名片"
+            ],
+            "permission": "剥壳人总局第三行动组组长现地处置权限",
+            "limits": "不能无故调动白塔重兵强压，须先用个人情报交易破冰",
+            "evidence_refs": [
+              "SRC3",
+              "SRC5",
+              "SRC6",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "压下老张头现场并治好左手建立强强外援合作",
+            "failure_path": "若镜辞徒有虚名或心怀恶意，当面拍下左手便陷被动",
+            "opposition": "浅虫贴近桡动脉挑取剧痛极高"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 5,
+              "end_line": 5,
+              "quote": "- **身份**：壳巢暗面「七大缝皮宗师」外围最末流的三阶半壳小裁缝学徒，表面挂靠恒准外包与恒泰设施当技术员（曾化名周远），黑名单代号「裁缝」。",
+              "access": "document",
+              "acquisition": "剥壳人总局内部黑名单档案及昨日502室协查通报",
+              "boundary": "仅掌握陈屿作为七大缝皮宗师外围三阶裁缝的活动范围，不知母钟藏在陈启明灵位后",
+              "certainty": "known",
+              "available_chapter": 0,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "S2",
+      "order": 2,
+      "location": "早市钟表行内",
+      "story_time": {
+        "label": "第三日清晨六点半至七点",
+        "tick": 2
+      },
+      "actors_onstage": [
+        "C_CY",
+        "C_JC"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "A3",
+          "actor_id": "C_CY",
+          "order": 3,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "化名周远拎着芽的染血帆布包与旧石英表清晨直入钟表行，借换电池发难试探镜辞",
+          "gates": {
+            "knows": "老张头昨夜未归命丧于此、北河桥洞砖缝遭抠，且半夜从北河追击中截获芽扔下的带有此店修表收据之帆布包",
+            "wants": "敲山震虎确认修表匠底细并借递表指腹裂隙蚀液废其双手顺走沈竹怀表",
+            "fears": "昨夜失手丢包与折损人手一事走漏给上面缝皮宗师招来严惩",
+            "capability": "三阶半壳裁缝伪装演技、贴身蚀液毒手与门外埋伏两头猎犬",
+            "no_plot": "心狠手辣又沉迷猫鼠把戏的裁缝拿到带店名收据的帆布包后，肯定趁白日大摇大摆上门亲自踩盘杀鸡儆猴",
+            "costs": "过早向未知深浅的镜辞亮明自己就是灰衬衫",
+            "consequences": "正撞上老陈刚忘记芽、心神大震却高度戒备的镜辞"
+          },
+          "capacity": {
+            "resources": [
+              "芽的染血帆布包",
+              "旧石英表",
+              "暗藏裂隙蚀液"
+            ],
+            "permission": "壳巢外围三阶半壳行动骨干",
+            "limits": "大白天在闹市不能直接变身撕咬，先借换电池试手",
+            "evidence_refs": [
+              "SRC4",
+              "SRC7"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "逼镜辞乱了阵脚出手接表当场中蚀液废手",
+            "failure_path": "若对方早有防备或能借反光看穿接缝，白日突袭反会吃大亏",
+            "opposition": "镜辞已先一步通过姜霁获悉其画像特征"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 6,
+              "end_line": 6,
+              "quote": "- **特征**：左眉上方有浅白色旧疤，右手小指微弯伸不直，鼻梁上架金丝边眼镜，穿熨烫平整的浅灰衬衫。",
+              "access": "observation",
+              "acquisition": "昨日下午东桥巷踩点、凌晨追杀获包并拆看收据店址",
+              "boundary": "不知姜霁已向镜辞点透自己身份特征，更不知镜辞拥有银灰旧怀表能停摆卡齿",
+              "certainty": "known",
+              "available_chapter": 4,
+              "author_only": false
+            }
+          ]
+        },
+        {
+          "id": "A4",
+          "actor_id": "C_JC",
+          "order": 4,
+          "story_tick": 2,
+          "kind": "action",
+          "choice": "忍住老陈遗忘芽的震痛，凭左眉旧疤与微弯小指一秒认出陈屿并冷静稳坐工作台前备战",
+          "gates": {
+            "knows": "姜霁凌晨亲口给出的陈屿左眉旧疤与小指特征，加之帆布包属芽随身之物",
+            "wants": "先确认芽真伪生死并借桌边纯银表蒙反光看穿陈屿来路",
+            "fears": "仓促翻脸若真芽还在陈屿手中反会投鼠忌器",
+            "capability": "一阶校眼与桌抽屉内备齐的淬火钢针及八角重铜锤",
+            "no_plot": "修表匠遇事最懂得看机芯留后手，当面认出死仇且见对方拎包而来必先定神查验帆布包与来意",
+            "costs": "承受敌强我弱的正面压迫",
+            "consequences": "精准承接第6章借表蒙照缝破毒计并觉醒卡齿砸断陈屿右臂"
+          },
+          "capacity": {
+            "resources": [
+              "备用钢针",
+              "八角重铜锤",
+              "纯银怀表表蒙"
+            ],
+            "permission": "修表铺店主面对挑衅客人的自卫处置",
+            "limits": "尚未确认门口是否另有伏兵",
+            "evidence_refs": [
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "success_guaranteed": false,
+            "intent": "暗中备针借表蒙窥死确认芽安危后择机暴起翻脸",
+            "failure_path": "若稍露破绽先碰石英表就会着了蚀液毒招",
+            "opposition": "陈屿笑里藏刀随时翻脸发难"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 14,
+              "end_line": 14,
+              "quote": "- 发展：镜辞以治伤为筹码，逼姜霁吐出灰衬衫真名陈屿（代号裁缝）以及安平里502室出现真假两个儿子的情报",
+              "access": "planned-earlier-action",
+              "producer_action_id": "A2",
+              "acquisition": "凌晨A2交易中亲耳听姜霁给出陈屿全套外貌底细",
+              "boundary": "尚不知陈屿只是三阶半壳裁缝亲自带来涂毒石英表且门外藏犬",
+              "certainty": "known",
+              "available_chapter": 5,
+              "available_order": 2,
+              "author_only": false
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "第5章修订覆盖凌晨挑虫换情报结盟与清晨老陈失忆、陈屿拎包登门两场戏及全部行动者（镜辞、姜霁、陈屿）；守钟人与老陈作旁观见证处理。",
+    "background_only": [
+      {
+        "name": "守钟人",
+        "reason": "退回布帘后只静观其变，不介入台前交易"
+      },
+      {
+        "name": "老陈",
+        "reason": "受抹除规则影响自然流露忘记芽的日常闲谈，未做阵营抉择"
+      }
+    ]
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "main-agent-solo",
+    "method": "对照第4章末尾持枪对峙与第5章细纲、大长篇势力设定做七关语义复核",
+    "basis": "第5章挑虫交易合乎姜霁怕废手又重证据的人设，新增点明陈屿只是七大缝皮宗师外围跑腿的三阶小裁缝与十二时辰司驻院医官，自然撑开后续大长篇上限不泄后期底牌。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": "",
+      "sha256": ""
+    },
+    "candidate": {
+      "path": "",
+      "sha256": ""
+    },
+    "scene_results": [],
+    "foreshadow_deltas": [],
+    "manual_review": {
+      "status": "unreviewed",
+      "reviewer": "",
+      "method": "",
+      "basis": "",
+      "checks": {
+        "actual_coverage": "unreviewed",
+        "causality": "unreviewed",
+        "voice": "unreviewed",
+        "knowledge_bounds": "unreviewed",
+        "consequences": "unreviewed",
+        "foreshadow": "unreviewed"
+      }
+    }
+  }
+}
