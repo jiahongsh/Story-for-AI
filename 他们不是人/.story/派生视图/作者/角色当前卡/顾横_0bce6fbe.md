@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 34,
-  "last_committed_chapter": 28,
+  "state_revision": 36,
+  "last_committed_chapter": 30,
   "range": [
     1,
-    28
+    30
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "c7fa22de0e70be6c28a38fe6ad5ea388bb03b5cb0a4b14cc625a19f2a638ccfb"
+      "sha256": "cbdaaea9a285a90e00eacb082961057d0e426d011d68aca8973545802266909b"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -132,6 +132,14 @@
       "sha256": "84ff6e6b0602964f224b206e29e4483a701439639f81465c54f3b3fd626f15c7"
     },
     {
+      "path": "正文/第029章_门槛结满白霜_谁敢松开铜锤.md",
+      "sha256": "07f4298055d0e6c07eaeae86d33e89d6e97c71f66f5167886a7aa41d11774fde"
+    },
+    {
+      "path": "正文/第030章_门修好了_他却成了外乡人.md",
+      "sha256": "e160f016cbe985264e1779305d703e1f9cc7629085d6f43b578059e941c19575"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "96955b3c61add9c3c6e7a983f9326513f93f3ba71765422ddf291323dccf1fe0"
     },
@@ -242,22 +250,30 @@
     {
       "path": "追踪/逐章记录/第028章.md",
       "sha256": "72a308e92ae9a0a4ab1f9feaeaf48e01d0aba3a1686b1f6b3f3dcc443c5fb270"
+    },
+    {
+      "path": "追踪/逐章记录/第029章.md",
+      "sha256": "471c5958dc1df738783249a251b24f9b5c627ff02d47cd41d78a55c9bfa546dd"
+    },
+    {
+      "path": "追踪/逐章记录/第030章.md",
+      "sha256": "2d9be06def55b40878dff97b6814fb40a659277cdff0db7f0d912fabcd7e9712"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第28章状态）
+# 顾横 当前卡（第30章状态）
 
 - identity：剥壳人第二行动组队长，姜霁老搭档
-- location：旧货市场南口货仓铁门外侧
-- goal：安抚受惊邻里摊贩并稳住南口外围不再受溃逃白塔余孽滋扰
-- state：双管重霰弹连鸣彻底逐出程晦残部，按住吓呆的老陈却对提锤年轻人毫不知情
-- abilities_resources：双管重霰弹枪；二组外围警哨；加密电台
-- relationships：完全视镜辞为路过野生高手而保持戒备，全力护紧姜霁与市场平民
-- knowledge：东巷强拆官长被打残逃出，但铺里地底忽然传出裂石喷雾异象
-- open_threads：卷末风波后如何留在南门与姜霁、市场民众彻底交割
+- location：退入城东外线隐蔽警哨区
+- goal：保稳徐正并清理外围枪战痕迹防白塔督察清晨发难借口抄街
+- state：便签缺白全不认得镜辞过往，只客气抱拳道谢这位外地猛汉便率二组先撤
+- abilities_resources：双管重霰弹枪；二组外围机动哨线；加密电台
+- relationships：与镜辞彻退回纯路人豪爽致意关系，全力配合老搭档姜霁
+- knowledge：徐正已稳且东巷普通街坊尽数保住
+- open_threads：第二卷起从外线继续掩护姜霁与平民防线
 
 ## 固定性格、声线与历史
 
