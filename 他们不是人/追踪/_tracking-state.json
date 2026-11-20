@@ -3,7 +3,7 @@
   "characters": {
     "假陈骁": {
       "abilities_resources": [
-        "一至二阶护体壳力与活人锚点伪装体温",
+        "铁脊以上护体壳力与活人锚点伪装体温",
         "磨亮厚菜刀与安平里本土盯梢掩护"
       ],
       "goal": "一步不离护住七十岁盲父安生终老，每晚盯紧安平里周边偷跑出入的城南冷链黑车车牌传回东巷",
@@ -219,11 +219,11 @@
     "recent_chapters": [
       {
         "chapter": 35,
-        "summary": "镜辞掀甲镊碎陆寒三阶核并助芽双杀二阶副手，赵闻川残躯被远程牵丝拖向总库、芽送走林秀母女折返；镜辞携停尸门卡炉边合炼三核点亮怀表背盘3/12格血弦（第1格零损）后隐退。"
+        "summary": "镜辞掀甲镊碎陆寒走汞核并助芽双杀铜章副手，赵闻川残躯被远程牵丝拖向总库、芽送走林秀母女折返；镜辞携停尸门卡炉边合炼三核点亮怀表背盘3/12格血弦（第1格零损）后隐退。"
       },
       {
         "chapter": 36,
-        "summary": "镜辞回东巷耗1格血弦试「倍速走针」（余2格）探明二阶极限，借老陈证第1格零损后收姜霁暗箱夜潜信；芽持502齿轮重连假陈骁暗哨，夜刷卡抵停尸门闻数十柜齐响。"
+        "summary": "镜辞回东巷耗1格血弦试「倍速走针」（余2格）探明绷弦极限，借老陈证第1格零损后收姜霁暗箱夜潜信；芽持502齿轮重连假陈骁暗哨，夜刷卡抵停尸门闻数十柜齐响。"
       },
       {
         "chapter": 37,
@@ -274,7 +274,7 @@
       "planned_resolution_chapter": 7,
       "planted_chapter": 4,
       "status": "已回收",
-      "summary": "姜霁左手虎口两寸刀疤下藏着阴雨天作痛的二阶裂隙侵蚀暗伤",
+      "summary": "姜霁左手虎口两寸刀疤下藏着阴雨天作痛的铁脊裂隙侵蚀暗伤",
       "updated_chapter": 7
     },
     "F006": {
@@ -355,7 +355,7 @@
       "planned_resolution_chapter": 28,
       "planted_chapter": 15,
       "status": "已回收",
-      "summary": "白塔强拆东巷四阶主将程晦遭重创击溃并被顾横逐出南口，东巷强拆危机彻底破局",
+      "summary": "白塔强拆东巷黑令主将程晦遭重创击溃并被顾横逐出南口，东巷强拆危机彻底破局",
       "updated_chapter": 28
     },
     "F015": {
@@ -418,7 +418,7 @@
       "planned_resolution_chapter": 35,
       "planted_chapter": 31,
       "status": "已回收",
-      "summary": "镜辞暴力掀甲斩杀陆寒三人，拆一三阶两二阶核合提充入怀表背盘亮起3/12格血契弦，正面第1格纹丝未动",
+      "summary": "镜辞暴力掀甲斩杀陆寒三人，拆一走汞两铜章核合提充入怀表背盘亮起3/12格血契弦，正面第1格纹丝未动",
       "updated_chapter": 35
     },
     "F022": {
@@ -434,7 +434,7 @@
   "imported_through_chapter": 0,
   "last_committed_chapter": 37,
   "schema_version": 4,
-  "state_revision": 58,
+  "state_revision": 84,
   "timeline": {
     "E001": {
       "characters": [
@@ -596,8 +596,8 @@
       ],
       "first_recorded_chapter": 11,
       "id": "E011",
-      "objective_fact": "姜霁砸碎白塔密令终端随镜辞潜入恒泰地下三层，见满墙停在02:17的血表与装满旧市场失踪活人的货车；两人秒杀两名三阶缝合守卫后触发落锁警报，周谨与陈屿放六道兽闸倒计时七分钟",
-      "reader_knowledge": "读者看到姜霁彻底站队镜辞、首秀捉影镊秒杀三阶守卫，也看到白塔修正官周谨与陈屿合力封锁地下三层",
+      "objective_fact": "姜霁砸碎白塔密令终端随镜辞潜入恒泰地下三层，见满墙停在02:17的血表与装满旧市场失踪活人的货车；两人秒杀两名走汞缝合守卫后触发落锁警报，周谨与陈屿放六道兽闸倒计时七分钟",
+      "reader_knowledge": "读者看到姜霁彻底站队镜辞、首秀捉影镊秒杀走汞守卫，也看到白塔修正官周谨与陈屿合力封锁地下三层",
       "reveal_chapter": 11,
       "reveal_status": "已揭示",
       "story_time": "第四日凌晨两点零三分至两点十分",
@@ -630,8 +630,8 @@
       ],
       "first_recorded_chapter": 13,
       "id": "E013",
-      "objective_fact": "芽独力斩杀余下两头二阶猎犬并扑入二楼扣住陈屿左腕；镜辞与姜霁借货车远光灯与纯银表盘破除周谨视觉残像，锤断其左膝并用捉影镊抽断其左眼至耳后主筋；周谨濒死触发地面白塔封锁警报（涉及：镜辞、芽、姜霁、周谨、陈屿）",
-      "reader_knowledge": "读者目睹镜辞零消耗硬拼三阶修正官将其废掉半边躯体、芽冲上二楼压制陈屿，紧接被周谨临死触发的地面封锁警报推入新一轮绝命突围",
+      "objective_fact": "芽独力斩杀余下两头铁脊猎犬并扑入二楼扣住陈屿左腕；镜辞与姜霁借货车远光灯与纯银表盘破除周谨视觉残像，锤断其左膝并用捉影镊抽断其左眼至耳后主筋；周谨濒死触发地面白塔封锁警报（涉及：镜辞、芽、姜霁、周谨、陈屿）",
+      "reader_knowledge": "读者目睹镜辞零消耗硬拼银边修正官将其废掉半边躯体、芽冲上二楼压制陈屿，紧接被周谨临死触发的地面封锁警报推入新一轮绝命突围",
       "reveal_chapter": 13,
       "reveal_status": "已揭示",
       "story_time": "第四日凌晨两点二十三分",
@@ -699,7 +699,7 @@
       ],
       "first_recorded_chapter": 17,
       "id": "E017",
-      "objective_fact": "镜辞三秒照缝拆穿两年前韩铭给老队长注液真相；守钟人火钳破窗救老陈，镜辞捉影镊抽断韩铭紫金总筋交姜霁亲自枪决并清灭两名三阶护卫；芽截停指挥车救出掌握排水暗渠蓝图的市政工程师徐正，随后参号母表突遭底渠逆吸（涉镜辞等）",
+      "objective_fact": "镜辞三秒照缝拆穿两年前韩铭给老队长注液真相；守钟人火钳破窗救老陈，镜辞捉影镊抽断韩铭紫金总筋交姜霁亲自枪决并清灭两名走汞护卫；芽截停指挥车救出掌握排水暗渠蓝图的市政工程师徐正，随后参号母表突遭底渠逆吸（涉镜辞等）",
       "reader_knowledge": "读者看清两年前老赵遇害黑幕并见证韩铭伏诛雪恨，刚救出关键工程线人徐正便得知陈屿正顺脚底主渠抽死参号母表",
       "reveal_chapter": 17,
       "reveal_status": "已揭示",
@@ -769,7 +769,7 @@
       "first_recorded_chapter": 21,
       "id": "E021",
       "objective_fact": "守钟人拉炉淬冷助镜辞将弯柄重锤锤直并加焊三寸淬火钢倒钩，撬出焦牌夹层西北废弃变电暗井路线；姜霁点清两匣银弹定下底线同行。中午三人避开路面关卡切入西北废弃变电三十米竖井，正遇严彻率三名工兵与三头铜牙犬往门上焊高爆封井雷，滴落血水惊动严彻抬头。",
-      "reader_knowledge": "读者看三人修妥利器借暗井避开严密封锁，却在门前十米与倒计时五分钟爆封的白塔三阶半机械队长提前狭路照面。",
+      "reader_knowledge": "读者看三人修妥利器借暗井避开严密封锁，却在门前十米与倒计时五分钟爆封的白塔银边半机械队长提前狭路照面。",
       "reveal_chapter": 21,
       "reveal_status": "已揭示",
       "story_time": "第四日清晨七点十分至午后一点零五分",
@@ -785,7 +785,7 @@
       ],
       "first_recorded_chapter": 22,
       "id": "E022",
-      "objective_fact": "镜辞、姜霁、芽在零号外围门前配合破甲斩杀三阶半机械官严彻并剪断封井高爆雷夺下摔裂便携终端；三人推入零号外围排废中廊见两具被陈屿剥走双臂且缝口齐整的白塔先遣尸骸与血字，陈屿换臂退向深井底座，便携终端骤然亮起微光。",
+      "objective_fact": "镜辞、姜霁、芽在零号外围门前配合破甲斩杀银边半机械官严彻并剪断封井高爆雷夺下摔裂便携终端；三人推入零号外围排废中廊见两具被陈屿剥走双臂且缝口齐整的白塔先遣尸骸与血字，陈屿换臂退向深井底座，便携终端骤然亮起微光。",
       "reader_knowledge": "读者见证三人零耗第3格怀表智杀重甲清道夫，却随临死漏底与悬尸血字骇然惊觉陈屿已在井下生吞白塔先遣换装强臂，兜里碎终端重亮引出新悬念。",
       "reveal_chapter": 22,
       "reveal_status": "部分揭示",
@@ -801,7 +801,7 @@
       ],
       "first_recorded_chapter": 23,
       "id": "E023",
-      "objective_fact": "姜霁读出碎终端「第8次抹除·余2接触者」与「22:17并入零号主洗」彻底归队；三人破铅门入三十米零号外井见十倍漆黑巨钟，独木铁桥遭遇双肩黑金线接装四阶电弧铜臂的陈屿扑斩，桥头石缝现沈竹「零号表芯不在壳里，在……」半截壳盖与微湿半印。",
+      "objective_fact": "姜霁读出碎终端「第8次抹除·余2接触者」与「22:17并入零号主洗」彻底归队；三人破铅门入三十米零号外井见十倍漆黑巨钟，独木铁桥遭遇双肩黑金线接装黑令电弧铜臂的陈屿扑斩，桥头石缝现沈竹「零号表芯不在壳里，在……」半截壳盖与微湿半印。",
       "reader_knowledge": "读者见姜霁看清抹除八次实录彻底站回镜辞背后，随即随众人闯入十倍零号巨钟基座，直面换臂陈屿与沈竹断字壳盖兼湿印的双重高潮对撞。",
       "reveal_chapter": 23,
       "reveal_status": "部分揭示",
@@ -817,8 +817,8 @@
       ],
       "first_recorded_chapter": 24,
       "id": "E024",
-      "objective_fact": "三尺铁桥交锋中，姜霁点射破缝、芽借陈屿电弧引爆老火药饼炸废左四阶臂，镜辞守第3格不耗借余火反光三秒照缝后以淬火钢倒钩硬扯断其右四阶铜臂坠井；陈屿跌退巨钟基座露出胸心直连巨钟暗槽之黑金共生线，狂撞手动阀门半格迫使顶管抽雾暴颤。",
-      "reader_knowledge": "读者畅快目睹铁三角借手艺、火药与倒钩彻底扯废陈屿双四阶铜臂，随即被疯狗露出共生金丝强开半格抽吸阀拉东巷陪葬的惊险悬念抓紧心神。",
+      "objective_fact": "三尺铁桥交锋中，姜霁点射破缝、芽借陈屿电弧引爆老火药饼炸废左黑令臂，镜辞守第3格不耗借余火反光三秒照缝后以淬火钢倒钩硬扯断其右黑令铜臂坠井；陈屿跌退巨钟基座露出胸心直连巨钟暗槽之黑金共生线，狂撞手动阀门半格迫使顶管抽雾暴颤。",
+      "reader_knowledge": "读者畅快目睹铁三角借手艺、火药与倒钩彻底扯废陈屿双黑令铜臂，随即被疯狗露出共生金丝强开半格抽吸阀拉东巷陪葬的惊险悬念抓紧心神。",
       "reveal_chapter": 24,
       "reveal_status": "部分揭示",
       "story_time": "第四日午后两点四十五分至三点零二分",
@@ -868,7 +868,7 @@
       ],
       "first_recorded_chapter": 27,
       "id": "E027",
-      "objective_fact": "顾横轰胎截断南口，镜辞三人凭四发银弹、豆腐架与液压黑油混水救出守钟人，守钟人受第1格擦除陌生问贵姓，程晦撑四阶声盾封死门口。",
+      "objective_fact": "顾横轰胎截断南口，镜辞三人凭四发银弹、豆腐架与液压黑油混水救出守钟人，守钟人受第1格擦除陌生问贵姓，程晦撑黑令声盾封死门口。",
       "reader_knowledge": "读者看清第1格彻底抹净了守钟人七年情分却仍逼不住主角抬锤挡门，紧盯姜霁手按战术袋里的短杖拆件如何对付三丈外深水坑重甲。",
       "reveal_chapter": 27,
       "reveal_status": "部分揭示",
@@ -888,7 +888,7 @@
       "first_recorded_chapter": 28,
       "id": "E028",
       "objective_fact": "姜霁耗短杖件与4发银弹破盾，三人联手照缝锁簧碎炉击败程晦夺带丑时密印清拆黑令；老陈陌生畏缩避镜辞，后堂青砖崩裂狂喷参号失衡冻雾。",
-      "reader_knowledge": "读者在痛快智杀四阶重甲后刚见街坊视主角如陌路恶客，紧接着被崩裂喷雾的参号青砖拉向第一卷最后两章终局。",
+      "reader_knowledge": "读者在痛快智杀黑令重甲后刚见街坊视主角如陌路恶客，紧接着被崩裂喷雾的参号青砖拉向第一卷最后两章终局。",
       "reveal_chapter": 28,
       "reveal_status": "部分揭示",
       "story_time": "第四日午后四点二十五分",
@@ -973,8 +973,8 @@
       ],
       "first_recorded_chapter": 33,
       "id": "E033",
-      "objective_fact": "镜辞照缝揭穿十一个月前城南医院盗骨装发条真相，助赵闻川撬表掉出工钱与「负四 · 零柒炉」铜片后用捉影镊断爆保躯；母女避入卫生间，芽上三楼锁外铁门，陆寒携二阶二人破窗入客厅合围",
-      "reader_knowledge": "读者痛快惊叹「半夜拿刀原是为给妻女撬工钱留暗码」的惨烈反转，见镜辞不碰第1格拎倒钩铜锤独自挡在厕所门前迎战狂妄三阶陆寒三人组",
+      "objective_fact": "镜辞照缝揭穿十一个月前城南医院盗骨装发条真相，助赵闻川撬表掉出工钱与「负四 · 零柒炉」铜片后用捉影镊断爆保躯；母女避入卫生间，芽上三楼锁外铁门，陆寒携两名铜章破窗入客厅合围",
+      "reader_knowledge": "读者痛快惊叹「半夜拿刀原是为给妻女撬工钱留暗码」的惨烈反转，见镜辞不碰第1格拎倒钩铜锤独自挡在厕所门前迎战狂妄银边巡官陆寒三人组",
       "reveal_chapter": 33,
       "reveal_status": "部分揭示",
       "story_time": "第六日凌晨两点十七分至十九分",
@@ -988,7 +988,7 @@
       ],
       "first_recorded_chapter": 34,
       "id": "E034",
-      "objective_fact": "芽带伤破门扫翻一二阶副手卡住门槛并吼禁动第1格；镜辞死守底命退进一米五窄厨踹阀泼水，挨左肩剪伤完成双反光照缝，三针定另一副手左膝，撒生石灰迷眼后趁陆寒护颈弹开0.1秒散热缝，钢倒钩咬缝、捉影镊抵喉锁杀",
+      "objective_fact": "芽带伤破门扫翻一名铜章副手卡住门槛并吼禁动第1格；镜辞死守底命退进一米五窄厨踹阀泼水，挨左肩剪伤完成双反光照缝，三针定另一副手左膝，撒生石灰迷眼后趁陆寒护颈弹开0.1秒散热缝，钢倒钩咬缝、捉影镊抵喉锁杀",
       "reader_knowledge": "读者畅快目睹两位伤残底层硬用地形、冷水反光、钢针与生石灰拆碎三名白塔编制杀手阵型并抓出护颈死缝，热切紧盯第35章直接掀甲拆核上弦",
       "reveal_chapter": 34,
       "reveal_status": "部分揭示",
@@ -1023,7 +1023,7 @@
       "first_recorded_chapter": 36,
       "id": "E036",
       "objective_fact": "镜辞耗1格血弦试「倍速走针」（余2格）震裂掌伤，晨借老陈证零失忆并收姜霁暗箱短简；芽持502齿轮重联假陈骁盯冷链车，夜刷停尸门引数十铁柜齐响。",
-      "reader_knowledge": "读者看清二阶倍速极限与背盘不伤第1格铁律，见安平里暗哨接回及姜霁夜潜约期，末定于数十冷柜齐鸣悬念。",
+      "reader_knowledge": "读者看清绷弦倍速极限与背盘不伤第1格铁律，见安平里暗哨接回及姜霁夜潜约期，末定于数十冷柜齐鸣悬念。",
       "reveal_chapter": 36,
       "reveal_status": "部分揭示",
       "story_time": "第六日清晨五点半至深夜十一点半",
@@ -1071,36 +1071,36 @@
       "target": 2700
     },
     "11": {
-      "actual": 2938,
+      "actual": 2994,
       "author_range": {
         "max": 3400,
         "min": 2200
       },
-      "body_sha256": "23f4e87059ac1e9917322d6d1f6d56a0aa8820e6382323df65a9454a4e916347",
+      "body_sha256": "9a977cd1115a6431350e2dc2fe5adee9765720aad9ea0038d5ab6975ebf96e93",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2800
     },
     "12": {
-      "actual": 2942,
+      "actual": 2944,
       "author_range": {
         "max": 3500,
         "min": 2200
       },
-      "body_sha256": "5b4be970d9e2dfdfa0f08afb11962b807903c6affdbc96626d373292b44a9ffb",
+      "body_sha256": "12d8ac17d9933226b695e98d57995c54653816e2a6b0351c0001f0ed65199ee5",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "13": {
-      "actual": 3201,
+      "actual": 3200,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "5b0e9ce35c6dc67c9671642c35357a7713b91e8b46aa7f70069088cb82f8f945",
+      "body_sha256": "8c985e8c725dd7bbe0b25796683c445053204b3024415667e39bdcf3963c877d",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1112,19 +1112,19 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "c2e2960afa27c53e3aab6bd2a4fd577febbe9eb9849b3336b2f83c28d163c932",
+      "body_sha256": "c944e425bff88fd5d05e79839e1d97d62fedce6472f6d7d8578a87a90b5b793d",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "15": {
-      "actual": 3306,
+      "actual": 3327,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "d566998c50295d8bbf08452753d74bb890d465f968aa6a7685e98e84981dff5f",
+      "body_sha256": "17ef3dce2320efd7598d777fe6fc515a017b7aa2ac70b80045bd7afb91a8bce3",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1148,7 +1148,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "56cfae5db5aebb7ba1f53207ecd130f7e88eb46a7f58f91a1e9bd79cca0681ce",
+      "body_sha256": "72caff69dd8622d20709e76d7dbdf21a92f7b4926a37d16ef5662a536c2ac3ad",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1191,12 +1191,12 @@
       "target": 2600
     },
     "20": {
-      "actual": 2699,
+      "actual": 2698,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "8b7a236fe02ec364b3fd6eed4a07adff4ac505f68ca2496383ed6cda9147ba1e",
+      "body_sha256": "1b1ecffdd23dd1ea916270015ca1391bfbc13ad61e619576c7d4bb8ce2359690",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1208,7 +1208,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "c65cfedb3c967c623ac8bf0683d5234daa1db45fc03061ab00ed1639d87e9c4f",
+      "body_sha256": "2ddb04050b4e59b5185635a4087b3fde124cd66736f20a87299860d931a19e46",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1220,19 +1220,19 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "9c19b90a4da737ff8891b9df1088a7626876e6328edc7a5f8ebc23bd19fc6cba",
+      "body_sha256": "757ba654f48d69bd8fc81f6c464d108873d1959681c67278422e987d8d868eaa",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "23": {
-      "actual": 2995,
+      "actual": 2996,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "c7972e46540e6461664c19ca686c8dd3705b9b3471ce7ed05b2b3248013fbd8c",
+      "body_sha256": "67178140313b418378e30ec2f3b373143e86f7369d03f2f9cca9fa84b9847775",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1244,7 +1244,7 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "34ffce18e7e8ba5554c5ced06731e84d927369cbd3fd722ef38ec557bf26aa68",
+      "body_sha256": "80e9d415dbd69a1d8d35b8b12c032002d133a9fce53a270a47ae3c7b9dfc7300",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1280,19 +1280,19 @@
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "6788b4a21745fb8059c49e51c48b9093d24aa17f5c51f74e6802da88cf881146",
+      "body_sha256": "8496574549df8dd21892ac998564c421f776507df4013b591705b01100b88bd5",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "28": {
-      "actual": 2762,
+      "actual": 2843,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "a73b8ebfc1d0afcbd5396d745acb7832451daa1f1d054a8e8676cee70b144250",
+      "body_sha256": "9dbaf6890ec94ff3429599ca944663aad0a61febb3c5b6abad20defe127936ff",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1311,36 +1311,36 @@
       "target": 2900
     },
     "3": {
-      "actual": 3938,
+      "actual": 3977,
       "author_range": {
         "max": 4200,
         "min": 2000
       },
-      "body_sha256": "e65bd9fc34ec9aa8cbeab892f80fe8131e1aca334d8f73c6011787af7ef6e48f",
+      "body_sha256": "37f9ebfdd35f781f7c62dbd50f5975c3a53f610ef795d258fb64f6d28452c67f",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 3200
     },
     "30": {
-      "actual": 3420,
+      "actual": 3470,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "82d6d59c4f66e331196f40b833f1f2791f1a9b6cd71427e550db2f4dd0a37cbe",
+      "body_sha256": "279f8aa2ff6cfcb1131fb6969600fb3570f99b8d5648d8e8561c8d8c9c3ee97f",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "31": {
-      "actual": 3433,
+      "actual": 3470,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "621f7699000e89a75d6d201f8fcef82c2ae24706a15acd4de94614e58676f1ca",
+      "body_sha256": "b665ee8e0e19c432ecd0f4439a0192ae635c557bb4d4b59a95657506236b9625",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1359,48 +1359,48 @@
       "target": 2900
     },
     "33": {
-      "actual": 2876,
+      "actual": 2878,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "5115ca65a97b6bb0ba170491a4b097824eb1c7427dd7b9a10754a73b197ec5a7",
+      "body_sha256": "3eb77feed452bc514de9b1c4563d91e6a415f9547029fbb49c30378495312a00",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "34": {
-      "actual": 2598,
+      "actual": 2591,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "aa51fc71e514e860d4315068f80bf97596775bc2b09a4040596e1729ca5e0e9c",
+      "body_sha256": "bbcab1cfc9f020e307436207d4ada76e27867e0294c7e0124a20a4831323e112",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "35": {
-      "actual": 2920,
+      "actual": 2915,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "7cb8bd6835e9ecaf0fafff82901d7a14faa7058f5932a2556e0fd43598e3d7f8",
+      "body_sha256": "13688a0d0f35c8f6634a157a7171246610a9788945c9a11a1fd480cedef013b7",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "36": {
-      "actual": 2807,
+      "actual": 2806,
       "author_range": {
         "max": 3500,
         "min": 2300
       },
-      "body_sha256": "a6f59afc573ccb49955fe2c08808abef1b223005ecbd43a76792cbb8a44c7d00",
+      "body_sha256": "f4d97b0eb8a6648a2efa41915b358c8d8ac1b8728adee581267e6ec9558e46ee",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1419,48 +1419,48 @@
       "target": 2800
     },
     "4": {
-      "actual": 2815,
+      "actual": 2848,
       "author_range": {
         "max": 3200,
         "min": 1900
       },
-      "body_sha256": "ea3795d64e9fdd88867dad42e0251e4dcbaf6a66d6a31325bb7db1514c658f75",
+      "body_sha256": "9918533a68fde20d880e4f36bab4164aa61352e49890839707cee01d6911330f",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2400
     },
     "5": {
-      "actual": 2884,
+      "actual": 3099,
       "author_range": {
         "max": 3500,
         "min": 2000
       },
-      "body_sha256": "d3d0dfe2eb9ce8aefd113a8fc47b1d1f7c3d4be31834dc6692392a9ac536dd60",
+      "body_sha256": "e8211264da55b53da48c82d0933a9bc8e8e1a4c87c4b8fda9dcece06e814ac0f",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2600
     },
     "6": {
-      "actual": 3093,
+      "actual": 3092,
       "author_range": {
         "max": 4200,
         "min": 2000
       },
-      "body_sha256": "d206f623e50350fa9594dbe4f23831a4ec7b97ce9beae02091d2d74088c147ed",
+      "body_sha256": "f289222816f153849b088265759ad392a80c9b866822c165f965ee69e7e7ab49",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2900
     },
     "7": {
-      "actual": 3229,
+      "actual": 3231,
       "author_range": {
         "max": 3500,
         "min": 2000
       },
-      "body_sha256": "5ea3ef253b1bf6ff9ab8709d70f49b5312ac580e62a2f4c59cd293a056ba1de2",
+      "body_sha256": "a2705651dc1815d91b870e598584088053dd9cb5c140c37f00426632d25b3159",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
@@ -1472,19 +1472,19 @@
         "max": 3500,
         "min": 2000
       },
-      "body_sha256": "57d63f41d6e5b0843eca398d941100c1c0ff8a110e62b952307ab7bbfee8cee8",
+      "body_sha256": "0d5ed4c25ad99e861c5719bbd650267a50f49b0e4cc503535099a100231095de",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
       "target": 2700
     },
     "9": {
-      "actual": 3803,
+      "actual": 3809,
       "author_range": {
         "max": 4200,
         "min": 2000
       },
-      "body_sha256": "1f3585d5e5be62e177d1ca270f85254f92ca0856e73417db4e812c09bcf91834",
+      "body_sha256": "941f3cd1f0423464729e1feb1245b8c8f695689f7382b59e9fd82f13042e51e8",
       "metric": "visible_chars_v1",
       "resolution": "within_user_band",
       "status": "internal_pass",
