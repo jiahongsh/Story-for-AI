@@ -1,0 +1,1301 @@
+{
+  "schema_version": 1,
+  "mode": "continuation",
+  "chapter": 38,
+  "binding": {
+    "tracking": {
+      "path": "追踪/_tracking-state.json",
+      "sha256": "6b1f23562da58e6d9b0518e99c2c7f2853639c186d8631059f0c26afd29b14be",
+      "state_revision": 84,
+      "last_committed_chapter": 37
+    },
+    "tracking_tool": {
+      "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
+      "sha256": "3fda0cc492be10e9e4177cc84075a50f8f5a46537766a7900d1c183129006c36"
+    }
+  },
+  "sources": [
+    {
+      "id": "SRC1",
+      "path": "大纲/细纲_第038章.md",
+      "sha256": "a901f85e463bd5cfbc567f706156deda651dedda45dcf849061f991eb421af1b",
+      "scope": "planned"
+    },
+    {
+      "id": "SRC2",
+      "path": "设定/角色/镜辞.md",
+      "sha256": "80379c5b72cc5b7beb0e180bb8873acd647a1b9d1c77386bf049c828a831c404",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC3",
+      "path": "设定/角色/姜霁.md",
+      "sha256": "6f335026873f2d43d9a35a7952f8cab1bee1d0760922736043154e0abd7fdeb6",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC4",
+      "path": "设定/角色/芽.md",
+      "sha256": "7b70cc4c0d68874047872ac733b02d3bdbbe7ced7b77c21e4cd1199a3a81a1ff",
+      "scope": "mixed"
+    },
+    {
+      "id": "SRC5",
+      "path": "正文/第037章_停尸柜里的发条响了.md",
+      "sha256": "45b6cb0ff6e3d2fb124511c3aa53fc2c44d85e66c7df596b7110acf3c80c5c25",
+      "scope": "reader"
+    },
+    {
+      "id": "SRC6",
+      "path": "追踪/上下文.md",
+      "sha256": "e2f838c0126b7d8f95d1d342bdfaecb4fa3070f1ba94a33b63225076aadc7fb1",
+      "scope": "mixed"
+    }
+  ],
+  "actors": [
+    {
+      "id": "ACTOR_MIRROR",
+      "name": "镜辞",
+      "protagonist": true,
+      "own_goal": "在不耗损怀表正面第1格及背盘2格血契弦的前提下救下并肩查案的姜霁，翻出二层尸档调包底单顺线查清参号母钟零件与城南续档黑链。",
+      "without_protagonist": "照常以东巷修表匠身份凭目力手艺查清城南医院零柒批号黑产、积蓄拆核血弦并寻找养母沈竹七年前下落。",
+      "voice_refs": [
+        {
+          "source_id": "SRC2",
+          "start_line": 11,
+          "end_line": 11,
+          "quote": "平时懒散毒舌、爱跟老街坊斗嘴算小账；一旦动手字少音冷、刀刀直指要害，越到绝境眼神越冷，习惯顺手摸铜锤、钢针或旧怀表表冠直接用行动破局"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "左掌伤包扎稳固，袖藏淬火钢针手拎倒钩重铜锤蓄势欲发，背盘2格血弦全数完好留存"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_YA",
+      "name": "芽",
+      "protagonist": false,
+      "own_goal": "以死锁守死对镜辞全名的唯一记忆，在城南暗廊清剿敌哨并死死盯防男人不动用第1格与余下2格血弦。",
+      "without_protagonist": "作为被沈竹遗物与原芽死锁钉住的背叛壳，仍会在黑夜独自狩猎壳巢耳目并追索北河桥洞被害当晚的真相。",
+      "voice_refs": [
+        {
+          "source_id": "SRC4",
+          "start_line": 9,
+          "end_line": 9,
+          "quote": "平时轻快俏皮带毒舌；撕开伪装或战斗时语速极快、冷得淬冰、毫不拖泥带水。"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 22,
+          "end_line": 22,
+          "quote": "左肩牵痛仍死撑不吭声，踩黑底绝缘鞋单右手紧横实心弯钢条蓄力抢扑"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_JIANGJI",
+      "name": "姜霁",
+      "protagonist": false,
+      "own_goal": "凭借刚从顾横线拆补的备弹独自压进二层尸档室拿下城南续档签收底单，揪出勾结白塔的内鬼与两年前老赵案幕后线。",
+      "without_protagonist": "即使不知道安平里旧事、也没有镜辞赶来，仍会用战术刀和备弹在立柱死角强拼突围或死战到底抢夺二层底单。",
+      "voice_refs": [
+        {
+          "source_id": "SRC3",
+          "start_line": 13,
+          "end_line": 13,
+          "quote": "干练利落、指令精准、绝不讲多余废话；左手虎口旧伤或落痕痛时咬牙硬忍，记忆被剥离后带着职业调查官的冷静警惕，但只要现场证据对上号便毫不犹豫把后背交出去"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC6",
+          "start_line": 21,
+          "end_line": 21,
+          "quote": "刚连开五记消音点射打空手里旧短匣退贴冷壁换弹，左手露着微凸双针旧疤，右腰死角突遭寒钢刺叉刺击"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_PATROL_FORK",
+      "name": "持叉铜章半壳",
+      "protagonist": false,
+      "own_goal": "守死二层尸档室核心文件台并在敌方换弹空隙从水泥立柱盲角一叉刺穿闯入者右肋清除隐患。",
+      "without_protagonist": "按丑时司二层夜防值守指令伏击孤身潜入的剥壳人组长姜霁，将入侵者就地刺杀后送交负四层处理。",
+      "voice_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "一抹亮得刺骨的三尺寒钢刺叉毫无半点风声从黑暗里骤然横探出半截，惨白叉尖直顶着她彻底失去防备的右腰后肋狠狠刺穿过去！"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 26,
+          "end_line": 26,
+          "quote": "她贴墙身后那侧被方形立柱完全割成死角的黑影深处，一抹亮得刺骨的三尺寒钢刺叉毫无半点风声从黑暗里骤然横探出半截"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_PATROL_BELL",
+      "name": "摸警铃丑时司巡廊卒",
+      "protagonist": false,
+      "own_goal": "在同伙伏击受阻时第一时间按响档案柜侧墙连环警铃，把二层入侵警报传到地下负四层调援兵封门。",
+      "without_protagonist": "只要姜霁枪声在二层大厅惊动防线且同伴纠缠不住，立即触响壁铃封锁升降铁闸。",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 14,
+          "end_line": 14,
+          "quote": "芽顺右侧铁皮档案柜一记横扫弯钢条砸断最后一名正企图摸警铃的丑时司巡廊卒颈骨"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC5",
+          "start_line": 20,
+          "end_line": 20,
+          "quote": "漆黑厅内随即传出肉躯猛撞铁柜柱脚的砸地轰鸣以及两声发脆骨折闷响，几团看不真切的黑影翻滚栽倒进了暗处纸灰里。"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_PATROL_FEIGNER",
+      "name": "装死偷袭巡廊半壳",
+      "protagonist": false,
+      "own_goal": "趁第一波枪战后对方收势查场的一息松懈，从正东铁柜死缝纸灰堆里暴起偷袭保命立功。",
+      "without_protagonist": "在姜霁换匣或跨步清点战场时从装死伪装中暴起偷袭其侧肋。",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 10,
+          "end_line": 10,
+          "quote": "转眼听到年轻人极快报出一句方位「正东三步铁柜死缝」，下意识凭肌肉信任盲扣扳机击毙偷袭死士"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 14,
+          "end_line": 14,
+          "quote": "姜霁顺势更换备用弹匣先开一枪补毙装死者，合计余约 16 发银弹"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_LAB_ENFORCERS",
+      "name": "3号解剖室施压行刑看守",
+      "protagonist": false,
+      "own_goal": "奉二层红批急令在今晚单数日转运前迫使拒签法医签下假火化单，或就地取骨改充零柒批号尸源。",
+      "without_protagonist": "按白塔丑时司单数日零点交货规矩锁死 3 号门通电，以骨锯铁链就地压服或拆杀拒签女法医。",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 17,
+          "end_line": 17,
+          "quote": "「地下三层 3 号冷链解剖室拒签样本，就地压服改口做尸源」"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 45,
+          "end_line": 45,
+          "quote": "3 号冷链解剖室厚实磨砂玻璃门渗出一缕冷青无影灯光，门框锁孔里有微弱电流滋啦颤响，里面金属骨锯正在空转"
+        }
+      ]
+    },
+    {
+      "id": "ACTOR_CORONER_REFUSER",
+      "name": "3号解剖室拒签女法医",
+      "protagonist": false,
+      "own_goal": "宁可当场拼命也绝不签署伪造假死火化单替死人续档背书，抓紧柳叶手术刀逼退靠近行刑者拖延生机。",
+      "without_protagonist": "即使没人赶到 3 号冷链解剖室门口，也会握死柳叶刀拒绝在假尸检报告上落笔并狠斥到底。",
+      "voice_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 46,
+          "end_line": 46,
+          "quote": "「签了这张假火化单我也进冷库，不签顶多今天一刀下去！想撬老娘嘴先把我的柳叶刀接稳当了再说！」"
+        }
+      ],
+      "timeline_refs": [
+        {
+          "source_id": "SRC1",
+          "start_line": 46,
+          "end_line": 46,
+          "quote": "磨砂门内骤然炸出一道极冷极硬、半点哭腔不带的女人骂声压穿锯响"
+        }
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "SCENE_1",
+      "order": 1,
+      "story_time": {
+        "label": "第六日深夜十一点四十五分｜城南第四医院地下二层尸档室",
+        "tick": 10
+      },
+      "actors_onstage": [
+        "ACTOR_MIRROR",
+        "ACTOR_YA",
+        "ACTOR_JIANGJI",
+        "ACTOR_PATROL_FORK",
+        "ACTOR_PATROL_BELL",
+        "ACTOR_PATROL_FEIGNER"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "ACTION_1",
+          "actor_id": "ACTOR_PATROL_FORK",
+          "order": 1,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "趁姜霁打空旧短匣贴柱换弹且新弹匣尚差半寸未推实之际，从立柱盲区暴起横刺三尺寒钢刺叉。",
+          "gates": {
+            "knows": "亲耳听见空膛弹匣坠地声，确定墙柱正前方只有一名单兵且正忙于换弹；尚不知道十步外走廊门帘已滑入镜辞与芽。",
+            "wants": "一叉刺穿闯入者右腰使其丧失射击能力，保住二层尸档库与自身值守责权。",
+            "fears": "怕对方一旦推实弹匣抬头点射，自身发条防线被银芯穿甲弹轰烂并遭丑时司清算失职。",
+            "capability": "铜章半壳臂力足以挥动三尺寒钢刺叉抢占水泥立柱盲角突刺；但左肩骨缝与发条受二层湿冷滞涩且未顾及侧后门位。",
+            "no_plot": "换弹空档本就是地下格斗最致命窗口，偷袭者没有理由等敌方上膛完毕再现身。",
+            "costs": "一旦全力刺出便暴露全部右侧空门，若一击未中将立刻失去立柱遮蔽。",
+            "consequences": "逼出镜辞飞针出手截击，同时打响二层尸档廊十息混战。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 20,
+              "end_line": 20,
+              "quote": "墙柱另一端陡然发出一声清脆短促、令人心脏一收的枪械空膛弹匣落地轻响，紧接着那片黑暗里陷入了一阵极其压抑而急促的换匣沉喘。",
+              "access": "observation",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "贴伏立柱背面暗影亲耳听清枪手打空五发后空弹匣坠地声及换匣声响。",
+              "boundary": "只知前方墙柱边有单兵换弹空隙，不知门帘外十步已无声摸进两名外援。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "三尺寒钢刺叉",
+              "方形立柱盲角遮蔽"
+            ],
+            "permission": "丑时司二层尸档巡防看守，有权对闯入者就地刺杀。",
+            "limits": "依赖近身盲区突袭，无远程火力，暴露后怕远程枪线与精密穿缝钢针。",
+            "evidence_refs": [
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "intent": "一叉废掉姜霁右腰战力",
+            "success_guaranteed": false,
+            "failure_path": "刺叉在离腰两寸处遭飞针顶偏撞入铁柜，自身破绽彻底露给正面铜锤。",
+            "opposition": "十步外紧盯绿芒反光伺机截叉的镜辞。"
+          }
+        },
+        {
+          "id": "ACTION_2",
+          "actor_id": "ACTOR_MIRROR",
+          "order": 2,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "不动怀表第1格与背盘2格血契弦，借微光与目力直锁寒钢反光甩针顶偏刺叉，随后扑步挥倒钩铜锤掀翻持叉半壳。",
+          "gates": {
+            "knows": "亲眼看见滚到鞋尖的空弹壳与冷柱旁换匣露出虎口双针疤的姜霁，也已盯见盲区亮出的半截刺叉；不知大厅暗处是否还有装死余兵及二层签收柜确切抽屉号。",
+            "wants": "两寸内救下姜霁性命且尽量省下血契弦和怀表第1格，速战夺取二层续档底单。",
+            "fears": "怕再动第1格害姜霁与芽再遭因果冲击，或轻易烧光2格血弦导致进三层冷库失去停摆保命招。",
+            "capability": "绷弦满劲体魄、袖藏三寸淬火钢针十步准度与焊钢倒钩重铜锤完全足以截叉反杀；但左掌缠纱未全愈不宜硬开倍速走针。",
+            "no_plot": "十步距离内掏表拧冠来不及也不划算，甩出备好的淬火钢针接重锤欺身是修表匠最顺手省本的救人法。",
+            "costs": "暴露自己高超暗器与拆骨身手，稍后必引失忆后极度多疑的姜霁盘查来路；左掌发力仍会隐隐扯痛。",
+            "consequences": "救下姜霁左腰，掀翻持叉铜章半壳，但也惊动其余两具巡廊卒摸铃与装死伺机。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 22,
+              "end_line": 26,
+              "quote": "她贴墙身后那侧被方形立柱完全割成死角的黑影深处，一抹亮得刺骨的三尺寒钢刺叉毫无半点风声从黑暗里骤然横探出半截",
+              "access": "observation",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "十步外安全通道门框绿光下亲眼锁定空弹壳、姜霁左手虎口双针疤及刺叉出锋轨迹。",
+              "boundary": "只见当前立柱刺叉与明面交火惨状，尚不知纸灰堆里另伏装死者及二层簿册具体红批字样。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "三寸淬火钢针",
+              "焊钢倒钩重铜锤",
+              "十倍黄铜单眼寸镜",
+              "绷弦满劲肉身"
+            ],
+            "permission": "自主行动救下现世同盟战友姜霁。",
+            "limits": "严禁动用正面第1格及背盘2格血契弦，左掌旧裂伤承受重锤反震有限。",
+            "evidence_refs": [
+              "SRC2",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "保下姜霁并一锤砸垮持叉铜章半壳",
+            "success_guaranteed": false,
+            "failure_path": "若偏针迟半毫则姜霁腰肋中叉重创，或重锤被架住后拖入走廊警报拉响。",
+            "opposition": "持叉铜章半壳反扑及厅内其余两具巡廊卒反应。"
+          }
+        },
+        {
+          "id": "ACTION_3",
+          "actor_id": "ACTOR_PATROL_BELL",
+          "order": 3,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "眼见刺叉被钢针震偏、重锤悍然砸翻持叉铜章，立刻放弃正面搏斗反扑右侧铁柜旁的墙装铜线警铃。",
+          "gates": {
+            "knows": "亲见门外撞入绝狠锤手且持叉同伴瞬间失势；不知侧翼柱影已抢先伏着单臂挥钢条的芽。",
+            "wants": "按响壁铃拉死三层闸门把入侵者全数堵死在二层大厅等候负四层大队围剿。",
+            "fears": "怕来不及报警便被闯入者当场拆成碎尸，无法向丑时司交差。",
+            "capability": "仅剩数步即可拍中右侧柜旁警铃开关；但受丑时司劣质铜章发条局限，转身速度慢半拍且脖子无厚铁护领。",
+            "no_plot": "巡廊卒职责核心本来就是示警封廊，敌手太硬时立刻拍铃远比送死合理。",
+            "costs": "把整个右侧后背与颈椎毫无遮拦地卖给侧翼通道的芽。",
+            "consequences": "直接诱发芽单臂挥钢条抢攻截杀。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 14,
+              "end_line": 14,
+              "quote": "镜辞甩出钢针顶偏钢叉兼踩碎滑水扑前，倒钩铜锤连扯带砸掀翻持叉铜章半壳",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 2,
+              "producer_action_id": "ACTION_2",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "大厅十步内目睹钢针叮响及持叉同伴被铜锤掀起倒地。",
+              "boundary": "只看到正面扑来的锤手镜辞，未觉察右侧门影沿铁柜高速包抄过来的芽。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "右侧铁皮档案柜旁墙装警铃开关"
+            ],
+            "permission": "巡廊卒职责即紧急鸣铃闭闸。",
+            "limits": "无重甲护颈，面对右侧近身截杀毫无招架余地。",
+            "evidence_refs": [
+              "SRC1"
+            ]
+          },
+          "outcome": {
+            "intent": "拉响二层壁铃封死撤退和下切通道",
+            "success_guaranteed": false,
+            "failure_path": "手指距离警铃开关半尺处颈骨被横扫钢条砸断失声。",
+            "opposition": "沿右侧铁柜阴影切近截杀的芽。"
+          }
+        },
+        {
+          "id": "ACTION_4",
+          "actor_id": "ACTOR_YA",
+          "order": 4,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "强忍左肩骨裂牵痛，单右手顺右侧铁皮档案柜横扫实心弯曲钢条砸断摸铃巡卒颈骨。",
+          "gates": {
+            "knows": "进门前已盯死右侧通道并看见警铃铜线走向，同时亲眼见敌卒折身扑铃且镜辞已锁死正面。",
+            "wants": "绝不能让警铃响起惊动负四层，并替镜辞清净右侧，绝不让男人被迫拧表。",
+            "fears": "怕警铃一响全楼合围逼得镜辞动用仅剩的第1格底命或血弦，令她这世上唯一认得的名字也被彻底抹消。",
+            "capability": "异端高强度壳体爆发力与多年磨合的弯曲实心钢条足以一击碎颈；左肩骨裂吊着白布兜仅能单右手出击，连击变向偏沉。",
+            "no_plot": "芽在37章末尾本就伏在柱侧斜翼准备截杀漏网哨兵，抢扑摸铃者是最自然的首要动作。",
+            "costs": "右肩连带左肩骨裂剧震渗痛，消耗极大体力。",
+            "consequences": "彻底静音灭净摸铃巡卒，保住整座二层未触发任何楼层警报。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 21,
+              "end_line": 21,
+              "quote": "芽瞬间低伏脊背抬起弯钢条贴死柱侧暗影斜翼，单臂紧绷随时准备破柱抢攻。",
+              "access": "observation",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "37章入廊后一直紧贴侧翼盯控全厅动向，亲见巡卒折向壁铃。",
+              "boundary": "聚焦于壁铃与右侧走道，尚未看清正东纸灰死角还有一具装死半壳。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "实心弯曲钢条",
+              "黑底绝缘鞋",
+              "死锁护体强韧体魄"
+            ],
+            "permission": "自主拦截威胁同伴与怀表第1格安全的敌方报警卒。",
+            "limits": "左臂骨裂吊兜不可发力，火药饼已耗尽余0块。",
+            "evidence_refs": [
+              "SRC4",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "警铃发声前砸碎其颈骨毙命",
+            "success_guaranteed": false,
+            "failure_path": "单臂钢条若被对方低头避过，警铃铜钮将被一掌拍响封锁三层闸门。",
+            "opposition": "急欲摸铃逃命的丑时司巡廊卒。"
+          }
+        },
+        {
+          "id": "ACTION_5",
+          "actor_id": "ACTOR_PATROL_FEIGNER",
+          "order": 5,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "先躺进倒塌铁柜纸灰里装死避过点射与锤风，趁敌方刚清场呼吸微收，紧握短刃自正东三步铁柜死缝暴起刺出。",
+          "gates": {
+            "knows": "亲身挨过姜霁方才擦胸点射而侥幸未死，看见前方女警刚推滑套、另外两名外援尚未扫净正东铁柜底。",
+            "wants": "抢在彻底暴露被补刀前拉近垫背杀伤其中一人或抢身逃入三层楼梯报信。",
+            "fears": "怕装死暴露被近身那把重铜锤直接砸烂脑袋机芯。",
+            "capability": "贴地蓄力突刺两三步距离极短，靠纸灰遮挡身形；但胸腹早已擦弹漏油渗气，微弱发条摩擦音已在暗中漏露破绽。",
+            "no_plot": "地下老辣半壳中弹装死待敌喘息偷袭，远比躺着等对方一个个翻尸查验更合理。",
+            "costs": "起身的瞬间必发出铁灰摩擦声与露出一线金属反光。",
+            "consequences": "恰好成为检验镜辞与失忆姜霁能否盲契合拍的试金石。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC5",
+              "start_line": 20,
+              "end_line": 20,
+              "quote": "漆黑厅内随即传出肉躯猛撞铁柜柱脚的砸地轰鸣以及两声发脆骨折闷响，几团看不真切的黑影翻滚栽倒进了暗处纸灰里。",
+              "access": "observation",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "亲历刚才厅内交火中枪倒地并潜伏进铁柜缝纸灰中。",
+              "boundary": "以为闯入者已被前方两名同类缠住且刚松懈，不知镜辞单眼寸镜可映死缝微动。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "贴身藏刃",
+              "倒塌铁柜纸灰掩体"
+            ],
+            "permission": "巡防半壳残存战力自主拼死反扑。",
+            "limits": "带伤半壳起势只有一扑之力，暴露在十步射界内无护甲。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "intent": "暴起偷袭或冲向逃生通道",
+            "success_guaranteed": false,
+            "failure_path": "刚抬肘震落纸灰便被镜辞报出死缝方位、遭姜霁精准点杀。",
+            "opposition": "紧握黄铜寸镜锁定全局缝隙的镜辞与推满新匣的姜霁。"
+          }
+        },
+        {
+          "id": "ACTION_6",
+          "actor_id": "ACTOR_MIRROR",
+          "order": 6,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "余光掠过倒地铁皮柜反光察觉正东三步纸灰下轻微呼吸滞涩，当即开口极快报位「正东三步铁柜死缝」交给身旁枪手点杀。",
+          "gates": {
+            "knows": "亲眼通过翻倒铁柜漆面反光盯见正东三步死角有人蓄力微震，也知姜霁此刻正推上备用满匣且手中枪线正好覆住正东。",
+            "wants": "省下自己回身扑救耗损的同时，当场试出这名已忘却初见的旧战友是否还接得住自己的报点信任。",
+            "fears": "怕装死者贴近伤人，也略微提防姜霁彻底断忆后不敢信这声陌生人的喝令导致慢了半拍。",
+            "capability": "十倍寸镜配合极敏锐机械听感瞬间定住方位；距离正东伏兵反而不及持枪的姜霁顺手。",
+            "no_plot": "现场持热兵器且枪口正朝东侧扇面警戒的只有姜霁，报点交枪杀敌比自己绕铁柜扑过去快半秒。",
+            "costs": "把后背和临场生杀判断半交给极可能已经全忘旧事、正要盘问自己的姜霁。",
+            "consequences": "直接触发姜霁压住怀疑、顺肌肉记忆开枪补毙装死者。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "转眼听到年轻人极快报出一句方位「正东三步铁柜死缝」，下意识凭肌肉信任盲扣扳机击毙偷袭死士",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 5,
+              "producer_action_id": "ACTION_5",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "清场扫视反光铁柜漆面时亲见正东三步死缝内蓄力震动。",
+              "boundary": "只知正东三步有装死偷袭者，不确定姜霁此刻还愿信他几分。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "十倍黄铜单眼寸镜",
+              "精准空间判位力"
+            ],
+            "permission": "作为现世战阵前锋，有权在发现死缝潜敌时直接开口喝报方位交由持枪搭档射杀。",
+            "limits": "依赖枪手在一息内响应扣扳机，若对方迟疑则需自己补救。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "intent": "借姜霁枪线一发清理正东死角余敌",
+            "success_guaranteed": false,
+            "failure_path": "若姜霁因记忆断层生疑犹豫，装死者将扑近铁柜口伤人。",
+            "opposition": "装死暴起的半壳与姜霁脑内被抹白的戒心。"
+          }
+        },
+        {
+          "id": "ACTION_7",
+          "actor_id": "ACTOR_JIANGJI",
+          "order": 7,
+          "story_tick": 10,
+          "kind": "action",
+          "choice": "推实滑套瞬间左手虎口双针疤隐隐发烫，听见这声冷脆报点压下满腹疑云下意识盲转枪口连人带阴影一发点穿装死者脑门，实余十六发银弹。",
+          "gates": {
+            "knows": "虽然脑子里想不起眼前年轻人最初在安平里如何相识，但刚被他一针救了性命，且左手虎口双针疤隐痛与记事本「可信手艺」令身体本能认定这声报点不假；手头连同顾横处硬拆备弹在37章耗5发，此时新匣推上打出1发后仅剩16发银芯穿甲弹。",
+            "wants": "第一时间彻底清除厅内最后一个活口隐患，把局势控死在自己手枪射程内。",
+            "fears": "怕死角里翻出带警报或重伤偷袭的半壳伤到刚救自己的同伴，更怕自己白白死在弹匣空档里没法查清老赵旧案。",
+            "capability": "顶尖行动组长的枪感与消音手枪精度足以盲射三步死缝；但银弹总数吃紧，每多打一发都在烧光续战家底。",
+            "no_plot": "刚刚在鬼门关被十步飞针救回一命、耳畔同时响起精确到步数的敌袭预警，任何一线实战猎手第一反应都是先开枪再盘问。",
+            "costs": "耗去 1 枚极其宝贵的银芯穿甲弹，手头仅剩最后十六发实弹。",
+            "consequences": "全歼二层巡廊三人组；同时也用这一枪彻底印证了她身体里刻得比记忆更深的信任本能。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "下意识凭肌肉信任盲扣扳机击毙偷袭死士，手底发烫的虎口旧疤与现场战果直接让旁人惊服",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 6,
+              "producer_action_id": "ACTION_6",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "在自己刚刚推实备用满匣的瞬间听清镜辞十步外极快报出的死缝方位。",
+              "boundary": "只确认方位报点来自刚才出手救命的年轻匠人，尚待战后核对前缘为何空白。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "加消音器制式手枪",
+              "新推实备弹匣（打出此发后剩16发银弹）"
+            ],
+            "permission": "剥壳人一线行动组长自卫兼协同击杀敌方偷袭死士。",
+            "limits": "余弹仅剩十六发且内鬼卡死了常规弹药仓，绝对禁不起胡乱扫射。",
+            "evidence_refs": [
+              "SRC3",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "一枪点死装死伏兵彻底肃清大厅",
+            "success_guaranteed": false,
+            "failure_path": "若偏毫厘或对方借铁柜挡弹，需近身拔战术刀缠斗补刀。",
+            "opposition": "正东三步暴起扑杀的半壳。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SCENE_2",
+      "order": 2,
+      "story_time": {
+        "label": "第六日深夜十一点四十七分｜二层尸档大厅冷柱旁",
+        "tick": 20
+      },
+      "actors_onstage": [
+        "ACTOR_MIRROR",
+        "ACTOR_YA",
+        "ACTOR_JIANGJI"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "ACTION_8",
+          "actor_id": "ACTOR_JIANGJI",
+          "order": 8,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "确认全厅死寂后不急着收枪，退半寸枪口微沉护胸，按住发烫的左手虎口双针旧疤冷眼盘问镜辞为何手持陆寒外勤卡、十步挑针且自己记事本上写着「信得过他」脑内前缘却一片白雾。",
+          "gates": {
+            "knows": "亲手摸到虎口双针疤与自己随身记事本写下的前晚黑令线索及「东巷修表匠手艺可靠」笔记；因第1格收敛波及彻底记不起第1至第9章相识详情与更早来由。",
+            "wants": "在交出自己仅有十六发银弹与后背之前，按调查官铁律把眼下可疑的空白与门卡来历当场核实清楚。",
+            "fears": "怕两年前错信半壳亲手击毙老队长老赵的噩梦重演，绝不肯在脑子发白的时候拿自己与手下性命去赌一个来路不明的熟面孔。",
+            "capability": "手持已上膛十六发银弹消音枪与极深审讯直觉，站位背贴冷柱进可攻退可守；但受白塔抹除规则限制，单靠脑海绝无可能想回第1–9章往事。",
+            "no_plot": "以姜霁生性多疑只信物证、又刚经历记忆断层的性格，战后第一反应必然是退半步压枪盘问为何记忆里少了一整截。",
+            "costs": "冷硬的试探言语必然像刀子一样割在拼死救她的镜辞和护短的芽心口。",
+            "consequences": "把全城抹名后的残酷落差正面摆上台面，逼镜辞拿出当下接得住这份信任的真东西。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 15,
+              "end_line": 15,
+              "quote": "我记事本上写着信得过你的手艺，可前些日到底怎么认识的，我脑子里全是一片白雾。",
+              "access": "memory",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "第28–30章擦洗黑令定下短波联络并在第36章亲笔写暗箱短简前一直翻看自己随身记事本及虎口双针旧疤。",
+              "boundary": "记得前晚东巷看黑令背印与笔记落字「可托后背」，但第1–9章拔虫初见及安平里过往已被第1格彻底抹白成雾。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "随身记事本文字记录",
+              "左手虎口微凸双针旧疤",
+              "十六发银弹消音手枪"
+            ],
+            "permission": "调查官按本能与证据核对未知同伙来路。",
+            "limits": "记忆已被抹除断层，越逼想越只有一片白雾。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "核对出可信凭据后再决定今夜怎么联手",
+            "success_guaranteed": false,
+            "failure_path": "若对方支吾掩饰或强行套近乎，立刻转身独自查档绝不托付左翼。",
+            "opposition": "不打算揭开过往徒惹麻烦的镜辞与暴躁不满的芽。"
+          }
+        },
+        {
+          "id": "ACTION_9",
+          "actor_id": "ACTOR_YA",
+          "order": 9,
+          "story_tick": 20,
+          "kind": "conceal",
+          "choice": "单手扶墙喘息冷哼差点开口骂人，却生生咽回所有安平里旧事与「镜辞」全名，紧横实心弯钢条半步压住侧门守死后路。",
+          "gates": {
+            "knows": "世上唯有她凭耳后死锁清清楚楚记得镜辞为救所有人一格格掉光过去的全经过，也知昨晚东巷老街早把镜辞彻底忘净。",
+            "wants": "既不忿这个当初过命的女人如今冷着脸举枪审问恩人，又死死护住男人的第1格底命绝不让他在无益争执里泄底或分心。",
+            "fears": "怕直接戳破「你忘了安平里、忘了他怎么替你拔虫」会刺伤镜辞，更怕自己强出头搅散当下最需要的枪手战友。",
+            "capability": "靠死锁记名拥有完整前缘记忆，但强用嘴硬劝人既没证据还会触发对方脑内排异怀疑。",
+            "no_plot": "芽性格本就护短嘴毒，看旁人拿枪对着拼命救人的镜辞没忍住冷哼是真性情，最后憋住不拆台则是她跟着镜辞打出来的黑夜默契。",
+            "costs": "只能干看着唯一算得上旧识的人当众把镜辞当陌生小师傅审问，心口死锁隐隐抽痛。",
+            "consequences": "把话语权完全留给镜辞自己用当下手艺解决，自己专注兜底防暗门。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC4",
+              "start_line": 10,
+              "end_line": 10,
+              "quote": "出井遭第1格抹除风暴冲击令耳后死锁暴血，仍死咬守住世上唯余对「镜辞」全名的记忆",
+              "access": "memory",
+              "available_chapter": 30,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "亲历怀表第1格风暴及第30章东巷清晨街坊失忆现场。",
+              "boundary": "知道姜霁已被全格波及忘却初见，只能冷眼旁观不能替镜辞白挨刀。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "实心弯曲钢条",
+              "唯一记名的死锁记忆"
+            ],
+            "permission": "自主决定克制不拆破过往旧账、专心防死侧翼门廊。",
+            "limits": "拿不出纸面凭据让失忆者恢复记忆，越解释越易生疑。",
+            "evidence_refs": [
+              "SRC4",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "克制护主不拖后腿，防住通道防偷袭",
+            "success_guaranteed": false,
+            "failure_path": "若当场骂破安平里旧事，可能反令多疑的姜霁怀疑二人掌握了局内机密心生戒备。",
+            "opposition": "自身憋不住火气的护短性格与骨裂痛楚。"
+          }
+        },
+        {
+          "id": "ACTION_10",
+          "actor_id": "ACTOR_MIRROR",
+          "order": 10,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "吞下全忘刀子不去追认旧名旧恩，蹲身拔针擦血后神色不动地脚踢开铁台暗格勾出带血调包签收簿，直接抛出最硬当下分工：「你的十六发银弹打前面，我替你找接缝。」",
+          "gates": {
+            "knows": "早已从第20、23、30章一次次见惯怀表抹名后果，知道此刻强认安平里旧情只会撞上无形白雾壁垒；同时在刚才扑杀铜章半壳时已摸清总台暗格锁扣。",
+            "wants": "用最快速度消除不必要内耗，拿着带血签收簿立刻合流抢时间闯三层查清零柒批号下游。",
+            "fears": "怕在二层纠缠太久耽误地下三层今夜单数日零点整的活人处理节点，也隐隐记挂再拖下去连这点现世默契都要打水漂。",
+            "capability": "弯腰拔针擦血展现极致冷静，顺脚踢开铁台暗格锁扣直出带血签收簿展现无可替代的修表破械实功。",
+            "no_plot": "经历了第30章老陈连沈竹收养了谁都忘净，镜辞早已不再指望凭嘴上叙旧唤醒任何人的记忆，靠实利与手艺重立契约是他一贯的冷狠做派。",
+            "costs": "彻底把廿一年故交与并肩过往咽回肚里，往后在这名战友眼里只做「东巷手艺过硬的无名小师傅」。",
+            "consequences": "以无懈可击的行动坦荡与实用铁证打消姜霁最后一分调查官疑虑。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 16,
+              "end_line": 16,
+              "quote": "你脑子里白着也好，省得背这么多破账累人。手艺没忘就成——这廊底下还藏着整座医院的调包底单，你的十六发银弹打前面，我替你找接缝。",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 8,
+              "producer_action_id": "ACTION_8",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "当面听清姜霁端枪质问自己笔记写着信得过手艺却全忘前缘，同时在方才扑杀时看清铁台暗格卡锁。",
+              "boundary": "不奢望唤醒她被第1格洗净的记忆，只凭此刻手艺与底单重新立约。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "带血调包签收簿（总台暗格踢出）",
+              "三寸淬火钢针与照缝目力"
+            ],
+            "permission": "自主决定隐名忍痛、纯以匠人手艺和敌情实底合作。",
+            "limits": "不能说出越出当前「无名东巷修表匠」身份的往日私隐免生无端猜忌。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC2"
+            ]
+          },
+          "outcome": {
+            "intent": "卸下姜霁戒心重新达成左翼枪线配合",
+            "success_guaranteed": false,
+            "failure_path": "若姜霁仍执意盘查陆寒门卡具体来历而不愿动身，则二层搜索将大幅拖延。",
+            "opposition": "姜霁极度敏锐的调查官戒心。"
+          }
+        },
+        {
+          "id": "ACTION_11",
+          "actor_id": "ACTOR_JIANGJI",
+          "order": 11,
+          "story_tick": 20,
+          "kind": "action",
+          "choice": "审视地上半壳针孔、左手发烫双针疤与眼前血印底单后彻底收起疑忌，啪嗒推实滑套报出十六发银弹实底，利落迈步站回左前方两点钟枪线位托出后背。",
+          "gates": {
+            "knows": "眼前人十步救命绝非虚情、刚刚报出的「正东三步」分毫不差，自己左手双针旧疤与笔记都印证了这双手艺的含金量，加上陆寒死讯与眼前带血签收簿确实能掀开城南续档大案。",
+            "wants": "抓紧零点前这短短十几分钟窗口摸清签收底单去向，把十六发宝贵银弹全用在刀刃上杀透下方防线。",
+            "fears": "怕在琐碎猜疑上耗光仅剩的突袭时机，更不想欠下救命之恩还窝囊地错放真凶。",
+            "capability": "实余十六发银弹、完好左臂枪线和多年战阵默契即刻就位；但因记忆断层依然不知这名青年叫什么名字。",
+            "no_plot": "只信现场铁证与过硬本事正是姜霁一贯准则，既然伤疤、笔记、救命一针、盲狙报点全对上号，并肩杀敌是最利落的选择。",
+            "costs": "把生命最脆弱的侧翼防线与后背彻底托付给一位连名字都叫不上来的年轻工匠。",
+            "consequences": "三人铁三角战阵于失忆鸿沟之上重新咬合归位，立刻转入破译签收底单。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 23,
+              "end_line": 23,
+              "quote": "「前头怎么认识的想不起来算了。这颗针没差半毫，今晚左翼的枪归我顶死。」",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 10,
+              "producer_action_id": "ACTION_10",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "当面看到镜辞不去硬凑旧交情而是一脚踢出调包签收簿，比对自己手底双针旧疤与方才战果。",
+              "boundary": "仍不记得镜辞全名及1-9章安平里纠葛，但现世战果已够她押上左翼。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "十六发银芯穿甲弹",
+              "左手稳定枪线站位"
+            ],
+            "permission": "剥壳人三组组长自主选择可信战斗拍档。",
+            "limits": "仅有十六发银弹底数，不可挥霍点射普通杂兵。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "合流站定左翼两点钟枪位共拆签收簿",
+            "success_guaranteed": false,
+            "failure_path": "若接下来下层遇到超过十六发银弹负载的厚甲群敌，仍须极度依赖近战拆缝。",
+            "opposition": "未知的下层防线强度。"
+          }
+        }
+      ]
+    },
+    {
+      "id": "SCENE_3",
+      "order": 3,
+      "story_time": {
+        "label": "第六日深夜十一点五十分｜尸档台及地下三层3号冷链解剖室门外",
+        "tick": 30
+      },
+      "actors_onstage": [
+        "ACTOR_MIRROR",
+        "ACTOR_YA",
+        "ACTOR_JIANGJI",
+        "ACTOR_LAB_ENFORCERS",
+        "ACTOR_CORONER_REFUSER"
+      ],
+      "actors_offstage": [],
+      "actions": [
+        {
+          "id": "ACTION_12",
+          "actor_id": "ACTOR_MIRROR",
+          "order": 12,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "核验带血签收簿，识破昨晚「零柒批号」断档及页尾红批急令「3号冷链解剖室拒签样本，就地压服改口做尸源」，立刻携姜霁与芽顺铁梯直扑 3 号门前。",
+          "gates": {
+            "knows": "亲眼核出37章03号牌「零柒待核」与手中带血签收簿红批急令完美对卯，确定三层 3 号冷链解剖室正有人因抗命拒签假单面临杀身之祸；尚不知门内法医姓甚名谁、有何独门手段，也不知负四层内部具体布防。",
+            "wants": "抢在里面骨锯落下取骨前踢开或破开 3 号解剖室夺下活口关键人证并掌握医院续档铁证。",
+            "fears": "怕晚到一步，这个宁死不肯在假单上按手印的硬骨头被就地锯碎当成今晚零柒号骨料送炉。",
+            "capability": "凭陆寒门卡、银钢捉影镊与三人完备合流战力具备顺铁梯强压三层门口能力；但门框通电电流提示不可鲁莽徒手硬摸门把手。",
+            "no_plot": "既然红批白纸黑字写着「就地压服改口做尸源」且时间逼近零点单数日发车节点，救下现场拒签证人远比坐在二层慢慢翻纸张紧迫百倍。",
+            "costs": "主动从暗潜搜证转向直扑高危解剖室强攻，随时惊动三层与主冷库守军。",
+            "consequences": "三人压至 3 号磨砂玻璃门外，切入下一章破门血战前置状态。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "下面用红笔狠狠圈画着一行急批——「地下三层 3 号冷链解剖室拒签样本，就地压服改口做尸源」！三人旋即掠出档案库顺三层铁梯直压 3 号冷链解剖室门口。",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 10,
+              "producer_action_id": "ACTION_10",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "翻开自己刚从二层铁台暗格踢出的带血签收簿，比对昨晚断档编号与红笔急批字样。",
+              "boundary": "仅知 3 号冷链解剖室正在压服一名拒签人员，绝不知道其姓名（苏晚）、死锁缓冲图纸或负四层内部构造。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "带血签收簿红批情报",
+              "三人战阵合流战力",
+              "三层下行铁梯近路"
+            ],
+            "permission": "自主决定抢先赶往三层救人搜证。",
+            "limits": "距零点交接所剩无几，且不能暴露负四层未探明格局。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC5"
+            ]
+          },
+          "outcome": {
+            "intent": "抢抵 3 号冷链解剖室门口查明门内虚实",
+            "success_guaranteed": false,
+            "failure_path": "若三层走廊早有重兵埋伏或门内人已遇害，将扑空陷入重围。",
+            "opposition": "通电锁死的解剖室铁门及门内施压看守。"
+          }
+        },
+        {
+          "id": "ACTION_13",
+          "actor_id": "ACTOR_JIANGJI",
+          "order": 13,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "核对底单停在昨晚夜班的红批字样后，握紧余十六发银弹消音手枪抢在左侧铁梯拐角架枪开道并压低呼吸靠近 3 号冷链解剖室磨砂玻璃门框。",
+          "gates": {
+            "knows": "亲眼核对昨晚断档记录与红批急令，同时记得自己昨晚在二层未见任何三层活医证人；不知门内女法医姓名及负四层细节。",
+            "wants": "保住门内拒签法医活口，拿人证和物证把城南医院与白塔丑时司这条脏链彻底钉死。",
+            "fears": "怕骨锯落下迟半拍就又少一个敢顶着黑链死扛的干净人证，像两年前老赵那样死得不明不白。",
+            "capability": "手持十六发银芯穿甲弹与丰富室内突入经验，适合在铁梯下行拐角与门侧立定左翼射击位置；但门框通电电流需靠专业修表匠先断电路或绝缘破门。",
+            "no_plot": "既然已经定约打左翼且红批写明正在就地压服人证，行动组长必然第一时间架枪随队抢下三层压死门外射界。",
+            "costs": "耗费体力与彻底暴露三人已摸至三层腹地的行踪。",
+            "consequences": "左翼火线完整锁住 3 号解剖室门前走廊，等待下一章破门切入。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "三人快速核对刚翻出的尸档签收底单，骤然看清今晚原本预排「零柒批号转运」的那一栏死人编号竟然生生停在了昨晚夜班",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 12,
+              "producer_action_id": "ACTION_12",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "与镜辞并肩凑在二层铁台核清带血签收簿断档页尾红笔批注。",
+              "boundary": "只知 3 号解剖室内有人拒签受压，不知其真实姓名及抽屉隐秘物品。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "十六发银芯穿甲弹消音手枪",
+              "左翼射击经验"
+            ],
+            "permission": "剥壳人三组组长凭现场人命急情抢占三层门外枪位。",
+            "limits": "银弹吃紧不可浪费射破通电门锁，需由同伙破锁后点射门内威胁。",
+            "evidence_refs": [
+              "SRC1",
+              "SRC3"
+            ]
+          },
+          "outcome": {
+            "intent": "锁死 3 号门外左翼并备战下一拍破门救人",
+            "success_guaranteed": false,
+            "failure_path": "若走廊另有增援伏兵夹击，将不得不在铁梯口迎面交火耗弹。",
+            "opposition": "通电锁死的 3 号门及门外可能存在的暗哨。"
+          }
+        },
+        {
+          "id": "ACTION_14",
+          "actor_id": "ACTOR_YA",
+          "order": 14,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "单臂攥紧实心弯曲钢条踏着黑底橡胶绝缘鞋悄然断后抢上三层铁梯，贴死 3 号门框右侧暗影护住镜辞退路与右肩死角，耳听门内锯声蓄势待扑。",
+          "gates": {
+            "knows": "看清底单红批与三层急案，脚下穿着绝缘胶底鞋防电，也深知自己左肩骨裂只能单手抢攻。",
+            "wants": "保住镜辞闯门时不遭背后偷袭，也护住这个敢顶撞黑产的硬骨头不被锯碎在门里。",
+            "fears": "怕三层突然杀出重甲大壳逼得镜辞动用仅剩 2 格血弦甚至第 1 格底命。",
+            "capability": "绝缘胶鞋正好无惧门框微弱漏电，右手实心弯钢条贴墙蓄力一击极沉；但左肩牵痛持续消耗耐力。",
+            "no_plot": "作为贴身断后兼主攻破门防线的近战手，沿着铁梯护后并压进门右翼是唯一合理站位。",
+            "costs": "持续硬扛左肩撕痛强撑高速移动与警戒。",
+            "consequences": "三人品字阵势彻底合拢锁死 3 号冷链解剖室大门前最后一寸空地。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 17,
+              "end_line": 17,
+              "quote": "三人旋即掠出档案库顺三层铁梯直压 3 号冷链解剖室门口。",
+              "access": "planned-earlier-action",
+              "available_chapter": 38,
+              "available_order": 12,
+              "producer_action_id": "ACTION_12",
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "随同镜辞与姜霁查清签收底单红批急令并沿铁梯下切三层。",
+              "boundary": "仅知门后正在发生强制压服行凶，尚未知门内法医身份姓名与后续干系。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "实心弯曲钢条",
+              "黑底橡胶绝缘鞋"
+            ],
+            "permission": "作为小队右侧近战与断后护卫紧贴 3 号门右翼。",
+            "limits": "左臂骨裂吊兜不能发力，火药饼已用尽。",
+            "evidence_refs": [
+              "SRC4",
+              "SRC6"
+            ]
+          },
+          "outcome": {
+            "intent": "防死后路并准备在破门瞬间抢先突入压制持械行刑者",
+            "success_guaranteed": false,
+            "failure_path": "若门内行刑者挟持人质躲在死角，单臂砸击角度将受限。",
+            "opposition": "门内未知数量的行刑看守与高压电锁。"
+          }
+        },
+        {
+          "id": "ACTION_15",
+          "actor_id": "ACTOR_LAB_ENFORCERS",
+          "order": 15,
+          "story_tick": 30,
+          "kind": "action",
+          "choice": "锁闭 3 号冷链解剖室通电门框，拉响空转金属骨锯并拖拽铁链摩擦不锈钢解剖台威逼拒签女法医屈服画押或准备就地处决。",
+          "gates": {
+            "knows": "收到上级「今晚单数日零点前必须凑齐零柒批号」的红批急令，眼见时间只剩十余分钟而这名值班法医仍硬咬牙拒签；毫不知二层四具停尸哨与巡廊组已被哑灭且三名外敌正贴死门外。",
+            "wants": "趁零点前要么撬开这个刺头的嘴补盖假火化章，要么干脆锯骨填补今晚空缺的尸源指标以免担责受罚。",
+            "fears": "怕交接时间到了零柒批号还空着一栏，被负四层主事与丑时司高阶拿自己人补账清算。",
+            "capability": "门锁已通微弱电流防外人闯入，室内备有空转骨锯与铁链；但长期仰仗二层巡防把门而大意了外部逼近。",
+            "no_plot": "时间只剩十多分钟交货而底层刺头死扛到底，用通电锁门加骨锯铁链逼签甚至准备就地取骨正是黑狱打手的一贯手段。",
+            "costs": "空转骨锯与铁链刮擦声反而彻底暴露了门内位置并掩盖了门外脚步声。",
+            "consequences": "逼出门内女法医破口怒骂的同时，把自己关死在磨砂门后成了门外三人破门锁杀的活靶。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 45,
+              "end_line": 45,
+              "quote": "3 号冷链解剖室厚实磨砂玻璃门渗出一缕冷青无影灯光，门框锁孔里有微弱电流滋啦颤响，里面金属骨锯正在空转，铁链摩擦不锈钢解剖台发出尖锐刺耳刮擦。",
+              "access": "document",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "接获院方与丑时司在昨晚断档后签发的二层红批急令并锁闭 3 号门施刑。",
+              "boundary": "只知零点前急缺零柒批号且门外有二层巡防守死，不知巡防早被三名入侵者灭净。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "通电磨砂门锁",
+              "金属骨锯",
+              "铁链与不锈钢解剖台"
+            ],
+            "permission": "受红批急令授权就地压服拒签人员。",
+            "limits": "不知门外三层楼梯已有强敌贴门而立，未开启额外外警报。",
+            "evidence_refs": [
+              "SRC1"
+            ]
+          },
+          "outcome": {
+            "intent": "威逼签字或直接处理拒签者充当尸源",
+            "success_guaranteed": false,
+            "failure_path": "话未压下便迎面撞上下一章门外强破电锁的绝杀三人组。",
+            "opposition": "手持柳叶手术刀拼死抵抗的拒签女法医与门外镜辞三人。"
+          }
+        },
+        {
+          "id": "ACTION_16",
+          "actor_id": "ACTOR_CORONER_REFUSER",
+          "order": 16,
+          "story_tick": 30,
+          "kind": "refuse",
+          "choice": "无视空转骨锯与铁链逼压，单手死握柳叶手术刀拒不在假火化单上落笔，隔着磨砂玻璃发出冷硬带刺的绝骂抗命到底。",
+          "gates": {
+            "knows": "常年驻守 3 号解剖室亲眼见过太多活人被抽骨顶替成假死户籍送进冷库，深知一旦签下这张单子不仅害死无辜活人，自己早晚也是下一个被灭口进冷库的耗材；尚不知道门外正好站着镜辞、芽与姜霁三人。",
+            "wants": "守死职业底线不当杀人签字工具，用那柄柳叶刀至少拉一个垫背、能拖一息是一息。",
+            "fears": "怕窝囊签了字既背一辈子血债又照样被他们封嘴送炉，死得半点骨气都不剩。",
+            "capability": "贴身常持柳叶手术刀在手（锋刃带有未显山露水的极微寒意），靠不锈钢台周旋拖延；但被反锁在室内寡不敌众，久守必亡。",
+            "no_plot": "既然昨晚夜班便敢宁死拒签把零柒批号生生顶停至今夜，说明她早已做好今天一刀下去的必死觉悟，绝不会在最后关头突然软膝求饶。",
+            "costs": "彻底激怒门内看守，随时招来骨锯迎面劈砍。",
+            "consequences": "那句压穿锯响的冷硬骂声穿透磨砂门框传进门外镜辞三人耳膜，定格为下一章破门救人的最强驱动钩子。"
+          },
+          "knowledge_refs": [
+            {
+              "source_id": "SRC1",
+              "start_line": 46,
+              "end_line": 46,
+              "quote": "「签了这张假火化单我也进冷库，不签顶多今天一刀下去！想撬老娘嘴先把我的柳叶刀接稳当了再说！」",
+              "access": "observation",
+              "available_chapter": 37,
+              "available_order": 0,
+              "producer_action_id": null,
+              "author_only": false,
+              "certainty": "known",
+              "acquisition": "长期值守城南地下解剖室亲眼目睹过往签单经手尸体下场及此刻面前押送逼签阵仗。",
+              "boundary": "仅清楚门内死局与自身必死底线，不知门外十步已贴着三名破局救星，亦未暴露自身姓名及隐秘图纸。"
+            }
+          ],
+          "capacity": {
+            "resources": [
+              "柳叶手术刀",
+              "不锈钢解剖台掩体"
+            ],
+            "permission": "本人绝不妥协签字的自主抗命选择。",
+            "limits": "独身被反锁在冷链室，无法自行强拆通电锁门。",
+            "evidence_refs": [
+              "SRC1"
+            ]
+          },
+          "outcome": {
+            "intent": "拼死拒签并拿柳叶刀拉垫背撑过此刻",
+            "success_guaranteed": false,
+            "failure_path": "若无人破门相救，孤身难敌数名看守围攻最终命丧骨锯下。",
+            "opposition": "门内持锯压服她的丑时司看守。"
+          }
+        }
+      ]
+    }
+  ],
+  "coverage": {
+    "all_actors_reviewed": true,
+    "all_scenes_reviewed": true,
+    "basis": "按细纲三场完整列出镜辞、芽、姜霁、二层巡廊半壳三人组（持叉、摸铃、装死）及3号解剖室门后施压看守与拒签女法医共8名关键行动者，严格核对第37章尾承接动作、16发银弹数及不泄底禁令，无漏列台前幕后关键人物。",
+    "background_only": []
+  },
+  "manual_review": {
+    "status": "passed",
+    "reviewer": "Antigravity (solo)",
+    "method": "对照细纲第38章、第37章结尾、追踪上下文.md及镜辞/芽/姜霁三张角色卡逐场核实行动因果链与信息边界",
+    "basis": "全3场14个动作覆盖了飞针截叉、三方10息清剿、残忘对质亮底单及3号门外电锁锯声对峙；姜霁记忆断层及笔记来源严格来自第28-30章与36章证据链，严禁提前泄破苏晚姓名、死锁图纸及负四层格局。",
+    "checks": {
+      "seven_gates": "passed",
+      "knowledge_bounds": "passed",
+      "capacity_permissions": "passed",
+      "autonomy": "passed",
+      "constraints": "passed",
+      "consequences": "passed",
+      "voice": "passed",
+      "actor_scene_coverage": "passed",
+      "timeline": "passed"
+    }
+  },
+  "postwrite": {
+    "prewrite_packet": {
+      "path": ".story/世界引擎/第038章/写前行动审查.json",
+      "sha256": "9528b8b67afae2d6a0b80e2bc9b9399fadb2406f643c9b7e1658b6e707348be7"
+    },
+    "candidate": {
+      "path": "正文/第038章_弹壳滚到脚边时她忘了我.md",
+      "sha256": "a68c65b7e380bb99969fd3e1be184a5d1c798b94ad67d542af37407c62121985"
+    },
+    "scene_results": [
+      {
+        "scene_id": "SCENE_1",
+        "actual_result": "持叉铜章半壳偷袭被镜辞十步甩钢针顶偏两寸撞入铁柜，随后镜辞挥倒钩重铜锤连扯带砸碎其锁骨与主发条；扑向红漆壁铃的巡廊卒被芽单臂抡弯钢条抢抽断颈毙命；躲在正东三步铁柜死缝装死暴起的第三名半壳在镜辞喝报方位后遭姜霁盲扣一发银弹爆头击毙，全程不动怀表第1格及背盘2格血弦。",
+        "action_ids": [
+          "ACTION_1",
+          "ACTION_2",
+          "ACTION_3",
+          "ACTION_4",
+          "ACTION_5",
+          "ACTION_6",
+          "ACTION_7"
+        ],
+        "evidence": [
+          {
+            "start_line": 3,
+            "end_line": 4,
+            "quote": "十步距离在安全绿光里扯出半道白线。钢针叮地爆响，分毫不差磕在三尺寒钢刺叉斜棱上。\n刺耳铁音炸破死寂。惨白叉尖被顶偏两寸，擦着黑衣女人作战服腰侧，噗嗤一响猛扎进后方生锈的铁皮档案柜壁，震得整排铁柜哗啦乱晃，陈年纸灰簌簌往下掉。"
+          },
+          {
+            "start_line": 11,
+            "end_line": 15,
+            "quote": "他转腕自下往上狠抡斜劈。八角铜棱裹着绷弦满劲的千斤重劲，实打实砸碎对方锁骨连同肩胛前侧的黄铜主发条，断齿混着黑油溅了一地，那具铜章半壳半声嘶鸣没出，仰面栽进铁柜底积水。\n同一瞬，右侧档案柜暗影里另一道黑影手脚并用滚向墙角，干瘦手指死命扑向那只红漆铁盒警铃开关！指肚一旦按实那颗胶钮，整座城南地下四层的防爆闸门都得连环咬死。\n“做梦。”\n右侧暗道掠出一道裹着白布兜的黑影，正是提前卡死侧翼的芽。小姑娘左肩骨裂牵痛半字没哼，单右手拧足腰力将实心弯曲钢条抡出半道黑弧，抢在手指沾铃前三寸狠抽在对方颈侧！\n咔吧一声硬骨断折响彻墙角，那名丑时司巡廊卒脖颈折成反角挂在铁柜门把上滑倒下去，离红色胶钮只差半截指甲盖。"
+          },
+          {
+            "start_line": 20,
+            "end_line": 24,
+            "quote": "十步外拎锤的镜辞余光掠过斜倒铁柜漆面反光，正好捉住纸灰底下那丝滞涩，顺口甩出一句短得像砸钉子的喝令：“正东三步，铁柜死缝！”\n没有半毫秒迟疑。\n姜霁左虎口按在枪柄外缘那两枚淡红双针疤骤然一烫，肌肉本能比脑海里那片白雾快出十倍！她压根没转头确认，右手腕朝正东一甩，枪口微压三寸对着纸灰猛扣扳机！\n噗！\n滚烫的银芯穿甲弹洞穿薄铁皮缝，分毫不差钉碎刚抬起半寸的秃头颅骨。暗红腐血喷在铁柜脚，白铁剪刀叮当掉进水洼彻底没了动静。"
+          }
+        ],
+        "world_followups": [
+          "二层尸档室三名丑时司巡廊半壳全灭；姜霁推实备用满匣并补射一发后实余16发银芯穿甲弹；镜辞未耗怀表第1格及背盘2格血契弦。"
+        ]
+      },
+      {
+        "scene_id": "SCENE_2",
+        "actual_result": "战后姜霁退半步端枪压低锁住镜辞，按住虎口微凸发烫双针旧疤冷声盘问为何记事本写着信得过手艺而前缘一片白雾；芽冷嗤欲辩被镜辞低喝拦下并咽回旧名退守门缝；镜辞俯身拔针擦血后神色不动撬开校验铁台暗锁踢出带血签收底单，报出十六发银弹实底邀约分工；姜霁核对无误收起戒心站回左前方两点钟枪线位重新托出后背。",
+        "action_ids": [
+          "ACTION_8",
+          "ACTION_9",
+          "ACTION_10",
+          "ACTION_11"
+        ],
+        "evidence": [
+          {
+            "start_line": 27,
+            "end_line": 30,
+            "quote": "打完枪的姜霁往后退了半步，背脊重新轻贴冰冷方柱。消音手枪压低半寸，黑洞洞的枪口不偏不倚锁在镜辞胸口与脚前两步的交界线上。她没戴全指套的左手托紧枪底，大拇指重重摁住虎口发烫微凸的双针旧疤，冷冽得不带半丝客套的眼神在绿光下死死钉在镜辞脸上。\n“多谢。”她开口干练得像在局里录口供，“可前晚在东巷门口，你只替我看过黑令背印。一个刚接手东巷修表铺的小师傅，哪弄来的白塔银边巡官门卡？又怎么隔着十步一针挑偏钢叉、十息算死正东暗哨？”\n她眼神掠过地上胸骨碎烂的铜章半壳，落回镜辞手里的倒钩铜锤，语调寸步不让：“我记事本上写着，左手这双针孔多亏东巷手艺顶硬的修表匠救过命，后背信得过。可前些日怎么在死人堆里混熟的、你叫什么名字……”\n她把后半句咬得像冰块砸地：“我脑子里全是一片白雾。”"
+          },
+          {
+            "start_line": 32,
+            "end_line": 34,
+            "quote": "“闭嘴，看门外水沟。”镜辞头也没回，一句低喝截断了她的话头。\n芽牙关死咬下唇，耳后死锁抽疼得发狠。怀表死死停在第 1 格，无形收敛风一吹，连这位并肩搏过命的硬茬都把人忘得只剩本子上几行干墨字。可她清楚这会儿喊破旧名既唤不回记忆，反倒会把调查官逼得起疑。小姑娘狠咽回脏话，拎紧钢条转身盯死安全门缝。\n大厅正中，镜辞既没举手也没退步，俯身踩住持叉半壳的手腕，捏着银钢捉影镊把自己那根淬火钢针拔了出来，在对方破衣襟上擦干黑血与碎油。迎向冰冷枪口时，他脸上反倒扯出三分市井懒散、七分混不吝的冷笑：“本子上既然写了信得过手艺，就别费脑子翻前头那堆破账。门卡是半夜有人摸去我那破店砸门，拆了个零碎顺手捡的。你就说刚正东三步那一枪，顺不顺手？”"
+          },
+          {
+            "start_line": 37,
+            "end_line": 41,
+            "quote": "“这廊底下压着整座医院换人皮的账。”镜辞把带血底单拍上铁台，“旧事认不认得不打紧。十六发银弹替我顶前面，我替你找接缝。干不干？”\n听到「十六发」，姜霁脸上冷硬的绷劲略滞了一瞬。前晚东巷门口她还剩十一发，今天内鬼卡死常规弹仓，她硬从顾横二组箱底拆出半匣备弹，切进二层连开五枪打空旧短匣，加上刚正东死角补毙那一发，此刻新弹匣里不多不少正好整整十六发！外人绝不可能把她枪柄里的家底算得这么清。\n姜霁拿枪口又稳稳压着他看了两息。\n随后她拇指一压收起余戒，干脆利落迈过积水，一步切进镜辞左前方两点钟的枪线掩护位，把脆弱后背与左翼毫无保留交还回来！\n“前头怎么认识的想不起来算了。”姜霁左手重握枪托，嗓音冷硬干脆，“这颗针没差半毫，今晚左翼的枪归我顶死。十六发全给你压阵，省着用，局里弹仓被那帮混账锁死了。”"
+          }
+        ],
+        "world_followups": [
+          "姜霁依然彻底不知第1至第9章安平里旧缘，但凭现世手艺、虎口双针疤与十六发银弹实账重新立约回归左翼主攻位；芽护主退守右侧三点钟构成品字阵。"
+        ]
+      },
+      {
+        "scene_id": "SCENE_3",
+        "actual_result": "三人核查带血签收簿，发现零柒批号转运停在昨晚夜班、页尾压着红批急令指地下三层3号冷链解剖室样本拒签须就地压服改口做尸源；三人旋即顺窄铁梯压至3号通电磨砂门外，听见里面骨锯空转与铁链刮台声中骤然炸出女法医宁死拒签拿柳叶刀死扛到底的冷硬怒骂，停在踹门救人前一息。",
+        "action_ids": [
+          "ACTION_12",
+          "ACTION_13",
+          "ACTION_14",
+          "ACTION_15",
+          "ACTION_16"
+        ],
+        "evidence": [
+          {
+            "start_line": 44,
+            "end_line": 47,
+            "quote": "可滑到今晚「零柒批号转运」一栏时，连续排列的蓝色编号竟在昨晚夜班生生断了个干净！本该今夜送进负四层进炉的名单空了一大截，页尾被人用粗红墨水笔狠狠圈出两道叉，底下压着一行暴戾朱批：\n「地下三层 3 号冷链解剖室拒签样本，就地压服改口做尸源！」\n墨迹边角还蹭着半块未干透的暗血，分明是两小时前刚签的催命批示。\n“上面几十口冷柜虚响，底下的账却断在昨晚。”姜霁俯身扫清红批，眉峰拧死，“他们把停尸房当黑牢用了，想赶在零点发车前逼下面那个不肯签假火化单的值班医生就范，不签就拉去顶今晚的零柒号缺口！”"
+          },
+          {
+            "start_line": 49,
+            "end_line": 54,
+            "quote": "三人掠出档案厅，顺角落直通地下三层的狭窄铁梯悄然压步急下！越往下寒气越重，福尔马林冷雾直钻骨缝。刚踩稳三层拐角霜地砖，走廊尽头左数第三间门口，一扇嵌着钢丝网的惨白磨砂玻璃门正渗出一缕冷青灯光。\n门锁孔里隐约缠着裸露防盗铜线，高频电流沿着湿霜门框滋啦冒着蓝白火花。厚重门板深处，一阵金属圆锯疯狂空转的嗡鸣穿透玻璃震出来，夹杂着铁链在不锈钢解剖台面拖曳刮擦的极刺耳尖响！\n镜辞左手往门框侧面墙皮一搭正要拿铜锤橡胶垫绝缘硬卸暗锁，芽已垫稳黑底绝缘鞋准备踹门，姜霁更是早一步将装满十六发银弹的消音枪口平压住门锁方向。\n就在三人蓄势将发未发的半息死寂里，厚重磨砂门内突然刺穿那阵骨锯轰鸣，炸出了一道半点哭腔不带、冷硬得像拿手术刀锋刮过铁皮的女人骂声！\n“签了这张假火化单我也进冷库，不签顶多今天一刀下去！想撬老娘嘴先把我的柳叶刀接稳当了再说！”\n手术刀柄磕碰不锈钢台面的当啷脆响顺着门缝炸出，震得门框电流滋啦乱颤！"
+          }
+        ],
+        "world_followups": [
+          "正式确认医院停尸房充当黑牢逼签的证据，锁定3号冷链解剖室急救线，严格守住未露苏晚姓名、未泄死锁缓冲图及负四层内部构造。"
+        ]
+      }
+    ],
+    "foreshadow_deltas": [
+      {
+        "id": "F001",
+        "operation": "advance",
+        "description": "进一步展现怀表第1格收敛对一线战友的残酷余波（姜霁全忘1-9章交情与来路仅靠笔记及双针疤重锚）且本章严格零耗保持第1格",
+        "evidence": [
+          {
+            "start_line": 29,
+            "end_line": 30,
+            "quote": "她眼神掠过地上胸骨碎烂的铜章半壳，落回镜辞手里的倒钩铜锤，语调寸步不让：“我记事本上写着，左手这双针孔多亏东巷手艺顶硬的修表匠救过命，后背信得过。可前些日怎么在死人堆里混熟的、你叫什么名字……”\n她把后半句咬得像冰块砸地：“我脑子里全是一片白雾。”"
+          }
+        ]
+      },
+      {
+        "id": "F002",
+        "operation": "advance",
+        "description": "芽耳后死锁抽疼旁观旧友失忆却克制咽回「镜辞」全名，继续充当唯余死锁护主锚点",
+        "evidence": [
+          {
+            "start_line": 31,
+            "end_line": 33,
+            "quote": "右侧铁柜边扶墙喘气的芽一下子噎住了气。小姑娘左肩吊着宽白布兜，右臂钢条铁尖咔哒刮过铁皮柜棱，喉咙里挤出一声冷嗤几乎当场骂破声：“装什么糊涂，昨晚你才刚……”\n“闭嘴，看门外水沟。”镜辞头也没回，一句低喝截断了她的话头。\n芽牙关死咬下唇，耳后死锁抽疼得发狠。怀表死死停在第 1 格，无形收敛风一吹，连这位并肩搏过命的硬茬都把人忘得只剩本子上几行干墨字。可她清楚这会儿喊破旧名既唤不回记忆，反倒会把调查官逼得起疑。小姑娘狠咽回脏话，拎紧钢条转身盯死安全门缝。"
+          }
+        ]
+      },
+      {
+        "id": "F020",
+        "operation": "advance",
+        "description": "镜辞与姜霁在地下二层尸档室完成救援合流、清净二层防线并重新站定左翼两点钟枪线配合",
+        "evidence": [
+          {
+            "start_line": 40,
+            "end_line": 41,
+            "quote": "随后她拇指一压收起余戒，干脆利落迈过积水，一步切进镜辞左前方两点钟的枪线掩护位，把脆弱后背与左翼毫无保留交还回来！\n“前头怎么认识的想不起来算了。”姜霁左手重握枪托，嗓音冷硬干脆，“这颗针没差半毫，今晚左翼的枪归我顶死。十六发全给你压阵，省着用，局里弹仓被那帮混账锁死了。”"
+          }
+        ]
+      },
+      {
+        "id": "F022",
+        "operation": "advance",
+        "description": "翻出二层带血签收簿，确认零柒批号自昨晚夜班断档源自地下三层3号冷链解剖室拒签急案并已压抵门前",
+        "evidence": [
+          {
+            "start_line": 44,
+            "end_line": 46,
+            "quote": "可滑到今晚「零柒批号转运」一栏时，连续排列的蓝色编号竟在昨晚夜班生生断了个干净！本该今夜送进负四层进炉的名单空了一大截，页尾被人用粗红墨水笔狠狠圈出两道叉，底下压着一行暴戾朱批：\n「地下三层 3 号冷链解剖室拒签样本，就地压服改口做尸源！」\n墨迹边角还蹭着半块未干透的暗血，分明是两小时前刚签的催命批示。"
+          }
+        ]
+      }
+    ],
+    "manual_review": {
+      "status": "passed",
+      "reviewer": "Antigravity (solo)",
+      "method": "逐场核对第38章最终定稿正文、冻结写前包、姜霁弹药账本(22-5-1=16)及v2审查策略反向Gate H/I",
+      "basis": "正文三场16个行动无一漏列，三方声线差异鲜明且对白完整度错落自然，叙述者在场感与长短句节奏达标，零AI阻塞项及零剧透越界，因果、知识与后果完全闭合。",
+      "checks": {
+        "actual_coverage": "passed",
+        "causality": "passed",
+        "voice": "passed",
+        "knowledge_bounds": "passed",
+        "consequences": "passed",
+        "foreshadow": "passed"
+      }
+    }
+  }
+}

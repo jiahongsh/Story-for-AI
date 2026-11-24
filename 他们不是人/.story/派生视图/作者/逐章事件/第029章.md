@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 84,
-  "last_committed_chapter": 37,
+  "state_revision": 85,
+  "last_committed_chapter": 38,
   "range": [
     1,
-    37
+    38
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "6b1f23562da58e6d9b0518e99c2c7f2853639c186d8631059f0c26afd29b14be"
+      "sha256": "57d29d592903c0428b5d0f99b3e7a9ec73ce8b69e9643467f7212a3f574d3b1e"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -168,6 +168,10 @@
       "sha256": "45b6cb0ff6e3d2fb124511c3aa53fc2c44d85e66c7df596b7110acf3c80c5c25"
     },
     {
+      "path": "正文/第038章_弹壳滚到脚边时她忘了我.md",
+      "sha256": "a68c65b7e380bb99969fd3e1be184a5d1c798b94ad67d542af37407c62121985"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "bb349c7c33fd0b7ff7207e36b8382f36566c47b842fd9c7601802783774d45cf"
     },
@@ -314,6 +318,10 @@
     {
       "path": "追踪/逐章记录/第037章.md",
       "sha256": "f1ef66a09d61c1f01543903bf0f2c3a110da838ccb8162e7309faf49d42cdd1d"
+    },
+    {
+      "path": "追踪/逐章记录/第038章.md",
+      "sha256": "1e5663668d4cb949644c7b460918bfdc805417d13db35f9f16a825486c6d49a1"
     }
   ],
   "limitations": []
