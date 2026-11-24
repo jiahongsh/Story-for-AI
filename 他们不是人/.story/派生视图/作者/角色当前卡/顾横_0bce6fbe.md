@@ -3,16 +3,16 @@
 ```json
 {
   "generator": "story-world-engine/v1",
-  "state_revision": 85,
-  "last_committed_chapter": 38,
+  "state_revision": 86,
+  "last_committed_chapter": 39,
   "range": [
     1,
-    38
+    39
   ],
   "source_sha": [
     {
       "path": "追踪/_tracking-state.json",
-      "sha256": "57d29d592903c0428b5d0f99b3e7a9ec73ce8b69e9643467f7212a3f574d3b1e"
+      "sha256": "79746536813608b981069d2b6380022e9819de7572e71bed49955394814f5f35"
     },
     {
       "path": "D:\\code\\stroy\\skills\\story-long-write\\scripts\\tracking_commit.py",
@@ -172,6 +172,10 @@
       "sha256": "a68c65b7e380bb99969fd3e1be184a5d1c798b94ad67d542af37407c62121985"
     },
     {
+      "path": "正文/第039章_她宁死不签那张火化单.md",
+      "sha256": "3d98d5e5c83514f56ecda9aaec36343cd19bd017e509c21f07a202b7846c4d33"
+    },
+    {
       "path": "追踪/逐章记录/第001章.md",
       "sha256": "bb349c7c33fd0b7ff7207e36b8382f36566c47b842fd9c7601802783774d45cf"
     },
@@ -322,13 +326,17 @@
     {
       "path": "追踪/逐章记录/第038章.md",
       "sha256": "1e5663668d4cb949644c7b460918bfdc805417d13db35f9f16a825486c6d49a1"
+    },
+    {
+      "path": "追踪/逐章记录/第039章.md",
+      "sha256": "a6e433fb7b26b13b2f64e4d0fd52ba707f86f71a2738720fe53fcb32a9b372ce"
     }
   ],
   "limitations": []
 }
 ```
 
-# 顾横 当前卡（第38章状态）
+# 顾横 当前卡（第39章状态）
 
 - identity：剥壳人第二行动组队长，姜霁老搭档
 - location：退入城东外线隐蔽警哨区
