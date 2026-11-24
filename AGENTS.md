@@ -101,27 +101,89 @@
 长篇先读 `{书名}/追踪/上下文.md`；短篇先读 `{书名}/设定.md` 和 `{书名}/小节大纲.md`。
 <!-- oh-story:generic 结束 -->
 
-## story-world-engine 使用说明（所有 Agent 必读）
+## 全项目 Skills 体系使用、正本镜像与内容维护总则（全部 15 个 Skills 必读）
 
-**安装位置**
-- 唯一正本：`skills/story-world-engine/`（SKILL.md + `references/` + `assets/` + `scripts/`）。
-- 如需其他宿主的自动发现镜像，运行 `pwsh -File skills/sync-story-world-engine.ps1` 生成同步；镜像与正本冲突以正本为准。
+> **注意**：上方 `<!-- oh-story:generic 开始 ... 结束 -->` 管理块由 `story-setup` 自动维护，请勿手工拆改该块边界；全项目 **15 个 Skills**（14 个 `oh-story` 官方技能 + 1 个项目自研 `story-world-engine`）的正本规范、内容修改方法与使用边界统一以本节为准。
 
-**何时必须用**
-任何涉及小说新行动、新台词、新事件或修改它们的任务（续写/开书/大纲/角色/场景/对白/重写/日更），先过本技能再写。纯查询、扫榜、封面、发布不触发。
+### 一、正本位置、去重原则与为什么保留全套 15 个目录
 
-**每章最小流程**
-1. **恢复**：读 `{书名}/追踪/上下文.md` + 上一已接纳章 + 本章细纲；用原追踪工具校验 `_tracking-state.json` 与派生视图同步，不同步先重建。
-2. **七关**：列出全部行动者，逐项填写 packet 字段 `knows/wants/fears/capability/no_plot/costs/consequences`。阻断条件只有一条：作者答不上原因；合理未知/待核写清边界后可过。
-3. **写前包**：`python skills/story-world-engine/scripts/world_gate.py init ... --tracking-tool skills/story-long-write/scripts/tracking_commit.py --packet .story/世界引擎/第NNN章/写前行动审查.json`（亦兼容 `追踪/候选章/` 与 `创作运行/`），填完跑 `check --phase prewrite`（支持现行 `schema_version=4` 与旧版 `schema_version=5`）。
-4. **写正文**：与 story-long-write 联用，直接落盘 `正文/第NNN章_{章名}.md` 并过语言门；七关表不进正文或台词。
-5. **写后包**：复制冻结前包到 `.story/世界引擎/第NNN章/写后行动复核.json`，`postwrite.candidate` 绑定当章未入账的 `正文/第NNN章_{章名}.md`（或工作区草稿）并填 `postwrite`，跑 `check --phase postwrite`；按 `seven-gates.md §6` 七问复读。
-6. **记忆闭环**：`python skills/story-long-write/scripts/tracking_commit.py draft` + `storyctl.py chapter commit` 串行提交；按需用 `world_gate.py export --output .story/派生视图` 重建派生视图。
-7. **卷末**：核对事件、得失、人物、计划、伏笔账、未履约承诺、下卷继承。
+1. **唯一正本目录**：仓库根 `skills/`（共 15 个技能目录 + 同步脚本 `skills/sync-story-world-engine.ps1`）。
+2. **禁止多目录无意义重复拷贝**：
+   - 已清理 `.workbuddy/`、`.claude/`、`.codex/`、`.opencode/` 等无意义的隐藏目录重复副本。
+   - 当前仅保留 `.agents/skills/story-world-engine/` 作为 Antigravity 宿主的自动发现镜像（由 `.gitignore` 忽略，不入 Git；`sync-story-world-engine.ps1` 默认只同步 `.agents/`，仅在显式部署了其他宿主目录时才按需同步）。
+   - 若未来切换编程工具或需为 Antigravity 启用原生子代理/Hooks，统一执行 `/story-setup` 自动管理受管目录，**严禁手工把 `skills/` 复制到其他隐藏文件夹**。
+3. **为什么不单删某几个低频/短篇 Skill 目录**：
+   - 14 个 `oh-story` 技能属于 `v0.10.3（agents_version: 42）` 原子套件，`story-setup` 在环境体检与升级校验时会逐一检查这 14 个目录及 `SKILL.md` 是否齐全（缺任何一个都会判定技能包残缺并拒绝升级），且内部存在跨技能复用（如 `story-import` 复用 `story-long-analyze` / `story-short-analyze`，扫榜技能复用 `browser-cdp`）。因此 **15 个目录全部作为「日常写章节不改动、但必须整套保留的静态工具库」**，按下方职责隔离调用。
 
-**关键边界**
-- `world_gate.py` 只做检查/导出，不写正文、不写追踪、不接纳正史；追踪只走 `tracking_commit.py`。
-- `init/check/export` 必须传同一个 `--tracking-tool`。
-- 写前包/写后包及派生视图须放在 `.story/世界引擎/`、`.story/work/`、`追踪/候选章/` 或 `创作运行/` 等非权威工作目录，不得写入 `.story/作者记忆/`、`.story/排纲笔记/`、正文、大纲、设定或覆盖冻结前包。
-- 无 python 或脚本缺失时降级人工并声明 `Fallback: story-world-engine tool unavailable -> manual`。
-- 无 hooks 平台不会自动拦截，写作者必须自查（见上）。
+---
+
+### 二、Skills 文件的内容修改规范（平时不改 · 怎么定制 · 怎么升级）
+
+所有 `skills/*` 均属于**通用写作工具与规则引擎**，日常推进《他们不是人》大纲、正文或追踪时**绝不逐章修改任何 Skill 文件**。确需调整规则或升级工具时，严格按以下三类归属处理：
+
+1. **第 1 类：12 个纯上游 `oh-story` 官方技能（严禁手改源码，定制需求分流进书目录）**
+   - **包含**：`story-long-write`、`story-setup`、`story`、`story-long-analyze`、`story-long-scan`、`story-publish`、`story-cover`、`story-import`、`story-short-write`、`story-short-analyze`、`story-short-scan`、`browser-cdp`。
+   - **硬禁令**：严禁手工修改其 `SKILL.md`、`references/`、`scripts/`；遇到脚本校验拦截或报错时，必须修书稿/修细纲或停下把原始报错报给作者，**绝不允许篡改脚本绕过门禁**。
+   - **定制分流（想改规则时改哪里，而不是改 Skill）**：
+     - 改行文质感、对白节奏、章名规则、本书硬性禁用词 ➔ 改 `他们不是人/设定/文风.md`；
+     - 改当前卷段爽点与金手指消耗边界 ➔ 改 `他们不是人/设定/题材正文提示卡.md`；
+     - 豁免本书高频专名/固定意象被去味脚本误报 ➔ 写入 `他们不是人/.deslop-whitelist`（一行一词）；
+     - 长期记住/修改/忘掉作者跨章个人偏好 ➔ 走 `story-long-write` 的 `scripts/author_memory_commit.py` 记入 `.story/作者记忆/`。
+   - **升级方法**：仅当上游 `oh-story-claudecode` 发布新版本时，先更新全局包，再在项目根执行 `/story-setup` 按 `.story-deployed` 整包刷新覆盖。
+
+2. **第 2 类：2 个挂载了本地「v2 审查策略」增强层的技能（`story-deslop`、`story-review`）**
+   - **构成**：底层确定性检查脚本（`check-ai-patterns.js`、`check-degeneration.js`、`normalize-punctuation.js`）为上游 `oh-story v0.10.3` 原版（**严禁改脚本硬门规则**）；之上挂载了本项目专属的**正样本校准与反向 Gate H（声线差异）/ Gate I（叙述者在场）**增强层：
+     - 策略主档：`skills/story-deslop/references/ai-review-strategy-v2.md`（配套 `accepted-voice-profile.md`、`pattern-governance.md`、`scripts/voice_profile.py`、`scripts/prose_metrics.py`）；
+     - 挂接指针：`skills/story-deslop/SKILL.md`（Phase 1/2 必填项）、`skills/story-review/references/quality-rubric.md`、`skills/story-review/references/rubrics/fanqie.md`。
+   - **修改与升级方法**：
+     - 调整本书具体声线或叙述标准时，优先改 `他们不是人/设定/文风.md` 与 `设定/角色/*.md`；
+     - 确需修改反向 Gate H/I 审查协议或报告字段时，原地修改 `skills/story-deslop/references/ai-review-strategy-v2.md`；
+     - **防覆盖核对**：每次用 `/story-setup` 升级上游套件后，`story-deslop` 与 `story-review` 会被上游覆盖，升级后须核对 `ai-review-strategy-v2.md` 及上述 3 处挂接指针是否完整保留。
+
+3. **第 3 类：1 个本项目独立自研技能（`story-world-engine`）**
+   - **唯一正本**：`skills/story-world-engine/`（不属于 `oh-story` 上游，`/story-setup` 升级不会覆盖它）。
+   - **修改方法**：仅当作者要求调整人物行动七关字段、写前/写后审查包契约（`references/packet-contract.md`）或门禁导出逻辑（`scripts/world_gate.py`）时，**只在 `skills/story-world-engine/` 正本内修改**，随后依次执行：
+     1. `python -m unittest discover -s skills/story-world-engine/tests`（确保单元测试全绿）；
+     2. `pwsh -File skills/sync-story-world-engine.ps1`（将正本同步至 `.agents/skills/story-world-engine/`）；
+     - **严禁直接编辑 `.agents/` 下的镜像文件**（镜像与正本冲突一律以正本为准）。
+
+---
+
+### 三、全部 15 个 Skills 分类职责、触发时机与读写边界
+
+#### A. 《他们不是人》日常创作核心闭环（4 个高频必用 Skill）
+
+| Skill | 触发时机与核心职责 | 必读入口与核心脚本 | 严格读写边界 |
+|---|---|---|---|
+| **`story-long-write`** | 开卷排纲、补/改细纲、写单章、日更续写、回炉改稿、记录作者写作习惯 | 先读 `SKILL.md`「写前必读」表及对应 `workflow-*.md`；脚本：`outline_view.py`（切卷纲，禁整读）、`check-outline-contract.js`（细纲门禁）、`build_writer_prompt.py`（写前核对组装）、`storyctl.py`（质检与提交）、`tracking_commit.py`、`author_memory_commit.py` | **唯一允许通过 `tracking_commit.py` / `storyctl.py` 写入 `追踪/_tracking-state.json` 及派生追踪视图的入口**；未明确要求写正文前最远停在细纲交付 |
+| **`story-world-engine`** | 凡涉及新人物行动、新台词、新事件或重写（排纲/人设/写章/日更/改稿）均与 `story-long-write` 联用 | 先读 `SKILL.md` 与 `references/seven-gates.md`、`packet-contract.md`；脚本：`scripts/world_gate.py`（`init` / `check --phase prewrite\|postwrite` / `export`） | `world_gate.py` **只做检查与导出 `.story/派生视图`，不写正文、不改 `追踪/` 正史**；写前/写后包只放 `.story/世界引擎/第NNN章/` 等工作目录，七关字段严禁漏进正文 |
+| **`story-deslop`** | 单章落盘后去 AI 味自检，或作者点名「去 AI 味 / 这篇太 AI 了」 | 先读 `SKILL.md`、`style-resolution.md`、`ai-review-strategy-v2.md` 及 `expression.md` / `narrative-focus.md` / `story-logic.md`；脚本：`check-ai-patterns.js`、`prose_metrics.py`、`voice_profile.py` | 改前自动备份至书内 `.story/work/去味原稿/`；**只改表达、用笔与既有承接**，凡需改动事件、关系、人物所知或结果，必须转交 `story-long-write`「修改第X章」同步追踪 |
+| **`story-review`** | 卷纲/大纲定稿前、阶段收官或作者要求「审查一下」 | 先读 `SKILL.md`、`quality-rubric.md`、`rubrics/fanqie.md` 与 `ai-review-strategy-v2.md`；无子代理时自动降级 `solo` 单线程对抗审查 | **纯只读找茬**：只输出白话问题清单、原文证据与拍板选项，**绝不直接修改正文、大纲、设定或追踪** |
+
+**附：`story-world-engine` 每章联用最小 7 步标准流**
+1. **恢复**：读 `{书名}/追踪/上下文.md` + 上一已接纳章 + 本章细纲；用 `tracking_commit.py check` 校验 `_tracking-state.json` 与派生视图同步。
+2. **七关**：列出本章全部行动者，逐项核实 `knows/wants/fears/capability/no_plot/costs/consequences`（唯一阻断：答不出原因；合理未知写清边界可过）。
+3. **写前包**：`python skills/story-world-engine/scripts/world_gate.py init ... --tracking-tool skills/story-long-write/scripts/tracking_commit.py --packet .story/世界引擎/第NNN章/写前行动审查.json`，填妥跑 `check --phase prewrite`。
+4. **写正文**：按 `story-long-write` 落盘 `正文/第NNN章_{章名}.md` 并跑 `storyctl.py chapter check --fix-punctuation --plain` 清零 blocking。
+5. **写后包**：复制冻结前包到 `.story/世界引擎/第NNN章/写后行动复核.json`，绑定当章未入账正文填妥 `postwrite`，跑 `check --phase postwrite` 并按七问复读。
+6. **记忆闭环**：用 `tracking_commit.py draft` + `storyctl.py chapter commit` 串行提交入账；按需运行 `world_gate.py export --output .story/派生视图` 刷新视图。
+7. **卷末核账**：每卷收官核对事件、得失、人物关系表、伏笔总表、未履约承诺与下卷阶段提示卡。
+
+#### B. 对标拆文、市场扫榜与出版周边（5 个阶段按需 Skill）
+
+| Skill | 何时调用 | 产物落盘位置与读写边界 |
+|---|---|---|
+| **`story-long-analyze`** | 引入新的外部参考长篇 TXT（如拆解对标书黄金三章、三维节奏、情绪模块） | 原始拆文全量落盘 `拆文库/{外部书名}/`，再将与本书相关的结构化模块同步至 `他们不是人/对标/`；**严禁把本书正文当外部对标拆解** |
+| **`story-long-scan`** | 开新书立项、大换地图或研判起点/番茄/七猫男频榜单风口时 | 落盘 `扫榜数据/{日期}/`（含榜单分析与选题参考）；纯市场情报，**不自动修改本书大纲、设定或追踪** |
+| **`story-cover`** | 准备上架或更换书封，需要封面设计提示词或生成封面图时 | 提示词与生成图片统一落盘 `他们不是人/封面/`；仅要求提示词时不调生图接口 |
+| **`story-publish`** | 正文满约 2 万字准备番茄上架，或需整理核对平台书名、标签、多版本简介时 | 读取设定与已写正文核对并更新 `他们不是人/作品简介.md` 及建书表单资料；**只生成核对资料，不代替作者去后台点击发布** |
+| **`story-import`** | 将外部已写好的旧小说 TXT 逆向解析建档，或修复极早期缺失 `_tracking-state.json` 的旧项目时 | 生成标准项目目录或归档旧追踪至 `追踪/_旧追踪存档/`；**《他们不是人》现行结构与追踪完好，日常严禁误触调用** |
+
+#### C. 底层基建路由与短篇隔离区（6 个基建 / 隔离 Skill）
+
+| Skill | 定位与何时调用 | 隔离与安全边界 |
+|---|---|---|
+| **`story`** | 网文工具箱总路由与本地工作台入口（意图不明时自动分发，或 `/story dashboard` 打开本地面板） | Dashboard 仅允许监听本机 `127.0.0.1`（对应 `启动工作台.bat`），严禁暴露局域网或公网 |
+| **`story-setup`** | 环境体检（`check` 模式）、切换编程工具宿主、或更新 `oh-story` 套件后重部署受管文件 | 只更新受管 skill/hook/agent 与管理块，保留书稿、设定、大纲、追踪与管理块外的项目自定义铁律 |
+| **`browser-cdp`** | 供 `story-long-scan` / `story-short-scan` 在本地 Chrome 开启调试端口并获授权时复用登录态抓取榜单 | 仅走用户已授权的公开/已登录页面读取；**严禁用于绕过验证码、反爬门禁或未授权探测** |
+| **`story-short-write`**<br>**`story-short-analyze`**<br>**`story-short-scan`** | **短篇专属三件套**：分别用于番茄短故事/知乎盐言等短篇创作（单文件 `正文.md` + `小节大纲.md`）、短篇拆文与短篇扫榜 | **长短篇严格隔离铁律**：在创作长篇《他们不是人》期间**严禁调用这 3 个短篇技能**，防止污染长篇逐章目录与追踪体系；仅当作者在本工作区另开独立短篇目录时启用 |

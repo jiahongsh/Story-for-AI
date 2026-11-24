@@ -1,4 +1,4 @@
-# 同步 story-world-engine 正本到各运行时镜像
+﻿# 同步 story-world-engine 正本到各运行时镜像
 # 正本：skills/story-world-engine/
 # 用法：pwsh -File skills/sync-story-world-engine.ps1
 $ErrorActionPreference = "Stop"
@@ -11,13 +11,16 @@ if (-not (Test-Path $source)) {
     throw "canonical skill not found: $source"
 }
 
+# 默认始终同步当前主力宿主 Antigravity (.agents)；其余宿主仅在项目已部署对应隐藏目录时按需同步，避免凭空生成多套重复目录
 $targets = @(
-    (Join-Path $repoRoot ".workbuddy/skills/story-world-engine"),
-    (Join-Path $repoRoot ".opencode/skills/story-world-engine"),
-    (Join-Path $repoRoot ".claude/skills/story-world-engine"),
-    (Join-Path $repoRoot ".codex/skills/story-world-engine"),
     (Join-Path $repoRoot ".agents/skills/story-world-engine")
 )
+foreach ($optionalHost in @(".claude", ".codex", ".opencode", ".workbuddy")) {
+    $hostRoot = Join-Path $repoRoot $optionalHost
+    if (Test-Path $hostRoot) {
+        $targets += (Join-Path $hostRoot "skills/story-world-engine")
+    }
+}
 
 foreach ($dst in $targets) {
     $parent = Split-Path -Parent $dst
@@ -29,4 +32,4 @@ foreach ($dst in $targets) {
     Write-Host "synced: $dst"
 }
 
-Write-Host "done: $($targets.Count) mirrors from $source"
+Write-Host "done: $($targets.Count) mirror(s) from $source"

@@ -28,8 +28,8 @@
 | 旧尺子 `check-ai-patterns.js --check` | **1 blocking + 21 advisory** | **0 / 0** | 0 / 0 |
 
 **两个结论**：
-1. 旧尺子把爆款判不合格、把监控录像判优秀（机器级反证，见 `他们不是人/语言质地对照_异兽迷城_2026-11-11.md` §1.1）。
-2. 风格卡 v2 全文重写只把「纯闭合单句对白」从 91.1% 挪到 88.5%，**对白层的论文腔几乎没动**。前几轮审查却据此给出「轻度／不建议改写」——缺的不是更低的分，是**没人查这一层**。
+1. 旧尺子把爆款判不合格、把监控录像判优秀（机器级反证，历史实测留档见 `他们不是人/_归档/写作辅助与历史报告/语言质地对照_异兽迷城_2026-11-11.md` §1.1）。
+2. 仅靠禁用词清零无法解决对白层的同质论文腔——缺的不是更低的分，是**反向检查声线差异与叙述者在场感**。
 
 ---
 
@@ -49,10 +49,10 @@
 
 | Gate | 查什么 | 怎么判 | 否决线（不是配额） | 依据 |
 |---|---|---|---|---|
-| **H 声线差异** | 同场不同人的句长、落地方式、口癖、词汇质地是否互相冲突 | 五问：遮名字能否认人／有没有一句没落地／路人是否替作者抖机灵／有没有人连赢三回合／语气词是否按人分配 | 答不上 2 项以上 → 声线回炉；全章对白 100% 完整收尾 → 不合格 | `他们不是人/设定/角色声线节奏卡.md` §1、§5.2 |
-| **I 叙述者在场** | 有没有人讲这件事、主角是不是哑巴观察者、有没有体感与长短落差 | 数插话／内心声音／生活化比喻／≥40 字长句与 ≤6 字重拍 | 通篇只有动作和物件 → 不合格；主角全程无内心声音 → 不合格 | `他们不是人/设定/都市异能正文风格卡.md` v2 §2.2-§2.5、§九 11-15 |
+| **H 声线差异** | 同场不同人的句长、落地方式、口癖、词汇质地是否互相冲突 | 五问：遮名字能否认人／有没有一句没落地／路人是否替作者抖机灵／有没有人连赢三回合／语气词是否按人分配 | 答不上 2 项以上 → 声线回炉；全章对白 100% 完整收尾 → 不合格 | `{书名}/设定/文风.md`（对白节奏铁律）与 `{书名}/设定/角色/*.md`（各角色声线栏） |
+| **I 叙述者在场** | 有没有人讲这件事、主角是不是哑巴观察者、有没有体感与长短落差 | 数插话／内心声音／生活化比喻／≥40 字长句与 ≤6 字重拍 | 通篇只有动作和物件 → 不合格；主角全程无内心声音 → 不合格 | `{书名}/设定/文风.md`（叙述者在场、口语质地与长短句落差） |
 
-**两条都是否决线，不是打卡表**：连续三章都"刚好达标"同样判不合格；允许某章反常，但要有情境理由（风格卡 §2.2、节奏卡 §4）。
+**两条都是否决线，不是打卡表**：连续三章都"刚好达标"同样判不合格；允许某章反常，但要有情境理由（见本书 `设定/文风.md`）。
 
 ---
 
@@ -131,57 +131,18 @@ python scripts/voice_profile.py <正文>          # 内部声音画像（accepte
 
 | 副本 | 状态 |
 |---|---|
-| `skills/story-deslop/`（项目版） | **权威**。脚本为上游 v0.10.3 版（`check-ai-patterns.js` SHA `fac1d826…`，6 类硬门句式与 17ef45f0 一致）；`accepted-voice-profile.md`、`pattern-governance.md`、`voice_profile.py`、`prose_metrics.py` 为本策略专属，自 v0.9 项目版原样保留 |
-| `.workbuddy/skills/story-deslop/`（WorkBuddy 项目级镜像） | 随项目版同步（2026-11-11 16:00） |
-| `C:/Users/jia/.workbuddy/skills/story-deslop/` | 用户级副本，WorkBuddy 插件管理，升级可能重置；以项目版为准 |
-
-**历史问题回顾**：此前用户级副本仅 7 个文件、与项目版 0 个一致，缺 `language_gate.js`、`check-style-hygiene.js`、`voice_profile.py`、`prose_metrics.py` 等 21 份；`@skill:story-deslop` 用它审三章得到「完全零输出」，**不是文本干净，是尺子没装全**。同步后实测：用户级 `language_gate` PASS、`style-hygiene` PASS、`check-ai-patterns` 正常报 info + 功能性 advisory、`voice_profile.py` 可用（`not_configured` 属正常）。
-
-> **同步留证（12:29 那次）**：备份在 `C:/Users/jia/.workbuddy/skills-backups/story-deslop_20261111_1229/`（7 份旧文件 + `backup-manifest.json`，逐份 SHA-256 校验一致，按 manifest 的 restore 字段可还原）。按 ≤10 份／批分 3 批执行、逐批校验；**未删除／移动／重命名任何文件**，当时其他 10 个用户级 skill 文件数不变（**12:34 已全量同步，见 §8**）。
->
-> **残留风险**：用户级目录由 WorkBuddy 插件管理，**插件升级可能重置本次同步**；若用户级脚本再次零输出，先比指纹再怀疑文本。
+| `skills/story-deslop/`（项目正本） | **唯一权威**。确定性脚本为上游 v0.10.3 原版（`check-ai-patterns.js` 6 类硬门句式）；`ai-review-strategy-v2.md`、`accepted-voice-profile.md`、`pattern-governance.md`、`voice_profile.py`、`prose_metrics.py` 为本项目增强层 |
 
 ---
 
-## 7. 与既有文件的关系（v0.10.3 版）
+## 7. 与既有文件的关系（现行权威版）
 
 | 文件 | 关系 |
 |---|---|
 | `references/pattern-governance.md` | 三类规则、误杀边界、模式晋级门**继续有效**；v2 把"命中≠AI"提为执行顺序 |
 | `references/accepted-voice-profile.md` | 内部画像协议继续有效；外部尺子不得混入 |
-| `references/banned-words.md`（v0.10.3 改名「AI 味词句信号索引」） | 上游已整体改为语境复核制信号表，v2 降级原则已被吸收；`not-is-comparison`（即「不是A而是B」）仍是脚本唯一对应的 6 类硬门句式 |
+| `references/banned-words.md`（AI 味词句信号索引） | 上游已整体改为语境复核制信号表；`not-is-comparison`（即「不是A而是B」）仍是脚本唯一对应的 6 类硬门句式 |
 | `story-deslop/SKILL.md` Phase 1/2 | 已挂正样本校准、反向 Gate H/I 与报告必填字段；只检测模式同样输出 Gate 结果 |
 | `skills/story-review/references/quality-rubric.md` | 「对话质量」看 Gate H、「文字自然度」看 Gate I；评分维度不变 |
 | `skills/story-review/references/rubrics/fanqie.md` | 平台表 advisory only，AI 味判定须另跑校准与 Gate |
-| 旧 `quality-checklist.md` 的 `de_ai_v2` 行 | 该文件 v0.10.3 已退役，精神并入 quality-rubric 与本文件 §3 判定优先级 |
-| 旧 `language_gate.js` / `check-style-hygiene.js` | v0.10.0 起退役，见 §6 |
-| `他们不是人/设定/角色声线节奏卡.md` / `都市异能正文风格卡.md` v2 | Gate H/I 的判定依据；项目内挂接见风格卡 §九 |
-
----
-
-## 8. 验收（本策略落盘时）
-
-- **v2.1 重整合验收（2026-11-11 16:00）**：技能包升级到上游 v0.10.3（agents_version 42）时上午的 v2 挂接被覆盖；现已在 v0.10.3 上全部重挂——`ai-review-strategy-v2.md`（本文件）、deslop SKILL.md Phase 1/2 挂接、quality-rubric.md 与 fanqie.md 指针、4 份 v2 专属文件（accepted-voice-profile / pattern-governance / voice_profile.py / prose_metrics.py）恢复，并镜像至 `.workbuddy/skills/`。`check-ai-patterns.js` 采用上游 v0.10.3 版（SHA `fac1d826…`），6 类硬门句式与旧版一致，blocking 口径不变。校准数据见 §0，可复现口径见各列定义；**本轮不改任何正文、不改脚本 blocking 规则**。
-- 不改 `state_revision`（仍 275）；100-103 锁定区不动。
-- 挂接四处 + 项目侧一处指针：`story-deslop/SKILL.md`、`story-review/quality-checklist.md`、`quality-rubric.md`、`rubrics/fanqie.md`、`设定/都市异能正文风格卡.md` §九。
-### 示范重判（001-003，证明结论会变）
-
-| 章 | 对白段 | 完整收尾率 | 纯闭合单句 | Gate H 声线差异 | Gate I 叙述者在场 |
-|---|---:|---:|---:|---|---|
-| 001 | 28 | **100%** | 78.6% | **不通过**（否决线命中） | 通过 |
-| 002 | 45 | **100%** | 97.8% | **不通过** | 通过 |
-| 003 | 5 | **100%** | 60.0% | **不通过** | 通过 |
-
-- **新策略结论**：`CONCERNS`（Gate H 不过）——即使 `check-ai-patterns` 是 0 blocking / 0 advisory。
-- **旧策略结论**：0/0 → 「AI 味轻度／不建议做批量去 AI 味改写」（见 `他们不是人/审查报告_黄金三章_2026-11-10.md` 与 11-10 的 deslop 判定）。
-- 这组对照就是换策略的意义：**规则没变笨，是终于有人查了对白层**。Gate I 通过说明 v2 全文重写的叙述层有效，Gate H 失败说明对白层仍待按 `角色声线节奏卡.md` 回炉。
-
-- **已处理（12:29）**：用户级 `story-deslop` 副本同步，28/28 一致，见 §6。
-- **已处理（12:34，全量）**：用户级 `skills/` 整体对齐项目版 —— 12 个已有目录 **337 覆盖 + 171 新增**、6 个项目独有目录 **86 份新建**，共 **594 份**，按 ≤10 份／批分 60 批逐批校验。最终项目版 **19 目录 / 623 文件**与用户级逐份 SHA-256 一致；2 份用户级独有文件（`story-long-write/references/workflow-chapter.md`、`story-short-write/scripts/check-outline-copy.js`）**原样保留**。
-- **补收（13:05）**：`check-outline-copy.js` 经核查是**新版**（241 行 / 10086 字节，比项目版另外两份 270 行 / 9448 字节多出完整头部说明与「复沓锚句」豁免实现），已补进 `skills/story-short-write/scripts/`，SHA-256 `33941ffd…c3b` 与用户级一致，`node --check` 通过，并用「抄细纲两段」构造样本实测能报出 100% 重合、用 091-099 候选与旧 094/097 正文实测均为 0 命中（说明旧稿是改写而非誊抄）。项目版现 **19 目录 / 624 文件**。
-- **不补收（13:05，13:10 补强证据）**：`story-long-write/references/workflow-chapter.md`（27 KB）判定为**旧版重复文档**——`SKILL.md` 第 252 行起已内联「单章写作流程」且更新（含 TRAE `.trae/`、WorkBuddy 项目模式、Codex `.codex/`），而该文件仍停在 `.claude/`＋`.opencode/` 两运行时，且除自身外**无任何引用**。**决定性证据（13:10）**：`D:/tmp/oh-story-claudecode/skills` 是 v0.7.6 旧分发，项目版是 v0.9.0；逐技能哈希比对显示项目版是 v0.7.6 的严格超集（story-long-write 81→128 文件、story-setup 146→235、story-deslop 7→28），v0.7.6 里**唯一**项目版没有的文件正是这份 `workflow-chapter.md` —— 说明它是 0.8/0.9 之间被上游删掉的废弃文件。故不导入；用户级那份保留不动，作为已知差异项。
-- **外部技能审查（13:10，全机扫描）**：`~/.workbuddy/skills`（19，已对齐）、`~/.claude/skills`（2：clarify-before-action、math-modeling-contest）、`~/.codex/skills`（94：ccgs-* 游戏开发 88 项 + math-modeling 3 项 + keil/openocd/serial 等嵌入式 + story-world-engine 1 项，后者与本库逐字节一致仅差 `.pyc`）、`~/.codex/agents`（49 个 ccgs-* 子智能体）、`D:/tmp/oh-story-claudecode/skills`（v0.7.6 旧分发）、`D:/Documents/skills/都市高武`（DeepWrite 市场条目 2 条：都市高武通用写作、去 AI 味）、`D:/code/我的人生/.agents/skills`（3 项漫画/杂锦）。**结论：无一项值得并入本库** —— story 系已全覆盖且本库更新；通用写作与去 AI 味模板会与本卡／风格卡／声线卡争夺权威，DeepWrite 条目与项目自建体系重复；其余属游戏、数模、嵌入式等别的领域。仓库内 4 个运行时镜像（`.agents/ .claude/ .codex/ .opencode/`）与主库字节一致且已被 `.gitignore` 排除，由 `sync-story-world-engine.ps1` 生成，不需手工同步。
-- **顺带清理（13:10）**：`git rm --cached` 掉 6 个被误跟踪的 `__pycache__/*.pyc`（story-long-write 3、其 tests 1、story-world-engine 2），`.gitignore` 增 `__pycache__/` 与 `*.pyc`。此前 625 个文件里含这 6 份运行期字节码。
-- **待决**：三份 `check-outline-copy.js` 现有两个版本（deslop／long-write 为旧版，short-write 为新版）。旧版缺锚句豁免，遇誓言、系统面板、案卷原话会误报。是否把 deslop／long-write 一并升到新版、让「两侧同一份实现」成真，待用户确认后再动——该脚本是 advisory 轨，不在 blocking 门禁里。
-- 全量同步留证：`C:/Users/jia/.workbuddy/skills-backups/all-skills_20261111_1234/` —— `pre-sync/skills/` 完整快照 370 份 / 4.3 MB（逐份 SHA 校验）、`backup-manifest.json`（含 restore）、`sync-plan.md` 596 行逐路径清单、`sync-plan.json` 机器可读计划。按 manifest 可整体还原。**2026-11-11 13:00 用户已明确表示备份不需要**；沙箱禁用 `Add-Type` 与 COM，无法投入回收站，两个目录（5.4 MB）仍在原处，待手动删除。
-- **残留风险（全量）**：用户级目录由 WorkBuddy 插件管理，插件升级可能重置；新建的 6 个目录可能被扫描为新插件；其他项目／会话调用这些 skill 的行为会随项目版改变。执行审查仍以项目版为权威。
+| `{书名}/设定/文风.md` & `{书名}/设定/角色/*.md` | 本书唯一文风、对白节奏铁律与各角色声线判定依据（原独立的风格卡与声线卡已合并精简入此） |
